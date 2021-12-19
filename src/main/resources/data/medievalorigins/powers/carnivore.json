@@ -1,0 +1,33 @@
+{
+	"type": "origins:prevent_item_use",
+	"name": "Carnivore",
+	"description": "A daemon's bloodlust is insatiable. If it isn't the flesh of an animal, its worthless.",
+	"item_condition": {
+		"type": "origins:and",
+		"conditions": [{
+				"type": "origins:or",
+				"conditions": [{
+						"type": "origins:ingredient",
+						"ingredient": {
+							"tag": "origins:meat"
+						}
+					},
+					{
+						"type": "origins:meat"
+					}
+				],
+				"inverted": true
+			},
+			{
+				"type": "origins:food"
+			},
+			{
+				"type": "origins:ingredient",
+				"ingredient": {
+					"tag": "origins:ignore_diet"
+				},
+				"inverted": true
+			}
+		]
+	}
+}

@@ -1,0 +1,49 @@
+{
+	"type": "origins:multiple",
+	"name": "Diminutive",
+	"description": "It is rare for a fae to break 5 feet in height. They are small creatures, even smaller than the weaselly goblins.",
+	"diminutive": {
+		"type": "origins:action_on_callback",
+		"entity_action_chosen": {
+			"type": "origins:execute_command",
+			"command": "scale set pehkui:base 0.66"
+		},
+		"entity_action_lost": {
+			"type": "origins:execute_command",
+			"command": "scale reset pehkui:base"
+		},
+		"execute_chosen_when_orb": true
+	},
+	"diminutive2": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "scale set pehkui:motion 1.55"
+		},
+		"interval": 100
+	},
+	"diminutive3": {
+		"type": "origins:action_on_callback",
+		"entity_action_chosen": {
+			"type": "origins:execute_command",
+			"command": "scale persist set pehkui:base true @s"
+		},
+		"entity_action_lost": {
+			"type": "origins:execute_command",
+			"command": "scale persist reset pehkui:base true @s"
+		},
+		"execute_chosen_when_orb": true
+	},
+	"diminutive4": {
+		"type": "origins:action_on_callback",
+		"entity_action_chosen": {
+			"type": "origins:execute_command",
+			"command": "scale set pehkui:motion 1.55"
+		},
+		"entity_action_lost": {
+			"type": "origins:execute_command",
+			"command": "scale reset pehkui:motion"
+		},
+		"execute_chosen_when_orb": true
+	}
+}

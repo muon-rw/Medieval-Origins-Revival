@@ -1,0 +1,50 @@
+{
+	"type": "origins:action_over_time",
+	"name": "Petrification",
+	"description": "The gorgons were cursed with being bound in dark, dank caves. Being outside in daylight causes them to become petrified until night. Can be prevented by wearing a helmet.",
+	"entity_action": {
+		"type": "origins:if_else",
+		"condition": {
+			"type": "origins:and",
+			"conditions": [{
+					"type": "origins:exposed_to_sun"
+				},
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "head",
+					"item_condition": {
+						"type": "origins:ingredient",
+						"ingredient": {
+							"tag": "medievalorigins:helmet"
+						}
+					},
+					"inverted": true
+				}
+			]
+		},
+		"if_action": {
+			"type": "origins:apply_effect",
+			"effects": [{
+					"effect": "minecraft:blindness",
+					"is_ambient": true,
+					"show_particles": false,
+					"show_icon": false,
+					"amplifier": 2,
+					"duration": 250
+				},
+				{
+					"effect": "minecraft:slowness",
+					"is_ambient": true,
+					"show_particles": false,
+					"show_icon": false,
+					"amplifier": 20,
+					"duration": 250
+				}
+			]
+		},
+		"else_action": {
+			"type": "origins:clear_effect"
+		}
+	},
+	"interval": 20
+}

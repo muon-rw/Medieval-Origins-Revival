@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "medievalorigins",
+  "version": "${version}",
+
+  "name": "Medieval Origins",
+  "description": "Medieval Origins is an addon for the Origins mod, focused on the medieval era, with a slight bit of Greek mythology. It contains 15 new Origins.",
+  "authors": [
+    "ItsParkieLad"
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/medieval-origins"
+  },
+
+  "license": "MIT License",
+  "icon": "assets/medieval-origins/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.itsparkielad.medievalorigins.MedievalOrigins"
+    ]
+  },
+  "mixins": [
+    "medievalorigins.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.12.8",
+    "fabric": "*",
+    "minecraft": "1.18.x",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

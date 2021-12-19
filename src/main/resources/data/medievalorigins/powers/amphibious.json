@@ -1,0 +1,99 @@
+{
+	"type": "origins:multiple",
+	"name": "Amphibious",
+	"description": "Sirens, being a subset of merpeople, can survive in water, and swim with increased speed.",
+	"underwater": {
+		"type": "origins:modify_break_speed",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 4
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [{
+					"type": "origins:submerged_in",
+					"fluid": "minecraft:water"
+				},
+				{
+					"type": "origins:enchantment",
+					"enchantment": "minecraft:aqua_affinity",
+					"comparison": "==",
+					"compare_to": 0
+				}
+			]
+		}
+	},
+	"ungrounded": {
+		"type": "origins:modify_break_speed",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 4
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [{
+					"type": "origins:fluid_height",
+					"fluid": "minecraft:water",
+					"comparison": ">",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:on_block",
+					"inverted": true
+				}
+			]
+		}
+	},
+	"amphibious": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:if_else",
+			"condition": {
+				"type": "origins:submerged_in",
+				"fluid": "minecraft:water"
+			},
+			"if_action": {
+				"type": "origins:apply_effect",
+				"effect": {
+					"effect": "minecraft:dolphins_grace",
+					"is_ambient": true,
+					"show_particles": false,
+					"show_icon": false,
+					"amplifier": 1,
+					"duration": 250
+				}
+			},
+			"else_action": {
+				"type": "origins:clear_effect",
+				"effect": "minecraft:dolphins_grace"
+			}
+		},
+		"interval": 20
+	},
+	"amphibious2": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:if_else",
+			"condition": {
+				"type": "origins:submerged_in",
+				"fluid": "minecraft:water"
+			},
+			"if_action": {
+				"type": "origins:apply_effect",
+				"effect": {
+					"effect": "minecraft:water_breathing",
+					"is_ambient": true,
+					"show_particles": false,
+					"show_icon": false,
+					"amplifier": 2,
+					"duration": 250
+				}
+			},
+			"else_action": {
+				"type": "origins:clear_effect",
+				"effect": "minecraft:water_breathing"
+			}
+		},
+		"interval": 20
+	}
+}

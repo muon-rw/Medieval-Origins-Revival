@@ -1,0 +1,18 @@
+{
+	"powers": [
+                "medievalorigins:serpentine_companions",
+                "medievalorigins:stony_gaze",
+		"medievalorigins:silverfish_aggro",
+                "medievalorigins:medusa_team",
+                "medievalorigins:super_strength",
+                "medievalorigins:hydrophobe_gorg",
+                "medievalorigins:petrification",
+                "medievalorigins:silver_aversion"
+
+	],
+	"icon": "minecraft:mossy_cobblestone",
+	"impact": 3,
+        "order": 1,
+	"name": "Gorgon",
+	"description": "Gorgons turn their enemies to stone. However, life without being able to look anyone in the eye comes with consequences..."
+}

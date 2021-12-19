@@ -1,0 +1,19 @@
+{
+	"type": "origins:modify_damage_taken",
+	"name": "Overworld Weakness",
+	"description": "As an agent of hell, daemons are not accustomed to the mobs of the overworld and take more damage from them.",
+	"damage_condition": {
+		"type": "origins:attacker",
+		"condition": {
+			"type": "entity_group",
+			"entity_group": {
+				"tag": "medievalorigins:overworld_mobs"
+			}
+		}
+	},
+	"modifier": {
+		"name": "weak to magic",
+		"operation": "addition",
+		"value": 1.0
+	}
+}

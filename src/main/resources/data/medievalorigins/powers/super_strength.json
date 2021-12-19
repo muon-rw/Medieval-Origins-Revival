@@ -1,0 +1,10 @@
+{
+	"type": "origins:attribute",
+	"name": "Super Strength",
+	"description": "Gorgons are renowned for their supernatural strength. They deal far more base damage than any other creature.",
+	"modifier": {
+		"attribute": "minecraft:generic.attack_damage",
+		"operation": "addition",
+		"value": 3.0
+	}
+}

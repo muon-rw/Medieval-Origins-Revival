@@ -1,0 +1,15 @@
+{
+	"powers": [
+                "medievalorigins:for_honour_and_glory",
+                "medievalorigins:skilled_swordsman",
+		"medievalorigins:valour",
+                "medievalorigins:burdened",
+                "medievalorigins:magic_prone",
+                "medievalorigins:melee4ever"
+	],
+	"icon": "minecraft:shield",
+	"impact": 1,
+        "order": 1,
+	"name": "Knight",
+	"description": "Knights are valorous heroes, who work tirelessly to protect the land."
+}

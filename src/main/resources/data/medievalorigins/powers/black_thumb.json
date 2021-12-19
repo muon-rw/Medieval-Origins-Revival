@@ -1,0 +1,10 @@
+{
+	"type": "origins:modify_harvest",
+	"name": "Black Thumb",
+	"description": "Necromancers only work with death. They cannot harvest any crops, they wilt at their deathly touch.",
+	"block_condition": {
+		"type": "origins:in_tag",
+		"tag": "medievalorigins:crops"
+	},
+	"allow": true
+}

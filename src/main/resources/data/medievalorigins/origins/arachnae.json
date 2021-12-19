@@ -1,0 +1,16 @@
+{
+	"powers": [
+                "medievalorigins:climber",
+		"medievalorigins:many_eyes",
+                "medievalorigins:venomous_bite",
+                "medievalorigins:web_slinger",
+                "medievalorigins:brittle",
+                "medievalorigins:bottomless_stomach",
+                "medievalorigins:fragile_exoskeleton"
+	],
+	"icon": "minecraft:cobweb",
+	"impact": 2,
+        "order": 1,
+	"name": "Arachnae",
+	"description": "Humanoid, arachnid half-breeds, Arachnae are the size of a man with the dexterity and nimbleness of a spider. What could possibly go wrong?"
+}

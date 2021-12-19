@@ -1,0 +1,16 @@
+{
+	"powers": [
+                "medievalorigins:hellraiser",
+                "medievalorigins:resilient",
+                "medievalorigins:impervious",
+                "medievalorigins:poor_reputation",
+                "medievalorigins:black_thumb",
+                "medievalorigins:disturbed",
+                "medievalorigins:unguarded"
+	],
+	"icon": "minecraft:skeleton_skull",
+	"impact": 2,
+        "order": 1,
+	"name": "Necromancer",
+	"description": "Mages learnt in the art of raising the dead, Necromancers can rasie an army from nothing. However, this morbid relationship with death comes with consequences..."
+}

@@ -1,0 +1,37 @@
+{
+	"type": "origins:active_self",
+	"name": "Potent Brew",
+	"description": "Dwarves are known for the alcohol consumption. Press G to consume a potent brew which brings health back to full.",
+	"entity_action": {
+		"type": "origins:if_else",
+		"condition": {
+			"type": "origins:status_effect",
+			"effect": "minecraft:regeneration",
+			"show_particles": false,
+			"show_icon": false
+		},
+		"if_action": {
+			"type": "origins:clear_effect",
+			"effect": "minecraft:regeneration"
+		},
+		"else_action": {
+			"type": "origins:apply_effect",
+			"effect": {
+				"effect": "minecraft:regeneration",
+				"is_ambient": true,
+				"show_particles": false,
+				"show_icon": false,
+				"amplifier": 4,
+				"duration": 200
+			}
+		}
+	},
+	"cooldown": 3600,
+	"key": {
+		"key": "key.origins.primary_active",
+		"continuous": false
+	},
+	"hud_render": {
+		"should_render": "false"
+	}
+}

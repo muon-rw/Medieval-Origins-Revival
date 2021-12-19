@@ -1,0 +1,7 @@
+{
+	"type": "origins:prevent_sleep",
+	"name": "Disturbed",
+	"description": "Learning the art of necromancy is traumatising. Necromancers cannot sleep, too scared to dream of what they wish they did not know.",
+        "message": "What you know will kill you, but you will die laughing.",
+        "set_spawn_point": true
+} 

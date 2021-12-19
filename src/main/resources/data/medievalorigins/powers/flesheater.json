@@ -1,0 +1,33 @@
+{
+	"type": "origins:prevent_item_use",
+	"name": "Flesh-eater",
+	"description": "Banshees feast upon the organs of the living. Their ethereal bodies have no desire for fruit or vegetables.",
+	"item_condition": {
+		"type": "origins:and",
+		"conditions": [{
+				"type": "origins:or",
+				"conditions": [{
+						"type": "origins:ingredient",
+						"ingredient": {
+							"tag": "origins:meat"
+						}
+					},
+					{
+						"type": "origins:meat"
+					}
+				],
+				"inverted": true
+			},
+			{
+				"type": "origins:food"
+			},
+			{
+				"type": "origins:ingredient",
+				"ingredient": {
+					"tag": "origins:ignore_diet"
+				},
+				"inverted": true
+			}
+		]
+	}
+}

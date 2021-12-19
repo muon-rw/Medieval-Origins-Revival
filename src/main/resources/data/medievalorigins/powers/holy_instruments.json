@@ -1,0 +1,23 @@
+{
+	"type": "origins:multiple",
+	"name": "God's Instrument",
+	"description": "An axe in the hands of a Paladin is a dangerous weapon. All axes deal increased damage, but swords deal less damage.",
+	"axe_boost": {
+		"type": "origins:modify_damage_dealt",
+		"modifier": {
+			"name": "Origin modifier",
+			"operation": "addition",
+			"value": 1.5
+		},
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:ingredient",
+				"ingredient": {
+					"tag": "medievalorigins:axes"
+				}
+			}
+		}
+	}
+}

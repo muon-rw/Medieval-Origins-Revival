@@ -1,0 +1,25 @@
+{
+	"type": "origins:restrict_armor",
+	"name": "Brittle",
+	"description": "The Arachnae's exoskeleton cannot support armour heavier than iron.",
+	"head": {
+		"type": "origins:armor_value",
+		"comparison": ">",
+		"compare_to": 2
+	},
+	"chest": {
+		"type": "origins:armor_value",
+		"comparison": ">",
+		"compare_to": 6
+	},
+	"legs": {
+		"type": "origins:armor_value",
+		"comparison": ">",
+		"compare_to": 5
+	},
+	"feet": {
+		"type": "origins:armor_value",
+		"comparison": ">",
+		"compare_to": 2
+	}
+}

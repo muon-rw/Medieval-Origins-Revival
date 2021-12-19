@@ -1,0 +1,34 @@
+{
+	"type": "origins:multiple",
+	"name": "Drained",
+	"description": "Increased prowess at night does, unfortunately, come with consequences. In daytime your health and strength are reduced.",
+	"drained": {
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.max_health",
+			"operation": "addition",
+			"value": -4.0
+		},
+		"tick_rate": 20,
+		"condition": {
+			"type": "origins:daytime"
+		}
+	},
+	"drained2": {
+		"type": "origins:stacking_status_effect",
+		"min_stacks": 0,
+		"max_stacks": 2,
+		"duration_per_stack": 210,
+		"tick_rate": 10,
+		"effect": {
+			"effect": "minecraft:weakness",
+			"is_ambient": true,
+			"show_particles": false,
+			"show_icon": false,
+			"amplifier": 1
+		},
+		"condition": {
+			"type": "origins:exposed_to_sun"
+		}
+	}
+}

@@ -1,0 +1,10 @@
+{
+    "type": "origins:attribute",
+    "name": "Frail",
+    "description": "Being small has its drawbacks. Goblins' max health is reduced, as their small size makes them prone to damage.",
+    "modifier": {
+        "attribute": "minecraft:generic.max_health",
+        "operation": "addition",
+        "value": -8.0      
+    }
+}

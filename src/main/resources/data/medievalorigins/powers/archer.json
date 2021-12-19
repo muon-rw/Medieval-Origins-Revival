@@ -1,0 +1,23 @@
+{
+	"type": "origins:multiple",
+	"name": "Marksman",
+	"description": "Elves are expert marksmen. They deal significantly more damage using a bow than other creatures.",
+	"axe_boost": {
+		"type": "origins:modify_damage_dealt",
+		"modifier": {
+			"name": "Origin modifier",
+			"operation": "addition",
+			"value": 3.5
+		},
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:ingredient",
+				"ingredient": {
+					"tag": "medievalorigins:bows"
+				}
+			}
+		}
+	}
+}

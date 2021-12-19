@@ -1,0 +1,73 @@
+{
+	"type": "origins:restrict_armor",
+	"name": "XXXL",
+	"description": "It is rather hard to find a suit of armour in size XXXL. As a result, ogres can only wear flexible armour, being leather and chainmail.",
+	"head": {
+		"type": "origins:or",
+		"conditions": [{
+				"type": "origins:ingredient",
+				"ingredient": {
+					"item": "minecraft:leather_helmet"
+				}
+			},
+			{
+				"type": "origins:ingredient",
+				"ingredient": {
+					"item": "minecraft:chainmail_helmet"
+				}
+			}
+		],
+		"inverted": true
+	},
+	"chest": {
+		"type": "origins:or",
+		"conditions": [{
+				"type": "origins:ingredient",
+				"ingredient": {
+					"item": "minecraft:leather_chestplate"
+				}
+			},
+			{
+				"type": "origins:ingredient",
+				"ingredient": {
+					"item": "minecraft:chainmail_chestplate"
+				}
+			}
+		],
+		"inverted": true
+	},
+	"legs": {
+		"type": "origins:or",
+		"conditions": [{
+				"type": "origins:ingredient",
+				"ingredient": {
+					"item": "minecraft:leather_leggings"
+				}
+			},
+			{
+				"type": "origins:ingredient",
+				"ingredient": {
+					"item": "minecraft:chainmail_leggings"
+				}
+			}
+		],
+		"inverted": true
+	},
+	"feet": {
+		"type": "origins:or",
+		"conditions": [{
+				"type": "origins:ingredient",
+				"ingredient": {
+					"item": "minecraft:leather_boots"
+				}
+			},
+			{
+				"type": "origins:ingredient",
+				"ingredient": {
+					"item": "minecraft:chainmail_boots"
+				}
+			}
+		],
+		"inverted": true
+	}
+}

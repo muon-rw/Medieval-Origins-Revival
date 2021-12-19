@@ -1,0 +1,7 @@
+{
+	"type": "origins:prevent_sleep",
+	"name": "Insomniac",
+	"description": "The horrible welts make sleep impossible for carriers of the Plague to sleep.",
+	"message": "Your welts sting and burn. There will be no sleep for you tonight.",
+        "set_spawn_point": true
+}

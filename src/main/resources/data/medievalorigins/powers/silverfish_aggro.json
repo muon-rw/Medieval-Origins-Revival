@@ -1,0 +1,17 @@
+{
+	"type": "origins:action_over_time",
+	"hidden": "true",
+	"interval": 20,
+	"entity_action": {
+		"type": "origins:and",
+		"actions": [{
+				"type": "origins:execute_command",
+				"command": "team join Silverfish @p"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "team join Silverfish @e[type=minecraft:silverfish]"
+			}
+		]
+	}
+}

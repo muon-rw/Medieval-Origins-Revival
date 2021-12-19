@@ -1,0 +1,5 @@
+{
+    "type": "origins:ignore_water",
+    "name": "Dense",
+    "description": "Dwarves are heavy creatures for their size, and as a result cannot swim."
+}

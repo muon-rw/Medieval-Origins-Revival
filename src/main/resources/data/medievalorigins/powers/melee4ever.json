@@ -1,0 +1,11 @@
+{
+	"type": "origins:prevent_item_use",
+	"name": "Melee4Ever",
+	"description": "Unskilled in the art of archery, knights are incapable of using bows.",
+	"item_condition": {
+		"type": "origins:ingredient",
+		"ingredient": {
+			"tag": "medievalorigins:bows"
+		}
+	}
+}

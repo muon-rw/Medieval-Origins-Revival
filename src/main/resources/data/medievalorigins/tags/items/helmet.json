@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+	"leather_helmet",
+        "chainmail_helmet",
+        "golden_helmet",
+        "iron_helmet",
+        "diamond_helmet",
+        "netherite_helmet"
+  ]
+}

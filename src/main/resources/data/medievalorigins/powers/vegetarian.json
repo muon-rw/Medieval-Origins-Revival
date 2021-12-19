@@ -1,0 +1,32 @@
+{
+	"type": "origins:prevent_item_use",
+	"name": "Steward",
+	"description": "Elves live off of the forest and its fruits. Their digestive systems cannot process meat.",
+	"item_condition": {
+		"type": "origins:and",
+		"conditions": [{
+				"type": "origins:or",
+				"conditions": [{
+						"type": "origins:ingredient",
+						"ingredient": {
+							"tag": "origins:meat"
+						}
+					},
+					{
+						"type": "origins:meat"
+					}
+				]
+			},
+			{
+				"type": "origins:food"
+			},
+			{
+				"type": "origins:ingredient",
+				"ingredient": {
+					"tag": "origins:ignore_diet"
+				},
+				"inverted": true
+			}
+		]
+	}
+}

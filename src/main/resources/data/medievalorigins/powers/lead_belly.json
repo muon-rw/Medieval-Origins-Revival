@@ -1,0 +1,9 @@
+{
+	"type": "origins:effect_immunity",
+	"name": "Lead Belly",
+	"description": "The enormous appetite of an ogre sometimes means eating an undesirable meal from time to time. As such, the ogre's stomach has evolved to withstand even the most toxic of foodstuffs.",
+	"effects": [
+		"minecraft:poison",
+		"minecraft:hunger"
+	]
+}

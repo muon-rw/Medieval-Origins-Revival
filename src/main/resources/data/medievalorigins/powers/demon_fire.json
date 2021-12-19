@@ -1,0 +1,14 @@
+{
+	"type": "origins:fire_projectile",
+	"name": "Daemon Fire",
+	"description": "Imbued with Satan's power, the daemon can release a burst of hell's energy on command. Triggered with secondary power key.",
+	"entity_type": "minecraft:fireball",
+	"cooldown": 100,
+	"hud_render": {
+		"should_render": true
+	},
+	"key": {
+		"key": "key.origins.secondary_active",
+		"continuous": false
+	}
+}

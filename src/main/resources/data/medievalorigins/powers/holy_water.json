@@ -1,0 +1,28 @@
+{
+	"type": "origins:action_over_time",
+	"name": "Holy Water",
+	"description": "Sirens have regenerative powers, which are at full force when they are in water.",
+	"entity_action": {
+		"type": "origins:if_else",
+		"condition": {
+			"type": "origins:submerged_in",
+			"fluid": "minecraft:water"
+		},
+		"if_action": {
+			"type": "origins:apply_effect",
+			"effect": {
+				"effect": "minecraft:regeneration",
+				"is_ambient": true,
+				"show_particles": false,
+				"show_icon": false,
+				"amplifier": 1,
+				"duration": 250
+			}
+		},
+		"else_action": {
+			"type": "origins:clear_effect",
+			"effect": "minecraft:regeneration"
+		}
+	},
+	"interval": 20
+}

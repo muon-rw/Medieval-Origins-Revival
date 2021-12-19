@@ -1,0 +1,16 @@
+{
+	"powers": [
+                "medievalorigins:flight",
+                "medievalorigins:magic_strength",
+		"medievalorigins:regen",
+		"medievalorigins:regen_drain",
+                "medievalorigins:allure",
+                "medievalorigins:diminutive",
+                "medievalorigins:iron_aversion"
+	],
+	"icon": "minecraft:experience_bottle",
+	"impact": 2,
+        "order": 1,
+	"name": "Fae",
+	"description": "Beings of magick, faes are capable of far more than regular humans. Whether that is a blessing or a curse; that is for you to decide..."
+}

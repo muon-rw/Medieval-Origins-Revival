@@ -1,0 +1,10 @@
+{
+	"type": "origins:attribute",
+	"name": "Fragile Exoskeleton",
+	"description": "The Arachnae's exoskeleton is vulnerable to damage. Their health is less compared to a regular human's.",
+	"modifier": {
+		"attribute": "minecraft:generic.max_health",
+		"operation": "addition",
+		"value": -6.0
+	}
+}

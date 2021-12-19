@@ -1,0 +1,25 @@
+{
+	"type": "origins:multiple",
+	"name": "Gargantuan",
+	"description": "Ogres are renowned for their size, and are substantially taller (and wider) than most creatures.",
+	"gargantuan": {
+		"type": "origins:action_on_callback",
+		"entity_action_chosen": {
+			"type": "origins:execute_command",
+			"command": "scale set pehkui:base 1.55"
+		},
+		"entity_action_lost": {
+			"type": "origins:execute_command",
+			"command": "scale reset pehkui:base"
+		},
+		"execute_chosen_when_orb": true
+	},
+	"gargantuan2": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "scale set pehkui:base 1.55"
+		},
+		"interval": 100
+	}
+}

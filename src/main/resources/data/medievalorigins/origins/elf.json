@@ -1,0 +1,17 @@
+{
+	"powers": [
+                "medievalorigins:archer",
+		"medievalorigins:forest_vision",
+                "medievalorigins:hyper_sight",
+                "medievalorigins:towering",
+                "medievalorigins:weak_swords",
+                "medievalorigins:vegetarian",
+                "medievalorigins:spindly",
+                "medievalorigins:weak_melee"
+	],
+	"icon": "minecraft:oak_leaves",
+        "impact": 1,
+        "order": 1,
+	"name": "Elf",
+	"description": "Elves are intelligent, long-living residents of the forest. Their skills in archery prove useful from afar, but their frailness becomes an issue up close."
+}

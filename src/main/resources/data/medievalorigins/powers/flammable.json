@@ -1,0 +1,18 @@
+{
+	"type": "origins:self_action_when_hit",
+	"name": "Flammable",
+	"description": "Sirens and fire do not mix well. Any contact with flames results in instant death. Be sure to watch your step in the nether!",
+	"entity_action": {
+		"type": "origins:damage",
+		"amount": 99,
+		"source": {
+			"name": "onFire",
+			"fire": true,
+			"bypasses_armor": true
+		}
+	},
+	"cooldown": 20,
+	"damage_condition": {
+		"type": "origins:fire"
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"powers": [
+                "medievalorigins:siren_song",
+                "medievalorigins:amphibious",
+                "medievalorigins:holy_water",
+                "medievalorigins:out_of_your_depth",
+                "medievalorigins:prone",
+                "medievalorigins:flammable",
+                "medievalorigins:water_vision"
+	],
+	"icon": "minecraft:sea_lantern",
+	"impact": 2,
+        "order": 1,
+	"name": "Siren",
+	"description": "Sirens have an ensnaring beauty and an evil nature, their irresistable beauty being the downfall of many a sailor. Its up to you to use this power to its full advantage."
+}

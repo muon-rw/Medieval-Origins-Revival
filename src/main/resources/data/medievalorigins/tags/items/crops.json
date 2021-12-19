@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+	"carrots",
+        "potatoes",
+        "beetroots",
+        "wheat",
+        "pumpkin",
+        "melon",
+        "sugar_cane",
+        "cocao",
+        "sweet_berry_bush",
+        "glow_lichen"
+  ]
+}

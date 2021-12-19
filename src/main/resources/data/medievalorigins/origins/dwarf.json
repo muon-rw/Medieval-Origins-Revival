@@ -1,0 +1,17 @@
+{
+	"powers": [
+                "medievalorigins:haste",
+		"medievalorigins:nocturnal_eyes",
+                "medievalorigins:potent_brew",
+                "medievalorigins:miniature",
+                "medievalorigins:nocturnal",
+                "medievalorigins:dense",
+                "medievalorigins:photoallergic",
+                "medievalorigins:pickaxeless_stone"  
+	],
+	"icon": "minecraft:gold_ore",
+	"impact": 3,
+        "order": 1,
+	"name": "Dwarf",
+	"description": "Dwarves are short humanoids who live underground. They excel in mining, but have issues surviving above ground."
+}

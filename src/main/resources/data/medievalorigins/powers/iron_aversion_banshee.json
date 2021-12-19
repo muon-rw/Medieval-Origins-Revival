@@ -1,0 +1,29 @@
+{
+	"type": "origins:restrict_armor",
+	"name": "Iron Aversion",
+	"description": "Iron is lethal to banshees. They cannot bear to wear it.",
+	"head": {
+		"type": "origins:ingredient",
+		"ingredient": {
+			"item": "minecraft:iron_helmet"
+		}
+	},
+	"chest": {
+		"type": "origins:ingredient",
+		"ingredient": {
+			"item": "minecraft:iron_chestplate"
+		}
+	},
+	"legs": {
+		"type": "origins:ingredient",
+		"ingredient": {
+			"item": "minecraft:iron_leggings"
+		}
+	},
+	"feet": {
+		"type": "origins:ingredient",
+		"ingredient": {
+			"item": "minecraft:iron_boots"
+		}
+	}
+}

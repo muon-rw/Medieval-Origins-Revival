@@ -1,0 +1,15 @@
+{
+	"powers": [
+                "medievalorigins:sonic_shriek",
+		"medievalorigins:ethereal",
+                "medievalorigins:hexed",
+                "medievalorigins:flesheater",
+                "medievalorigins:iron_aversion_banshee",
+                "medievalorigins:immaterial"
+	],
+	"icon": "minecraft:ender_eye",
+	"impact": 2,
+        "order": 1,
+	"name": "Banshee",
+	"description": "Banshees are spirits whose cries can shatter glass and drive people to suicide. They are also seen as an omen of death in mythology."
+}

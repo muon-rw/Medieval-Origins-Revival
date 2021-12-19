@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+	"wooden_sword",
+        "stone_sword",
+        "golden_sword",
+        "iron_sword",
+        "diamond_sword",
+        "netherite_sword"
+  ]
+}

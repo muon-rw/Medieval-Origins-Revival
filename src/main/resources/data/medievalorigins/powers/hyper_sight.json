@@ -1,0 +1,18 @@
+{
+	"type": "origins:target_action_on_hit",
+	"name": "Hyper Sight",
+	"description": "Elves' enhanced perception allows them to keep track of an enemy for a while after hitting them, even when they aren't in view.",
+	"entity_action": {
+		"type": "origins:apply_effect",
+		"effect": {
+			"effect": "minecraft:glowing",
+			"show_particles": "false",
+			"amplifier": 1,
+			"duration": 200
+		}
+	},
+	"cooldown": 0,
+	"hud_render": {
+		"should_render": false
+	}
+}

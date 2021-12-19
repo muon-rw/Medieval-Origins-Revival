@@ -1,0 +1,15 @@
+{
+	"powers": [
+                "medievalorigins:holy_fire",
+		"medievalorigins:holy_instruments",
+                "medievalorigins:leech",
+                "medievalorigins:holy_curse",
+                "medievalorigins:weak_swords",
+                "medievalorigins:ravenous_weak"
+	],
+	"icon": "minecraft:beacon",
+	"impact": 2,
+        "order": 1,
+	"name": "Paladin",
+	"description": "Soldiers of the lord, Paladins excel in combat against the world's foul, undead creatures. However, their holiness leaves them vulnerable to attack from these very same beings..."
+}

@@ -1,0 +1,19 @@
+{
+	"type": "origins:prevent_entity_use",
+	"name": "Contagious",
+	"description": "The Plague is highly contagious. Villagers will refuse to trade with you out of fear of contracting the plague.",
+	"bientity_action": {
+		"type": "origins:actor_action",
+		"action": {
+			"type": "origins:execute_command",
+			"command": "title @s actionbar {\"text\": \"The villager doesn't want to be infected!\", \"color\": \"red\"}"
+		}
+	},
+	"bientity_condition": {
+		"type": "origins:target_condition",
+		"condition": {
+			"type": "origins:entity_type",
+			"entity_type": "minecraft:villager"
+		}
+	}
+}

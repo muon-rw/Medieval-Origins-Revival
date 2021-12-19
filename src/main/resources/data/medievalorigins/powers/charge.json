@@ -1,0 +1,85 @@
+{
+	"type": "origins:active_self",
+	"name": "Charge",
+	"description": "Ogres can charge forward, piercing through several blocks, but this drains hunger and slows the ogre for a short while.",
+	"entity_action": {
+		"type": "origins:and",
+		"actions": [{
+				"type": "origins:execute_command",
+				"command": "execute if entity @s[y_rotation=75..105] run fill ~ ~ ~-0.5 ~-10 ~2 ~0.5 air destroy"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "execute if entity @s[y_rotation=75..105] run summon creeper ~1.5 ~ ~ {ExplosionRadius:0.1,Fuse:0}"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "execute if entity @s[y_rotation=-105..-75] run fill ~ ~ ~-0.5 ~10 ~2 ~0.5 air destroy"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "execute if entity @s[y_rotation=-105..-75] run summon creeper ~-1.5 ~ ~ {ExplosionRadius:0.1,Fuse:0}"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "execute if entity @s[y_rotation=165..195] run fill ~-0.5 ~ ~ ~0.5 ~2 ~-10 air destroy"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "execute if entity @s[y_rotation=165..195] run summon creeper ~ ~ ~1.5 {ExplosionRadius:0.1,Fuse:0}"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "execute if entity @s[y_rotation=-15..15] run fill ~-0.5 ~ ~ ~0.5 ~2 ~10 air destroy"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "execute if entity @s[y_rotation=-15..15] run summon creeper ~ ~ ~-1.5 {ExplosionRadius:0.1,Fuse:0}"
+			},
+			{
+				"type": "origins:add_velocity",
+				"z": 1.5,
+				"space": "local"
+			},
+			{
+				"type": "origins:exhaust",
+				"amount": 17.8571428571
+			},
+			{
+				"type": "origins:apply_effect",
+				"effect": {
+					"effect": "minecraft:slowness",
+					"duration": 100,
+					"amplifier": 1,
+					"show_icon": false,
+					"show_particles": false,
+					"is_ambient": true
+				}
+			},
+			{
+				"type": "origins:delay",
+				"ticks": 5,
+				"action": {
+					"type": "origins:execute_command",
+					"command": "execute at @p run kill @e[type=item,nbt={Item:{id:\"minecraft:bedrock\"}},distance-..10]"
+				}
+			},
+			{
+				"type": "origins:delay",
+				"ticks": 5,
+				"action": {
+					"type": "origins:execute_command",
+					"command": "execute at @p run kill @e[type=item,nbt={Item:{id:\"minecraft:obsidian\"}},distance=..10]"
+				}
+			}
+		]
+	},
+	"cooldown": 100,
+	"hud_render": {
+		"should_render": true
+	},
+	"key": {
+		"key": "key.origins.primary_active",
+		"continuous": false
+	}
+}

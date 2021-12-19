@@ -1,0 +1,10 @@
+{
+    "type": "origins:attribute",
+    "name": "Resiliant",
+    "description": "Learning about death goes a long way towards avoiding it. Necromancers have increased health.",
+    "modifier": {
+        "attribute": "minecraft:generic.max_health",
+        "operation": "addition",
+        "value": 12.0      
+    }
+}

@@ -1,0 +1,29 @@
+{
+	"type": "origins:restrict_armor",
+	"name": "Silver Aversion",
+	"description": "A gorgon's only real weakness is silver (Iron acts as silver). They cannot wear silver armour.",
+	"head": {
+		"type": "origins:ingredient",
+		"ingredient": {
+			"item": "minecraft:iron_helmet"
+		}
+	},
+	"chest": {
+		"type": "origins:ingredient",
+		"ingredient": {
+			"item": "minecraft:iron_chestplate"
+		}
+	},
+	"legs": {
+		"type": "origins:ingredient",
+		"ingredient": {
+			"item": "minecraft:iron_leggings"
+		}
+	},
+	"feet": {
+		"type": "origins:ingredient",
+		"ingredient": {
+			"item": "minecraft:iron_boots"
+		}
+	}
+}

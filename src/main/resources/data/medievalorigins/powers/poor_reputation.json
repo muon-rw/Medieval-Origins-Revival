@@ -1,0 +1,98 @@
+{
+	"type": "origins:multiple",
+	"name": "Poor Reputation",
+	"description": "Unfortunately, students of the dark arts are feared by the general populace. Villagers will refuse to trade with Necromancers and iron golems will attack them on sight. This does, however, come with the bonus that they are accepted amongst the ranks of the Pillagers.",
+	"check_for_golems": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "execute as @e[type=minecraft:iron_golem,distance=..24] at @s if entity @e[type=minecraft:player,limit=1,distance=..16] run data modify entity @s AngryTime set value 40000"
+		},
+		"interval": 20
+	},
+	"make_golems_angry": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "execute as @e[type=minecraft:iron_golem,distance=..16] at @s if entity @e[type=minecraft:player,limit=1,distance=..16] run data modify entity @s AngryAt set from entity @e[type=player,distance=..16,limit=1] UUID"
+		},
+		"interval": 20
+	},
+	"no_trading": {
+		"type": "origins:prevent_entity_use",
+		"bientity_action": {
+			"type": "origins:actor_action",
+			"action": {
+				"type": "origins:execute_command",
+				"command": "title @s actionbar {\"text\": \"The villager is too scared of you to trade!\", \"color\": \"red\"}"
+			}
+		},
+		"bientity_condition": {
+			"type": "origins:target_condition",
+			"condition": {
+				"type": "origins:entity_type",
+				"entity_type": "minecraft:villager"
+			}
+		}
+	},
+	"pillager_team": {
+		"type": "origins:action_on_callback",
+		"entity_action_chosen": {
+			"type": "origins:execute_command",
+			"command": "team add PillagerAlly"
+		},
+		"entity_action_lost": {
+			"type": "origins:execute_command",
+			"command": "team remove PillagerAlly"
+		},
+		"execute_chosen_when_orb": true
+	},
+	"pillager_ally_player": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "team join PillagerAlly @e[type=player]"
+		},
+		"interval": 20
+	},
+	"pillager_ally_pillager": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "team join PillagerAlly @e[type=pillager]"
+		},
+		"interval": 20
+	},
+	"pillager_ally_ravager": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "team join PillagerAlly @e[type=ravager]"
+		},
+		"interval": 20
+	},
+	"pillager_ally_evoker": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "team join PillagerAlly @e[type=evoker]"
+		},
+		"interval": 20
+	},
+	"pillager_ally_vindicator": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "team join PillagerAlly @e[type=vindicator]"
+		},
+		"interval": 20
+	},
+	"pillager_ally_vex": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "team join PillagerAlly @e[type=vex]"
+		},
+		"interval": 20
+	}
+}
