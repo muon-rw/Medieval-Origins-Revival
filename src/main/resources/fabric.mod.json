@@ -9,7 +9,8 @@
     "ItsParkieLad"
   ],
   "contact": {
-    "homepage": "https://www.curseforge.com/minecraft/mc-mods/medieval-origins"
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/medieval-origins",
+    "source": "https://github.com/Deadbones2000/Medieval-Origins"
   },
 
   "license": "MIT License",
