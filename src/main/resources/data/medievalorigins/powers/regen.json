@@ -32,6 +32,6 @@
 		"continuous": false
 	},
 	"hud_render": {
-		"should_render": "false"
+		"should_render": "true"
 	}
 }

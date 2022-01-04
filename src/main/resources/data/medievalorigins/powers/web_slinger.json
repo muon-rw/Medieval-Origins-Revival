@@ -4,7 +4,7 @@
 	"description": "Arachnae can, on command, spin webs in which their opponents will be trapped for a short while.",
 	"entity_action": {
 		"type": "origins:execute_command",
-		"command": "effect give @e[type=!player,distance=..24,limit=8] minecraft:slowness 10 5"
+		"command": "effect give @e[type=!player,distance=..8,limit=8] minecraft:slowness 10 5"
 	},
 	"cooldown": 3600,
 	"key": {
@@ -12,6 +12,6 @@
 		"continuous": false
 	},
 	"hud_render": {
-		"should_render": "false"
+		"should_render": "true"
 	}
 }

@@ -1,17 +1,9 @@
 {
-	"type": "origins:action_over_time",
+	"type": "origins:modify_break_speed",
 	"name": "Dwarven Tech",
 	"description": "Dwarven tech allows dwarves to mine significantly faster than other creatures.",
-	"entity_action": {
-		"type": "origins:apply_effect",
-		"effect": {
-			"effect": "minecraft:haste",
-			"is_ambient": true,
-			"show_particles": false,
-			"show_icon": false,
-			"amplifier": 2,
-			"duration": 1000
-		}
-	},
-	"interval": 200
+	"modifer":{
+            "operation": "multiply_base",
+            "value": 0.25
+            }
 }

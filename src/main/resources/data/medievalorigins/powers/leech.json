@@ -1,7 +1,7 @@
 {
 	"type": "origins:self_action_on_hit",
 	"name": "Leech",
-	"description": "Every successful hit landed regenerates a heart of a paladnin's health.",
+	"description": "Every successful hit landed regenerates a heart of a Paladin's health.",
 	"entity_action": {
 		"type": "origins:heal",
 		"amount": 0.5

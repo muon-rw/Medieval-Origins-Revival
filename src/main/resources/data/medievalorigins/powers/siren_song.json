@@ -2,11 +2,11 @@
 	"type": "origins:multiple",
 	"name": "Siren Song",
 	"description": "Sirens are known for their alluring calls. Press G to make all mobs around you neutral until hit. (DOES NOT APPLY TO BOSSES, FOR OBVIOUS REASONS)",
-	"siren_song": {
+	"siren_song_power": {
 		"type": "origins:active_self",
 		"entity_action": {
 			"type": "origins:execute_command",
-			"command": "/team join SirenSong @e[type=!minecraft:player,type=!minecraft:ender_dragon,type=!minecraft:wither]"
+			"command": "function medievalorigins:mdvlorigins/siren_song_power"
 		},
 		"cooldown": 900,
 		"key": {
@@ -14,87 +14,26 @@
 			"continuous": false
 		},
 		"hud_render": {
-			"should_render": false
+			"should_render": true
 		}
 	},
-	"siren_song2": {
+	"siren_song_callback": {
 		"type": "origins:action_on_callback",
 		"entity_action_chosen": {
 			"type": "origins:execute_command",
-			"command": "team join SirenSong @s"
+			"command": "function medievalorigins:mdvlorigins/siren_song_callon"
 		},
 		"entity_action_lost": {
 			"type": "origins:execute_command",
-			"command": "team leave @s"
+			"command": "function medievalorigins:mdvlorigins/siren_song_callback"
 		},
 		"execute_chosen_when_orb": true
 	},
-	"siren_song3": {
-		"type": "origins:action_on_callback",
-		"entity_action_chosen": {
-			"type": "origins:execute_command",
-			"command": "team add SirenSong"
-		},
-		"execute_chosen_when_orb": true
-	},
-	"siren_song4": {
+	"siren_song_break": {
 		"type": "origins:self_action_on_hit",
 		"entity_action": {
 			"type": "origins:execute_command",
-			"command": "/team leave @e[type=!minecraft:player]"
-		},
-		"cooldown": 900,
-		"key": {
-			"key": "key.origins.primary_active",
-			"continuous": false
-		},
-		"hud_render": {
-			"should_render": "false"
-		}
-	},
-	"siren_song5": {
-		"type": "origins:active_self",
-		"entity_action": {
-			"type": "origins:execute_command",
-			"command": "execute as @e[type=!minecraft:player,type=!minecraft:wither,type=!minecraft:ender_dragon,type=!minecraft:zombie] run attribute @s minecraft:generic.follow_range base set 0.0"
-		},
-		"cooldown": 900,
-		"key": {
-			"key": "key.origins.primary_active",
-			"continuous": false
-		},
-		"hud_render": {
-			"should_render": "false"
-		}
-	},
-	"siren_song6": {
-		"type": "origins:active_self",
-		"entity_action": {
-			"type": "origins:execute_command",
-			"command": "execute as @e[type=minecraft:zombie] run attribute @s minecraft:generic.follow_range base set 0.0"
-		},
-		"cooldown": 900,
-		"key": {
-			"key": "key.origins.primary_active",
-			"continuous": false
-		},
-		"hud_render": {
-			"should_render": "false"
-		}
-	},
-	"siren_song7": {
-		"type": "origins:self_action_on_hit",
-		"entity_action": {
-			"type": "origins:execute_command",
-			"command": "execute as @e[type=!minecraft:player,type=!minecraft:wither,type=!minecraft:ender_dragon,type=!minecraft:zombie] run attribute @s minecraft:generic.follow_range base set 32.0"
-		},
-		"cooldown": 20
-	},
-	"siren_song8": {
-		"type": "origins:action_on_callback",
-		"entity_action": {
-			"type": "origins:execute_command",
-			"command": "execute as @e[type=minecraft:zombie] run attribute @s minecraft:generic.follow_range base set 80.0"
+			"command": "function medievalorigins:mdvlorigins/siren_song_break"
 		},
 		"cooldown": 20
 	}

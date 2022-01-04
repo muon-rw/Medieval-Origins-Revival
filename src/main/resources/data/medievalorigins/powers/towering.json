@@ -4,11 +4,11 @@
 	"description": "Elves are substantially taller than the average human. Despite this, they are just as skinny...",
 	"entity_action_chosen": {
 		"type": "origins:execute_command",
-		"command": "scale set pehkui:height 1.2"
+		"command": "function medievalorigins:mdvlorigins/elf_callon"
 	},
 	"entity_action_lost": {
 		"type": "origins:execute_command",
-		"command": "scale reset pehkui:height"
+		"command": "function medievalorigins:mdvlorigins/elf_callback"
 	},
 	"execute_chosen_when_orb": true
 }

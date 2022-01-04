@@ -6,7 +6,7 @@
 		"type": "origins:action_over_time",
 		"entity_action": {
 			"type": "origins:execute_command",
-			"command": "execute as @e[type=!minecraft:player,type=!minecraft:wither,type=!minecraft:ender_dragon,type=!minecraft:zombie] run attribute @s minecraft:generic.follow_range base set 64.0"
+			"command": "function medievalorigins:mdvlorigins/allure"
 		},
 		"interval": 100
 	},
@@ -14,32 +14,11 @@
 		"type": "origins:action_on_callback",
 		"entity_action_chosen": {
 			"type": "origins:execute_command",
-			"command": "execute as @e[type=!minecraft:player,type=!minecraft:wither,type=!minecraft:ender_dragon,type=!minecraft:zombie] run attribute @s minecraft:generic.follow_range base set 64.0"
+			"command": "function medievalorigins:mdvlorigins/allure_callon"
 		},
 		"entity_action_lost": {
 			"type": "origins:execute_command",
-			"command": "execute as @e[type=!minecraft:player,type=!minecraft:wither,type=!minecraft:ender_dragon,type=!minecraft:zombie] run attribute @s minecraft:generic.follow_range base set 32.0"
-		},
-		"execute_chosen_when_orb": true
-	},
-	"allure_zombie": {
-		"type": "origins:action_over_time",
-		"entity_action": {
-			"type": "origins:execute_command",
-			"command": "execute as @e[type=minecraft:zombie] run attribute @s minecraft:generic.follow_range base set 112.0"
-		},
-		"interval": 100
-	},
-	"allure_zombie_callback": {
-		"type": "origins:action_on_callback",
-		"hidden": true,
-		"entity_action_chosen": {
-			"type": "origins:execute_command",
-			"command": "execute as @e[type=minecraft:zombie] run attribute @s minecraft:generic.follow_range base set 112.0"
-		},
-		"entity_action_lost": {
-			"type": "origins:execute_command",
-			"command": "execute as @e[type=minecraft:zombie] run attribute @s minecraft:generic.follow_range base set 80.0"
+			"command": "function medievalorigins:mdvlorigins/allure_callback"
 		},
 		"execute_chosen_when_orb": true
 	}

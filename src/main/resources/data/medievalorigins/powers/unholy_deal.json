@@ -3,37 +3,24 @@
 	"name": "Unholy Deal",
 	"description": "Daemons can exchange some of their health for increased strength, on account of the devil's influence. Triggered by pressing G.",
 	"entity_action": {
-		"type": "origins:if_else",
-		"condition": {
-			"type": "origins:status_effect",
-			"effect": "minecraft:strength",
-			"show_particles": false,
-			"show_icon": false
-		},
-		"if_action": {
-			"type": "origins:clear_effect",
-			"effect": "minecraft:strength"
-		},
-		"else_action": {
-			"type": "origins:apply_effect",
-			"effects": [{
-					"effect": "minecraft:strength",
-					"is_ambient": true,
-					"show_particles": false,
-					"show_icon": false,
-					"amplifier": 2,
-					"duration": 400
-				},
-				{
-					"effect": "minecraft:instant_damage",
-					"is_ambient": true,
-					"show_particles": false,
-					"show_icon": false,
-					"amplifier": 0.99,
-					"duration": 12
-				}
-			]
-		}
+		"type": "origins:apply_effect",
+		"effects": [{
+				"effect": "minecraft:strength",
+				"is_ambient": true,
+				"show_particles": false,
+				"show_icon": false,
+				"amplifier": 2,
+				"duration": 400
+			},
+			{
+				"effect": "minecraft:instant_damage",
+				"is_ambient": true,
+				"show_particles": false,
+				"show_icon": false,
+				"amplifier": 0.99,
+				"duration": 12
+			}
+		]
 	},
 	"cooldown": 1800,
 	"key": {
@@ -41,6 +28,6 @@
 		"continuous": false
 	},
 	"hud_render": {
-		"should_render": "false"
+		"should_render": true
 	}
 }
