@@ -5,7 +5,6 @@
 	"golden_tool_boost": {
 		"type": "origins:modify_damage_dealt",
 		"modifier": {
-			"name": "Origin modifier",
 			"operation": "addition",
 			"value": 2.5
 		},
@@ -23,8 +22,7 @@
 	"golden_helmet_boost": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
-			"name": "Origin modifier",
-			"attribute": "generic.armor",
+			"attribute": "minecraft:generic.armor",
 			"operation": "addition",
 			"value": 1
 		},
@@ -42,8 +40,7 @@
 	"golden_chestplate_boost": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
-			"name": "Origin modifier",
-			"attribute": "generic.armor",
+			"attribute": "minecraft:generic.armor",
 			"operation": "addition",
 			"value": 2
 		},
@@ -61,8 +58,7 @@
 	"golden_leggings_boost": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
-			"name": "Origin modifier",
-			"attribute": "generic.armor",
+			"attribute": "minecraft:generic.armor",
 			"operation": "addition",
 			"value": 2
 		},
@@ -80,8 +76,7 @@
 	"golden_boots_boost": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {
-			"name": "Origin modifier",
-			"attribute": "generic.armor",
+			"attribute": "minecraft:generic.armor",
 			"operation": "addition",
 			"value": 1
 		},
@@ -91,7 +86,7 @@
 			"item_condition": {
 				"type": "origins:ingredient",
 				"ingredient": {
-					"tag": "medieval:golden_armour"
+					"tag": "medievalorigins:golden_armour"
 				}
 			}
 		}

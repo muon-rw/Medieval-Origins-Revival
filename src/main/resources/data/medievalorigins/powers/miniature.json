@@ -1,49 +1,14 @@
 {
-	"type": "origins:multiple",
+	"type": "origins:action_on_callback",
 	"name": "Miniature",
 	"description": "Perhaps the most notable aspect of a dwarf is their size. They are far, far shorter than the average human.",
-	"miniature": {
-		"type": "origins:action_on_callback",
-		"entity_action_chosen": {
-			"type": "origins:execute_command",
-			"command": "scale set pehkui:base 0.5"
-		},
-		"entity_action_lost": {
-			"type": "origins:execute_command",
-			"command": "scale reset pehkui:base"
-		},
-		"execute_chosen_when_orb": true
+	"entity_action_chosen": {
+		"type": "origins:execute_command",
+		"command": "function medievalorigins:mdvlorigins/dwarf_callon"
 	},
-	"miniature2": {
-		"type": "origins:action_over_time",
-		"entity_action": {
-			"type": "origins:execute_command",
-			"command": "scale set pehkui:motion 2.1"
-		},
-		"interval": 100
+	"entity_action_lost": {
+		"type": "origins:execute_command",
+		"command": "function medievalorigins:mdvlorigins/dwarf_callback"
 	},
-	"miniature3": {
-		"type": "origins:action_on_callback",
-		"entity_action_chosen": {
-			"type": "origins:execute_command",
-			"command": "scale persist set pehkui:base true @s"
-		},
-		"entity_action_lost": {
-			"type": "origins:execute_command",
-			"command": "scale persist reset pehkui:base true @s"
-		},
-		"execute_chosen_when_orb": true
-	},
-	"miniature4": {
-		"type": "origins:action_on_callback",
-		"entity_action_chosen": {
-			"type": "origins:execute_command",
-			"command": "scale set pehkui:motion 2.1"
-		},
-		"entity_action_lost": {
-			"type": "origins:execute_command",
-			"command": "scale reset pehkui:motion"
-		},
-		"execute_chosen_when_orb": true
-	}
+	"execute_chosen_when_orb": true
 }

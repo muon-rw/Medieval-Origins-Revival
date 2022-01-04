@@ -1,35 +1,17 @@
 {
-	"type": "origins:multiple",
 	"name": "Hellraiser",
 	"description": "At will, a necromancer can raise a circle of skeletons, blocking projectiles and damaging other opponents. Unfortunately, it only lasts for a short time.",
-	"skeleton_barrier": {
-		"type": "origins:active_self",
-		"entity_action": {
-			"type": "origins:execute_command",
-			"command": "summon falling_block ~ ~.5 ~ {Time:1,BlockState:{Name:redstone_block},Passengers:[{id:armor_stand,Health:0,Passengers:[{id:falling_block,Time:1,BlockState:{Name:activator_rail},Passengers:[{id:command_block_minecart,Command:'gamerule commandBlockOutput false'},{id:command_block_minecart,Command:'team add SkeletonCircle'},{id:command_block_minecart,Command:'team join SkeletonCircle @p'},{id:command_block_minecart,Command:'execute as @p at @p run summon minecraft:skeleton ~3 ~ ~ {NoAI:1,Rotation:[-90.0f,-45.0f],ArmorItems:[{id:\"minecraft:air\",Count:1b},{id:\"minecraft:air\",Count:1b},{id:\"minecraft:air\",Count:1b},{id:\"minecraft:iron_helmet\",Count:1b}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}'},{id:command_block_minecart,Command:'execute as @p at @p run summon minecraft:skeleton ~2.75 ~ ~1.1 {NoAI:1,Rotation:[-67.5f,-45.0f],ArmorItems:[{id:\"minecraft:air\",Count:1b},{id:\"minecraft:air\",Count:1b},{id:\"minecraft:air\",Count:1b},{id:\"minecraft:iron_helmet\",Count:1b}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}'},{id:command_block_minecart,Command:'execute as @p at @p run summon minecraft:skeleton ~2.1 ~ ~2.1 {NoAI:1,Rotation:[-45.0f,-45.0f],ArmorItems:[{id:\"minecraft:air\",Count:1b},{id:\"minecraft:air\",Count:1b},{id:\"minecraft:air\",Count:1b},{id:\"minecraft:iron_helmet\",Count:1b}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}'},{id:command_block_minecart,Command:'execute as @p at @p run summon minecraft:skeleton ~1.1 ~ ~2.75 {NoAI:1,Rotation:[-22.5f,-45.0f],ArmorItems:[{id:\"minecraft:air\",Count:1b},{id:\"minecraft:air\",Count:1b},{id:\"minecraft:air\",Count:1b},{id:\"minecraft:iron_helmet\",Count:1b}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}'},{id:command_block_minecart,Command:'execute as @p at @p run summon minecraft:skeleton ~ ~ ~3 {NoAI:1,Rotation:[-0.0f,-45.0f],ArmorItems:[{id:\"minecraft:air\",Count:1b},{id:\"minecraft:air\",Count:1b},{id:\"minecraft:air\",Count:1b},{id:\"minecraft:iron_helmet\",Count:1b}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}'},{id:command_block_minecart,Command:'execute as @p at @p run summon minecraft:skeleton ~-1.1 ~ ~2.75 {NoAI:1,Rotation:[22.5f,-45.0f],ArmorItems:[{id:\"minecraft:air\",Count:1b},{id:\"minecraft:air\",Count:1b},{id:\"minecraft:air\",Count:1b},{id:\"minecraft:iron_helmet\",Count:1b}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}'},{id:command_block_minecart,Command:'execute as @p at @p run summon minecraft:skeleton ~-2.1 ~ ~2.1 {NoAI:1,Rotation:[45.0f,-45.0f],ArmorItems:[{id:\"minecraft:air\",Count:1b},{id:\"minecraft:air\",Count:1b},{id:\"minecraft:air\",Count:1b},{id:\"minecraft:iron_helmet\",Count:1b}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}'},{id:command_block_minecart,Command:'execute as @p at @p run summon minecraft:skeleton ~-2.75 ~ ~1.1 {NoAI:1,Rotation:[67.5f,-45.0f],ArmorItems:[{id:\"minecraft:air\",Count:1b},{id:\"minecraft:air\",Count:1b},{id:\"minecraft:air\",Count:1b},{id:\"minecraft:iron_helmet\",Count:1b}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}'},{id:command_block_minecart,Command:'execute as @p at @p run summon minecraft:skeleton ~-3 ~ ~ {NoAI:1,Rotation:[90.0f,-45.0f],ArmorItems:[{id:\"minecraft:air\",Count:1b},{id:\"minecraft:air\",Count:1b},{id:\"minecraft:air\",Count:1b},{id:\"minecraft:iron_helmet\",Count:1b}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}'},{id:command_block_minecart,Command:'execute as @p at @p run summon minecraft:skeleton ~-2.75 ~ ~-1.1 {NoAI:1,Rotation:[112.5f,-45.0f],ArmorItems:[{id:\"minecraft:air\",Count:1b},{id:\"minecraft:air\",Count:1b},{id:\"minecraft:air\",Count:1b},{id:\"minecraft:iron_helmet\",Count:1b}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}'},{id:command_block_minecart,Command:'execute as @p at @p run summon minecraft:skeleton ~-2.1 ~ ~-2.1 {NoAI:1,Rotation:[135.0f,-45.0f],ArmorItems:[{id:\"minecraft:air\",Count:1b},{id:\"minecraft:air\",Count:1b},{id:\"minecraft:air\",Count:1b},{id:\"minecraft:iron_helmet\",Count:1b}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}'},{id:command_block_minecart,Command:'execute as @p at @p run summon minecraft:skeleton ~-1.1 ~ ~-2.75 {NoAI:1,Rotation:[157.5f,-45.0f],ArmorItems:[{id:\"minecraft:air\",Count:1b},{id:\"minecraft:air\",Count:1b},{id:\"minecraft:air\",Count:1b},{id:\"minecraft:iron_helmet\",Count:1b}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}'},{id:command_block_minecart,Command:'execute as @p at @p run summon minecraft:skeleton ~ ~ ~-3 {NoAI:1,Rotation:[180.0f,-45.0f],ArmorItems:[{id:\"minecraft:air\",Count:1b},{id:\"minecraft:air\",Count:1b},{id:\"minecraft:air\",Count:1b},{id:\"minecraft:iron_helmet\",Count:1b}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}'},{id:command_block_minecart,Command:'execute as @p at @p run summon minecraft:skeleton ~1.1 ~ ~-2.75 {NoAI:1,Rotation:[-157.5f,-45.0f],ArmorItems:[{id:\"minecraft:air\",Count:1b},{id:\"minecraft:air\",Count:1b},{id:\"minecraft:air\",Count:1b},{id:\"minecraft:iron_helmet\",Count:1b}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}'},{id:command_block_minecart,Command:'execute as @p at @p run summon minecraft:skeleton ~2.1 ~ ~-2.1 {NoAI:1,Rotation:[-135.0f,-45.0f],ArmorItems:[{id:\"minecraft:air\",Count:1b},{id:\"minecraft:air\",Count:1b},{id:\"minecraft:air\",Count:1b},{id:\"minecraft:iron_helmet\",Count:1b}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}'},{id:command_block_minecart,Command:'execute as @p at @p run summon minecraft:skeleton ~2.75 ~ ~-1.1 {NoAI:1,Rotation:[-112.5f,-45.0f],ArmorItems:[{id:\"minecraft:air\",Count:1b},{id:\"minecraft:air\",Count:1b},{id:\"minecraft:air\",Count:1b},{id:\"minecraft:iron_helmet\",Count:1b}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}'},{id:command_block_minecart,Command:'team join SkeletonCircle @e[type=skeleton,distance=..5'},{id:command_block_minecart,Command:'execute at @p run execute as @e[type=skeleton,distance=..8] run data merge entity @s {DeathLootTable:\"minecraft:empty\"}'},{id:command_block_minecart,Command:'execute at @p run execute as @e[type=skeleton,distance=..8] at @s run summon area_effect_cloud ~ ~.75 ~ {Radius:1.8f,Duration:2000,RadiusOnUse:-0.0033f,RadiusPerTick:-0.0033f,ReapplicationDelay:40,Effects:[{Duration:80,Id:20b,Amplifier:1.5,IsAmbient:true,ShowParticles:false,ShowIcon:false}]}'},{id:command_block_minecart,Command:'setblock ~ ~1 ~ command_block{auto:1,Command:\"fill ~ ~ ~ ~ ~-3 ~ air\"}'},{id:command_block_minecart,Command:'kill @e[type=command_block_minecart,distance=..1]'}]}]}]}"
-		},
-		"cooldown": 5400,
-		"hud_render": {
-			"should_render": true
-		},
-		"key": {
-			"key": "key.origins.primary_active",
-			"continuous": false
-		}
+	"type": "origins:active_self",
+	"entity_action": {
+		"type": "origins:execute_command",
+		"command": "function medievalorigins:mdvlorigins/hellraiser"
 	},
-	"sound": {
-		"type": "origins:active_self",
-		"entity_action": {
-			"type": "origins:play_sound",
-			"sound": "minecraft:entity.skeleton.death"
-		},
-		"cooldown": 5400,
-		"hud_render": {
-			"should_render": false
-		},
-		"key": {
-			"key": "key.origins.primary_active",
-			"continuous": false
-		}
+	"cooldown": 5400,
+	"hud_render": {
+		"should_render": false
+	},
+	"key": {
+		"key": "key.origins.primary_active",
+		"continuous": false
 	}
 }

@@ -5,7 +5,6 @@
 	"axe_boost": {
 		"type": "origins:modify_damage_dealt",
 		"modifier": {
-			"name": "Origin modifier",
 			"operation": "addition",
 			"value": 3.5
 		},
