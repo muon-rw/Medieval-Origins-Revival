@@ -1,7 +1,5 @@
 {
 	"type": "origins:modify_damage_taken",
-	"name": "Magical Resistance",
-	"description": "As magical creatures themselves, faes take less magic damage compared to other creatures.",
 	"damage_condition": {
 		"type": "origins:attacker",
 		"entity_condition": {

@@ -1,7 +1,5 @@
 {
 	"type": "origins:conditioned_attribute",
-	"name": "Valour",
-	"description": "Knights are valourous men. In their dying moments, they fight harder than ever.",
 	"modifier": {
 		"attribute": "minecraft:generic.attack_damage",
 		"operation": "addition",

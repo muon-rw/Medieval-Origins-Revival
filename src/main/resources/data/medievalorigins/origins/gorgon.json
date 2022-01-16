@@ -1,0 +1,8 @@
+{
+	"powers": [
+                "medievalorigins:gorgon_placeholder"
+	],
+	"icon": "minecraft:mossy_cobblestone",
+	"impact": 3,
+        "order": 1
+}

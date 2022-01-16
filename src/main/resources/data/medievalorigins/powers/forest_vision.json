@@ -1,6 +1,4 @@
 {
 	"type": "origins:night_vision",
-	"name": "Forest Vision",
-	"description": "Centuries of living in the forest has given the elves far better perception in the dark than most.",
 	"strength": 0.5
 }

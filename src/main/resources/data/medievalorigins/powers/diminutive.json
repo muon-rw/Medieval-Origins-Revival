@@ -1,7 +1,5 @@
 {
 	"type": "origins:action_on_callback",
-	"name": "Diminutive",
-	"description": "It is rare for a fae to break 5 feet in height. They are small creatures, even smaller than the weaselly goblins.",
 	"entity_action_chosen": {
 		"type": "origins:execute_command",
 		"command": "function medievalorigins:mdvlorigins/fae_callon"

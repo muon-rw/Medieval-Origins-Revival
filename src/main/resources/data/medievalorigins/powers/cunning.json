@@ -1,10 +1,14 @@
 {
 	"type": "origins:attribute",
-	"name": "Cunning",
-	"description": "Goblins are cunning creatures. Their attacks do more damage than other creatures and they gain more loot from killing mobs.",
-	"modifier": {
-		"attribute": "minecraft:generic.attack_damage",
-		"operation": "addition",
-		"value": 1.0
-	}
+	"modifiers": [{
+			"attribute": "minecraft:generic.attack_damage",
+			"operation": "addition",
+			"value": 1.0
+		},
+		{
+			"attribute": "minecraft:generic.luck",
+			"operation": "addition",
+			"value": 1.0
+		}
+	]
 }

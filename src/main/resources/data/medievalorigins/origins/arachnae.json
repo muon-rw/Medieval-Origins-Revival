@@ -8,9 +8,7 @@
                 "medievalorigins:bottomless_stomach",
                 "medievalorigins:fragile_exoskeleton"
 	],
-	"icon": "minecraft:cobweb",
+	"icon": "minecraft:string",
 	"impact": 2,
-        "order": 1,
-	"name": "Arachnae",
-	"description": "Humanoid, arachnid half-breeds, Arachnae are the size of a man with the dexterity and nimbleness of a spider. What could possibly go wrong?"
+        "order": 1
 }

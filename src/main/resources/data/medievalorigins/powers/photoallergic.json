@@ -1,7 +1,5 @@
 {
 	"type": "origins:burn",
-	"name": "Photoallergic",
-	"description": "Dwarven skin is not suited to the intense sunlight of the outside world, and they combust when exposed to it. Can be prevented by wearing a helmet.",
 	"interval": 20,
 	"burn_duration": 6,
 	"condition": {

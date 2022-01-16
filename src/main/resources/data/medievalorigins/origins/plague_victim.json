@@ -10,7 +10,5 @@
 	],
 	"icon": "minecraft:soul_sand",
 	"impact": 2,
-        "order": 1,
-	"name": "Plague Victim",
-	"description": "Carrier of the Plague, it affects the victim's daily life yet does not kill them. Used correctly, it can be a powerful weapon against their foes."
+        "order": 1
 }

@@ -1,7 +1,5 @@
 {
 	"type": "origins:action_on_callback",
-	"name": "Gargantuan",
-	"description": "Ogres are renowned for their size, and are substantially taller (and wider) than most creatures.",
 	"entity_action_chosen": {
 		"type": "origins:execute_command",
 		"command": "function medievalorigins:mdvlorigins/ogre_callon"

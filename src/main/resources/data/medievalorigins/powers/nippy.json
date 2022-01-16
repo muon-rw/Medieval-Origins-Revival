@@ -1,7 +1,5 @@
 {
 	"type": "origins:attribute",
-	"name": "Nippy",
-	"description": "Although short, goblins are most certainly not slow. Moderate increase to base movement speed.",
 	"modifier": {
 		"attribute": "minecraft:generic.movement_speed",
 		"operation": "addition",

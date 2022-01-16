@@ -1,7 +1,5 @@
 {
 	"type": "origins:modify_damage_taken",
-	"name": "Prone",
-	"description": "While sirens can regenerate their bodies, they are weak to blunt force. Melee attacks do more damage to them.",
 	"damage_condition": {
 		"type": "origins:attacker",
 		"condition": {

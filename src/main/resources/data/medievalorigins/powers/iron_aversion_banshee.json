@@ -1,7 +1,5 @@
 {
 	"type": "origins:restrict_armor",
-	"name": "Iron Aversion",
-	"description": "Iron is lethal to banshees. They cannot bear to wear it.",
 	"head": {
 		"type": "origins:ingredient",
 		"ingredient": {

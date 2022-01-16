@@ -1,7 +1,5 @@
 {
 	"type": "origins:restrict_armor",
-	"name": "XXXL",
-	"description": "It is rather hard to find a suit of armour in size XXXL. As a result, ogres can only wear flexible armour, being leather and chainmail.",
 	"head": {
 		"type": "origins:or",
 		"conditions": [{

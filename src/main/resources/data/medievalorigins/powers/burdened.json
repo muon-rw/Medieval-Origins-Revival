@@ -1,7 +1,5 @@
 {
 	"type": "origins:attribute",
-	"name": "Burdened",
-	"description": "Burdened by heavy armour, knights have reduced movement speed.",
 	"modifier": {
 		"attribute": "minecraft:generic.movement_speed",
 		"operation": "addition",

@@ -1,6 +1,4 @@
 {
-	"name": "Hellraiser",
-	"description": "At will, a necromancer can raise a circle of skeletons, blocking projectiles and damaging other opponents. Unfortunately, it only lasts for a short time.",
 	"type": "origins:active_self",
 	"entity_action": {
 		"type": "origins:execute_command",

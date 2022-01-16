@@ -1,7 +1,5 @@
 {
 	"type": "origins:multiple",
-	"name": "Lycanthropy",
-	"description": "The condition which causes werewolves to turn into a wolf at night. Has the effect of increasing a person's stature, strength and health.",
 	"lycanthropy": {
 		"type": "origins:stacking_status_effect",
 		"min_stacks": 0,

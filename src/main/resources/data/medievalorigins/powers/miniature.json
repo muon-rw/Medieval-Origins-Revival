@@ -1,7 +1,5 @@
 {
 	"type": "origins:action_on_callback",
-	"name": "Miniature",
-	"description": "Perhaps the most notable aspect of a dwarf is their size. They are far, far shorter than the average human.",
 	"entity_action_chosen": {
 		"type": "origins:execute_command",
 		"command": "function medievalorigins:mdvlorigins/dwarf_callon"

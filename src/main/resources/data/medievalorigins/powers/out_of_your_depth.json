@@ -1,7 +1,5 @@
 {
 	"type": "origins:disable_regen",
-	"name": "Out of your Depth",
-	"description": "Although sirens can survive just fine on land, it is not their natural environment. As such, their regenerative abilities do not apply, and any damage taken can only be healed with potions.",
 	"condition": {
 		"type": "origins:submerged_in",
 		"fluid": "minecraft:water",

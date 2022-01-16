@@ -1,7 +1,5 @@
 {
 	"type": "origins:effect_immunity",
-	"name": "Impervious",
-	"description": "The study of death has made Necromancers immune to poison, wither and instant damage. Unfortunately, this also means they do not recieve the positive effects from regeneration and instant health.",
 	"effects": [
 		"minecraft:wither",
 		"minecraft:poison",

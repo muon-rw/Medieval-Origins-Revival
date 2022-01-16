@@ -1,7 +1,5 @@
 {
 	"type": "origins:restrict_armor",
-	"name": "Iron Aversion",
-	"description": "Iron inhibits fae powers. It is unbearable for them to wear it.",
 	"head": {
 		"type": "origins:ingredient",
 		"ingredient": {

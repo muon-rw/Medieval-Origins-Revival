@@ -1,7 +1,5 @@
 {
 	"type": "origins:multiple",
-	"name": "Skilled Swordsman",
-	"description": "Knights are trained professionals at what they do. Any attack they make with a sword deals more damage.",
 	"axe_boost": {
 		"type": "origins:modify_damage_dealt",
 		"modifier": {

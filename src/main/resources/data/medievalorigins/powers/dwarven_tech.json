@@ -1,7 +1,5 @@
 {
 	"type": "origins:modify_break_speed",
-	"name": "Dwarven Tech",
-	"description": "Dwarven tech allows dwarves to mine significantly faster than other creatures.",
 	"modifer":{
             "operation": "multiply_base",
             "value": 0.25

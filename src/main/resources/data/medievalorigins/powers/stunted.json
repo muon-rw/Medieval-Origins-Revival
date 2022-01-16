@@ -1,7 +1,5 @@
 {
 	"type": "origins:action_on_callback",
-	"name": "Stunted",
-	"description": "Goblins' poor diets and genetics prevent them from growing as tall as other creatures.",
 	"entity_action_chosen": {
 		"type": "origins:execute_command",
 		"command": "function medievalorigins:mdvlorigins/goblin_callon"

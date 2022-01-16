@@ -1,7 +1,5 @@
 {
 	"type": "origins:multiple",
-	"name": "Unguarded",
-	"description": "Enveloping oneself in the arcane leaves you open to attack in the physical realm. Most mobs deal more damage to necromancers.",
 	"more_damage": {
 		"type": "origins:modify_damage_taken",
 		"damage_condition": {

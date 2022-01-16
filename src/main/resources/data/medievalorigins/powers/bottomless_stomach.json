@@ -1,7 +1,5 @@
 {
 	"type": "origins:modify_exhaustion",
-	"name": "Bottomless Stomach",
-	"description": "A human sized spider does not come without consequences. A massive amount of food is required to sustain the Arachnae.",
 	"modifier": {
 		"name": "Extra exhaustion from large appetite",
 		"value": 0.8,

@@ -1,7 +1,5 @@
 {
 	"type": "origins:multiple",
-	"name": "Drained",
-	"description": "Increased prowess at night does, unfortunately, come with consequences. In daytime your health and strength are reduced.",
 	"drained": {
 		"type": "origins:conditioned_attribute",
 		"modifier": {

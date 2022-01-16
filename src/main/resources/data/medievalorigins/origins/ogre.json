@@ -12,7 +12,5 @@
 	],
 	"icon": "minecraft:wooden_axe",
 	"impact": 3,
-        "order": 1,
-	"name": "Ogre",
-	"description": "Large and impervious brutes, orgres are ferocious creatures with a grand stature. However, their appetite is insatiable, and their stature is just as often a hindrance as it is a help."
+        "order": 1
 }

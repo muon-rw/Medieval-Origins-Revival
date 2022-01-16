@@ -9,7 +9,5 @@
 	],
 	"icon": "minecraft:shield",
 	"impact": 1,
-        "order": 1,
-	"name": "Knight",
-	"description": "Knights are valorous heroes, who work tirelessly to protect the land."
+        "order": 1
 }

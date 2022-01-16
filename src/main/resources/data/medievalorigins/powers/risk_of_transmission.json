@@ -1,7 +1,5 @@
 {
 	"type": "origins:multiple",
-	"name": "Risk of Transmission",
-	"description": "Every contact with a plague victim is a 50/50 on whether you will contract the disease or not. Their opponents best pray that they get lucky...",
 	"rot1": {
 		"type": "origins:target_action_on_hit",
 		"entity_action": {

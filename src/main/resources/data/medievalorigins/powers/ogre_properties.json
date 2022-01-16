@@ -18,7 +18,7 @@
 		}
 	},
 	"better_food": {
-		"type": "origins:modift_food",
+		"type": "origins:modify_food",
 		"saturation_modifer": {
 			"operation": "multiply_base",
 			"value": 1.0

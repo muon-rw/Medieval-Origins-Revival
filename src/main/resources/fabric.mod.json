@@ -10,7 +10,8 @@
   ],
   "contact": {
     "homepage": "https://www.curseforge.com/minecraft/mc-mods/medieval-origins",
-    "source": "https://github.com/Deadbones2000/Medieval-Origins"
+    "source": "https://github.com/Deadbones2000/Medieval-Origins",
+    "issues": "https://discord.gg/hwZM2CsPEt"
   },
 
   "license": "MIT License",
@@ -30,7 +31,9 @@
     "fabricloader": ">=0.12.8",
     "fabric": "*",
     "minecraft": "1.18.x",
-    "java": ">=17"
+    "java": ">=17",
+    "origins": "1.3.x",
+    "pehkui": "3.x.x"
   },
   "suggests": {
     "another-mod": "*"

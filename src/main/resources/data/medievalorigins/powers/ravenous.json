@@ -1,7 +1,5 @@
 {
 	"type": "origins:modify_exhaustion",
-	"name": "Ravenous",
-	"description": "It takes a lot of food to sustain a creature as large as an ogre. Appetite is massively increased.",
 	"modifier": {
 		"name": "Extra exhaustion from large appetite",
 		"value": 0.8,

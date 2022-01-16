@@ -1,7 +1,5 @@
 {
 	"type": "origins:climbing",
-	"name": "Climber",
-	"description": "The fine bristles on the Arachnae's legs allow them to climb up walls.",
 	"condition": {
 		"type": "origins:collided_horizontally"
 	},

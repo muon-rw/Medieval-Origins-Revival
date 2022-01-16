@@ -1,21 +1,14 @@
 {
-	"type": "origins:multiple",
-	"name": "Skin and Bones",
-	"description": "The Plague causes rapid muscle atrophy, resulting in reduced health and speed.",
-	"speed": {
-		"type": "origins:attribute",
-		"modifier": {
+	"type": "origins:attribute",
+	"modifiers": [{
 			"attribute": "minecraft:generic.movement_speed",
 			"operation": "addition",
 			"value": -0.03
-		}
-	},
-	"health": {
-		"type": "origins:attribute",
-		"modifier": {
+		},
+		{
 			"attribute": "minecraft:generic.max_health",
 			"operation": "addition",
 			"value": -4.0
 		}
-	}
+	]
 }

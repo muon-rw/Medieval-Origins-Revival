@@ -1,7 +1,5 @@
 {
 	"type": "origins:attribute",
-	"name": "Sluggish",
-	"description": "Not known for their agility, ogres are some of the slowest creatures to roam the land.",
 	"modifier": {
 		"attribute": "minecraft:generic.movement_speed",
 		"operation": "addition",

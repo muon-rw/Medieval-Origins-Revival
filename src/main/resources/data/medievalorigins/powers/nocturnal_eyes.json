@@ -1,7 +1,5 @@
 {
 	"type": "origins:action_over_time",
-	"name": "Nocturnal Eyes",
-	"description": "Living underground has lead to dwarves having highly sensitive eyes, able to see perfectly fine even in the pitch black of the caverns.",
 	"entity_action": {
 		"type": "origins:if_else",
 		"condition": {

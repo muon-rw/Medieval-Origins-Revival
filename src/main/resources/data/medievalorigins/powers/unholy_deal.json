@@ -1,7 +1,5 @@
 {
 	"type": "origins:active_self",
-	"name": "Unholy Deal",
-	"description": "Daemons can exchange some of their health for increased strength, on account of the devil's influence. Triggered by pressing G.",
 	"entity_action": {
 		"type": "origins:apply_effect",
 		"effects": [{

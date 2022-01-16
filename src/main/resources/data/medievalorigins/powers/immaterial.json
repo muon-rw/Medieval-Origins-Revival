@@ -1,7 +1,5 @@
 {
 	"type": "origins:attribute",
-	"name": "Immaterial",
-	"description": "Being incorporeal does not come without consequence. Banshees have half the health a living person would have.",
 	"modifier": {
 		"attribute": "minecraft:generic.max_health",
 		"operation": "addition",

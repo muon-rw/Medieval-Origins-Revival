@@ -1,7 +1,5 @@
 {
 	"type": "origins:multiple",
-	"name": "Poor Reputation",
-	"description": "Unfortunately, students of the dark arts are feared by the general populace. Villagers will refuse to trade with Necromancers and iron golems will attack them on sight. This does, however, come with the bonus that they are accepted amongst the ranks of the Pillagers.",
 	"poor_reputation": {
 		"type": "origins:action_over_time",
 		"entity_action": {
@@ -16,7 +14,7 @@
 			"type": "origins:actor_action",
 			"action": {
 				"type": "origins:execute_command",
-				"command": "title @s actionbar {\"text\": \"The villager is too scared of you to trade!\", \"color\": \"red\"}"
+				"command": "title @s actionbar {\"translate\": \"medievalorigins.poor_reputation_villager\", \"color\": \"red\"}"
 			}
 		},
 		"bientity_condition": {

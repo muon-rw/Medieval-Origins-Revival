@@ -1,7 +1,5 @@
 {
 	"type": "origins:effect_immunity",
-	"name": "Plague Immunity",
-	"description": "Although the plague affects the carrier, they do not suffer the brunt of its symptoms. Carriers are immune to poison and wither.",
 	"effects": [
 		"minecraft:wither",
 		"minecraft:poison"

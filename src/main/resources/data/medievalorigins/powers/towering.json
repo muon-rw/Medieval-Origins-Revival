@@ -1,7 +1,5 @@
 {
 	"type": "origins:action_on_callback",
-	"name": "Towering",
-	"description": "Elves are substantially taller than the average human. Despite this, they are just as skinny...",
 	"entity_action_chosen": {
 		"type": "origins:execute_command",
 		"command": "function medievalorigins:mdvlorigins/elf_callon"

@@ -1,7 +1,5 @@
 {
 	"type": "origins:modify_exhaustion",
-	"name": "Well-Built",
-	"description": "Walking around in heavy armour all day is a chore. Paladins need more food to sustain themselves.",
 	"modifier": {
 		"name": "Extra exhaustion from large appetite",
 		"value": 0.4,

@@ -1,7 +1,5 @@
 {
 	"type": "origins:attribute",
-	"name": "Stocky",
-	"description": "Owing to their tremendous size, ogres have 2.5x the health of a regular player.",
 	"modifier": {
 		"attribute": "minecraft:generic.max_health",
 		"operation": "addition",

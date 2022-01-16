@@ -1,7 +1,5 @@
 {
 	"type": "origins:multiple",
-	"name": "Greedy",
-	"description": "Goblins have a naturally greedy disposition. Anything gilded gives significantly more benefit to them than it would to others.",
 	"golden_tool_boost": {
 		"type": "origins:modify_damage_dealt",
 		"modifier": {

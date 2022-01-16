@@ -1,7 +1,5 @@
 {
 	"type": "origins:action_over_time",
-	"name": "Water Vision",
-	"description": "Placeholder",
 	"entity_action": {
 		"type": "origins:if_else",
 		"condition": {
@@ -24,5 +22,5 @@
 			"effect": "minecraft:night_vision"
 		}
 	},
-	"interval": 20
+	"interval": 5
 }

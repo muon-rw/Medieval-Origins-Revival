@@ -1,7 +1,5 @@
 {
 	"type": "origins:action_over_time",
-	"name": "Darkness Dweller",
-	"description": "Dwarves are adapted for darkness. Daylight is far too strong for their eyes, and blinds them until darkness returns. Counteracted by wearing a golden helmet.",
 	"entity_action": {
 		"type": "origins:if_else",
 		"condition": {

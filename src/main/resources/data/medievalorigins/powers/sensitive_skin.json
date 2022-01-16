@@ -1,7 +1,5 @@
 {
 	"type": "origins:restrict_armor",
-	"name": "Sensitive Skin",
-	"description": "The Plague causes welts and lesions upon the skin, which are tender and painful to touch. As a result, victims cannot wear armour for the pain it causes.",
 	"head": {
 		"type": "origins:armor_value",
 		"comparison": ">=",

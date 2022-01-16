@@ -2,14 +2,11 @@
 	"powers": [
                 "medievalorigins:cunning",
                 "medievalorigins:greedy",
-                "medievalorigins:looter",  
                 "medievalorigins:nippy",
                 "medievalorigins:stunted",
 		"medievalorigins:frail"
 	],
 	"icon": "minecraft:gold_block",
 	"impact": 1,
-        "order": 1,
-	"name": "Goblin",
-	"description": "Conniving and greedy, goblins excel in one-on-one combat and gain more loot from any mobs that they kill, although their small size becomes an issue against groups of foes."
+        "order": 1
 }

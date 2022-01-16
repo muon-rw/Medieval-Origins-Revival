@@ -1,7 +1,5 @@
 {
 	"type": "origins:prevent_item_use",
-	"name": "Carnivore",
-	"description": "Werewolves eat like a wolf, even when not transformed. The only food they can eat is meat.",
 	"item_condition": {
 		"type": "origins:and",
 		"conditions": [{

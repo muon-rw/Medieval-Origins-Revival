@@ -1,25 +1,63 @@
 {
 	"type": "origins:restrict_armor",
-	"name": "Spindly",
-	"description": "Owing to their slender nature, the heaviest armour elves can wear is chainmail.",
 	"head": {
-		"type": "origins:armor_value",
-		"comparison": ">",
-		"compare_to": 2
+		"type": "origins:and",
+		"conditions": [{
+				"type": "origins:armor_value",
+				"comparison": ">",
+				"compare_to": 2
+			},
+			{
+				"type": "origins:enchantment",
+				"enchantment": "medievalorigins:featherweight",
+				"comparison": "!=",
+				"compare_to": 1
+			}
+		]
 	},
 	"chest": {
-		"type": "origins:armor_value",
-		"comparison": ">",
-		"compare_to": 5
+		"type": "origins:and",
+		"conditions": [{
+				"type": "origins:armor_value",
+				"comparison": ">",
+				"compare_to": 6
+			},
+			{
+				"type": "origins:enchantment",
+				"enchantment": "medievalorigins:featherweight",
+				"comparison": "!=",
+				"compare_to": 1
+			}
+		]
 	},
 	"legs": {
-		"type": "origins:armor_value",
-		"comparison": ">",
-		"compare_to": 4
+		"type": "origins:and",
+		"conditions": [{
+				"type": "origins:armor_value",
+				"comparison": ">",
+				"compare_to": 5
+			},
+			{
+				"type": "origins:enchantment",
+				"enchantment": "medievalorigins:featherweight",
+				"comparison": "!=",
+				"compare_to": 1
+			}
+		]
 	},
 	"feet": {
-		"type": "origins:armor_value",
-		"comparison": ">",
-		"compare_to": 1
+		"type": "origins:and",
+		"conditions": [{
+				"type": "origins:armor_value",
+				"comparison": ">",
+				"compare_to": 2
+			},
+			{
+				"type": "origins:enchantment",
+				"enchantment": "medievalorigins:featherweight",
+				"comparison": "!=",
+				"compare_to": 1
+			}
+		]
 	}
 }

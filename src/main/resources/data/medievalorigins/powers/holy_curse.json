@@ -1,11 +1,9 @@
 {
 	"type": "origins:modify_damage_taken",
-	"name": "Holy Curse",
-	"description": "As a servant of the Lord, paladins cannot bear to be in contact with impure beings such as undead mobs, and take more damage from them.",
 	"damage_condition": {
 		"type": "origins:attacker",
 		"condition": {
-			"type": "entity_group",
+			"type": "origins:entity_group",
 			"group": "undead"
 		}
 	},

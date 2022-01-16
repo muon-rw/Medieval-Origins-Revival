@@ -1,7 +1,5 @@
 {
 	"type": "origins:active_self",
-	"name": "Charge",
-	"description": "Ogres can charge forward, piercing through several blocks, but this drains hunger and slows the ogre for a short while.",
 	"entity_action": {
 		"type": "origins:and",
 		"actions": [{

@@ -1,6 +1,6 @@
 {
 	"powers": [
-                "medievalorigins:demon_fire",
+                "medievalorigins:daemon_fire",
 		"medievalorigins:hellborne",
                 "medievalorigins:carnivore",
                 "medievalorigins:unholy_deal",
@@ -10,7 +10,5 @@
 	],
 	"icon": "minecraft:crying_obsidian",
 	"impact": 2,
-        "order": 1,
-	"name": "Daemon",
-	"description": "Daemons are evil, servants of Satan. This gives them numerous advantages, but it can also be their downfall."
+        "order": 1
 }

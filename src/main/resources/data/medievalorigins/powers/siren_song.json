@@ -1,7 +1,5 @@
 {
 	"type": "origins:multiple",
-	"name": "Siren Song",
-	"description": "Sirens are known for their alluring calls. Press G to make all mobs around you neutral until hit. (DOES NOT APPLY TO BOSSES, FOR OBVIOUS REASONS)",
 	"siren_song_power": {
 		"type": "origins:active_self",
 		"entity_action": {
@@ -35,6 +33,6 @@
 			"type": "origins:execute_command",
 			"command": "function medievalorigins:mdvlorigins/siren_song_break"
 		},
-		"cooldown": 20
+		"cooldown": 900
 	}
 }

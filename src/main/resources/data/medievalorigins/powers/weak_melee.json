@@ -1,23 +1,32 @@
 {
-	"type": "origins:multiple",
-	"name": "Weak Melee",
-	"description": "Elves are built for combat from afar, not up close. Their damage with swords and axes is reduced.",
-	"axe_boost": {
-		"type": "origins:modify_damage_dealt",
-		"modifier": {
-			"name": "Origin modifier",
-			"operation": "addition",
-			"value": -1.5
-		},
-		"condition": {
-			"type": "origins:equipped_item",
-			"equipment_slot": "mainhand",
-			"item_condition": {
-				"type": "origins:ingredient",
-				"ingredient": {
-					"tag": "medievalorigins:axes"
+	"type": "origins:modify_damage_dealt",
+	"modifier": {
+		"name": "Origin modifier",
+		"operation": "addition",
+		"value": -1.5
+	},
+	"condition": {
+		"type": "origins:or",
+		"conditions": [{
+				"type": "origins:equipped_item",
+				"equipment_slot": "mainhand",
+				"item_condition": {
+					"type": "origins:ingredient",
+					"ingredient": {
+						"tag": "medievalorigins:axes"
+					}
+				}
+			},
+			{
+				"type": "origins:equipped_item",
+				"equipment_slot": "mainhand",
+				"item_condition": {
+					"type": "origins:ingredient",
+					"ingredient": {
+						"tag": "medievalorigins:swords"
+					}
 				}
 			}
-		}
+		]
 	}
 }

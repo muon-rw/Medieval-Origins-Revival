@@ -1,5 +1,3 @@
 {
-	"type": "origins:fire_immunity",
-	"name": "Hellborne",
-	"description": "When you've lived in the depths of hell, a lick of fire is nothing to you. Daemons are immune to fire damage."
+	"type": "origins:fire_immunity"
 }

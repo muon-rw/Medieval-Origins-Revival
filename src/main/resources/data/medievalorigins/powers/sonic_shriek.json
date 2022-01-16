@@ -1,7 +1,5 @@
 {
 	"type": "origins:active_self",
-	"name": "Sonic Shriek",
-	"description": "Banshees are renowned for their supersonic cries, which can cause blood vessels to burst. Press G and for a short period you will find yourself dealing far more damage.",
 	"entity_action": {
 		"type": "origins:if_else",
 		"condition": {

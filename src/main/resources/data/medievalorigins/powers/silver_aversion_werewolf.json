@@ -1,7 +1,5 @@
 {
 	"type": "origins:restrict_armor",
-	"name": "Silver Aversion",
-	"description": "Werwolfs are very weak to silver. They cannot bear to wear it. (Iron acts as silver)",
 	"head": {
 		"type": "origins:ingredient",
 		"ingredient": {

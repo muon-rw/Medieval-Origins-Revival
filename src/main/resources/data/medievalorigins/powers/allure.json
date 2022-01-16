@@ -1,7 +1,5 @@
 {
 	"type": "origins:multiple",
-	"name": "Allure",
-	"description": "Faes are naturally alluring. Unfortunately, this means that mobs will pursue them from far further away than they would other creatures.",
 	"allure": {
 		"type": "origins:action_over_time",
 		"entity_action": {

@@ -10,7 +10,5 @@
 	],
 	"icon": "minecraft:sea_lantern",
 	"impact": 2,
-        "order": 1,
-	"name": "Siren",
-	"description": "Sirens have an ensnaring beauty and an evil nature, their irresistable beauty being the downfall of many a sailor. Its up to you to use this power to its full advantage."
+        "order": 1
 }

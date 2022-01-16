@@ -1,7 +1,5 @@
 {
 	"type": "origins:target_action_on_hit",
-	"name": "Venomous Bite",
-	"description": "Arachnae's fangs contain venom, and every bite is a chance to poison their opponent.",
 	"entity_action": {
 		"type": "origins:choice",
 		"actions": [{

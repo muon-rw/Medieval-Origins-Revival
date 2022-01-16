@@ -1,7 +1,5 @@
 {
 	"type": "origins:prevent_item_use",
-	"name": "Carnivore",
-	"description": "A daemon's bloodlust is insatiable. If it isn't the flesh of an animal, its worthless.",
 	"item_condition": {
 		"type": "origins:and",
 		"conditions": [{

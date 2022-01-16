@@ -1,20 +1,8 @@
 {
-	"type": "origins:active_self",
-	"name": "Regeneration",
-	"description": "Faes are magick creatures. Press your secondary power key and you will regenerate health for a short period, at the cost of your hunger.",
-	"entity_action": {
-		"type": "origins:if_else",
-		"condition": {
-			"type": "origins:status_effect",
-			"effect": "minecraft:regeneration",
-			"show_particles": false,
-			"show_icon": false
-		},
-		"if_action": {
-			"type": "origins:clear_effect",
-			"effect": "minecraft:regeneration"
-		},
-		"else_action": {
+	"type": "origins:multiple",
+	"regen": {
+		"type": "origins:active_self",
+		"entity_action": {
 			"type": "origins:apply_effect",
 			"effect": {
 				"effect": "minecraft:regeneration",
@@ -24,14 +12,30 @@
 				"amplifier": 4,
 				"duration": 20
 			}
+		},
+		"cooldown": 600,
+		"key": {
+			"key": "key.origins.secondary_active",
+			"continuous": false
+		},
+		"hud_render": {
+			"should_render": "true"
 		}
 	},
-	"cooldown": 600,
-	"key": {
-		"key": "key.origins.secondary_active",
-		"continuous": false
-	},
-	"hud_render": {
-		"should_render": "true"
+	"regen_drain": {
+		"type": "origins:active_self",
+		"hidden": true,
+		"entity_action": {
+			"type": "origins:exhaust",
+			"amount": 200
+		},
+		"cooldown": 600,
+		"key": {
+			"key": "key.origins.secondary_active",
+			"continuous": false
+		},
+		"hud_render": {
+			"should_render": "false"
+		}
 	}
 }

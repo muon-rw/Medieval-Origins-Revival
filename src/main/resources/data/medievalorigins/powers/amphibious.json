@@ -1,7 +1,5 @@
 {
 	"type": "origins:multiple",
-	"name": "Amphibious",
-	"description": "Sirens, being a subset of merpeople, can survive in water, and swim with increased speed.",
 	"underwater": {
 		"type": "origins:modify_break_speed",
 		"modifier": {

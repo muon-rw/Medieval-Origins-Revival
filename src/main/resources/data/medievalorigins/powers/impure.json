@@ -1,7 +1,5 @@
 {
 	"type": "origins:effect_immunity",
-	"name": "Impure",
-	"description": "Daemons do not recieve the positive effects from potions such as regeneration or instant health.",
 	"effects": [
 		"minecraft:instant_health",
 		"minecraft:regeneration",

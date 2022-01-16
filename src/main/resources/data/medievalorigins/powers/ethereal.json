@@ -1,24 +1,29 @@
 {
-	"type": "origins:active_self",
-	"name": "Ethereal",
-	"description": "Banshees possess the ability to become intangible at will, meaning they cannot be affected by foes in the physical realm. This of course comes with a cooldown. Activated with the secondary power key.",
-	"entity_action": {
-		"type": "origins:apply_effect",
-		"effect": {
-			"effect": "minecraft:resistance",
-			"is_ambient": "true",
-			"show_particles": "false",
-			"show_icon": "false",
-			"amplifier": 10,
-			"duration": 200
+	"type": "origins:multiple",
+	"immunity": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:apply_effect",
+			"effect": {
+				"effect": "minecraft:resistance",
+				"is_ambient": "true",
+				"show_particles": "false",
+				"show_icon": "false",
+				"amplifier": 10,
+				"duration": 200
+			}
+		},
+		"cooldown": 3600,
+		"key": {
+			"key": "key.origins.secondary_active",
+			"continuous": "false"
+		},
+		"hud_render": {
+			"should_render": "true"
 		}
 	},
-	"cooldown": 3600,
-	"key": {
-		"key": "key.origins.secondary_active",
-		"continuous": "false"
-	},
-	"hud_render": {
-		"should_render": "false"
+	"ghostly": {
+		"type": "origins:model_color",
+		"alpha": 0.7
 	}
 }

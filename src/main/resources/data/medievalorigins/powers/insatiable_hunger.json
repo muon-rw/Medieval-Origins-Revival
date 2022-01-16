@@ -1,7 +1,5 @@
 {
 	"type": "origins:modify_exhaustion",
-	"name": "Instatiable Hunger",
-	"description": "Werewolves are constantly looking for their next meal. Their appetite is much greater than average.",
 	"modifier": {
 		"name": "Extra exhaustion from large appetite",
 		"value": 0.5,

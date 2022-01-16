@@ -1,7 +1,5 @@
 {
 	"type": "origins:active_self",
-	"name": "Levitation",
-	"description": "Faes are known for their ability to levitate. Press G and you will begin to hover.",
 	"entity_action": {
 		"type": "origins:if_else",
 		"condition": {

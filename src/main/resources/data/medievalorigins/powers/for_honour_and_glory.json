@@ -1,7 +1,5 @@
 {
 	"type": "origins:multiple",
-	"name": "For Honour and Glory",
-	"description": "What's a knight without his shining armour? Iron armour provides significantly more defence than it does to others.",
 	"iron_tool_boost": {
 		"type": "origins:modify_damage_dealt",
 		"modifier": {
