@@ -1,0 +1,1 @@
+execute as @e[predicate=medievalorigins:fae,scores={respawn=1}] run function medievalorigins:mdvlorigins/fae_callon

@@ -1,7 +1,11 @@
 {
 	"type": "origins:modify_break_speed",
-	"modifer":{
-            "operation": "multiply_base",
-            "value": 0.25
-            }
+	"block_condition": {
+		"type": "origins:in_tag",
+		"tag": "minecraft:base_stone_overworld"
+	},
+	"modifer": {
+		"operation": "multiply_base",
+		"value": 0.25
+	}
 }
