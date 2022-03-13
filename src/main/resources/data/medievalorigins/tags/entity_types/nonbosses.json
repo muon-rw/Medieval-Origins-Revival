@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-	"minecraft:witch",
+	    "minecraft:witch",
         "minecraft:zombie",
         "minecraft:skeleton",
         "minecraft:slime",

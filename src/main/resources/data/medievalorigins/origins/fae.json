@@ -1,11 +1,11 @@
 {
 	"powers": [
-                "medievalorigins:levitation",
-                "medievalorigins:magic_resistance",
-		"medievalorigins:regen",
-                "medievalorigins:allure",
-                "medievalorigins:diminutive",
-                "medievalorigins:iron_aversion"
+                "medievalorigins:fae/levitation",
+                "medievalorigins:fae/magic_resistance",
+		"medievalorigins:fae/regen",
+                "medievalorigins:fae/allure",
+                "medievalorigins:fae/diminutive",
+                "medievalorigins:fae/iron_aversion"
 	],
 	"icon": "minecraft:experience_bottle",
 	"impact": 2,

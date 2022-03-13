@@ -1,0 +1,37 @@
+{
+	"type": "origins:attacker_action_when_hit",
+	"entity_action": {
+		"type": "origins:choice",
+		"actions": [{
+				"element": {
+					"type": "origins:and",
+					"actions": [{
+							"type": "origins:execute_command",
+							"command": "data modify entity @s NoAI set value 1"
+						},
+						{
+							"type": "origins:delay",
+							"ticks": 80,
+							"action": {
+								"type": "origins:execute_command",
+								"command": "data modify entity @s NoAI set value 0"
+							}
+						}
+					]
+				},
+				"weight": 1
+			},
+			{
+				"element": {
+					"type": "origins:execute_command",
+					"command": "particle minecraft:smoke ~ ~ ~"
+				},
+				"weight": 4
+			}
+		]
+	},
+	"cooldown": 0,
+	"hud_render": {
+		"should_render": "false"
+	}
+}

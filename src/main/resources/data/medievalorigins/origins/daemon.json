@@ -1,12 +1,12 @@
 {
 	"powers": [
-                "medievalorigins:daemon_fire",
-		"medievalorigins:hellborne",
-                "medievalorigins:carnivore",
-                "medievalorigins:unholy_deal",
-                "medievalorigins:hydrophobe",
-                "medievalorigins:impure",
-                "medievalorigins:overworld_weakness"  
+                "medievalorigins:daemon/daemon_fire",
+		"medievalorigins:daemon/hellborne",
+                "medievalorigins:daemon/carnivore",
+                "medievalorigins:daemon/unholy_deal",
+                "medievalorigins:daemon/hydrophobe",
+                "medievalorigins:daemon/impure",
+                "medievalorigins:daemon/overworld_weakness"  
 	],
 	"icon": "minecraft:crying_obsidian",
 	"impact": 2,

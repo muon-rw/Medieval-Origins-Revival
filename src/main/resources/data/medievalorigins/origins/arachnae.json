@@ -1,12 +1,12 @@
 {
 	"powers": [
-                "medievalorigins:climber",
-		"medievalorigins:many_eyes",
-                "medievalorigins:venomous_bite",
-                "medievalorigins:web_slinger",
-                "medievalorigins:brittle",
-                "medievalorigins:bottomless_stomach",
-                "medievalorigins:fragile_exoskeleton"
+                "medievalorigins:arachnae/climber",
+		"medievalorigins:arachnae/many_eyes",
+                "medievalorigins:arachnae/venomous_bite",
+                "medievalorigins:arachnae/web_slinger",
+                "medievalorigins:arachnae/bottomless_stomach",
+                "medievalorigins:arachnae/brittle",
+                "medievalorigins:arachnae/fragile_exoskeleton"
 	],
 	"icon": "minecraft:string",
 	"impact": 2,

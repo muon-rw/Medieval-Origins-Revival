@@ -1,10 +1,10 @@
 {
 	"powers": [
-                "medievalorigins:lycanthropy",
-                "medievalorigins:carnivore_werewolf",
-                "medievalorigins:silver_aversion_werewolf",
-                "medievalorigins:drained",
-                "medievalorigins:insatiable_hunger"
+                "medievalorigins:werewolf/lycanthropy",
+                "medievalorigins:werewolf/carnivore_werewolf",
+                "medievalorigins:werewolf/silver_aversion",
+                "medievalorigins:werewolf/drained",
+                "medievalorigins:werewolf/insatiable_hunger"
 	],
 	"icon": "minecraft:bone",
 	"impact": 2,

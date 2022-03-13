@@ -1,10 +1,10 @@
 {
 	"powers": [
-                "medievalorigins:holy_fire",
-		"medievalorigins:holy_instruments",
-                "medievalorigins:leech",
-                "medievalorigins:holy_curse",
-                "medievalorigins:well_built"
+                "medievalorigins:paladin/holy_fire",
+		"medievalorigins:paladin/holy_instruments",
+                "medievalorigins:paladin/leech",
+                "medievalorigins:paladin/holy_curse",
+                "medievalorigins:paladin/well_built"
 	],
 	"icon": "minecraft:beacon",
 	"impact": 2,

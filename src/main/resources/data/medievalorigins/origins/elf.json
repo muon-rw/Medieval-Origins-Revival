@@ -1,12 +1,12 @@
 {
 	"powers": [
-                "medievalorigins:archer",
-		"medievalorigins:forest_vision",
-                "medievalorigins:hyper_sight",
-                "medievalorigins:towering",
-                "medievalorigins:steward",
-                "medievalorigins:spindly",
-                "medievalorigins:weak_melee"
+                "medievalorigins:elf/archer",
+		"medievalorigins:elf/forest_vision",
+                "medievalorigins:elf/hyper_sight",
+                "medievalorigins:elf/towering",
+                "medievalorigins:elf/steward",
+                "medievalorigins:elf/spindly",
+                "medievalorigins:elf/weak_melee"
 	],
 	"icon": "minecraft:oak_leaves",
         "impact": 1,

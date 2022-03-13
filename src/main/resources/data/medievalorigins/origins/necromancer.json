@@ -1,12 +1,12 @@
 {
 	"powers": [
-                "medievalorigins:hellraiser",
-                "medievalorigins:resilient",
-                "medievalorigins:impervious",
-                "medievalorigins:poor_reputation",
-                "medievalorigins:black_thumb",
-                "medievalorigins:disturbed",
-                "medievalorigins:unguarded"
+                "medievalorigins:necromancer/hellraiser",
+                "medievalorigins:necromancer/resilient",
+                "medievalorigins:necromancer/impervious",
+                "medievalorigins:necromancer/poor_reputation",
+                "medievalorigins:necromancer/black_thumb",
+                "medievalorigins:necromancer/disturbed",
+                "medievalorigins:necromancer/unguarded"
 	],
 	"icon": "minecraft:skeleton_skull",
 	"impact": 2,

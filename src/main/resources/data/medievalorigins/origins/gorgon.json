@@ -1,6 +1,11 @@
 {
 	"powers": [
-                "medievalorigins:gorgon_placeholder"
+                "medievalorigins:gorgon/serpentine_companions",
+                "medievalorigins:gorgon/stony_gaze",
+                "medievalorigins:gorgon/super_strength",
+                "medievalorigins:gorgon/hydrophobe",
+                "medievalorigins:gorgon/petrification",
+                "medievalorigins:gorgon/silver_aversion"
 	],
 	"icon": "minecraft:mossy_cobblestone",
 	"impact": 3,

@@ -10,11 +10,10 @@
 	},
 	"damage": {
 		"type": "origins:attribute",
-		"hidden": "true",
 		"modifier": {
 			"attribute": "minecraft:generic.attack_damage",
-			"operation": "addition",
-			"value": 2.0
+			"operation": "multiply_base",
+			"value": 0.35
 		}
 	},
 	"better_food": {

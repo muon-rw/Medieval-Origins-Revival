@@ -1,11 +1,11 @@
 {
 	"powers": [
-                "medievalorigins:for_honour_and_glory",
-                "medievalorigins:skilled_swordsman",
-		"medievalorigins:valour",
-                "medievalorigins:burdened",
-                "medievalorigins:magic_prone",
-                "medievalorigins:melee4ever"
+                "medievalorigins:knight/for_honour_and_glory",
+                "medievalorigins:knight/skilled_swordsman",
+		"medievalorigins:knight/valour",
+                "medievalorigins:knight/burdened",
+                "medievalorigins:knight/magic_prone",
+                "medievalorigins:knight/melee4ever"
 	],
 	"icon": "minecraft:shield",
 	"impact": 1,

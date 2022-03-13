@@ -1,10 +1,10 @@
 {
 	"powers": [
-                "medievalorigins:cunning",
-                "medievalorigins:greedy",
-                "medievalorigins:nippy",
-                "medievalorigins:stunted",
-		"medievalorigins:frail"
+                "medievalorigins:goblin/cunning",
+                "medievalorigins:goblin/greedy",
+                "medievalorigins:goblin/nippy",
+                "medievalorigins:goblin/stunted",
+		"medievalorigins:goblin/frail"
 	],
 	"icon": "minecraft:gold_block",
 	"impact": 1,

@@ -1,0 +1,56 @@
+{
+	"type": "origins:multiple",
+	"on_hit": {
+		"type": "origins:self_action_when_hit",
+		"entity_action": {
+			"type": "origins:choice",
+			"actions": [{
+					"element": {
+						"type": "origins:execute_command",
+						"command": "function medievalorigins:mdvlorigins/gorgon_silverfish_spawn"
+					},
+					"weight": 1
+				},
+				{
+					"element": {
+						"type": "origins:execute_command",
+						"command": "particle minecraft:smoke ~ ~ ~"
+					},
+					"weight": 2
+				}
+			]
+		},
+		"cooldown": 0,
+		"hud_render": {
+			"should_render": "false"
+		}
+	},
+	"when_chosen": {
+		"type": "origins:action_on_callback",
+		"entity_action_chosen": {
+			"type": "origins:execute_command",
+			"command": "function medievalorigins:mdvlorigins/gorgon_callon"
+		},
+		"entity_action_lost": {
+			"type": "origins:execute_command",
+			"command": "team leave SilverfishAlly @s"
+		},
+		"execute_chosen_when_orb": true
+	},
+	"over_time1": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "tp @e[type=minecraft:silverfish,tag=medievalorigins_despawn] @e[type=minecraft:iron_golem,tag=medievalorigins_despawn,limit=1,sort=nearest]"
+		},
+		"interval": 4
+	},
+	"over_time2": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "function medievalorigins:mdvlorigins/gorgon_silverfish_despawn"
+		},
+		"interval": 20
+	}
+}
