@@ -1,1 +1,0 @@
-execute as @e[predicate=medievalorigins:dwarf,scores={respawn=1}] run function medievalorigins:mdvlorigins/dwarf_callon

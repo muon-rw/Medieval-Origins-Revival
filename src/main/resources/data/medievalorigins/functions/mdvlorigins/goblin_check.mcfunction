@@ -1,1 +1,0 @@
-execute as @e[predicate=medievalorigins:goblin,scores={respawn=1}] run function medievalorigins:mdvlorigins/goblin_callon

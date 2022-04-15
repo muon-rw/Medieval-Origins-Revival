@@ -1,0 +1,35 @@
+{
+	"type": "origins:active_self",
+	"entity_action": {
+		"type": "origins:if_else",
+		"condition": {
+			"type": "origins:status_effect",
+			"effect": "minecraft:levitation",
+			"show_particles": false,
+			"show_icon": false
+		},
+		"if_action": {
+			"type": "origins:clear_effect",
+			"effect": "minecraft:levitation"
+		},
+		"else_action": {
+			"type": "origins:apply_effect",
+			"effect": {
+				"effect": "minecraft:levitation",
+				"is_ambient": true,
+				"show_particles": false,
+				"show_icon": false,
+				"amplifier": 0.5,
+				"duration": 10000
+			}
+		}
+	},
+	"cooldown": 0,
+	"key": {
+		"key": "key.origins.primary_active",
+		"continuous": false
+	},
+	"hud_render": {
+		"should_render": "false"
+	}
+}

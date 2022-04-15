@@ -1,15 +1,15 @@
 {
   "replace": false,
   "values": [
-	"carrots",
-        "potatoes",
-        "beetroots",
-        "wheat",
-        "pumpkin",
-        "melon",
-        "sugar_cane",
-        "cocoa",
-        "sweet_berry_bush",
-        "glow_lichen"
+	"minecraft:carrots",
+        "minecraft:potatoes",
+        "minecraft:beetroots",
+        "minecraft:wheat",
+        "minecraft:pumpkin",
+        "minecraft:melon",
+        "minecraft:sugar_cane",
+        "minecraft:cocoa",
+        "minecraft:sweet_berry_bush",
+        "minecraft:glow_lichen"
   ]
 }

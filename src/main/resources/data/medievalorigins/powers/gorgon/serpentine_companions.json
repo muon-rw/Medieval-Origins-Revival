@@ -20,6 +20,9 @@
 				}
 			]
 		},
+		"damage_condition": {
+			"type": "origins:attacker"
+		},
 		"cooldown": 0,
 		"hud_render": {
 			"should_render": "false"
@@ -41,7 +44,7 @@
 		"type": "origins:action_over_time",
 		"entity_action": {
 			"type": "origins:execute_command",
-			"command": "tp @e[type=minecraft:silverfish,tag=medievalorigins_despawn] @e[type=minecraft:iron_golem,tag=medievalorigins_despawn,limit=1,sort=nearest]"
+			"command": "execute as @e[type=iron_golem,tag=medievalorigins_despawn] run tp @e[type=minecraft:silverfish,tag=medievalorigins_despawn,limit=1,sort=nearest] @s"
 		},
 		"interval": 4
 	},

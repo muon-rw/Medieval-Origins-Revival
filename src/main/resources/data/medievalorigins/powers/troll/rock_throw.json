@@ -1,0 +1,33 @@
+{
+	"type": "origins:multiple",
+	"rock_throw": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [{
+					"type": "origins:execute_command",
+					"command": "execute store result score @s CobbleCheck run clear @s minecraft:cobblestone 64"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "function medievalorigins:mdvlorigins/troll_rock_check"
+				}
+			]
+		},
+		"cooldown": 3600,
+		"hud_render": {
+			"should_render": true
+		},
+		"key": {
+			"key": "key.origins.primary_active"
+		}
+	},
+	"rock_leaderboard": {
+		"type": "origins:action_on_callback",
+		"entity_action_chosen": {
+			"type": "origins:execute_command",
+			"command": "scoreboard objectives add CobbleCheck dummy"
+		},
+		"execute_chosen_when_orb": true
+	}
+}

@@ -12,7 +12,7 @@ public class FeatherweightEnchantment extends Enchantment {
 
     @Override
     public int getMinLevel() {
-        return 45;
+        return 1;
     }
 
     @Override

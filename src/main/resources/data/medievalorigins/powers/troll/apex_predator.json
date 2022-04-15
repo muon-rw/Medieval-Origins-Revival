@@ -1,0 +1,21 @@
+{
+	"type": "origins:multiple",
+	"no_food": {
+		"type": "origins:prevent_item_use",
+		"item_condition": {
+			"type": "origins:food"
+		}
+	},
+	"live_kills": {
+		"type": "origins:self_action_on_kill",
+		"entity_action": {
+			"type": "origins:feed",
+			"food": 2,
+			"saturation": 0.5
+		},
+		"cooldown": 0,
+		"hud_render": {
+			"should_render": false
+		}
+	}
+}

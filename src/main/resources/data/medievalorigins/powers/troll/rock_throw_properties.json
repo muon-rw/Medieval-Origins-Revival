@@ -1,0 +1,66 @@
+{
+	"type": "origins:multiple",
+	"rock_throw_path": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "function medievalorigins:mdvlorigins/troll_rock_path"
+		},
+		"interval": 1
+	},
+	"rock_throw_velocity": {
+		"type": "origins:action_on_callback",
+		"entity_action_added": {
+			"type": "origins:add_velocity",
+			"z": 3.5,
+			"space": "local"
+		},
+		"execute_chosen_when_orb": true
+	},
+	"rock_throw_fall": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 3,
+		"hud_render": {
+			"should_render": false
+		},
+		"max_action": {
+			"type": "origins:and",
+			"actions": [{
+					"type": "origins:execute_command",
+					"command": "execute as @e[type=falling_block,nbt={BlockState:{Name:\"minecraft:cobblestone\"}},limit=1,sort=nearest] run data modify entity @s NoGravity set value 0"
+				},
+				{
+					"type": "origins:delay",
+					"ticks": 30,
+					"action": {
+						"type": "origins:execute_command",
+						"command": "kill @e[type=minecraft:area_effect_cloud,limit=1,sort=nearest]"
+					}
+				}
+			]
+		}
+	},
+	"rock_throw_timer": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "medievalorigins:troll/rock_throw_properties_rock_throw_fall",
+			"change": 1
+		},
+		"interval": 10
+	},
+	"creeper_perm": {
+		"type": "origins:invulnerability",
+		"damage_condition": {
+			"type": "origins:name",
+			"name": "fall"
+		}
+	},
+	"creeper_noclip": {
+		"type": "origins:phasing",
+		"blacklist": false,
+		"render_type": "blindness",
+		"view_distance": 10
+	}
+}

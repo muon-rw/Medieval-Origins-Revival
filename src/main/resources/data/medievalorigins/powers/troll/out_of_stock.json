@@ -1,0 +1,29 @@
+{
+    "type": "origins:multiple",
+    "armor_restrict": {
+        "type": "origins:restrict_armor",
+        "head": {
+            "type": "origins:armor_value",
+            "comparison": "!=",
+            "compare_to": 0
+        },
+        "chest": {
+            "type": "origins:armor_value",
+            "comparison": "!=",
+            "compare_to": 0
+        },
+        "legs": {
+            "type": "origins:armor_value",
+            "comparison": "!=",
+            "compare_to": 0
+        },
+        "feet": {
+            "type": "origins:armor_value",
+            "comparison": "!=",
+            "compare_to": 0
+        }
+    },
+    "no_elytra": {
+        "type": "origins:prevent_elytra_flight"
+    }
+}

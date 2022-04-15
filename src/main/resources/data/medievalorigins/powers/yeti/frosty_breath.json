@@ -1,0 +1,8 @@
+{
+	"type": "origins:action_over_time",
+	"entity_action":{
+		"type": "origins:execute_command",
+		"command": "effect give @e[distance=..1] minecraft:slowness 2 1"
+	},
+	"interval": 20
+}

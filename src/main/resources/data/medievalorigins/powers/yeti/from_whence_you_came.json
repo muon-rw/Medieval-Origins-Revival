@@ -1,0 +1,58 @@
+{
+	"type": "origins:multiple",
+	"speed_increase": {
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.movement_speed",
+			"operation": "addition",
+			"value": 0.03
+		},
+		"condition": {
+			"type": "origins:or",
+			"conditions": [{
+					"type": "origins:biome",
+					"condition": {
+						"type": "origins:category",
+						"category": "taiga"
+					}
+				},
+				{
+					"type": "origins:biome",
+					"condition": {
+						"type": "origins:category",
+						"category": "icy"
+					}
+				}
+			]
+		}
+	},
+	"better_in_snow": {
+		"type": "origins:modify_damage_taken",
+		"damage_condition": {
+			"type": "origins:name",
+			"name": "fall"
+		},
+		"modifier": {
+			"operation": "multiply_total",
+			"value": -0.5
+		},
+		"condition": {
+			"type": "origins:or",
+			"conditions": [{
+					"type": "origins:biome",
+					"condition": {
+						"type": "origins:category",
+						"category": "taiga"
+					}
+				},
+				{
+					"type": "origins:biome",
+					"condition": {
+						"type": "origins:category",
+						"category": "icy"
+					}
+				}
+			]
+		}
+	}
+}

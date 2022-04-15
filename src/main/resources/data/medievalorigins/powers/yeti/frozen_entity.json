@@ -1,0 +1,24 @@
+{
+	"type": "origins:multiple",
+	"thaw": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 5,
+		"hud_render": {
+			"should_render": false
+		},
+		"max_action": {
+			"type": "origins:execute_command",
+			"command": "function medievalorigins:mdvlorigins/yeti_thaw"
+		}
+	},
+	"freeze_timer": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "medievalorigins:yeti/frozen_entity_thaw",
+			"change": 1
+		},
+		"interval": 20
+	}
+}

@@ -1,0 +1,49 @@
+{
+	"type": "origins:multiple",
+	"thunderous_stride": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:if_else",
+			"condition": {
+				"type": "origins:or",
+				"conditions": [{
+						"type": "origins:block_collision",
+						"offset_x": 0.1,
+						"offset_y": 0,
+						"offset_z": 0.1
+					},
+					{
+						"type": "origins:block_collision",
+						"offset_x": -0.1,
+						"offset_y": 0,
+						"offset_z": -0.1
+					}
+				]
+			},
+			"if_action": {
+				"type": "origins:change_resource",
+				"resource": "medievalorigins:troll/thunderous_stride_thunderous_stride_resource",
+				"change": 1
+			},
+			"else_action": {
+				"type": "origins:change_resource",
+				"resource": "medievalorigins:troll/thunderous_stride_thunderous_stride_resource",
+				"change": 0,
+				"operation": "set"
+			}
+		},
+		"interval": 4
+	},
+	"thunderous_stride_resource": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 10,
+		"hud_render": {
+			"should_render": false
+		},
+		"max_action": {
+			"type": "origins:execute_command",
+			"command": "function medievalorigins:mdvlorigins/troll_break"
+		}
+	}
+}

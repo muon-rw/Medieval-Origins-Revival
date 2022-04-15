@@ -1,1 +1,0 @@
-execute as @e[type=skeleton,nbt={ActiveEffects:[{id:20b}]}] run kill @e[type=experience_orb,distance=..1]

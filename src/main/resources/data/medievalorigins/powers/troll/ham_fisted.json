@@ -1,0 +1,21 @@
+{
+	"type": "origins:multiple",
+	"damage": {
+		"type": "origins:attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.attack_damage",
+			"operation": "multiply_base",
+			"value": 0.5
+		}
+	},
+	"shieldless": {
+		"type": "origins:prevent_item_use",
+		"hidden": "true",
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"tag": "origins:shields"
+			}
+		}
+	}
+}

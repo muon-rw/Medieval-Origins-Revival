@@ -1,0 +1,18 @@
+{
+	"powers": [
+		"medievalorigins:yeti/frigid_pulse",
+		"medievalorigins:yeti/from_whence_you_came",
+		"medievalorigins:yeti/frosty_breath",
+		"medievalorigins:yeti/titanic",
+		"medievalorigins:yeti/unstoppable",
+		"medievalorigins:yeti/winter_body",
+		"medievalorigins:yeti/flammable",
+		"medievalorigins:yeti/thick_fur"
+	],
+	"icon": {
+		"item": "minecraft:player_head",
+		"tag": "{SkullOwner:{Id:[I;-1699492862,885083169,-1841145112,-151591174],Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOThjNjk5ZTNhOGI0MGM2MWQ0YTM1OTA0MDRhZTliYTUyNjJhYjRhMzVkODQyZjI3MWFmNDEzZDdmNGQyMGY1YSJ9fX0=\"}]}}}"
+	},
+	"impact": 2,
+	"order": 1
+}

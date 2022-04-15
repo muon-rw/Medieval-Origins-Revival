@@ -33,7 +33,7 @@
 		},
 		"entity_action_lost": {
 			"type": "origins:execute_command",
-			"command": "team remove PillagerAlly"
+			"command": "team leave PillagerAlly"
 		},
 		"execute_chosen_when_orb": true
 	}

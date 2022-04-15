@@ -1,1 +1,0 @@
-execute as @e[predicate=medievalorigins:ogre,scores={respawn=1}] run function medievalorigins:mdvlorigins/ogre_callon

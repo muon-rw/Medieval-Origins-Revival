@@ -1,0 +1,24 @@
+{
+	"type": "origins:action_on_block_break",
+	"entity_action": {
+		"type": "origins:delay",
+		"ticks": 1,
+		"action": {
+			"type": "origins:execute_command",
+			"command": "execute unless entity @s[nbt={Dimension:\"minecraft:the_nether\"}] run kill @e[distance=..6,limit=1,sort=nearest,type=minecraft:item,nbt={Item:{id:\"minecraft:ancient_debris\"}}]"
+		}
+	},
+	"block_action": {
+		"type": "origins:chance",
+		"action": {
+			"type": "origins:execute_command",
+			"command": "loot spawn ~ ~ ~ loot medievalorigins:generic/good_fortunes_loot"
+		},
+		"chance": 0.025
+	},
+	"block_condition":{
+		"type": "origins:in_tag",
+		"tag": "origins:natural_stone"
+	},
+	"only_when_harvested": true
+}

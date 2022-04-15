@@ -1,4 +1,8 @@
 {
 	"type": "origins:night_vision",
-	"strength": 1.5
+	"strength": 1.5,
+	"condition": {
+		"type": "origins:dimension",
+		"dimension": "minecraft:overworld"
+	}
 }

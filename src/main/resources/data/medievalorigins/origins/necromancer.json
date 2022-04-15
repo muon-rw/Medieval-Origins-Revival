@@ -8,7 +8,7 @@
                 "medievalorigins:necromancer/disturbed",
                 "medievalorigins:necromancer/unguarded"
 	],
-	"icon": "minecraft:skeleton_skull",
+	"icon": "minecraft:wither_rose",
 	"impact": 2,
         "order": 1
 }

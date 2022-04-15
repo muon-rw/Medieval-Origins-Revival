@@ -35,14 +35,23 @@
   "origin.medievalorigins.paladin.name": "Paladin",
   "origin.medievalorigins.paladin.description": "Soldiers of the lord, Paladins excel in combat against the world's foul, undead creatures. However, their holiness leaves them vulnerable to attack from these very same beings...",
 
+  "origin.medievalorigins.pixie.name": "Pixie",
+  "origin.medievalorigins.pixie.description": "Agents of mischief, or harbingers of good fortune? Who ever said you can't be both!",
+
   "origin.medievalorigins.plague_victim.name": "Plague Victim",
   "origin.medievalorigins.plague_victim.description": "Carrier of the Plague, it affects the victim's daily life yet does not kill them. Used correctly, it can be a powerful weapon against their foes.",
 
   "origin.medievalorigins.siren.name": "Siren",
   "origin.medievalorigins.siren.description": "Sirens have an ensnaring beauty and an evil nature, their irresistible beauty being the downfall of many a sailor. Its up to you to use this power to its full advantage.",
 
+  "origin.medievalorigins.troll.name": "Troll",
+  "origin.medievalorigins.troll.description": "Large, lumbering beasts of the mountains, trolls are by far the biggest and baddest brutes of the land. Yet, could this very size be their undoing?",
+
   "origin.medievalorigins.werewolf.name": "Werewolf",
   "origin.medievalorigins.werewolf.description": "Ferocious animals, or people with a misunderstood condition? A werewolf can be either, which path will you choose?",
+
+  "origin.medievalorigins.yeti.name": "Yeti",
+  "origin.medievalorigins.yeti.description": "Lumbering giants of frosty peaks, the Yeti's icy nature allows them to stop almost any foe, but can leave them vulnerable to fiery attacks.",
 
   "power.medievalorigins.arachnae/bottomless_stomach.name": "Bottomless Stomach",
   "power.medievalorigins.arachnae/bottomless_stomach.description": "A human sized spider does not come without consequences. A massive amount of food is required to sustain the Arachnae.",
@@ -275,6 +284,27 @@
   "power.medievalorigins.paladin/well_built.name": "Well Built",
   "power.medievalorigins.paladin/well_built.description": "Walking around in heavy armor all day is a chore. Paladins need more food to sustain themselves.",
 
+  "power.medievalorigins.pixie/curse_of_flight.name": "Curse of Flight",
+  "power.medievalorigins.pixie/curse_of_flight.description": "The wings which allows pixies to fly also prevent even the most skilled of craftsmen from creating a chestplate to accommodate them.",
+
+  "power.medievalorigins.pixie/feather_footed.name": "Feather Footed",
+  "power.medievalorigins.pixie/feather_footed.description": "The pixie's small size means it is completely impossible for them to take fall damage.",
+
+  "power.medievalorigins.pixie/flight.name": "Flight",
+  "power.medievalorigins.pixie/flight.description": "Pixies are blessed with the gift of flight.",
+
+  "power.medievalorigins.pixie/good_fortunes.name": "Good Fortunes",
+  "power.medievalorigins.pixie/good_fortunes.description": "Although pixies can be troublesome, they are also associated with good luck. When mining, you will occasionally get something valubale from plain stone.",
+
+  "power.medievalorigins.pixie/mischief_maketh_man.name": "Mischief Maketh Man",
+  "power.medievalorigins.pixie/mischief_maketh_man.description": "Pixies are capable of performing numerous mischievous acts which, if not not dangerous, are certainly loud.",
+
+  "power.medievalorigins.pixie/soaked.name": "Soaked",
+  "power.medievalorigins.pixie/soaked.description": "Being as small as they are, water poses signficant threat to pixies. It hampers their movement and impairs their ability to fly.",
+
+  "power.medievalorigins.pixie/troublemaker.name": "Troublemaker",
+  "power.medievalorigins.pixie/troublemaker.description": "Villagers know pixies by the legends of trouble they cause, and will refuse to trade with them.",
+
   "power.medievalorigins.plague_victim/contagious.name": "Contagious",
   "power.medievalorigins.plague_victim/contagious.description": "The Plague is highly contagious. Villagers will refuse to trade with you out of fear of contracting the plague.",
 
@@ -317,6 +347,36 @@
   "power.medievalorigins.siren/water_vision.name": "Water Vision",
   "power.medievalorigins.siren/water_vision.description": "Sirens have superior underwater vision than other creatures.",
 
+  "power.medievalorigins.troll/apex_predator.name": "Apex Predator",
+  "power.medievalorigins.troll/apex_predator.description": "Trolls cannot eat regular foodstuffs, and can only satiate their hunger by slaughtering other creautres.",
+
+  "power.medievalorigins.troll/dweller_of_the_hills.name": "Dweller of the Hills",
+  "power.medievalorigins.troll/dweller_of_the_hills.description": "Native to high peaks, trolls only spawn in mountains.",
+
+  "power.medievalorigins.troll/ham_fisted.name": "Ham Fisted",
+  "power.medievalorigins.troll/ham_fisted.description": "While the huge fists of the troll pack a mighty punch, they are far too cumbersome to hold a shield.",
+
+  "power.medievalorigins.troll/ironhide.name": "Ironhide",
+  "power.medievalorigins.troll/ironhide.description": "Trolls have incredibly thick skin, giving them a natural armor and massively increased health.",
+
+  "power.medievalorigins.troll/lumbering.name": "Lumbering",
+  "power.medievalorigins.troll/lumbering.description": "When you're as large as a troll, you have a lot of weight to heft around. Movement is noticably slower than one would expect for their size.",
+
+  "power.medievalorigins.troll/mountainous.name": "Mountainous",
+  "power.medievalorigins.troll/mountainous.description": "Trolls take after the mountains from which they come from. They are massively tall, twice the size of the average person.",
+
+  "power.medievalorigins.troll/old_blood.name": "Old Blood",
+  "power.medievalorigins.troll/old_blood.description": "The old blood which runs through the veins of the trolls is bound to the mountains. They cannot heal themselves outside of their hilly homelands.",
+
+  "power.medievalorigins.troll/out_of_stock.name": "Out of Stock",
+  "power.medievalorigins.troll/out_of_stock.description": "Try as they might, trolls never seem to be able to find any armor in their size. Thus, they are doomed to walk with what coverings nature gave them, and nothing more.",
+
+  "power.medievalorigins.troll/rock_throw.name": "Rock Throw",
+  "power.medievalorigins.troll/rock_throw.description": "A troll can, at will, hurl a large rock into the air, plowing through whatever may cross its path. However, this does come at the cost of 64 precious cobblestone blocks.",
+
+  "power.medievalorigins.troll/thunderous_stride.name": "Thunderous Stride",
+  "power.medievalorigins.troll/thunderous_stride.description": "Trolls walk with purpose. Should they persist long enough, they can walk straight through any obstacle which may cross their path.",
+
   "power.medievalorigins.werewolf/carnivore.name": "Carnivore",
   "power.medievalorigins.werewolf/carnivore.description": "Werewolves eat like a wolf, even when not transformed. The only food they can eat is meat.",
 
@@ -332,6 +392,30 @@
   "power.medievalorigins.werewolf/silver_aversion.name": "Silver Aversion",
   "power.medievalorigins.werewolf/silver_aversion.description": "Werwolves are very weak to silver. They cannot bear to wear it. (Iron acts as silver)",
   
+  "power.medievalorigins.yeti/flammable.name": "Flammable",
+  "power.medievalorigins.yeti/flammable.description": "Yetis are susceptible to fire damage due to their wintry nature.",
+
+  "power.medievalorigins.yeti/frigid_pulse.name": "Frigid Pulse",
+  "power.medievalorigins.yeti/frigid_pulse.description": "A powerful magic runs through the veins of a yeti, allowing them to entomb a group of foes in ice on command.",
+
+  "power.medievalorigins.yeti/from_whence_you_came.name": "From Whence you Came",
+  "power.medievalorigins.yeti/from_whence_you_came.description": "Thriving best in the lands from which they originate, yetis move faster and are carried on the snow to negate fall damage in icy biomes.",
+
+  "power.medievalorigins.yeti/frosty_breath.name": "Frosty Breath",
+  "power.medievalorigins.yeti/frosty_breath.description": "The frosty breath of the yeti slows any opponents which get close to them.",
+
+  "power.medievalorigins.yeti/thick_fur.name": "Thick Fur",
+  "power.medievalorigins.yeti/thick_fur.description": "The blessing of thick fur becomes a curse in deserts. Your movement is slowed and health reduced to that of a normal person.",
+
+  "power.medievalorigins.yeti/titanic.name": "Titanic",
+  "power.medievalorigins.yeti/titanic.description": "Yetis have far more health than a regular human.",
+
+  "power.medievalorigins.yeti/unstoppable.name": "Unstoppable",
+  "power.medievalorigins.yeti/unstoppable.description": "Yetis are immune to the slowness effect.",
+
+  "power.medievalorigins.yeti/winter_body.name": "Winter Body",
+  "power.medievalorigins.yeti/winter_body.description": "Yetis are marginally taller than a regular human, and significantly wider.",
+
   "enchantment.medievalorigins.featherweight": "Featherweight",
 
   "medievalorigins.contagious_villager": "The villager doesn't want to be infected!",
@@ -340,5 +424,7 @@
 
   "medievalorigins.insomniac_welts": "Your welts sting and burn. There will be no sleep for you tonight.",
 
-  "medievalorigins.poor_reputation_villager": "The villager is too scared to trade with you!"
+  "medievalorigins.poor_reputation_villager": "The villager is too scared to trade with you!",
+
+  "medievalorigins.troublemaker": "Villagers don't trade with the likes of you!"
 }

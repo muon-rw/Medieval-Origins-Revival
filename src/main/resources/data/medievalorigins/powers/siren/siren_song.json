@@ -19,11 +19,11 @@
 		"type": "origins:action_on_callback",
 		"entity_action_chosen": {
 			"type": "origins:execute_command",
-			"command": "function medievalorigins:mdvlorigins/siren_song_callon"
+			"command": "team add SirenSong"
 		},
 		"entity_action_lost": {
 			"type": "origins:execute_command",
-			"command": "function medievalorigins:mdvlorigins/siren_song_callback"
+			"command": "team leave SirenSong"
 		},
 		"execute_chosen_when_orb": true
 	},

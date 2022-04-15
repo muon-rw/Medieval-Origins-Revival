@@ -1,0 +1,2 @@
+function medievalorigins:mdvlorigins/pixie_fake_explosion
+summon minecraft:area_effect_cloud ~ ~ ~ {Radius:1.8f,Duration:2147483647,RadiusOnUse:-0.1f,RadiusPerTick:-0.01f,ReapplicationDelay:20,Effects:[{Duration:100,Id:10,Amplifier:5b}]}

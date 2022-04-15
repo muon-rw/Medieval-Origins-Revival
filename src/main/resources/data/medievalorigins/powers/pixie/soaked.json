@@ -1,0 +1,33 @@
+{
+	"type": "origins:multiple",
+	"slow_movement": {
+		"type": "origins:conditioned_attribute",
+		"modifer": {
+			"attribute": "minecraft:generic.movement_speed",
+			"operation": "multiply_total",
+			"value": 0.66
+		},
+		"tick_rate": 20,
+		"condition": {
+			"type": "origins:in_rain"
+		}
+	},
+	"flight_revoke": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:if_else",
+			"condition": {
+				"type": "origins:in_rain"
+			},
+			"if_action": {
+				"type": "origins:execute_command",
+				"command": "power revoke @s medievalorigins:pixie/flight"
+			},
+			"else_action": {
+				"type": "origins:execute_command",
+				"command": "power grant @s medievalorigins:pixie/flight"
+			}
+		},
+		"interval": 20
+	}
+}
