@@ -13,7 +13,7 @@
 				"item_condition": {
 					"type": "origins:ingredient",
 					"ingredient": {
-						"tag": "medievalorigins:helmet"
+						"tag": "medievalorigins:helmets"
 					}
 				},
 				"inverted": true
