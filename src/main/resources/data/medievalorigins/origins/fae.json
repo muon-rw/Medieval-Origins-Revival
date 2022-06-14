@@ -2,7 +2,7 @@
 	"powers": [
                 "medievalorigins:fae/levitation",
                 "medievalorigins:fae/magic_resistance",
-		"medievalorigins:fae/regen",
+		        "medievalorigins:fae/regen",
                 "medievalorigins:fae/allure",
                 "medievalorigins:fae/diminutive",
                 "medievalorigins:fae/iron_aversion"

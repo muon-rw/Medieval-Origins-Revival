@@ -39,5 +39,5 @@
 	"hud_render": {
 		"should_render": true
 	},
-	"cooldown": 0
+	"cooldown": 300
 }

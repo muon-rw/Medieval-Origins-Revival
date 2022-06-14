@@ -1,10 +1,10 @@
 {
 	"powers": [
+		"medievalorigins:pixie/pixie_properties",
 		"medievalorigins:pixie/feather_footed",
 		"medievalorigins:pixie/flight",
 		"medievalorigins:pixie/good_fortunes",
 		"medievalorigins:pixie/mischief_maketh_man",
-		"medievalorigins:pixie/pixie_properties",
 		"medievalorigins:pixie/curse_of_flight",
 		"medievalorigins:pixie/soaked",
 		"medievalorigins:pixie/troublemaker"

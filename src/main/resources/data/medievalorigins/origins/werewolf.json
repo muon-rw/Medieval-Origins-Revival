@@ -1,7 +1,7 @@
 {
 	"powers": [
                 "medievalorigins:werewolf/lycanthropy",
-                "medievalorigins:werewolf/carnivore_werewolf",
+                "medievalorigins:werewolf/carnivore",
                 "medievalorigins:werewolf/silver_aversion",
                 "medievalorigins:werewolf/drained",
                 "medievalorigins:werewolf/insatiable_hunger"

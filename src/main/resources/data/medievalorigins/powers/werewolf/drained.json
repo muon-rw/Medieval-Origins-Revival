@@ -13,20 +13,13 @@
 		}
 	},
 	"drained2": {
-		"type": "origins:stacking_status_effect",
-		"min_stacks": 0,
-		"max_stacks": 2,
-		"duration_per_stack": 210,
-		"tick_rate": 10,
-		"effect": {
-			"effect": "minecraft:weakness",
-			"is_ambient": true,
-			"show_particles": false,
-			"show_icon": false,
-			"amplifier": 1
+		"type": "origins:modify_damage_dealt",
+		"modifier":{
+			"operation": "multiply_total",
+			"value": -0.25
 		},
 		"condition": {
-			"type": "origins:exposed_to_sun"
+			"type": "origins:daytime"
 		}
 	}
 }
