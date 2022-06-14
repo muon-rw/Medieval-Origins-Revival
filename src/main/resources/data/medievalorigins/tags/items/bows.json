@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-	"bow",
-        "crossbow"
+	  "minecraft:bow",
+    "minecraft:crossbow"
   ]
 }

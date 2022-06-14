@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
-	"iron_helmet",
-	"iron_chestplate",
-	"iron_leggings",
-	"iron_boots"
+	  "minecraft:iron_helmet",
+	  "minecraft:iron_chestplate",
+	  "minecraft:iron_leggings",
+	  "minecraft:iron_boots"
   ]
 }

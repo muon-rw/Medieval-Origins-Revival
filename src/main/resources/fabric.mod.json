@@ -32,8 +32,8 @@
     "fabric": "*",
     "minecraft": "~1.19",
     "java": ">=17",
-    "origins": ">=1.4.x",
-    "pehkui": ">=3.x"
+    "origins": ">=1.4.0",
+    "pehkui": ">=3.0"
   },
   "suggests": {
     "another-mod": "*"
