@@ -2,14 +2,14 @@
 	"type": "origins:self_action_when_hit",
 	"entity_action": {
 		"type": "origins:damage",
-		"amount": 99,
+		"amount": 6,
 		"source": {
 			"name": "onFire",
 			"fire": true,
 			"bypasses_armor": true
 		}
 	},
-	"cooldown": 20,
+	"cooldown": 10,
 	"damage_condition": {
 		"type": "origins:fire"
 	}
