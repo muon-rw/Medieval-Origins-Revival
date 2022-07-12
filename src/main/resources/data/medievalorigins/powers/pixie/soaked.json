@@ -24,8 +24,18 @@
 				"command": "power revoke @s medievalorigins:pixie/flight"
 			},
 			"else_action": {
-				"type": "origins:execute_command",
-				"command": "power grant @s medievalorigins:pixie/flight"
+				"type": "origins:if_else",
+				"condition": {
+					"type": "origins:power",
+					"power": "medievalorigins:pixie/flight"
+				},
+				"if_action": {
+					"type": "origins:nothing"
+				},
+				"else_action": {
+					"type": "origins:execute_command",
+					"command": "power grant @s medievalorigins:pixie/flight"
+				}
 			}
 		},
 		"interval": 20
