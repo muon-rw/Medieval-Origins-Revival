@@ -4,7 +4,7 @@
 		"type": "origins:biome",
 		"condition": {
 			"type": "origins:category",
-			"category": "mountain"
+			"category": "medievalorigins:troll_mountain"
 		},
 		"inverted": true
 	}

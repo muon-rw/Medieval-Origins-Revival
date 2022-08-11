@@ -1,0 +1,430 @@
+{
+  "origin.medievalorigins.arachnae.name": "Арахна",
+  "origin.medievalorigins.arachnae.description": "Гуманоїди, павукоподібні напівкровки, павукоподібні мають розмір з людину та спритність павука. Що може піти не так?",
+
+  "origin.medievalorigins.banshee.name": "Банші",
+  "origin.medievalorigins.banshee.description": "Банші - це духи, чиї крики можуть розбити скло та довести людей до самогубства. У міфології вони також вважаються ознакою смерті.",
+
+  "origin.medievalorigins.daemon.name": "Демон",
+  "origin.medievalorigins.daemon.description": "Демони є злими, слугами сатани. Це дає їм численні переваги, але це також може бути їхньою загибеллю.",
+
+  "origin.medievalorigins.dwarf.name": "Дварф",
+  "origin.medievalorigins.dwarf.description": "Дварфи — це гуманоїди невисокого зросту, які живуть під землею. Вони чудові у видобутку корисних копалин, але мають проблеми з виживанням над землею.",
+
+  "origin.medievalorigins.elf.name": "Ельф",
+  "origin.medievalorigins.elf.description": "Ельфи — розумні, довгожителі лісу. Їхні навички стрільби з лука виявляються корисними здалеку, але їх слабкість стає проблемою зблизька",
+
+  "origin.medievalorigins.fae.name": "Фея",
+  "origin.medievalorigins.fae.description": "Істоти магії, феї, здатні на набагато більше, ніж звичайні люди. Чи це благословення, чи прокляття; це вирішувати вам...",
+
+  "origin.medievalorigins.goblin.name": "Гоблін",
+  "origin.medievalorigins.goblin.description": "Поступливі та жадібні гобліни чудово підходять для бою один на один і отримують більше здобичі від будь-якої вбитої істоти, хоча їхній малий розмір стає проблемою проти груп ворогів.",
+
+  "origin.medievalorigins.gorgon.name": "Горгона",
+  "origin.medievalorigins.gorgon.description": "Горгони перетворюють своїх ворогів на камінь. Однак життя без можливості дивитися нікому в очі має наслідки...",
+
+  "origin.medievalorigins.knight.name": "Лицар",
+  "origin.medievalorigins.knight.description": "Лицарі — доблесні герої, які невтомно працюють, щоб захистити землю.",
+
+  "origin.medievalorigins.necromancer.name": "Некромант",
+  "origin.medievalorigins.necromancer.description": "Маги, навчені мистецтву воскрешати мертвих, некроманти можуть створити армію з нічого. Однак цей хворобливий зв'язок зі смертю має наслідки...",
+
+  "origin.medievalorigins.ogre.name": "Огр",
+  "origin.medievalorigins.ogre.description": "Великі й непроникні звірі, огри — це люті істоти з величним зростом. Однак їхній апетит ненаситний, а їхній зріст часто стає перешкодою, та й допомагає.",
+
+  "origin.medievalorigins.paladin.name": "Паладин",
+  "origin.medievalorigins.paladin.description": "Воїни лорда, Паладіни чудово борються з мерзенними неживими створіннями світу. Однак їхня святість робить їх уразливими для нападу цих самих істот...",
+
+  "origin.medievalorigins.pixie.name": "Піксі",
+  "origin.medievalorigins.pixie.description": "Агенти лиха чи провісники удачі? Хто колись сказав, що не можна бути і тим, і іншим!",
+
+  "origin.medievalorigins.plague_victim.name": "Жертва чуми",
+  "origin.medievalorigins.plague_victim.description": "Переносник чуми, він впливає на повсякденне життя жертви, але не вбиває їх. При правильному використанні він може бути потужною зброєю проти їхніх ворогів.",
+
+  "origin.medievalorigins.siren.name": "Сирена",
+  "origin.medievalorigins.siren.description": "Сирени мають захоплюючу красу та злу природу, їхня непереборна краса стала причиною падіння багатьох моряків. Ви повинні використовувати цю силу на повну користь.",
+
+  "origin.medievalorigins.troll.name": "Троль",
+  "origin.medievalorigins.troll.description": "Великі, незграбні гірські звірі, тролі, безперечно, є найбільшими та найзлішими звірями на землі. Але чи може саме цей розмір стати їхньою загибеллю?",
+
+  "origin.medievalorigins.werewolf.name": "Вовкулака",
+  "origin.medievalorigins.werewolf.description": "Люта тварина або людина з неправильно зрозумілим станом? Перевертень може бути будь-яким, який шлях ви оберете?",
+
+  "origin.medievalorigins.yeti.name": "Єті",
+  "origin.medievalorigins.yeti.description": "Грубі велетні морозних вершин, крижана природа Єті дозволяє їм зупинити майже будь-якого ворога, але може зробити їх уразливими для вогняних атак.",
+
+  "power.medievalorigins.arachnae/bottomless_stomach.name": "Бездонний шлунок",
+  "power.medievalorigins.arachnae/bottomless_stomach.description": "Павук завбільшки з людину не обходиться без наслідків. Щоб підтримувати такого Арахніда, потрібна величезна кількість їжі.",
+
+  "power.medievalorigins.arachnae/brittle.name": "Крихкий",
+  "power.medievalorigins.arachnae/brittle.description": "Екзоскелет Арахни не може підтримувати броню, важчу за залізо.",
+
+  "power.medievalorigins.arachnae/climber.name": "Альпініст",
+  "power.medievalorigins.arachnae/climber.description": "Дрібна щетина на ногах павуків дозволяє їм підніматися по стінах.",
+  
+  "power.medievalorigins.arachnae/fragile_exoskeleton.name": "Крихкий екзоскелет",
+  "power.medievalorigins.arachnae/fragile_exoskeleton.description": "Екзоскелет павуків вразливий до пошкоджень. Їх здоров'я гірше, ніж у звичайної людини.",
+  
+  "power.medievalorigins.arachnae/many_eyes.name": "Багато очей",
+  "power.medievalorigins.arachnae/many_eyes.description": "Вісім очей Арахни пристосовані до темряви й дозволяють їм чітко бачити навіть при дуже слабкому світлі.",
+  
+  "power.medievalorigins.arachnae/venomous_bite.name": "Отруйний укус",
+  "power.medievalorigins.arachnae/venomous_bite.description": "Ікла павука містять отруту, і кожен укус є шансом отруїти свого супротивника.",
+
+  "power.medievalorigins.arachnae/web_slinger.name": "Веб-стропальник",
+  "power.medievalorigins.arachnae/web_slinger.description": "Арахни можуть за командою плести павутину, в якій їхні супротивники будуть знерухомлені на короткий час.",
+
+  "power.medievalorigins.banshee/ethereal.name": "Ефірний",
+  "power.medievalorigins.banshee/ethereal.description": "Банші мають здатність ставати нематеріальними за бажанням, тобто на них не можуть впливати вороги у фізичній сфері. Це, звичайно, супроводжується часом відновлення. Активується за допомогою додаткової клавіші живлення. ",
+
+  "power.medievalorigins.banshee/flesheater.name": "М'ясоїд",
+  "power.medievalorigins.banshee/flesheater.description": "Банші ласують органами живих. Їхні ефірні тіла не бажають фруктів чи овочів.",
+
+  "power.medievalorigins.banshee/hexed.name": "Зачарований",
+  "power.medievalorigins.banshee/hexed.description": "Банши відомі своєю майстерністю проклинати. Кожного разу, коли їх влучають, є невелика ймовірність того, що нападника чекає повільна та болісна смерть.",
+
+  "power.medievalorigins.banshee/immaterial.name": "Нематеріальний",
+  "power.medievalorigins.banshee/immaterial.description": "Безтілесність не приходить без наслідків. Здоров'я банші вдвічі менше, ніж у живої людини.",
+
+  "power.medievalorigins.banshee/iron_aversion.name": "Відраза до заліза",
+  "power.medievalorigins.banshee/iron_aversion.description": "Залізо смертельне для банші. Вони терпіти не можуть це носити.",
+
+  "power.medievalorigins.banshee/sonic_shriek.name": "Звуковий крик",
+  "power.medievalorigins.banshee/sonic_shriek.description": "Банші відомі своїми надзвуковими криками, які можуть спричинити лопання кровоносних судин. Натисніть G, і на короткий час ви помітите, що завдаєте набагато більшої шкоди.",
+
+  "power.medievalorigins.daemon/carnivore.name": "М'ясоїдний",
+  "power.medievalorigins.daemon/carnivore.description": "Жага крові демона ненаситна. Якщо це не м'ясо тварини, воно нічого не варте.",
+
+  "power.medievalorigins.daemon/daemon_fire.name": "Вогонь Демона",
+  "power.medievalorigins.daemon/daemon_fire.description": "Пройнятий силою Сатани, демон може випустити вибух пекельної енергії за командою. Активується вторинною клавішею живлення.",
+
+  "power.medievalorigins.daemon/hellborne.name": "Пекельний",
+  "power.medievalorigins.daemon/hellborne.description": "Якщо ви живете в глибинах пекла, лизання вогню для вас ніщо. Демони захищені від вогню.",
+
+  "power.medievalorigins.daemon/hydrophobe.name": "Гідрофоб",
+  "power.medievalorigins.daemon/hydrophobe.description": "Якщо ви все життя прожили в лаві, вода здається дуже обпікаючою. Демони пошкоджуються, перебуваючи у воді.",
+
+  "power.medievalorigins.daemon/impure.name": "Нечистий",
+  "power.medievalorigins.daemon/impure.description": "Демони не отримують позитивних ефектів від зілля, таких як регенерація чи миттєве оздоровлення.",
+
+  "power.medievalorigins.daemon/overworld_weakness.name": "Слабкість надземного світу",
+  "power.medievalorigins.daemon/overworld_weakness.description": "Як агенти пекла, демони не звикли до мобів надземного світу й отримують від них більше шкоди.",
+
+  "power.medievalorigins.daemon/unholy_deal.name": "Нечестива угода",
+  "power.medievalorigins.daemon/unholy_deal.description": "Демони можуть обмінювати частину свого здоров'я на збільшену силу завдяки впливу диявола. Активується натисканням G.",
+
+  "power.medievalorigins.dwarf/darkness_dweller.name": "Мешканець темряви",
+  "power.medievalorigins.dwarf/darkness_dweller.description": "Гноми пристосовані до темряви. Денне світло надто сильне для їхніх очей і засліплює їх, доки не повернеться темрява. Протидіяти цьому можна вдягаючи золотий шолом.",
+
+  "power.medievalorigins.dwarf/dense.name": "Щільний",
+  "power.medievalorigins.dwarf/dense.description": "Дварфи є важкими істотами для свого розміру, тому не вміють плавати.",
+
+  "power.medievalorigins.dwarf/dwarven_tech.name": "Техніка Дварфів",
+  "power.medievalorigins.dwarf/dwarven_tech.description": "Технологія Дварфів дозволяє їм видобувати шахти значно швидше, ніж інші істоти.",
+
+  "power.medievalorigins.dwarf/miniature.name": "Мініатюра",
+  "power.medievalorigins.dwarf/miniature.description": "Мабуть, найбільш помітним аспектом Дварфів є їхній розмір.Вони набагато, набагато нижчі за звичайну людину.",
+
+  "power.medievalorigins.dwarf/nocturnal_eyes.name": "Нічні очі",
+  "power.medievalorigins.dwarf/nocturnal_eyes.description": "Життя під землею призвело до того, що дварфи мають дуже чутливі очі, здатні чудово бачити навіть у непроглядній темряві печер.",
+
+  "power.medievalorigins.dwarf/photoallergic.name": "Фотоалергія",
+  "power.medievalorigins.dwarf/photoallergic.description": "Шкіра дварфів не підходить для інтенсивного сонячного світла зовнішнього світу, і під впливом цього вони горять. Можна запобігти цьому, одягнувши шолом.",
+
+  "power.medievalorigins.dwarf/potent_brew.name": "Потужний напій",
+  "power.medievalorigins.dwarf/potent_brew.description": "Дварфи відомі своїм споживанням алкоголю. Натисніть G, щоб випити міцний напій, який повертає здоров'я до повного рівня.",
+
+  "power.medievalorigins.elf/archer.name": "Лучник",
+  "power.medievalorigins.elf/archer.description": "Ельфи є досвідченими стрільцями. Вони завдають значно більше шкоди, використовуючи лук, ніж інші істоти.",
+
+  "power.medievalorigins.elf/forest_vision.name": "Лісове бачення",
+  "power.medievalorigins.elf/forest_vision.description": "Століття життя в лісі дали ельфам набагато краще сприйняття в темряві, ніж більшість.",
+
+  "power.medievalorigins.elf/hyper_sight.name": "Гіперзір",
+  "power.medievalorigins.elf/hyper_sight.description": "Покращене сприйняття ельфів дозволяє їм деякий час стежити за ворогом після удару, навіть якщо він не в полі зору",
+
+  "power.medievalorigins.elf/spindly.name": "Веретеноподібний",
+  "power.medievalorigins.elf/spindly.description": "Завдяки своїй стрункій натурі найважчим обладунком, який можуть носити ельфи, є кольчуга.",
+
+  "power.medievalorigins.elf/steward.name": "Стюард",
+  "power.medievalorigins.elf/steward.description": "Ельфи живуть за рахунок лісу та його плодів. Їхня травна система не може переробляти м'ясо.",
+
+  "power.medievalorigins.elf/towering.name": "Високий",
+  "power.medievalorigins.elf/towering.description": "Ельфи значно вищі за звичайну людину. Незважаючи на це, вони такі ж худі...",
+
+  "power.medievalorigins.elf/weak_melee.name": "Слабкий рукопашний бій",
+  "power.medievalorigins.elf/weak_melee.description": "Ельфи створені для бою здалеку, а не зблизька. Їхня шкода мечами та сокирами зменшена.",
+
+  "power.medievalorigins.fae/allure.name": "Привабливість",
+  "power.medievalorigins.fae/allure.description": "Феї природно привабливі. На жаль, це означає, що моби переслідуватимуть їх набагато далі, ніж інших істот.",
+
+  "power.medievalorigins.fae/diminutive.name": "Зменшення",
+  "power.medievalorigins.fae/diminutive.description": "Феї рідко досягають 5 футів у висоту. Вони маленькі істоти, навіть менші за гоблінів-ласок.",
+
+  "power.medievalorigins.fae/iron_aversion.name": "Огида до заліза",
+  "power.medievalorigins.fae/iron_aversion.description": "Залізо гальмує здібності фей. Їм нестерпно його носити.",
+
+  "power.medievalorigins.fae/levitation.name": "Левітація",
+  "power.medievalorigins.fae/levitation.description": "Феї відомі своєю здатністю левітувати. Натисніть G, і ви почнете парити.",
+
+  "power.medievalorigins.fae/magic_resistance.name": "Опір магії",
+  "power.medievalorigins.fae/magic_resistance.description": "Як самі по собі магічні істоти, феї отримують менше магічної шкоди порівняно з іншими істотами.",
+
+  "power.medievalorigins.fae/regen.name": "Відродження",
+  "power.medievalorigins.fae/regen.description": "Феї — чарівні істоти. Натисніть додаткову клавішу живлення, і ви на короткий час відновите здоров'я ціною свого голоду.",
+
+  "power.medievalorigins.goblin/cunning.name": "Хитрість",
+  "power.medievalorigins.goblin/cunning.description": "Гобліни — хитрі істоти. Їхні атаки завдають більше шкоди, ніж інші істоти, і вони отримують більше здобичі, вбиваючи мобів.",
+
+  "power.medievalorigins.goblin/frail.name": "Кріпка",
+  "power.medievalorigins.goblin/frail.description": "Малі розміри мають свої недоліки. Максимальний рівень здоров'я гоблінів зменшується, оскільки їхні маленькі розміри роблять їх схильними до пошкоджень.",
+
+  "power.medievalorigins.goblin/greedy.name": "Жадібний",
+  "power.medievalorigins.goblin/greedy.description": "Гобліни мають природну жадібність. Все, що позолочено, приносить їм значно більше користі, ніж іншим.",
+
+  "power.medievalorigins.goblin/nippy.name": "Ніппі",
+  "power.medievalorigins.goblin/nippy.description": "Незважаючи на низький зріст, гобліни точно не повільні. Помірне збільшення базової швидкості руху.",
+
+  "power.medievalorigins.goblin/stunted.name": "Невисокий",
+  "power.medievalorigins.goblin/stunted.description": "Погана дієта та генетика гоблінів не дозволяють їм рости такими ж істотами, як інші істоти.",
+
+  "power.medievalorigins.gorgon/hydrophobe.name": "Гідрофоб",
+  "power.medievalorigins.gorgon/hydrophobe.description": "Горгони зазнають шкоди від води, оскільки вони за своєю суттю злі істоти, які не виносять чистоти води.",
+
+  "power.medievalorigins.gorgon/petrification.name": "Скам'яніння",
+  "power.medievalorigins.gorgon/petrification.description": "Горгони були прокляті ув'язненням у темних, вогких печерах. Перебування на вулиці вдень спричиняє їх скам'яніння аж до ночі. Цього можна позбутися, одягнувши шолом.",
+
+  "power.medievalorigins.gorgon/serpentine_companions.name": "Зміїні супутники",
+  "power.medievalorigins.gorgon/serpentine_companions.description": "Кожного разу, коли горгону влучають, вона має шанс породити срібну рибку, яка атакує замість неї.",
+
+  "power.medievalorigins.gorgon/silver_aversion.name": "Срібна відраза",
+  "power.medievalorigins.gorgon/silver_aversion.description": "Єдиною справжньою слабкістю горгони є срібло (залізо діє як срібло). Вони не можуть носити срібні обладунки.",
+
+  "power.medievalorigins.gorgon/stony_gaze.name": "Камінний погляд",
+  "power.medievalorigins.gorgon/stony_gaze.description": "Коли натовп нападає на горгону, вона може на короткий час застигнути на місці.",
+
+  "power.medievalorigins.gorgon/super_strength.name": "Надсила",
+  "power.medievalorigins.gorgon/super_strength.description": "Горгони відомі своєю надприродною силою. Вони завдають набагато більшої базової шкоди, ніж будь-яка інша істота.",
+
+  "power.medievalorigins.knight/burdened.name": "Обтяжений",
+  "power.medievalorigins.knight/burdened.description": "Обтяжені важкими обладунками, лицарі мають знижену швидкість руху.",
+
+  "power.medievalorigins.knight/for_honour_and_glory.name": "За честь і славу",
+  "power.medievalorigins.knight/for_honour_and_glory.description": "Що таке лицар без блискучих обладунків? Залізна броня забезпечує значно більше захисту, ніж інші.",
+
+  "power.medievalorigins.knight/magic_prone.name": "Схильний до магії",
+  "power.medievalorigins.knight/magic_prone.description": "З високою стійкістю до фізичної шкоди цілком природно, що атаки більш спектрального характеру посилюють вплив на лицарів.",
+
+  "power.medievalorigins.knight/melee4ever.name": "Рукопашний бій назавжди",
+  "power.medievalorigins.knight/melee4ever.description": "Лицарі не володіють мистецтвом стрільби з лука тобто не можуть користуватися луками.",
+
+  "power.medievalorigins.knight/skilled_swordsman.name": "Вправний фехтувальник",
+  "power.medievalorigins.knight/skilled_swordsman.description": "Лицарі є навченими професіоналами в тому, що вони роблять. Будь-яка атака, яку вони здійснюють мечем, завдає більшої шкоди.",
+
+  "power.medievalorigins.knight/valour.name": "Доблесть",
+  "power.medievalorigins.knight/valour.description": "Лицарі - доблесні чоловіки. У хвилини смерті вони борються сильніше, ніж будь-коли",
+
+  "power.medievalorigins.necromancer/black_thumb.name": "Чорний великий палець",
+  "power.medievalorigins.necromancer/black_thumb.description": "Некроманти працюють лише зі смертю. Вони не можуть збирати врожай, вони в’януть від їх смертельного дотику.",
+
+  "power.medievalorigins.necromancer/disturbed.name": "Стривожений",
+  "power.medievalorigins.necromancer/disturbed.description": "Навчання мистецтву некромантії травмує. Некроманти не можуть спати, вони надто налякані, щоб мріяти про те, чого вони хотіли б не знати",
+
+  "power.medievalorigins.necromancer/hellraiser.name": "Встаючий з пекла",
+  "power.medievalorigins.necromancer/hellraiser.description": "За бажанням некромант може підняти навколо себе коло скелетів, блокуючи снаряди та завдаючи шкоди іншим супротивникам. На жаль, це триває недовго.",
+
+  "power.medievalorigins.necromancer/impervious.name": "Непроникний",
+  "power.medievalorigins.necromancer/impervious.description": "Дослідження смерті зробило некромантів імунітетом до отрути, висихання та миттєвої шкоди. На жаль, це також означає, що вони не отримують позитивного ефекту від регенерації та миттєвого здоров’я.",
+
+  "power.medievalorigins.necromancer/poor_reputation.name": "Погана репутація",
+  "power.medievalorigins.necromancer/poor_reputation.description": "На жаль, більшість людей бояться дослідників темних мистецтв.Жителі села відмовляться торгувати з некромантами, а залізні ґолеми нападуть на них одразу. Це, однак, приходить із бонусом, що вони приймаються серед лав Грабіжників.",
+
+  "power.medievalorigins.necromancer/resilient.name": "Стійкий",
+  "power.medievalorigins.necromancer/resilient.description": "Знання про смерть значною мірою допоможе уникнути її. Некроманти мають покращений стан здоров'я.",
+
+  "power.medievalorigins.necromancer/risk_of_transmission.name": "Ризик передачі",
+  "power.medievalorigins.necromancer/risk_of_transmission.description": "Кожен контакт із жертвою може передати їй чуму з імовірністю 50/50 залежить від того, заразитеся ви чи ні. Їхнім опонентам краще молитися, щоб їм пощастило...",
+
+  "power.medievalorigins.necromancer/unguarded.name": "Неохоронений",
+  "power.medievalorigins.necromancer/unguarded.description": "Охоплення себе таємницею робить вас відкритим для атаки у фізичній сфері. Більшість мобів завдають більше шкоди некромантам.",
+
+  "power.medievalorigins.ogre/charge.name": "Ривок",
+  "power.medievalorigins.ogre/charge.description": "Огри можуть кинутися вперед, пробиваючи кілька блоків, але це вгамує голод і на короткий час сповільнить людоеда.",
+
+  "power.medievalorigins.ogre/gargantuan.name": "Гаргантюан",
+  "power.medievalorigins.ogre/gargantuan.description": "Огри відомі своїм розміром і значно вищі (і ширші) за більшість істот.",
+
+  "power.medievalorigins.ogre/lead_belly.name": "Свинцевий живіт",
+  "power.medievalorigins.ogre/lead_belly.description": "Надзвичайний апетит людоеда іноді означає вживання небажаної їжі час від часу. Таким чином, шлунок огра розвинувся, щоб протистояти навіть найтоксичнішим харчовим продуктам.",
+
+  "power.medievalorigins.ogre/ravenous.name": "Ненажерливий",
+  "power.medievalorigins.ogre/ravenous.description": "Потрібно багато їжі, щоб підтримувати істоту такого розміру, як огр. Апетит значно підвищується.",
+
+  "power.medievalorigins.ogre/sluggish.name": "Мляво",
+  "power.medievalorigins.ogre/sluggish.description": "Огри, не відомі своєю спритністю, є одними з найповільніших істот, які бродять землею.",
+
+  "power.medievalorigins.ogre/stocky.name": "Кремезний",
+  "power.medievalorigins.ogre/stocky.description": "Завдяки своїм величезним розмірам огри мають у 2,5 рази більше здоров'я, ніж звичайний гравець.",
+
+  "power.medievalorigins.ogre/xxxl.name": "XXXL",
+  "power.medievalorigins.ogre/xxxl.description": "Досить важко знайти обладунок розміру XXXL. Як наслідок, огри можуть носити лише гнучку броню, тобто шкіру та кольчугу.",
+
+  "power.medievalorigins.paladin/holy_curse.name": "Священне прокляття",
+  "power.medievalorigins.paladin/holy_curse.description": "Як слуги Господа, паладини не можуть терпіти контакту з нечистими істотами, такими як натовпи нежиті, і отримують від них більше шкоди.",
+
+  "power.medievalorigins.paladin/holy_fire.name": "Благодатний вогонь",
+  "power.medievalorigins.paladin/holy_fire.description": "Як слуги Господа, нежить не може винести дотик паладина, і горить, коли вдарить його",
+
+  "power.medievalorigins.paladin/holy_instruments.name": "Священні інструменти",
+  "power.medievalorigins.paladin/holy_instruments.description": "Сокира в руках паладина є небезпечною зброєю. Усі сокири завдають більшої шкоди, але мечі завдають меншої шкоди.",
+
+  "power.medievalorigins.paladin/leech.name": "П'явка",
+  "power.medievalorigins.paladin/leech.description": "Кожне вбивство відновлює здоров'я серця паладина.",
+
+  "power.medievalorigins.paladin/well_built.name": "Добре побудований",
+  "power.medievalorigins.paladin/well_built.description": "Ходити у важких обладунках цілий день — це важка робота. Паладинам потрібно більше їжі, щоб підтримувати себе",
+
+  "power.medievalorigins.pixie/curse_of_flight.name": "Прокляття втечі",
+  "power.medievalorigins.pixie/curse_of_flight.description": "Крила, які дозволяють піксі літати, також заважають навіть найвправнішим майстрам створити нагрудний знак для їх розміщення.",
+
+  "power.medievalorigins.pixie/feather_footed.name": "Пероногі",
+  "power.medievalorigins.pixie/feather_footed.description": "Невеликий розмір піксі означає, що вони абсолютно не можуть отримати пошкодження від падіння.",
+
+  "power.medievalorigins.pixie/flight.name": "Політ",
+  "power.medievalorigins.pixie/flight.description": "Піксі благословенні даром польоту.",
+
+  "power.medievalorigins.pixie/good_fortunes.name": "Щаслива доля",
+  "power.medievalorigins.pixie/good_fortunes.description": "Хоча піксі можуть бути проблемними, вони також асоціюються з удачею. Під час видобутку ви час від часу отримуєте щось цінне зі звичайного каменю.",
+
+  "power.medievalorigins.pixie/mischief_maketh_man.name": "Манери роблять людину",
+  "power.medievalorigins.pixie/mischief_maketh_man.description": "Піксі здатні виконувати численні пустотливі вчинки, які якщо й не небезпечні, то точно гучні.",
+
+  "power.medievalorigins.pixie/pixie_properties.name": "Розмір",
+  "power.medievalorigins.pixie/pixie_properties.description": "Піксі — одні з найменших істот, які бродять по землі, рідко досягаючи висоти коліна звичайної людини.",
+
+  "power.medievalorigins.pixie/soaked.name": "Просочений",
+  "power.medievalorigins.pixie/soaked.description": "Оскільки вони маленькі, вода становить значну загрозу для піксі. Вона заважає їм пересуватися та погіршує здатність літати.",
+
+  "power.medievalorigins.pixie/troublemaker.name": "Порушник спокою",
+  "power.medievalorigins.pixie/troublemaker.description": "Селяни знають піксі за легендами про неприємності, які вони завдають, і відмовляться торгувати з ними.",
+
+  "power.medievalorigins.plague_victim/contagious.name": "Заразний",
+  "power.medievalorigins.plague_victim/contagious.description": "Чума дуже заразна. Селяни відмовляться торгувати з вами через страх заразитися чумою.",
+
+  "power.medievalorigins.plague_victim/foul_aura.name": "Огидна аура",
+  "power.medievalorigins.plague_victim/foul_aura.description": "Чума, що переносить блох, налітає на жертву.Перебування в загальній близькості з ними не корисно для здоров’я.",
+
+  "power.medievalorigins.plague_victim/insomniac.name": "Безсоння",
+  "power.medievalorigins.plague_victim/insomniac.description": "Жахливі рани не дають спати носіям чуми.",
+
+  "power.medievalorigins.plague_victim/plague_immunity.name": "Імунітет до чуми",
+  "power.medievalorigins.plague_victim/plague_immunity.description": "Хоча чума вражає носія, вони не страждають від її симптомів. Носії мають імунітет до отрути та в’януть.",
+
+  "power.medievalorigins.plague_victim/risk_of_transmission.name": "Ризик передачі",
+  "power.medievalorigins.plague_victim/risk_of_transmission.description": "Кожен контакт із жертвою чуми на 50/50 залежить від того, заразитеся ви чи ні. Їхнім опонентам краще молитися, щоб їм пощастило...",
+
+  "power.medievalorigins.plague_victim/sensitive_skin.name": "Чутлива шкіра",
+  "power.medievalorigins.plague_victim/sensitive_skin.description": "Чума створює рани та ураження на шкірі, які є ніжними та болісними на дотик. Як наслідок, жертви не можуть носити броню через біль, який вона завдає.",
+
+  "power.medievalorigins.plague_victim/skin_and_bones.name": "Шкіра та кістки",
+  "power.medievalorigins.plague_victim/skin_and_bones.description": "Чума викликає швидку атрофію м'язів, що призводить до зниження здоров'я та швидкості.",
+
+  "power.medievalorigins.siren/amphibious.name": "Амфібія",
+  "power.medievalorigins.siren/amphibious.description": "Сирени, будучи підгрупою русалів, можуть виживати у воді та плавати з підвищеною швидкістю.",
+
+  "power.medievalorigins.siren/flammable.name": "Займистий",
+  "power.medievalorigins.siren/flammable.description": "Сирени та вогонь погано поєднуються. Будь-який контакт із полум’ям призводить до миттєвої смерті. Обов’язково стежте за своїми кроками в підземеллі!",
+
+  "power.medievalorigins.siren/holy_water.name": "Свята вода",
+  "power.medievalorigins.siren/holy_water.description": "Сирени мають регенеративні здібності, які на повну силу, коли вони у воді.",
+
+  "power.medievalorigins.siren/out_of_your_depth.name": "З твоєї глибини",
+  "power.medievalorigins.siren/out_of_your_depth.description": "Хоча сирени можуть чудово виживати на суші, це не є їхнім природним середовищем. Таким чином, їхні регенераційні здібності не застосовуються, і будь-яку завдану шкоду можна вилікувати лише зіллям. ",
+
+  "power.medievalorigins.siren/prone.name": "Схильність",
+  "power.medievalorigins.siren/prone.description": "Хоча сирени можуть регенерувати свої тіла, вони слабкі до удару тупою силою. Атаки ближнього бою завдають їм більшої шкоди.",
+
+  "power.medievalorigins.siren/siren_song.name": "Пісня сирени",
+  "power.medievalorigins.siren/siren_song.description": "Сирени відомі своїми привабливими криками.Натисніть G, щоб зробити всіх мобів навколо вас нейтральними до удару. (НЕ СТОСУЄТЬСЯ ДО БОСІВ, З ОЧЕВИДНИХ ПРИЧИН)",
+
+  "power.medievalorigins.siren/water_vision.name": "Підводний зір",
+  "power.medievalorigins.siren/water_vision.description": "Сирени мають кращий підводний зір, ніж інші істоти.",
+
+  "power.medievalorigins.troll/apex_predator.name": "Верховний хижак",
+  "power.medievalorigins.troll/apex_predator.description": "Тролі не можуть їсти звичайну їжу, а можуть вгамувати голод, лише вбиваючи інших істот.",
+
+  "power.medievalorigins.troll/ham_fisted.name": "Незграбність",
+  "power.medievalorigins.troll/ham_fisted.description": "Хоча величезні кулаки троля завдають могутнього удару, вони надто громіздкі, щоб тримати щит.",
+
+  "power.medievalorigins.troll/ironhide.name": "Залізна Шкіра",
+  "power.medievalorigins.troll/ironhide.description": "Тролі мають неймовірно товсту шкіру, що дає їм природну броню та значно покращує здоров'я.",
+
+  "power.medievalorigins.troll/lumbering.name": "Колода",
+  "power.medievalorigins.troll/lumbering.description": "Коли ти такий великий, як троль, ти маєш багато ваги. Рухи помітно повільніші, ніж можна було б очікувати з огляду на їхні розміри.",
+
+  "power.medievalorigins.troll/mountainous.name": "Гірський",
+  "power.medievalorigins.troll/mountainous.description": "Тролі переслідують гори, з яких вони походять.Вони величезного зросту, вдвічі більші за середньостатистичної людини.",
+
+  "power.medievalorigins.troll/old_blood.name": "Стара кров",
+  "power.medievalorigins.troll/old_blood.description": "Стара кров, яка тече венами тролів, пов'язана з горами. Вони не можуть вилікувати себе поза межами своїх горбистих батьківщин.",
+
+  "power.medievalorigins.troll/out_of_stock.name": "Немає в наявності",
+  "power.medievalorigins.troll/out_of_stock.description": "Як би вони не намагалися, тролі, здається, ніколи не зможуть знайти жодної броні свого розміру. Таким чином, вони приречені ходити в тих покривах, які їм дала природа, і нічого більше. ",
+
+  "power.medievalorigins.troll/rock_throw.name": "Кидок каменю",
+  "power.medievalorigins.troll/rock_throw.description": "Троль може за бажанням підкинути великий камінь у повітря, прориваючи все, що може перетнути його шлях. Однак це відбувається за рахунок 64 дорогоцінних блоків бруківки. ",
+
+  "power.medievalorigins.troll/thunderous_stride.name": "Громовий крок",
+  "power.medievalorigins.troll/thunderous_stride.description": "Тролі йдуть цілеспрямовано. Якщо вони наполягають досить довго, вони можуть пройти прямо через будь-яку перешкоду, яка може перетнути їхній шлях.",
+
+  "power.medievalorigins.werewolf/carnivore.name": "М'ясоїдна тварина",
+  "power.medievalorigins.werewolf/carnivore.description": "Вовкулаки їдять, як вовки, навіть якщо вони не трансформовані. Єдиною їжею, яку вони можуть їсти, є м'ясо.",
+
+  "power.medievalorigins.werewolf/drained.name": "Висушений",
+  "power.medievalorigins.werewolf/drained.description": "Збільшення майстерності вночі, на жаль, має наслідки. Удень ваше здоров'я та сила знижуються.",
+
+  "power.medievalorigins.werewolf/insatiable_hunger.name": "Ненаситний голод",
+  "power.medievalorigins.werewolf/insatiable_hunger.description": "Вовкулаки постійно шукають наступну їжу. Їхній апетит набагато вище середнього.",
+
+  "power.medievalorigins.werewolf/lycanthropy.name": "Лікантропія",
+  "power.medievalorigins.werewolf/lycanthropy.description": "Стан, через який проходять перевертні у вночі перетворюються на вовків. Збільшує зріст, силу та здоров'я людини.",
+
+  "power.medievalorigins.werewolf/silver_aversion.name": "Срібна відраза",
+  "power.medievalorigins.werewolf/silver_aversion.description": "Вовкулаки дуже слабкі до срібла. Вони не можуть носити його. (Залізо діє як срібло)",
+  
+  "power.medievalorigins.yeti/flammable.name": "Займистий",
+  "power.medievalorigins.yeti/flammable.description": "Єті чутливі до пошкоджень від вогню через їх зимову натуру.",
+
+  "power.medievalorigins.yeti/frigid_pulse.name": "Холодний пульс",
+  "power.medievalorigins.yeti/frigid_pulse.description": "Потужна магія проходить по венах єті, дозволяючи їм поховати групу ворогів у лід за командою.",
+
+  "power.medievalorigins.yeti/from_whence_you_came.name": "Звідки ви прийшли",
+  "power.medievalorigins.yeti/from_whence_you_came.description": "Єті найкраще процвітають у країнах, з яких вони походять, рухаються швидше та переносяться по снігу, щоб звести нанівець пошкодження від падіння в крижаних біомах.",
+
+  "power.medievalorigins.yeti/frosty_breath.name": "Морозний подих",
+  "power.medievalorigins.yeti/frosty_breath.description": "Морозний подих єті сповільнює будь-яких супротивників, які наближаються до них.",
+
+  "power.medievalorigins.yeti/thick_fur.name": "Густе хутро",
+  "power.medievalorigins.yeti/thick_fur.description": "Благословення густого хутра стає прокляттям у пустелях. Ваш рух сповільнюється, а здоров'я знижується до рівня нормальної людини.",
+
+  "power.medievalorigins.yeti/titanic.name": "Титанік",
+  "power.medievalorigins.yeti/titanic.description": "Єті мають набагато більше здоров'я, ніж звичайна людина.",
+
+  "power.medievalorigins.yeti/unstoppable.name": "Нестримний",
+  "power.medievalorigins.yeti/unstoppable.description": "Йєті несприйнятливі до ефекту сповільнення.",
+
+  "power.medievalorigins.yeti/winter_body.name": "Зимове тіло",
+  "power.medievalorigins.yeti/winter_body.description": "Єті трохи вищі за звичайну людину та значно ширші.",
+
+  "enchantment.medievalorigins.featherweight": "Напівлегка вага",
+
+  "medievalorigins.contagious_villager": "Селянин не хоче бути зараженим!",
+
+  "medievalorigins.disturbed_restless": "Те, що ви знаєте, вас уб'є, але ви помрете зі сміху.",
+
+  "medievalorigins.insomniac_welts": "Ваші рани жалять і горять. Цієї ночі ви не зможете спати.",
+
+  "medievalorigins.poor_reputation_villager": "Мешканець надто наляканий, щоб торгувати з вами!",
+
+  "medievalorigins.troublemaker": "Селяни не торгують з такими, як ви!"
+}
