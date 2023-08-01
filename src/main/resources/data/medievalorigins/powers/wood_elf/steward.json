@@ -1,0 +1,13 @@
+{
+	"type": "origins:action_on_callback",
+	"entity_action_chosen": {
+		"type": "origins:grant_power",
+		"power": "origins:vegetarian",
+		"source": "*.*"
+	},
+	"entity_action_lost": {
+		"type": "origins:revoke_power",
+		"power": "origins:vegetarian",
+		"source": "*.*"
+	}
+}

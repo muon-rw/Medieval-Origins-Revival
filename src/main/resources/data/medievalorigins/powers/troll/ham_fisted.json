@@ -10,7 +10,7 @@
 	},
 	"shieldless": {
 		"type": "origins:prevent_item_use",
-		"hidden": "true",
+		"hidden": true,
 		"item_condition": {
 			"type": "origins:ingredient",
 			"ingredient": {

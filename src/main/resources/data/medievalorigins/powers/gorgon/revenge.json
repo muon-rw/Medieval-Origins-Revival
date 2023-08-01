@@ -1,0 +1,12 @@
+{
+     "type": "origins:modify_damage_dealt",
+     "condition": {
+          "type": "origins:relative_health",
+          "comparison": "<=",
+          "compare_to": 0.5
+      },
+     "modifier": {
+         "operation": "multiply_total_multiplicative",
+         "value": 1.0
+     }
+ }

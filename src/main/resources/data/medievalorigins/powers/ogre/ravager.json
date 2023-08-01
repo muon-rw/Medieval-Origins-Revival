@@ -1,0 +1,82 @@
+{
+	"type": "origins:multiple",
+	"axe_boost": {
+		"type": "origins:conditioned_attribute",
+		"tick_rate": 20,
+		"modifier": {
+			"attribute": "generic.attack_damage",
+			"operation": "multiply_total",
+			"value": 0.25
+		},
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:and",
+				"conditions": [
+					{
+						"type": "apoli:ingredient",
+						"ingredient": {
+							"tag": "c:axes"
+						}
+					}
+				]
+			}
+		}
+	},
+	"offhand_axe_boost": {
+		"type": "origins:conditioned_attribute",
+		"tick_rate": 20,
+		"modifier": {
+			"attribute": "generic.attack_damage",
+			"operation": "multiply_total",
+			"value": 0.25
+		},
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "offhand",
+			"item_condition": {
+				"type": "origins:and",
+				"conditions": [
+					{
+						"type": "apoli:ingredient",
+						"ingredient": {
+							"tag": "c:axes"
+						}
+					}
+				]
+			}
+		}
+	},
+	"axe_tooltip": {
+		"type": "apoli:tooltip",
+		"item_condition": {
+			"type": "apoli:ingredient",
+			"ingredient": {
+				"tag": "c:axes"
+			}
+		},
+		"text": [
+			{
+				"text": "+25% ",
+				"color": "blue"
+			},
+			{
+				"translate": "attribute.name.generic.attack_damage",
+				"color": "blue"
+			},
+			{
+				"text": " (",
+				"color": "dark_gray"
+			},
+			{
+				"translate": "power.medievalorigins.ogre/ravager.name",
+				"color": "green"
+			},
+			{
+				"text": ")",
+				"color": "dark_gray"
+			}
+		]
+	}
+}

@@ -8,7 +8,8 @@
 		},
 		"condition": {
 			"type": "origins:and",
-			"conditions": [{
+			"conditions": [
+				{
 					"type": "origins:submerged_in",
 					"fluid": "minecraft:water"
 				},
@@ -29,7 +30,8 @@
 		},
 		"condition": {
 			"type": "origins:and",
-			"conditions": [{
+			"conditions": [
+				{
 					"type": "origins:fluid_height",
 					"fluid": "minecraft:water",
 					"comparison": ">",
@@ -44,41 +46,22 @@
 	},
 	"amphibious": {
 		"type": "origins:action_over_time",
+		"condition": {
+			"type": "origins:submerged_in",
+			"fluid": "minecraft:water"
+		},
 		"entity_action": {
-			"type": "origins:if_else",
-			"condition": {
-				"type": "origins:submerged_in",
-				"fluid": "minecraft:water"
-			},
-			"if_action": {
-				"type": "origins:apply_effect",
-				"effect": {
+			"type": "origins:apply_effect",
+			"effects": [
+				{
 					"effect": "minecraft:dolphins_grace",
 					"is_ambient": true,
 					"show_particles": false,
 					"show_icon": false,
 					"amplifier": 1,
 					"duration": 250
-				}
-			},
-			"else_action": {
-				"type": "origins:clear_effect",
-				"effect": "minecraft:dolphins_grace"
-			}
-		},
-		"interval": 20
-	},
-	"amphibious2": {
-		"type": "origins:action_over_time",
-		"entity_action": {
-			"type": "origins:if_else",
-			"condition": {
-				"type": "origins:submerged_in",
-				"fluid": "minecraft:water"
-			},
-			"if_action": {
-				"type": "origins:apply_effect",
-				"effect": {
+				},
+				{
 					"effect": "minecraft:water_breathing",
 					"is_ambient": true,
 					"show_particles": false,
@@ -86,11 +69,18 @@
 					"amplifier": 2,
 					"duration": 250
 				}
-			},
-			"else_action": {
-				"type": "origins:clear_effect",
-				"effect": "minecraft:water_breathing"
-			}
+			]
+		},
+		"falling_action": {
+			"type": "origins:clear_effect",
+			"effects": [
+				{
+					"effect": "minecraft:dolphins_grace"
+				},
+				{
+					"effect": "minecraft:water_breathing"
+				}
+			]
 		},
 		"interval": 20
 	}

@@ -1,27 +1,57 @@
 {
-	"type": "origins:restrict_armor",
-	"head": {
-		"type": "origins:ingredient",
-		"ingredient": {
-			"item": "minecraft:iron_helmet"
+	"type": "origins:multiple",
+	"armor_restrict": {
+		"type": "origins:restrict_armor",
+		"head": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"tag": "medievalorigins:iron_armor"
+			}
+		},
+		"chest": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"tag": "medievalorigins:iron_armor"
+			}
+		},
+		"legs": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"tag": "medievalorigins:iron_armor"
+			}
+		},
+		"feet": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"tag": "medievalorigins:iron_armor"
+			}
 		}
 	},
-	"chest": {
-		"type": "origins:ingredient",
-		"ingredient": {
-			"item": "minecraft:iron_chestplate"
-		}
-	},
-	"legs": {
-		"type": "origins:ingredient",
-		"ingredient": {
-			"item": "minecraft:iron_leggings"
-		}
-	},
-	"feet": {
-		"type": "origins:ingredient",
-		"ingredient": {
-			"item": "minecraft:iron_boots"
-		}
+	"armor_tooltip": {
+		"type": "apoli:tooltip",
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"tag": "medievalorigins:iron_armor"
+			}
+		},
+		"text": [
+			{
+				"translate": "medievalorigins.unwearable",
+				"color": "gray"
+			},
+			{
+				"text": " (",
+				"color": "gray"
+			},
+			{
+				"translate": "power.medievalorigins.banshee/iron_aversion.name",
+				"color": "red"
+			},
+			{
+				"text": ")",
+				"color": "gray"
+			}
+		]
 	}
 }

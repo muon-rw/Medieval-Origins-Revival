@@ -6,7 +6,9 @@
                 "medievalorigins:siren/out_of_your_depth",
                 "medievalorigins:siren/prone",
                 "medievalorigins:siren/flammable",
-                "medievalorigins:siren/water_vision"
+                "medievalorigins:siren/water_vision",
+                "medievalorigins:siren/dehydration_compat",
+                "mermod:fabulous_fins"
 	],
 	"icon": "minecraft:sea_lantern",
 	"impact": 2,

@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+	  {"id":"#mythicmetals:midas_gold_armor","required":false},
+    {"id":"minecraft:golden_chestplate","required":false},
+    {"id":"minecraft:golden_helmet","required":false},
+    {"id":"minecraft:golden_leggings","required":false},
+    {"id":"minecraft:golden_boots","required":false},
+    {"id":"adventurez:stone_golem_chestplate","required":false},
+    {"id":"adventurez:stone_golem_helmet","required":false},
+    {"id":"adventurez:stone_golem_leggings","required":false},
+    {"id":"adventurez:stone_golem_boots","required":false},
+    {"id":"bygonenether:gilded_netherite_helmet","required":false},
+    {"id":"bygonenether:gilded_netherite_leggings","required":false},
+    {"id":"bygonenether:gilded_netherite_chestplate","required":false},
+    {"id":"bygonenether:gilded_netherite_boots","required":false},
+    {"id":"mcda:golden_piglin_armor_helmet","required":false},
+    {"id":"mcda:golden_piglin_armor_leggings","required":false},
+    {"id":"mcda:golden_piglin_armor_chestplate","required":false},
+    {"id":"mcda:golden_piglin_armor_boots","required":false}
+  ]
+}

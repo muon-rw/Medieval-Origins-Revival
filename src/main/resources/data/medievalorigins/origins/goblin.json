@@ -6,7 +6,7 @@
                 "medievalorigins:goblin/stunted",
 		"medievalorigins:goblin/frail"
 	],
-	"icon": "minecraft:gold_block",
+	"icon": "minecraft:golden_sword",
 	"impact": 1,
         "order": 1
 }

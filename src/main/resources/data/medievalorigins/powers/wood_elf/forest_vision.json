@@ -1,0 +1,26 @@
+{
+	"type": "origins:action_over_time",
+	"condition": {
+		"type": "origins:biome",
+		"condition": {
+			"type": "origins:in_tag",
+			"tag": "minecraft:is_forest"
+		}
+	},
+	"entity_action": {
+		"type": "origins:apply_effect",
+		"effect": {
+			"effect": "minecraft:night_vision",
+			"is_ambient": true,
+			"show_particles": false,
+			"show_icon": false,
+			"amplifier": 255,
+			"duration": 250
+		}
+	},
+	"falling_action": {
+		"type": "origins:clear_effect",
+		"effect": "minecraft:night_vision"
+	},
+	"interval": 20
+}

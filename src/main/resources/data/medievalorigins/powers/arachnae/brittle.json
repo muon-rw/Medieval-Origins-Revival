@@ -1,63 +1,210 @@
 {
-	"type": "origins:restrict_armor",
-	"head": {
-		"type": "origins:and",
-		"conditions": [{
-			"type": "origins:armor_value",
-			"comparison": ">",
-			"compare_to": 2
+	"type": "origins:multiple",
+	"head_feet_armor_tooltip": {
+		"type": "apoli:tooltip",
+		"item_condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:armor_value",
+					"comparison": ">",
+					"compare_to": 2
+				},
+				{
+					"type": "origins:enchantment",
+					"enchantment": "medievalorigins:featherweight",
+					"comparison": "<",
+					"compare_to": 1
+				},
+				{
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "apoli:ingredient",
+							"ingredient": {
+								"tag": "c:helmets"
+							}
+						},
+						{
+							"type": "apoli:ingredient",
+							"ingredient": {
+								"tag": "c:boots"
+							}
+						}
+					]
+				}
+			]
 		},
+		"text": [
 			{
-				"type": "origins:enchantment",
-				"enchantment": "medievalorigins:featherweight",
-				"comparison": "!=",
-				"compare_to": 1
+				"translate": "medievalorigins.unwearable",
+				"color": "gray"
+			},
+			{
+				"text": " (",
+				"color": "gray"
+			},
+			{
+				"translate": "power.medievalorigins.arachnae/brittle.name",
+				"color": "red"
+			},
+			{
+				"text": ")",
+				"color": "gray"
 			}
 		]
 	},
-	"chest": {
-		"type": "origins:and",
-		"conditions": [{
-			"type": "origins:armor_value",
-			"comparison": ">",
-			"compare_to": 6
+	"chest_armor_tooltip": {
+		"type": "apoli:tooltip",
+		"item_condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:armor_value",
+					"comparison": ">",
+					"compare_to": 6
+				},
+				{
+					"type": "origins:enchantment",
+					"enchantment": "medievalorigins:featherweight",
+					"comparison": "<",
+					"compare_to": 1
+				},
+				{
+					"type": "apoli:ingredient",
+					"ingredient": {
+						"tag": "c:chestplates"
+					}
+				}
+			]
 		},
+		"text": [
 			{
-				"type": "origins:enchantment",
-				"enchantment": "medievalorigins:featherweight",
-				"comparison": "!=",
-				"compare_to": 1
+				"translate": "medievalorigins.unwearable",
+				"color": "gray"
+			},
+			{
+				"text": " (",
+				"color": "gray"
+			},
+			{
+				"translate": "power.medievalorigins.arachnae/brittle.name",
+				"color": "red"
+			},
+			{
+				"text": ")",
+				"color": "gray"
 			}
 		]
 	},
-	"legs": {
-		"type": "origins:and",
-		"conditions": [{
-			"type": "origins:armor_value",
-			"comparison": ">",
-			"compare_to": 5
+	"legs_armor_tooltip": {
+		"type": "apoli:tooltip",
+		"item_condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:armor_value",
+					"comparison": ">",
+					"compare_to": 5
+				},
+				{
+					"type": "origins:enchantment",
+					"enchantment": "medievalorigins:featherweight",
+					"comparison": "<",
+					"compare_to": 1
+				},
+				{
+					"type": "apoli:ingredient",
+					"ingredient": {
+						"tag": "c:leggings"
+					}
+				}
+			]
 		},
+		"text": [
 			{
-				"type": "origins:enchantment",
-				"enchantment": "medievalorigins:featherweight",
-				"comparison": "!=",
-				"compare_to": 1
+				"translate": "medievalorigins.unwearable",
+				"color": "gray"
+			},
+			{
+				"text": " (",
+				"color": "gray"
+			},
+			{
+				"translate": "power.medievalorigins.arachnae/brittle.name",
+				"color": "red"
+			},
+			{
+				"text": ")",
+				"color": "gray"
 			}
 		]
 	},
-	"feet": {
-		"type": "origins:and",
-		"conditions": [{
-			"type": "origins:armor_value",
-			"comparison": ">",
-			"compare_to": 2
+	"armor_restrict": {
+		"type": "origins:restrict_armor",
+		"head": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:armor_value",
+					"comparison": ">",
+					"compare_to": 2
+				},
+				{
+					"type": "origins:enchantment",
+					"enchantment": "medievalorigins:featherweight",
+					"comparison": "<",
+					"compare_to": 1
+				}
+			]
 		},
-			{
-				"type": "origins:enchantment",
-				"enchantment": "medievalorigins:featherweight",
-				"comparison": "!=",
-				"compare_to": 1
-			}
-		]
+		"chest": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:armor_value",
+					"comparison": ">",
+					"compare_to": 6
+				},
+				{
+					"type": "origins:enchantment",
+					"enchantment": "medievalorigins:featherweight",
+					"comparison": "<",
+					"compare_to": 1
+				}
+			]
+		},
+		"legs": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:armor_value",
+					"comparison": ">",
+					"compare_to": 5
+				},
+				{
+					"type": "origins:enchantment",
+					"enchantment": "medievalorigins:featherweight",
+					"comparison": "<",
+					"compare_to": 1
+				}
+			]
+		},
+		"feet": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:armor_value",
+					"comparison": ">",
+					"compare_to": 2
+				},
+				{
+					"type": "origins:enchantment",
+					"enchantment": "medievalorigins:featherweight",
+					"comparison": "<",
+					"compare_to": 1
+				}
+			]
+		}
 	}
 }

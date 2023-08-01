@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+	  {"id":"#simplyswords:silver_gear","required": false},
+    {"id":"#c:silver_tools","required": false},
+    {"id":"bewitchment:athame","required": false},
+    {"id":"soulsweapons:silver_sword","required": false},
+	  {"id":"mcdw:sickle_last_laugh_silver","required": false}
+  ]
+}

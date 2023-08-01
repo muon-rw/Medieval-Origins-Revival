@@ -1,0 +1,80 @@
+{
+	"type": "origins:active_self",
+	"entity_action": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:execute_command",
+				"command": "playsound minecraft:entity.allay.death ambient @s ~ ~ ~ 2.5 0.4"
+			},
+			{
+				"type": "origins:area_of_effect",
+				"radius": 12,
+				"bientity_action": {
+					"type": "origins:target_action",
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:execute_command",
+								"command": "data modify entity @s NoAI set value 1"
+							},
+							{
+								"type": "origins:spawn_particles",
+								"particle": {
+									"type": "minecraft:poof",
+									"params": "0.922 0.314 0.314 2"
+								},
+								"count": 4,
+								"speed": 0.0,
+								"force": true,
+								"spread": {
+									"x": 1.0,
+									"y": 0.0,
+									"z": 1.0
+								}
+							},
+							{
+								"type": "origins:delay",
+								"ticks": 80,
+								"action": {
+									"type": "origins:execute_command",
+									"command": "data modify entity @s NoAI set value 0"
+								}
+							}
+						]
+					}
+				},
+				"bientity_condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:relative_rotation",
+							"actor_rotation": "head",
+							"target_rotation": "head",
+							"comparison": "<=",
+							"compare_to": 0
+						},
+						{
+							"type": "origins:can_see"
+						},
+						{
+							"type": "origins:target_condition",
+							"condition": {
+								"type": "origins:in_tag",
+								"tag": "medievalorigins:bosses"
+							},
+							"inverted": true
+						}
+					]
+				}
+			}
+		]
+	},
+	"cooldown": 100,
+	"hud_render": {
+		"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+		"bar_index": 19,
+		"should_render": true
+	}
+}

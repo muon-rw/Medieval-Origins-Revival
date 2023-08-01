@@ -1,0 +1,38 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "minecraft:item/amethyst_shard"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 351
+            },
+            "model": "medievalorigins:item/paladin"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 352
+            },
+            "model": "medievalorigins:item/gorgon"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 353
+            },
+            "model": "medievalorigins:item/incubus"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 354
+            },
+            "model": "medievalorigins:item/wood_elf"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 355
+            },
+            "model": "medievalorigins:item/ogre"
+        }
+    ]
+}
