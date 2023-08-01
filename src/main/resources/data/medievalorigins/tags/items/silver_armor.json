@@ -1,0 +1,13 @@
+{
+  "values": [
+    {"id":"minecraft:iron_helmet","required":false},
+    {"id":"minecraft:iron_leggings","required":false},
+    {"id":"minecraft:iron_chestplate","required":false},
+    {"id":"minecraft:iron_boots","required":false},
+	  {"id":"#c:silver_armor","required":false},
+    {"id":"mythicmetals:silver_helmet","required":false},
+    {"id":"mythicmetals:silver_chestplate","required":false},
+    {"id":"mythicmetals:silver_leggings","required":false},
+    {"id":"mythicmetals:silver_boots","required":false}
+  ]
+}

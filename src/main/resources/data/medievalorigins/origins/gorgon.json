@@ -1,13 +1,17 @@
 {
 	"powers": [
-                "medievalorigins:gorgon/serpentine_companions",
-                "medievalorigins:gorgon/stony_gaze",
-                "medievalorigins:gorgon/super_strength",
+                "medievalorigins:gorgon/petrifying_gaze",
+                "medievalorigins:gorgon/revenge",
                 "medievalorigins:gorgon/hydrophobe",
-                "medievalorigins:gorgon/petrification",
-                "medievalorigins:gorgon/silver_aversion"
+                "medievalorigins:gorgon/to_stone",
+                "medievalorigins:gorgon/silver_aversion",
+                "medievalorigins:gorgon/poison_blood",
+                "origins:thirst_resistance"
 	],
-	"icon": "minecraft:mossy_cobblestone",
+        "icon": {
+		"item": "minecraft:amethyst_shard",
+		"tag": "{CustomModelData:352}"
+	},
 	"impact": 3,
         "order": 1
 }

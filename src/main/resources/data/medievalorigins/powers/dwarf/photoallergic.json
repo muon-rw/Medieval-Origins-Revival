@@ -1,4 +1,5 @@
 {
+	"loading_priority": 1,
 	"type": "origins:burn",
 	"interval": 20,
 	"burn_duration": 6,
@@ -13,7 +14,7 @@
 				"item_condition": {
 					"type": "origins:ingredient",
 					"ingredient": {
-						"tag": "medievalorigins:helmets"
+						"tag": "c:helmets"
 					}
 				},
 				"inverted": true

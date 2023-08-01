@@ -1,0 +1,17 @@
+{
+	"powers": [
+                "medievalorigins:wood_elf/archer",
+		"medievalorigins:wood_elf/forest_vision",
+                "medievalorigins:wood_elf/eagle_eyed",
+                "medievalorigins:wood_elf/towering",
+                "medievalorigins:wood_elf/steward",
+                "medievalorigins:wood_elf/elegant",
+                "medievalorigins:wood_elf/graceful"
+	],
+        "icon": {
+		"item": "minecraft:amethyst_shard",
+		"tag": "{CustomModelData:354}"
+	},
+        "impact": 1,
+        "order": 1
+}

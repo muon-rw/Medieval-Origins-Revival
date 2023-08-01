@@ -1,27 +1,110 @@
 {
-	"type": "origins:restrict_armor",
-	"head": {
-		"type": "origins:ingredient",
-		"ingredient": {
-			"item": "minecraft:iron_helmet"
+	"type": "origins:multiple",
+	"armor_restrict": {
+		"type": "origins:restrict_armor",
+		"head": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"tag": "medievalorigins:silver_armor"
+			}
+		},
+		"chest": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"tag": "medievalorigins:silver_armor"
+			}
+		},
+		"legs": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"tag": "medievalorigins:silver_armor"
+			}
+		},
+		"feet": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"tag": "medievalorigins:silver_armor"
+			}
 		}
 	},
-	"chest": {
-		"type": "origins:ingredient",
-		"ingredient": {
-			"item": "minecraft:iron_chestplate"
+	"tool_weakness": {
+		"type": "origins:action_over_time",
+		"interval": 40,
+		"entity_action": {
+			"type": "origins:apply_effect",
+			"effect": {
+				"effect": "minecraft:wither",
+				"duration": 80,
+				"amplifier": 0
+			}
+		},
+		"falling_action": {
+			"type": "origins:clear_effect",
+			"effect": "minecraft:wither"
+		},
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:ingredient",
+				"ingredient": {
+					"tag": "medievalorigins:silver_tools"
+				}
+			}
 		}
 	},
-	"legs": {
-		"type": "origins:ingredient",
-		"ingredient": {
-			"item": "minecraft:iron_leggings"
-		}
+	"armor_tooltip": {
+		"type": "apoli:tooltip",
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"tag": "medievalorigins:silver_armor"
+			}
+		},
+		"text": [
+			{
+				"translate": "medievalorigins.unwearable",
+				"color": "gray"
+			},
+			{
+				"text": " (",
+				"color": "gray"
+			},
+			{
+				"translate": "power.medievalorigins.gorgon/silver_aversion.name",
+				"color": "red"
+			},
+			{
+				"text": ")",
+				"color": "gray"
+			}
+		]
 	},
-	"feet": {
-		"type": "origins:ingredient",
-		"ingredient": {
-			"item": "minecraft:iron_boots"
-		}
+	"weapon_tooltip": {
+		"type": "apoli:tooltip",
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"tag": "medievalorigins:silver_tools"
+			}
+		},
+		"text": [
+			{
+				"translate": "medievalorigins.self_wither",
+				"color": "gray"
+			},
+			{
+				"text": " (",
+				"color": "gray"
+			},
+			{
+				"translate": "power.medievalorigins.gorgon/silver_aversion.name",
+				"color": "red"
+			},
+			{
+				"text": ")",
+				"color": "gray"
+			}
+		]
 	}
 }

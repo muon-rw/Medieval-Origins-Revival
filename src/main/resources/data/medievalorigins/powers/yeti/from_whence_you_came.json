@@ -9,18 +9,17 @@
 		},
 		"condition": {
 			"type": "origins:or",
-			"conditions": [{
-					"type": "origins:biome",
-					"condition": {
-						"type": "origins:category",
-						"category": "taiga"
-					}
+			"conditions": [
+				{
+					"type": "origins:temperature",
+					"comparison": "<=",
+					"compare_to": 0.4
 				},
 				{
 					"type": "origins:biome",
 					"condition": {
-						"type": "origins:category",
-						"category": "icy"
+						"type": "origins:in_tag",
+						"tag": "medievalorigins:cold_biomes"
 					}
 				}
 			]
@@ -38,18 +37,20 @@
 		},
 		"condition": {
 			"type": "origins:or",
-			"conditions": [{
+			"conditions": [
+				{
 					"type": "origins:biome",
 					"condition": {
-						"type": "origins:category",
-						"category": "taiga"
+						"type": "origins:temperature",
+						"comparison": "<=",
+						"compare_to": 0.4
 					}
 				},
 				{
 					"type": "origins:biome",
 					"condition": {
-						"type": "origins:category",
-						"category": "icy"
+						"type": "origins:in_tag",
+						"tag": "medievalorigins:cold_biomes"
 					}
 				}
 			]

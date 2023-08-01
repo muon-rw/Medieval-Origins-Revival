@@ -1,16 +1,21 @@
 {
-	"powers": [
-                "medievalorigins:ogre/charge",
+        "powers": [
                 "medievalorigins:ogre/lead_belly",
-		"medievalorigins:ogre/stocky",
+                "medievalorigins:ogre/stocky",
                 "medievalorigins:ogre/gargantuan",
                 "medievalorigins:ogre/ravenous",
                 "medievalorigins:ogre/sluggish",
-                "medievalorigins:ogre/xxxl",
-                "medievalorigins:ogre/unweildy",
-                "medievalorigins:ogre/ogre_properties"  
-	],
-	"icon": "minecraft:wooden_axe",
-	"impact": 3,
+                "medievalorigins:ogre/unwieldy",
+                "medievalorigins:ogre/ogre_properties",
+                "medievalorigins:ogre/ravager",
+                "medievalorigins:ogre/bloodlust",
+                "medievalorigins:ogre/bloodlust_camera",
+                "medievalorigins:ogre/orcish_pride"
+        ],
+        "icon": {
+                "item": "minecraft:amethyst_shard",
+                "tag": "{CustomModelData:355}"
+        },
+        "impact": 3,
         "order": 1
 }

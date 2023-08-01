@@ -1,8 +1,6 @@
-scale set pehkui:base 0.5
-scale set pehkui:motion 2.1
-scale set pehkui:reach 1.8
-scale set pehkui:mining_speed 1.25
-scale persist set pehkui:base true @s
-scale persist set pehkui:motion true @s
-scale persist set pehkui:reach true @s
+scale set pehkui:width 0.85
+scale set pehkui:height 0.75
+scale set pehkui:mining_speed 2.0
+scale persist set pehkui:width true @s
+scale persist set pehkui:height true @s
 scale persist set pehkui:mining_speed true @s

@@ -1,6 +1,6 @@
 {
 	"type": "origins:multiple",
-	"hidden": "true",
+	"hidden": true,
 	"break_speed": {
 		"type": "origins:modify_break_speed",
 		"modifier": {

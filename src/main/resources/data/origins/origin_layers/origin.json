@@ -3,13 +3,13 @@
   "origins": [
      "medievalorigins:arachnae",
      "medievalorigins:banshee",
-     "medievalorigins:daemon",
+     "medievalorigins:incubus",
      "medievalorigins:dwarf",
-     "medievalorigins:elf",
+     "medievalorigins:wood_elf",
      "medievalorigins:fae",
      "medievalorigins:goblin",
      "medievalorigins:gorgon",
-     "medievalorigins:knight",
+     "medievalorigins:moon_elf",
      "medievalorigins:necromancer",
      "medievalorigins:ogre",
      "medievalorigins:paladin",
@@ -17,7 +17,6 @@
      "medievalorigins:plague_victim",
      "medievalorigins:siren",
      "medievalorigins:troll",
-     "medievalorigins:werewolf",
      "medievalorigins:yeti"
   ]
 }

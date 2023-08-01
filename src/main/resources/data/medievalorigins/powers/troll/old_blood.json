@@ -3,9 +3,9 @@
 	"condition": {
 		"type": "origins:biome",
 		"condition": {
-			"type": "origins:category",
-			"category": "medievalorigins:troll_mountain"
-		},
-		"inverted": true
+			"type": "origins:in_tag",
+			"tag": "medievalorigins:troll_mountain",
+			"inverted": true
+		}
 	}
 }

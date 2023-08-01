@@ -1,0 +1,21 @@
+{
+	"powers": [
+                "medievalorigins:incubus/demon_fire",
+		"medievalorigins:incubus/hellborne",
+                "medievalorigins:incubus/carnivore",
+                "medievalorigins:incubus/unholy_deal",
+                "medievalorigins:incubus/hydrophobe",
+                "medievalorigins:incubus/impure",
+                "medievalorigins:incubus/dimension_strength",
+                "medievalorigins:incubus/lava_mobile",
+                "medievalorigins:incubus/red",
+                "origins:heat_resistance",
+                "origins:nether_spawn"
+	],
+        "icon": {
+		"item": "minecraft:amethyst_shard",
+		"tag": "{CustomModelData:353}"
+	},
+	"impact": 2,
+        "order": 1
+}

@@ -1,11 +1,93 @@
 {
 	"type": "origins:multiple",
-	"golden_tool_boost": {
-		"type": "origins:modify_damage_dealt",
-		"modifier": {
-			"operation": "addition",
-			"value": 2.5
+	"golden_weapon_boosts": {
+		"type": "origins:conditioned_attribute",
+		"modifiers": [
+			{
+				"attribute": "minecraft:generic.attack_damage",
+				"operation": "multiply_base",
+				"value": 0.5
+			},
+			{
+				"attribute": "additionalentityattributes:bonus_loot_count_rolls",
+				"operation": "addition",
+				"value": 3.0
+			},
+			{
+				"attribute": "additionalentityattributes:bonus_rare_loot_rolls",
+				"operation": "addition",
+				"value": 3.0
+			}
+		],
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:ingredient",
+				"ingredient": {
+					"tag": "medievalorigins:golden_weapons"
+				}
+			}
+		}
+	},
+	"golden_tool_boosts": {
+		"type": "origins:conditioned_attribute",
+		"modifiers": [
+			{
+				"attribute": "reach-entity-attributes:reach",
+				"operation": "addition",
+				"value": 1.0
+			},
+			{
+				"attribute": "playerex:breaking_speed",
+				"operation": "addition",
+				"value": 1.0
+			},
+			{
+				"attribute": "additionalentityattributes:dig_speed",
+				"operation": "addition",
+				"value": 1.0
+			}
+		],
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:and",
+				"conditions": [
+					{
+						"type": "apoli:ingredient",
+						"ingredient": {
+							"tag": "medievalorigins:golden_tools"
+						}
+					},
+					{
+						"type": "apoli:ingredient",
+						"ingredient": {
+							"tag": "medievalorigins:golden_weapons"
+						},
+						"inverted": true
+					}
+				]
+			}
+		}
+	},
+	"golden_tool_harvest_boosts": {
+		"type": "origins:modify_harvest",
+		"block_condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:in_tag",
+					"tag": "minecraft:needs_iron_tool"
+				},
+				{
+					"type": "origins:in_tag",
+					"tag": "minecraft:needs_stone_tool"
+				}
+			]
 		},
+		"allow": true,
 		"condition": {
 			"type": "origins:equipped_item",
 			"equipment_slot": "mainhand",
@@ -19,74 +101,215 @@
 	},
 	"golden_helmet_boost": {
 		"type": "origins:conditioned_attribute",
-		"modifier": {
-			"attribute": "minecraft:generic.armor",
-			"operation": "addition",
-			"value": 1
-		},
+		"modifiers": [
+			{
+				"attribute": "minecraft:generic.armor",
+				"operation": "multiply_base",
+				"value": 0.15
+			},
+			{
+				"attribute": "minecraft:generic.max_health",
+				"operation": "addition",
+				"value": 1
+			}
+		],
 		"condition": {
 			"type": "origins:equipped_item",
 			"equipment_slot": "head",
 			"item_condition": {
 				"type": "origins:ingredient",
 				"ingredient": {
-					"tag": "medievalorigins:golden_armour"
+					"tag": "medievalorigins:golden_armor"
 				}
 			}
 		}
 	},
 	"golden_chestplate_boost": {
 		"type": "origins:conditioned_attribute",
-		"modifier": {
-			"attribute": "minecraft:generic.armor",
-			"operation": "addition",
-			"value": 2
-		},
+		"modifiers": [
+			{
+				"attribute": "minecraft:generic.armor",
+				"operation": "multiply_base",
+				"value": 0.15
+			},
+			{
+				"attribute": "minecraft:generic.max_health",
+				"operation": "addition",
+				"value": 1
+			}
+		],
 		"condition": {
 			"type": "origins:equipped_item",
 			"equipment_slot": "chest",
 			"item_condition": {
 				"type": "origins:ingredient",
 				"ingredient": {
-					"tag": "medievalorigins:golden_armour"
+					"tag": "medievalorigins:golden_armor"
 				}
 			}
 		}
 	},
 	"golden_leggings_boost": {
 		"type": "origins:conditioned_attribute",
-		"modifier": {
-			"attribute": "minecraft:generic.armor",
-			"operation": "addition",
-			"value": 2
-		},
+		"modifiers": [
+			{
+				"attribute": "minecraft:generic.armor",
+				"operation": "multiply_base",
+				"value": 0.15
+			},
+			{
+				"attribute": "minecraft:generic.max_health",
+				"operation": "addition",
+				"value": 1
+			}
+		],
 		"condition": {
 			"type": "origins:equipped_item",
 			"equipment_slot": "legs",
 			"item_condition": {
 				"type": "origins:ingredient",
 				"ingredient": {
-					"tag": "medievalorigins:golden_armour"
+					"tag": "medievalorigins:golden_armor"
 				}
 			}
 		}
 	},
 	"golden_boots_boost": {
 		"type": "origins:conditioned_attribute",
-		"modifier": {
-			"attribute": "minecraft:generic.armor",
-			"operation": "addition",
-			"value": 1
-		},
+		"modifiers": [
+			{
+				"attribute": "minecraft:generic.armor",
+				"operation": "multiply_base",
+				"value": 0.15
+			},
+			{
+				"attribute": "minecraft:generic.max_health",
+				"operation": "addition",
+				"value": 1
+			}
+		],
 		"condition": {
 			"type": "origins:equipped_item",
 			"equipment_slot": "feet",
 			"item_condition": {
 				"type": "origins:ingredient",
 				"ingredient": {
-					"tag": "medievalorigins:golden_armour"
+					"tag": "medievalorigins:golden_armor"
 				}
 			}
 		}
+	},
+	"armor_tooltip": {
+		"type": "apoli:tooltip",
+		"item_condition": {
+			"type": "apoli:ingredient",
+			"ingredient": {
+				"tag": "medievalorigins:golden_armor"
+			}
+		},
+		"text": [
+			{
+				"translate": "power.medievalorigins.goblin/greedy.name",
+				"color": "gold"
+			},
+			{
+				"text": " Bonus:",
+				"color": "gold"
+			},
+			{
+				"text": "\n+15% ",
+				"color": "yellow"
+			},
+			{
+				"translate": "attribute.name.generic.armor",
+				"color": "yellow"
+			},
+			{
+				"text": "\n+1 ",
+				"color": "yellow"
+			},
+			{
+				"translate": "attribute.name.generic.max_health",
+				"color": "yellow"
+			}
+		]
+	},
+	"weapon_tooltip": {
+		"type": "apoli:tooltip",
+		"item_condition": {
+			"type": "apoli:ingredient",
+			"ingredient": {
+				"tag": "medievalorigins:golden_weapons"
+			}
+		},
+		"text": [
+			{
+				"translate": "power.medievalorigins.goblin/greedy.name",
+				"color": "gold"
+			},
+			{
+				"text": " Bonus:",
+				"color": "gold"
+			},
+			{
+				"text": "\n+50% ",
+				"color": "yellow"
+			},
+			{
+				"translate": "attribute.name.generic.attack_damage",
+				"color": "yellow"
+			},
+			{
+				"text": "\n",
+				"color": "yellow"
+			},
+			{
+				"translate": "medievalorigins.looting_bonus",
+				"color": "yellow"
+			}
+		]
+	},
+	"tools_tooltip": {
+		"type": "apoli:tooltip",
+		"item_condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "apoli:ingredient",
+					"ingredient": {
+						"tag": "medievalorigins:golden_tools"
+					}
+				},
+				{
+					"type": "apoli:ingredient",
+					"ingredient": {
+						"tag": "medievalorigins:golden_weapons"
+					},
+					"inverted": true
+				}
+			]
+		},
+		"text": [
+			{
+				"translate": "power.medievalorigins.goblin/greedy.name",
+				"color": "gold"
+			},
+			{
+				"text": " Bonus:",
+				"color": "gold"
+			},
+			{
+				"text": "\n+1 ",
+				"color": "yellow"
+			},
+			{
+				"translate": "attribute.name.generic.reach-entity-attributes.reach",
+				"color": "yellow"
+			},
+			{
+				"text": "\nIron Mining Level",
+				"color": "yellow"
+			}
+		]
 	}
 }

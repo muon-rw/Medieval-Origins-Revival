@@ -19,7 +19,7 @@
 			"continuous": false
 		},
 		"hud_render": {
-			"should_render": "true"
+			"should_render": true
 		}
 	},
 	"regen_drain": {
@@ -35,7 +35,7 @@
 			"continuous": false
 		},
 		"hud_render": {
-			"should_render": "false"
+			"should_render": false
 		}
 	}
 }
