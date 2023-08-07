@@ -6,6 +6,7 @@
         "ticks": 20,
         "action": {
             "type": "origins:replace_inventory",
+            "inventory_type": "inventory",
             "slot": "armor.head",
             "stack": {
                 "item": "minecraft:golden_helmet",

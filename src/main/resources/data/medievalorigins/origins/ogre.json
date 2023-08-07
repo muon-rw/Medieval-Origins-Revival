@@ -1,4 +1,5 @@
 {
+        "loading_priority": 2,
         "powers": [
                 "medievalorigins:ogre/lead_belly",
                 "medievalorigins:ogre/stocky",
@@ -13,7 +14,7 @@
                 "medievalorigins:ogre/orcish_pride"
         ],
         "icon": {
-                "item": "minecraft:amethyst_shard",
+                "item": "minecraft:ink_sac",
                 "tag": "{CustomModelData:355}"
         },
         "impact": 3,

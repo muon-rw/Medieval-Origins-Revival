@@ -9,7 +9,7 @@
                 "medievalorigins:wood_elf/graceful"
 	],
         "icon": {
-		"item": "minecraft:amethyst_shard",
+		"item": "minecraft:ink_sac",
 		"tag": "{CustomModelData:354}"
 	},
         "impact": 1,

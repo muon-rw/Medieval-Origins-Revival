@@ -27,5 +27,10 @@
 	},
 	"hud_render": {
 		"should_render": true
+	},
+	"condition": {
+	"type": "origins:health",
+	"comparison": ">",
+	"compare_to": 12
 	}
 }

@@ -13,7 +13,7 @@
                 "origins:nether_spawn"
 	],
         "icon": {
-		"item": "minecraft:amethyst_shard",
+		"item": "minecraft:ink_sac",
 		"tag": "{CustomModelData:353}"
 	},
 	"impact": 2,

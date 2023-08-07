@@ -11,17 +11,47 @@
 			{
 				"attribute": "additionalentityattributes:bonus_loot_count_rolls",
 				"operation": "addition",
-				"value": 3.0
+				"value": 1.0
 			},
 			{
 				"attribute": "additionalentityattributes:bonus_rare_loot_rolls",
 				"operation": "addition",
-				"value": 3.0
+				"value": 1.0
 			}
 		],
 		"condition": {
 			"type": "origins:equipped_item",
 			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:ingredient",
+				"ingredient": {
+					"tag": "medievalorigins:golden_weapons"
+				}
+			}
+		}
+	},
+	"golden_weapon_boosts_offhand": {
+		"type": "origins:conditioned_attribute",
+		"modifiers": [
+			{
+				"attribute": "minecraft:generic.attack_damage",
+				"operation": "multiply_base",
+				"value": 0.5
+			},
+			{
+				"attribute": "additionalentityattributes:bonus_loot_count_rolls",
+				"operation": "addition",
+				"value": 1.0
+			},
+			{
+				"attribute": "additionalentityattributes:bonus_rare_loot_rolls",
+				"operation": "addition",
+				"value": 1.0
+			}
+		],
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "offhand",
 			"item_condition": {
 				"type": "origins:ingredient",
 				"ingredient": {

@@ -9,8 +9,8 @@
 			},
 			{
 				"attribute": "minecraft:generic.max_health",
-				"operation": "multiply_total",
-				"value": -0.5
+				"operation": "ADDITION",
+				"value": -10.0
 			}
 		]
 	},
