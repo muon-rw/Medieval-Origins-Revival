@@ -34,7 +34,7 @@
             },
             {
                 "type": "origins:execute_command",
-                "command": "playsound minecraft:entity.ravager.death ambient @s ~ ~ ~ 1 0.5"
+                "command": "playsound minecraft:entity.ravager.death ambient @a ~ ~ ~ 1 0.5"
             }
         ]
     },

@@ -7,17 +7,13 @@
          "actions": [
             {
                "type": "origins:execute_command",
-               "command": "particle minecraft:end_rod ~ ~1.5 ~ .4 .4 .4 0 15 normal"
-            },
-            {
-               "type": "origins:play_sound",
-               "sound": "minecraft:entity.enderman.teleport"
+               "command": "function medievalorigins:mdvlorigins/moon_elf_dodge"
             }
          ]
       },
       "modifier": {
-         "operation": "multiply_total",
-         "value": -1
+         "operation": "multiply_total_multiplicative",
+         "value": -2.0
       },
       "condition": {
          "type": "origins:predicate",

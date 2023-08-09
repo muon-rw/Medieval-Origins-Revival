@@ -40,7 +40,7 @@
 					"type": "origins:execute_command",
 					"command": "particle minecraft:smoke ~ ~ ~"
 				},
-				"weight": 4
+				"weight": 2
 			}
 		]
 	},

@@ -7,9 +7,9 @@
 					"type": "origins:apply_effect",
 					"effect": {
 						"effect": "minecraft:wither",
-						"is_ambient": "true",
-						"show_particles": "false",
-						"show_icon": "false",
+						"is_ambient": true,
+						"show_particles": false,
+						"show_icon": false,
 						"amplifier": 2,
 						"duration": 150
 					}
@@ -27,6 +27,6 @@
 	},
 	"cooldown": 0,
 	"hud_render": {
-		"should_render": "false"
+		"should_render": false
 	}
 }

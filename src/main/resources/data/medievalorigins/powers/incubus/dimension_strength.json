@@ -24,8 +24,8 @@
 		"type": "origins:conditioned_attribute",
 		"modifier": {
 			"attribute": "minecraft:generic.max_health",
-			"operation": "multiply_total",
-			"value": 0.25
+			"operation": "addition",
+			"value": 6
 		},
 		"tick_rate": 20,
 		"condition": {
@@ -46,8 +46,8 @@
 		"type": "origins:conditioned_attribute",
 		"modifier": {
 			"attribute": "minecraft:generic.max_health",
-			"operation": "multiply_total",
-			"value": -0.25
+			"operation": "addition",
+			"value": -6
 		},
 		"tick_rate": 20,
 		"condition": {

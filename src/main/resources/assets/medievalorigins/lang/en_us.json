@@ -84,7 +84,7 @@
   "power.medievalorigins.banshee/iron_aversion.description": "Iron is lethal to banshees. They cannot bear to wear it.",
 
   "power.medievalorigins.banshee/sonic_shriek.name": "Sonic Shriek",
-  "power.medievalorigins.banshee/sonic_shriek.description": "Banshees are renowned for their supersonic cries, which can cause blood vessels to burst. Press G and for a short period you will find yourself dealing far more damage.",
+  "power.medievalorigins.banshee/sonic_shriek.description": "Banshees can unleash a terrifying focused screech at one target, dealing magic damage and nauseating them.",
 
   "power.medievalorigins.incubus/carnivore.name": "Carnivore",
   "power.medievalorigins.incubus/carnivore.description": "An incubus' bloodlust is insatiable. If it isn't the flesh of an animal, its worthless.",
@@ -93,7 +93,7 @@
   "power.medievalorigins.incubus/demon_fire.description": "Imbued with the devil's power, the incubus can release a burst of hell's energy on command. Triggered with secondary power key.",
 
   "power.medievalorigins.incubus/hellborne.name": "Hellborne",
-  "power.medievalorigins.incubus/hellborne.description": "Having spent eternities in the depths of hell, fire feels like home - it deals no damage to Incubi.",
+  "power.medievalorigins.incubus/hellborne.description": "Having spent eternities in the depths of hell, fire feels like home - it deals no damage to Incubi and satiates them.",
 
   "power.medievalorigins.incubus/hydrophobe.name": "Hydrophobe",
   "power.medievalorigins.incubus/hydrophobe.description": "Water scalds Incubi, damaging them on contact.",
@@ -131,11 +131,14 @@
   "power.medievalorigins.dwarf/potent_brew.name": "Potent Brew",
   "power.medievalorigins.dwarf/potent_brew.description": "Dwarves are notorious for their powerful drinks which would knock out someone twice their size. Activate to take a swig and fully restore health.",
 
-  "power.medievalorigins.wood_elf/archer.name": "Archer",
-  "power.medievalorigins.wood_elf/archer.description": "Elves are expert marksmen. They deal significantly more damage using a bow than other creatures.",
+  "power.medievalorigins.wood_elf/archer.name": "Natural Archer",
+  "power.medievalorigins.wood_elf/archer.description": "Wood Elves spend their whole lives training with bows - they start with one, and their arrows are more deadly.",
+
+  "power.medievalorigins.wood_elf/empowered_shot.name": "Focus",
+  "power.medievalorigins.wood_elf/empowered_shot.description": "After charging for a few seconds, release an arrow at tremendous velocity, dealing significantly more damage while flying further and more true.",
 
   "power.medievalorigins.wood_elf/forest_vision.name": "Forest Vision",
-  "power.medievalorigins.wood_elf/forest_vision.description": "After centuries in the forest, Wood Elven eyes are well adapted to be among trees and they can see clearly in them even at night.",
+  "power.medievalorigins.wood_elf/forest_vision.description": "After centuries in the grove, Wood Elven eyes are well adapted to be among trees; while in forests, they can see clearly even at night.",
 
   "power.medievalorigins.wood_elf/eagle_eyed.name": "Eagle Eyed",
   "power.medievalorigins.wood_elf/eagle_eyed.description": "Wood Elves' enhanced perception allows them to keep track of an enemy for a while after hitting them, even when they aren't in view.",
@@ -204,7 +207,7 @@
   "power.medievalorigins.gorgon/revenge.description": "Centuries of being cursed then blamed for their misfortune has left Gorgon's bitter. They deal massively increased damage at low health.",
 
   "power.medievalorigins.moon_elf/crazed.name": "Foreign World",
-  "power.medievalorigins.moon_elf/crazed.description": "Try as they might, Moon Elves can not sleep.",
+  "power.medievalorigins.moon_elf/crazed.description": "Try as they might, Moon Elves can not sleep in the overworld.",
 
   "power.medievalorigins.moon_elf/stealth.name": "To the Shadows",
   "power.medievalorigins.moon_elf/stealth.description": "In the dark, Moon Elves can turn invisible by sneaking, and move a short distance while stealthed. When attacking from stealth, their first attack deals bonus damage and ends the invisibility.",
@@ -335,6 +338,9 @@
   "power.medievalorigins.siren/siren_song.name": "Siren Song",
   "power.medievalorigins.siren/siren_song.description": "Sirens are known for their alluring calls. Press the primary active key to make all mobs around you neutral until hit. Does not work on bosses or players.",
 
+  "power.medievalorigins.siren/seduce.name": "Captivate",
+  "power.medievalorigins.siren/seduce.description": "A siren can overwhelm villagers with their beauty, convincing them to give more favorable trades. To perform, look at a villager and press the secondary active key.",
+  
   "power.medievalorigins.siren/water_vision.name": "Water Vision",
   "power.medievalorigins.siren/water_vision.description": "Sirens have superior underwater vision than other creatures.",
 

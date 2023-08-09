@@ -44,6 +44,49 @@
 			}
 		}
 	},
+	"weapon_boost_offhand": {
+		"type": "origins:conditioned_attribute",
+		"tick_rate": 20,
+		"modifiers": [
+			{
+				"attribute": "minecraft:generic.attack_damage",
+				"operation": "multiply_total",
+				"value": 0.1
+			}
+		],
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "offhand",
+			"item_condition": {
+				"type": "origins:and",
+				"conditions": [
+					{
+						"type": "apoli:ingredient",
+						"ingredient": {
+							"tag": "medievalorigins:mythril_gear"
+						}
+					},
+					{
+						"type": "origins:or",
+						"conditions": [
+							{
+								"type": "apoli:ingredient",
+								"ingredient": {
+									"tag": "c:swords"
+								}
+							},
+							{
+								"type": "apoli:ingredient",
+								"ingredient": {
+									"tag": "c:axes"
+								}
+							}
+						]
+					}
+				]
+			}
+		}
+	},
 	"tool_boost": {
 		"type": "origins:conditioned_attribute",
 		"tick_rate": 20,

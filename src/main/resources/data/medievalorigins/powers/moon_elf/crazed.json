@@ -1,5 +1,9 @@
 {
 	"type": "origins:prevent_sleep",
 	"message": "medievalorigins.moon_elf_no_sleep",
-	"set_spawn_point": true
+	"set_spawn_point": true,
+	"condition": {
+		"type": "origins:dimension",
+		"dimension": "minecraft:overworld"
+	}
 }

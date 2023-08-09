@@ -4,7 +4,7 @@
 		"type": "origins:execute_command",
 		"command": "function medievalorigins:mdvlorigins/hellraiser"
 	},
-	"cooldown": 5400,
+	"cooldown": 3600,
 	"hud_render": {
 		"should_render": true
 	},

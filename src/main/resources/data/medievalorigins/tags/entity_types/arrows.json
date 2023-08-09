@@ -1,0 +1,15 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:arrow",
+        "minecraft:spectral_arrow",
+        {"id":"mythicmetals:star_platinum_arrow","required": false},
+        {"id":"mythicmetals:runite_arrow","required": false},
+        {"id":"twilightforest:seeker_arrow","required": false},
+        {"id":"adventurez:ivory_arrow","required": false},
+        {"id":"bewitchment:silver_arrow","required": false},
+        {"id":"supplementaries:rope_arrow","required": false},
+        {"id":"zenith:obsidian_arrow","required": false}
+    ]
+  }
+  

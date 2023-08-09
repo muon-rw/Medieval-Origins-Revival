@@ -6,9 +6,9 @@
 			"type": "origins:apply_effect",
 			"effect": {
 				"effect": "minecraft:resistance",
-				"is_ambient": "true",
-				"show_particles": "false",
-				"show_icon": "false",
+				"is_ambient": true,
+				"show_particles": false,
+				"show_icon": false,
 				"amplifier": 10,
 				"duration": 200
 			}
@@ -16,10 +16,10 @@
 		"cooldown": 3600,
 		"key": {
 			"key": "key.origins.secondary_active",
-			"continuous": "false"
+			"continuous": false
 		},
 		"hud_render": {
-			"should_render": "true"
+			"should_render": true
 		}
 	},
 	"ghostly": {

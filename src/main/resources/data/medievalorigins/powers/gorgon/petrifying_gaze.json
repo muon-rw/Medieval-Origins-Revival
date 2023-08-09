@@ -5,7 +5,15 @@
 		"actions": [
 			{
 				"type": "origins:execute_command",
-				"command": "playsound minecraft:entity.allay.death ambient @s ~ ~ ~ 2.5 0.4"
+				"command": "playsound minecraft:entity.allay.death ambient @a ~ ~ ~ 0.3 0.5"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "playsound minecraft:entity.ghast.death ambient @a ~ ~ ~ 0.55 0.8"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "playsound minecraft:entity.witch.death ambient @a ~ ~ ~ 0.55 0.5"
 			},
 			{
 				"type": "origins:area_of_effect",
@@ -71,7 +79,7 @@
 			}
 		]
 	},
-	"cooldown": 100,
+	"cooldown": 200,
 	"hud_render": {
 		"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
 		"bar_index": 19,

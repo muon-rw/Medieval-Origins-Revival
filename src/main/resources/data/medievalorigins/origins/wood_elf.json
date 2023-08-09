@@ -6,7 +6,9 @@
                 "medievalorigins:wood_elf/towering",
                 "medievalorigins:wood_elf/steward",
                 "medievalorigins:wood_elf/elegant",
-                "medievalorigins:wood_elf/graceful"
+                "medievalorigins:wood_elf/graceful",
+                "medievalorigins:wood_elf/empowered_shot",
+                "medievalorigins:wood_elf/gear_spawn"
 	],
         "icon": {
 		"item": "minecraft:ink_sac",
