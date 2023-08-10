@@ -30,5 +30,12 @@
 		"hud_render": {
 			"should_render": false
 		}
+	},
+	"clear_levitation": {
+		"type": "origins:action_on_callback",
+		"entity_action_lost": {
+			"type": "origins:execute_command",
+			"command": "function medievalorigins:mdvlorigins/fae_levitate_clear"
+		}
 	}
 }

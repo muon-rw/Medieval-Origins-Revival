@@ -23,6 +23,7 @@
 		{"id":"bosses_of_mass_destruction:obsidilith","required":false},
 		{"id":"bosses_of_mass_destruction:void_blossom","required":false},
 		{"id":"bosses_of_mass_destruction:lich","required":false},
+		{"id":"whisperwoods:hirschgeist","required":false},
 		{"id":"adventurez:stone_golem","required":false},
 		{"id":"adventurez:the_eye","required":false},
 		{"id":"adventurez:tiny_eye","required":false},

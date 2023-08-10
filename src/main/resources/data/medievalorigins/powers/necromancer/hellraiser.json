@@ -4,9 +4,11 @@
 		"type": "origins:execute_command",
 		"command": "function medievalorigins:mdvlorigins/hellraiser"
 	},
-	"cooldown": 3600,
+	"cooldown": 3000,
 	"hud_render": {
-		"should_render": true
+		"should_render": true,
+		"sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+		"bar_index": 5
 	},
 	"key": {
 		"key": "key.origins.primary_active",

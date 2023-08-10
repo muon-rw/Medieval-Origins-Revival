@@ -7,6 +7,8 @@
 	},
 	"key": {
 		"key": "key.origins.secondary_active",
-		"continuous": false
+		"continuous": false,
+		"sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+		"bar_index": 7
 	}
 }

@@ -1,23 +1,30 @@
 {
-	"type": "origins:multiple",
-	"allure": {
-		"type": "origins:action_over_time",
-		"entity_action": {
-			"type": "origins:execute_command",
-			"command": "function medievalorigins:mdvlorigins/allure"
-		},
-		"interval": 100
+	"type": "origins:action_on_callback",
+	"entity_action_chosen": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:execute_command",
+				"command": "scale set pehkui:visibility 64 @s"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "scale persist set pehkui:visibility true @s"
+			}
+		]
 	},
-	"allure_callback": {
-		"type": "origins:action_on_callback",
-		"entity_action_chosen": {
-			"type": "origins:execute_command",
-			"command": "function medievalorigins:mdvlorigins/allure_callon"
-		},
-		"entity_action_lost": {
-			"type": "origins:execute_command",
-			"command": "function medievalorigins:mdvlorigins/allure_callback"
-		},
-		"execute_chosen_when_orb": true
-	}
+	"entity_action_lost": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:execute_command",
+				"command": "scale reset pehkui:visibility  @s"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "scale persist reset pehkui:visibility @s"
+			}
+		]
+	},
+	"execute_chosen_when_orb": true
 }

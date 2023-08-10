@@ -5,15 +5,15 @@
 		"actions": [
 			{
 				"type": "origins:execute_command",
-				"command": "playsound minecraft:entity.allay.death ambient @a ~ ~ ~ 0.3 0.5"
+				"command": "playsound minecraft:entity.allay.death player @a ~ ~ ~ 0.6 0.5"
 			},
 			{
 				"type": "origins:execute_command",
-				"command": "playsound minecraft:entity.ghast.death ambient @a ~ ~ ~ 0.55 0.8"
+				"command": "playsound minecraft:entity.ghast.death player @a ~ ~ ~ 0.7 0.8"
 			},
 			{
 				"type": "origins:execute_command",
-				"command": "playsound minecraft:entity.witch.death ambient @a ~ ~ ~ 0.55 0.5"
+				"command": "playsound minecraft:entity.witch.death player @a ~ ~ ~ 0.7 0.5"
 			},
 			{
 				"type": "origins:area_of_effect",

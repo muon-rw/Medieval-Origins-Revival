@@ -161,11 +161,11 @@
   "power.medievalorigins.fae/diminutive.name": "Diminutive",
   "power.medievalorigins.fae/diminutive.description": "It is rare for a fae to break 5 feet in height. They are small creatures, even smaller than the weaselly goblins.",
 
-  "power.medievalorigins.fae/iron_aversion.name": "Iron Aversion",
+  "power.medievalorigins.fae/iron_aversion.name": "Iron Shackles",
   "power.medievalorigins.fae/iron_aversion.description": "Iron inhibits fae powers. It is unbearable for them to wear it.",
 
   "power.medievalorigins.fae/levitation.name": "Levitation",
-  "power.medievalorigins.fae/levitation.description": "Faes are known for their ability to levitate. Press G and you will begin to hover.",
+  "power.medievalorigins.fae/levitation.description": "Faes are light magical creatures who can float effortlessly on the air. Press the primary active key to hover upward.",
 
   "power.medievalorigins.fae/magic_resistance.name": "Magic Resistance",
   "power.medievalorigins.fae/magic_resistance.description": "As magical creatures themselves, faes take less magic damage compared to other creatures.",
@@ -247,6 +247,9 @@
 
   "power.medievalorigins.necromancer/resilient.name": "Resilient",
   "power.medievalorigins.necromancer/resilient.description": "Learning about death goes a long way towards avoiding it. Necromancers have increased health.",
+
+  "power.medievalorigins.necromancer/siphon.name": "Siphon",
+  "power.medievalorigins.necromancer/siphon.description": "Extract some of your own soul to funnel power into your minions. All nearby tamed creatures gain strength and resistance, but at a cost...",
 
   "power.medievalorigins.necromancer/unguarded.name": "Unguarded",
   "power.medievalorigins.necromancer/unguarded.description": "Enveloping oneself in the arcane leaves you open to attack in the physical realm. Most mobs deal more damage to necromancers.",
@@ -339,7 +342,7 @@
   "power.medievalorigins.siren/siren_song.description": "Sirens are known for their alluring calls. Press the primary active key to make all mobs around you neutral until hit. Does not work on bosses or players.",
 
   "power.medievalorigins.siren/seduce.name": "Captivate",
-  "power.medievalorigins.siren/seduce.description": "A siren can overwhelm villagers with their beauty, convincing them to give more favorable trades. To perform, look at a villager and press the secondary active key.",
+  "power.medievalorigins.siren/seduce.description": "A siren can overwhelm with their beauty, convincing villagers to give more favorable trades. To perform, look at a villager and press the secondary active key.",
   
   "power.medievalorigins.siren/water_vision.name": "Water Vision",
   "power.medievalorigins.siren/water_vision.description": "Sirens have superior underwater vision than other creatures.",
@@ -375,7 +378,7 @@
   "power.medievalorigins.yeti/flammable.description": "Yetis are susceptible to fire damage due to their wintry nature.",
 
   "power.medievalorigins.yeti/frigid_pulse.name": "Frigid Pulse",
-  "power.medievalorigins.yeti/frigid_pulse.description": "A powerful magic runs through the veins of a yeti, allowing them to entomb a group of foes in ice on command.",
+  "power.medievalorigins.yeti/frigid_pulse.description": "A powerful magic runs through the veins of a yeti, allowing them to entomb a group of foes in ice on command. Does not work in the nether or on bosses.",
 
   "power.medievalorigins.yeti/from_whence_you_came.name": "From Whence you Came",
   "power.medievalorigins.yeti/from_whence_you_came.description": "Thriving best in the lands from which they originate, yetis move faster and are carried on the snow to negate fall damage in icy biomes.",

@@ -1,14 +1,7 @@
 {
 	"replace": false,
 	"values": [
-		"minecraft:ender_dragon",
-                "minecraft:blaze",
-                "minecraft:hoglin",
-                "minecraft:zoglin",
-                "minecraft:strider",
-                "minecraft:magma_cube",
-                "minecraft:piglin",
-                "minecraft:piglin_brute",
-		"minecraft:wither"
+                {"id": "#medievalorigins:bosses","required":false},
+                "minecraft:blaze"
 	]
 }

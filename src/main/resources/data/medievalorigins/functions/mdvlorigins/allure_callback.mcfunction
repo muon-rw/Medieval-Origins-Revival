@@ -1,2 +1,0 @@
-execute as @e[type=!minecraft:player,type=!#medievalorigins:bosses,type=!minecraft:zombie] run attribute @s minecraft:generic.follow_range base set 32.0
-execute as @e[type=minecraft:zombie] run attribute @s minecraft:generic.follow_range base set 80.0
