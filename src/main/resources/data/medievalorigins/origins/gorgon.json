@@ -6,7 +6,7 @@
                 "medievalorigins:gorgon/to_stone",
                 "medievalorigins:gorgon/silver_aversion",
                 "medievalorigins:gorgon/poison_blood",
-                "origins:thirst_resistance"
+                "origins_env_deh:thirst_resistance"
 	],
         "icon": {
 		"item": "minecraft:ink_sac",

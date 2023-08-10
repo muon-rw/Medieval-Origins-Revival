@@ -7,8 +7,8 @@
                 "medievalorigins:siren/prone",
                 "medievalorigins:siren/flammable",
                 "medievalorigins:siren/water_vision",
-                "medievalorigins:siren/dehydration_compat",
                 "medievalorigins:siren/seduce",
+                "origins_env_deh:water_dweller",
                 "mermod:fabulous_fins"
 	],
 	"icon": "minecraft:sea_lantern",
