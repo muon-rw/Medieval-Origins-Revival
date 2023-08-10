@@ -57,7 +57,7 @@
 							{
 								"effect": "minecraft:resistance",
 								"duration": 300,
-								"amplifier": 2,
+								"amplifier": 1,
 								"is_ambient": false,
 								"show_particles": false,
 								"show_icon": true
@@ -66,10 +66,29 @@
 					}
 				},
 				"bientity_condition": {
-					"type": "origins:target_condition",
-					"condition": {
-						"type": "origins:tamed"
-					}
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:owner"
+						},
+						{
+							"type": "origins:and",
+							"conditions": [
+								{
+									"type": "origins:invert",
+									"condition": {
+										"type": "origins:attack_target",
+										"inverted": true
+									}
+								},
+								{
+									"type": "origins:distance",
+									"comparison": "<=",
+									"compare_to": 8
+								}
+							]
+						}
+					]
 				}
 			}
 		]

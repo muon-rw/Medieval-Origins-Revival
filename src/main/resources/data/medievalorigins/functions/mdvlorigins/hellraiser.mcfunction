@@ -16,5 +16,5 @@ execute as @s at @s run summon minecraft:skeleton ~2.1 ~ ~-2.1 {NoAI:1,Rotation:
 execute as @s at @s run summon minecraft:skeleton ~2.75 ~ ~-1.1 {NoAI:1,Rotation:[-112.5f,-45.0f],ArmorItems:[{id:"minecraft:air",Count:1b},{id:"minecraft:air",Count:1b},{id:"minecraft:air",Count:1b},{id:"minecraft:iron_helmet",Count:1b}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}
 execute at @s run team join SkeletonCircle @e[type=skeleton,distance=..5]
 execute at @s run execute as @e[type=skeleton,distance=..8] run data merge entity @s {DeathLootTable:"minecraft:empty"}
-execute at @s run execute as @e[type=skeleton,distance=..8] at @s run summon area_effect_cloud ~ ~.75 ~ {Radius:1.8f,Duration:2000,RadiusOnUse:-0.0033f,RadiusPerTick:-0.0033f,ReapplicationDelay:40,Effects:[{Duration:80,Id:20b,Amplifier:1.5,IsAmbient:true,ShowParticles:false,ShowIcon:false}]}
+execute at @s run execute as @e[type=skeleton,distance=..8] at @s run summon area_effect_cloud ~ ~.75 ~ {Radius:1.8f,Duration:3000,RadiusOnUse:-0.0033f,RadiusPerTick:-0.0033f,ReapplicationDelay:40,Effects:[{Duration:80,Id:20b,Amplifier:2,IsAmbient:true,ShowParticles:false,ShowIcon:false}]}
 execute as @s at @s run playsound minecraft:entity.skeleton.death player @s
