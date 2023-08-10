@@ -9,7 +9,7 @@
 		"medievalorigins:yeti/winter_body",
 		"medievalorigins:yeti/flammable",
 		"medievalorigins:yeti/thick_fur",
-		"origins:cold_resistance"
+		"origins_env_deh:cold_resistance"
 	],
 	"icon": {
 		"item": "minecraft:player_head",
