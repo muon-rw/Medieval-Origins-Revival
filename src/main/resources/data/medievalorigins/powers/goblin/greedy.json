@@ -36,7 +36,7 @@
 			{
 				"attribute": "minecraft:generic.attack_damage",
 				"operation": "multiply_base",
-				"value": 0.5
+				"value": 0.35
 			},
 			{
 				"attribute": "additionalentityattributes:bonus_loot_count_rolls",
@@ -65,11 +65,6 @@
 		"modifiers": [
 			{
 				"attribute": "reach-entity-attributes:reach",
-				"operation": "addition",
-				"value": 1.0
-			},
-			{
-				"attribute": "playerex:breaking_speed",
 				"operation": "addition",
 				"value": 1.0
 			},
@@ -237,29 +232,17 @@
 				"tag": "medievalorigins:golden_armor"
 			}
 		},
-		"text": [
+		"texts": [
 			{
-				"translate": "power.medievalorigins.goblin/greedy.name",
+				"text": "Greedy:",
 				"color": "gold"
 			},
 			{
-				"text": " Bonus:",
-				"color": "gold"
-			},
-			{
-				"text": "\n+15% ",
+				"text": "+15% Armor",
 				"color": "yellow"
 			},
 			{
-				"translate": "attribute.name.generic.armor",
-				"color": "yellow"
-			},
-			{
-				"text": "\n+1 ",
-				"color": "yellow"
-			},
-			{
-				"translate": "attribute.name.generic.max_health",
+				"text": "+1 Max Health",
 				"color": "yellow"
 			}
 		]
@@ -272,25 +255,13 @@
 				"tag": "medievalorigins:golden_weapons"
 			}
 		},
-		"text": [
+		"texts": [
 			{
-				"translate": "power.medievalorigins.goblin/greedy.name",
+				"text": "Greedy:",
 				"color": "gold"
 			},
 			{
-				"text": " Bonus:",
-				"color": "gold"
-			},
-			{
-				"text": "\n+50% ",
-				"color": "yellow"
-			},
-			{
-				"translate": "attribute.name.generic.attack_damage",
-				"color": "yellow"
-			},
-			{
-				"text": "\n",
+				"text": "+50% Attack Damage",
 				"color": "yellow"
 			},
 			{
@@ -319,25 +290,17 @@
 				}
 			]
 		},
-		"text": [
+		"texts": [
 			{
-				"translate": "power.medievalorigins.goblin/greedy.name",
+				"text": "Greedy:",
 				"color": "gold"
 			},
 			{
-				"text": " Bonus:",
-				"color": "gold"
-			},
-			{
-				"text": "\n+1 ",
+				"text": "+1 Reach",
 				"color": "yellow"
 			},
 			{
-				"translate": "attribute.name.generic.reach-entity-attributes.reach",
-				"color": "yellow"
-			},
-			{
-				"text": "\nIron Mining Level",
+				"text": "Iron Mining Level",
 				"color": "yellow"
 			}
 		]

@@ -15,6 +15,7 @@ repositories {
 	maven { url = "https://maven.jamieswhiteshirt.com/libs-release" }
 	maven { url = "https://maven.nucleoid.xyz/" }
 	maven { url = 'https://maven.blamejared.com' }
+	maven { url = "https://maven.willbl.dev/releases" }
 }
 
 dependencies {
@@ -32,6 +33,9 @@ dependencies {
 	// Mixin Extras
 	implementation("com.github.LlamaLad7:MixinExtras:0.2.0-beta.4")
 	annotationProcessor("com.github.LlamaLad7:MixinExtras:0.2.0-beta.4")
+	// AutoTag
+	modImplementation ("com.github.apace100:autotag:${autotag_version}")
+	modImplementation ("com.github.apace100:autotag-api:${autotag_version}")
 }
 
 processResources {

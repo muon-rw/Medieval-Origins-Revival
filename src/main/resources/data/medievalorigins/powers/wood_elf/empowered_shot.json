@@ -81,6 +81,10 @@
                                             },
                                             {
                                                 "type": "origins:execute_command",
+                                                "command": "kill @e[tag= empowered_shot.direction]"
+                                            },
+                                            {
+                                                "type": "origins:execute_command",
                                                 "command": "execute positioned 0.0 0 0.0 run summon minecraft:area_effect_cloud ^ ^ ^9 {Tags: [\"empowered_shot.direction\"]}"
                                             },
                                             {
@@ -108,6 +112,10 @@
                                             {
                                                 "type": "origins:execute_command",
                                                 "command": "execute store result entity @s Air short 1 run time query gametime"
+                                            },
+                                            {
+                                                "type": "origins:execute_command",
+                                                "command": "kill @e[tag= empowered_shot.direction]"
                                             }
                                         ]
                                     }

@@ -5,6 +5,7 @@
 	  "minecraft:golden_axe",
 	  {"id":"#simplyswords:gold_gear","required": false},
 	  {"id":"mythicmetals:gilded_midas_gold_sword","required": false},
+	  {"id":"mythicmetals:royal_midas_gold_sword","required": false},
 	  {"id":"mythicmetals:midas_gold_sword","required": false},
 	  {"id":"nethersdelight:golden_machete","required": false},
 	  {"id":"farmersdelight:golden_knife","required": false},

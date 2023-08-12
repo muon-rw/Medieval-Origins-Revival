@@ -10,7 +10,7 @@
 		}
 	},
 	"head_feet_armor_tooltip": {
-		"type": "apoli:tooltip",
+		"type": "origins:tooltip",
 		"item_condition": {
 			"type": "origins:and",
 			"conditions": [
@@ -29,13 +29,13 @@
 					"type": "origins:or",
 					"conditions": [
 						{
-							"type": "apoli:ingredient",
+							"type": "origins:ingredient",
 							"ingredient": {
 								"tag": "c:helmets"
 							}
 						},
 						{
-							"type": "apoli:ingredient",
+							"type": "origins:ingredient",
 							"ingredient": {
 								"tag": "c:boots"
 							}
@@ -64,7 +64,7 @@
 		]
 	},
 	"chest_armor_tooltip": {
-		"type": "apoli:tooltip",
+		"type": "origins:tooltip",
 		"item_condition": {
 			"type": "origins:and",
 			"conditions": [
@@ -80,7 +80,7 @@
 					"compare_to": 1
 				},
 				{
-					"type": "apoli:ingredient",
+					"type": "origins:ingredient",
 					"ingredient": {
 						"tag": "c:chestplates"
 					}
@@ -107,7 +107,7 @@
 		]
 	},
 	"legs_armor_tooltip": {
-		"type": "apoli:tooltip",
+		"type": "origins:tooltip",
 		"item_condition": {
 			"type": "origins:and",
 			"conditions": [
@@ -123,7 +123,7 @@
 					"compare_to": 1
 				},
 				{
-					"type": "apoli:ingredient",
+					"type": "origins:ingredient",
 					"ingredient": {
 						"tag": "c:leggings"
 					}

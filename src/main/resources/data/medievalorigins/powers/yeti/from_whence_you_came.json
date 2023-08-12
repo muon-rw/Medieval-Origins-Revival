@@ -11,9 +11,12 @@
 			"type": "origins:or",
 			"conditions": [
 				{
-					"type": "origins:temperature",
-					"comparison": "<=",
-					"compare_to": 0.4
+					"type": "origins:biome",
+					"condition": {
+						"type": "origins:temperature",
+						"comparison": "<=",
+						"compare_to": 0.4
+					}
 				},
 				{
 					"type": "origins:biome",

@@ -1,5 +1,4 @@
 {
-	"loading_priority": 1,
 	"type": "origins:action_over_time",
 	"condition": {
 		"type": "origins:and",
@@ -13,7 +12,7 @@
 				"item_condition": {
 					"type": "origins:ingredient",
 					"ingredient": {
-						"tag": "medievalorigins:golden_armour"
+						"tag": "medievalorigins:golden_armor"
 					}
 				},
 				"inverted": true

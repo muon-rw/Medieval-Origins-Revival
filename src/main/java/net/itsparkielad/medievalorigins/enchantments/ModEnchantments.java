@@ -2,22 +2,22 @@ package net.itsparkielad.medievalorigins.enchantments;
 
 import net.itsparkielad.medievalorigins.MedievalOrigins;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 
 public class ModEnchantments {
-    public static Enchantment FEATHERWEIGHT = register("featherweight",
-            new FeatherweightEnchantment(Enchantment.Rarity.UNCOMMON,
-                    EnchantmentTarget.ARMOR, EquipmentSlot.CHEST, EquipmentSlot.FEET, EquipmentSlot.HEAD, EquipmentSlot.LEGS));
 
-
-    private static Enchantment register(String name, Enchantment enchantment) {
-        return  Registry.register(Registry.ENCHANTMENT, new Identifier(MedievalOrigins.MOD_ID, name), enchantment);
-    }
+    public static final Enchantment FEATHERWEIGHT = new FeatherweightEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.ARMOR, new EquipmentSlot[]{EquipmentSlot.HEAD, EquipmentSlot.CHEST, EquipmentSlot.LEGS, EquipmentSlot.FEET});
 
     public static void registerModEnchantments() {
-        System.out.println("Registering ModEnchantments for " + MedievalOrigins.MOD_ID);
+        registerModEnchantments("featherweight", FEATHERWEIGHT);
+    }
+
+    private static Enchantment registerModEnchantments(String path, Enchantment enchantment) {
+        Registry.register(Registries.ENCHANTMENT, new Identifier(MedievalOrigins.MOD_ID, path), enchantment);
+        return enchantment;
     }
 }

@@ -1,6 +1,6 @@
 {
     "parent": "item/bowl",
     "textures": {
-        "layer0": "medievalorigins:ogre"
+        "layer0": "medievalorigins:item/ogre"
     }
 }

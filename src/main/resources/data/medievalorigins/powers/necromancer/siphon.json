@@ -21,14 +21,6 @@
 						"show_icon": true
 					},
 					{
-						"effect": "zenith:sundering",
-						"duration": 300,
-						"amplifier": 1,
-						"is_ambient": false,
-						"show_particles": false,
-						"show_icon": true
-					},
-					{
 						"effect": "minecraft:slowness",
 						"duration": 300,
 						"amplifier": 1,

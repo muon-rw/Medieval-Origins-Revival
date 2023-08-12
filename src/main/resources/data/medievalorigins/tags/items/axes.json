@@ -6,6 +6,7 @@
     {"id":"minecraft:golden_axe","required": false},
     {"id":"minecraft:diamond_axe","required": false},
     {"id":"minecraft:netherite_axe","required": false},
-	  {"id":"#c:axes","required": false}
+	  {"id":"#c:axes","required": false},
+    {"id":"#fabric:axes","required": false}
   ]
 }
