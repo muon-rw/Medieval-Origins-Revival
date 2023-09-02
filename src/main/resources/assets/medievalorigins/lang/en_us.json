@@ -135,7 +135,7 @@
   "power.medievalorigins.wood_elf/archer.description": "Wood Elves spend their whole lives training with bows - they start with one, and their arrows are more deadly.",
 
   "power.medievalorigins.wood_elf/empowered_shot.name": "Focus",
-  "power.medievalorigins.wood_elf/empowered_shot.description": "After charging for a few seconds, release an arrow at tremendous velocity, dealing significantly more damage while flying further and more true.",
+  "power.medievalorigins.wood_elf/empowered_shot.description": "After charging for a few seconds, release an arrow at tremendous velocity, piercing enemies, flying further, and dealing significantly more damage.",
 
   "power.medievalorigins.wood_elf/forest_vision.name": "Forest Vision",
   "power.medievalorigins.wood_elf/forest_vision.description": "After centuries in the grove, Wood Elven eyes are well adapted to be among trees; while in forests, they can see clearly even at night.",
@@ -144,7 +144,7 @@
   "power.medievalorigins.wood_elf/eagle_eyed.description": "Wood Elves' enhanced perception allows them to keep track of an enemy for a while after hitting them, even when they aren't in view.",
 
   "power.medievalorigins.wood_elf/elegant.name": "Elegant",
-  "power.medievalorigins.wood_elf/elegant.description": "Due to their slender nature, Wood Elves can not wear armor heavier than chainmail (This can be prevented with an enchantment), and have less health.",
+  "power.medievalorigins.wood_elf/elegant.description": "Due to their slender nature, Wood Elves can not wear armor heavier than iron (This can be prevented with an enchantment), and have less health.",
 
   "power.medievalorigins.wood_elf/steward.name": "Steward",
   "power.medievalorigins.wood_elf/steward.description": "Wood elves live off the forest and in harmony with it. They can not digest meat.",
@@ -213,7 +213,7 @@
   "power.medievalorigins.moon_elf/stealth.description": "In the dark, Moon Elves can turn invisible by sneaking, and move a short distance while stealthed. When attacking from stealth, their first attack deals bonus damage and ends the invisibility.",
 
   "power.medievalorigins.moon_elf/elegant.name": "Elegant",
-  "power.medievalorigins.moon_elf/elegant.description": "Due to their slim builds, Moon Elves can not wear armor heavier than chainmail. This can be prevented with an enchantment.",
+  "power.medievalorigins.moon_elf/elegant.description": "Due to their slim builds, Moon Elves can not wear armor heavier than iron. This can be prevented with an enchantment.",
 
   "power.medievalorigins.moon_elf/ethereal.name": "Ethereal",
   "power.medievalorigins.moon_elf/ethereal.description": "Moon elves are thin and even slightly translucent, and their skin has a peculiar blue hue.",
@@ -225,7 +225,7 @@
   "power.medievalorigins.moon_elf/fragile.description": "Moon Elves have to stay lightweight to maintain their agility. They have reduced health and take increased physical damage.",
 
   "power.medievalorigins.moon_elf/nimble.name": "Nimble",
-  "power.medievalorigins.moon_elf/nimble.description": "With their quick reflexes, Moon Elves have a small chance to dodge any attack. They can also perform an extra roll.",
+  "power.medievalorigins.moon_elf/nimble.description": "With their quick reflexes, Moon Elves have a small chance to dodge any attack.",
 
   "power.medievalorigins.moon_elf/towering.name": "Towering",
   "power.medievalorigins.moon_elf/towering.description": "Moon Elves are about the same height as their distant relatives of the forest, making them slightly taller than humans.",
@@ -247,6 +247,9 @@
 
   "power.medievalorigins.necromancer/resilient.name": "Resilient",
   "power.medievalorigins.necromancer/resilient.description": "Learning about death goes a long way towards avoiding it. Necromancers have increased health.",
+
+  "power.medievalorigins.necromancer/siphon.name": "Siphon",
+  "power.medievalorigins.necromancer/siphon.description": "Rip out some of your soul and radiate it into a field around you, strengthening any mob which is not hostile to you, at a cost.",
 
   "power.medievalorigins.necromancer/unguarded.name": "Unguarded",
   "power.medievalorigins.necromancer/unguarded.description": "Enveloping oneself in the arcane leaves you open to attack in the physical realm. Most mobs deal more damage to necromancers.",
@@ -396,7 +399,7 @@
   "power.medievalorigins.yeti/winter_body.description": "Yetis are marginally taller than a regular human, and significantly wider.",
 
   "enchantment.medievalorigins.featherweight": "Featherweight",
-  "enchantment.medievalorigins.featherweight.desc": "With this enchantment applied to heavy armor, it can be worn by Elf and Arachnae origins",
+  "enchantment.medievalorigins.featherweight.desc": "With this enchantment applied to heavy armor, it can be worn by Arachnae and Elven origins",
 
   "medievalorigins.contagious_villager": "This villager has already been infected!",
 

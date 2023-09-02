@@ -1,6 +1,6 @@
 {
 	"type": "origins:action_on_callback",
-	"entity_action_added": {
+	"entity_action_gained": {
 		"type": "origins:and",
 		"actions": [{
 				"type": "origins:add_velocity",
