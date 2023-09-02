@@ -109,13 +109,14 @@
                                                 "type": "origins:execute_command",
                                                 "command": "data modify entity @s PierceLevel set value 3b"
                                             },
-                                            {
-                                                "type": "origins:execute_command",
-                                                "command": "execute store result entity @s Air short 1 run time query gametime"
-                                            },
+                                            
                                             {
                                                 "type": "origins:execute_command",
                                                 "command": "kill @e[tag= empowered_shot.direction]"
+                                            },
+                                            {
+                                                "type": "origins:execute_command",
+                                                "command": "execute store result entity @s Air short 1 run time query gametime"
                                             }
                                         ]
                                     }
