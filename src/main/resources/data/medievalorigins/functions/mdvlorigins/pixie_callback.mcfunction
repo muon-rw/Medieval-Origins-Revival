@@ -10,3 +10,4 @@ scale persist reset pehkui:hitbox_height @s
 scale persist reset pehkui:hitbox_width @s
 scale persist reset pehkui:drops @s
 scale persist reset pehkui:mining_speed @s
+effect clear @s minecraft:levitation
