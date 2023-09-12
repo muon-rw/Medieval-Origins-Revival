@@ -4,7 +4,7 @@
 		"type": "origins:actor_action",
 		"action": {
 			"type": "origins:execute_command",
-			"command": "title @s actionbar {\"translate\": \"medievalorigins.troublemaker\" \"color\": \"red\"}"
+			"command": "title @s actionbar {\"translate\": \"medievalorigins.troublemaker\", \"color\": \"red\"}"
 		}
 	},
 	"bientity_condition": {

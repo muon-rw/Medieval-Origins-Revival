@@ -1,15 +1,15 @@
 {
         "loading_priority": 2,
         "powers": [
+                "medievalorigins:ogre/gargantuan",
+                "medievalorigins:ogre/bloodlust",
+                "medievalorigins:ogre/ravager",
                 "medievalorigins:ogre/lead_belly",
                 "medievalorigins:ogre/stocky",
-                "medievalorigins:ogre/gargantuan",
                 "medievalorigins:ogre/ravenous",
                 "medievalorigins:ogre/sluggish",
                 "medievalorigins:ogre/unwieldy",
                 "medievalorigins:ogre/ogre_properties",
-                "medievalorigins:ogre/ravager",
-                "medievalorigins:ogre/bloodlust",
                 "medievalorigins:ogre/bloodlust_camera",
                 "medievalorigins:ogre/orcish_pride"
         ],

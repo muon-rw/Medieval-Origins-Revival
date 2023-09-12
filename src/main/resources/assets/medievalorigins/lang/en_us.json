@@ -419,5 +419,7 @@
 
   "medievalorigins.damage_dealt": "Damage Dealt",
 
-  "medievalorigins.self_wither": "Withered while holding"
+  "medievalorigins.self_wither": "Withered while holding",
+
+  "medievalorigins.uncastable": "You can't use this ability right now."
 }
