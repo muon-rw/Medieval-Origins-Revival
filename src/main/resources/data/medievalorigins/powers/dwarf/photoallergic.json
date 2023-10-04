@@ -5,17 +5,16 @@
 	"burn_duration": 6,
 	"condition": {
 		"type": "origins:and",
-		"conditions": [{
+		"conditions": [
+			{
 				"type": "origins:exposed_to_sun"
 			},
 			{
 				"type": "origins:equipped_item",
 				"equipment_slot": "head",
 				"item_condition": {
-					"type": "origins:ingredient",
-					"ingredient": {
-						"tag": "c:helmets"
-					}
+					"type": "origins:empty",
+					"inverted": true
 				},
 				"inverted": true
 			}
