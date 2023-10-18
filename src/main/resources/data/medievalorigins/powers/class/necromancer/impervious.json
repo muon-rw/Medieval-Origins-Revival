@@ -1,0 +1,10 @@
+{
+	"type": "origins:effect_immunity",
+	"effects": [
+		"minecraft:wither",
+		"minecraft:poison",
+		"minecraft:instant_damage",
+		"minecraft:regeneration",
+		"minecraft:instant_health"
+	]
+}

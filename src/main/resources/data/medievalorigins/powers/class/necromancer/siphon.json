@@ -1,0 +1,92 @@
+{
+	"type": "origins:active_self",
+	"cooldown": 600,
+	"hud_render": {
+		"should_render": true,
+		"sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+		"bar_index": 14
+	},
+	"entity_action": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:apply_effect",
+				"effects": [
+					{
+						"effect": "minecraft:weakness",
+						"duration": 300,
+						"amplifier": 2,
+						"is_ambient": false,
+						"show_particles": false,
+						"show_icon": true
+					},
+					{
+						"effect": "minecraft:slowness",
+						"duration": 300,
+						"amplifier": 1,
+						"is_ambient": false,
+						"show_particles": false,
+						"show_icon": true
+					}
+				]
+			},
+			{
+				"type": "origins:area_of_effect",
+				"radius": 32,
+				"bientity_action": {
+					"type": "origins:target_action",
+					"action": {
+						"type": "origins:apply_effect",
+						"effects": [
+							{
+								"effect": "minecraft:strength",
+								"duration": 300,
+								"amplifier": 3,
+								"is_ambient": false,
+								"show_particles": false,
+								"show_icon": true
+							},
+							{
+								"effect": "minecraft:resistance",
+								"duration": 300,
+								"amplifier": 1,
+								"is_ambient": false,
+								"show_particles": false,
+								"show_icon": true
+							}
+						]
+					}
+				},
+				"bientity_condition": {
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:owner"
+						},
+						{
+							"type": "origins:and",
+							"conditions": [
+								{
+									"type": "origins:invert",
+									"condition": {
+										"type": "origins:attack_target",
+										"inverted": true
+									}
+								},
+								{
+									"type": "origins:distance",
+									"comparison": "<=",
+									"compare_to": 8
+								}
+							]
+						}
+					]
+				}
+			}
+		]
+	},
+	"key": {
+		"key": "key.origins.secondary_active",
+		"continuous": false
+	}
+}

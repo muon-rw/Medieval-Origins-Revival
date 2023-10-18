@@ -1,0 +1,34 @@
+{
+    "hidden": true,
+    "condition": {
+        "type": "origins:using_item",
+        "item_condition": {
+            "type": "origins:nbt",
+            "nbt": "{instrument: \"minecraft:admire_goat_horn\"}"
+        }
+    },
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:spawn_effect_cloud",
+        "radius": 10,
+        "radius_on_use": -1,
+        "wait_time": 0,
+        "effect": {
+            "effect": "minecraft:invisibility",
+            "duration": 750,
+            "amplifier": 0,
+            "show_particles": true,
+            "show_icon": true
+        }
+    },
+    "cooldown": 1750,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+        "bar_index": 3
+    },
+    "key": {
+        "key": "key.use",
+        "continuous": true
+    }
+}

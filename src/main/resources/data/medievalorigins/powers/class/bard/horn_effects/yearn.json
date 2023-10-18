@@ -1,0 +1,40 @@
+{
+    "hidden": true,
+    "condition": {
+        "type": "origins:using_item",
+        "item_condition": {
+            "type": "origins:nbt",
+            "nbt": "{instrument: \"minecraft:yearn_goat_horn\"}"
+        }
+    },
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:choice",
+        "actions": [
+            {
+                "weight": 3,
+                "element": {
+                    "type": "origins:execute_command",
+                    "command": "/weather rain"
+                }
+            },
+            {
+                "weight": 1,
+                "element": {
+                    "type": "origins:execute_command",
+                    "command": "/weather thunder"
+                }
+            }
+        ]
+    },
+    "cooldown": 2500,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+        "bar_index": 16
+    },
+    "key": {
+        "key": "key.use",
+        "continuous": true
+    }
+}

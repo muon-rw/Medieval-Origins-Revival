@@ -1,0 +1,27 @@
+{
+    "hidden": true,
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:power_active",
+                "power": "rpg_origins:charismatic_toggle"
+            }
+        ]
+    },
+    "type": "origins:action_over_time",
+    "interval": 20,
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "effect give @a[distance=1..20] speed 1 0 true"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "effect give @a[distance=1..20] regeneration 1 0 true"
+            }
+        ]
+    }
+}

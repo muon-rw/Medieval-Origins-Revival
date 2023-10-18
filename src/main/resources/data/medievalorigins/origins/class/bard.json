@@ -1,0 +1,25 @@
+{
+    "powers": [
+        "rpg_origins:horn_effects/ponder",
+        "rpg_origins:horn_effects/sing",
+        "rpg_origins:horn_effects/feel",
+        "rpg_origins:horn_effects/admire",
+        "rpg_origins:horn_effects/call",
+        "rpg_origins:horn_effects/dream",
+        "rpg_origins:horn_effects/seek",
+        "rpg_origins:horn_effects/yearn",
+        "rpg_origins:musical_talent",
+        "rpg_origins:musical_past",
+        "rpg_origins:decoy",
+        "origins:more_exhaustion",
+        "rpg_origins:not_the_smartest",
+        "rpg_origins:charismatic",
+        "rpg_origins:charismatic_toggle",
+        "rpg_origins:charismatic_switch_effect",
+        "rpg_origins:charismatic_hunger"
+    ],
+    "icon": {
+        "item": "minecraft:goat_horn"
+    },
+    "impact": 2
+}

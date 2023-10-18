@@ -1,0 +1,13 @@
+{
+    "powers": [
+        "rpg_origins:marksman",
+        "rpg_origins:untrained",
+        "rpg_origins:inexperienced",
+        "rpg_origins:resourceful",
+        "rpg_origins:quiver"
+    ],
+    "icon": {
+        "item": "minecraft:bow"
+    },
+    "impact": 2
+}

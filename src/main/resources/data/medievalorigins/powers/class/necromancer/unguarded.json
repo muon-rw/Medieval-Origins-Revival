@@ -1,0 +1,48 @@
+{
+	"type": "origins:multiple",
+	"more_damage": {
+		"type": "origins:modify_damage_taken",
+		"damage_condition": {
+			"type": "origins:attacker"
+		},
+		"modifier": {
+			"operation": "addition",
+			"value": 1.5
+		}
+	},
+	"magic_resistance": {
+		"type": "origins:modify_damage_taken",
+		"damage_condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:name",
+					"name": "magic"
+				},
+				{
+					"type": "origins:name",
+					"name": "indirectMagic"
+				}
+			]
+		},
+		"modifier": {
+			"name": "Origin Magic Resistance",
+			"operation": "multiply_total_multiplicative",
+			"value": -0.25
+		}
+	},
+	"magical_mob_resistance": {
+		"type": "origins:modify_damage_taken",
+		"damage_condition": {
+			"type": "origins:attacker",
+			"entity_condition": {
+				"type": "origins:in_tag",
+				"tag": "medievalorigins:magic_mobs"
+			}
+		},
+		"modifier": {
+			"operation": "addition",
+			"value": -1.5
+		}
+	}
+}

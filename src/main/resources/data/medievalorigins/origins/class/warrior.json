@@ -1,0 +1,12 @@
+{
+    "powers": [
+        "rpg_origins:durable",
+        "origins:more_exhaustion",
+        "rpg_origins:prepared",
+        "rpg_origins:trained"
+    ],
+    "icon": {
+        "item": "minecraft:shield"
+    },
+    "impact": 1
+}
