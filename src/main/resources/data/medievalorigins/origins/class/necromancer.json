@@ -1,15 +1,16 @@
 {
     "powers": [
-        "rpg_origins:no_time_to_rest",
-        "origins:no_shield",
-        "origins:strong_arms",
-        "rpg_origins:select_targets_strong",
-        "rpg_origins:strong_arms_break_speed",
-        "origins:natural_armor",
-        "rpg_origins:select_targets_weak"
+        "medievalorigins:class/necromancer/hellraiser",
+        "medievalorigins:class/necromancer/siphon",
+        "medievalorigins:class/necromancer/resilient",
+        "medievalorigins:class/necromancer/impervious",
+        "medievalorigins:class/necromancer/poor_reputation",
+        "medievalorigins:class/necromancer/black_thumb",
+        "medievalorigins:class/necromancer/disturbed",
+        "medievalorigins:class/necromancer/unguarded"
     ],
     "icon": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:wither_rose"
     },
     "impact": 3
 }
