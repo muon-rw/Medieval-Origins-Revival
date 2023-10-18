@@ -10,10 +10,11 @@ import net.minecraft.enchantment.EnchantmentTarget;
 
 public class ModEnchantments {
 
-    public static final Enchantment FEATHERWEIGHT = new FeatherweightEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.ARMOR, new EquipmentSlot[]{EquipmentSlot.HEAD, EquipmentSlot.CHEST, EquipmentSlot.LEGS, EquipmentSlot.FEET});
-
+    public static final Enchantment FEATHERWEIGHT = new FeatherweightEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.ARMOR);
+    public static final Enchantment MIRRORING = new MirroringEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.ARMOR_HEAD);
     public static void registerModEnchantments() {
         registerModEnchantments("featherweight", FEATHERWEIGHT);
+        registerModEnchantments("mirroring", MIRRORING);
     }
 
     private static Enchantment registerModEnchantments(String path, Enchantment enchantment) {

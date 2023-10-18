@@ -1,0 +1,18 @@
+{
+    "order": 1,
+    "origins": [
+        {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "origins:class/mage",
+                "layer": "origins:origin"
+            },
+            "origins": [
+                "medievalorigins:class/mage/arcanist",
+                "medievalorigins:class/mage/pyromancer",
+                "medievalorigins:class/mage/cryomancer"
+            ]
+        }
+    ],
+    "enabled": true
+}

@@ -16,7 +16,7 @@
 		"type": "origins:action_over_time",
 		"entity_action": {
 			"type": "origins:execute_command",
-			"command": "execute unless entity @s[pehkui.scale_nbt={\"pehkui:scale_data_types\":{\"pehkui:height\":{scale:1.2f}}}] run function medievalorigins:mdvlorigins/elf_callon"
+			"command": "execute unless entity @s[pehkui.scale_nbt={\"pehkui:scale_data_types\":{\"pehkui:height\":{scale:1.05f}}}] run function medievalorigins:mdvlorigins/elf_callon"
 		},
 		"interval": 50
 	}

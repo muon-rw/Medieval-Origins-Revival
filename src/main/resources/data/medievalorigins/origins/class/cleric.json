@@ -1,20 +1,15 @@
 {
     "powers": [
-        "rpg_origins:villagefriendly",
-        "rpg_origins:untrained",
-        "rpg_origins:brewer_jumpboost",
-        "rpg_origins:brewer_speed",
-        "rpg_origins:brewer_strength",
-        "rpg_origins:brewer_regeneration",
-        "rpg_origins:heal_pool",
-        "rpg_origins:forgivable",
-        "rpg_origins:pure",
-        "rpg_origins:pure_color",
-        "rpg_origins:pure_shake",
-        "rpg_origins:one_with_the_world"
+        "medievalorigins:class/cleric/spell_power",
+        "medievalorigins:class/cleric/village_friendly",
+        "medievalorigins:class/cleric/instant_cure",
+        "medievalorigins:class/cleric/water_walk",
+        "medievalorigins:class/cleric/heal_pool",
+        "medievalorigins:class/cleric/banish",
+        "medievalorigins:class/cleric/undead_weakness"
     ],
     "icon": {
-        "item": "minecraft:emerald"
+        "item": "minecraft:totem_of_undying"
     },
     "impact": 1
 }

@@ -401,6 +401,9 @@
   "enchantment.medievalorigins.featherweight": "Featherweight",
   "enchantment.medievalorigins.featherweight.desc": "With this enchantment applied to heavy armor, it can be worn by Arachnae and Elven origins",
 
+  "enchantment.medievalorigins.mirroring": "Mirroring",
+  "enchantment.medievalorigins.mirroring.desc": "Prevents the player from being petrified by a Gorgon's gaze",
+
   "medievalorigins.contagious_villager": "This villager has already been infected!",
 
   "medievalorigins.disturbed_restless": "What you know will kill you, but you will die laughing.",

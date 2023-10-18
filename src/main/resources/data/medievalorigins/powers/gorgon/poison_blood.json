@@ -1,48 +1,54 @@
 {
-	"type": "origins:attacker_action_when_hit",
-	"entity_action": {
-		"type": "origins:choice",
-		"actions": [
-			{
-				"element": {
-					"type": "origins:area_of_effect",
-					"radius": 5,
-					"bientity_action": {
-						"type": "origins:target_action",
-						"action": {
-							"type": "origins:apply_effect",
-							"effect": {
-								"effect": "minecraft:poison",
-								"duration": 100,
-								"amplifier": 1
+	"type": "origins:action_when_hit",
+	"bientity_action": {
+		"type": "origins:target_action",
+		"action": {
+			"type": "origins:choice",
+			"actions": [
+				{
+					"element": {
+						"type": "origins:area_of_effect",
+						"radius": 5,
+						"bientity_action": {
+							"type": "origins:target_action",
+							"action": {
+								"type": "origins:apply_effect",
+								"effect": {
+									"effect": "minecraft:poison",
+									"duration": 100,
+									"amplifier": 1
+								}
 							}
+						},
+						"bientity_condition": {
+							"type": "origins:or",
+							"conditions": [
+								{
+									"type": "origins:invert",
+									"condition": {
+										"type": "origins:attack_target"
+									}
+								},
+								{
+									"type": "origins:invert",
+									"condition": {
+										"type": "origins:attacker"
+									}
+								}
+							]
 						}
 					},
-					"bientity_condition": {
-						"type": "origins:or",
-						"conditions": [
-							{
-								"type": "origins:invert",
-								"condition": {
-									"type": "origins:attacker"
-								}
-							},
-							{
-								"type": "origins:attacker"
-							}
-						]
-					}
+					"weight": 1
 				},
-				"weight": 1
-			},
-			{
-				"element": {
-					"type": "origins:execute_command",
-					"command": "particle minecraft:smoke ~ ~ ~"
-				},
-				"weight": 2
-			}
-		]
+				{
+					"element": {
+						"type": "origins:execute_command",
+						"command": "particle minecraft:smoke ~ ~ ~"
+					},
+					"weight": 2
+				}
+			]
+		}
 	},
 	"cooldown": 0,
 	"hud_render": {

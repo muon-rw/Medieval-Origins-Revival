@@ -13,17 +13,8 @@
 	"magic_resistance": {
 		"type": "origins:modify_damage_taken",
 		"damage_condition": {
-			"type": "origins:or",
-			"conditions": [
-				{
-					"type": "origins:name",
-					"name": "magic"
-				},
-				{
-					"type": "origins:name",
-					"name": "indirectMagic"
-				}
-			]
+			"type": "origins:in_tag",
+			"tag": "minecraft:witch_resistant_to"
 		},
 		"modifier": {
 			"name": "Origin Magic Resistance",
