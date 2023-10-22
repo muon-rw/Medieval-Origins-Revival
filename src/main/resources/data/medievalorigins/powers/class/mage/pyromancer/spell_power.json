@@ -1,0 +1,8 @@
+{
+    "type": "origins:conditioned_attribute",
+    "modifier": {
+        "attribute": "spell_power:fire",
+        "operation": "multiply_base",
+        "value": 0.25
+    }
+}

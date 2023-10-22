@@ -1,13 +1,9 @@
 {
     "powers": [
-        "rpg_origins:fastcure",
-        "rpg_origins:untrained",
-        "rpg_origins:fireball",
-        "rpg_origins:water_walk",
-        "rpg_origins:unwieldly"
+        "medievalorigins:class/mage/arcanist/spell_power"
     ],
     "icon": {
-        "item": "minecraft:enchanted_book"
+        "item": "wizards:arcane_spell_book"
     },
     "impact": 2
 }
