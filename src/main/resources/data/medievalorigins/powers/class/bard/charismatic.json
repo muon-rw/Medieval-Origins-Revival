@@ -5,7 +5,7 @@
         "conditions": [
             {
                 "type": "origins:power_active",
-                "power": "rpg_origins:charismatic_toggle"
+                "power": "medievalorigins:class/bard/charismatic_toggle"
             }
         ]
     },

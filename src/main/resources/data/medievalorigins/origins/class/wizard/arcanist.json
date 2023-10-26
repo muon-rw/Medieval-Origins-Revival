@@ -1,6 +1,6 @@
 {
     "powers": [
-        "medievalorigins:class/mage/arcanist/spell_power"
+        "medievalorigins:class/wizard/arcanist/spell_power"
     ],
     "icon": {
         "item": "wizards:arcane_spell_book"

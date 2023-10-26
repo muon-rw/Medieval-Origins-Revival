@@ -1,7 +1,7 @@
 {
-    "type": "origins:conditioned_attribute",
+    "type": "origins:attribute",
     "modifier": {
-        "attribute": "spell_power:frost",
+        "attribute": "spell_power:arcane",
         "operation": "multiply_base",
         "value": 0.25
     }

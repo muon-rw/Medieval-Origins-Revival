@@ -1,7 +1,6 @@
 package net.itsparkielad.medievalorigins.enchantments;
 
 import net.itsparkielad.medievalorigins.MedievalOrigins;
-import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;

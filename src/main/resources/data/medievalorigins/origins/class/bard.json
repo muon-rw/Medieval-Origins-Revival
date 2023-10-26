@@ -1,22 +1,22 @@
 {
     "powers": [
-        "rpg_origins:horn_effects/ponder",
-        "rpg_origins:horn_effects/sing",
-        "rpg_origins:horn_effects/feel",
-        "rpg_origins:horn_effects/admire",
-        "rpg_origins:horn_effects/call",
-        "rpg_origins:horn_effects/dream",
-        "rpg_origins:horn_effects/seek",
-        "rpg_origins:horn_effects/yearn",
-        "rpg_origins:musical_talent",
-        "rpg_origins:musical_past",
-        "rpg_origins:decoy",
+        "medievalorigins:class/bard/horn_effects/ponder",
+        "medievalorigins:class/bard/horn_effects/sing",
+        "medievalorigins:class/bard/horn_effects/feel",
+        "medievalorigins:class/bard/horn_effects/admire",
+        "medievalorigins:class/bard/horn_effects/call",
+        "medievalorigins:class/bard/horn_effects/dream",
+        "medievalorigins:class/bard/horn_effects/seek",
+        "medievalorigins:class/bard/horn_effects/yearn",
+        "medievalorigins:class/bard/musical_talent",
+        "medievalorigins:class/bard/musical_past",
+        "medievalorigins:class/bard/decoy",
         "origins:more_exhaustion",
-        "rpg_origins:not_the_smartest",
-        "rpg_origins:charismatic",
-        "rpg_origins:charismatic_toggle",
-        "rpg_origins:charismatic_switch_effect",
-        "rpg_origins:charismatic_hunger"
+        "medievalorigins:class/bard/not_the_smartest",
+        "medievalorigins:class/bard/charismatic",
+        "medievalorigins:class/bard/charismatic_toggle",
+        "medievalorigins:class/bard/charismatic_switch_effect",
+        "medievalorigins:class/bard/charismatic_hunger"
     ],
     "icon": {
         "item": "minecraft:goat_horn"

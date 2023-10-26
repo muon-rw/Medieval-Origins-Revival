@@ -10,7 +10,7 @@
         "medievalorigins:class/necromancer/unguarded"
     ],
     "icon": {
-        "item": "minecraft:wither_rose"
+        "item": "minecraft:wither_skeleton_skull"
     },
     "impact": 3
 }

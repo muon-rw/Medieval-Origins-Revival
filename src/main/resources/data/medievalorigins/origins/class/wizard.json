@@ -1,0 +1,9 @@
+{
+    "powers": [
+        "medievalorigins:wizard/subclass_picker"
+    ],
+    "icon": {
+        "item": "wizards:staff_wizard"
+    },
+    "impact": 2
+}

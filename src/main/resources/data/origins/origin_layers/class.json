@@ -1,9 +1,10 @@
 {
   "replace": false,
+  "order": 1,
   "origins": [
      "medievalorigins:class/bard",
      "medievalorigins:class/cleric",
-     "medievalorigins:class/mage",
+     "medievalorigins:class/wizard",
      "medievalorigins:class/necromancer",
      "medievalorigins:class/paladin",
      "medievalorigins:class/ranger",

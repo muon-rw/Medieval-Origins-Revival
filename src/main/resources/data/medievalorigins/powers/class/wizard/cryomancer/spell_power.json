@@ -1,5 +1,5 @@
 {
-    "type": "origins:conditioned_attribute",
+    "type": "origins:attribute",
     "modifier": {
         "attribute": "spell_power:arcane",
         "operation": "multiply_base",

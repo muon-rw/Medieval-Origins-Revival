@@ -1,6 +1,6 @@
 {
     "powers": [
-        "medievalorigins:class/mage/pyromancer/spell_power"
+        "medievalorigins:class/wizard/pyromancer/spell_power"
     ],
     "icon": {
         "item": "wizards:fire_spell_book"
