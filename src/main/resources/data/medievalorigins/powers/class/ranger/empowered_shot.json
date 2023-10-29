@@ -1,4 +1,24 @@
 {
+    "fabric:load_conditions": [
+        {
+            "condition": "fabric:not",
+            "value": {
+                "condition": "apoli:any_namespace_loaded",
+                "values": [
+                    "zenith_attributes"
+                ]
+            }
+        }
+    ],
+    "forge:conditions": {
+        "type": "forge:not",
+        "value": {
+            "type": "apoli:any_namespace_loaded",
+            "namespaces": [
+                "attributeslib"
+            ]
+        }
+    },
     "type": "origins:multiple",
     "hold_time": {
         "type": "origins:resource",
@@ -10,7 +30,7 @@
             "should_render": true,
             "condition": {
                 "type": "origins:resource",
-                "resource": "medievalorigins:wood_elf/empowered_shot_hold_time",
+                "resource": "medievalorigins:class/ranger/empowered_shot_hold_time",
                 "compare_to": 0,
                 "comparison": "!="
             }
@@ -21,7 +41,7 @@
         "interval": 1,
         "entity_action": {
             "type": "origins:change_resource",
-            "resource": "medievalorigins:wood_elf/empowered_shot_hold_time",
+            "resource": "medievalorigins:class/ranger/empowered_shot_hold_time",
             "change": 1
         },
         "condition": {
@@ -45,7 +65,7 @@
         },
         "condition": {
             "type": "origins:resource",
-            "resource": "medievalorigins:wood_elf/empowered_shot_hold_time",
+            "resource": "medievalorigins:class/ranger/empowered_shot_hold_time",
             "comparison": "==",
             "compare_to": 60
         }
@@ -60,7 +80,7 @@
                     "type": "origins:if_else",
                     "condition": {
                         "type": "origins:resource",
-                        "resource": "medievalorigins:wood_elf/empowered_shot_hold_time",
+                        "resource": "medievalorigins:class/ranger/empowered_shot_hold_time",
                         "comparison": ">=",
                         "compare_to": 60
                     },
@@ -109,7 +129,6 @@
                                                 "type": "origins:execute_command",
                                                 "command": "data modify entity @s PierceLevel set value 3b"
                                             },
-                                            
                                             {
                                                 "type": "origins:execute_command",
                                                 "command": "kill @e[tag= empowered_shot.direction]"
@@ -163,7 +182,7 @@
                 },
                 {
                     "type": "origins:change_resource",
-                    "resource": "medievalorigins:wood_elf/empowered_shot_hold_time",
+                    "resource": "medievalorigins:class/ranger/empowered_shot_hold_time",
                     "change": 0,
                     "operation": "set"
                 },
@@ -178,7 +197,7 @@
             "conditions": [
                 {
                     "type": "origins:resource",
-                    "resource": "medievalorigins:wood_elf/empowered_shot_hold_time",
+                    "resource": "medievalorigins:class/ranger/empowered_shot_hold_time",
                     "comparison": ">",
                     "compare_to": 0
                 },

@@ -2,6 +2,6 @@
 	"type": "origins:modify_projectile_damage",
 	"modifier": {
 		"operation": "multiply_total_multiplicative",
-		"value": 0.5
+		"value": 0.25
 	}
 }

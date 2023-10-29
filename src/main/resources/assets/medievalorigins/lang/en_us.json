@@ -47,6 +47,8 @@
   "origin.medievalorigins.yeti.name": "Yeti",
   "origin.medievalorigins.yeti.description": "Lumbering giants of frosty peaks, the Yeti's icy nature allows them to stop almost any foe, but can leave them vulnerable to fiery attacks.",
 
+
+
   "power.medievalorigins.arachnae/bottomless_stomach.name": "Bottomless Stomach",
   "power.medievalorigins.arachnae/bottomless_stomach.description": "Being a human sized spider presents unique challenges. Arachnae require a large quantity of food to stay alive.",
 
@@ -132,13 +134,10 @@
   "power.medievalorigins.dwarf/potent_brew.description": "Dwarves are notorious for their powerful drinks which would knock out someone twice their size. Activate to take a swig and fully restore health.",
 
   "power.medievalorigins.wood_elf/archer.name": "Natural Archer",
-  "power.medievalorigins.wood_elf/archer.description": "Wood Elves spend their whole lives training with bows - they start with one, and their arrows are more deadly.",
-
-  "power.medievalorigins.wood_elf/empowered_shot.name": "Focus",
-  "power.medievalorigins.wood_elf/empowered_shot.description": "After charging for a few seconds, release an arrow at tremendous velocity, piercing enemies, flying further, and dealing significantly more damage.",
+  "power.medievalorigins.wood_elf/archer.description": "Wood Elves spend their whole lives training with bows - their arrows are always more deadly.",
 
   "power.medievalorigins.wood_elf/forest_vision.name": "Forest Vision",
-  "power.medievalorigins.wood_elf/forest_vision.description": "After centuries in the grove, Wood Elven eyes are well adapted to be among trees; while in forests, they can see clearly even at night.",
+  "power.medievalorigins.wood_elf/forest_vision.description": "After centuries in the grove, Wood Elves are well adapted to be among nature. While in forests or flowers, they can crouch to gain night vision while becoming undetectable.",
 
   "power.medievalorigins.wood_elf/eagle_eyed.name": "Eagle Eyed",
   "power.medievalorigins.wood_elf/eagle_eyed.description": "Wood Elves' enhanced perception allows them to keep track of an enemy for a while after hitting them, even when they aren't in view.",
@@ -217,9 +216,6 @@
 
   "power.medievalorigins.moon_elf/ethereal.name": "Ethereal",
   "power.medievalorigins.moon_elf/ethereal.description": "Moon elves are thin and even slightly translucent, and their skin has a peculiar blue hue.",
- 
-  "power.medievalorigins.moon_elf/moonlight_rogue.name": "Moonlight Rogue",
-  "power.medievalorigins.moon_elf/moonlight_rogue.description": "Moon Elves are most efficient wielding a light and easy to conceal weapon. They deal more damage with daggers and knives.",
 
   "power.medievalorigins.moon_elf/fragile.name": "Fragile",
   "power.medievalorigins.moon_elf/fragile.description": "Moon Elves have to stay lightweight to maintain their agility. They have reduced health and take increased physical damage.",
@@ -398,11 +394,26 @@
   "power.medievalorigins.yeti/winter_body.name": "Winter Body",
   "power.medievalorigins.yeti/winter_body.description": "Yetis are marginally taller than a regular human, and significantly wider.",
 
+
+ 
+
+  "power.medievalorigins.class/rogue/dagger_bonus.name": "Cutthroat",
+  "power.medievalorigins.class/rogue/dagger_bonus.description": "Rogues are most efficient wielding a light and easy to conceal weapon. They deal more damage with daggers and knives.",
+
+  "power.medievalorigins.class/ranger/empowered_shot.name": "Focus",
+  "power.medievalorigins.class/ranger/empowered_shot.description": "After charging for a few seconds, release an arrow at tremendous velocity, piercing enemies, flying further, and dealing significantly more damage.",
+
+
+
+
   "enchantment.medievalorigins.featherweight": "Featherweight",
   "enchantment.medievalorigins.featherweight.desc": "With this enchantment applied to heavy armor, it can be worn by Arachnae and Elven origins",
 
   "enchantment.medievalorigins.mirroring": "Mirroring",
   "enchantment.medievalorigins.mirroring.desc": "Prevents the player from being petrified by a Gorgon's gaze",
+
+
+
 
   "medievalorigins.contagious_villager": "This villager has already been infected!",
 

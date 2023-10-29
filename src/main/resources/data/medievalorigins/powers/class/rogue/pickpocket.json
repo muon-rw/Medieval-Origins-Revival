@@ -1,0 +1,44 @@
+{
+    "type": "origins:action_on_entity_use",
+    "bientity_action": {
+        "type": "origins:target_action",
+        "action": {
+            "type": "origins:choice",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "data modify entity @s ConversionTime set value 0"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle heart ~ ~0.5 ~ 0.3 0.3 0.3 0.009 4 normal @a"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "playsound minecraft:item.totem.use player @a ~ ~ ~ 1.0 0.5"
+                }
+            ]
+        }
+    },
+    "bientity_condition": {
+        "type": "origins:target_condition",
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:entity_type",
+                    "entity_type": "minecraft:villager"
+                },
+                {
+                    piss
+                }
+            ]
+        }
+    },
+    "item_condition": {
+        "type": "origins:empty"
+    },
+    "hands": [
+        "main_hand"
+    ]
+}

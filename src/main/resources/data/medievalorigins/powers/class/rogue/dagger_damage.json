@@ -1,6 +1,6 @@
 {
 	"type": "origins:multiple",
-	"dagger_bonus": {
+	"modifier": {
 		"type": "origins:modify_damage_dealt",
 		"modifier": {
 			"operation": "multiply_total_multiplicative",
@@ -42,7 +42,7 @@
 		},
 		"text": [
 			{
-				"translate": "power.medievalorigins.moon_elf/moonlight_rogue.name",
+				"translate": "power.medievalorigins.class/rogue/dagger_bonus.name",
 				"color": "aqua"
 			},
 			{

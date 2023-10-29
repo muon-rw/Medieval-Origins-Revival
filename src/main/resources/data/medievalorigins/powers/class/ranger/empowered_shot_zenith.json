@@ -1,0 +1,184 @@
+{
+    "fabric:load_conditions": [
+        {
+            "condition": "apoli:any_namespace_loaded",
+            "namespaces": [
+                "zenith_attributes"
+            ]
+        }
+    ],
+    "type": "origins:multiple",
+    "hold_time": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 60,
+        "hud_render": {
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 3,
+            "should_render": true,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "medievalorigins:class/ranger/empowered_shot_zenith_hold_time",
+                "compare_to": 0,
+                "comparison": "!="
+            }
+        }
+    },
+    "charging": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "medievalorigins:class/ranger/empowered_shot_zenith_hold_time",
+            "change": 1
+        },
+        "condition": {
+            "type": "origins:using_item",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "medievalorigins:bows"
+                }
+            }
+        }
+    },
+    "fully_charged": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "rising_action": {
+            "type": "origins:play_sound",
+            "sound": "minecraft:block.respawn_anchor.charge",
+            "volume": 0.1,
+            "pitch": 2
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "medievalorigins:class/ranger/empowered_shot_zenith_hold_time",
+            "comparison": "==",
+            "compare_to": 60
+        }
+    },
+    "velocity_attribute": {
+        "type": "origins:modify_attribute",
+        "attribute": "zenith_attributes:arrow_velocity",
+        "modifier": {
+            "operation": "multiply_base",
+            "resource": "medievalorigins:class/ranger/empowered_shot_zenith_hold_time",
+            "value": 0,
+            "modifier": {
+                "operation": "multiply_total_multiplicative",
+                "value": -0.985
+            }
+        }
+    },
+    "release": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:if_else",
+                    "condition": {
+                        "type": "origins:resource",
+                        "resource": "medievalorigins:class/ranger/empowered_shot_zenith_hold_time",
+                        "comparison": ">=",
+                        "compare_to": 60
+                    },
+                    "if_action": {
+                        "type": "origins:area_of_effect",
+                        "radius": 4,
+                        "bientity_action": {
+                            "type": "origins:and",
+                            "actions": [
+                                {
+                                    "type": "origins:actor_action",
+                                    "action": {
+                                        "type": "origins:play_sound",
+                                        "sound": "minecraft:block.respawn_anchor.deplete",
+                                        "volume": 1,
+                                        "pitch": 2
+                                    }
+                                },
+                                {
+                                    "type": "origins:target_action",
+                                    "action": {
+                                        "type": "origins:execute_command",
+                                        "command": "data modify entity @s PierceLevel set value 3b"
+                                    }
+                                }
+                            ]
+                        },
+                        "bientity_condition": {
+                            "type": "origins:and",
+                            "conditions": [
+                                {
+                                    "type": "origins:actor_condition",
+                                    "condition": {
+                                        "type": "origins:command",
+                                        "command": "data modify storage empowered:shot temp.check set from entity @s UUID",
+                                        "comparison": ">=",
+                                        "compare_to": 0
+                                    }
+                                },
+                                {
+                                    "type": "origins:target_condition",
+                                    "condition": {
+                                        "type": "origins:and",
+                                        "conditions": [
+                                            {
+                                                "type": "origins:in_tag",
+                                                "tag": "medievalorigins:arrows"
+                                            },
+                                            {
+                                                "type": "origins:nbt",
+                                                "nbt": "{HasBeenShot: 0b}"
+                                            },
+                                            {
+                                                "type": "origins:command",
+                                                "command": "data modify storage empowered:shot temp.check set from entity @s Owner",
+                                                "comparison": "==",
+                                                "compare_to": 0
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "medievalorigins:class/ranger/empowered_shot_zenith_hold_time",
+                    "change": 0,
+                    "operation": "set"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "data remove storage empowered:shot temp"
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "medievalorigins:class/ranger/empowered_shot_zenith_hold_time",
+                    "comparison": ">",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:using_item",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "tag": "medievalorigins:bows"
+                        }
+                    },
+                    "inverted": true
+                }
+            ]
+        }
+    }
+}

@@ -1,10 +1,8 @@
 {
     "powers": [
-        "rpg_origins:marksman",
-        "rpg_origins:untrained",
-        "rpg_origins:inexperienced",
-        "rpg_origins:resourceful",
-        "rpg_origins:quiver"
+        "medievalorigins:class/ranger/empowered_shot",
+        "medievalorigins:class/ranger/empowered_shot_zenith",
+        "medievalorigins:class/ranger/gear_spawn"
     ],
     "icon": {
         "item": "minecraft:bow"

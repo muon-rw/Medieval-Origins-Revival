@@ -5,7 +5,7 @@
 		"modifier": {
 			"name": "Origin modifier",
 			"operation": "multiply_total_multiplicative",
-			"value": -0.2
+			"value": -0.1
 		},
 		"condition": {
 			"type": "origins:or",

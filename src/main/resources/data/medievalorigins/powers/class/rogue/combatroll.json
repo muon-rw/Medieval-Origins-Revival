@@ -9,7 +9,7 @@
    ],
    "type": "origins:attribute",
    "modifier": {
-      "attribute": "combatroll:charge",
+      "attribute": "combatroll:count",
       "value": 1,
       "operation": "addition"
    }
