@@ -4,20 +4,44 @@ import net.fabricmc.api.ModInitializer;
 import net.itsparkielad.medievalorigins.enchantments.ModEnchantments;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
+import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
+import net.minecraft.resources.ResourceLocation;
+import net.fabricmc.loader.api.FabricLoader;
+import net.fabricmc.loader.api.ModContainer;
 
 public class MedievalOrigins implements ModInitializer {
-	// This logger is used to write text to the console and the log file.
-	// It is considered best practice to use your mod id as the logger's name.
-	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LogManager.getLogger("medievalorigins");
-	public static final String MOD_ID = "medievalorigins";
+
+	public static void resourceOverrides() {
+		ResourceLocation id = MedievalOrigins.loc("tag_loader");
+		ModContainer container = getModContainer(id);
+		ResourceManagerHelper.registerBuiltinResourcePack(id, container, ResourcePackActivationType.DEFAULT_ENABLED);
+	}
+
+	private static ModContainer getModContainer(ResourceLocation pack) {
+		if (FabricLoader.getInstance().isDevelopmentEnvironment()) {
+			for (ModContainer mod : FabricLoader.getInstance().getAllMods()) {
+				if (mod.findPath("resourcepacks/" + pack.getPath()).isPresent()) {
+					LOGGER.info("LOADING DEV ENVIRONMENT DATAPACK");
+					return mod;
+				}
+			}
+		}
+		return FabricLoader.getInstance().getModContainer(pack.getNamespace()).orElseThrow();
+	}
 
 	@Override
 	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
+
 		LOGGER.info("Loading Medieval Origins");
 		ModEnchantments.registerModEnchantments();
+		resourceOverrides();
 	}
+
+	public static ResourceLocation loc(String id) {
+		return new ResourceLocation("medievalorigins", id);
+	}
+
+	public static final String MOD_ID = "medievalorigins";
 }

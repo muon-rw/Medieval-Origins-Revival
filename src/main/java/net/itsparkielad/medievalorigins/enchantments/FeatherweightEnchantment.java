@@ -1,11 +1,11 @@
 package net.itsparkielad.medievalorigins.enchantments;
 
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.enchantment.EnchantmentTarget;
-import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.EnchantmentCategory;
 
 public class FeatherweightEnchantment extends Enchantment {
-    public FeatherweightEnchantment(Rarity weight, EnchantmentTarget type, EquipmentSlot... slotTypes) {
+    public FeatherweightEnchantment(Rarity weight, EnchantmentCategory type, EquipmentSlot... slotTypes) {
         super(weight, type, slotTypes);
     }
 
