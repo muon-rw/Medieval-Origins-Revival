@@ -16,6 +16,9 @@ repositories {
 	maven { url = "https://maven.nucleoid.xyz/" }
 	maven { url = 'https://maven.blamejared.com' }
 	maven { url = "https://maven.willbl.dev/releases" }
+	maven { url = "https://maven.terraformersmc.com/"}
+	maven {	url = 'https://maven.ladysnake.org/releases'}
+	maven {	url = "https://jitpack.io"	}
 }
 
 dependencies {
@@ -23,6 +26,9 @@ dependencies {
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+	// Origins Local
+	modImplementation fileTree(dir: '/libs/', include: '*.jar')
 
 	// AEA
 	modImplementation include("maven.modrinth:additionalentityattributes:${project.aea_version}")
@@ -36,6 +42,14 @@ dependencies {
 	// AutoTag
 	modImplementation ("com.github.apace100:autotag:${autotag_version}")
 	modImplementation ("com.github.apace100:autotag-api:${autotag_version}")
+	// Icarus + Trinkets/MidnightLib
+	modImplementation ("dev.emi:trinkets:${project.trinkets_version}")
+	modImplementation ("maven.modrinth:icarus:${project.icarus_version}")
+	modImplementation ("maven.modrinth:midnightlib:${project.midnightlib_version}")
+	// Pehkui
+	modApi("com.github.Virtuoel:Pehkui:${pehkui_version}", {
+		exclude group: "net.fabricmc.fabric-api"
+	})
 }
 
 processResources {
