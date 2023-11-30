@@ -1,12 +1,12 @@
 {
 	"powers": [
-		"windborne:entelexeia/wings",
-		"windborne:entelexeia/slow_flight",
-		"windborne:entelexeia/gliding",
-		"windborne:entelexeia/guardian",
-		"windborne:entelexeia/justice",
-		"windborne:entelexeia/passive",
-		"windborne:entelexeia/vegetarian"
+		"medievalorigins:entelexeia/wings",
+		"medievalorigins:entelexeia/slow_flight",
+		"medievalorigins:entelexeia/gliding",
+		"medievalorigins:entelexeia/guardian",
+		"medievalorigins:entelexeia/justice",
+		"medievalorigins:entelexeia/passive",
+		"medievalorigins:entelexeia/vegetarian"
 	],
 	"icon": "icarus:black_dragon_wings",
 	"order": 1,
