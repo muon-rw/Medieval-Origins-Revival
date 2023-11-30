@@ -1,8 +1,16 @@
 {
-	"type": "medievalorigins:wings",
-	"wings_type": "icarus:white_feathered_wings",
-	"speed": 0.02,
-	"armor_slow_multiplier": 3,
-	"can_fly": true,
-	"armor_slows": true
+    "type": "origins:action_on_callback",
+    "entity_action_gained": {
+        "type": "origins:execute_command",
+        "command": "function medievalorigins:icarae_wings_set"
+    },
+    "entity_action_respawned": {
+        "type": "origins:execute_command",
+        "command": "function medievalorigins:icarae_wings_set"
+    },
+    "entity_action_lost": {
+        "type": "origins:execute_command",
+        "command": "function medievalorigins:wings_clear"
+    },
+    "execute_chosen_when_orb": true
 }
