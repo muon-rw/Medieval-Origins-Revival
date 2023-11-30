@@ -1,12 +1,12 @@
 {
 	"powers": [
-                "medievalorigins:plague_victim/foul_aura",
-		"medievalorigins:plague_victim/plague_immunity",
-                "medievalorigins:plague_victim/risk_of_transmission",
-                "medievalorigins:plague_victim/contagious",
-                "medievalorigins:plague_victim/insomniac",
-                "medievalorigins:plague_victim/sensitive_skin",
-                "medievalorigins:plague_victim/skin_and_bones"
+                "medievalorigins:draugr/foul_aura",
+		"medievalorigins:draugr/plague_immunity",
+                "medievalorigins:draugr/risk_of_transmission",
+                "medievalorigins:draugr/contagious",
+                "medievalorigins:draugr/insomniac",
+                "medievalorigins:draugr/sensitive_skin",
+                "medievalorigins:draugr/skin_and_bones"
 	],
 	"icon": "minecraft:soul_sand",
 	"impact": 2,

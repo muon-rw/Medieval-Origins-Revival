@@ -1,0 +1,1 @@
+trinkets set chest cape 0 icarus:white_feathered_wings{Unbreakable:1b,display:{Name:'[{"text":"Icarae Wings","italic":false,"color":"white"}]',Lore:['[{"text":"These are your wings, you can\'t remove them.","italic":false,"color":"gray"}]']},Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}],HideFlags:5}

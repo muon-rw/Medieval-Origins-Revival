@@ -1,0 +1,14 @@
+{
+	"powers": [
+		"windborne:entelexeia/wings",
+		"windborne:entelexeia/slow_flight",
+		"windborne:entelexeia/gliding",
+		"windborne:entelexeia/guardian",
+		"windborne:entelexeia/justice",
+		"windborne:entelexeia/passive",
+		"windborne:entelexeia/vegetarian"
+	],
+	"icon": "icarus:black_dragon_wings",
+	"order": 1,
+	"impact": 3
+}

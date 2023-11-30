@@ -395,7 +395,19 @@
   "power.medievalorigins.yeti/winter_body.description": "Yetis are marginally taller than a regular human, and significantly wider.",
 
 
- 
+  "origin.medievalorigins.icarae.name": "Icarae",
+  "origin.medievalorigins.icarae.description": "Carnivorous bird people, Icarae fly low to the ground, weaving between and through obstacles to hunt their prey.",
+  "origin.medievalorigins.entelexeia.name": "Entelexeia",
+  "origin.medievalorigins.entelexeia.description": "The Entelexeia are an enigmatic race of dragon-like beings that dwell in secluded corners of the world. Their towering presence exudes an aura of wisdom, serenity, and boundless compassion. \n\nThey are often revered as guardians of nature and keepers of ancient, esoteric knowledge.",
+  "power.medievalorigins.icarae/wings.name": "Feathered",
+  "power.medievalorigins.icarae/wings.description": "Icarae are born with white feathered wings, and are quicker in the air than all others and capable of propelling themselves upward.\n\nHowever, this exhausts a lot of hunger, and they can't fly when low on energy.",
+  "power.medievalorigins.icarae/hollow_boned.name": "Hollow Boned",
+  "power.medievalorigins.icarae/hollow_boned.description": "Icarae evolved hollow bones for speed and efficiency, but this has left them more vulnerable to damage.",
+  "power.medievalorigins.entelexeia/passive.name": "Guardian's Oath",
+  "power.medievalorigins.entelexeia/passive.description": "Entelexeia refuse to harm innocent beings, they cannot damage passive mobs or eat meat.",
+
+
+
 
   "power.medievalorigins.class/rogue/dagger_bonus.name": "Cutthroat",
   "power.medievalorigins.class/rogue/dagger_bonus.description": "Rogues are most efficient wielding a light and easy to conceal weapon. They deal more damage with daggers and knives.",
@@ -410,7 +422,7 @@
   "enchantment.medievalorigins.featherweight.desc": "With this enchantment applied to heavy armor, it can be worn by Arachnae and Elven origins",
 
   "enchantment.medievalorigins.mirroring": "Mirroring",
-  "enchantment.medievalorigins.mirroring.desc": "Prevents the player from being petrified by a Gorgon's gaze",
+  "enchantment.medievalorigins.mirroring.desc": "When applied to a helmet, prevents the player from being petrified by a Gorgon's gaze",
 
 
 

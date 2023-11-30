@@ -1,0 +1,12 @@
+{
+    "hidden": true,
+    "type": "origins:modify_exhaustion",
+    "modifier": {
+        "name": "Increased flight exhaustion",
+        "operation": "multiply_base",
+        "value": 2.5
+    },
+	"condition": {
+		"type": "origins:fall_flying"
+	}
+}

@@ -1,0 +1,11 @@
+{
+    "type": "origins:modify_damage_dealt",
+    "modifier": {
+        "operation": "multiply_total_multiplicative",
+        "value": -1.0
+    },
+    "target_condition": {
+        "type": "origins:in_tag",
+        "tag": "medievalorigins:passive_mobs"
+    }
+}
