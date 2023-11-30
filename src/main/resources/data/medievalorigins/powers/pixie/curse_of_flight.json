@@ -2,7 +2,7 @@
     "type": "origins:restrict_armor",
     "chest": {
         "type": "origins:armor_value",
-        "comparison": "!=",
-        "compare_to": 0
+        "comparison": ">",
+        "compare_to": 3
     }
 }
