@@ -4,12 +4,12 @@
 		{
 			"attribute": "minecraft:generic.movement_speed",
 			"operation": "addition",
-			"value": -0.03
+			"value": -0.05
 		},
 		{
 			"attribute": "minecraft:generic.attack_speed",
-			"operation": "addition",
-			"value": -0.1
+			"operation": "multiply_total",
+			"value": -0.2
 		}
 	]
 }

@@ -60,6 +60,10 @@
 				{
 					"type": "origins:dimension",
 					"dimension": "paradise_lost:paradise_lost"
+				},
+				{
+					"type": "origins:dimension",
+					"dimension": "aether:the_aether"
 				}
 			]
 		}
