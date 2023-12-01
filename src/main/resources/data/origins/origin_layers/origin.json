@@ -1,12 +1,14 @@
 {
   "replace": false,
   "origins": [
+     "medievalorigins:alfiq",
      "medievalorigins:arachnae",
      "medievalorigins:banshee",
      "medievalorigins:incubus",
      "medievalorigins:dwarf",
      "medievalorigins:wood_elf",
      "medievalorigins:fae",
+     "medievalorigins:icarae",
      "medievalorigins:goblin",
      "medievalorigins:gorgon",
      "medievalorigins:moon_elf",
@@ -15,7 +17,6 @@
      "medievalorigins:pixie",
      "medievalorigins:plague_victim",
      "medievalorigins:siren",
-     "medievalorigins:yeti",
-     "medievalorigins:icarae"
+     "medievalorigins:yeti"
   ]
 }

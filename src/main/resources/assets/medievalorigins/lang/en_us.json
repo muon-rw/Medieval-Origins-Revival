@@ -1,4 +1,9 @@
 {
+  "origin.origins.human.description": "Humans are the youngest species, notoriously foolish but undoubtedly courageous. Their fate is more open than most.",
+
+  "origin.medievalorigins.alfiq.name": "Alfiq",
+  "origin.medievalorigins.alfiq.description": "Alfiq are a cunning race of anthropomorphic felines with sharp claws and excellent agility. May your roads lead to warm sands.",
+
   "origin.medievalorigins.arachnae.name": "Arachnae",
   "origin.medievalorigins.arachnae.description": "Arachnae have the strength of a man with the dexterity and cunning of a spider. A truly terrifying hunter.",
 
@@ -6,7 +11,7 @@
   "origin.medievalorigins.banshee.description": "Banshees are anguished spirits whose cries can shatter glass and drive people to madness. In myth, their presence is often considered an omen of death.",
 
   "origin.medievalorigins.incubus.name": "Incubus",
-  "origin.medievalorigins.incubus.description": "Incubi are evil servants of a dark power. Powerful in their own realm, but losing their soul has left them weak to pure sources.",
+  "origin.medievalorigins.incubus.description": "Incubi are evil servants of a dark power. Powerful in their own realm, but in exchange for this they have given up their soul, leaving them weak to pure sources.",
 
   "origin.medievalorigins.dwarf.name": "Dwarf",
   "origin.medievalorigins.dwarf.description": "Dwarves are practical, stocky, and prideful. They excel at mining and living underground, but struggle with the daylight. Rock and stone, brother.",
@@ -15,7 +20,7 @@
   "origin.medievalorigins.wood_elf.description": "Wood Elves are a wise, long-lived race in touch with the Earth. They are natural archers who excel in the forest, but are otherwise weak.",
 
   "origin.medievalorigins.fae.name": "Fae",
-  "origin.medievalorigins.fae.description": "Fae are short magical creatures, regarded as spirits of nature and said to haunt forests and lead travelers' astray",
+  "origin.medievalorigins.fae.description": "Fae are short magical creatures, regarded as spirits of nature and said to haunt forests and lead travelers' astray. They are equal parts mystic and trickster.",
 
   "origin.medievalorigins.goblin.name": "Goblin",
   "origin.medievalorigins.goblin.description": "Obsessed with gold and treasure, goblins tend to find a little more loot wherever they look, but their small size leaves them vulnerable in combat.",
@@ -36,10 +41,10 @@
   "origin.medievalorigins.plague_victim.description": "Carrier of the Plague, it affects the victim's daily life yet does not kill them. Used correctly, it can be a powerful weapon against their foes.",
 
   "origin.medievalorigins.siren.name": "Siren",
-  "origin.medievalorigins.siren.description": "Sirens have an ensnaring aura; their irresistible beauty is said to be the downfall of many a foolish sailor. Pity to those who confuse beauty with goodness...",
+  "origin.medievalorigins.siren.description": "Sirens have an ensnaring aura; their irresistible beauty is said to be the downfall of many a foolish sailor. Swim the waters and weave a tale of allure and danger.",
 
   "origin.medievalorigins.troll.name": "Troll",
-  "origin.medievalorigins.troll.description": "Large, lumbering beasts hailing from mountains, trolls are some of the most aggressive brutes in the land. But their tremendous size can be their downfall.",
+  "origin.medievalorigins.troll.description": "Large, lumbering beasts hailing from mountains, trolls are some of the most aggressive brutes to roam the land. ",
 
   "origin.medievalorigins.yeti.name": "Yeti",
   "origin.medievalorigins.yeti.description": "Lumbering giants of frosty peaks, the Yeti's icy nature allows them to stop almost any foe, but can leave them vulnerable to fiery attacks.",
@@ -129,6 +134,9 @@
 
   "power.medievalorigins.dwarf/potent_brew.name": "Potent Brew",
   "power.medievalorigins.dwarf/potent_brew.description": "Dwarves are notorious for their powerful drinks which would knock out someone twice their size. Activate to take a swig and fully restore health.",
+
+  "power.medievalorigins.human/description.name": "Note",
+  "power.medievalorigins.human/description.description": "Humans have no changes from the base game, but any origin can still select a class.",
 
   "power.medievalorigins.wood_elf/archer.name": "Natural Archer",
   "power.medievalorigins.wood_elf/archer.description": "Wood Elves spend their whole lives training with bows - their arrows are always more deadly.",
