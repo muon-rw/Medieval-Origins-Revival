@@ -3,5 +3,23 @@
     "entity_action_chosen": {
         "type": "origins:execute_command",
         "command": "origin gui @s medievalorigins:wizard_subclasses"
+    },
+    "condition": {
+        "type": "origins:or",
+        "inverted": true,
+        "conditions": [
+            {
+                "type": "origins:origin",
+                "origin": "medievalorigins:class/wizard/arcanist"
+            },
+            {
+                "type": "origins:origin",
+                "origin": "medievalorigins:class/wizard/pyromancer"
+            },
+            {
+                "type": "origins:origin",
+                "origin": "medievalorigins:class/wizard/cryomancer"
+            }
+        ]
     }
 }

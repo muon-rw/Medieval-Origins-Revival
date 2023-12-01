@@ -19,6 +19,11 @@ repositories {
 	maven { url = "https://maven.terraformersmc.com/"}
 	maven {	url = 'https://maven.ladysnake.org/releases'}
 	maven {	url = "https://jitpack.io"	}
+	maven { url "https://maven.shedaniel.me" }
+	maven { url "https://maven.bai.lol" }
+	maven { url 'https://maven.kosmx.dev/' }
+	maven { url 'https://libs.azuredoom.com:4443/mods' }
+	maven { url "https://maven.parchmentmc.org" }
 }
 
 dependencies {

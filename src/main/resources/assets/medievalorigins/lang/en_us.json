@@ -26,9 +26,6 @@
   "origin.medievalorigins.moon_elf.name": "Moon Elf",
   "origin.medievalorigins.moon_elf.description": "Mysterious, ethereal beings not of this world. They're named not for their homeland, but rather the only thing their victims see before they kill them.",
 
-  "origin.medievalorigins.necromancer.name": "Necromancer",
-  "origin.medievalorigins.necromancer.description": "Deeply implanted in the forbidden art of raising the dead, a Necromancer can raise an army from nothing. But this morbid relationship with death comes with consequences.",
-
   "origin.medievalorigins.ogre.name": "Ogre",
   "origin.medievalorigins.ogre.description": "Ogres are a large, short-tempered, and brutish subspecies of Orc. Their lumbering size and limited intelligence are made up for by their raw strength.",
 
@@ -137,7 +134,7 @@
   "power.medievalorigins.wood_elf/archer.description": "Wood Elves spend their whole lives training with bows - their arrows are always more deadly.",
 
   "power.medievalorigins.wood_elf/forest_vision.name": "Forest Vision",
-  "power.medievalorigins.wood_elf/forest_vision.description": "After centuries in the grove, Wood Elves are well adapted to be among nature. While in forests or flowers, they can crouch to gain night vision while becoming undetectable.",
+  "power.medievalorigins.wood_elf/forest_vision.description": "After centuries in the grove, Wood Elves are well adapted to be among nature. While in tall shrubbery or leaves, they can crouch to gain night vision while becoming undetectable.",
 
   "power.medievalorigins.wood_elf/eagle_eyed.name": "Eagle Eyed",
   "power.medievalorigins.wood_elf/eagle_eyed.description": "Wood Elves' enhanced perception allows them to keep track of an enemy for a while after hitting them, even when they aren't in view.",
@@ -225,30 +222,6 @@
 
   "power.medievalorigins.moon_elf/towering.name": "Towering",
   "power.medievalorigins.moon_elf/towering.description": "Moon Elves are about the same height as their distant relatives of the forest, making them slightly taller than humans.",
-
-  "power.medievalorigins.necromancer/black_thumb.name": "Black Thumb",
-  "power.medievalorigins.necromancer/black_thumb.description": "Necromancers only work with death. They cannot harvest any crops, they wilt at their deathly touch.",
-
-  "power.medievalorigins.necromancer/disturbed.name": "Disturbed",
-  "power.medievalorigins.necromancer/disturbed.description": "Learning the art of necromancy is traumatising. Necromancers cannot sleep, too scared to dream of what they wish they did not know.",
-
-  "power.medievalorigins.necromancer/hellraiser.name": "Hellraiser",
-  "power.medievalorigins.necromancer/hellraiser.description": "At will, a necromancer can raise a circle of skeletons, acting as a shield to block projectiles. This only lasts for a short time.",
-
-  "power.medievalorigins.necromancer/impervious.name": "Impervious",
-  "power.medievalorigins.necromancer/impervious.description": "The study of death has made Necromancers immune to poison, wither and instant damage. Unfortunately, this also means they do not recieve the positive effects from regeneration and instant health.",
-
-  "power.medievalorigins.necromancer/poor_reputation.name": "Poor Reputation",
-  "power.medievalorigins.necromancer/poor_reputation.description": "Unfortunately, students of the dark arts are feared by the general populace. Villagers will refuse to trade with Necromancers and iron golems will attack them on sight. This does, however, come with the bonus that they are accepted amongst the ranks of the Pillagers.",
-
-  "power.medievalorigins.necromancer/resilient.name": "Resilient",
-  "power.medievalorigins.necromancer/resilient.description": "Learning about death goes a long way towards avoiding it. Necromancers have increased health.",
-
-  "power.medievalorigins.necromancer/siphon.name": "Siphon",
-  "power.medievalorigins.necromancer/siphon.description": "Rip out some of your soul and radiate it into a field around you, strengthening any mob which is not hostile to you, at a cost.",
-
-  "power.medievalorigins.necromancer/unguarded.name": "Unguarded",
-  "power.medievalorigins.necromancer/unguarded.description": "Enveloping oneself in the arcane leaves you open to attack in the physical realm. Most mobs deal more damage to necromancers.",
 
   "power.medievalorigins.ogre/gargantuan.name": "Gargantuan",
   "power.medievalorigins.ogre/gargantuan.description": "Ogre always been called big. All ogre know is ogre can't fit through door.",
@@ -412,18 +385,6 @@
   "power.medievalorigins.entelexeia/passive.description": "Entelexeia refuse to harm innocent beings, they cannot damage passive mobs or eat meat.",
 
 
-
-
-
-  "power.medievalorigins.class/rogue/dagger_bonus.name": "Cutthroat",
-  "power.medievalorigins.class/rogue/dagger_bonus.description": "Rogues are most efficient wielding a light and easy to conceal weapon. They deal more damage with daggers and knives.",
-
-  "power.medievalorigins.class/ranger/empowered_shot.name": "Focus",
-  "power.medievalorigins.class/ranger/empowered_shot.description": "After charging for a few seconds, release an arrow at tremendous velocity, piercing enemies, flying further, and dealing significantly more damage.",
-
-
-
-
   "enchantment.medievalorigins.featherweight": "Featherweight",
   "enchantment.medievalorigins.featherweight.desc": "With this enchantment applied to heavy armor, it can be worn by Arachnae and Elven origins",
 
@@ -453,5 +414,68 @@
 
   "medievalorigins.self_wither": "Withered while holding",
 
-  "medievalorigins.uncastable": "You can't use this ability right now."
+  "medievalorigins.uncastable": "You can't use this ability right now.",
+
+
+
+
+
+  "layer.origins.class.name": "Path",
+  "layer.medievalorigins.wizard_sublclasses.name": "Specialization",
+  "origin.medievalorigins.class/cleric.name": "Cleric",
+  "origin.medievalorigins.class/cleric.description": "A caster who specializes in healing, shielding, and supportive magics. Clerics have a bountiful relationship with Villagers.",
+
+
+  "origin.medievalorigins.class/necromancer.name": "Necromancer",
+  "origin.medievalorigins.class/necromancer.description": "A social outcast obsessed with the forbidden art of raising the dead. Necromancers have access to unnatural power, but at great cost.",
+
+  "power.medievalorigins.class/necromancer/black_thumb.name": "Black Thumb",
+  "power.medievalorigins.class/necromancer/black_thumb.description": "Necromancers only work with death. They cannot harvest any crops, they wilt at their deathly touch.",
+
+  "power.medievalorigins.class/necromancer/disturbed.name": "Disturbed",
+  "power.medievalorigins.class/necromancer/disturbed.description": "Learning the art of necromancy is traumatising. Necromancers cannot sleep, too scared to dream of what they wish they did not know.",
+
+  "power.medievalorigins.class/necromancer/hellraiser.name": "Hellraiser",
+  "power.medievalorigins.class/necromancer/hellraiser.description": "At will, a necromancer can raise a circle of skeletons, acting as a shield to block projectiles. This only lasts for a short time.",
+
+  "power.medievalorigins.class/necromancer/impervious.name": "Impervious",
+  "power.medievalorigins.class/necromancer/impervious.description": "The study of death has made Necromancers immune to poison, wither and instant damage. Unfortunately, this also means they do not recieve the positive effects from regeneration and instant health.",
+
+  "power.medievalorigins.class/necromancer/poor_reputation.name": "Poor Reputation",
+  "power.medievalorigins.class/necromancer/poor_reputation.description": "Unfortunately, students of the dark arts are feared by the general populace. Villagers will refuse to trade with Necromancers and iron golems will attack them on sight. This does, however, come with the bonus that they are accepted amongst the ranks of the Pillagers.",
+
+  "power.medievalorigins.class/necromancer/resilient.name": "Resilient",
+  "power.medievalorigins.class/necromancer/resilient.description": "Learning about death goes a long way towards avoiding it. Necromancers have increased health.",
+
+  "power.medievalorigins.class/necromancer/siphon.name": "Siphon",
+  "power.medievalorigins.class/necromancer/siphon.description": "Rip out some of your soul and radiate it into a field around you, strengthening any mob which is not hostile to you, at a cost.",
+
+  "power.medievalorigins.class/necromancer/unguarded.name": "Unguarded",
+  "power.medievalorigins.class/necromancer/unguarded.description": "Enveloping oneself in the arcane leaves you open to attack in the physical realm. Most mobs deal more damage to necromancers.",
+
+  "origin.medievalorigins.class/warrior.name": "Warrior",
+  "origin.medievalorigins.class/warrior.description": "A powerful and versatile soldier who takes pride in close-range combat. Warriors are strong but less effective with magic and ranged weaponry.",
+
+  "origin.medievalorigins.class/bard.name": "Bard",
+  "origin.medievalorigins.class/bard.description": "Bard Description",
+
+  "origin.medievalorigins.class/wizard.name": "Wizard",
+  "origin.medievalorigins.class/wizard.description": "Wizard Description",
+
+  "origin.medievalorigins.class/ranger.name": "Ranger",
+  "origin.medievalorigins.class/ranger.description": "Ranger Description",
+  
+  
+  "origin.medievalorigins.class/paladin.name": "Paladin",
+  "origin.medievalorigins.class/paladin.description": "Paladin Description",
+  
+  "origin.medievalorigins.class/rogue.name": "Rogue",
+  "origin.medievalorigins.class/rogue.description": "Rogue Description",
+
+  "power.medievalorigins.class/rogue/dagger_bonus.name": "Cutthroat",
+  "power.medievalorigins.class/rogue/dagger_bonus.description": "Rogues are most efficient wielding a light and easy to conceal weapon. They deal more damage with daggers and knives.",
+
+  "power.medievalorigins.class/ranger/empowered_shot.name": "Focus",
+  "power.medievalorigins.class/ranger/empowered_shot.description": "After charging for a few seconds, release an arrow at tremendous velocity, piercing enemies, flying further, and dealing significantly more damage."
+
 }

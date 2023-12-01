@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    {"id": "#minecraft:flowers", "required": false},
+    {"id": "#minecraft:leaves", "required": false},
+    {"id": "#c:crops","required": false},
+    {"id": "minecraft:tall_grass","required": false},
+    {"id": "minecraft:large_fern","required": false},
+    "minecraft:wheat"
+  ]
+}

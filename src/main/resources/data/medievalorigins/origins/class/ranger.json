@@ -2,6 +2,7 @@
     "powers": [
         "medievalorigins:class/ranger/empowered_shot",
         "medievalorigins:class/ranger/empowered_shot_zenith",
+        "medievalorigins:class/ranger/empowered_shot_apoth",
         "medievalorigins:class/ranger/gear_spawn"
     ],
     "icon": {

@@ -4,25 +4,17 @@
 		"type": "origins:and",
 		"conditions": [
 			{
-				"type": "origins:or",
-				"conditions": [
-					{
-						"type": "origins:biome",
-						"condition": {
-							"type": "origins:in_tag",
-							"tag": "minecraft:is_forest"
-						}
-					},
-					{
-						"type": "origins:in_block_anywhere",
-						"block_condition": {
-							"type": "origins:in_tag",
-							"tag": "minecraft:flowers"
-						},
+				"type": "origins:in_block",
+				"block_condition": {
+					"type": "origins:offset",
+					"y": 1,
+					"condition": {
+						"type": "origins:in_tag",
+						"tag": "medievalorigins:cover",
 						"comparison": ">=",
 						"compare_to": 1
 					}
-				]
+				}
 			},
 			{
 				"type": "origins:sneaking"
