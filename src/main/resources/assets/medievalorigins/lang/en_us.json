@@ -5,7 +5,7 @@
   "origin.medievalorigins.alfiq.description": "Alfiq are a cunning race of anthropomorphic felines with sharp claws and excellent agility. May your roads lead to warm sands.",
 
   "origin.medievalorigins.arachnae.name": "Arachnae",
-  "origin.medievalorigins.arachnae.description": "Arachnae have the strength of a man with the dexterity and cunning of a spider. A truly terrifying hunter.",
+  "origin.medievalorigins.arachnae.description": "A grotesque amalgamation of spider and human, with venomous fangs and bristled feet yet the ability to walk upright and wield weaponry.",
 
   "origin.medievalorigins.banshee.name": "Banshee",
   "origin.medievalorigins.banshee.description": "Banshees are anguished spirits whose cries can shatter glass and drive people to madness. In myth, their presence is often considered an omen of death.",
@@ -17,16 +17,16 @@
   "origin.medievalorigins.dwarf.description": "Dwarves are practical, stocky, and prideful. They excel at mining and living underground, but struggle with the daylight. Rock and stone, brother.",
 
   "origin.medievalorigins.wood_elf.name": "Wood Elf",
-  "origin.medievalorigins.wood_elf.description": "Wood Elves are a wise, long-lived race in touch with the Earth. They are natural archers who excel in the forest, but are otherwise weak.",
+  "origin.medievalorigins.wood_elf.description": "Wood Elves are a wise, long-lived race in who live in harmony with the Earth. They are quick with a sword and bow and excel in the forest, but are otherwise weak.",
 
   "origin.medievalorigins.fae.name": "Fae",
   "origin.medievalorigins.fae.description": "Fae are short magical creatures, regarded as spirits of nature and said to haunt forests and lead travelers' astray. They are equal parts mystic and trickster.",
 
   "origin.medievalorigins.goblin.name": "Goblin",
-  "origin.medievalorigins.goblin.description": "Obsessed with gold and treasure, goblins tend to find a little more loot wherever they look, but their small size leaves them vulnerable in combat.",
+  "origin.medievalorigins.goblin.description": "Goblins are obsessed with gold and treasure and tend to find a little more loot wherever they look, but their small size leaves them vulnerable in combat.",
 
   "origin.medievalorigins.gorgon.name": "Gorgon",
-  "origin.medievalorigins.gorgon.description": "Gorgons were humans cursed by the Gods. With hair made of writhing snakes and a horrifying visage said to petrify those who witness it, Gorgons are often called monsters.",
+  "origin.medievalorigins.gorgon.description": "Gorgons are sisters with hair made of writhing snakes and a horrifying visage said to petrify those who witness it.",
 
   "origin.medievalorigins.moon_elf.name": "Moon Elf",
   "origin.medievalorigins.moon_elf.description": "Mysterious, ethereal beings not of this world. They're named not for their homeland, but rather the only thing their victims see before they kill them.",
@@ -35,16 +35,16 @@
   "origin.medievalorigins.ogre.description": "Ogres are a large, short-tempered, and brutish subspecies of Orc. Their lumbering size and limited intelligence are made up for by their raw strength.",
 
   "origin.medievalorigins.pixie.name": "Pixie",
-  "origin.medievalorigins.pixie.description": "Often considered harbingers of good fortune, but also tricky, untrustworthy agents of mischief. Pixies are tiny at less than half a meter tall.",
+  "origin.medievalorigins.pixie.description": "Often considered harbingers of good fortune, but also tricky, untrustworthy agents of mischief. Pixies are the tiniest origin in the land.",
 
-  "origin.medievalorigins.plague_victim.name": "Plague Victim",
-  "origin.medievalorigins.plague_victim.description": "Carrier of the Plague, it affects the victim's daily life yet does not kill them. Used correctly, it can be a powerful weapon against their foes.",
+  "origin.medievalorigins.draugr.name": "Draugr",
+  "origin.medievalorigins.draugr.description": "A disease-ridden half-dead creature, cursed and trapped in eternal suffering as a result of a failed demonic deal involving necromancy.",
 
   "origin.medievalorigins.siren.name": "Siren",
   "origin.medievalorigins.siren.description": "Sirens have an ensnaring aura; their irresistible beauty is said to be the downfall of many a foolish sailor. Swim the waters and weave a tale of allure and danger.",
 
   "origin.medievalorigins.troll.name": "Troll",
-  "origin.medievalorigins.troll.description": "Large, lumbering beasts hailing from mountains, trolls are some of the most aggressive brutes to roam the land. ",
+  "origin.medievalorigins.troll.description": "Large, lumbering beasts hailing from mountains, trolls are aggressive brutes who prefer living and fighting alone.",
 
   "origin.medievalorigins.yeti.name": "Yeti",
   "origin.medievalorigins.yeti.description": "Lumbering giants of frosty peaks, the Yeti's icy nature allows them to stop almost any foe, but can leave them vulnerable to fiery attacks.",
@@ -429,7 +429,7 @@
 
 
   "layer.origins.class.name": "Path",
-  "layer.medievalorigins.wizard_sublclasses.name": "Specialization",
+  "layer.medievalorigins.wizard_subclasses.name": "Specialization",
   "origin.medievalorigins.class/cleric.name": "Cleric",
   "origin.medievalorigins.class/cleric.description": "A caster who specializes in healing, shielding, and supportive magics. Clerics have a bountiful relationship with Villagers.",
 
@@ -472,7 +472,9 @@
 
   "origin.medievalorigins.class/ranger.name": "Ranger",
   "origin.medievalorigins.class/ranger.description": "Ranger Description",
-  
+
+  "power.medievalorigins.class/ranger/empowered_shot.name": "Focus",
+  "power.medievalorigins.class/ranger/empowered_shot.description": "After charging for a few seconds, release an arrow at tremendous velocity, piercing enemies, flying further, and dealing significantly more damage.",
   
   "origin.medievalorigins.class/paladin.name": "Paladin",
   "origin.medievalorigins.class/paladin.description": "Paladin Description",
@@ -481,9 +483,6 @@
   "origin.medievalorigins.class/rogue.description": "Rogue Description",
 
   "power.medievalorigins.class/rogue/dagger_bonus.name": "Cutthroat",
-  "power.medievalorigins.class/rogue/dagger_bonus.description": "Rogues are most efficient wielding a light and easy to conceal weapon. They deal more damage with daggers and knives.",
-
-  "power.medievalorigins.class/ranger/empowered_shot.name": "Focus",
-  "power.medievalorigins.class/ranger/empowered_shot.description": "After charging for a few seconds, release an arrow at tremendous velocity, piercing enemies, flying further, and dealing significantly more damage."
+  "power.medievalorigins.class/rogue/dagger_bonus.description": "Rogues are most efficient wielding a light and easy to conceal weapon. They deal more damage with daggers and knives."
 
 }
