@@ -430,9 +430,24 @@
 
   "layer.origins.class.name": "Path",
   "layer.medievalorigins.wizard_subclasses.name": "Specialization",
+
   "origin.medievalorigins.class/cleric.name": "Cleric",
   "origin.medievalorigins.class/cleric.description": "A caster who specializes in healing, shielding, and supportive magics. Clerics have a bountiful relationship with Villagers.",
 
+  "power.medievalorigins.class/cleric/spell_power.name": "Holy",
+  "power.medievalorigins.class/cleric/spell_power.description": "Clerics have an innate boost to Healing Spell Power",
+
+  "power.medievalorigins.class/cleric/village_friendly.name": "Village Friendly",
+  "power.medievalorigins.class/cleric/village_friendly.description": "",
+
+  "power.medievalorigins.class/cleric/instant_cure.name": "Instant Cure",
+  "power.medievalorigins.class/cleric/instant_cure.description": "",
+
+  "power.medievalorigins.class/cleric/water_walk.name": "Water Walk",
+  "power.medievalorigins.class/cleric/water_walk.description": "",
+
+  "power.medievalorigins.class/cleric/heal_pool.name": "Heal Pool",
+  "power.medievalorigins.class/cleric/heal_pool.description": "",
 
   "origin.medievalorigins.class/necromancer.name": "Necromancer",
   "origin.medievalorigins.class/necromancer.description": "A social outcast obsessed with the forbidden art of raising the dead. Necromancers have access to unnatural power, but at great cost.",
