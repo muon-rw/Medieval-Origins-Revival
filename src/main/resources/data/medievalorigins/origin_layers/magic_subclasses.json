@@ -1,0 +1,18 @@
+{
+    "replace": false,
+    "order": 2,
+    "origins": [
+        {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "medievalorigins:high_elf",
+                "layer": "origins:origin"
+            },
+            "origins": [
+                "medievalorigins:magic_subclasses/arcanist",
+                "medievalorigins:magic_subclasses/pyromancer",
+                "medievalorigins:magic_subclasses/cryomancer"
+            ]
+        }
+    ]
+}

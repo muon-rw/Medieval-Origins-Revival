@@ -21,18 +21,31 @@
 	},
 	"entity_action": {
 		"type": "origins:apply_effect",
-		"effect": {
-			"effect": "minecraft:blindness",
-			"is_ambient": true,
-			"show_particles": false,
-			"show_icon": false,
-			"amplifier": 2,
-			"duration": 250
-		}
+		"effects": [
+			{
+				"effect": "minecraft:blindness",
+				"is_ambient": true,
+				"show_particles": false,
+				"show_icon": false,
+				"amplifier": 2,
+				"duration": 250
+			},
+			{
+				"effect": "minecraft:nausea",
+				"is_ambient": true,
+				"show_particles": false,
+				"show_icon": false,
+				"amplifier": 0,
+				"duration": 250
+			}
+		]
 	},
 	"falling_action": {
 		"type": "origins:clear_effect",
-		"effect": "minecraft:blindness"
+		"effects": [
+			"minecraft:blindness",
+			"minecraft:nausea"
+		]
 	},
 	"interval": 20
 }

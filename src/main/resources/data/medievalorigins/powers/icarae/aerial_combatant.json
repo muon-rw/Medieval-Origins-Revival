@@ -1,0 +1,23 @@
+{
+    "type": "origins:modify_damage_dealt",
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:fall_flying"
+            },
+            {
+                "type": "origins:moving"
+            }
+        ]
+    },
+    "modifier": {
+        "name": "In-Flight Damage Boost",
+        "operation": "multiply_base_multiplicative",
+        "value": 0.75
+    },
+    "bientity_action": {
+        "type": "origins:add_velocity",
+        "z": 0.5
+    }
+}

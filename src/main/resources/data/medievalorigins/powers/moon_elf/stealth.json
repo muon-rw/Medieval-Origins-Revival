@@ -38,6 +38,44 @@
 			]
 		}
 	},
+	"stealth_shoot_bonus": {
+		"type": "origins:modify_projectile_damage",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 1.0
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:invisible"
+				},
+				{
+					"type": "origins:sneaking"
+				},
+				{
+					"type": "origins:resource",
+					"resource": "medievalorigins:moon_elf/stealth_cooldown",
+					"comparison": "<",
+					"compare_to": 1
+				}
+			]
+		},
+		"self_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:clear_effect",
+					"effect": "minecraft:invisibility"
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "medievalorigins:moon_elf/stealth_cooldown",
+					"change": 100
+				}
+			]
+		}
+	},
 	"meter": {
 		"type": "origins:resource",
 		"min": 0,

@@ -19,13 +19,5 @@
          "type": "origins:predicate",
          "predicate": "medievalorigins:dodge_chance"
       }
-   },
-	"extra_roll": {
-		"type": "origins:attribute",
-		"modifier": {
-			"attribute": "combatroll:charge",
-			"value": 1,
-			"operation": "addition"
-		}
-	}
+   }
 }

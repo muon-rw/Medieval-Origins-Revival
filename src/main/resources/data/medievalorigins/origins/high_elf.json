@@ -1,0 +1,12 @@
+{
+    "powers": [
+        "medievalorigins:high_elf/subclass_picker",
+        "medievalorigins:high_elf/elegant",
+        "medievalorigins:high_elf/fragile",
+        "medievalorigins:high_elf/towering"
+    ],
+    "icon": {
+        "item": "wizards:staff_wizard"
+    },
+    "impact": 3
+}

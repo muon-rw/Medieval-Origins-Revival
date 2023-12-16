@@ -1,0 +1,69 @@
+{
+    "type": "origins:multiple",
+    "increase_grounded": {
+        "type": "origins:modify_velocity",
+        "modifier": {
+            "operation": "multiply_total_multiplicative",
+            "value": 0.25
+        },
+        "axes": [
+            "x",
+            "y",
+            "z"
+        ],
+        "condition": {
+            "type": "origins:block_in_radius",
+            "block_condition": {
+                "type": "origins:movement_blocking"
+            },
+            "radius": 4,
+            "shape": "sphere",
+            "comparison": ">=",
+            "compare_to": 1
+        }
+    },
+    "decrease_airborne_strong": {
+        "type": "origins:modify_velocity",
+        "modifier": {
+            "operation": "multiply_total_multiplicative",
+            "value": -0.4
+        },
+        "axes": [
+            "x",
+            "y",
+            "z"
+        ],
+        "condition": {
+            "type": "origins:block_in_radius",
+            "block_condition": {
+                "type": "origins:movement_blocking"
+            },
+            "radius": 16,
+            "shape": "sphere",
+            "comparison": "==",
+            "compare_to": 0
+        }
+    },
+    "decrease_airborne": {
+        "type": "origins:modify_velocity",
+        "modifier": {
+            "operation": "multiply_total_multiplicative",
+            "value": -0.25
+        },
+        "axes": [
+            "x",
+            "y",
+            "z"
+        ],
+        "condition": {
+            "type": "origins:block_in_radius",
+            "block_condition": {
+                "type": "origins:movement_blocking"
+            },
+            "radius": 9,
+            "shape": "sphere",
+            "comparison": "==",
+            "compare_to": 0
+        }
+    }
+}

@@ -1,5 +1,7 @@
 {
 	"powers": [
+                "origins:master_of_webs",
+                "origins:arthropod",
                 "medievalorigins:arachnae/climber",
 		"medievalorigins:arachnae/many_eyes",
                 "medievalorigins:arachnae/venomous_bite",

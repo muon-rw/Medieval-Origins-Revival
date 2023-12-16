@@ -1,0 +1,19 @@
+{
+	"type": "origins:multiple",
+	"health_lower": {
+		"type": "origins:attribute",
+		"modifier": {
+			"name": "Origin modifier",
+			"attribute": "minecraft:generic.max_health",
+			"value": -6,
+			"operation": "addition"
+		}
+	},
+	"vulnerable": {
+		"type": "origins:modify_damage_taken",
+		"modifier": {
+			"operation": "multiply_base",
+			"value": 0.25
+		}
+	}
+}

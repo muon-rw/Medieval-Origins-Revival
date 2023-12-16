@@ -1,0 +1,9 @@
+{
+    "powers": [
+        "medievalorigins:class/wizard/arcanist/spell_power"
+    ],
+    "icon": {
+        "item": "wizards:arcane_spell_book"
+    },
+    "impact": 2
+}

@@ -1,0 +1,15 @@
+{
+	"powers": [
+		"medievalorigins:alfiq/on_your_feet",
+                "medievalorigins:alfiq/crepuscular",
+                "medievalorigins:alfiq/pounce",
+                "medievalorigins:alfiq/clawed",
+                "origins:carnivore",
+                "origins:velvet_paws",
+                "origins:scare_creepers",
+                "medievalorigins:alfiq/milk_drinker"
+	],
+	"icon": "minecraft:ender_eye",
+	"impact": 2,
+        "order": 1
+}

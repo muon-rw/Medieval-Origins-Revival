@@ -5,7 +5,7 @@
 		"modifier": {
 			"name": "Health Penalty",
 			"attribute": "minecraft:generic.max_health",
-			"value": -6.0,
+			"value": -2.0,
 			"operation": "addition"
 		}
 	},

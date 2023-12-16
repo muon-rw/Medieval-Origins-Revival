@@ -1,0 +1,17 @@
+{
+	"powers": [
+		"medievalorigins:icarae/wings",
+		"medievalorigins:icarae/weaver",
+		"medievalorigins:icarae/aerial_combatant",
+		"medievalorigins:icarae/hollow_boned",
+		"medievalorigins:icarae/flight_speed",
+		"origins:no_shield",
+		"origins:carnivore",
+		"origins:fresh_air",
+		"medievalorigins:icarae/flight_hunger",
+		"medievalorigins:icarae/armor_restriction"
+	],
+	"icon": "icarus:white_feathered_wings",
+	"order": 1,
+	"impact": 3
+}

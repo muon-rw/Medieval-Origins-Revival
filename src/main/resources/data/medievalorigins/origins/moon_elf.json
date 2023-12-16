@@ -7,7 +7,8 @@
                 "medievalorigins:moon_elf/elegant",
                 "medievalorigins:moon_elf/nimble",
                 "medievalorigins:moon_elf/fragile",
-                "medievalorigins:moon_elf/towering"
+                "medievalorigins:moon_elf/towering",
+                "medievalorigins:moob_elf/combatroll"
         ],
         "icon": {
                 "item": "minecraft:amethyst_cluster"
