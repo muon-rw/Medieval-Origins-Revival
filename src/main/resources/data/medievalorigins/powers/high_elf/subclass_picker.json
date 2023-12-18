@@ -10,7 +10,7 @@
         "conditions": [
             {
                 "type": "origins:origin",
-                "origin": "medievalorigins:magic_subclasses/arcanist"
+                "origin": "medievalorigins:high_elf/arcanist"
             },
             {
                 "type": "origins:origin",
@@ -19,6 +19,10 @@
             {
                 "type": "origins:origin",
                 "origin": "medievalorigins:magic_subclasses/cryomancer"
+            },
+            {
+                "type": "origins:origin",
+                "origin": "medievalorigins:magic_subclasses/vitalist"
             }
         ]
     }

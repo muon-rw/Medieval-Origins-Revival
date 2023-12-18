@@ -1,24 +1,24 @@
 {
   "replace": false,
   "origins": [
-    "medievalorigins:alfiq",
+     "medievalorigins:alfiq",
      "medievalorigins:arachnae",
      "medievalorigins:banshee",
      "medievalorigins:icarae",
      "medievalorigins:incubus",
      "medievalorigins:draugr",
      "medievalorigins:dwarf",
-     "medievalorigins:wood_elf",
      "medievalorigins:fae",
      "medievalorigins:goblin",
      "medievalorigins:gorgon",
+     "medievalorigins:high_elf",
      "medievalorigins:moon_elf",
      "medievalorigins:necromancer",
      "medievalorigins:ogre",
      "medievalorigins:paladin",
      "medievalorigins:pixie",
-     "medievalorigins:seraphim",
      "medievalorigins:siren",
+     "medievalorigins:wood_elf",
      "medievalorigins:yeti"
   ]
 }
