@@ -33,19 +33,14 @@
             {
                 "type": "origins:ingredient",
                 "ingredient": {
-                    "item": "runes:healing_stone"
+                    "item": "minecraft:golden_apple"
                 }
-            },
-            {
-                "type": "origins:amount",
-                "comparison": ">=",
-                "compare_to": 5
             }
         ]
     },
     "held_item_action": {
         "type": "origins:consume",
-        "amount": 5
+        "amount": 1
     },
     "hands": [
         "main_hand"

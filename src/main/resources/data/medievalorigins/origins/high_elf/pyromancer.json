@@ -1,6 +1,8 @@
 {
     "powers": [
-        "medievalorigins:high_elf/pyromancer/spell_power"
+        "medievalorigins:high_elf/pyromancer/spell_power",
+        "medievalorigins:high_elf/pyromancer/extrusive_movement",
+        "medievalorigins:high_elf/pyromancer/gear_spawn"
     ],
     "icon": {
         "item": "wizards:fire_spell_book"

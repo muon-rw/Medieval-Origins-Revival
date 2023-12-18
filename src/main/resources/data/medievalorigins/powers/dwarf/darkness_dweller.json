@@ -10,12 +10,24 @@
 				"type": "origins:equipped_item",
 				"equipment_slot": "head",
 				"item_condition": {
-					"type": "origins:ingredient",
-					"ingredient": {
-						"tag": "medievalorigins:golden_armor"
-					}
-				},
-				"inverted": true
+					"type": "origins:or",
+					"inverted": true,
+					"conditions": [
+						{
+							"type": "origins:ingredient",
+							"ingredient": {
+								"tag": "medievalorigins:golden_armor"
+							}
+						},
+						{
+							"type": "origins:enchantment",
+							"enchantment": "medievalorigins:mirroring",
+							"calculation": "sum",
+							"comparison": ">=",
+							"compare_to": 1
+						}
+					]
+				}
 			}
 		]
 	},

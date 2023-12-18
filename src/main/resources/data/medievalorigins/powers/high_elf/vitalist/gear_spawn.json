@@ -7,7 +7,7 @@
             {
                 "type": "origins:give",
                 "stack": {
-                    "item": "minecraft:bow",
+                    "item": "paladins:holy_wand",
                     "amount": 1
                 },
                 "preferred_slot": "mainhand",
@@ -20,7 +20,7 @@
             {
                 "type": "origins:give",
                 "stack": {
-                    "item": "minecraft:arrow",
+                    "item": "runes:healing_stone",
                     "amount": 16
                 }
             }

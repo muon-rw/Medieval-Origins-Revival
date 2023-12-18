@@ -7,7 +7,7 @@
             {
                 "type": "origins:give",
                 "stack": {
-                    "item": "minecraft:bow",
+                    "item": "wizards:wand_arcane",
                     "amount": 1
                 },
                 "preferred_slot": "mainhand",
@@ -20,7 +20,7 @@
             {
                 "type": "origins:give",
                 "stack": {
-                    "item": "minecraft:arrow",
+                    "item": "runes:arcane_stone",
                     "amount": 16
                 }
             }

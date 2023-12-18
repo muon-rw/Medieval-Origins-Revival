@@ -21,10 +21,14 @@
                 "z": 0.1
             }
         },
-        "command_along_ray": "execute positioned ~ ~ ~ if block ~ ~ ~ air run tp @s ~ ~ ~",
-        "before_action":{
-            "type": "origins:execute_command",
-            "command": "playsound minecraft:entity.illusioner.mirror_move ambient @a ~ ~ ~ 1.0 1.0"
+        "command_along_ray": "function medievalorigins:mdvlorigins/void_warp",
+        "before_action": {
+            "type": "origins:delay",
+            "ticks": 2,
+            "action": {
+                "type": "origins:execute_command",
+                "command": "playsound minecraft:entity.illusioner.mirror_move ambient @a ~ ~ ~ 1.0 1.0"
+            }
         },
         "command_at_hit": "tp @s ~ ~0.1 ~",
         "command_step": 1

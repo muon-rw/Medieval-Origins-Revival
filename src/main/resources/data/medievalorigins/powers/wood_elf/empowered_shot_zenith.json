@@ -67,7 +67,7 @@
             "value": 0,
             "modifier": {
                 "operation": "multiply_total_multiplicative",
-                "value": -0.992
+                "value": -0.991
             }
         }
     },

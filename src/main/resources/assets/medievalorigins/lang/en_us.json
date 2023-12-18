@@ -112,7 +112,7 @@
   "power.medievalorigins.incubus/unholy_deal.description": "An incubus can exchange some of their life force for raw power for a short time. Triggered with Primary Active key.",
 
   "power.medievalorigins.dwarf/darkness_dweller.name": "Darkness Dweller",
-  "power.medievalorigins.dwarf/darkness_dweller.description": "Dwarven eyes are adapted for the dark. Direct sunlight burns their sensitive retinas, blinding them until darkness returns. Prevented by wearing a gold helmet.",
+  "power.medievalorigins.dwarf/darkness_dweller.description": "Dwarven eyes are adapted for the dark. Direct sunlight burns their sensitive retinas, blinding them until darkness returns. Prevented by wearing a gold helmet or with an enchantment.",
 
   "power.medievalorigins.dwarf/dense.name": "Dense",
   "power.medievalorigins.dwarf/dense.description": "Dwarves are heavy for their size; they sink in water.",
@@ -127,16 +127,13 @@
   "power.medievalorigins.dwarf/mythril_resonance.description": "Powerful metals which carry the spirit of your people fill you with might.",
 
   "power.medievalorigins.dwarf/nocturnal_eyes.name": "Nocturnal Eyes",
-  "power.medievalorigins.dwarf/nocturnal_eyes.description": "Living underground has lead to dwarves having highly sensitive eyes, able to see perfectly fine even in the pitch black of the caverns.",
-
-  "power.medievalorigins.dwarf/photoallergic.name": "Photoallergic",
-  "power.medievalorigins.dwarf/photoallergic.description": "Dwarven skin is far too sensitive for the world outside of their mountainous cave homes, direct sunlight burns them, unless wearing a helmet.",
+  "power.medievalorigins.dwarf/nocturnal_eyes.description": "Living underground has lead to dwarves having highly sensitive eyes, able to see clearly in dark caverns.",
 
   "power.medievalorigins.dwarf/potent_brew.name": "Potent Brew",
   "power.medievalorigins.dwarf/potent_brew.description": "Dwarves are notorious for their powerful drinks which would knock out someone twice their size. Activate to take a swig and fully restore health.",
 
   "power.medievalorigins.human/description.name": "Note",
-  "power.medievalorigins.human/description.description": "Humans have no changes from the base game, but any origin can still select a class.",
+  "power.medievalorigins.human/description.description": "Humans have no changes from the base game.",
 
   "power.medievalorigins.wood_elf/archer.name": "Natural Archer",
   "power.medievalorigins.wood_elf/archer.description": "Wood Elves spend their whole lives training with bows - their arrows are always more deadly.",
@@ -178,7 +175,7 @@
   "power.medievalorigins.fae/regen.description": "Faes are magic creatures. Press your secondary power key and you will regenerate health for a short period, at the cost of your hunger.",
 
   "power.medievalorigins.goblin/cunning.name": "Cunning",
-  "power.medievalorigins.goblin/cunning.description": "Goblins are clever creatures who know how to find slightly more rare loot, though some say it's just luck.",
+  "power.medievalorigins.goblin/cunning.description": "Goblins are clever creatures who know how to find more rare loot.",
 
   "power.medievalorigins.goblin/frail.name": "Frail",
   "power.medievalorigins.goblin/frail.description": "Due to their small stature, goblins' max health is reduced, leaving them very prone to damage.",
@@ -413,11 +410,11 @@
   "origin.medievalorigins.icarae.name": "Icarae",
   "origin.medievalorigins.icarae.description": "Carnivorous bird people, Icarae fly low to the ground, weaving between and through obstacles to hunt their prey.",
   "power.medievalorigins.icarae/wings.name": "Feathered",
-  "power.medievalorigins.icarae/wings.description": "Icarae are born with white feathered wings, and are quicker in the air than all others and capable of propelling themselves upward.",
+  "power.medievalorigins.icarae/wings.description": "Icarae are born with white feathered wings, are quicker in the air than others, and they can use their powerful wings to fly upward.",
   "power.medievalorigins.icarae/flight_hunger.name": "Ravenous Predator",
   "power.medievalorigins.icarae/flight_hunger.description": "Icarae exhaust extremely quickly due to their quick flight, and can't fly while low on food.",
   "power.medievalorigins.icarae/hollow_boned.name": "Hollow Boned",
-  "power.medievalorigins.icarae/hollow_boned.description": "Icarae evolved hollow bones for speed and efficiency, but this has left them vulnerable to damage and they can not wear heavy armor (This can be prevented with an enchantment).",
+  "power.medievalorigins.icarae/hollow_boned.description": "Icarae evolved hollow bones for speed and efficiency - they are vulnerable to damage and can not wear heavy armor (This can be prevented with an enchantment).",
   "power.medievalorigins.icarae/aerial_combatant.name": "Aerial Combatant",
   "power.medievalorigins.icarae/aerial_combatant.description": "Striking an enemy while flying forward deals bonus damage and knocks them back.",
 
