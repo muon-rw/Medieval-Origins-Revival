@@ -14,15 +14,15 @@
             },
             {
                 "type": "origins:origin",
-                "origin": "medievalorigins:magic_subclasses/pyromancer"
+                "origin": "medievalorigins:high_elf/pyromancer"
             },
             {
                 "type": "origins:origin",
-                "origin": "medievalorigins:magic_subclasses/cryomancer"
+                "origin": "medievalorigins:high_elf/cryomancer"
             },
             {
                 "type": "origins:origin",
-                "origin": "medievalorigins:magic_subclasses/vitalist"
+                "origin": "medievalorigins:high_elf/vitalist"
             }
         ]
     }

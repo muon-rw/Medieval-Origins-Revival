@@ -1,12 +1,22 @@
 {
-    "hidden": true,
-    "type": "origins:modify_exhaustion",
-    "modifier": {
-        "name": "Increased flight exhaustion",
-        "operation": "multiply_base",
-        "value": 2.5
+    "type": "origins:multiple",
+    "increased_rate": {
+        "type": "origins:modify_exhaustion",
+        "modifier": {
+            "name": "Increased flight exhaustion",
+            "operation": "multiply_base",
+            "value": 1.0
+        },
+        "condition": {
+            "type": "origins:fall_flying"
+        }
     },
-	"condition": {
-		"type": "origins:fall_flying"
-	}
+    "active_tick": {
+        "type": "origins:exhaust",
+        "interval": 20,
+        "exhaustion": 1.0,
+        "condition": {
+            "type": "origins:fall_flying"
+        }
+    }
 }

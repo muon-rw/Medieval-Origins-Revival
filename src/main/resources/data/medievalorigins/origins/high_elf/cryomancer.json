@@ -1,6 +1,6 @@
 {
     "powers": [
-        "medievalorigins:class/wizard/cryomancer/spell_power"
+        "medievalorigins:high_elf/cryomancer/spell_power"
     ],
     "icon": {
         "item": "wizards:frost_spell_book"

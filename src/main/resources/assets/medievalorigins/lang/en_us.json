@@ -404,18 +404,22 @@
 
 
   "enchantment.medievalorigins.featherweight": "Featherweight",
-  "enchantment.medievalorigins.featherweight.desc": "With this enchantment applied to heavy armor, it can be worn by Arachnae and Elven origins",
+  "enchantment.medievalorigins.featherweight.desc": "With this enchantment applied to heavy armor, it can be worn by Arachnae, Elves, and Icarae",
+
+  "enchantment.medievalorigins.mirroring": "Mirroring",
+  "enchantment.medievalorigins.mirroring.desc": "With this enchantment applied to helmets, you are unaffected by a Gorgon's petrifying gaze",
+
 
   "origin.medievalorigins.icarae.name": "Icarae",
   "origin.medievalorigins.icarae.description": "Carnivorous bird people, Icarae fly low to the ground, weaving between and through obstacles to hunt their prey.",
   "power.medievalorigins.icarae/wings.name": "Feathered",
-  "power.medievalorigins.icarae/wings.description": "Icarae are born with white feathered wings, and are quicker in the air than all others and capable of propelling themselves upward.\n\nHowever, this exhausts a lot of hunger, and they can't fly when low on energy.",
+  "power.medievalorigins.icarae/wings.description": "Icarae are born with white feathered wings, and are quicker in the air than all others and capable of propelling themselves upward.",
+  "power.medievalorigins.icarae/flight_hunger.name": "Ravenous Predator",
+  "power.medievalorigins.icarae/flight_hunger.description": "Icarae exhaust extremely quickly due to their quick flight, and can't fly while low on food.",
   "power.medievalorigins.icarae/hollow_boned.name": "Hollow Boned",
   "power.medievalorigins.icarae/hollow_boned.description": "Icarae evolved hollow bones for speed and efficiency, but this has left them vulnerable to damage and they can not wear heavy armor (This can be prevented with an enchantment).",
   "power.medievalorigins.icarae/aerial_combatant.name": "Aerial Combatant",
   "power.medievalorigins.icarae/aerial_combatant.description": "Striking an enemy while flying forward deals bonus damage and knocks them back.",
-  "power.medievalorigins.icarae/weaver.name": "Weaver",
-  "power.medievalorigins.icarae/weaver.description": "You are faster when flying low to the ground or near a wall, but can not fly very high without being slowed by strong wind currents.",
 
 
   "medievalorigins.contagious_villager": "This villager has already been infected!",

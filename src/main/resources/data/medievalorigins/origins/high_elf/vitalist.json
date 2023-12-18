@@ -1,0 +1,9 @@
+{
+    "powers": [
+        "medievalorigins:high_elf/vitalist/spell_power"
+    ],
+    "icon": {
+        "item": "paladins:priest_spell_book"
+    },
+    "impact": 2
+}
