@@ -1,0 +1,76 @@
+{
+    "banshee_cry": {
+        "subtitles": "sounds.medievalorigins.banshee_cry",
+        "sounds": [
+            "medievalorigins:banshee_cry"
+        ]
+    },
+    "channeled_wail": {
+        "subtitles": "sounds.medievalorigins.channeled_wail",
+        "sounds": [
+            "medievalorigins:channeled_wail"
+        ]
+    },
+    "horrible_screech": {
+        "subtitles": "sounds.medievalorigins.horrible_screech",
+        "sounds": [
+            "medievalorigins:horrible_screech"
+        ]
+    },
+    "zhh_woo_voop": {
+        "subtitles": "sounds.medievalorigins.zhh_woo_voop",
+        "sounds": [
+            "medievalorigins:zhh_woo_voop"
+        ]
+    },
+    "zhh_woo_voop_early": {
+        "subtitles": "sounds.medievalorigins.zhh_woo_voop",
+        "sounds": [
+            "medievalorigins:zhh_woo_voop_early"
+        ]
+    },
+    "cronch": {
+        "subtitles": "sounds.medievalorigins.bone_crunch",
+        "sounds": [
+            "medievalorigins:cronch"
+        ]
+    },
+    "door_knock": {
+        "subtitles": "sounds.medievalorigins.door_knock",
+        "sounds": [
+            "medievalorigins:door_knock"
+        ]
+    },
+    "dash": {
+        "subtitles": "sounds.medievalorigins.dash",
+        "sounds": [
+            "medievalorigins:dash",
+            "medievalorigins:dash_2"
+        ]
+    },
+    "boost": {
+        "subtitles": "sounds.medievalorigins.dash",
+        "sounds": [
+            "medievalorigins:boost",
+            "medievalorigins:boost_2",
+            "medievalorigins:boost_3",
+            "medievalorigins:boost_4"
+        ]
+    },
+    "jump": {
+        "subtitles": "sounds.medievalorigins.jump",
+        "sounds": [
+            "medievalorigins:jump_1",
+            "medievalorigins:jump_2",
+            "medievalorigins:jump_3",
+            "medievalorigins:jump_4",
+            "medievalorigins:jump_5"
+        ]
+    },
+    "hover": {
+        "subtitles": "sounds.medievalorigins.hover",
+        "sounds": [
+            "medievalorigins:hover"
+        ]
+    }
+}

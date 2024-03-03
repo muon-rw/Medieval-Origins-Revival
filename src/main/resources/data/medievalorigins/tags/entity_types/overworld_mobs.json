@@ -1,0 +1,25 @@
+{
+	"replace": false,
+	"values": [
+		"minecraft:witch",
+		"minecraft:zombie",
+		"minecraft:skeleton",
+		"minecraft:slime",
+		"minecraft:evoker_fangs",
+		"minecraft:vex",
+		"minecraft:evoker",
+		"minecraft:guardian",
+		"minecraft:elder_guardian",
+		"minecraft:creeper",
+		"minecraft:wolf",
+		"minecraft:spider",
+		"minecraft:cave_spider",
+		"minecraft:polar_bear",
+		"minecraft:husk",
+		"minecraft:stray",
+		"minecraft:zombie_villager",
+		"minecraft:vindicator",
+		"minecraft:silverfish",
+		"minecraft:llama_spit"
+	]
+}

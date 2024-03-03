@@ -1,7 +1,6 @@
 {
     "powers": [
         "medievalorigins:high_elf/arcanist/spell_power",
-        "medievalorigins:high_elf/arcanist/void_warp",
         "medievalorigins:high_elf/arcanist/gear_spawn"
     ],
     "icon": {

@@ -1,4 +1,5 @@
 {
+        "loading_priority": 11,
 	"powers": [
                 "medievalorigins:gorgon/petrifying_gaze",
                 "medievalorigins:gorgon/revenge",
@@ -6,6 +7,7 @@
                 "medievalorigins:gorgon/to_stone",
                 "medievalorigins:gorgon/silver_aversion",
                 "medievalorigins:gorgon/poison_blood",
+                "medievalorigins:gorgon/poison_immune",
                 "origins_env_deh:thirst_resistance"
 	],
         "icon": {

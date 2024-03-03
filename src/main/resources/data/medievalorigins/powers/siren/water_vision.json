@@ -11,13 +11,21 @@
 			"is_ambient": true,
 			"show_particles": false,
 			"show_icon": false,
-			"amplifier": 255,
+			"amplifier": 0,
 			"duration": 250
 		}
 	},
 	"falling_action": {
-		"type": "origins:clear_effect",
-		"effect": "minecraft:night_vision"
+		"type": "origins:if_else",
+		"condition": {
+			"type": "origins:status_effect",
+			"effect": "regeneration",
+			"max_duration": 250
+		},
+		"if_action": {
+			"type": "origins:clear_effect",
+			"effect": "minecraft:night_vision"
+		}
 	},
 	"interval": 20
 }

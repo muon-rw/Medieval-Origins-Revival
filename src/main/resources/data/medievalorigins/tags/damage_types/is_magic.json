@@ -1,0 +1,22 @@
+{
+    "replace": false,
+    "values": [
+        {"id":"#minecraft:is_magic","required":false},
+        {"id":"#minecraft:witch_resistant_to","required":false},
+        {"id":"#medievalorigins:spell_damage","required":false},
+        {"id":"#irons_spellbooks:eldritch_magic","required":false},
+        {"id":"#irons_spellbooks:blood_magic","required":false},
+        {"id":"#irons_spellbooks:ender_magic","required":false},
+        {"id":"#irons_spellbooks:evocation_magic","required":false},
+        {"id":"#irons_spellbooks:fire_magic","required":false},
+        {"id":"#irons_spellbooks:holy_magic","required":false},
+        {"id":"#irons_spellbooks:ice_magic","required":false},
+        {"id":"#irons_spellbooks:lightning_magic","required":false},
+        {"id":"#irons_spellbooks:nature_magic","required":false},
+        {"id":"ars_nouveau:spell","required":false},
+        {"id":"ars_nouveau:frost","required":false},
+        {"id":"ars_nouveau:flare","required":false},
+        {"id":"ars_nouveau:crush","required":false},
+        {"id":"ars_nouveau:windshear","required":false}
+    ]
+}

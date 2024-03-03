@@ -1,0 +1,24 @@
+{
+    "type": "origins:conditioned_attribute",
+    "modifier": {
+        "attribute": "generic.attack_damage",
+        "operation": "multiply_base",
+        "value": -0.2
+    },
+    "condition": {
+        "type": "origins:equipped_item",
+        "equipment_slot": "mainhand",
+        "item_condition": {
+            "inverted": true,
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "medievalorigins:is_fist_weapon"
+                },
+                {
+                    "type": "origins:empty"
+                }
+            ]
+        }
+    }
+}

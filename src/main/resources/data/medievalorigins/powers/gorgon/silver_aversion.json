@@ -63,7 +63,7 @@
 		},
 		"text": [
 			{
-				"translate": "medievalorigins.unwearable",
+				"translate": "tooltip.medievalorigins.unwearable",
 				"color": "gray"
 			},
 			{
@@ -90,7 +90,7 @@
 		},
 		"text": [
 			{
-				"translate": "medievalorigins.self_wither",
+				"translate": "tooltip.medievalorigins.self_wither",
 				"color": "dark_red"
 			},
 			{

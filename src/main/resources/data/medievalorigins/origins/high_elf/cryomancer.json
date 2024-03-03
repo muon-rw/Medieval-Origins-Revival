@@ -1,7 +1,6 @@
 {
     "powers": [
         "medievalorigins:high_elf/cryomancer/spell_power",
-        "medievalorigins:high_elf/cryomancer/glacial_step",
         "medievalorigins:high_elf/cryomancer/gear_spawn"
     ],
     "icon": {

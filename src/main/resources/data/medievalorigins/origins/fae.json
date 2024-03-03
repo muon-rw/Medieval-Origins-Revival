@@ -1,4 +1,5 @@
 {
+        "loading_priority": 11,
         "powers": [
                 "medievalorigins:fae/levitation",
                 "medievalorigins:fae/magic_resistance",
@@ -8,7 +9,10 @@
                 "medievalorigins:fae/diminutive",
                 "medievalorigins:fae/iron_aversion"
         ],
-        "icon": "minecraft:experience_bottle",
+        "icon": {
+                "item": "minecraft:ink_sac",
+                "tag": "{CustomModelData:367}"
+        },
         "impact": 2,
         "order": 1
 }

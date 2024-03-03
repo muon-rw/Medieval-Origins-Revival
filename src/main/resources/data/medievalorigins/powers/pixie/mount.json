@@ -1,0 +1,56 @@
+{
+	"type": "origins:multiple",
+	"camera_fix": {
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"condition": {
+			"type": "origins:riding"
+		},
+		"rising_action": {
+			"type": "origins:execute_command",
+			"command": "scale set pehkui:eye_height 2.2 @s"
+		},
+		"falling_action": {
+			"type": "origins:execute_command",
+			"command": "scale set pehkui:eye_height 1 @s"
+		}
+	},
+	"active": {
+		"type": "origins:action_on_entity_use",
+		"bientity_action": {
+			"type": "origins:mount"
+		},
+		"item_condition": {
+			"type": "origins:empty"
+		},
+		"hands": [
+			"main_hand"
+		],
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "mainhand",
+					"item_condition": {
+						"type": "origins:empty"
+					}
+				},
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "offhand",
+					"item_condition": {
+						"type": "origins:empty"
+					}
+				}
+			]
+		},
+		"bientity_condition": {
+			"type": "origins:target_condition",
+			"condition": {
+				"type": "origins:entity_type",
+				"entity_type": "player"
+			}
+		}
+	}
+}

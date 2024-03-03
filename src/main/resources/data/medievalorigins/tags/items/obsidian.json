@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+	  "minecraft:obsidian",
+	  "minecraft:crying_obsidian",
+	  {"id":"#forge:obsidian","required":false},
+	  {"id":"#c:obsidian","required":false},
+	  {"id":"betternether:weeping_obsidian","required":false},
+	  {"id":"betternether:blue_obsidian","required":false},
+	  {"id":"betternether:blue_crying_obsidian","required":false},
+	  {"id":"betternether:blue_weeping_obsidian","required":false}
+  ]
+}

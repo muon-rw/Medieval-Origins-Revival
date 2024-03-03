@@ -33,6 +33,84 @@
                 "custom_model_data": 355
             },
             "model": "medievalorigins:item/ogre"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 356
+            },
+            "model": "medievalorigins:item/dwarf"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 357
+            },
+            "model": "medievalorigins:item/pixie"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 358
+            },
+            "model": "medievalorigins:item/banshee"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 359
+            },
+            "model": "medievalorigins:item/moon_elf"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 360
+            },
+            "model": "medievalorigins:item/revenant"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 361
+            },
+            "model": "medievalorigins:item/arachnae"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 362
+            },
+            "model": "medievalorigins:item/goblin"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 363
+            },
+            "model": "medievalorigins:item/alfiq"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 364
+            },
+            "model": "medievalorigins:item/high_elf"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 365
+            },
+            "model": "medievalorigins:item/yeti"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 366
+            },
+            "model": "medievalorigins:item/siren"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 367
+            },
+            "model": "medievalorigins:item/fae"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 368
+            },
+            "model": "medievalorigins:item/plague_victim"
         }
     ]
 }

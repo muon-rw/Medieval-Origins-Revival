@@ -145,7 +145,7 @@
 			}
 		]
 	},
-	"cooldown": 200,
+	"cooldown": 500,
 	"hud_render": {
 		"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
 		"bar_index": 19,

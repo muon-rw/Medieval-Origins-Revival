@@ -3,7 +3,42 @@
 	"hidden": true,
 	"allow": true,
 	"block_condition": {
-		"type": "origins:in_tag",
-		"tag": "origins:natural_stone"
+		"type": "origins:and",
+		"conditions": [
+			{
+				"type": "origins:in_tag",
+				"tag": "minecraft:mineable/pickaxe"
+			},
+			{
+				"type": "origins:or",
+				"inverted": true,
+				"conditions": [
+					{
+						"type": "origins:in_tag",
+						"tag": "minecraft:needs_stone_tool"
+					},
+					{
+						"type": "origins:in_tag",
+						"tag": "minecraft:needs_iron_tool"
+					},
+					{
+						"type": "origins:in_tag",
+						"tag": "minecraft:needs_diamond_tool"
+					},
+					{
+						"type": "origins:in_tag",
+						"tag": "forge:needs_netherite_tool"
+					},
+					{
+						"type": "origins:in_tag",
+						"tag": "fabric:needs_tool_level_4"
+					},
+					{
+						"type": "origins:in_tag",
+						"tag": "fabric:needs_tool_level_5"
+					}
+				]
+			}
+		]
 	}
 }

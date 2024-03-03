@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+	{"id":"#c:iron_tools","required":false},
+	{"id":"#forge:tools/iron","required":false},
+	  "minecraft:iron_sword",
+	  "minecraft:iron_pickaxe",
+	  "minecraft:iron_axe",
+	  "minecraft:iron_shovel",
+	  "minecraft:iron_hoe"
+  ]
+}

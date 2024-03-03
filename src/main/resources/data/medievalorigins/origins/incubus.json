@@ -1,4 +1,5 @@
 {
+        "loading_priority": 11,
 	"powers": [
                 "medievalorigins:incubus/demon_fire",
 		"medievalorigins:incubus/hellborne",
@@ -9,8 +10,8 @@
                 "medievalorigins:incubus/dimension_strength",
                 "medievalorigins:incubus/lava_swim",
                 "medievalorigins:incubus/red",
-                "origins_env_deh:heat_resistance",
-                "origins:nether_spawn"
+                "origins:nether_spawn",
+                "origins_env_deh:heat_resistance"
 	],
         "icon": {
 		"item": "minecraft:ink_sac",

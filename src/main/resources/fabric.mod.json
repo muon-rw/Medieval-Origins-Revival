@@ -21,7 +21,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.itsparkielad.medievalorigins.MedievalOrigins"
+      "dev.muon.medievalorigins.MedievalOrigins"
+    ],
+    "client": [
+      "dev.muon.medievalorigins.client.MedievalOriginsClient"
     ]
   },
 

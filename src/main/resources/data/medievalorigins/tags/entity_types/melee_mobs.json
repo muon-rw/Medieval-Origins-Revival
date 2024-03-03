@@ -1,0 +1,27 @@
+{
+	"replace": false,
+	"values": [
+		"minecraft:zombie",
+		"minecraft:slime",
+		"minecraft:evoker_fangs",
+		"minecraft:vex",
+		"minecraft:wolf",
+		"minecraft:spider",
+		"minecraft:cave_spider",
+		"minecraft:polar_bear",
+		"minecraft:husk",
+		"minecraft:zombie_villager",
+		"minecraft:vindicator",
+		"minecraft:silverfish",
+		"minecraft:piglin",
+		"minecraft:hoglin",
+		"minecraft:piglin_brute",
+		"minecraft:zoglin",
+		"minecraft:enderman",
+		"minecraft:ender_dragon",
+		"minecraft:endermite",
+		"minecraft:wither",
+		"minecraft:wither_skeleton",
+		"minecraft:magma_cube"
+	]
+}

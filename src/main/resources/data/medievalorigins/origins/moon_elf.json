@@ -1,4 +1,5 @@
 {
+        "loading_priority": 11,
         "powers": [
                 "medievalorigins:moon_elf/moonlight_rogue",
                 "medievalorigins:moon_elf/stealth",
@@ -7,11 +8,11 @@
                 "medievalorigins:moon_elf/elegant",
                 "medievalorigins:moon_elf/nimble",
                 "medievalorigins:moon_elf/fragile",
-                "medievalorigins:moon_elf/towering",
-                "medievalorigins:moob_elf/combatroll"
+                "medievalorigins:moon_elf/towering"
         ],
         "icon": {
-                "item": "minecraft:amethyst_cluster"
+                "item": "minecraft:ink_sac",
+                "tag": "{CustomModelData:359}"
         },
         "impact": 3,
         "order": 1

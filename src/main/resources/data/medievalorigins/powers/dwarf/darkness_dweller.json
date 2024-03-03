@@ -1,5 +1,6 @@
 {
 	"type": "origins:action_over_time",
+	"interval": 10,
 	"condition": {
 		"type": "origins:and",
 		"conditions": [
@@ -25,6 +26,9 @@
 							"calculation": "sum",
 							"comparison": ">=",
 							"compare_to": 1
+						},
+						{
+							"type": "medievalorigins:golden_armor"
 						}
 					]
 				}
@@ -39,7 +43,7 @@
 				"is_ambient": true,
 				"show_particles": false,
 				"show_icon": false,
-				"amplifier": 2,
+				"amplifier": 0,
 				"duration": 250
 			},
 			{
@@ -53,11 +57,32 @@
 		]
 	},
 	"falling_action": {
-		"type": "origins:clear_effect",
-		"effects": [
-			"minecraft:blindness",
-			"minecraft:nausea"
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:if_else",
+				"condition": {
+					"type": "origins:status_effect",
+					"effect": "minecraft:blindness",
+					"max_duration": 250
+				},
+				"if_action": {
+					"type": "origins:clear_effect",
+					"effect": "minecraft:blindness"
+				}
+			},
+			{
+				"type": "origins:if_else",
+				"condition": {
+					"type": "origins:status_effect",
+					"effect": "minecraft:nausea",
+					"max_duration": 250
+				},
+				"if_action": {
+					"type": "origins:clear_effect",
+					"effect": "minecraft:nausea"
+				}
+			}
 		]
-	},
-	"interval": 20
+	}
 }

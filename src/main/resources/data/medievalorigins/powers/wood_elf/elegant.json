@@ -5,7 +5,7 @@
 		"modifier": {
 			"name": "Health Penalty",
 			"attribute": "minecraft:generic.max_health",
-			"value": -2.0,
+			"value": -6.0,
 			"operation": "addition"
 		}
 	},
@@ -29,16 +29,12 @@
 					"type": "origins:or",
 					"conditions": [
 						{
-							"type": "origins:ingredient",
-							"ingredient": {
-								"tag": "c:helmets"
-							}
+							"type": "origins:is_equippable",
+							"equipment_slot": "head"
 						},
 						{
-							"type": "origins:ingredient",
-							"ingredient": {
-								"tag": "c:boots"
-							}
+							"type": "origins:is_equippable",
+							"equipment_slot": "feet"
 						}
 					]
 				}
@@ -46,7 +42,7 @@
 		},
 		"text": [
 			{
-				"translate": "medievalorigins.unwearable",
+				"translate": "tooltip.medievalorigins.unwearable",
 				"color": "gray"
 			},
 			{
@@ -80,16 +76,14 @@
 					"compare_to": 1
 				},
 				{
-					"type": "origins:ingredient",
-					"ingredient": {
-						"tag": "c:chestplates"
-					}
+					"type": "origins:is_equippable",
+					"equipment_slot": "chest"
 				}
 			]
 		},
 		"text": [
 			{
-				"translate": "medievalorigins.unwearable",
+				"translate": "tooltip.medievalorigins.unwearable",
 				"color": "gray"
 			},
 			{
@@ -123,16 +117,14 @@
 					"compare_to": 1
 				},
 				{
-					"type": "origins:ingredient",
-					"ingredient": {
-						"tag": "c:leggings"
-					}
+					"type": "origins:is_equippable",
+					"equipment_slot": "legs"
 				}
 			]
 		},
 		"text": [
 			{
-				"translate": "medievalorigins.unwearable",
+				"translate": "tooltip.medievalorigins.unwearable",
 				"color": "gray"
 			},
 			{

@@ -1,0 +1,30 @@
+{
+    "hidden": true,
+    "type": "origins:action_on_callback",
+    "entity_action_chosen": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:give",
+                "stack": {
+                    "item": "wizards:wand_frost",
+                    "amount": 1
+                },
+                "preferred_slot": "mainhand",
+                "item_action": {
+                    "type": "origins:damage",
+                    "amount": 20,
+                    "ignore_unbreaking": true
+                }
+            },
+            {
+                "type": "origins:give",
+                "stack": {
+                    "item": "runes:frost_stone",
+                    "amount": 16
+                }
+            }
+        ]
+    },
+    "execute_chosen_when_orb": false
+}

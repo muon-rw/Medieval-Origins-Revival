@@ -13,19 +13,36 @@
 		]
 	},
 	"entity_action": {
-		"type": "origins:apply_effect",
-		"effect": {
-			"effect": "minecraft:regeneration",
-			"is_ambient": true,
-			"show_particles": false,
-			"show_icon": false,
-			"amplifier": 1,
-			"duration": 250
+		"type": "origins:if_else",
+		"condition": {
+			"type": "origins:status_effect",
+			"effect": "regeneration",
+			"min_duration": 251,
+			"inverted": true
+		},
+		"if_action": {
+			"type": "origins:apply_effect",
+			"effect": {
+				"effect": "minecraft:regeneration",
+				"is_ambient": true,
+				"show_particles": false,
+				"show_icon": false,
+				"amplifier": 1,
+				"duration": 250
+			}
 		}
 	},
 	"falling_action": {
-		"type": "origins:clear_effect",
-		"effect": "minecraft:regeneration"
+		"type": "origins:if_else",
+		"condition": {
+			"type": "origins:status_effect",
+			"effect": "regeneration",
+			"max_duration": 250
+		},
+		"if_action": {
+			"type": "origins:clear_effect",
+			"effect": "minecraft:regeneration"
+		}
 	},
 	"interval": 20
 }

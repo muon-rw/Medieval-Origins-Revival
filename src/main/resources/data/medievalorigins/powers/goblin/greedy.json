@@ -23,10 +23,18 @@
 			"type": "origins:equipped_item",
 			"equipment_slot": "mainhand",
 			"item_condition": {
-				"type": "origins:ingredient",
-				"ingredient": {
-					"tag": "medievalorigins:golden_weapons"
-				}
+				"type": "origins:or",
+				"conditions": [
+					{
+						"type": "apoli:ingredient",
+						"ingredient": {
+							"tag": "medievalorigins:golden_weapons"
+						}
+					},
+					{
+						"type": "medievalorigins:golden_weapon"
+					}
+				]
 			}
 		}
 	},
@@ -53,18 +61,110 @@
 			"type": "origins:equipped_item",
 			"equipment_slot": "offhand",
 			"item_condition": {
-				"type": "origins:ingredient",
-				"ingredient": {
-					"tag": "medievalorigins:golden_weapons"
-				}
+				"type": "origins:or",
+				"conditions": [
+					{
+						"type": "apoli:ingredient",
+						"ingredient": {
+							"tag": "medievalorigins:golden_weapons"
+						}
+					},
+					{
+						"type": "medievalorigins:golden_weapon"
+					}
+				]
 			}
+		}
+	},
+	"golden_set_bonus": {
+		"type": "origins:modify_damage_taken",
+		"modifier": {
+			"operation": "multiply_base_multiplicative",
+			"value": -0.2
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "head",
+					"item_condition": {
+						"type": "origins:or",
+						"conditions": [
+							{
+								"type": "medievalorigins:golden_armor"
+							},
+							{
+								"type": "origins:ingredient",
+								"ingredient": {
+									"tag": "medievalorigins:golden_armor"
+								}
+							}
+						]
+					}
+				},
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "chest",
+					"item_condition": {
+						"type": "origins:or",
+						"conditions": [
+							{
+								"type": "medievalorigins:golden_armor"
+							},
+							{
+								"type": "origins:ingredient",
+								"ingredient": {
+									"tag": "medievalorigins:golden_armor"
+								}
+							}
+						]
+					}
+				},
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "legs",
+					"item_condition": {
+						"type": "origins:or",
+						"conditions": [
+							{
+								"type": "medievalorigins:golden_armor"
+							},
+							{
+								"type": "origins:ingredient",
+								"ingredient": {
+									"tag": "medievalorigins:golden_armor"
+								}
+							}
+						]
+					}
+				},
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "feet",
+					"item_condition": {
+						"type": "origins:or",
+						"conditions": [
+							{
+								"type": "medievalorigins:golden_armor"
+							},
+							{
+								"type": "origins:ingredient",
+								"ingredient": {
+									"tag": "medievalorigins:golden_armor"
+								}
+							}
+						]
+					}
+				}
+			]
 		}
 	},
 	"golden_tool_boosts": {
 		"type": "origins:conditioned_attribute",
 		"modifiers": [
 			{
-				"attribute": "reach-entity-attributes:reach",
+				"attribute": "forge:block_reach",
 				"operation": "addition",
 				"value": 1.0
 			},
@@ -78,7 +178,7 @@
 			"type": "origins:equipped_item",
 			"equipment_slot": "mainhand",
 			"item_condition": {
-				"type": "origins:and",
+				"type": "origins:or",
 				"conditions": [
 					{
 						"type": "apoli:ingredient",
@@ -87,11 +187,7 @@
 						}
 					},
 					{
-						"type": "apoli:ingredient",
-						"ingredient": {
-							"tag": "medievalorigins:golden_weapons"
-						},
-						"inverted": true
+						"type": "medievalorigins:golden_tool"
 					}
 				]
 			}
@@ -117,10 +213,18 @@
 			"type": "origins:equipped_item",
 			"equipment_slot": "mainhand",
 			"item_condition": {
-				"type": "origins:ingredient",
-				"ingredient": {
-					"tag": "medievalorigins:golden_tools"
-				}
+				"type": "origins:or",
+				"conditions": [
+					{
+						"type": "apoli:ingredient",
+						"ingredient": {
+							"tag": "medievalorigins:golden_tools"
+						}
+					},
+					{
+						"type": "medievalorigins:golden_tool"
+					}
+				]
 			}
 		}
 	},
@@ -128,24 +232,27 @@
 		"type": "origins:conditioned_attribute",
 		"modifiers": [
 			{
-				"attribute": "minecraft:generic.armor",
-				"operation": "multiply_base",
-				"value": 0.15
-			},
-			{
 				"attribute": "minecraft:generic.max_health",
 				"operation": "addition",
-				"value": 1
+				"value": 2
 			}
 		],
 		"condition": {
 			"type": "origins:equipped_item",
 			"equipment_slot": "head",
 			"item_condition": {
-				"type": "origins:ingredient",
-				"ingredient": {
-					"tag": "medievalorigins:golden_armor"
-				}
+				"type": "origins:or",
+				"conditions": [
+					{
+						"type": "apoli:ingredient",
+						"ingredient": {
+							"tag": "medievalorigins:golden_armor"
+						}
+					},
+					{
+						"type": "medievalorigins:golden_armor"
+					}
+				]
 			}
 		}
 	},
@@ -160,17 +267,25 @@
 			{
 				"attribute": "minecraft:generic.max_health",
 				"operation": "addition",
-				"value": 1
+				"value": 2
 			}
 		],
 		"condition": {
 			"type": "origins:equipped_item",
 			"equipment_slot": "chest",
 			"item_condition": {
-				"type": "origins:ingredient",
-				"ingredient": {
-					"tag": "medievalorigins:golden_armor"
-				}
+				"type": "origins:or",
+				"conditions": [
+					{
+						"type": "apoli:ingredient",
+						"ingredient": {
+							"tag": "medievalorigins:golden_armor"
+						}
+					},
+					{
+						"type": "medievalorigins:golden_armor"
+					}
+				]
 			}
 		}
 	},
@@ -178,24 +293,27 @@
 		"type": "origins:conditioned_attribute",
 		"modifiers": [
 			{
-				"attribute": "minecraft:generic.armor",
-				"operation": "multiply_base",
-				"value": 0.15
-			},
-			{
 				"attribute": "minecraft:generic.max_health",
 				"operation": "addition",
-				"value": 1
+				"value": 2
 			}
 		],
 		"condition": {
 			"type": "origins:equipped_item",
 			"equipment_slot": "legs",
 			"item_condition": {
-				"type": "origins:ingredient",
-				"ingredient": {
-					"tag": "medievalorigins:golden_armor"
-				}
+				"type": "origins:or",
+				"conditions": [
+					{
+						"type": "apoli:ingredient",
+						"ingredient": {
+							"tag": "medievalorigins:golden_armor"
+						}
+					},
+					{
+						"type": "medievalorigins:golden_armor"
+					}
+				]
 			}
 		}
 	},
@@ -210,27 +328,43 @@
 			{
 				"attribute": "minecraft:generic.max_health",
 				"operation": "addition",
-				"value": 1
+				"value": 2
 			}
 		],
 		"condition": {
 			"type": "origins:equipped_item",
 			"equipment_slot": "feet",
 			"item_condition": {
-				"type": "origins:ingredient",
-				"ingredient": {
-					"tag": "medievalorigins:golden_armor"
-				}
+				"type": "origins:or",
+				"conditions": [
+					{
+						"type": "apoli:ingredient",
+						"ingredient": {
+							"tag": "medievalorigins:golden_armor"
+						}
+					},
+					{
+						"type": "medievalorigins:golden_armor"
+					}
+				]
 			}
 		}
 	},
 	"armor_tooltip": {
 		"type": "apoli:tooltip",
 		"item_condition": {
-			"type": "apoli:ingredient",
-			"ingredient": {
-				"tag": "medievalorigins:golden_armor"
-			}
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "apoli:ingredient",
+					"ingredient": {
+						"tag": "medievalorigins:golden_armor"
+					}
+				},
+				{
+					"type": "medievalorigins:golden_armor"
+				}
+			]
 		},
 		"texts": [
 			{
@@ -238,11 +372,19 @@
 				"color": "gold"
 			},
 			{
-				"text": "+15% Armor",
+				"text": "+2 Max Health",
 				"color": "yellow"
 			},
 			{
-				"text": "+1 Max Health",
+				"text": "Increased Durability",
+				"color": "yellow"
+			},
+			{
+				"text": "Set Bonus:",
+				"color": "gold"
+			},
+			{
+				"text": "+20% Resistance",
 				"color": "yellow"
 			}
 		]
@@ -250,10 +392,18 @@
 	"weapon_tooltip": {
 		"type": "apoli:tooltip",
 		"item_condition": {
-			"type": "apoli:ingredient",
-			"ingredient": {
-				"tag": "medievalorigins:golden_weapons"
-			}
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "apoli:ingredient",
+					"ingredient": {
+						"tag": "medievalorigins:golden_weapons"
+					}
+				},
+				{
+					"type": "medievalorigins:golden_weapon"
+				}
+			]
 		},
 		"texts": [
 			{
@@ -265,7 +415,7 @@
 				"color": "yellow"
 			},
 			{
-				"translate": "medievalorigins.looting_bonus",
+				"translate": "tooltip.medievalorigins.looting_bonus",
 				"color": "yellow"
 			}
 		]
@@ -273,7 +423,7 @@
 	"tools_tooltip": {
 		"type": "apoli:tooltip",
 		"item_condition": {
-			"type": "origins:and",
+			"type": "origins:or",
 			"conditions": [
 				{
 					"type": "apoli:ingredient",
@@ -282,11 +432,7 @@
 					}
 				},
 				{
-					"type": "apoli:ingredient",
-					"ingredient": {
-						"tag": "medievalorigins:golden_weapons"
-					},
-					"inverted": true
+					"type": "medievalorigins:golden_tool"
 				}
 			]
 		},
@@ -300,7 +446,7 @@
 				"color": "yellow"
 			},
 			{
-				"text": "Iron Mining Level",
+				"text": "Iron+ Mining Level",
 				"color": "yellow"
 			}
 		]

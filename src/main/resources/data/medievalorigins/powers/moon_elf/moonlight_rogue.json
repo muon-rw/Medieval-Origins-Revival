@@ -4,7 +4,7 @@
 		"type": "origins:modify_damage_dealt",
 		"modifier": {
 			"operation": "multiply_total_multiplicative",
-			"value": 0.5
+			"value": 0.50
 		},
 		"condition": {
 			"type": "origins:or",
@@ -13,20 +13,36 @@
 					"type": "origins:equipped_item",
 					"equipment_slot": "mainhand",
 					"item_condition": {
-						"type": "origins:ingredient",
-						"ingredient": {
-							"tag": "medievalorigins:daggers"
-						}
+						"type": "origins:or",
+						"conditions": [
+							{
+								"type": "apoli:ingredient",
+								"ingredient": {
+									"tag": "medievalorigins:daggers"
+								}
+							},
+							{
+								"type": "medievalorigins:is_dagger"
+							}
+						]
 					}
 				},
 				{
 					"type": "origins:equipped_item",
 					"equipment_slot": "offhand",
 					"item_condition": {
-						"type": "origins:ingredient",
-						"ingredient": {
-							"tag": "medievalorigins:daggers"
-						}
+						"type": "origins:or",
+						"conditions": [
+							{
+								"type": "apoli:ingredient",
+								"ingredient": {
+									"tag": "medievalorigins:daggers"
+								}
+							},
+							{
+								"type": "medievalorigins:is_dagger"
+							}
+						]
 					}
 				}
 			]
@@ -35,26 +51,33 @@
 	"tooltip": {
 		"type": "apoli:tooltip",
 		"item_condition": {
-			"type": "apoli:ingredient",
-			"ingredient": {
-				"tag": "medievalorigins:daggers"
-			}
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "apoli:ingredient",
+					"ingredient": {
+						"tag": "medievalorigins:daggers"
+					}
+				},
+				{
+					"type": "medievalorigins:is_dagger"
+				}
+			]
 		},
-		"text": [
+		"texts": [
 			{
-				"translate": "power.medievalorigins.moon_elf/moonlight_rogue.name",
+				"translate": "tooltip.medievalorigins.moonlight_rogue",
 				"color": "aqua"
 			},
 			{
-				"text": " Bonus:",
-				"color": "aqua"
-			},
-			{
-				"text": "\n+50% ",
+				"translate": "tooltip.medievalorigins.damage_dealt",
+				"with": [
+					"50%"
+				],
 				"color": "dark_aqua"
 			},
 			{
-				"translate": "medievalorigins.damage_dealt",
+				"translate": "tooltip.medievalorigins.stab_bonus",
 				"color": "dark_aqua"
 			}
 		]

@@ -1,7 +1,6 @@
 {
     "powers": [
         "medievalorigins:high_elf/vitalist/spell_power",
-        "medievalorigins:high_elf/vitalist/instant_cure",
         "medievalorigins:high_elf/vitalist/gear_spawn"
     ],
     "icon": {

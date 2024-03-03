@@ -1,0 +1,84 @@
+{
+	"type": "origins:multiple",
+	"no_food": {
+		"type": "origins:modify_food",
+		"food_modifier": {
+			"name": "Increased food points",
+			"operation": "multiply_total",
+			"value": -1
+		},
+		"saturation_modifier": {
+			"name": "Increased saturation points",
+			"operation": "multiply_total",
+			"value": -1
+		}
+	},
+	"no_phantoms": {
+		"type": "origins:modify_insomnia_ticks",
+		"modifier": {
+			"operation": "set_total",
+			"value": 0
+		}
+	},
+	"no_starve": {
+		"type": "origins:modify_damage_taken",
+		"modifier": {
+			"operation": "multiply_total_multiplicative",
+			"value": -1
+		},
+		"damage_condition": {
+			"type": "origins:name",
+			"name": "starve"
+		}
+	},
+	"tooltip": {
+		"type": "apoli:tooltip",
+		"item_condition": {
+			"type": "origins:food"
+		},
+		"text": [
+			{
+				"translate": "tooltip.medievalorigins.restores_no_hunger",
+				"color": "gray"
+			},
+			{
+				"text": "(",
+				"color": "gray"
+			},
+			{
+				"translate": "power.medievalorigins.banshee/lunar_nexus.name",
+				"color": "red"
+			},
+			{
+				"text": ")",
+				"color": "gray"
+			}
+		]
+	},
+	"moon_saturate": {
+		"type": "origins:action_over_time",
+		"interval": 60,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:food_level",
+					"comparison": "<=",
+					"compare_to": 20
+				},
+				{
+					"type": "origins:exposed_to_sky"
+				},
+				{
+					"type": "origins:daytime",
+					"inverted": true
+				}
+			]
+		},
+		"entity_action": {
+			"type": "origins:feed",
+			"food": 1,
+			"saturation": 0.25
+		}
+	}
+}

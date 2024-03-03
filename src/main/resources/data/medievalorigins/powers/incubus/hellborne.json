@@ -28,10 +28,11 @@
 	"no_fire_damage": {
 		"type": "origins:modify_damage_taken",
 		"damage_condition": {
-			"type": "origins:fire"
+			"type": "origins:in_tag",
+			"tag": "minecraft:is_fire"
 		},
 		"modifier": {
-			"name": "Heals from fire damage",
+			"name": "Fire Damage Immunity",
 			"operation": "multiply_total_multiplicative",
 			"value": -1.0
 		}

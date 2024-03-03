@@ -1,16 +1,23 @@
 {
+        "loading_priority": 11,
 	"powers": [
+                "medievalorigins:alfiq/clawed",
+                "medievalorigins:alfiq/poor_grip",
+                "medievalorigins:alfiq/agile_preference",
 		"medievalorigins:alfiq/on_your_feet",
                 "medievalorigins:alfiq/crepuscular",
-                "medievalorigins:alfiq/pounce",
-                "medievalorigins:alfiq/clawed",
                 "medievalorigins:alfiq/pickpocket",
+                "medievalorigins:alfiq/pickpocket_player",
+                "medievalorigins:alfiq/pounce",
                 "origins:carnivore",
                 "origins:velvet_paws",
                 "origins:scare_creepers",
-                "medievalorigins:alfiq/milk_drinker"
+                "medievalorigins:alfiq/meow"
 	],
-	"icon": "minecraft:ender_eye",
-	"impact": 2,
+        "icon": {
+                "item": "minecraft:ink_sac",
+                "tag": "{CustomModelData:363}"
+        },
+	"impact": 1,
         "order": 1
 }

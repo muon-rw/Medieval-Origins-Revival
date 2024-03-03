@@ -1,4 +1,5 @@
 {
+    "loading_priority": 11,
 	"powers": [
                 "medievalorigins:troll/ironhide",
                 "medievalorigins:troll/ham_fisted",

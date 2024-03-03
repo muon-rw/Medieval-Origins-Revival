@@ -1,16 +1,12 @@
 {
-	"type": "origins:self_action_when_hit",
-	"entity_action": {
-		"type": "origins:damage",
-		"amount": 6,
-		"source": {
-			"name": "onFire",
-			"fire": true,
-			"bypasses_armor": true
-		}
-	},
-	"cooldown": 10,
+	"type": "origins:modify_damage_taken",
+	"modifier": {
+        "name": "Flammable",
+        "operation": "addition",
+        "value": 6.0
+    },
 	"damage_condition": {
-		"type": "origins:fire"
+		"type": "origins:in_tag",
+		"tag": "minecraft:is_fire"
 	}
 }

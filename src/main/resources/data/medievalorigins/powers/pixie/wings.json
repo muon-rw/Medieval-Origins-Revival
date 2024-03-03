@@ -1,0 +1,6 @@
+{
+    "hidden": true,
+    "type": "origins:elytra_flight",
+    "render_elytra": true,
+    "texture_location": "medievalorigins:textures/entity/pixie_wings.png"
+}

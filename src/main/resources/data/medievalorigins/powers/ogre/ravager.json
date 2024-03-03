@@ -17,7 +17,7 @@
 					{
 						"type": "apoli:ingredient",
 						"ingredient": {
-							"tag": "c:axes"
+							"tag": "medievalorigins:axes"
 						}
 					}
 				]
@@ -41,7 +41,7 @@
 					{
 						"type": "apoli:ingredient",
 						"ingredient": {
-							"tag": "c:axes"
+							"tag": "medievalorigins:axes"
 						}
 					}
 				]
@@ -53,29 +53,20 @@
 		"item_condition": {
 			"type": "apoli:ingredient",
 			"ingredient": {
-				"tag": "c:axes"
+				"tag": "medievalorigins:axes"
 			}
 		},
-		"text": [
+		"texts": [
 			{
-				"text": "+25% ",
-				"color": "blue"
-			},
-			{
-				"translate": "attribute.name.generic.attack_damage",
-				"color": "blue"
-			},
-			{
-				"text": " (",
-				"color": "dark_gray"
-			},
-			{
-				"translate": "power.medievalorigins.ogre/ravager.name",
+				"translate": "tooltip.medievalorigins.ravager",
 				"color": "green"
 			},
 			{
-				"text": ")",
-				"color": "dark_gray"
+				"translate": "tooltip.medievalorigins.attack_damage_bonus",
+				"with": [
+					"25%"
+				],
+				"color": "blue"
 			}
 		]
 	}

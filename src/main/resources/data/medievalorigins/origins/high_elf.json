@@ -1,13 +1,27 @@
 {
-    "powers": [
-        "medievalorigins:high_elf/subclass_picker",
-        "medievalorigins:high_elf/mystic_affinity",
-        "medievalorigins:high_elf/elegant",
-        "medievalorigins:high_elf/fragile",
-        "medievalorigins:high_elf/towering"
-    ],
-    "icon": {
-        "item": "wizards:staff_wizard"
-    },
-    "impact": 3
+        "loading_priority": 11,
+	"powers": [
+                "medievalorigins:high_elf/ebonbreath",
+                "medievalorigins:high_elf/mystic_affinity",
+		"medievalorigins:high_elf/fragile",
+                "medievalorigins:high_elf/spell_power_irons",
+                "medievalorigins:high_elf/spell_power_irons_ars",
+                "medievalorigins:high_elf/spell_power_ars",
+                "medievalorigins:high_elf/towering",
+                "medievalorigins:high_elf/elegant",
+                "medievalorigins:high_elf/gear_spawn",
+                "medievalorigins:high_elf/glacial_step",
+                "medievalorigins:high_elf/extrusive_movement",
+                "medievalorigins:high_elf/instant_cure",
+                "medievalorigins:high_elf/blazenbreath",
+                "medievalorigins:high_elf/blazenbreath_weak",
+                "medievalorigins:high_elf/void_warp",
+                "medievalorigins:high_elf/subclass_picker"
+	],
+        "icon": {
+                "item": "minecraft:ink_sac",
+                "tag": "{CustomModelData:364}"
+        },
+        "impact": 2,
+        "order": 1
 }

@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    {"id":"#c:chestplates","required":false},
+    {"id":"#forge:armors/chestplates","required":false},
+    {"id":"#forge:chestplates","required":false},
+	  "leather_chestplate",
+    "minecraft:chainmail_chestplate",
+    "minecraft:golden_chestplate",
+    "minecraft:iron_chestplate",
+    "minecraft:diamond_chestplate",
+    "minecraft:netherite_chestplate"
+  ]
+}

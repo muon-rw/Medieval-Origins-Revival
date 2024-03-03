@@ -1,9 +1,0 @@
-{
-	"loading_priority": 1,
-	"powers": [
-		"medievalorigins:human/description"
-	],
-	"icon": "minecraft:player_head",
-	"order": 0,
-	"impact": 0
-}

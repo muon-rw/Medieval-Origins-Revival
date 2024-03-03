@@ -26,8 +26,8 @@
   "origin.medievalorigins.moon_elf.name": "月之精灵",
   "origin.medievalorigins.moon_elf.description": "神秘而虚无缥缈的生物，不属于这个世界。月之精灵的名字并非来自它们的故乡，而是因为受害者在被月之精灵杀死之前这是唯一能够看见的东西。",
 
-  "origin.medievalorigins.necromancer.name": "亡灵巫师",
-  "origin.medievalorigins.necromancer.description": "亡灵巫师深谙起死回生的禁术，它们可以无中生有地组建一支军队，但这种与死亡的病态关系也会带来较为恐怖的后果。",
+  "origin.medievalorigins.revenant.name": "亡灵巫师",
+  "origin.medievalorigins.revenant.description": "亡灵巫师深谙起死回生的禁术，它们可以无中生有地组建一支军队，但这种与死亡的病态关系也会带来较为恐怖的后果。",
 
   "origin.medievalorigins.ogre.name": "食人魔",
   "origin.medievalorigins.ogre.description": "食人魔在之前被称之为野蛮人，但是食人魔不喜欢这样。因此，那些让食人魔生气的家伙都会因此而缺少了某个零件，人就安静了。",
@@ -230,29 +230,29 @@
   "power.medievalorigins.moon_elf/towering.name": "高耸",
   "power.medievalorigins.moon_elf/towering.description": "月之精灵的体型和森林中的远亲差不多，会比正常人略高一些。",
 
-  "power.medievalorigins.necromancer/black_thumb.name": "黑拇指",
-  "power.medievalorigins.necromancer/black_thumb.description": "亡灵巫师只和死亡有过交道，因此，亡灵巫师无法收获任何作物，任何作物在亡灵巫师收下都会变枯萎。",
+  "power.medievalorigins.revenant/black_thumb.name": "黑拇指",
+  "power.medievalorigins.revenant/black_thumb.description": "亡灵巫师只和死亡有过交道，因此，亡灵巫师无法收获任何作物，任何作物在亡灵巫师收下都会变枯萎。",
 
-  "power.medievalorigins.necromancer/disturbed.name": "忐忑",
-  "power.medievalorigins.necromancer/disturbed.description": "学习亡灵巫术会给人带来创伤，亡灵巫师无法入睡，因为每次在睡眠时都会很害怕遇见自己不知道的事情。",
+  "power.medievalorigins.revenant/disturbed.name": "忐忑",
+  "power.medievalorigins.revenant/disturbed.description": "学习亡灵巫术会给人带来创伤，亡灵巫师无法入睡，因为每次在睡眠时都会很害怕遇见自己不知道的事情。",
 
-  "power.medievalorigins.necromancer/hellraiser.name": "地狱魔王",
-  "power.medievalorigins.necromancer/hellraiser.description": "亡灵巫师可以随意召唤一圈的骷髅来作为盾牌，这些被召唤的骷髅可以阻止投掷物攻击巫师，但骷髅的存在时间并不会很长。",
+  "power.medievalorigins.revenant/hellraiser.name": "地狱魔王",
+  "power.medievalorigins.revenant/hellraiser.description": "亡灵巫师可以随意召唤一圈的骷髅来作为盾牌，这些被召唤的骷髅可以阻止投掷物攻击巫师，但骷髅的存在时间并不会很长。",
 
-  "power.medievalorigins.necromancer/impervious.name": "不透水",
-  "power.medievalorigins.necromancer/impervious.description": "亡灵巫师对于死亡的研究使巫师对中毒、凋零和瞬间伤害效果免疫，不幸的是，这也就意味着巫师也无法对再生和瞬间治疗效果生效。",
+  "power.medievalorigins.revenant/impervious.name": "不透水",
+  "power.medievalorigins.revenant/impervious.description": "亡灵巫师对于死亡的研究使巫师对中毒、凋零和瞬间伤害效果免疫，不幸的是，这也就意味着巫师也无法对再生和瞬间治疗效果生效。",
 
-  "power.medievalorigins.necromancer/poor_reputation.name": "声誉不佳",
-  "power.medievalorigins.necromancer/poor_reputation.description": "不幸的是，黑暗的艺术致使村民感到恐惧。村民非常不愿意和亡灵巫师进行交易，铁傀儡也会攻击亡灵巫师。只不过虽然如此，但是和女巫的关系还不错。",
+  "power.medievalorigins.revenant/poor_reputation.name": "声誉不佳",
+  "power.medievalorigins.revenant/poor_reputation.description": "不幸的是，黑暗的艺术致使村民感到恐惧。村民非常不愿意和亡灵巫师进行交易，铁傀儡也会攻击亡灵巫师。只不过虽然如此，但是和女巫的关系还不错。",
 
-  "power.medievalorigins.necromancer/resilient.name": "弹性",
-  "power.medievalorigins.necromancer/resilient.description": "对于死亡的研究致使亡灵巫师拥有更多的生命值。",
+  "power.medievalorigins.revenant/resilient.name": "弹性",
+  "power.medievalorigins.revenant/resilient.description": "对于死亡的研究致使亡灵巫师拥有更多的生命值。",
 
-  "power.medievalorigins.necromancer/siphon.name": "虹吸",
-  "power.medievalorigins.necromancer/siphon.description": "撕裂出你的部分灵魂，并将其辐射到你周围的领域中，强化任何对你没有攻击欲望的敌对生物，但是也会付出一定的代价。",
+  "power.medievalorigins.revenant/siphon.name": "虹吸",
+  "power.medievalorigins.revenant/siphon.description": "撕裂出你的部分灵魂，并将其辐射到你周围的领域中，强化任何对你没有攻击欲望的敌对生物，但是也会付出一定的代价。",
 
-  "power.medievalorigins.necromancer/unguarded.name": "无人",
-  "power.medievalorigins.necromancer/unguarded.description": "将自身包裹在奥术中会让你在物理领域中受到攻击，大多数敌对生物都可以对亡灵巫师造成更多的伤害。",
+  "power.medievalorigins.revenant/unguarded.name": "无人",
+  "power.medievalorigins.revenant/unguarded.description": "将自身包裹在奥术中会让你在物理领域中受到攻击，大多数敌对生物都可以对亡灵巫师造成更多的伤害。",
 
   "power.medievalorigins.ogre/gargantuan.name": "巨型",
   "power.medievalorigins.ogre/gargantuan.description": "食人魔一直被称为高个子，但是食人魔只知道它无法穿过常规的门。",

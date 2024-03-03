@@ -1,9 +1,6 @@
-playsound minecraft:entity.warden.sonic_charge player @a ~ ~ ~ 0.8 0.7
-playsound minecraft:entity.ghast.hurt player @a ~ ~ ~ 0.18 0.6
-playsound minecraft:entity.ghast.hurt player @a ~ ~ ~ 0.22 0.5
-playsound minecraft:entity.ghast.hurt player @a ~ ~ ~ 0.18 0.7
-playsound minecraft:entity.panda.death player @a ~ ~ ~ 0.5 0.5
-playsound minecraft:entity.panda.death player @a ~ ~ ~ 0.5 0.6
-playsound minecraft:entity.allay.hurt player @a ~ ~ ~ 0.8 0.6
-playsound minecraft:entity.allay.hurt player @a ~ ~ ~ 0.8 0.5
-playsound minecraft:entity.warden.sonic_boom player @a ~ ~ ~ 0.7 0.7
+playsound minecraft:entity.warden.sonic_charge player @a ~ ~ ~ 0.68 0.9
+playsound medievalorigins:banshee_cry player @a ~ ~ ~ 1.0 1.0
+playsound medievalorigins:horrible_screech player @a ~ ~ ~ 0.7 1.0
+playsound minecraft:entity.warden.sonic_boom player @a ~ ~ ~ 1.0 1.0
+summon area_effect_cloud ~ ~0.1 ~ {Particle:electric_spark,Potion:regeneration,Radius:3,Duration:120}
+summon area_effect_cloud ~ ~ ~ {Particle:soul,Radius:0.8,RadiusPerTick:0.2,Duration:20}

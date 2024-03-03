@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    {"id":"minecraft:wooden_sword","required": false},
+    {"id":"minecraft:iron_sword","required": false},
+    {"id":"minecraft:golden_sword","required": false},
+    {"id":"minecraft:diamond_sword","required": false},
+    {"id":"minecraft:netherite_sword","required": false},
+    {"id":"#minecraft:swords","required": false},
+	  {"id":"#forge:tools/swords","required": false},
+    {"id":"#forge:swords","required": false},
+    {"id":"#simplyswords:gear","required": false}
+  ]
+}

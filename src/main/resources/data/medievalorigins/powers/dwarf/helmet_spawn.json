@@ -10,7 +10,7 @@
             "slot": "armor.head",
             "stack": {
                 "item": "minecraft:golden_helmet",
-                "tag": "{Enchantments: [{id: \"minecraft:unbreaking\", lvl: 3s}]}"
+                "tag": "{Enchantments: [{id: \"minecraft:unbreaking\", lvl: 2s}]}"
             }
         }
     },

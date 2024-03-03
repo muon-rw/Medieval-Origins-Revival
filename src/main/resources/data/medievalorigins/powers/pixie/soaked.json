@@ -20,8 +20,17 @@
 				"type": "origins:in_rain"
 			},
 			"if_action": {
-				"type": "origins:execute_command",
-				"command": "power revoke @s medievalorigins:pixie/flight"
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:execute_command",
+						"command": "power revoke @s medievalorigins:pixie/flight"
+					},
+					{
+						"type": "origins:execute_command",
+						"command": "power revoke @s medievalorigins:pixie/flap"
+					}
+				]
 			},
 			"else_action": {
 				"type": "origins:if_else",
@@ -33,8 +42,17 @@
 					"type": "origins:nothing"
 				},
 				"else_action": {
-					"type": "origins:execute_command",
-					"command": "power grant @s medievalorigins:pixie/flight"
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:execute_command",
+							"command": "power grant @s medievalorigins:pixie/flight"
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "power grant @s medievalorigins:pixie/flap"
+						}
+					]
 				}
 			}
 		},

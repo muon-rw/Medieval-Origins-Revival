@@ -1,4 +1,5 @@
 {
+        "loading_priority": 11,
         "powers": [
                 "medievalorigins:ogre/gargantuan",
                 "medievalorigins:ogre/bloodlust",
