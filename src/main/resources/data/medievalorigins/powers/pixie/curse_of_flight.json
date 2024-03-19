@@ -19,7 +19,8 @@
                     "compare_to": 3
                 },
                 {
-                    "type": "medievalorigins:is_chestplate"
+                    "type": "origins:is_equippable",
+                    "equipment_slot": "chest"
                 }
             ]
         },

@@ -36,7 +36,10 @@
                         "type": "origins:empty"
                     },
                     {
-                        "type": "medievalorigins:is_fist_weapon"
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "tag": "medievalorigins:fist_weapons"
+                        }
                     }
                 ]
             }

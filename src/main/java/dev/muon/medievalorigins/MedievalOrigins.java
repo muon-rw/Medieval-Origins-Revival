@@ -5,6 +5,7 @@ import dev.muon.medievalorigins.action.ModBientityActions;
 import dev.muon.medievalorigins.condition.ModEntityConditions;
 import dev.muon.medievalorigins.condition.ModItemConditions;
 import dev.muon.medievalorigins.entity.ModEntities;
+import dev.muon.medievalorigins.power.ModPowers;
 import dev.muon.medievalorigins.sounds.ModSounds;
 import net.fabricmc.api.ModInitializer;
 import dev.muon.medievalorigins.enchantment.ModEnchantments;
@@ -18,6 +19,9 @@ import net.fabricmc.loader.api.ModContainer;
 
 public class MedievalOrigins implements ModInitializer {
 	public static final Logger LOGGER = LogManager.getLogger("medievalorigins");
+
+	// Unused, using custom conditions or registering to our tags with AutoTag API
+	/*
 	public static void resourceOverrides() {
 		ResourceLocation id = MedievalOrigins.loc("tag_loader");
 		ModContainer container = getModContainer(id);
@@ -34,6 +38,8 @@ public class MedievalOrigins implements ModInitializer {
 		}
 		return FabricLoader.getInstance().getModContainer(pack.getNamespace()).orElseThrow();
 	}
+	*/
+
 	@Override
 	public void onInitialize() {
 		LOGGER.info("Loading Medieval Origins");
@@ -44,6 +50,8 @@ public class MedievalOrigins implements ModInitializer {
 		ModItemConditions.register();
 		ModEntityConditions.register();
 		ModSounds.register();
+		ModPowers.register();
+		ModAutoTagRegistry.registerTags();
 	}
 	static String MOD_ID = "medievalorigins";
 	public static ResourceLocation loc(String id) {

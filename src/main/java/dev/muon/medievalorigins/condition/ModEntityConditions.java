@@ -10,7 +10,7 @@ import net.minecraft.world.entity.projectile.AbstractArrow;
 
 public class ModEntityConditions {
     public static void register() {
-        register(new ConditionFactory<>(MedievalOrigins.loc("golden_tool"), new SerializableData(), (data, entity)
+        register(new ConditionFactory<>(MedievalOrigins.loc("is_arrow"), new SerializableData(), (data, entity)
                 -> entity instanceof AbstractArrow));
     }
 

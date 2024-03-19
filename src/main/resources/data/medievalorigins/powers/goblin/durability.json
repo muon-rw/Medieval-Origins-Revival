@@ -1,120 +1,70 @@
 {
     "type": "origins:multiple",
-    "head": {
-        "type": "origins:modify_damage_taken",
-        "damage_armor_condition": {
-            "type": "origins:and",
+    "soft_cap": {
+        "type": "apugli:modify_durability_change",
+        "comparisons": [
+            {
+                "comparison": ">=",
+                "compare_to": 5
+            }
+        ],
+        "modifier": {
+            "operation": "multiply_base_multiplicative",
+            "value": -0.8
+        },
+        "item_condition": {
+            "type": "origins:or",
             "conditions": [
                 {
-                    "type": "origins:predicate",
-                    "predicate": "medievalorigins:goblin_break_chance"
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "tag": "medievalorigins:golden_armor"
+                    }
                 },
                 {
-                    "type": "origins:equipped_item",
-                    "equipment_slot": "head",
-                    "item_condition": {
-                        "type": "origins:or",
-                        "conditions": [
-                            {
-                                "type": "origins:ingredient",
-                                "ingredient": {
-                                    "tag": "medievalorigins:golden_gear"
-                                }
-                            },
-                            {
-                                "type": "medievalorigins:golden_armor"
-                            }
-                        ]
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "tag": "medievalorigins:golden_weapon"
+                    }
+                },
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "tag": "medievalorigins:golden_tool"
                     }
                 }
             ]
         }
     },
-    "chest": {
-        "type": "origins:modify_damage_taken",
-        "damage_armor_condition": {
-            "type": "origins:and",
+    "chance_clear": {
+        "type": "apugli:modify_durability_change",
+        "condition": {
+            "type": "origins:predicate",
+            "predicate": "medievalorigins:unbreak_chance"
+        },
+        "modifier": {
+            "operation": "set_total",
+            "value": 0
+        },
+        "item_condition": {
+            "type": "origins:or",
             "conditions": [
                 {
-                    "type": "origins:predicate",
-                    "predicate": "medievalorigins:goblin_break_chance"
-                },
-                {
-                    "type": "origins:equipped_item",
-                    "equipment_slot": "chest",
-                    "item_condition": {
-                        "type": "origins:or",
-                        "conditions": [
-                            {
-                                "type": "origins:ingredient",
-                                "ingredient": {
-                                    "tag": "medievalorigins:golden_gear"
-                                }
-                            },
-                            {
-                                "type": "medievalorigins:golden_armor"
-                            }
-                        ]
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "tag": "medievalorigins:golden_armor"
                     }
-                }
-            ]
-        }
-    },
-    "legs": {
-        "type": "origins:modify_damage_taken",
-        "damage_armor_condition": {
-            "type": "origins:and",
-            "conditions": [
-                {
-                    "type": "origins:predicate",
-                    "predicate": "medievalorigins:goblin_break_chance"
                 },
                 {
-                    "type": "origins:equipped_item",
-                    "equipment_slot": "legs",
-                    "item_condition": {
-                        "type": "origins:or",
-                        "conditions": [
-                            {
-                                "type": "origins:ingredient",
-                                "ingredient": {
-                                    "tag": "medievalorigins:golden_gear"
-                                }
-                            },
-                            {
-                                "type": "medievalorigins:golden_armor"
-                            }
-                        ]
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "tag": "medievalorigins:golden_weapon"
                     }
-                }
-            ]
-        }
-    },
-    "feet": {
-        "type": "origins:modify_damage_taken",
-        "damage_armor_condition": {
-            "type": "origins:and",
-            "conditions": [
-                {
-                    "type": "origins:predicate",
-                    "predicate": "medievalorigins:goblin_break_chance"
                 },
                 {
-                    "type": "origins:equipped_item",
-                    "equipment_slot": "feet",
-                    "item_condition": {
-                        "type": "origins:or",
-                        "conditions": [
-                            {
-                                "type": "origins:ingredient",
-                                "ingredient": {
-                                    "tag": "medievalorigins:golden_gear"
-                                }
-                            },
-                            {
-                                "type": "medievalorigins:golden_armor"
-                            }
-                        ]
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "tag": "medievalorigins:golden_tool"
                     }
                 }
             ]

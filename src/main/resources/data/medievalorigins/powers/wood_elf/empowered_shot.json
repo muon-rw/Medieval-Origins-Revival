@@ -38,7 +38,10 @@
         "condition": {
             "type": "origins:using_item",
             "item_condition": {
-                "type": "medievalorigins:is_bow"
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "medievalorigins:bows"
+                }
             }
         }
     },
@@ -192,7 +195,10 @@
                 {
                     "type": "origins:using_item",
                     "item_condition": {
-                        "type": "medievalorigins:is_bow"
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "tag": "medievalorigins:bows"
+                        }
                     },
                     "inverted": true
                 }
