@@ -12,10 +12,6 @@ import dev.muon.medievalorigins.enchantment.ModEnchantments;
 import net.minecraft.resources.ResourceLocation;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
-import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
-import net.fabricmc.loader.api.FabricLoader;
-import net.fabricmc.loader.api.ModContainer;
 
 public class MedievalOrigins implements ModInitializer {
 	public static final Logger LOGGER = LogManager.getLogger("medievalorigins");

@@ -12,6 +12,8 @@ import net.minecraft.world.item.enchantment.Enchantments;
 
 public class ModItemConditions {
     public static void register() {
+        // Switched to AutoTag for performance
+        /*
         register(new ConditionFactory<>(MedievalOrigins.loc("is_weapon"), new SerializableData(), (data, stack) ->
                 Enchantments.SHARPNESS.canEnchant(stack) || stack.getItem() instanceof BowItem || stack.getItem() instanceof DiggerItem && ((DiggerItem) stack.getItem()).getAttackDamage() > 0));
 
@@ -55,9 +57,11 @@ public class ModItemConditions {
             Item item = stack.getItem();
             return item instanceof ArmorItem && ((ArmorItem) item).getEquipmentSlot() == EquipmentSlot.CHEST;
         }));
+         */
     }
 
+    /*
     private static void register(ConditionFactory<ItemStack> conditionFactory) {
         Registry.register(ApoliRegistries.ITEM_CONDITION, conditionFactory.getSerializerId(), conditionFactory);
-    }
+    }*/
 }

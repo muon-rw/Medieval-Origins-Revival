@@ -14,7 +14,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(SpellHelper.class)
 public abstract class SpellHelperMixin {
-
     @Inject(method = "ammoForSpell", at = @At("HEAD"), cancellable = true)
     private static void checkForCastFreelyPower(Player player, Spell spell, ItemStack itemStack, CallbackInfoReturnable<SpellHelper.AmmoResult> cir) {
         if (PowerHolderComponent.hasPower(player, CastFreelyPower.class)) {

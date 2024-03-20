@@ -15,18 +15,21 @@ import java.util.function.Predicate;
 
 public class ModAutoTagRegistry {
     public static void registerTags() {
-            register("weapons", item -> item instanceof BowItem || item instanceof DiggerItem || item instanceof SwordItem);
-            register("bows", item -> item instanceof BowItem);
-            register("daggers", item -> item instanceof SwordItem && BuiltInRegistries.ITEM.getKey(item).getPath().matches("[a-z_]*(dagger|sai|knife)[a-z_]*"));
-            register("fist_weapons", item -> item instanceof SwordItem && BuiltInRegistries.ITEM.getKey(item).getPath().matches("[a-z_]*(fist|claw|gauntlet)[a-z_]*"));
-            register("golden_armor", item -> item instanceof ArmorItem && BuiltInRegistries.ITEM.getKey(item).getPath().matches("[a-z_]*(gold|gilded)[a-z_]*"));
-            register("silver_armor", item -> item instanceof ArmorItem && BuiltInRegistries.ITEM.getKey(item).getPath().matches("[a-z_]*(silver|iron)[a-z_]*"));
-            register("golden_weapons", item -> item instanceof SwordItem && BuiltInRegistries.ITEM.getKey(item).getPath().matches("[a-z_]*(gold|gilded)[a-z_]*"));
-            register("golden_tools", item -> item instanceof DiggerItem && BuiltInRegistries.ITEM.getKey(item).getPath().matches("[a-z_]*(gold|gilded)[a-z_]*"));
+            addToTag("weapons", item -> item instanceof BowItem || item instanceof DiggerItem || item instanceof SwordItem);
+            addToTag("bows", item -> item instanceof BowItem);
+            addToTag("daggers", item -> item instanceof SwordItem && BuiltInRegistries.ITEM.getKey(item).getPath().matches("[a-z_]*(dagger|sai|knife)[a-z_]*"));
+            addToTag("fist_weapons", item -> item instanceof SwordItem && BuiltInRegistries.ITEM.getKey(item).getPath().matches("[a-z_]*(fist|claw|gauntlet)[a-z_]*"));
+
+            addToTag("silver_armor", item -> item instanceof ArmorItem && BuiltInRegistries.ITEM.getKey(item).getPath().matches("[a-z_]*(silver|iron)[a-z_]*"));
+            addToTag("silver_weapons", item -> item instanceof ArmorItem && BuiltInRegistries.ITEM.getKey(item).getPath().matches("[a-z_]*(silver|iron)[a-z_]*"));
+            addToTag("silver_tools", item -> item instanceof DiggerItem && BuiltInRegistries.ITEM.getKey(item).getPath().matches("[a-z_]*(silver|iron)[a-z_]*"));
+
+            addToTag("golden_armor", item -> item instanceof ArmorItem && BuiltInRegistries.ITEM.getKey(item).getPath().matches("[a-z_]*(gold|gilded)[a-z_]*"));
+            addToTag("golden_weapons", item -> item instanceof SwordItem && BuiltInRegistries.ITEM.getKey(item).getPath().matches("[a-z_]*(gold|gilded)[a-z_]*"));
+            addToTag("golden_tools", item -> item instanceof DiggerItem && BuiltInRegistries.ITEM.getKey(item).getPath().matches("[a-z_]*(gold|gilded)[a-z_]*"));
     }
 
-
-    public static void register(String tagName, Predicate<Item> condition) {
+    public static void addToTag(String tagName, Predicate<Item> condition) {
         ResourceLocation tagId = MedievalOrigins.loc(tagName);
         TagKey<Item> tagKey = TagKey.create(Registries.ITEM, tagId);
         AutoTagRegistry.register(Registries.ITEM, tagKey, condition);
