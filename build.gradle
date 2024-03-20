@@ -57,7 +57,7 @@ dependencies {
 	//
 	//modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-base:${project.cca_version}"
 	//modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${project.cca_version}"
-	modImplementation include("maven.modrinth:additionalentityattributes:${project.aea_version}")
+	//modImplementation include("maven.modrinth:additionalentityattributes:${project.aea_version}")
 	modImplementation include("com.jamieswhiteshirt:reach-entity-attributes:${project.rea_version}")
 	modImplementation include("com.github.apace100:autotag-api:${autotag_version}")
 	modImplementation (include("net.merchantpug:Apugli:${apugli_version}+${minecraft_version}-fabric"))
@@ -73,7 +73,7 @@ dependencies {
 
 
 	// Icarus + Trinkets/MidnightLib
-	//modImplementation ("dev.emi:trinkets:${project.trinkets_version}")
+	modImplementation ("dev.emi:trinkets:${project.trinkets_version}")
 	modImplementation("maven.modrinth:icarus:${project.icarus_version}")
 	modImplementation("maven.modrinth:midnightlib:${project.midnightlib_version}")
 
@@ -95,6 +95,8 @@ dependencies {
 	modImplementation("mod.azure.azurelibarmor:azurelibarmor-fabric-${project.azure_mc_version}:${project.azure_lib_version}")
 	modCompileOnly ("me.shedaniel:RoughlyEnoughItems-api-fabric:${project.rei_version}")
 	modRuntimeOnly ("me.shedaniel:RoughlyEnoughItems-fabric:${project.rei_version}")
+
+
 }
 processResources {
 	inputs.property "version", project.version
