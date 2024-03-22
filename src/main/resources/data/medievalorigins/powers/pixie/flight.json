@@ -62,6 +62,9 @@
 			}
 		}
 	],
+	"thanks_pug": {
+		"type": "apugli:prevent_movement_checks"
+	},
 	"always_jump": {
 		"type": "origins:grounded"
 	},

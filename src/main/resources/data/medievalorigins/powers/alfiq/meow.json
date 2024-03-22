@@ -1,45 +1,53 @@
 {
-    "type": "origins:active_self",
-    "key": "key.origins.primary_active",
-    "entity_action": {
-        "type": "origins:choice",
-        "actions": [
-            {
-                "element": {
-                    "type": "origins:play_sound",
-                    "sound": "minecraft:entity.cat.purreow",
-                    "pitch": 0.7,
-                    "category": "player"
+    "type": "origins:multiple",
+    "hewwo": {
+        "type": "origins:active_self",
+        "key": "key.origins.primary_active",
+        "entity_action": {
+            "type": "origins:choice",
+            "actions": [
+                {
+                    "element": {
+                        "type": "origins:play_sound",
+                        "sound": "minecraft:entity.cat.purreow",
+                        "pitch": 0.7,
+                        "category": "player"
+                    },
+                    "weight": 2
                 },
-                "weight": 2
-            },
-            {
-                "element": {
-                    "type": "origins:play_sound",
-                    "sound": "minecraft:entity.cat.stray_ambient",
-                    "pitch": 0.7,
-                    "category": "player"
+                {
+                    "element": {
+                        "type": "origins:play_sound",
+                        "sound": "minecraft:entity.cat.stray_ambient",
+                        "pitch": 0.7,
+                        "category": "player"
+                    },
+                    "weight": 2
                 },
-                "weight": 2
-            },
-            {
-                "element": {
-                    "type": "origins:play_sound",
-                    "sound": "minecraft:entity.cat.ambient",
-                    "pitch": 0.7,
-                    "category": "player"
+                {
+                    "element": {
+                        "type": "origins:play_sound",
+                        "sound": "minecraft:entity.cat.ambient",
+                        "pitch": 0.7,
+                        "category": "player"
+                    },
+                    "weight": 3
                 },
-                "weight": 3
-            },
-            {
-                "element": {
-                    "type": "origins:play_sound",
-                    "sound": "minecraft:entity.cat.beg_for_food",
-                    "pitch": 0.7,
-                    "category": "player"
-                },
-                "weight": 1
-            }
-        ]
+                {
+                    "element": {
+                        "type": "origins:play_sound",
+                        "sound": "minecraft:entity.cat.beg_for_food",
+                        "pitch": 0.7,
+                        "category": "player"
+                    },
+                    "weight": 1
+                }
+            ]
+        }
+    },
+    "my_final_words": {
+        "type": "apugli:custom_death_sound",
+        "sound": "minecraft:entity.cat.death",
+        "pitch": 0.8
     }
 }

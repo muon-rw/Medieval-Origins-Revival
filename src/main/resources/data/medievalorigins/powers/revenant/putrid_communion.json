@@ -11,16 +11,6 @@
 		}
 	],
 	"type": "origins:multiple",
-	"no_interrupt": {
-		"type": "origins:action_on_block_use",
-		"action_result": "fail",
-		"condition": {
-			"type": "origins:resource",
-			"resource": "*:*_timer",
-			"compare_to": 0,
-			"comparison": ">"
-		}
-	},
 	"flesh": {
 		"type": "origins:resource",
 		"start_value": 0,
@@ -30,7 +20,7 @@
 			"should_render": true,
 			"condition": {
 				"type": "origins:resource",
-				"resource": "*:*_flesh",
+				"resource": "medievalorigins:revenant/putrid_communion_flesh",
 				"compare_to": 0,
 				"comparison": ">"
 			},
@@ -47,7 +37,7 @@
 			"should_render": true,
 			"condition": {
 				"type": "origins:resource",
-				"resource": "*:*_bone",
+				"resource": "medievalorigins:revenant/putrid_communion_bone",
 				"compare_to": 0,
 				"comparison": ">"
 			},
@@ -55,492 +45,157 @@
 			"bar_index": 5
 		}
 	},
-	"timer": {
-		"type": "origins:resource",
-		"min": 0,
-		"max": 30,
-		"start_value": 0,
-		"hud_render": {
-			"should_render": false
-		},
-		"max_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:execute_command",
-					"command": "playsound minecraft:entity.player.burp player @a ~ ~ ~"
-				},
-				{
-					"type": "origins:if_else_list",
-					"actions": [
-						{
-							"condition": {
-								"type": "origins:equipped_item",
-								"equipment_slot": "mainhand",
-								"item_condition": {
-									"type": "origins:ingredient",
-									"ingredient": {
-										"tag": "medievalorigins:skeleton_parts"
-									}
-								}
-							},
-							"action": {
-								"type": "origins:and",
-								"actions": [
-									{
-										"type": "origins:equipped_item_action",
-										"equipment_slot": "mainhand",
-										"action": {
-											"type": "origins:consume"
-										}
-									},
-									{
-										"type": "origins:modify_resource",
-										"modifier": {
-											"operation": "add_base_early",
-											"value": 1
-										},
-										"resource": "*:*_bone"
-									}
-								]
-							}
-						},
-						{
-							"condition": {
-								"type": "origins:equipped_item",
-								"equipment_slot": "mainhand",
-								"item_condition": {
-									"type": "origins:ingredient",
-									"ingredient": {
-										"item": "minecraft:skeleton_skull"
-									}
-								}
-							},
-							"action": {
-								"type": "origins:and",
-								"actions": [
-									{
-										"type": "origins:equipped_item_action",
-										"equipment_slot": "mainhand",
-										"action": {
-											"type": "origins:consume"
-										}
-									},
-									{
-										"type": "origins:modify_resource",
-										"modifier": {
-											"operation": "add_base_early",
-											"value": 5
-										},
-										"resource": "*:*_bone"
-									}
-								]
-							}
-						},
-						{
-							"condition": {
-								"type": "origins:equipped_item",
-								"equipment_slot": "mainhand",
-								"item_condition": {
-									"type": "origins:ingredient",
-									"ingredient": {
-										"item": "minecraft:wither_skeleton_skull"
-									}
-								}
-							},
-							"action": {
-								"type": "origins:and",
-								"actions": [
-									{
-										"type": "origins:equipped_item_action",
-										"equipment_slot": "mainhand",
-										"action": {
-											"type": "origins:consume"
-										}
-									},
-									{
-										"type": "origins:modify_resource",
-										"modifier": {
-											"operation": "add_base_early",
-											"value": 15
-										},
-										"resource": "*:*_bone"
-									}
-								]
-							}
-						},
-						{
-							"condition": {
-								"type": "origins:equipped_item",
-								"equipment_slot": "mainhand",
-								"item_condition": {
-									"type": "origins:ingredient",
-									"ingredient": {
-										"item": "minecraft:zombie_head"
-									}
-								}
-							},
-							"action": {
-								"type": "origins:and",
-								"actions": [
-									{
-										"type": "origins:equipped_item_action",
-										"equipment_slot": "mainhand",
-										"action": {
-											"type": "origins:consume"
-										}
-									},
-									{
-										"type": "origins:modify_resource",
-										"modifier": {
-											"operation": "add_base_early",
-											"value": 5
-										},
-										"resource": "*:*_flesh"
-									}
-								]
-							}
-						}
-					]
-				},
-				{
-					"type": "origins:change_resource",
-					"resource": "*:*_timer",
-					"change": 0,
-					"operation": "set"
-				}
-			]
-		}
-	},
-	"start": {
+	"edible_bones": {
+		"type": "apugli:edible_item",
 		"condition": {
-			"type": "origins:or",
-			"conditions": [
-				{
-					"type": "origins:equipped_item",
-					"equipment_slot": "mainhand",
-					"item_condition": {
-						"type": "origins:and",
-						"conditions": [
-							{
-								"type": "origins:ingredient",
-								"ingredient": {
-									"item": "minecraft:slime_ball"
-								}
-							}
-						]
-					}
-				},
-				{
-					"type": "origins:equipped_item",
-					"equipment_slot": "offhand",
-					"item_condition": {
-						"type": "origins:and",
-						"conditions": [
-							{
-								"type": "origins:ingredient",
-								"ingredient": {
-									"item": "minecraft:slime_ball"
-								}
-							}
-						]
-					}
-				}
-			]
+			"type": "origins:resource",
+			"resource": "medievalorigins:revenant/putrid_communion_bone",
+			"compare_to": 25,
+			"comparison": "<"
 		},
-		"type": "origins:active_self",
-		"entity_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:change_resource",
-					"resource": "*:*_timer",
-					"change": 0,
-					"operation": "set"
-				}
-			]
+		"item_condition": {
+			"type": "apoli:ingredient",
+			"ingredient": {
+				"tag": "medievalorigins:skeleton_parts"
+			}
 		},
-		"cooldown": 1,
-		"hud_render": {
-			"should_render": false
+		"food_component": {
+			"hunger": 0,
+			"saturation": 0,
+			"meat": false
 		},
-		"key": {
-			"key": "key.use"
-		}
-	},
-	"grow": {
-		"condition": {
-			"type": "origins:or",
-			"conditions": [
-				{
-					"type": "origins:equipped_item",
-					"equipment_slot": "mainhand",
-					"item_condition": {
-						"type": "origins:or",
-						"conditions": [
-							{
-								"type": "origins:ingredient",
-								"ingredient": {
-									"item": "minecraft:skeleton_skull"
-								}
-							},
-							{
-								"type": "origins:ingredient",
-								"ingredient": {
-									"tag": "medievalorigins:skeleton_parts"
-								}
-							},
-							{
-								"type": "origins:ingredient",
-								"ingredient": {
-									"item": "minecraft:wither_skeleton_skull"
-								}
-							},
-							{
-								"type": "origins:ingredient",
-								"ingredient": {
-									"item": "minecraft:zombie_head"
-								}
-							}
-						]
-					}
-				}
-			]
+		"use_action": "eat",
+		"item_action": {
+			"type": "origins:consume",
+			"amount": 0
 		},
-		"type": "origins:active_self",
-		"entity_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:change_resource",
-					"resource": "*:*_timer",
-					"change": 1
-				}
-			]
-		},
-		"cooldown": 1,
-		"hud_render": {
-			"should_render": false
-		},
-		"key": {
-			"key": "key.use",
-			"continuous": true
-		}
-	},
-	"effects_bone": {
-		"condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:or",
-					"conditions": [
-						{
-							"type": "origins:equipped_item",
-							"equipment_slot": "mainhand",
-							"item_condition": {
-								"type": "origins:and",
-								"conditions": [
-									{
-										"type": "origins:ingredient",
-										"ingredient": {
-											"item": "minecraft:bone"
-										}
-									}
-								]
-							}
-						},
-						{
-							"type": "origins:equipped_item",
-							"equipment_slot": "mainhand",
-							"item_condition": {
-								"type": "origins:and",
-								"conditions": [
-									{
-										"type": "origins:ingredient",
-										"ingredient": {
-											"item": "minecraft:skeleton_skull"
-										}
-									}
-								]
-							}
-						}
-					]
-				}
-			]
-		},
-		"type": "origins:active_self",
-		"entity_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:execute_command",
-					"command": "execute positioned ~ ~1.4 ~ rotated as @s run particle minecraft:item minecraft:bone ^ ^ ^0.4 0.1 0.1 0.1 0.055 4"
-				},
-				{
-					"type": "origins:execute_command",
-					"command": "playsound medievalorigins:cronch player @a ~ ~ ~"
-				},
-				{
-					"type": "origins:apply_effect",
-					"effect": {
-						"effect": "minecraft:slowness",
-						"duration": 5,
-						"show_particles": false,
-						"amplifier": 1,
-						"show_icon": false
-					}
-				}
-			]
-		},
-		"cooldown": 4,
-		"hud_render": {
-			"should_render": false
-		},
-		"key": {
-			"key": "key.use",
-			"continuous": true
-		}
-	},
-	"effects_wither": {
-		"condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:or",
-					"conditions": [
-						{
-							"type": "origins:equipped_item",
-							"equipment_slot": "mainhand",
-							"item_condition": {
-								"type": "origins:and",
-								"conditions": [
-									{
-										"type": "origins:ingredient",
-										"ingredient": {
-											"item": "minecraft:wither_skeleton_skull"
-										}
-									}
-								]
-							}
-						}
-					]
-				}
-			]
-		},
-		"type": "origins:active_self",
-		"entity_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:execute_command",
-					"command": "execute positioned ~ ~1.4 ~ rotated as @s run particle minecraft:item minecraft:blackstone ^ ^ ^0.4 0.1 0.1 0.1 0.055 4"
-				},
-				{
-					"type": "origins:execute_command",
-					"command": "playsound medievalorigins:cronch player @a ~ ~ ~"
-				},
-				{
-					"type": "origins:apply_effect",
-					"effect": {
-						"effect": "minecraft:slowness",
-						"duration": 5,
-						"show_particles": false,
-						"amplifier": 1,
-						"show_icon": false
-					}
-				}
-			]
-		},
-		"cooldown": 4,
-		"hud_render": {
-			"should_render": false
-		},
-		"key": {
-			"key": "key.use",
-			"continuous": true
-		}
-	},
-	"effects_zombie": {
-		"condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:or",
-					"conditions": [
-						{
-							"type": "origins:equipped_item",
-							"equipment_slot": "mainhand",
-							"item_condition": {
-								"type": "origins:and",
-								"conditions": [
-									{
-										"type": "origins:ingredient",
-										"ingredient": {
-											"item": "minecraft:zombie_head"
-										}
-									}
-								]
-							}
-						}
-					]
-				},
-				{
-					"type": "origins:resource",
-					"comparison": "<=",
-					"compare_to": 10,
-					"resource": "*:*_flesh"
-				}
-			]
-		},
-		"type": "origins:active_self",
-		"entity_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:execute_command",
-					"command": "execute positioned ~ ~1.4 ~ rotated as @s run particle minecraft:item minecraft:rotten_flesh ^ ^ ^0.4 0.1 0.1 0.1 0.055 4"
-				},
-				{
-					"type": "origins:execute_command",
-					"command": "playsound medievalorigins:cronch player @a ~ ~ ~"
-				},
-				{
-					"type": "origins:apply_effect",
-					"effect": {
-						"effect": "minecraft:slowness",
-						"duration": 5,
-						"show_particles": false,
-						"amplifier": 1,
-						"show_icon": false
-					}
-				}
-			]
-		},
-		"cooldown": 4,
-		"hud_render": {
-			"should_render": false
-		},
-		"key": {
-			"key": "key.use",
-			"continuous": true
-		}
-	},
-	"modify_flesh": {
-		"type": "origins:action_on_item_use",
-		"trigger": "finish",
+		"sound": "medievalorigins:cronch",
 		"entity_action": {
 			"type": "origins:modify_resource",
 			"modifier": {
 				"operation": "add_base_early",
 				"value": 1
 			},
-			"resource": "*:*_flesh"
+			"resource": "medievalorigins:revenant/putrid_communion_bone"
+		}
+	},
+	"edible_skulls": {
+		"type": "apugli:edible_item",
+		"condition": {
+			"type": "origins:resource",
+			"resource": "medievalorigins:revenant/putrid_communion_bone",
+			"compare_to": 25,
+			"comparison": "<"
+		},
+		"item_condition": {
+			"type": "apoli:ingredient",
+			"ingredient": {
+				"item": "minecraft:skeleton_skull"
+			}
+		},
+		"food_component": {
+			"hunger": 0,
+			"saturation": 0,
+			"meat": false
+		},
+		"use_action": "eat",
+		"item_action": {
+			"type": "origins:consume",
+			"amount": 0
+		},
+		"sound": "medievalorigins:cronch",
+		"entity_action": {
+			"type": "origins:modify_resource",
+			"modifier": {
+				"operation": "add_base_early",
+				"value": 5
+			},
+			"resource": "medievalorigins:revenant/putrid_communion_bone"
+		}
+	},
+	"edible_wither_skulls": {
+		"type": "apugli:edible_item",
+		"condition": {
+			"type": "origins:resource",
+			"resource": "medievalorigins:revenant/putrid_communion_bone",
+			"compare_to": 25,
+			"comparison": "<"
+		},
+		"item_condition": {
+			"type": "apoli:ingredient",
+			"ingredient": {
+				"item": "minecraft:wither_skeleton_skull"
+			}
+		},
+		"food_component": {
+			"hunger": 0,
+			"saturation": 0,
+			"meat": false
+		},
+		"use_action": "eat",
+		"item_action": {
+			"type": "origins:consume",
+			"amount": 0
+		},
+		"sound": "medievalorigins:cronch",
+		"entity_action": {
+			"type": "origins:modify_resource",
+			"modifier": {
+				"operation": "add_base_early",
+				"value": 15
+			},
+			"resource": "medievalorigins:revenant/putrid_communion_bone"
+		}
+	},
+	"flesh_eat": {
+		"type": "origins:action_on_item_use",
+		"entity_action": {
+			"type": "origins:modify_resource",
+			"modifier": {
+				"operation": "add_base_early",
+				"value": 1
+			},
+			"resource": "medievalorigins:revenant/putrid_communion_flesh"
 		},
 		"item_condition": {
 			"type": "origins:ingredient",
 			"ingredient": {
 				"tag": "medievalorigins:zombie_flesh"
 			}
+		}
+	},
+	"edible_zombie_heads": {
+		"type": "apugli:edible_item",
+		"condition": {
+			"type": "origins:resource",
+			"resource": "medievalorigins:revenant/putrid_communion_flesh",
+			"compare_to": 10,
+			"comparison": "<"
+		},
+		"item_condition": {
+			"type": "apoli:ingredient",
+			"ingredient": {
+				"item": "minecraft:zombie_head"
+			}
+		},
+		"food_component": {
+			"hunger": 0,
+			"saturation": 0,
+			"meat": false
+		},
+		"use_action": "eat",
+		"item_action": {
+			"type": "origins:consume",
+			"amount": 0
+		},
+		"sound": "medievalorigins:cronch",
+		"entity_action": {
+			"type": "origins:modify_resource",
+			"modifier": {
+				"operation": "add_base_early",
+				"value": 5
+			},
+			"resource": "medievalorigins:revenant/putrid_communion_flesh"
 		}
 	}
 }
