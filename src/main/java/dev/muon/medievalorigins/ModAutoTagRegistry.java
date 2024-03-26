@@ -5,17 +5,13 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.DiggerItem;
-import net.minecraft.world.item.BowItem;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.*;
 
 import java.util.function.Predicate;
 
 public class ModAutoTagRegistry {
     public static void registerTags() {
-            addToTag("weapons", item -> item instanceof BowItem || item instanceof DiggerItem || item instanceof SwordItem);
+            addToTag("summon_weapons", item -> item == Items.BOW || item instanceof DiggerItem || item instanceof SwordItem);
             addToTag("bows", item -> item instanceof BowItem);
             addToTag("daggers", item -> item instanceof SwordItem && BuiltInRegistries.ITEM.getKey(item).getPath().matches("[a-z_]*(dagger|sai|knife)[a-z_]*"));
             addToTag("fist_weapons", item -> item instanceof SwordItem && BuiltInRegistries.ITEM.getKey(item).getPath().matches("[a-z_]*(fist|claw|gauntlet)[a-z_]*"));

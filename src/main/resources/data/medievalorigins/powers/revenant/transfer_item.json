@@ -19,7 +19,7 @@
 					"item_condition": {
 						"type": "origins:ingredient",
 						"ingredient": {
-							"tag": "medievalorigins:weapons"
+							"tag": "medievalorigins:summon_weapons"
 						}
 					}
 				}

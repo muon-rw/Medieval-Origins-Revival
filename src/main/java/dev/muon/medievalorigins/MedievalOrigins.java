@@ -16,6 +16,7 @@ public class MedievalOrigins implements ModInitializer {
 	public static final Logger LOGGER = LogManager.getLogger("medievalorigins");
 
 	// Unused, using custom conditions or registering to our tags with AutoTag API
+	// TODO: use for legacy icon config
 	/*
 	public static void resourceOverrides() {
 		ResourceLocation id = MedievalOrigins.loc("tag_loader");

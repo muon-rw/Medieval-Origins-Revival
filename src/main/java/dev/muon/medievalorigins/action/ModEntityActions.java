@@ -5,9 +5,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.core.Registry;
 public class ModEntityActions {
     public static void register() {
-        register(SummonSkeletonAction.getFactory());
-        register(SummonZombieAction.getFactory());
-        register(SummonWitherSkeletonAction.getFactory());
+        register(SummonEntityAction.getFactory());
     }
 
     public static ActionFactory<Entity> register(ActionFactory<Entity> actionFactory) {

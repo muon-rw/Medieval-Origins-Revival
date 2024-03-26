@@ -16,7 +16,7 @@ import java.util.UUID;
 
 public interface IFollowingSummon {
         /*
-        Implementation sourced from Ars Nouveau, in compliance with the LGPL-v3.0 license
+        Implementation based off of Ars Nouveau, in compliance with the LGPL-v3.0 license
     */
 
     EntityDataAccessor<Optional<UUID>> OWNER_UUID = SynchedEntityData.defineId(TamableAnimal.class, EntityDataSerializers.OPTIONAL_UUID);
@@ -37,22 +37,35 @@ public interface IFollowingSummon {
             super(creature, false);
         }
 
-        /**
-         * Returns whether the EntityAIBase should begin execution.
-         */
+        @Override
         public boolean canUse() {
             if (!(this.mob instanceof IFollowingSummon summon)) return false;
-            return summon.getSummoner() != null && summon.getSummoner().getLastHurtMob() != null;
+            LivingEntity ownerLastHurt = summon.getSummoner() != null ? summon.getSummoner().getLastHurtMob() : null;
+            return ownerLastHurt != null && this.isValidTarget(ownerLastHurt, summon.getSummoner());
         }
 
-        /**
-         * Execute a one shot task or start executing a continuous task
-         */
+        @Override
         public void start() {
-            if (mob instanceof IFollowingSummon summon && summon.getSummoner() != null)
-                mob.setTarget(summon.getSummoner().getLastHurtMob());
+            if (mob instanceof IFollowingSummon summon && summon.getSummoner() != null) {
+                LivingEntity target = summon.getSummoner().getLastHurtMob();
+                if (this.isValidTarget(target, summon.getSummoner())) {
+                    mob.setTarget(target);
+                }
+            }
             super.start();
         }
-    }
 
+        private boolean isValidTarget(LivingEntity target, LivingEntity owner) {
+            if (target == owner || target == mob) {
+                return false;
+            }
+            if (target instanceof ISummon) {
+                UUID targetOwnerUUID = ((ISummon) target).getOwnerUUID();
+                if (targetOwnerUUID != null && targetOwnerUUID.equals(((ISummon) mob).getOwnerUUID())) {
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
 }

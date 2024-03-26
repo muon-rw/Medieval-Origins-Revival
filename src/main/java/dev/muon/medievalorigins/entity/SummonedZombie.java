@@ -3,11 +3,9 @@ package dev.muon.medievalorigins.entity;
 import dev.muon.medievalorigins.entity.goal.FollowSummonerGoal;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.server.players.OldUsersConverter;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
@@ -36,30 +34,6 @@ public class SummonedZombie extends Zombie implements IFollowingSummon, ISummon 
     public SummonedZombie(EntityType<? extends Zombie> entityType, Level level) {
         super(entityType, level);
     }
-    public SummonedZombie(Level level, LivingEntity owner, ItemStack item) {
-        super(ModEntities.SUMMON_ZOMBIE, level);
-        this.setWeapon(item);
-        this.owner = owner;
-        this.isLimitedLifespan = true;
-        setOwnerID(owner.getUUID());
-    }
-    private final MeleeAttackGoal meleeGoal = new MeleeAttackGoal(this, 2.2D, true) {
-        /**
-         * Reset the task's internal state. Called when this task is interrupted by another one
-         */
-        public void stop() {
-            super.stop();
-            SummonedZombie.this.setAggressive(false);
-        }
-
-        /**
-         * Execute a one shot task or start executing a continuous task
-         */
-        public void start() {
-            super.start();
-            SummonedZombie.this.setAggressive(true);
-        }
-    };
 
     private LivingEntity owner;
     @Nullable
@@ -67,14 +41,10 @@ public class SummonedZombie extends Zombie implements IFollowingSummon, ISummon 
     private boolean isLimitedLifespan;
     private int limitedLifeTicks;
 
-
-
-
     @Override
     public void die(DamageSource pDamageSource) {
         super.die(pDamageSource);
     }
-
     @Override
     public EntityType<?> getType() {
         return ModEntities.SUMMON_ZOMBIE;
@@ -82,35 +52,20 @@ public class SummonedZombie extends Zombie implements IFollowingSummon, ISummon 
 
     @Nullable
     public SpawnGroupData finalizeSpawn(ServerLevelAccessor worldIn, DifficultyInstance difficultyIn, MobSpawnType reason, @Nullable SpawnGroupData spawnDataIn, @Nullable CompoundTag dataTag) {
-        this.populateDefaultEquipmentSlots(getRandom(), difficultyIn);
-        this.populateDefaultEquipmentEnchantments(getRandom(), difficultyIn);
-        return super.finalizeSpawn(worldIn, difficultyIn, reason, spawnDataIn, dataTag);
+        return null;
     }
 
-    /**
-     * Gives armor or weapon for entity based on given DifficultyInstance
-     */
     @Override
     protected void populateDefaultEquipmentSlots(RandomSource randomSource, DifficultyInstance pDifficulty) {
-
     }
 
     @Override
-    protected void dropAllDeathLoot(DamageSource pDamageSource) {}
-
-    @Override
-    protected boolean shouldDropLoot() {return false;}
-
-    @Override
-    protected void dropCustomDeathLoot(DamageSource pSource, int pLooting, boolean pRecentlyHit) {}
-
-    @Override
-    protected void dropEquipment() {}
+    protected boolean shouldDropLoot() {return true;}
 
     @Override
     protected void registerGoals() {
         this.targetSelector.addGoal(1, new CopyOwnerTargetGoal<>(this));
-        this.targetSelector.addGoal(2, new HurtByTargetGoal(this, SummonedZombie.class){
+        this.targetSelector.addGoal(2, new HurtByTargetGoal(this, SummonedSkeleton.class){
             @Override
             protected boolean canAttack(@Nullable LivingEntity pPotentialTarget, TargetingConditions pTargetPredicate) {
                 return pPotentialTarget != null && super.canAttack(pPotentialTarget, pTargetPredicate) && !pPotentialTarget.getUUID().equals(getOwnerUUID()) ;
@@ -121,12 +76,12 @@ public class SummonedZombie extends Zombie implements IFollowingSummon, ISummon 
                         (entity instanceof Mob mob && mob.getTarget() != null && mob.getTarget().equals(this.owner))
                                 || (entity != null && entity.getKillCredit() != null && entity.getKillCredit().equals(this.owner))
         ));
-
         this.goalSelector.addGoal(4, new MeleeAttackGoal(this, 1.2f, true));
         this.goalSelector.addGoal(5, new FollowSummonerGoal(this, this.owner, 1.0, 9.0f, 3.0f));
         this.goalSelector.addGoal(6, new WaterAvoidingRandomStrollGoal(this, 1.0D));
         this.goalSelector.addGoal(9, new LookAtPlayerGoal(this, Player.class, 3.0F, 1.0F));
         this.goalSelector.addGoal(10, new LookAtPlayerGoal(this, Mob.class, 8.0F));
+
     }
 
     public void setOwner(LivingEntity owner) {
@@ -135,22 +90,15 @@ public class SummonedZombie extends Zombie implements IFollowingSummon, ISummon 
 
     public void setWeapon(ItemStack item) {
         this.setItemSlot(EquipmentSlot.MAINHAND, item);
+        this.reassessWeaponGoal();
     }
-
-
-
-
     @Override
     public boolean hurt(DamageSource pSource, float pAmount) {
-        if (pSource.is(DamageTypes.MOB_ATTACK) && pSource.getEntity() instanceof ISummon summon){
-            if (summon.getOwnerUUID() != null && summon.getOwnerUUID().equals(this.getOwnerUUID())) return false;
-        }
         return super.hurt(pSource, pAmount);
     }
 
-    /**
-     * Called to update the entity's position/logic.
-     */
+
+    @Override
     public void tick() {
         super.tick();
         if (this.isLimitedLifespan && --this.limitedLifeTicks <= 0) {
@@ -176,7 +124,7 @@ public class SummonedZombie extends Zombie implements IFollowingSummon, ISummon 
     }
 
     @Override
-    public boolean wantsToAttack(LivingEntity pTarget, LivingEntity pOwner) {
+    public boolean wantsToAttack(LivingEntity target, LivingEntity owner) {
         return true;
     }
 
@@ -208,34 +156,51 @@ public class SummonedZombie extends Zombie implements IFollowingSummon, ISummon 
         return 0;
     }
 
-    /**
-     * (abstract) Protected helper method to read subclass entity data from NBT.
-     */
+    public void addAdditionalSaveData(CompoundTag compound) {
+        super.addAdditionalSaveData(compound);
+        if (this.boundOrigin != null) {
+            compound.putInt("BoundX", this.boundOrigin.getX());
+            compound.putInt("BoundY", this.boundOrigin.getY());
+            compound.putInt("BoundZ", this.boundOrigin.getZ());
+        }
+        compound.putBoolean("isLimited", this.isLimitedLifespan);
+        if (this.isLimitedLifespan) {
+            compound.putInt("LifeTicks", this.limitedLifeTicks);
+        }
+        UUID ownerUuid = this.getOwnerUUID();
+        if (ownerUuid != null) {
+            compound.putUUID("OwnerUUID", ownerUuid);
+        }
+    }
     public void readAdditionalSaveData(CompoundTag compound) {
         super.readAdditionalSaveData(compound);
         if (compound.contains("BoundX")) {
             this.boundOrigin = new BlockPos(compound.getInt("BoundX"), compound.getInt("BoundY"), compound.getInt("BoundZ"));
         }
-
-        if (compound.contains("LifeTicks")) {
-            this.setLimitedLife(compound.getInt("LifeTicks"));
+        if (compound.contains("isLimited")) {
+            this.isLimitedLifespan = compound.getBoolean("isLimited");
         }
-        if (compound.contains("OwnerUUID")) {
-            try {
-                UUID ownerUUID = compound.getUUID("OwnerUUID");
-                this.setOwnerID(ownerUUID);
-            } catch (Throwable ignored) {
-            }
+        if (compound.contains("LifeTicks")) {
+            this.setLifeTicks(compound.getInt("LifeTicks"));
+        }
+        if (compound.hasUUID("OwnerUUID")) {
+            this.setOwnerID(compound.getUUID("OwnerUUID"));
         }
     }
 
-    public void setLimitedLife(int lifeTicks) {
+    @Override
+    public void setLifeTicks(int lifeTicks) {
         this.limitedLifeTicks = lifeTicks;
     }
-
+    @Override
+    public int getTicksLeft() {
+        return limitedLifeTicks;
+    }
+    @Override
     public void setIsLimitedLife(boolean bool) {
         this.isLimitedLifespan = bool;
     }
+
     public LivingEntity getOwnerFromID() {
         try {
             UUID uuid = this.getOwnerUUID();
@@ -245,50 +210,14 @@ public class SummonedZombie extends Zombie implements IFollowingSummon, ISummon 
             return null;
         }
     }
-
     protected void defineSynchedData() {
         super.defineSynchedData();
         this.entityData.define(OWNER_UUID, Optional.empty());
     }
 
-    public void addAdditionalSaveData(CompoundTag compound) {
-        super.addAdditionalSaveData(compound);
-        if (this.boundOrigin != null) {
-            compound.putInt("BoundX", this.boundOrigin.getX());
-            compound.putInt("BoundY", this.boundOrigin.getY());
-            compound.putInt("BoundZ", this.boundOrigin.getZ());
-        }
-
-        if (this.isLimitedLifespan) {
-            compound.putInt("LifeTicks", this.limitedLifeTicks);
-        }
-        if (this.getOwnerUUID() != null) {
-            compound.putUUID("OwnerUUID", this.getOwnerUUID());
-        } else {
-            //compound.putUUID("OwnerUUID", Util.NIL_UUID)
-        }
-
-    }
-
     @Override
     protected boolean isSunBurnTick() {
         return false;
-    }
-/*
-    @Override
-    public void die(DamageSource cause) {
-        super.die(cause);
-        onSummonDeath(level, cause, false);
-    }
-*/
-    @Override
-    public int getTicksLeft() {
-        return limitedLifeTicks;
-    }
-
-    @Override
-    public void setTicksLeft(int ticks) {
-        this.limitedLifeTicks = ticks;
     }
 
     @Nullable
@@ -302,5 +231,7 @@ public class SummonedZombie extends Zombie implements IFollowingSummon, ISummon 
         this.entityData.set(OWNER_UUID, Optional.ofNullable(uuid));
     }
 
-
+    @Override
+    public void reassessWeaponGoal() {
+    }
 }

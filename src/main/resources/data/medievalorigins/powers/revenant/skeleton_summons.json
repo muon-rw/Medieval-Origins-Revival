@@ -142,7 +142,8 @@
 						"type": "origins:and",
 						"actions": [
 							{
-								"type": "medievalorigins:summon_wither_skeleton",
+								"type": "medievalorigins:summon_entity",
+								"entity_type": "medievalorigins:summon_wither_skeleton",
 								"tag": "{Tags: [\"necro_summon_temp\"]}",
 								"entity_action": {
 									"type": "origins:and",
@@ -181,7 +182,8 @@
 						"type": "origins:and",
 						"actions": [
 							{
-								"type": "medievalorigins:summon_skeleton",
+								"type": "medievalorigins:summon_entity",
+								"entity_type": "medievalorigins:summon_skeleton",
 								"tag": "{Tags: [\"necro_summon_temp\"]}",
 								"entity_action": {
 									"type": "origins:and",

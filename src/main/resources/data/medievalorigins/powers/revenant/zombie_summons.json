@@ -106,7 +106,8 @@
 					"type": "origins:and",
 					"actions": [
 						{
-							"type": "medievalorigins:summon_zombie",
+							"type": "medievalorigins:summon_entity",
+							"entity_type": "medievalorigins:summon_zombie",
 							"tag": "{Tags: [\"necro_summon_temp\"]}",
 							"entity_action": {
 								"type": "origins:and",
