@@ -1,8 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    {"id":"#c:climate_cold","required":false},
-    {"id":"#c:icy","required":false},
-    {"id":"#forge:is_mountain","required":false}
-  ]
-}
