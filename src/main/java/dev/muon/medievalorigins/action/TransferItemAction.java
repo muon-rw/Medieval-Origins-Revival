@@ -15,7 +15,7 @@ import net.minecraft.world.item.ItemStack;
 
 
 public class TransferItemAction {
-    public static ActionFactory<Tuple<Entity, Entity>> createFactory() {
+    public static ActionFactory<Tuple<Entity, Entity>> getFactory() {
         return new ActionFactory<>(MedievalOrigins.loc("transfer_item"), new SerializableData(), TransferItemAction::executeAction);
     }
     public static void executeAction(SerializableData.Instance data, Tuple<Entity, Entity> entities) {

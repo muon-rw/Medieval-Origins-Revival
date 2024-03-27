@@ -8,7 +8,8 @@ import net.minecraft.util.Tuple;
 
 public class ModBientityActions {
     public static void register() {
-        register(TransferItemAction.createFactory());
+        register(TransferItemAction.getFactory());
+        register(AttributedDamageAction.getFactory());
     }
 
     private static void register(ActionFactory<Tuple<Entity, Entity>> serializer) {

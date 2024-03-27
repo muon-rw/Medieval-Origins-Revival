@@ -45,7 +45,7 @@ public class CastSpellAction {
         return new ActionFactory<>(
                 MedievalOrigins.loc("cast_spell"),
                 new SerializableData()
-                        .add("duration", SerializableDataTypes.INT, null)
+                        .add("spell", SerializableDataTypes.IDENTIFIER)
                         .add("tag", SerializableDataTypes.NBT, null)
                         .add("entity_action", ApoliDataTypes.ENTITY_ACTION, null)
                         .add("bientity_action", ApoliDataTypes.BIENTITY_ACTION, null),

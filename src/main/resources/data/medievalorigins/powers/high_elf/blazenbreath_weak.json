@@ -124,8 +124,10 @@
                                     }
                                 },
                                 {
-                                    "type": "origins:damage",
+                                    "type": "medievalorigins:damage",
                                     "amount": 4,
+                                    "attribute": "spell_power:fire",
+                                    "operation": "multiply_base",
                                     "damage_type": "medievalorigins:blazenbreath"
                                 },
                                 {
