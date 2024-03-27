@@ -34,14 +34,10 @@ public class WingItemMixin {
     public void tick(ItemStack stack, SlotReference slot, LivingEntity entity) {
         if (entity instanceof Player player) {
             if (!WingsPower.hasWingsPower(player)) {
-                LOGGER.info("Player using wings, but failing wings power check");
                 if (player.getFoodData().getFoodLevel() <= 6 || !this.isUsable(stack)) {
                     IcarusHelper.stopFlying(player);
                     return;
                 }
-            }
-            if (WingsPower.hasWingsPower(player)) {
-                LOGGER.info("Player passing wings power check");
             }
             if (player.isFallFlying()) {
                 if (player.zza > 0.0F) {
