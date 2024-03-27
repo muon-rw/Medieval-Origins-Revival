@@ -21,16 +21,12 @@
 					"type": "origins:or",
 					"conditions": [
 						{
-							"type": "apoli:ingredient",
-							"ingredient": {
-								"tag": "c:helmets"
-							}
+							"type": "apoli:is_equippable",
+							"equipment_slot": "head"
 						},
 						{
-							"type": "apoli:ingredient",
-							"ingredient": {
-								"tag": "c:boots"
-							}
+							"type": "apoli:is_equippable",
+							"equipment_slot": "feet"
 						}
 					]
 				}
@@ -72,10 +68,8 @@
 					"compare_to": 1
 				},
 				{
-					"type": "apoli:ingredient",
-					"ingredient": {
-						"tag": "c:chestplates"
-					}
+					"type": "apoli:is_equippable",
+					"equipment_slot": "chest"
 				}
 			]
 		},
@@ -115,10 +109,8 @@
 					"compare_to": 1
 				},
 				{
-					"type": "apoli:ingredient",
-					"ingredient": {
-						"tag": "c:leggings"
-					}
+					"type": "apoli:is_equippable",
+					"equipment_slot": "legs"
 				}
 			]
 		},

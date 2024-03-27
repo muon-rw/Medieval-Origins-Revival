@@ -1,6 +1,7 @@
 {
 	"powers": [
 		"medievalorigins:icarae/wings",
+		"medievalorigins:icarae/hunger_bypass",
 		"medievalorigins:icarae/hollow_boned",
 		"medievalorigins:icarae/flight_hunger",
 		"medievalorigins:icarae/lessons_of_flight",
@@ -12,7 +13,6 @@
 		"medievalorigins:icarae/armor_restriction"
 	],
 	"icon": "icarus:white_feathered_wings",
-	"unchoosable": true,
 	"order": 1,
 	"impact": 3
 }

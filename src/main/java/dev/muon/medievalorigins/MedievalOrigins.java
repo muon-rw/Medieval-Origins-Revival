@@ -5,6 +5,7 @@ import dev.muon.medievalorigins.action.ModBientityActions;
 import dev.muon.medievalorigins.condition.ModEntityConditions;
 import dev.muon.medievalorigins.condition.ModItemConditions;
 import dev.muon.medievalorigins.entity.ModEntities;
+import dev.muon.medievalorigins.power.ModPowers;
 import dev.muon.medievalorigins.sounds.ModSounds;
 import net.fabricmc.api.ModInitializer;
 import dev.muon.medievalorigins.enchantment.ModEnchantments;
@@ -46,6 +47,7 @@ public class MedievalOrigins implements ModInitializer {
 		ModItemConditions.register();
 		ModEntityConditions.register();
 		ModSounds.register();
+		ModPowers.register();
 		ModAutoTagRegistry.registerTags();
 	}
 	static String MOD_ID = "medievalorigins";

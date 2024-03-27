@@ -4,9 +4,9 @@
   "package": "dev.muon.medievalorigins.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "WingItemMixin"
   ],
-  "client": [
-  ],
+  "client": [],
   "server": [],
   "injectors": {
     "defaultRequire": 1

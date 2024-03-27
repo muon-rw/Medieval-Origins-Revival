@@ -36,6 +36,9 @@
     "origins": ">=1.7.1",
     "pehkui": ">=3.0"
   },
+  "mixins": [
+    "medievalorigins.mixins.json"
+  ],
   "suggests": {
     "another-mod": "*"
   }
