@@ -556,7 +556,8 @@
   "origin.medievalorigins.high_elf/cryomancer.name": "Cryomancer",
   "origin.medievalorigins.high_elf/cryomancer.description": "+1 Frost Spell Power",
   "power.medievalorigins.high_elf/cryomancer/gear_spawn.name": "Starting Equipment:",
-  "power.medievalorigins.high_elf/cryomancer/gear_spawn.description": "- Frost Wand \n- 16 Frost Runes"
+  "power.medievalorigins.high_elf/cryomancer/gear_spawn.description": "- Frost Wand \n- 16 Frost Runes",
   
+  "death.attack.siphon.player": "% had their soul ripped apart by %s"
 
 }

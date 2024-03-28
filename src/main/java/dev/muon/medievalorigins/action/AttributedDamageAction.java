@@ -2,9 +2,7 @@ package dev.muon.medievalorigins.action;
 
 
 import dev.muon.medievalorigins.MedievalOrigins;
-import io.github.apace100.apoli.Apoli;
 import io.github.apace100.apoli.data.ApoliDataTypes;
-import io.github.apace100.apoli.data.DamageSourceDescription;
 import io.github.apace100.apoli.power.factory.action.ActionFactory;
 import io.github.apace100.apoli.util.MiscUtil;
 import io.github.apace100.calio.data.SerializableData;
@@ -17,11 +15,9 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Tuple;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
-
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
-import net.minecraft.world.entity.ai.attributes.Attributes;
 
 import java.util.function.Function;
 
@@ -71,10 +67,10 @@ public class AttributedDamageAction {
                         baseDamage += (attributeValue * modifierValue);
                         break;
                     case MULTIPLY_BASE:
-                        baseDamage *= ((1 + attributeValue) * (modifierValue));
+                        baseDamage += baseDamage * (attributeValue) * (modifierValue);
                         break;
                     case MULTIPLY_TOTAL:
-                        baseDamage *= ((1 + attributeValue) * (modifierValue));
+                        baseDamage += baseDamage * (attributeValue) * (modifierValue);
                         break;
                     default:
                         throw new IllegalArgumentException("Unknown operation: " + operation);

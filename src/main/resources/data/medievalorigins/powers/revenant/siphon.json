@@ -46,284 +46,260 @@
 		}
 	},
 	"channel": {
-		"type": "origins:active_self",
-		"hud_render": {
-			"should_render": false
+		"type": "origins:action_on_hit",
+		"damage_condition": {
+			"type": "apoli:in_tag",
+			"tag": "medievalorigins:siphon",
+			"inverted": true
 		},
-		"key": {
-			"key": "key.use",
-			"continuous": true
-		},
-		"cooldown": 20,
-		"condition": {
+		"bientity_action": {
 			"type": "origins:and",
-			"conditions": [
+			"actions": [
 				{
-					"type": "origins:resource",
-					"resource": "medievalorigins:revenant/siphon_resource",
-					"compare_to": 0,
-					"comparison": ">"
+					"type": "apugli:raycast_between",
+					"particle": "minecraft:enchant",
+					"spacing": 0.33
 				},
 				{
-					"type": "origins:raycast",
-					"entity": true,
-					"block": false,
-					"distance": 20,
-					"fluid_handling": "any",
-					"shape_type": "outline",
-					"match_bientity_condition": {
-						"type": "origins:target_condition",
-						"condition": {
-							"type": "origins:and",
-							"conditions": [
-								{
-									"type": "origins:living"
+					"type": "apugli:raycast_between",
+					"particle": "minecraft:smoke",
+					"spacing": 1
+				},
+				{
+					"type": "origins:actor_action",
+					"action": {
+						"type": "origins:choice",
+						"actions": [
+							{
+								"element": {
+									"type": "origins:execute_command",
+									"command": "playsound medievalorigins:zhh_woo_voop_early player @a ~ ~ ~ 0.3 1.0"
 								},
-								{
-									"type": "origins:nbt",
-									"nbt": "{Tags:[\"siphon_immune\"]}",
-									"inverted": true
+								"weight": 1
+							},
+							{
+								"element": {
+									"type": "origins:execute_command",
+									"command": "playsound medievalorigins:zhh_woo_voop_early player @a ~ ~ ~ 0.3 0.95"
+								},
+								"weight": 1
+							},
+							{
+								"element": {
+									"type": "origins:execute_command",
+									"command": "playsound medievalorigins:zhh_woo_voop_early player @a ~ ~ ~ 0.3 1.05"
+								},
+								"weight": 1
+							},
+							{
+								"element": {
+									"type": "origins:execute_command",
+									"command": "playsound medievalorigins:zhh_woo_voop_early player @a ~ ~ ~ 0.3 0.975"
+								},
+								"weight": 1
+							},
+							{
+								"element": {
+									"type": "origins:execute_command",
+									"command": "playsound medievalorigins:zhh_woo_voop_early player @a ~ ~ ~ 0.3 1.025"
+								},
+								"weight": 1
+							}
+						]
+					}
+				},
+				{
+					"type": "origins:delay",
+					"ticks": 10,
+					"action": {
+						"type": "origins:if_else_list",
+						"actions": [
+							{
+								"action": {
+									"type": "origins:and",
+									"actions": [
+										{
+											"type": "medievalorigins:damage",
+											"base": 8,
+											"modifier": {
+												"attribute": "spell_power:soul",
+												"operation": "multiply_base",
+												"value": 0.3
+											},
+											"damage_type": "medievalorigins:siphon"
+										},
+										{
+											"type": "origins:actor_action",
+											"action": {
+												"type": "origins:and",
+												"actions": [
+													{
+														"type": "origins:heal",
+														"amount": 8
+													},
+													{
+														"type": "origins:change_resource",
+														"change": -8,
+														"operation": "add",
+														"resource": "medievalorigins:revenant/siphon_resource"
+													}
+												]
+											}
+										}
+									]
+								},
+								"condition": {
+									"type": "origins:actor_condition",
+									"condition": {
+										"type": "origins:resource",
+										"resource": "medievalorigins:revenant/siphon_resource",
+										"compare_to": 8,
+										"comparison": ">="
+									}
 								}
-							]
-						}
+							},
+							{
+								"action": {
+									"type": "origins:and",
+									"actions": [
+										{
+											"type": "medievalorigins:damage",
+											"base": 4,
+											"modifier": {
+												"attribute": "spell_power:soul",
+												"operation": "multiply_base",
+												"value": 0.3
+											},
+											"damage_type": "medievalorigins:siphon"
+										},
+										{
+											"type": "origins:actor_action",
+											"action": {
+												"type": "origins:and",
+												"actions": [
+													{
+														"type": "origins:heal",
+														"amount": 4
+													},
+													{
+														"type": "origins:modify_resource",
+														"modifier": {
+															"operation": "add_base_early",
+															"value": -4
+														},
+														"resource": "medievalorigins:revenant/siphon_resource"
+													}
+												]
+											}
+										}
+									]
+								},
+								"condition": {
+									"type": "origins:actor_condition",
+									"condition": {
+										"type": "origins:resource",
+										"resource": "medievalorigins:revenant/siphon_resource",
+										"compare_to": 4,
+										"comparison": ">="
+									}
+								}
+							},
+							{
+								"action": {
+									"type": "origins:and",
+									"actions": [
+										{
+											"type": "medievalorigins:damage",
+											"base": 2,
+											"modifier": {
+												"attribute": "spell_power:soul",
+												"operation": "multiply_base",
+												"value": 0.3
+											},
+											"damage_type": "medievalorigins:siphon"
+										},
+										{
+											"type": "origins:actor_action",
+											"action": {
+												"type": "origins:and",
+												"actions": [
+													{
+														"type": "origins:heal",
+														"amount": 2
+													},
+													{
+														"type": "origins:modify_resource",
+														"modifier": {
+															"operation": "add_base_early",
+															"value": -2
+														},
+														"resource": "medievalorigins:revenant/siphon_resource"
+													}
+												]
+											}
+										}
+									]
+								},
+								"condition": {
+									"type": "origins:actor_condition",
+									"condition": {
+										"type": "origins:resource",
+										"resource": "medievalorigins:revenant/siphon_resource",
+										"compare_to": 2,
+										"comparison": ">="
+									}
+								}
+							},
+							{
+								"action": {
+									"type": "origins:and",
+									"actions": [
+										{
+											"type": "medievalorigins:damage",
+											"base": 1,
+											"modifier": {
+												"attribute": "spell_power:soul",
+												"operation": "multiply_base",
+												"value": 0.3
+											},
+											"damage_type": "medievalorigins:siphon"
+										},
+										{
+											"type": "origins:actor_action",
+											"action": {
+												"type": "origins:and",
+												"actions": [
+													{
+														"type": "origins:heal",
+														"amount": 1
+													},
+													{
+														"type": "origins:modify_resource",
+														"modifier": {
+															"operation": "add_base_early",
+															"value": -1
+														},
+														"resource": "medievalorigins:revenant/siphon_resource"
+													}
+												]
+											}
+										}
+									]
+								},
+								"condition": {
+									"type": "origins:actor_condition",
+									"condition": {
+										"type": "origins:resource",
+										"resource": "medievalorigins:revenant/siphon_resource",
+										"compare_to": 1,
+										"comparison": ">="
+									}
+								}
+							}
+						]
 					}
 				}
 			]
-		},
-		"entity_action": {
-			"type": "origins:raycast",
-			"distance": 20,
-			"entity": true,
-			"block": false,
-			"bientity_condition": {
-				"type": "origins:target_condition",
-				"condition": {
-					"type": "origins:and",
-					"conditions": [
-						{
-							"type": "origins:living"
-						},
-						{
-							"type": "origins:nbt",
-							"nbt": "{Tags:[\"siphon_immune\"]}",
-							"inverted": true
-						}
-					]
-				}
-			},
-			"bientity_action": {
-				"type": "origins:delay",
-				"ticks": 10,
-				"action": {
-					"type": "origins:if_else_list",
-					"actions": [
-						{
-							"action": {
-								"type": "origins:and",
-								"actions": [
-									{
-										"type": "origins:damage",
-										"amount": 8,
-										"damage_type": "minecraft:starve"
-									},
-									{
-										"type": "origins:actor_action",
-										"action": {
-											"type": "origins:and",
-											"actions": [
-												{
-													"type": "origins:heal",
-													"amount": 8
-												},
-												{
-													"type": "origins:change_resource",
-													"change": -8,
-													"operation": "add",
-													"resource": "medievalorigins:revenant/siphon_resource"
-												}
-											]
-										}
-									}
-								]
-							},
-							"condition": {
-								"type": "origins:actor_condition",
-								"condition": {
-									"type": "origins:resource",
-									"resource": "medievalorigins:revenant/siphon_resource",
-									"compare_to": 8,
-									"comparison": ">="
-								}
-							}
-						},
-						{
-							"action": {
-								"type": "origins:and",
-								"actions": [
-									{
-										"type": "origins:damage",
-										"amount": 4,
-										"damage_type": "minecraft:starve"
-									},
-									{
-										"type": "origins:actor_action",
-										"action": {
-											"type": "origins:and",
-											"actions": [
-												{
-													"type": "origins:heal",
-													"amount": 4
-												},
-												{
-													"type": "origins:modify_resource",
-													"modifier": {
-														"operation": "add_base_early",
-														"value": -4
-													},
-													"resource": "medievalorigins:revenant/siphon_resource"
-												}
-											]
-										}
-									}
-								]
-							},
-							"condition": {
-								"type": "origins:actor_condition",
-								"condition": {
-									"type": "origins:resource",
-									"resource": "medievalorigins:revenant/siphon_resource",
-									"compare_to": 4,
-									"comparison": ">="
-								}
-							}
-						},
-						{
-							"action": {
-								"type": "origins:and",
-								"actions": [
-									{
-										"type": "origins:damage",
-										"amount": 2,
-										"damage_type": "minecraft:starve"
-									},
-									{
-										"type": "origins:actor_action",
-										"action": {
-											"type": "origins:and",
-											"actions": [
-												{
-													"type": "origins:heal",
-													"amount": 2
-												},
-												{
-													"type": "origins:modify_resource",
-													"modifier": {
-														"operation": "add_base_early",
-														"value": -2
-													},
-													"resource": "medievalorigins:revenant/siphon_resource"
-												}
-											]
-										}
-									}
-								]
-							},
-							"condition": {
-								"type": "origins:actor_condition",
-								"condition": {
-									"type": "origins:resource",
-									"resource": "medievalorigins:revenant/siphon_resource",
-									"compare_to": 2,
-									"comparison": ">="
-								}
-							}
-						},
-						{
-							"action": {
-								"type": "origins:and",
-								"actions": [
-									{
-										"type": "origins:damage",
-										"amount": 1,
-										"damage_type": "minecraft:starve"
-									},
-									{
-										"type": "origins:actor_action",
-										"action": {
-											"type": "origins:and",
-											"actions": [
-												{
-													"type": "origins:heal",
-													"amount": 1
-												},
-												{
-													"type": "origins:modify_resource",
-													"modifier": {
-														"operation": "add_base_early",
-														"value": -1
-													},
-													"resource": "medievalorigins:revenant/siphon_resource"
-												}
-											]
-										}
-									}
-								]
-							},
-							"condition": {
-								"type": "origins:actor_condition",
-								"condition": {
-									"type": "origins:resource",
-									"resource": "medievalorigins:revenant/siphon_resource",
-									"compare_to": 1,
-									"comparison": ">="
-								}
-							}
-						}
-					]
-				}
-			},
-			"hit_action": {
-				"type": "origins:choice",
-				"actions": [
-					{
-						"element": {
-							"type": "origins:execute_command",
-							"command": "playsound medievalorigins:zhh_woo_voop_early player @a ~ ~ ~ 0.3 1.0"
-						},
-						"weight": 1
-					},
-					{
-						"element": {
-							"type": "origins:execute_command",
-							"command": "playsound medievalorigins:zhh_woo_voop_early player @a ~ ~ ~ 0.3 0.95"
-						},
-						"weight": 1
-					},
-					{
-						"element": {
-							"type": "origins:execute_command",
-							"command": "playsound medievalorigins:zhh_woo_voop_early player @a ~ ~ ~ 0.3 1.05"
-						},
-						"weight": 1
-					},
-					{
-						"element": {
-							"type": "origins:execute_command",
-							"command": "playsound medievalorigins:zhh_woo_voop_early player @a ~ ~ ~ 0.3 0.975"
-						},
-						"weight": 1
-					},
-					{
-						"element": {
-							"type": "origins:execute_command",
-							"command": "playsound medievalorigins:zhh_woo_voop_early player @a ~ ~ ~ 0.3 1.025"
-						},
-						"weight": 1
-					}
-				]
-			},
-			"command_along_ray": "function medievalorigins:mdvlorigins/revenant_siphon",
-			"command_along_ray_only_on_hit": true
 		}
 	}
 }

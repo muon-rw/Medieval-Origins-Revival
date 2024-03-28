@@ -16,7 +16,7 @@
 				}
 			]
 		},
-		"cooldown": 30,
+		"cooldown": 40,
 		"key": {
 			"key": "key.origins.secondary_active"
 		},
@@ -93,14 +93,35 @@
 									}
 								},
 								{
-									"type": "medievalorigins:damage",
-									"base": 6,
-									"modifier": {
-										"attribute": "spell_power:fire",
-										"operation": "addition",
-										"value": 1.0
+									"type": "origins:if_else",
+									"if_action": {
+										"type": "medievalorigins:damage",
+										"base": 4,
+										"modifier": {
+											"attribute": "spell_power:fire",
+											"operation": "addition",
+											"value": 1.0
+										},
+										"damage_type": "medievalorigins:blazenbreath"
 									},
-									"damage_type": "medievalorigins:blazenbreath"
+									"else_action": {
+										"type": "medievalorigins:damage",
+										"base": 7,
+										"modifier": {
+											"attribute": "spell_power:fire",
+											"operation": "addition",
+											"value": 1.5
+										},
+										"damage_type": "medievalorigins:blazenbreath"
+									},
+									"condition": {
+										"type": "origins:actor_condition",
+										"condition": {
+											"type": "origins:dimension",
+											"dimension": "minecraft:the_nether"
+										},
+										"inverted": true
+									}
 								},
 								{
 									"type": "origins:target_action",
