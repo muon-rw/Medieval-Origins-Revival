@@ -1,7 +1,0 @@
-{
-    "replace": false,
-    "values": [
-        {"id":"medievalorigins:ebonbreath","required":false},
-        {"id":"medievalorigins:blazenbreath","required":false}
-    ]
-}

@@ -26,9 +26,6 @@
 							"calculation": "sum",
 							"comparison": ">=",
 							"compare_to": 1
-						},
-						{
-							"type": "medievalorigins:golden_armor"
 						}
 					]
 				}

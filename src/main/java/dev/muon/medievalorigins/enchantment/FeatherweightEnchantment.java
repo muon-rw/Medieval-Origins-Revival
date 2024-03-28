@@ -9,6 +9,10 @@ public class FeatherweightEnchantment extends Enchantment {
         super(weight, type, slotTypes);
     }
 
+    @Override
+    public boolean isTreasureOnly() {
+        return true;
+    }
 
     @Override
     public int getMinLevel() {

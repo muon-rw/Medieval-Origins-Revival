@@ -5,18 +5,38 @@
         "modifier": {
             "name": "Increased flight exhaustion",
             "operation": "multiply_base",
-            "value": 1.0
+            "value": 0.75
         },
         "condition": {
-            "type": "origins:fall_flying"
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:fall_flying"
+                },
+                {
+                    "type": "origins:advancement",
+                    "advancement": "minecraft:end/kill_dragon",
+                    "inverted": true
+                }
+            ]
         }
     },
     "active_tick": {
         "type": "origins:exhaust",
         "interval": 20,
-        "exhaustion": 1.0,
+        "exhaustion": 0.5,
         "condition": {
-            "type": "origins:fall_flying"
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:fall_flying"
+                },
+                {
+                    "type": "origins:advancement",
+                    "advancement": "minecraft:end/kill_dragon",
+                    "inverted": true
+                }
+            ]
         }
     }
 }

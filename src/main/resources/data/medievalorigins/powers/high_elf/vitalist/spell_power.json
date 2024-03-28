@@ -1,8 +1,0 @@
-{
-    "type": "origins:conditioned_attribute",
-    "modifier": {
-        "attribute": "spell_power:healing",
-        "operation": "multiply_base",
-        "value": 0.25
-    }
-}

@@ -1,0 +1,9 @@
+{
+	"powers": [],
+	"icon": {
+		"item": "minecraft:barrier"
+	},
+	"impact": 2,
+	"order": 1,
+	"unchoosable": true
+}

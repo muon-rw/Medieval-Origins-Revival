@@ -1,7 +1,7 @@
 {
 	"hidden": true,
 	"type": "origins:multiple",
-	"head_feet_armor_tooltip": {
+	"head_armor_tooltip": {
 		"type": "apoli:tooltip",
 		"item_condition": {
 			"type": "origins:and",
@@ -18,23 +18,55 @@
 					"compare_to": 1
 				},
 				{
-					"type": "origins:or",
-					"conditions": [
-						{
-							"type": "apoli:is_equippable",
-							"equipment_slot": "head"
-						},
-						{
-							"type": "apoli:is_equippable",
-							"equipment_slot": "feet"
-						}
-					]
+					"type": "apoli:is_equippable",
+					"equipment_slot": "head"
 				}
 			]
 		},
 		"text": [
 			{
-				"translate": "medievalorigins.unwearable",
+				"translate": "tooltip.medievalorigins.unwearable",
+				"color": "gray"
+			},
+			{
+				"text": " (",
+				"color": "gray"
+			},
+			{
+				"translate": "power.medievalorigins.icarae/hollow_boned.name",
+				"color": "red"
+			},
+			{
+				"text": ")",
+				"color": "gray"
+			}
+		]
+	},
+	"feet_armor_tooltip": {
+		"type": "apoli:tooltip",
+		"item_condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:armor_value",
+					"comparison": ">",
+					"compare_to": 1
+				},
+				{
+					"type": "origins:enchantment",
+					"enchantment": "medievalorigins:featherweight",
+					"comparison": "<",
+					"compare_to": 1
+				},
+				{
+					"type": "apoli:is_equippable",
+					"equipment_slot": "feet"
+				}
+			]
+		},
+		"text": [
+			{
+				"translate": "tooltip.medievalorigins.unwearable",
 				"color": "gray"
 			},
 			{
@@ -59,7 +91,7 @@
 				{
 					"type": "origins:armor_value",
 					"comparison": ">",
-					"compare_to": 6
+					"compare_to": 5
 				},
 				{
 					"type": "origins:enchantment",
@@ -75,7 +107,7 @@
 		},
 		"text": [
 			{
-				"translate": "medievalorigins.unwearable",
+				"translate": "tooltip.medievalorigins.unwearable",
 				"color": "gray"
 			},
 			{
@@ -100,7 +132,7 @@
 				{
 					"type": "origins:armor_value",
 					"comparison": ">",
-					"compare_to": 5
+					"compare_to": 4
 				},
 				{
 					"type": "origins:enchantment",
@@ -116,7 +148,7 @@
 		},
 		"text": [
 			{
-				"translate": "medievalorigins.unwearable",
+				"translate": "tooltip.medievalorigins.unwearable",
 				"color": "gray"
 			},
 			{

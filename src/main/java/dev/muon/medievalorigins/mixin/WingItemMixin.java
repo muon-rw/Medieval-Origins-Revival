@@ -1,12 +1,10 @@
 package dev.muon.medievalorigins.mixin;
 
-import dev.cammiescorner.icarus.Icarus;
 import dev.cammiescorner.icarus.common.items.WingItem;
 import dev.cammiescorner.icarus.core.integration.IcarusConfig;
 import dev.cammiescorner.icarus.core.util.IcarusHelper;
 import dev.cammiescorner.icarus.core.util.SlowFallEntity;
 import dev.emi.trinkets.api.SlotReference;
-import dev.emi.trinkets.api.TrinketItem;
 import dev.muon.medievalorigins.power.WingsPower;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
@@ -17,11 +15,12 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
+import org.spongepowered.asm.mixin.Shadow;
 
-import static dev.muon.medievalorigins.MedievalOrigins.LOGGER;
 
-@Mixin(value = WingItem.class, priority = 5000)
+@Mixin(value = WingItem.class)
 public class WingItemMixin {
+    @Shadow
     private static final TagKey<Item> MELTS;
     public boolean isUsable(ItemStack stack) {
         return IcarusConfig.wingsDurability <= 0 || stack.getDamageValue() < stack.getMaxDamage() - 1;

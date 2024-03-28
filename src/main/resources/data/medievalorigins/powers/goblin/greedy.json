@@ -116,7 +116,7 @@
 		"type": "origins:conditioned_attribute",
 		"modifiers": [
 			{
-				"attribute": "forge:block_reach",
+				"attribute": "reach-entity-attributes:reach",
 				"operation": "addition",
 				"value": 1.0
 			},

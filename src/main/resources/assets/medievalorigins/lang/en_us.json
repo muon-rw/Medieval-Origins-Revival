@@ -14,19 +14,19 @@
   "origin.medievalorigins.incubus.description": "-§l Notable Changes§r: \n§o§2+ Nether Bonuses\n+ Strength, Fireball§r\n§o§c- Damaged by Water§r\n§o§c- Weak in Overworld§r\n§lIncubi§r are evil servants of a dark power. They are powerful in their own realm, but in exchange for this they have given up their soul, and are weak to pure sources.",
 
   "origin.medievalorigins.dwarf.name": "Dwarf",
-  "origin.medievalorigins.dwarf.description": "-§l Notable Changes§r: \n§o§2+ Mining, Caving§r\n§o§6• Short: 102cm/3'8\"§r\n§o§c- Sun sensitive \n- Can't swim§r\n§lDwarves§r are practical, stocky, and prideful. They excel at mining and living underground, but struggle with the daylight. Rock and stone, brother.",
+  "origin.medievalorigins.dwarf.description": "-§l Notable Changes§r: \n§o§2+ Mining, Caving§r\n§o§6• Short: 102cm/3'7\"§r\n§o§c- Sun sensitive \n- Can't swim§r\n§lDwarves§r are practical, stocky, and prideful. They excel at mining and living underground, but struggle with the daylight. Rock and stone, brother.",
 
   "origin.medievalorigins.wood_elf.name": "Wood Elf",
   "origin.medievalorigins.wood_elf.description": "-§l Notable Changes§r: \n§o§2+ Ranged Bonuses, Speed§r\n§o§6• Stealthy, Vegetarian§r\n§o§c- Melee Damage, Defense§r\n§lWood Elves§r are a wise, long-lived race who live in harmony with the Earth. They are quick with a sword and bow and can outwit their enemies while among the trees.",
 
   "origin.medievalorigins.high_elf.name": "High Elf",
-  "origin.medievalorigins.high_elf.description": "-§l Notable Changes§r: \n§o§2+ Magic, Unique Abilities§r\n§o§c- Physical Damage\n- Defense§r\n§lHigh Elves§r are notoriously arrogant, though undeniably talented; magical energy courses strongly through their blood, though they are weaker with weaponry.",
+  "origin.medievalorigins.high_elf.description": "-§l Notable Changes§r: \n§o§2+ Magic, Unique Abilities§r\n§o§c- Physical Damage\n- Defense§r\n§lHigh Elves§r are notoriously arrogant, though undeniably talented; elemental magics course strongly through their blood, though they are weaker with weaponry.",
 
   "origin.medievalorigins.fae.name": "Fae",
   "origin.medievalorigins.fae.description": "-§l Notable Changes§r: \n§o§2+ Hovering, Magic§r\n§o§6• Short: 122cm/4'0\"§r\n§o§c- Loved by Mobs§r\n§o§c- Defense§r\n§lFae§r are short magical winged humanoids, regarded as spirits of nature and said to haunt forests and lead travelers' astray. They are equal parts mystic and trickster.",
 
   "origin.medievalorigins.goblin.name": "Goblin",
-  "origin.medievalorigins.goblin.description": "-§l Notable Changes§r: \n§o§2+ Gold Gear Bonuses§r\n§o§2+ Luck, Speed§r \n§o§6• Small: 92cm/3'4\"§r \n§o§c- Health, Defense§r\n§lGoblins§r are obsessed with gold and treasure and tend to find a little more loot wherever they look, but their small size leaves them vulnerable in combat.",
+  "origin.medievalorigins.goblin.description": "-§l Notable Changes§r: \n§o§2+ Gold Gear Bonuses§r\n§o§2+ Luck, Speed§r \n§o§6• Small: 92cm/3'3\"§r \n§o§c- Health, Defense§r\n§lGoblins§r are obsessed with gold and treasure and tend to find a little more loot wherever they look, but their small size leaves them vulnerable in combat.",
 
   "origin.medievalorigins.gorgon.name": "Gorgon",
   "origin.medievalorigins.gorgon.description": "-§l Notable Changes§r: \n§o§2+ Poison Damage, Immunity§r\n§o§2+ Crowd Control§r\n§o§c- Hydrophobe \n- Unique weaknesses§r\n§lGorgons§r are cursed creatures who were once human, with hair made of writhing snakes and a haunting visage said to petrify those who witness it.",
@@ -124,7 +124,7 @@
   "power.medievalorigins.incubus/carnivore.description": "An incubus' bloodlust is insatiable. If it isn't the flesh of an animal, its worthless.",
 
   "power.medievalorigins.incubus/demon_fire.name": "Demon Fire",
-  "power.medievalorigins.incubus/demon_fire.description": "Imbued with the devil's power, the incubus can release a burst of hell's energy on command. Triggered with secondary power key.",
+  "power.medievalorigins.incubus/demon_fire.description": "Imbued with the devil's energy, the incubi have innate fire spell power and can release a burst of hell's energy on command. Scales with Fire Spell Power.",
 
   "power.medievalorigins.incubus/hellborne.name": "Hellborne",
   "power.medievalorigins.incubus/hellborne.description": "Having spent eternities in the depths of hell, fire feels like home - it deals no damage to Incubi and satiates them.",
@@ -133,7 +133,7 @@
   "power.medievalorigins.incubus/hydrophobe.description": "Water scalds Incubi, damaging them on contact.",
 
   "power.medievalorigins.incubus/impure.name": "Impure",
-  "power.medievalorigins.incubus/impure.description": "Much like the undead, incubi are saturated with dark energy and can not receive healing from potions.",
+  "power.medievalorigins.incubus/impure.description": "Much like the undead, incubi are saturated with dark energy - they take extra damage from Smite and reverted effects from healing and harming.",
 
   "power.medievalorigins.incubus/dimension_strength.name": "Realm Advantage",
   "power.medievalorigins.incubus/dimension_strength.description": "As agents of hell, Incubi are not accustomed to dimensions where the sun shines and are weaker there. But they are considerably stronger in the Nether.",
@@ -226,7 +226,7 @@
   "power.medievalorigins.goblin/nippy.description": "Although short, goblins are quite fast, allowing them to outrun most stronger enemies instead of fighting.",
 
   "power.medievalorigins.goblin/stunted.name": "Stunted",
-  "power.medievalorigins.goblin/stunted.description": "Goblins are two thirds the height of a human.",
+  "power.medievalorigins.goblin/stunted.description": "Goblins are very short, at less than half the height of a human.",
 
   "power.medievalorigins.gorgon/hydrophobe.name": "Hydrophobe",
   "power.medievalorigins.gorgon/hydrophobe.description": "Gorgons can not tolerate the purity of water and take damage from it.",
@@ -473,11 +473,11 @@
   "power.medievalorigins.icarae/wings.name": "Feathered",
   "power.medievalorigins.icarae/wings.description": "Icarae are born with massive white wings, and have powerful flight muscles capable of lifting them up into the air.",
   "power.medievalorigins.icarae/flight_hunger.name": "Ravenous Predator",
-  "power.medievalorigins.icarae/flight_hunger.description": "Icarae exhaust extremely quickly, and can't fly while low on food.",
+  "power.medievalorigins.icarae/flight_hunger.description": "Icarae exhaust extremely quickly while flying, and take more damage from starving.",
   "power.medievalorigins.icarae/hollow_boned.name": "Hollow Boned",
-  "power.medievalorigins.icarae/hollow_boned.description": "Icarae evolved hollow bones in order to maintain any speed or efficiency - they are more vulnerable to damage and can not wear heavy armor (This can be prevented with an enchantment).",
+  "power.medievalorigins.icarae/hollow_boned.description": "Icarae are more vulnerable to damage and can not wear armor heavier than chainmail (This can be prevented with an enchantment).",
   "power.medievalorigins.icarae/aerial_combatant.name": "Aerial Combatant",
-  "power.medievalorigins.icarae/aerial_combatant.description": "Striking an enemy while flying forward will deal bonus damage and knock them back.",
+  "power.medievalorigins.icarae/aerial_combatant.description": "Striking an enemy while flying will deal bonus damage and knock them back.",
   "power.medievalorigins.icarae/lessons_of_flight.name": "Lessons of Flight",
   "power.medievalorigins.icarae/lessons_of_flight.description": "Upon defeating the ender dragon, flying no longer costs hunger.",
 
@@ -511,9 +511,9 @@
   "badges.medievalorigins.high_elf.glacial_step": "§bGlacial Step:§r Hold an ice block to manipulate the entropy of water molecules, allowing you to walk as if you had Frost Walker",
   "badges.medievalorigins.high_elf.extrusive_movement": "§4Extrusive Movement:§r Hold obsidian to channel the flow of heat and walk freely on smoldering lava",
   "badges.medievalorigins.high_elf.instant_cure": "§eInstant Cure:§r Right click a villager with a golden apple to directly channel its healing energy without needing to weaken them",
-  "badges.medievalorigins.high_elf.void_warp": "§5Void Warp:§r Press %s while holding an ender pearl to rip through the fabric of reality and teleport yourself directly, up to 50 blocks away",
-  "badges.medievalorigins.high_elf.blazenbreath": "§cBlazenbreath:§r Press %s while holding coal to shoot forth a weak cone of flame. Hold blaze powder instead to shoot forth a moderate cone of flame",
-  "badges.medievalorigins.high_elf.ebonbreath": "§dEbonbreath:§r Press %s while holding bottled dragon's breath to shoot forth a cone of strong magical flame",
+  "badges.medievalorigins.high_elf.void_warp": "§5Void Warp:§r Press %s while holding an ender pearl to rip through the fabric of reality and teleport yourself directly where you're looking, up to 50 blocks away",
+  "badges.medievalorigins.high_elf.blazenbreath": "§cBlazenbreath:§r Press %s while holding coal in either hand to shoot forth a weak cone of flame. Hold blaze powder instead to shoot forth a moderate cone of flame. Scales with Fire Spell Power.",
+  "badges.medievalorigins.high_elf.ebonbreath": "§dEbonbreath:§r Press %s while holding bottled dragon's breath in either hand to shoot forth a cone of strong magical flame. Scales with Fire and Arcane Spell Power.",
 
   "badges.medievalorigins.revenant.siphon": "Press %s while pointing at a living creature to drain its life force. This hurts even passive animals, but not summoned dead.",
   "badges.medievalorigins.revenant.eat": "Besides bones and rotten flesh, eating certain monster heads can charge this resource more quickly.",
@@ -539,6 +539,24 @@
   "tooltip.medievalorigins.restores_no_hunger": "Restores no Hunger",
   "tooltip.medievalorigins.moonlight_rogue": "Moonlight Rogue:",
   "tooltip.medievalorigins.greedy": "Greedy:",
-  "tooltip.medievalorigins.ravager": "Ravager:"
+  "tooltip.medievalorigins.ravager": "Ravager:",
+
+  "layer.medievalorigins.magic_subclasses.name": "Magic Specialization",
+  
+  "origin.medievalorigins.high_elf/arcanist.name": "Arcanist",
+  "origin.medievalorigins.high_elf/arcanist.description": "+1 Arcane Spell Power",
+  "power.medievalorigins.high_elf/arcanist/gear_spawn.name": "Starting Equipment:",
+  "power.medievalorigins.high_elf/arcanist/gear_spawn.description": "- Arcane Wand \n- 16 Arcane Runes",
+
+  "origin.medievalorigins.high_elf/pyromancer.name": "Pyromancer",
+  "origin.medievalorigins.high_elf/pyromancer.description": "+1 Fire Spell Power",
+  "power.medievalorigins.high_elf/pyromancer/gear_spawn.name": "Starting Equipment:",
+  "power.medievalorigins.high_elf/pyromancer/gear_spawn.description": "- Fire Wand \n- 16 Fire Runes",
+
+  "origin.medievalorigins.high_elf/cryomancer.name": "Cryomancer",
+  "origin.medievalorigins.high_elf/cryomancer.description": "+1 Frost Spell Power",
+  "power.medievalorigins.high_elf/cryomancer/gear_spawn.name": "Starting Equipment:",
+  "power.medievalorigins.high_elf/cryomancer/gear_spawn.description": "- Frost Wand \n- 16 Frost Runes"
+  
 
 }

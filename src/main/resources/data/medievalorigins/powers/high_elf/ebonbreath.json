@@ -190,8 +190,23 @@
                                     }
                                 },
                                 {
-                                    "type": "origins:damage",
-                                    "amount": 10,
+                                    "type": "medievalorigins:damage",
+                                    "base": 5,
+                                    "modifier": {
+                                        "attribute": "spell_power:arcane",
+                                        "operation": "addition",
+                                        "value": 1.1
+                                    },
+                                    "damage_type": "medievalorigins:ebonbreath"
+                                },
+                                {
+                                    "type": "medievalorigins:damage",
+                                    "base": 5,
+                                    "modifier": {
+                                        "attribute": "spell_power:fire",
+                                        "operation": "addition",
+                                        "value": 1.1
+                                    },
                                     "damage_type": "medievalorigins:ebonbreath"
                                 },
                                 {

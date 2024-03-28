@@ -10,8 +10,7 @@
                 "medievalorigins:ogre/sluggish",
                 "medievalorigins:ogre/unwieldy",
                 "medievalorigins:ogre/ogre_properties",
-                "medievalorigins:ogre/bloodlust_camera",
-                "medievalorigins:ogre/orcish_pride"
+                "medievalorigins:ogre/bloodlust_camera"
         ],
         "icon": {
                 "item": "minecraft:ink_sac",

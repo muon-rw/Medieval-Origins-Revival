@@ -1,7 +1,4 @@
 {
-	"type": "origins:effect_immunity",
-	"effects": [
-		"minecraft:instant_health",
-		"minecraft:regeneration"
-	]
+	"type": "origins:entity_group",
+	"group": "undead"
 }
