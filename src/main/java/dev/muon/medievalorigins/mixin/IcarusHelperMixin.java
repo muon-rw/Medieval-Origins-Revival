@@ -25,7 +25,7 @@ import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
 import net.minecraft.world.item.ArmorItem;
 
-@Mixin(value = IcarusHelper.class, priority = 5000)
+@Mixin(value = IcarusHelper.class)
 public class IcarusHelperMixin {
     @Shadow
     private static final TagKey<Item> FREE_FLIGHT;
