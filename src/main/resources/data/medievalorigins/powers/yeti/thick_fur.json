@@ -5,7 +5,7 @@
 		"modifier": {
 			"attribute": "minecraft:generic.movement_speed",
 			"operation": "addition",
-			"value": -0.03
+			"value": -0.015
 		},
 		"condition": {
 			"type": "origins:biome",
