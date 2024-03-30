@@ -52,6 +52,12 @@
 			"tag": "medievalorigins:siphon",
 			"inverted": true
 		},
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:*_resource",
+			"compare_to": 0,
+			"comparison": ">"
+		},
 		"bientity_action": {
 			"type": "origins:and",
 			"actions": [

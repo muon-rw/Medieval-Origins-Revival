@@ -124,13 +124,11 @@
                                     }
                                 },
                                 {
-                                    "type": "medievalorigins:damage",
-                                    "base": 6,
-                                    "modifier": {
-                                        "attribute": "spell_power:fire",
-                                        "operation": "addition",
-                                        "value": 1.0
-                                    },
+                                    "type": "medievalorigins:spell_damage",
+                                    "base": 4,
+                                    "magic_school": "fire",
+                                    "crit_behavior": "normal",
+                                    "scaling_factor": 0.7,
                                     "damage_type": "medievalorigins:blazenbreath"
                                 },
                                 {

@@ -11,7 +11,7 @@
   "origin.medievalorigins.banshee.description": "-§l Notable Changes§r: \n§o§2+ Flight, Support, Phasing§r\n§o§c- Defense§r\n§o§c- Extreme changes, read first!§r\n§lBanshees§r are anguished spirits whose cries can shatter glass and drive people to madness. In myth, their presence is often considered an omen of death.",
 
   "origin.medievalorigins.incubus.name": "Incubus",
-  "origin.medievalorigins.incubus.description": "-§l Notable Changes§r: \n§o§2+ Nether Bonuses\n+ Strength, Fireball§r\n§o§c- Damaged by Water§r\n§o§c- Weak in Overworld§r\n§lIncubi§r are evil servants of a dark power. They are powerful in their own realm, but in exchange for this they have given up their soul, and are weak to pure sources.",
+  "origin.medievalorigins.incubus.description": "-§l Notable Changes§r: \n§o§2+ Nether Bonuses\n§o§6• Fire-based\n§o§c- Damaged by Water§r\n§o§c- Weak in Overworld§r\n§lIncubi§r are evil servants of a dark power. They are powerful in their own realm, but in exchange for this they have given up their soul, and are weak to pure sources.",
 
   "origin.medievalorigins.dwarf.name": "Dwarf",
   "origin.medievalorigins.dwarf.description": "-§l Notable Changes§r: \n§o§2+ Mining, Caving§r\n§o§6• Short: 102cm/3'7\"§r\n§o§c- Sun sensitive \n- Can't swim§r\n§lDwarves§r are practical, stocky, and prideful. They excel at mining and living underground, but struggle with the daylight. Rock and stone, brother.",
@@ -124,7 +124,7 @@
   "power.medievalorigins.incubus/carnivore.description": "An incubus' bloodlust is insatiable. If it isn't the flesh of an animal, its worthless.",
 
   "power.medievalorigins.incubus/demon_fire.name": "Demon Fire",
-  "power.medievalorigins.incubus/demon_fire.description": "Imbued with the devil's energy, the incubi have innate fire spell power and can release a burst of hell's energy on command. Scales with Fire Spell Power.",
+  "power.medievalorigins.incubus/demon_fire.description": "Imbued with the devil's energy, the incubi are innately more potent with all fire magics, and can release a burst of flame at will. Scales with Fire Spell Power.",
 
   "power.medievalorigins.incubus/hellborne.name": "Hellborne",
   "power.medievalorigins.incubus/hellborne.description": "Having spent eternities in the depths of hell, fire feels like home - it deals no damage to Incubi and satiates them.",
@@ -355,7 +355,7 @@
   "power.medievalorigins.plague_victim/plague_immunity.description": "Though the immense pain never ends, there is only so much tissue that can die. Carriers are immune to poison and wither.",
 
   "power.medievalorigins.plague_victim/eternal_suffering.name": "Eternal Suffering",
-  "power.medievalorigins.plague_victim/eternal_suffering.description": "Once per day, upon death, the Plagued are instead forcefully kept alive, prolonging their torment.",
+  "power.medievalorigins.plague_victim/eternal_suffering.description": "Once every 5 minutes, upon death, the Plagued are instead forcefully kept alive to prolong their torment.",
 
   "power.medievalorigins.plague_victim/risk_of_transmission.name": "Contagious Hex",
   "power.medievalorigins.plague_victim/risk_of_transmission.description": "Each contact with the victim is a gamble - everything they hit has a chance to itself become infected.",
@@ -457,7 +457,7 @@
   "power.medievalorigins.revenant/unwitherable.description": "Revenants are immune to wither, and, like undead, they take extra damage from smite, receive inverted effects from harming and healing effects, and are immune to poison and regeneration effects.",
 
   "power.medievalorigins.revenant/skeleton_summons.name": "Revenance",
-  "power.medievalorigins.revenant/skeleton_summons.description": "Revenants can reconstruct creatures of the night modified to do their own bidding. These act as pets, will follow and teleport, and skeletons can be equipped with any weapon. Summon by activating while holding: \n§lSkeleton:§r \n- Mainhand: 4 bones\n§lSkeleton Horse:§r\n- Mainhand: 12 bones\n- Offhand: 1 saddle \n§lWither Skeleton:§r \n- Mainhand: 12 bones\n- Offhand: 1 wither skull\n§lZombie:§r \n- Mainhand: 4 flesh\n§lZombie Horse:§r \n- Mainhand: 12 flesh\n- Offhand: 1 saddle",
+  "power.medievalorigins.revenant/skeleton_summons.description": "Revenants can reconstruct creatures of the night modified to do their own bidding. These act as pets, will follow and teleport, and skeletons can be equipped with any weapon. Strength scales with Soul Spell Power. Summon by activating while holding: \n§lSkeleton:§r \n- Mainhand: 4 bones\n§lSkeleton Horse:§r\n- Mainhand: 12 bones\n- Offhand: 1 saddle \n§lWither Skeleton:§r \n- Mainhand: 12 bones\n- Offhand: 1 wither skull\n§lZombie:§r \n- Mainhand: 4 flesh\n§lZombie Horse:§r \n- Mainhand: 12 flesh\n- Offhand: 1 saddle",
 
   "power.medievalorigins.revenant/poor_reputation.name": "Chaotic Ally",
   "power.medievalorigins.revenant/poor_reputation.description": "Villagers will refuse to trade with revenants and iron golems will attack them on sight. However, they are accepted amongst the ranks of the Pillagers.",
@@ -472,13 +472,13 @@
   "origin.medievalorigins.icarae.description": "-§l Notable Changes§r: \n§o§2+ Self-propelled flight§r \n§o§6• Feathered wings§r \n§o§c- Fragile \n- Unique restrictions§r\n§lIcarae§r are carnivorous birdlike humanoids with powerful wings; they fly low to the ground, weaving nimbly between obstacles to hunt their prey.",
   "power.medievalorigins.icarae/wings.name": "Feathered",
   "power.medievalorigins.icarae/wings.description": "Icarae are born with massive white wings, and have powerful flight muscles capable of lifting them up into the air.",
-  "power.medievalorigins.icarae/flight_hunger.name": "Ravenous Predator",
-  "power.medievalorigins.icarae/flight_hunger.description": "Icarae exhaust extremely quickly while flying, and take more damage from starving.",
+  "power.medievalorigins.icarae/ravenous_predator.name": "Ravenous Predator",
+  "power.medievalorigins.icarae/ravenous_predator.description": "Icarae can only digest meat, and exhaust extremely quickly while flying.",
   "power.medievalorigins.icarae/hollow_boned.name": "Hollow Boned",
-  "power.medievalorigins.icarae/hollow_boned.description": "Icarae are more vulnerable to damage and can not wear armor heavier than chainmail (This can be prevented with an enchantment).",
+  "power.medievalorigins.icarae/hollow_boned.description": "Icarae are more vulnerable to damage, and can not wear armor heavier than chainmail (This can be prevented with an enchantment).",
   "power.medievalorigins.icarae/aerial_combatant.name": "Aerial Combatant",
   "power.medievalorigins.icarae/aerial_combatant.description": "Striking an enemy while flying will deal bonus damage and knock them back.",
-  "power.medievalorigins.icarae/lessons_of_flight.name": "Lessons of Flight",
+  "power.medievalorigins.icarae/lessons_of_flight.name": "Draconic Lessons",
   "power.medievalorigins.icarae/lessons_of_flight.description": "Upon defeating the ender dragon, flying no longer costs hunger.",
 
 
@@ -515,7 +515,7 @@
   "badges.medievalorigins.high_elf.blazenbreath": "§cBlazenbreath:§r Press %s while holding coal in either hand to shoot forth a weak cone of flame. Hold blaze powder instead to shoot forth a moderate cone of flame. Scales with Fire Spell Power.",
   "badges.medievalorigins.high_elf.ebonbreath": "§dEbonbreath:§r Press %s while holding bottled dragon's breath in either hand to shoot forth a cone of strong magical flame. Scales with Fire and Arcane Spell Power.",
 
-  "badges.medievalorigins.revenant.siphon": "Press %s while pointing at a living creature to drain its life force. This hurts even passive animals, but not summoned dead.",
+  "badges.medievalorigins.revenant.siphon": "Hit a living creature to drain its life force. Damage scales with accumulated resource and Soul Spell Power.",
   "badges.medievalorigins.revenant.eat": "Besides bones and rotten flesh, eating certain monster heads can charge this resource more quickly.",
 
   "badges.medievalorigins.alfiq.wall_climb": "Press %s to toggle wall climbing.",
@@ -544,17 +544,17 @@
   "layer.medievalorigins.magic_subclasses.name": "Magic Specialization",
   
   "origin.medievalorigins.high_elf/arcanist.name": "Arcanist",
-  "origin.medievalorigins.high_elf/arcanist.description": "+1 Arcane Spell Power",
+  "origin.medievalorigins.high_elf/arcanist.description": "High Elves are innately more talented in one element, decided at birth. \n\nA mage consumed with mastering the esoteric and the unknown. \n\n+1 Arcane Spell Power",
   "power.medievalorigins.high_elf/arcanist/gear_spawn.name": "Starting Equipment:",
   "power.medievalorigins.high_elf/arcanist/gear_spawn.description": "- Arcane Wand \n- 16 Arcane Runes",
 
   "origin.medievalorigins.high_elf/pyromancer.name": "Pyromancer",
-  "origin.medievalorigins.high_elf/pyromancer.description": "+1 Fire Spell Power",
+  "origin.medievalorigins.high_elf/pyromancer.description": "A lunatic who derives pleasure from watching things burn. \n\n+1 Fire Spell Power",
   "power.medievalorigins.high_elf/pyromancer/gear_spawn.name": "Starting Equipment:",
   "power.medievalorigins.high_elf/pyromancer/gear_spawn.description": "- Fire Wand \n- 16 Fire Runes",
 
   "origin.medievalorigins.high_elf/cryomancer.name": "Cryomancer",
-  "origin.medievalorigins.high_elf/cryomancer.description": "+1 Frost Spell Power",
+  "origin.medievalorigins.high_elf/cryomancer.description": "A calm, wise soul who focuses on control and strategy. \n\n+1 Frost Spell Power",
   "power.medievalorigins.high_elf/cryomancer/gear_spawn.name": "Starting Equipment:",
   "power.medievalorigins.high_elf/cryomancer/gear_spawn.description": "- Frost Wand \n- 16 Frost Runes",
   

@@ -10,6 +10,7 @@ public class ModBientityActions {
     public static void register() {
         register(TransferItemAction.getFactory());
         register(AttributedDamageAction.getFactory());
+        register(SpellDamageAction.getFactory());
     }
 
     private static void register(ActionFactory<Tuple<Entity, Entity>> serializer) {

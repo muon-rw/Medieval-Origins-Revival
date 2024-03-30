@@ -1,0 +1,62 @@
+{
+	"type": "origins:multiple",
+	"totem": {
+		"type": "origins:prevent_death",
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:*_cooldown",
+			"compare_to": 0,
+			"comparison": "=="
+		},
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:modify_resource",
+					"resource": "*:*_cooldown",
+					"modifier": {
+						"operation": "set_total",
+						"value": 300
+					}
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "function medievalorigins:mdvlorigins/plague_totem"
+				},
+				{
+					"type": "origins:heal",
+					"amount": 20
+				}
+			]
+		}
+	},
+	"cooldown": {
+		"type": "origins:resource",
+		"start_value": 0,
+		"max": 300,
+		"min": 0,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+			"bar_index": 1,
+			"condition": {
+				"type": "origins:resource",
+				"resource": "*:*_cooldown",
+				"comparison": ">",
+				"compare_to": 0
+			}
+		}
+	},
+	"tick_cooldown": {
+		"type": "origins:action_over_time",
+		"interval": 20,
+		"entity_action": {
+			"type": "origins:modify_resource",
+			"resource": "*:*_cooldown",
+			"modifier": {
+				"operation": "addition",
+				"value": -1
+			}
+		}
+	}
+}
