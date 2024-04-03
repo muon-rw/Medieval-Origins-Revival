@@ -12,60 +12,24 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.food.FoodData;
 import net.minecraft.world.item.*;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.Redirect;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 
 @Mixin(value = WingItem.class)
-public class WingItemMixin {
-    @Shadow
-    private static final TagKey<Item> MELTS;
-    public boolean isUsable(ItemStack stack) {
-        return IcarusConfig.wingsDurability <= 0 || stack.getDamageValue() < stack.getMaxDamage() - 1;
-    }
-    /**
-     * @author muon-rw
-     * @reason Replacing the Icarus wing tick logic to accommodate a workaround for Origins
-     */
-    @Overwrite
-    public void tick(ItemStack stack, SlotReference slot, LivingEntity entity) {
-        if (entity instanceof Player player) {
-            if (!WingsPower.hasWingsPower(player)) {
-                if (player.getFoodData().getFoodLevel() <= 6 || !this.isUsable(stack)) {
-                    IcarusHelper.stopFlying(player);
-                    return;
-                }
-            }
-            if (player.isFallFlying()) {
-                if (player.zza > 0.0F) {
-                    IcarusHelper.applySpeed(player, stack);
-                }
-
-                if (IcarusConfig.canSlowFall && player.isShiftKeyDown() || player.isUnderWater()) {
-                    IcarusHelper.stopFlying(player);
-                }
-
-                if (player.position().y > (double)(player.level().getHeight() + 64) && player.tickCount % 2 == 0 && stack.is(MELTS)) {
-                    stack.hurtAndBreak(1, player, (p) -> {
-                        p.broadcastBreakEvent(EquipmentSlot.CHEST);
-                    });
-                }
-            } else {
-                if (player.onGround() || player.isInWater()) {
-                    ((SlowFallEntity)player).setSlowFalling(false);
-                }
-
-                if (((SlowFallEntity)player).isSlowFalling()) {
-                    player.fallDistance = 0.0F;
-                    player.setDeltaMovement(player.getDeltaMovement().x, -0.4, player.getDeltaMovement().z);
-                }
-            }
+public abstract class WingItemMixin {
+    @Redirect(method = "tick", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/food/FoodData;getFoodLevel()I"))
+    private int redirectGetFoodLevel(FoodData foodData, ItemStack stack, SlotReference slot, LivingEntity entity) {
+        if (entity instanceof Player player && WingsPower.hasWingsPower(player)) {
+            return 7;
         }
+        return foodData.getFoodLevel();
     }
-    static {
-        MELTS = TagKey.create(BuiltInRegistries.ITEM.key(), new ResourceLocation("icarus", "melts"));
-    }
-
 }
