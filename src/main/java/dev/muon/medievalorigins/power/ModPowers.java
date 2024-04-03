@@ -8,11 +8,14 @@ import io.github.apace100.apoli.power.factory.PowerFactorySupplier;
 import io.github.apace100.apoli.registry.ApoliRegistries;
 import io.github.apace100.origins.Origins;
 import io.github.apace100.origins.power.OriginsCallbackPower;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.core.Registry;
 
 public class ModPowers {
     public static void register() {
-        registerPowerFactory(WingsPower.WINGS_FACTORY);
+        if (FabricLoader.getInstance().isModLoaded("icarus")) {
+            registerPowerFactory(WingsPower.WINGS_FACTORY);
+        }
         register(OwnerAttributeTransferPower.createFactory());
     }
     public static void registerPowerFactory(PowerFactory<?> serializer) {
