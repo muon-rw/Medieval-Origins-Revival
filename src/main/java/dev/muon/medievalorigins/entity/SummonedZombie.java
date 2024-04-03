@@ -28,7 +28,7 @@ import java.util.UUID;
 public class SummonedZombie extends Zombie implements IFollowingSummon, ISummon {
 
     /*
-        Implementation sourced from Ars Nouveau, in compliance with the LGPL-v3.0 license
+        Based off of Ars Nouveau, which is under the LGPL-v3.0 license
     */
 
     public SummonedZombie(EntityType<? extends Zombie> entityType, Level level) {
@@ -93,10 +93,9 @@ public class SummonedZombie extends Zombie implements IFollowingSummon, ISummon 
         this.reassessWeaponGoal();
     }
     @Override
-    public boolean hurt(DamageSource pSource, float pAmount) {
-        return super.hurt(pSource, pAmount);
+    public boolean hurt(DamageSource source, float amount) {
+        return super.hurt(source, amount);
     }
-
 
     @Override
     public void tick() {

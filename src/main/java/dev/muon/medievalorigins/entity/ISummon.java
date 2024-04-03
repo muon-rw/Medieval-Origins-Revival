@@ -13,8 +13,8 @@ import java.util.UUID;
  * For entities summoned by spells.
  */
 public interface ISummon extends OwnableEntity {
-        /*
-        Implementation based off of Ars Nouveau, in compliance with the LGPL-v3.0 license
+    /*
+        Based off of Ars Nouveau, which is under the LGPL-v3.0 license
     */
 
     int getTicksLeft();

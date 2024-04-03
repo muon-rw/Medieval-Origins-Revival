@@ -17,8 +17,8 @@ import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import java.util.EnumSet;
 
 public class FollowSummonerGoal extends Goal {
-        /*
-        Implementation sourced from Ars Nouveau, in compliance with the LGPL-v3.0 license
+    /*
+        Based off of Ars Nouveau, which is under the LGPL-v3.0 license
     */
 
     protected final IFollowingSummon summon;

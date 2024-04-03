@@ -39,8 +39,12 @@ public class ModEntities {
                     .build()
     );
     public static void register() {
-        FabricDefaultAttributeRegistry.register(ModEntities.SUMMON_SKELETON, Monster.createMonsterAttributes().add(Attributes.MOVEMENT_SPEED, 0.25D));
-        FabricDefaultAttributeRegistry.register(ModEntities.SUMMON_WITHER_SKELETON, Monster.createMonsterAttributes().add(Attributes.MOVEMENT_SPEED, 0.25D));
-        FabricDefaultAttributeRegistry.register(ModEntities.SUMMON_ZOMBIE, Monster.createMonsterAttributes().add(Attributes.MOVEMENT_SPEED, 0.23D));
+        FabricDefaultAttributeRegistry.register(ModEntities.SUMMON_SKELETON, Monster.createMonsterAttributes()
+                .add(Attributes.MOVEMENT_SPEED, 0.25D));
+        FabricDefaultAttributeRegistry.register(ModEntities.SUMMON_WITHER_SKELETON, Monster.createMonsterAttributes()
+                .add(Attributes.MOVEMENT_SPEED, 0.25D));
+        FabricDefaultAttributeRegistry.register(ModEntities.SUMMON_ZOMBIE, Monster.createMonsterAttributes()
+                .add(Attributes.MOVEMENT_SPEED, 0.18D)
+                .add(Attributes.SPAWN_REINFORCEMENTS_CHANCE, 0.0D));
     }
 }

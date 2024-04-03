@@ -40,6 +40,7 @@ repositories {
 	maven { url 'https://libs.azuredoom.com:4443/mods' }
 	maven { url = "https://maven.parchmentmc.org" }
 	maven { url "https://maven.willbl.dev/releases" }
+	maven { url "https://cursemaven.com" }
 }
 
 dependencies {
@@ -100,6 +101,7 @@ dependencies {
 	modImplementation("mod.azure.azurelibarmor:azurelibarmor-fabric-${project.azure_mc_version}:${project.azure_lib_version}")
 	modCompileOnly ("me.shedaniel:RoughlyEnoughItems-api-fabric:${project.rei_version}")
 	modRuntimeOnly ("me.shedaniel:RoughlyEnoughItems-fabric:${project.rei_version}")
+	modRuntimeOnly ("curse.maven:jade-324717:${project.jade_id}")
 
 
 }

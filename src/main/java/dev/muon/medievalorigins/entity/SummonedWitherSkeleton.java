@@ -35,7 +35,7 @@ import java.util.UUID;
 
 public class SummonedWitherSkeleton extends WitherSkeleton implements IFollowingSummon, ISummon {
     /*
-        Implementation sourced from Ars Nouveau, in compliance with the LGPL-v3.0 license
+        Based off of Ars Nouveau, which is under the LGPL-v3.0 license
     */
 
     public SummonedWitherSkeleton(EntityType<? extends WitherSkeleton> entityType, Level level) {
