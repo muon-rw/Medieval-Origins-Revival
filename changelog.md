@@ -6,6 +6,7 @@
 - Fixed magic-based damage changes and damage types not working as intended
 - Switched from custom item conditions to registering with AutoTag API (should improve server performance)
 - Added some barebones internals for other datapack developers to create functional Icarus origins or spell-power scaling abilities of their own
+- The Featherweight enchantment will now also prevent enchanted armor from slowing down Icarus wing flight, and armor calculations will be based on equipped armor pieces, not innate player stats.
 
 ## 6.2.4 (Alpha)
 #### New Origins:
@@ -42,7 +43,7 @@
 - Dwarves can apply Mirroring to tolerate sunlight with any helmet
 - Dwarf night vision is now toggleable
 - Dwarves fit in 1-block tunnels again
-- Goblin now has increased durability with gold gear
+- Goblins now have increased durability with gold gear
 - Wood Elf's improved vision now instead activates while crouching and covered by foliage, while also making them harder to detect by mobs.
 - Temporary killed Wood Elf's piercing shot (Focus) ability, pending a bugfix. Buffed arrow damage to compensate
 - Moon Elves are now slightly better with daggers, and no longer get attacked by phantoms
