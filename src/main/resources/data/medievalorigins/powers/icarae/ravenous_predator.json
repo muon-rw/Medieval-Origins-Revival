@@ -5,7 +5,7 @@
         "modifier": {
             "name": "Increased flight exhaustion",
             "operation": "multiply_base",
-            "value": 0.75
+            "value": 0.5
         },
         "condition": {
             "type": "origins:and",
@@ -24,7 +24,7 @@
     "active_tick": {
         "type": "origins:exhaust",
         "interval": 20,
-        "exhaustion": 0.5,
+        "exhaustion": 0.25,
         "condition": {
             "type": "origins:and",
             "conditions": [
