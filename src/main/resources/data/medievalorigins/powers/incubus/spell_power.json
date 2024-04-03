@@ -4,5 +4,6 @@
 		"attribute": "spell_power:fire",
 		"operation": "addition",
 		"value": 1
-	}
+	},
+	"hidden": true
 }
