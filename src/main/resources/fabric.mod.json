@@ -34,7 +34,8 @@
     "minecraft": "~1.20",
     "java": ">=17",
     "origins": ">=1.7.1",
-    "pehkui": ">=3.0"
+    "pehkui": ">=3.0",
+    "spell_power": "<=0.9.19"
   },
   "mixins": [
     "medievalorigins.mixins.json"
