@@ -152,7 +152,7 @@ modrinth {
 	token = System.getenv("MODRINTH_TOKEN")
 	projectId = "medieval-origins-revival"
 	versionType = "release"
-	versionName = "Zephyr " + project.version
+	versionName = "Medieval Origins Revival " + project.version
 	uploadFile = remapJar
 	gameVersions = ["1.20.1"]
 	loaders = ["fabric"]
