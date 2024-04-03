@@ -9,7 +9,7 @@ import net.minecraft.world.item.*;
 
 import java.util.function.Predicate;
 
-public class ModAutoTagRegistry {
+public class ModTags {
     public static void registerTags() {
             addToTag("summon_weapons", item -> item == Items.BOW || item instanceof DiggerItem || item instanceof SwordItem);
             addToTag("bows", item -> item instanceof BowItem);
@@ -24,6 +24,7 @@ public class ModAutoTagRegistry {
             addToTag("golden_weapons", item -> item instanceof SwordItem && BuiltInRegistries.ITEM.getKey(item).getPath().matches("[a-z_]*(gold|gilded)[a-z_]*"));
             addToTag("golden_tools", item -> item instanceof DiggerItem && BuiltInRegistries.ITEM.getKey(item).getPath().matches("[a-z_]*(gold|gilded)[a-z_]*"));
     }
+    public static TagKey<Item> bowsTag = TagKey.create(Registries.ITEM, MedievalOrigins.loc("bows"));
 
     public static void addToTag(String tagName, Predicate<Item> condition) {
         ResourceLocation tagId = MedievalOrigins.loc(tagName);
