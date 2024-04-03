@@ -80,6 +80,11 @@
 										"type": "origins:grant_power",
 										"power": "medievalorigins:revenant/unwitherable",
 										"source": "medievalorigins:revenant/summons"
+									},
+									{
+										"type": "origins:grant_power",
+										"power": "medievalorigins:revenant/summon_scaling",
+										"source": "medievalorigins:revenant/summons"
 									}
 								]
 							}

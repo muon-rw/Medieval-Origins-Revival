@@ -13,6 +13,7 @@ import net.minecraft.core.Registry;
 public class ModPowers {
     public static void register() {
         registerPowerFactory(WingsPower.WINGS_FACTORY);
+        register(OwnerAttributeTransferPower.createFactory());
     }
     public static void registerPowerFactory(PowerFactory<?> serializer) {
         Registry.register(ApoliRegistries.POWER_FACTORY, serializer.getSerializerId(), serializer);

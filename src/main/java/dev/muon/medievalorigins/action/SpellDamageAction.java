@@ -7,21 +7,12 @@ import io.github.apace100.apoli.data.ApoliDataTypes;
 import io.github.apace100.apoli.power.factory.action.ActionFactory;
 import io.github.apace100.apoli.util.MiscUtil;
 import io.github.apace100.calio.data.SerializableData;
-import io.github.apace100.calio.data.SerializableDataType;
 import io.github.apace100.calio.data.SerializableDataTypes;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.util.Tuple;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.ai.attributes.Attribute;
-import net.minecraft.world.entity.ai.attributes.AttributeModifier;
-import net.spell_power.api.SpellPowerTags;
 
-import java.util.function.Function;
 
 public class SpellDamageAction {
     public SpellDamageAction() {
@@ -75,7 +66,7 @@ public class SpellDamageAction {
         float scalingFactor = data.get("scaling_factor");
         double totalDamage = baseDamage + (spellPowerResult * scalingFactor);
 
-        ResourceLocation damageType = magicSchool.damageTypeId();
+        // ResourceLocation damageType = magicSchool.damageTypeId(); // nvm
         DamageSource source = MiscUtil.createDamageSource(
                 actor.damageSources(),
                 data.get("source"),

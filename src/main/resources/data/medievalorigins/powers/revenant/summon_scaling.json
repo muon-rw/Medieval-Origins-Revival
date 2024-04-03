@@ -1,0 +1,11 @@
+{
+    "type": "medievalorigins:owner_attribute_transfer",
+    "owner_attribute": "spell_power:soul",
+    "modifier": {
+        "attribute": "minecraft:generic.max_health",
+        "operation": "addition",
+        "value": 1
+    },
+    "tick_rate": 20,
+    "update_health": true
+}

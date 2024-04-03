@@ -1,6 +1,8 @@
 plugins {
 	id 'fabric-loom' version '0.12-SNAPSHOT'
 	id 'maven-publish'
+	id "com.modrinth.minotaur" version "2.+"
+	id 'net.darkhax.curseforgegradle' version "1.1.16"
 }
 
 sourceCompatibility = JavaVersion.VERSION_17
@@ -15,10 +17,10 @@ repositories {
 	maven { url = "https://maven.nucleoid.xyz/" }
 	maven { url = 'https://maven.blamejared.com' }
 	maven { url = "https://maven.willbl.dev/releases" }
-	maven {	url = "https://jitpack.io"	}
-	maven {	url = "https://maven.parchmentmc.org"	}
+	maven { url = "https://jitpack.io" }
+	maven { url = "https://maven.parchmentmc.org" }
 	maven { url = "https://maven.terraformersmc.com/" }
-	maven {	url = 'https://maven.merchantpug.net/releases/' }
+	maven { url = 'https://maven.merchantpug.net/releases/' }
 	maven { url = 'https://maven.ladysnake.org/releases/' }
 	maven {
 		url = 'https://maven.cafeteria.dev'
@@ -142,4 +144,35 @@ publishing {
 		// The repositories here will be used for publishing your artifact, not for
 		// retrieving dependencies.
 	}
+}
+
+modrinth {
+	token = System.getenv("MODRINTH_TOKEN")
+	projectId = "medieval-origins-revival"
+	versionType = "release"
+	versionName = "Zephyr " + project.version
+	uploadFile = remapJar
+	gameVersions = ["1.20.1"]
+	loaders = ["fabric"]
+	changelog = "[Changelog](https://github.com/muon-rw/Medieval-Origins-Revival/blob/master/changelog.md)"
+	//debugMode = true
+	dependencies {
+		required.project("origins")
+		required.project("pehkui")
+		required.project("spell-power")
+	}
+}
+
+task publishCurseForge(type: net.darkhax.curseforgegradle.TaskPublishCurseForge) {
+	apiToken = System.getenv("CF_TOKEN")
+	//debugMode = true
+	def mainFile = upload(897171, remapJar)
+	mainFile.changelog = "https://github.com/muon-rw/Medieval-Origins-Revival/blob/master/changelog.md"
+	mainFile.releaseType = "release"
+	mainFile.addGameVersion("1.20.1")
+	mainFile.addModLoader("fabric")
+	mainFile.displayName = project.archives_base_name + "-" + project.version
+	mainFile.addRequirement("origins")
+	mainFile.addRequirement("pehkui")
+	mainFile.addRequirement("spell-power")
 }
