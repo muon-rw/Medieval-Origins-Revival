@@ -2,6 +2,7 @@
   "required": true,
   "minVersion": "0.8",
   "package": "dev.muon.medievalorigins.mixin",
+  "plugin": "dev.muon.medievalorigins.MedievalOriginsMixinPlugin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "WingItemMixin",
