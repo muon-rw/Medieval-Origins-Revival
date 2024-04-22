@@ -66,17 +66,18 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	// Origins Local - Add Apoli and Calio to a /libs/ folder in the root project directory
-	modImplementation("maven.modrinth:origins:${project.origins_version}")
+	modImplementation ("maven.modrinth:origins:${project.origins_version}")
 	modImplementation fileTree(dir: '/libs/', include: '*.jar')
 
 	//
-	modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-base:${project.cca_version}"
-	modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${project.cca_version}"
+	modLocalRuntime "dev.onyxstudios.cardinal-components-api:cardinal-components-base:${project.cca_version}"
+	modLocalRuntime "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${project.cca_version}"
 	//modImplementation include("maven.modrinth:additionalentityattributes:${project.aea_version}")
 
 	modImplementation include("com.jamieswhiteshirt:reach-entity-attributes:${project.rea_version}")
 	modImplementation include("com.github.apace100:autotag-api:${autotag_version}")
-	modImplementation (include("net.merchantpug:Apugli:${apugli_version}+${minecraft_version}-fabric"))
+	modImplementation include("net.merchantpug:Apugli:${apugli_version}+${minecraft_version}-fabric")
+	modImplementation include("maven.modrinth:projectile-damage-attribute:${project.projectile_damage}-fabric")
 
 	implementation("com.github.LlamaLad7:MixinExtras:0.2.0-beta.4")
 	annotationProcessor("com.github.LlamaLad7:MixinExtras:0.2.0-beta.4")
@@ -96,32 +97,31 @@ dependencies {
 	modImplementation ("dev.emi:trinkets:${project.trinkets_version}")
 	modImplementation("maven.modrinth:icarus:${project.icarus_version}+Fabric")
 
-	modImplementation("com.teamresourceful.resourcefulconfig:resourcefulconfig-fabric-1.20.1:${project.resourceful_version}")
-	modImplementation ("mysticdrew:common-networking-fabric:${project.cmnw_version}")
+	modLocalRuntime("com.teamresourceful.resourcefulconfig:resourcefulconfig-fabric-1.20.1:${project.resourceful_version}")
+	modLocalRuntime ("mysticdrew:common-networking-fabric:${project.cmnw_version}")
 
 	// RPG Series
-	modImplementation("maven.modrinth:projectile-damage-attribute:${project.projectile_damage}-fabric")
-	modImplementation include("maven.modrinth:ranged-weapon-api:${project.ranged_weapon_api_version}")
+	modLocalRuntime("maven.modrinth:ranged-weapon-api:${project.ranged_weapon_api_version}")
 	modImplementation("maven.modrinth:spell-power:${project.spell_power_version}-fabric")
 	modImplementation("maven.modrinth:spell-engine:${project.spell_engine_version}-fabric")
-	modImplementation("maven.modrinth:runes:${project.runes_version}-fabric")
+	modLocalRuntime("maven.modrinth:runes:${project.runes_version}-fabric")
 	modImplementation("maven.modrinth:better-combat:${project.bettercombat_version}-fabric")
-	modImplementation("maven.modrinth:structure-pool-api:${project.structure_pool_api_version}-fabric")
+	modLocalRuntime("maven.modrinth:structure-pool-api:${project.structure_pool_api_version}-fabric")
 
-	modImplementation("maven.modrinth:wizards:${project.wizards_version}-fabric")
-	modImplementation("maven.modrinth:paladins-and-priests:${project.paladins_version}-fabric")
-	modImplementation("maven.modrinth:archers:${project.archers_version}-fabric")
-	modImplementation("maven.modrinth:jewelry:${project.jewelry_version}-fabric")
-	modImplementation("maven.modrinth:rpgdifficulty:${project.rpg_version}")
+	modLocalRuntime("maven.modrinth:wizards:${project.wizards_version}-fabric")
+	modLocalRuntime("maven.modrinth:paladins-and-priests:${project.paladins_version}-fabric")
+	modLocalRuntime("maven.modrinth:archers:${project.archers_version}-fabric")
+	modLocalRuntime("maven.modrinth:jewelry:${project.jewelry_version}-fabric")
+	modLocalRuntime("maven.modrinth:rpgdifficulty:${project.rpg_version}")
 
-	modImplementation("dev.kosmx.player-anim:player-animation-lib-fabric:${project.player_anim_version}")
+	modLocalRuntime("dev.kosmx.player-anim:player-animation-lib-fabric:${project.player_anim_version}")
 	implementation("com.github.ZsoltMolnarrr:TinyConfig:${project.tiny_config_version}")
-	modImplementation("mod.azure.azurelibarmor:azurelibarmor-fabric-${project.azure_mc_version}:${project.azure_lib_version}")
+	modLocalRuntime("mod.azure.azurelibarmor:azurelibarmor-fabric-${project.azure_mc_version}:${project.azure_lib_version}")
 	modCompileOnly ("me.shedaniel:RoughlyEnoughItems-api-fabric:${project.rei_version}")
 	modRuntimeOnly ("me.shedaniel:RoughlyEnoughItems-fabric:${project.rei_version}")
 	modRuntimeOnly ("curse.maven:jade-324717:${project.jade_id}")
 
-	modImplementation "io.github.ladysnake:PlayerAbilityLib:${pal_version}"
+	modLocalRuntime "io.github.ladysnake:PlayerAbilityLib:${pal_version}"
 	include "io.github.ladysnake:PlayerAbilityLib:${pal_version}"
 
 }
