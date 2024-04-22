@@ -1,8 +1,13 @@
 package dev.muon.medievalorigins.action;
 
 import dev.muon.medievalorigins.MedievalOrigins;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.damagesource.DamageType;
 import net.spell_power.api.SpellPower;
-import net.spell_power.api.MagicSchool;
+import net.spell_power.api.SpellSchool;
 import io.github.apace100.apoli.data.ApoliDataTypes;
 import io.github.apace100.apoli.power.factory.action.ActionFactory;
 import io.github.apace100.apoli.util.MiscUtil;
@@ -12,6 +17,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.util.Tuple;
 import net.minecraft.world.damagesource.DamageSource;
+import net.spell_power.api.SpellSchools;
 
 
 public class SpellDamageAction {
@@ -39,34 +45,36 @@ public class SpellDamageAction {
         }
 
         String magicSchoolStr = data.get("magic_school");
-        MagicSchool magicSchool;
+        SpellSchool magicSchool;
         try {
-            magicSchool = MagicSchool.valueOf(magicSchoolStr.toUpperCase());
+            magicSchool = SpellSchools.getSchool(magicSchoolStr);
+            if (magicSchool == null) {
+                throw new IllegalArgumentException("Unknown magic school: " + magicSchoolStr);
+            }
         } catch (IllegalArgumentException e) {
             throw new IllegalArgumentException("Unknown magic school: " + magicSchoolStr);
         }
 
-        String critBehaviorStr = data.get("crit_behavior");
-        double spellPowerResult;
-        var result = SpellPower.getSpellPower(magicSchool, (LivingEntity) actor);
-        switch (critBehaviorStr) {
+        String critBehavior = data.get("crit_behavior");
+        SpellPower.Result spellPowerResult = SpellPower.getSpellPower(magicSchool, (LivingEntity) actor);
+        double finalSpellPower;
+        switch (critBehavior) {
             case "always":
-                spellPowerResult = result.forcedCriticalValue();
+                finalSpellPower = spellPowerResult.forcedCriticalValue();
                 break;
             case "never":
-                spellPowerResult = result.nonCriticalValue();
+                finalSpellPower = spellPowerResult.nonCriticalValue();
                 break;
             case "normal":
             default:
-                spellPowerResult = result.randomValue();
+                finalSpellPower = spellPowerResult.randomValue();
                 break;
         }
 
         float baseDamage = data.get("base");
         float scalingFactor = data.get("scaling_factor");
-        double totalDamage = baseDamage + (spellPowerResult * scalingFactor);
+        double totalDamage = baseDamage + (finalSpellPower * scalingFactor);
 
-        // ResourceLocation damageType = magicSchool.damageTypeId(); // nvm
         DamageSource source = MiscUtil.createDamageSource(
                 actor.damageSources(),
                 data.get("source"),

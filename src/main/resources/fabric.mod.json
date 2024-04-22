@@ -35,7 +35,7 @@
     "java": ">=17",
     "origins": ">=1.7.1",
     "pehkui": ">=3.0",
-    "spell_power": "<=0.9.19"
+    "spell_power": ">=0.10.0"
   },
   "mixins": [
     "medievalorigins.mixins.json"

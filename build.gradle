@@ -90,6 +90,7 @@ dependencies {
 		exclude(group: "net.fabricmc.fabric-api")
 	}
 
+	include(implementation(annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-fabric:0.1.2-beta.5")))
 
 	// Icarus + Deps
 	modImplementation ("dev.emi:trinkets:${project.trinkets_version}")
@@ -100,6 +101,7 @@ dependencies {
 
 	// RPG Series
 	modImplementation("maven.modrinth:projectile-damage-attribute:${project.projectile_damage}-fabric")
+	modImplementation include("maven.modrinth:ranged-weapon-api:${project.ranged_weapon_api_version}")
 	modImplementation("maven.modrinth:spell-power:${project.spell_power_version}-fabric")
 	modImplementation("maven.modrinth:spell-engine:${project.spell_engine_version}-fabric")
 	modImplementation("maven.modrinth:runes:${project.runes_version}-fabric")
@@ -110,6 +112,7 @@ dependencies {
 	modImplementation("maven.modrinth:paladins-and-priests:${project.paladins_version}-fabric")
 	modImplementation("maven.modrinth:archers:${project.archers_version}-fabric")
 	modImplementation("maven.modrinth:jewelry:${project.jewelry_version}-fabric")
+	modImplementation("maven.modrinth:rpgdifficulty:${project.rpg_version}")
 
 	modImplementation("dev.kosmx.player-anim:player-animation-lib-fabric:${project.player_anim_version}")
 	implementation("com.github.ZsoltMolnarrr:TinyConfig:${project.tiny_config_version}")

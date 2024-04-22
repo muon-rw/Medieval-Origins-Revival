@@ -6,7 +6,8 @@
             {
                 "element": {
                     "type": "origins:damage",
-                    "amount": 1
+                    "amount": 1,
+                    "damage_type": "generic"
                 },
                 "weight": 1
             },
