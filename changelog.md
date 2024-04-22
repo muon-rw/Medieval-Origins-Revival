@@ -1,4 +1,13 @@
-## v6.3.0
+## 6.3.1
+- Updated Icarus compat
+- Updated Spell Power compat
+- Fix RPGDifficulty incompat (revenant zombies being unsummonable)
+- Bundled Projectile Damage (fixes revenant summons being unsummonable if you didn't have it installed)
+- Fixed a crash related to Alfiq's pickpocket
+- Fixed Fae attraction range remaining after switching origins
+- Fixed Yetis not being immune to vanilla freezing damage
+
+## 6.3.0
 - Added (with permission) the **Icarae**, birdlike carnivorous hunters, an Icarus mod exclusive origin
 - High Elf, Incubus, and Revenant abilities now scale with Spell Power
 - Fixed Revenant's custom aggro breaking vanilla teams
