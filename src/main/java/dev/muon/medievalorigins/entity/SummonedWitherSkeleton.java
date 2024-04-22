@@ -3,6 +3,7 @@ package dev.muon.medievalorigins.entity;
 import dev.muon.medievalorigins.entity.goal.FollowSummonerGoal;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.players.OldUsersConverter;
 import net.minecraft.util.RandomSource;
@@ -37,6 +38,11 @@ public class SummonedWitherSkeleton extends WitherSkeleton implements IFollowing
     /*
         Based off of Ars Nouveau, which is under the LGPL-v3.0 license
     */
+    private static final EntityDataAccessor<Optional<UUID>> OWNER_UUID;
+
+    static {
+        OWNER_UUID = IFollowingSummon.getOwnerUUIDAccessor(SummonedWitherSkeleton.class);
+    }
 
     public SummonedWitherSkeleton(EntityType<? extends WitherSkeleton> entityType, Level level) {
         super(entityType, level);
@@ -250,9 +256,10 @@ public class SummonedWitherSkeleton extends WitherSkeleton implements IFollowing
             return null;
         }
     }
+    @Override
     protected void defineSynchedData() {
         super.defineSynchedData();
-        this.entityData.define(OWNER_UUID, Optional.empty());
+        this.getEntityData().define(OWNER_UUID, Optional.empty());
     }
 
     @Override

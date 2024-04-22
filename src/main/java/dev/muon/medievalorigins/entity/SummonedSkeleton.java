@@ -6,6 +6,7 @@ import dev.muon.medievalorigins.ModTags;
 import dev.muon.medievalorigins.entity.goal.FollowSummonerGoal;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.players.OldUsersConverter;
 import net.minecraft.util.RandomSource;
@@ -40,6 +41,11 @@ public class SummonedSkeleton extends Skeleton implements IFollowingSummon, ISum
     /*
         Based off of Ars Nouveau, which is under the LGPL-v3.0 license
     */
+    private static final EntityDataAccessor<Optional<UUID>> OWNER_UUID;
+
+    static {
+        OWNER_UUID = IFollowingSummon.getOwnerUUIDAccessor(SummonedSkeleton.class);
+    }
 
     public SummonedSkeleton(EntityType<? extends Skeleton> entityType, Level level) {
         super(entityType, level);
@@ -263,9 +269,10 @@ public class SummonedSkeleton extends Skeleton implements IFollowingSummon, ISum
         }
     }
 
+    @Override
     protected void defineSynchedData() {
         super.defineSynchedData();
-        this.entityData.define(OWNER_UUID, Optional.empty());
+        this.getEntityData().define(OWNER_UUID, Optional.empty());
     }
 
     @Override

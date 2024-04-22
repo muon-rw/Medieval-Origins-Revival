@@ -3,6 +3,7 @@ package dev.muon.medievalorigins.entity;
 import dev.muon.medievalorigins.entity.goal.FollowSummonerGoal;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.damagesource.DamageSource;
@@ -30,10 +31,15 @@ public class SummonedZombie extends Zombie implements IFollowingSummon, ISummon 
     /*
         Based off of Ars Nouveau, which is under the LGPL-v3.0 license
     */
+    private static final EntityDataAccessor<Optional<UUID>> OWNER_UUID;
 
+    static {
+        OWNER_UUID = IFollowingSummon.getOwnerUUIDAccessor(SummonedZombie.class);
+    }
     public SummonedZombie(EntityType<? extends Zombie> entityType, Level level) {
         super(entityType, level);
     }
+
 
     private LivingEntity owner;
     @Nullable
@@ -65,7 +71,7 @@ public class SummonedZombie extends Zombie implements IFollowingSummon, ISummon 
     @Override
     protected void registerGoals() {
         this.targetSelector.addGoal(1, new CopyOwnerTargetGoal<>(this));
-        this.targetSelector.addGoal(2, new HurtByTargetGoal(this, SummonedSkeleton.class){
+        this.targetSelector.addGoal(2, new HurtByTargetGoal(this, SummonedZombie.class){
             @Override
             protected boolean canAttack(@Nullable LivingEntity pPotentialTarget, TargetingConditions pTargetPredicate) {
                 return pPotentialTarget != null && super.canAttack(pPotentialTarget, pTargetPredicate) && !pPotentialTarget.getUUID().equals(getOwnerUUID()) ;
@@ -209,9 +215,10 @@ public class SummonedZombie extends Zombie implements IFollowingSummon, ISummon 
             return null;
         }
     }
+    @Override
     protected void defineSynchedData() {
         super.defineSynchedData();
-        this.entityData.define(OWNER_UUID, Optional.empty());
+        this.getEntityData().define(OWNER_UUID, Optional.empty());
     }
 
     @Override

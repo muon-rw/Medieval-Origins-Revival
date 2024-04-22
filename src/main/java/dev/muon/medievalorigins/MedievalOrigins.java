@@ -1,5 +1,6 @@
 package dev.muon.medievalorigins;
 
+import com.bawnorton.mixinsquared.canceller.MixinCancellerRegistrar;
 import dev.muon.medievalorigins.action.ModEntityActions;
 import dev.muon.medievalorigins.action.ModBientityActions;
 import dev.muon.medievalorigins.condition.ModEntityConditions;

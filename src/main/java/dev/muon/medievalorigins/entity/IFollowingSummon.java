@@ -4,6 +4,7 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.TamableAnimal;
@@ -16,10 +17,11 @@ import java.util.UUID;
 
 public interface IFollowingSummon {
     /*
-        Based off of Ars Nouveau, which is under the LGPL-v3.0 license
-    */
-
-    EntityDataAccessor<Optional<UUID>> OWNER_UUID = SynchedEntityData.defineId(TamableAnimal.class, EntityDataSerializers.OPTIONAL_UUID);
+    Originally based off of Ars Nouveau, which is under the LGPL-v3.0 license
+   */
+    static EntityDataAccessor<Optional<UUID>> getOwnerUUIDAccessor(Class<? extends Entity> clazz) {
+        return SynchedEntityData.defineId(clazz, EntityDataSerializers.OPTIONAL_UUID);
+    }
 
     boolean wantsToAttack(LivingEntity pTarget, LivingEntity pOwner);
 
