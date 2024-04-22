@@ -31,5 +31,16 @@
 				"compare_to": 2.0
 			}
 		}
+	},
+	"cold_immunity": {
+		"type": "origins:modify_damage_taken",
+		"damage_condition": {
+			"type": "apoli:in_tag",
+			"tag": "minecraft:is_freezing"
+		},
+		"modifier": {
+			"operation": "multiply_total_multiplicative",
+			"value": -1
+		}
 	}
 }
