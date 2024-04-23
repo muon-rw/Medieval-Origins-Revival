@@ -1,3 +1,6 @@
+## 6.3.2
+- Update for Icarus 2.6.0
+
 ## 6.3.1
 - Updated Icarus compat
 - Updated Spell Power compat

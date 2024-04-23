@@ -42,5 +42,8 @@
   ],
   "suggests": {
     "another-mod": "*"
+  },
+  "breaks": {
+    "icarus": "<=2.5.0"
   }
 }

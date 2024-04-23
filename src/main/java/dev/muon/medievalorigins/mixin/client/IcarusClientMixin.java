@@ -1,6 +1,7 @@
 package dev.muon.medievalorigins.mixin.client;
 
 import dev.cammiescorner.icarus.client.IcarusClient;
+import dev.cammiescorner.icarus.util.IcarusHelper;
 import dev.muon.medievalorigins.enchantment.ModEnchantments;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -18,6 +19,7 @@ public abstract class IcarusClientMixin {
             at = @At(value = "STORE", opcode = Opcodes.FSTORE),
             ordinal = 0)
     private static float modifyArmorModifier(float modifier, Player player) {
+        var cfg = IcarusHelper.getConfigValues(player);
         int armorValueSum = 0;
         Iterable<ItemStack> armorItems = player.getArmorSlots();
         for (ItemStack armorItem : armorItems) {
@@ -29,6 +31,6 @@ public abstract class IcarusClientMixin {
                 armorValueSum += armor.getDefense();
             }
         }
-        return IcarusClient.armorSlows ? Math.max(1.0F, armorValueSum / 20.0F * IcarusClient.maxSlowedMultiplier) : 1.0F;
+        return cfg.armorSlows() ? Math.max(1.0F, armorValueSum / 20.0F * cfg.maxSlowedMultiplier()) : 1.0F;
     }
 }
