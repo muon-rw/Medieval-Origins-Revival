@@ -1,3 +1,6 @@
+## 6.3.3
+- Removed Icarae (Now has its own official addon: https://modrinth.com/mod/icarae-origin)
+
 ## 6.3.2
 - Update for Icarus 2.6.0
 

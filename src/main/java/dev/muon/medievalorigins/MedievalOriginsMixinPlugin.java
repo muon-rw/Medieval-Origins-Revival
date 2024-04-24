@@ -21,7 +21,7 @@ public class MedievalOriginsMixinPlugin implements IMixinConfigPlugin {
 
     @Override
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
-        if ((mixinClassName.equals("dev.muon.medievalorigins.mixin.client.IcarusClientMixin")) || (mixinClassName.equals("dev.muon.medievalorigins.mixin.IcarusHelperMixin"))) {
+        if ((mixinClassName.equals("dev.muon.medievalorigins.mixin.client.IcarusClientMixin"))) {
             return FabricLoader.getInstance().isModLoaded("icarus");
         }
         return true;
