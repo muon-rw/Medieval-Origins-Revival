@@ -1,3 +1,6 @@
+## 6.3.4
+- Updated Goblin's Greedy power for the latest version of AEA
+
 ## 6.3.3
 - Removed Icarae (Now has its own official addon: https://modrinth.com/mod/icarae-origin)
 
