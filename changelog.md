@@ -1,3 +1,6 @@
+## 6.3.5
+- Added optional compat with Frostiful/Scorchful (requires Thermoo Patches)
+
 ## 6.3.4
 - Updated Goblin's Greedy power for the latest version of AEA
 
