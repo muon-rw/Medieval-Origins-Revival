@@ -9,12 +9,12 @@
 				"value": 0.5
 			},
 			{
-				"attribute": "additionalentityattributes:bonus_loot_count_rolls",
+				"attribute": "additionalentityattributes:player.bonus_loot_count_rolls",
 				"operation": "addition",
 				"value": 1.0
 			},
 			{
-				"attribute": "additionalentityattributes:bonus_rare_loot_rolls",
+				"attribute": "additionalentityattributes:player.bonus_rare_loot_rolls",
 				"operation": "addition",
 				"value": 1.0
 			}
@@ -39,12 +39,12 @@
 				"value": 0.35
 			},
 			{
-				"attribute": "additionalentityattributes:bonus_loot_count_rolls",
+				"attribute": "additionalentityattributes:player.bonus_loot_count_rolls",
 				"operation": "addition",
 				"value": 1.0
 			},
 			{
-				"attribute": "additionalentityattributes:bonus_rare_loot_rolls",
+				"attribute": "additionalentityattributes:player.bonus_rare_loot_rolls",
 				"operation": "addition",
 				"value": 1.0
 			}
@@ -121,7 +121,7 @@
 				"value": 1.0
 			},
 			{
-				"attribute": "additionalentityattributes:dig_speed",
+				"attribute": "additionalentityattributes:player.dig_speed",
 				"operation": "addition",
 				"value": 1.0
 			}
