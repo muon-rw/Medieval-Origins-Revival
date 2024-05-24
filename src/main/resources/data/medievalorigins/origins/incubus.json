@@ -12,7 +12,9 @@
                 "medievalorigins:incubus/red",
                 "medievalorigins:incubus/spell_power",
                 "origins:nether_spawn",
-                "origins_env_deh:heat_resistance"
+                "origins_env_deh:heat_resistance",
+                "thermoo-patches:heat_immune",
+                "thermoo-patches:cold_vulnerability"
 	],
         "icon": {
 		"item": "minecraft:ink_sac",

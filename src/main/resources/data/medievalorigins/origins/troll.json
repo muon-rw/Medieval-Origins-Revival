@@ -8,7 +8,9 @@
                 "medievalorigins:troll/lumbering",
                 "medievalorigins:troll/old_blood",
                 "medievalorigins:troll/out_of_stock",
-                "origins_env_deh:cold_resistance"
+                "origins_env_deh:cold_resistance",
+                "thermoo-patches:cold_immune",
+                "thermoo-patches:heat_vulnerability"
 	],
 	"icon": {
 		"item": "minecraft:player_head",
