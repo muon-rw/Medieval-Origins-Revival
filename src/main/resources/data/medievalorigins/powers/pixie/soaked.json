@@ -14,47 +14,16 @@
 	},
 	"flight_revoke": {
 		"type": "origins:action_over_time",
-		"entity_action": {
-			"type": "origins:if_else",
-			"condition": {
-				"type": "origins:in_rain"
-			},
-			"if_action": {
-				"type": "origins:and",
-				"actions": [
-					{
-						"type": "origins:execute_command",
-						"command": "power revoke @s medievalorigins:pixie/flight"
-					},
-					{
-						"type": "origins:execute_command",
-						"command": "power revoke @s medievalorigins:pixie/flap"
-					}
-				]
-			},
-			"else_action": {
-				"type": "origins:if_else",
-				"condition": {
-					"type": "origins:power",
-					"power": "medievalorigins:pixie/flight"
-				},
-				"if_action": {
-					"type": "origins:nothing"
-				},
-				"else_action": {
-					"type": "origins:and",
-					"actions": [
-						{
-							"type": "origins:execute_command",
-							"command": "power grant @s medievalorigins:pixie/flight"
-						},
-						{
-							"type": "origins:execute_command",
-							"command": "power grant @s medievalorigins:pixie/flap"
-						}
-					]
-				}
-			}
+		"condition": {
+			"type": "origins:in_rain"
+		},
+		"rising_action": {
+			"type": "origins:execute_command",
+			"command": "power revoke @s medievalorigins:pixie/flight"
+		},
+		"falling_action": {
+			"type": "origins:execute_command",
+			"command": "power grant @s medievalorigins:pixie/flight"
 		},
 		"interval": 20
 	}
