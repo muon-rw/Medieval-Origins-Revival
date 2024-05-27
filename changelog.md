@@ -1,3 +1,6 @@
+## 6.3.6
+- Fixed log spam from pixie flight power during rain
+
 ## 6.3.5
 - Added optional compat with Frostiful/Scorchful (requires Thermoo Patches)
 
