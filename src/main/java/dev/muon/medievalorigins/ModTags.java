@@ -6,6 +6,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.*;
+import org.checkerframework.checker.units.qual.A;
 
 import java.util.function.Predicate;
 
@@ -13,6 +14,9 @@ public class ModTags {
     public static void registerTags() {
             addToTag("summon_weapons", item -> item == Items.BOW || item instanceof DiggerItem || item instanceof SwordItem);
             addToTag("bows", item -> item instanceof BowItem);
+
+            addToTag("axes", item -> (item instanceof SwordItem || item instanceof AxeItem) && BuiltInRegistries.ITEM.getKey(item).getPath().matches("[a-z_]*(axe)[a-z_]*"));
+
             addToTag("daggers", item -> item instanceof SwordItem && BuiltInRegistries.ITEM.getKey(item).getPath().matches("[a-z_]*(dagger|sai|knife)[a-z_]*"));
             addToTag("fist_weapons", item -> item instanceof SwordItem && BuiltInRegistries.ITEM.getKey(item).getPath().matches("[a-z_]*(fist|claw|gauntlet)[a-z_]*"));
 

@@ -1,3 +1,6 @@
+## 6.3.8
+- Added more compatibility to Ogre's Ravager passive
+
 ## 6.3.7
 - Fixed pixies not being able to use Quartz Elevators
 
