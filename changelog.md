@@ -1,3 +1,6 @@
+## 6.3.7
+- Fixed pixies not being able to use Quartz Elevators
+
 ## 6.3.6
 - Fixed log spam from pixie flight power during rain
 
