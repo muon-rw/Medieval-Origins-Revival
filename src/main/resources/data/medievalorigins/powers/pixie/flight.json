@@ -69,7 +69,9 @@
 		"type": "origins:grounded",
 		"condition": {
 			"inverted": true,
-			"type": "origins:on_block",
+			"type": "origins:block_in_radius",
+			"radius": 1,
+			"shape": "cube",
 			"block_condition": {
 				"type": "origins:in_tag",
 				"tag": "medievalorigins:prevents_jump_modifiers"
