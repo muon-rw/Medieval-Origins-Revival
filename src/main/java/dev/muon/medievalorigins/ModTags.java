@@ -15,7 +15,9 @@ public class ModTags {
             addToTag("summon_weapons", item -> item == Items.BOW || item instanceof DiggerItem || item instanceof SwordItem);
             addToTag("bows", item -> item instanceof BowItem);
 
-            addToTag("axes", item -> (item instanceof SwordItem || item instanceof AxeItem) && BuiltInRegistries.ITEM.getKey(item).getPath().matches("[a-z_]*(axe)[a-z_]*"));
+            addToTag("axes", item ->
+                    item instanceof AxeItem ||
+                    (item instanceof TieredItem && BuiltInRegistries.ITEM.getKey(item).getPath().matches("^(?!.*pickaxe).*axe.*$")));
 
             addToTag("daggers", item -> item instanceof SwordItem && BuiltInRegistries.ITEM.getKey(item).getPath().matches("[a-z_]*(dagger|sai|knife)[a-z_]*"));
             addToTag("fist_weapons", item -> item instanceof SwordItem && BuiltInRegistries.ITEM.getKey(item).getPath().matches("[a-z_]*(fist|claw|gauntlet)[a-z_]*"));
