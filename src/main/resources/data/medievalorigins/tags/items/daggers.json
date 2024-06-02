@@ -3,6 +3,7 @@
   "values": [
 	  {"id": "#forge:tools/knives","required":false},
 	  {"id": "bewitchment:athame","required":false},
-	  {"id": "simplyswords:soulstealer","required":false}
+	  {"id": "simplyswords:soulstealer","required":false},
+    {"id": "simplyswords:emberlash","required":false}
   ]
 }

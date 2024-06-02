@@ -124,6 +124,9 @@ dependencies {
 	modLocalRuntime "io.github.ladysnake:PlayerAbilityLib:${pal_version}"
 	include "io.github.ladysnake:PlayerAbilityLib:${pal_version}"
 
+	// Simply Swords
+	modLocalRuntime("maven.modrinth:simply-swords:${project.simply_swords_version}")
+
 }
 processResources {
 	inputs.property "version", project.version
