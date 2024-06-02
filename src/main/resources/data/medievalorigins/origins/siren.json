@@ -9,10 +9,11 @@
                 "medievalorigins:siren/flammable",
                 "medievalorigins:siren/water_vision",
                 "medievalorigins:siren/seduce",
+                "origins:aquatic",
+                "origins:like_water",
                 "mermod:fabulous_fins",
                 "origins_env_deh:water_dweller",
                 "origins_env_deh:cold_resistance",
-                "origins:aquatic",
                 "thermoo-patches:cold_immune"
 	],
         "icon": {

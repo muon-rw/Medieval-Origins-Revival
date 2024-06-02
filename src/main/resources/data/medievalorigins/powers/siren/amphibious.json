@@ -51,37 +51,16 @@
 			"fluid": "minecraft:water"
 		},
 		"entity_action": {
-			"type": "origins:apply_effect",
-			"effects": [
-				{
-					"effect": "minecraft:dolphins_grace",
-					"is_ambient": true,
-					"show_particles": false,
-					"show_icon": false,
-					"amplifier": 1,
-					"duration": 250
-				},
-				{
-					"effect": "minecraft:water_breathing",
-					"is_ambient": true,
-					"show_particles": false,
-					"show_icon": false,
-					"amplifier": 0,
-					"duration": 250
-				}
-			]
-		},
-		"falling_action": {
-			"type": "origins:clear_effect",
-			"effects": [
-				{
-					"effect": "minecraft:dolphins_grace"
-				},
-				{
-					"effect": "minecraft:water_breathing"
-				}
-			]
+			"type": "origins:gain_air",
+			"value": 40
 		},
 		"interval": 20
+	},
+	"waterspeed": {
+		"type": "origins:modify_swim_speed",
+		"modifier": {
+			"operation":"multiply_base",
+			"value": 0.5
+		}
 	}
 }

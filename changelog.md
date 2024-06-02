@@ -1,3 +1,9 @@
+## 6.3.9
+- Improved Simply Swords compatibility with Moon Elf's Moonlight Rogue power
+- Added Russian Translation (thanks UFOS228)
+- Added Like Water power to Siren
+- Rewrote most of Siren's underwater bonuses to no longer use status effects (thanks lukaskek!)
+
 ## 6.3.8
 - Added more compatibility to Ogre's Ravager passive
 
