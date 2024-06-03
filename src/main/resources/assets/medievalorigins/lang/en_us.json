@@ -60,7 +60,7 @@
   "power.medievalorigins.alfiq/clawed.description": "Alfiq have razor sharp retractable claws; they deal extra damage with empty paws, and can climb up and cling to steep surfaces (Can be toggled)",
 
   "power.medievalorigins.alfiq/crepuscular.name": "Crepuscular",
-  "power.medievalorigins.alfiq/crepuscular.description": "Near sunset and sunrise, when Alfiq naturally hunt, they will move and attack much more quickly. At other times, they are lethargic and slightly slower.",
+  "power.medievalorigins.alfiq/crepuscular.description": "Near sunset and sunrise, Alfiq will move and attack much more quickly. At other times, they are lethargic and slightly slower.",
 
   "power.medievalorigins.alfiq/on_your_feet.name": "On Your Feet",
   "power.medievalorigins.alfiq/on_your_feet.description": "If you ever fall from a height where you would take 5 hearts or more of damage, they instead take no damage at all.",
@@ -69,13 +69,13 @@
   "power.medievalorigins.alfiq/pickpocket.description": "Right click the back of a villager while crouching with empty paws for a chance to steal some emeralds. Or get caught. Rumor has it you may be able to steal from other players.",
 
   "power.medievalorigins.alfiq/pounce.name": "Pounce",
-  "power.medievalorigins.alfiq/pounce.description": "After crouching without moving for a few seconds to charge up, an Alfiq can leap forward a great distance. Striking an enemy during the pounce deals bonus damage.",
+  "power.medievalorigins.alfiq/pounce.description": "After briefly crouching without moving to charge up, an Alfiq can leap forward a great distance. Striking an enemy during the pounce deals bonus damage.",
 
   "power.medievalorigins.alfiq/poor_grip.name": "Poor Grip",
   "power.medievalorigins.alfiq/poor_grip.description": "Alfiq have reduced breaking speed with tools and reduced damage with handled weapons like swords and axes.",
 
   "power.medievalorigins.alfiq/agile_preference.name": "Agile Preference",
-  "power.medievalorigins.alfiq/agile_preference.description": "Alfiq are easily made uncomfortable with heavier armors, preferring lighter fare for ease of movement. Heavier armors can still be worn with an enchantment.",
+  "power.medievalorigins.alfiq/agile_preference.description": "Alfiq prefer to wear only light armors for ease of movement. Heavier armors can be worn with an enchantment.",
 
   "power.medievalorigins.alfiq/meow.name": "Meow",
   "power.medievalorigins.alfiq/meow.description": "",
@@ -106,7 +106,7 @@
   "power.medievalorigins.banshee/spectral.description": "Banshees possess the ability to become intangible, moving freely throughout the physical realm while being unable to interact with it. This uses tremendous energy and can not be activated while low on hunger.",
 
   "power.medievalorigins.banshee/hexed.name": "Hexed",
-  "power.medievalorigins.banshee/hexed.description": "Banshees are shrouded in curses, which they shift onto those who wish them harm. Every time they are hit, there is a small chance that the attacker will be consigned to a fate of slow, agonising death.",
+  "power.medievalorigins.banshee/hexed.description": "Banshees are shrouded in curses. Every time they are hit, there is a small chance that the attacker will be consigned to a fate of slow, agonising death.",
 
   "power.medievalorigins.banshee/immaterial.name": "Immaterial",
   "power.medievalorigins.banshee/immaterial.description": "Banshees have half the health a living person would have.",
@@ -115,37 +115,43 @@
   "power.medievalorigins.banshee/dimeritium_shackles.description": "Magically suppressive metals, such as iron or silver, are completely intolerable to banshees.",
 
   "power.medievalorigins.banshee/lunar_nexus.name": "Lunar Nexus",
-  "power.medievalorigins.banshee/lunar_nexus.description": "Banshees restore no hunger from food - their energy is instead restored by being bathed in direct moonlight. However, they can not starve.",
+  "power.medievalorigins.banshee/lunar_nexus.description": "Banshees restore no hunger from food - their energy is only restored by direct moonlight, however, they cannot starve.",
 
   "power.medievalorigins.banshee/sonic_shriek.name": "Preemptive Elegy",
-  "power.medievalorigins.banshee/sonic_shriek.description": "Banshee's shrieks forewarn death, but such screams are not an attack. They can unleash an earsplitting wail at a target, disorienting them. Nearby enemies will be pushed back and a small protective circle will be summoned on the ground.",
+  "power.medievalorigins.banshee/sonic_shriek.description": "Banshee's shrieks forewarn death. They can unleash an earsplitting wail, pushing back nearby entities and summoning a small protective circle. Targets hit directly by the shriek will be disoriented",
+
+  "power.medievalorigins.banshee/cursed_sigil.name": "Cursed Sigil",
+  "power.medievalorigins.banshee/cursed_sigil.description": "You deal increased damage when wielding a cursed weapon.",
+
+  "power.medievalorigins.banshee/cursed_ward.name": "Cursed Ward",
+  "power.medievalorigins.banshee/cursed_ward.description": "You resist additional damage for each piece of cursed armor worn.",
 
   "power.medievalorigins.incubus/carnivore.name": "Carnivore",
   "power.medievalorigins.incubus/carnivore.description": "An incubus' bloodlust is insatiable. If it isn't the flesh of an animal, its worthless.",
 
   "power.medievalorigins.incubus/demon_fire.name": "Demon Fire",
-  "power.medievalorigins.incubus/demon_fire.description": "Imbued with the devil's energy, the incubi are innately more potent with all fire magics, and can release a burst of flame at will. Scales with Fire Spell Power.",
+  "power.medievalorigins.incubus/demon_fire.description": "Incubi are innately more potent with all fire magics, and can release a burst of flame at will. Scales with Fire Spell Power.",
 
   "power.medievalorigins.incubus/hellborne.name": "Hellborne",
-  "power.medievalorigins.incubus/hellborne.description": "Having spent eternities in the depths of hell, fire feels like home - it deals no damage to Incubi and satiates them.",
+  "power.medievalorigins.incubus/hellborne.description": "Fire feels like home - it deals no damage to Incubi and satiates them.",
 
   "power.medievalorigins.incubus/hydrophobe.name": "Hydrophobe",
   "power.medievalorigins.incubus/hydrophobe.description": "Water scalds Incubi, damaging them on contact.",
 
   "power.medievalorigins.incubus/impure.name": "Impure",
-  "power.medievalorigins.incubus/impure.description": "Much like the undead, incubi are saturated with dark energy - they take extra damage from Smite and reverted effects from healing and harming.",
+  "power.medievalorigins.incubus/impure.description": "Incubi take extra damage from Smite and reverted effects from healing and harming.",
 
   "power.medievalorigins.incubus/dimension_strength.name": "Realm Advantage",
-  "power.medievalorigins.incubus/dimension_strength.description": "As agents of hell, Incubi are not accustomed to dimensions where the sun shines and are weaker there. But they are considerably stronger in the Nether.",
+  "power.medievalorigins.incubus/dimension_strength.description": "Incubi are not accustomed to dimensions where the sun shines and are weaker there, but they are considerably stronger in the Nether.",
 
   "power.medievalorigins.incubus/unholy_deal.name": "Unholy Deal",
   "power.medievalorigins.incubus/unholy_deal.description": "An incubus can exchange some of their life force for raw power for a short time. Triggered with Primary Active key.",
 
   "power.medievalorigins.dwarf/darkness_dweller.name": "Darkness Dweller",
-  "power.medievalorigins.dwarf/darkness_dweller.description": "Dwarven eyes are adapted for the dark. Direct sunlight burns their sensitive retinas, blinding them until darkness returns. Prevented by wearing a gold helmet or with an enchantment.",
+  "power.medievalorigins.dwarf/darkness_dweller.description": "Direct sunlight will burn dwarven eyes, blinding them temporarily. Preventable with an enchantment or a gold helmet.",
 
   "power.medievalorigins.dwarf/dense.name": "Dense",
-  "power.medievalorigins.dwarf/dense.description": "Dwarves are extremely heavy for their size; despite their best efforts, they sink rapidly in water.",
+  "power.medievalorigins.dwarf/dense.description": "Dwarves are extremely heavy for their size; they sink rapidly in water.",
 
   "power.medievalorigins.dwarf/dwarven_tech.name": "Dwarven Tech",
   "power.medievalorigins.dwarf/dwarven_tech.description": "Dwarves are capable of mining stone without a pickaxe, and mine anything faster than others.",
@@ -157,7 +163,7 @@
   "power.medievalorigins.dwarf/mythril_resonance.description": "Powerful metals which carry the spirit of your people fill you with might.",
 
   "power.medievalorigins.dwarf/nocturnal_eyes.name": "Nocturnal Eyes",
-  "power.medievalorigins.dwarf/nocturnal_eyes.description": "Living underground has lead to dwarves having highly sensitive eyes, they can focus to see clearly even in dark caverns.",
+  "power.medievalorigins.dwarf/nocturnal_eyes.description": "Dwarves can focus to see clearly without needing any light source.",
 
   "power.medievalorigins.dwarf/potent_brew.name": "Potent Brew",
   "power.medievalorigins.dwarf/potent_brew.description": "Dwarves are notorious for their powerful drinks which would knock out someone twice their size. Activate to take a swig and fully restore health.",
@@ -169,10 +175,10 @@
   "power.medievalorigins.wood_elf/archer.description": "Wood Elves spend their whole lives training with bows - their arrows are always more deadly.",
 
   "power.medievalorigins.wood_elf/forest_vision.name": "Forest Vision",
-  "power.medievalorigins.wood_elf/forest_vision.description": "After centuries in the grove, Wood Elves are well adapted to be among nature. While in tall shrubbery or leaves, they can crouch to gain night vision while becoming undetectable.",
+  "power.medievalorigins.wood_elf/forest_vision.description": "While in tall shrubbery or leaves, wood elves can crouch to gain night vision and become undetectable to nearby mobs.",
 
   "power.medievalorigins.wood_elf/eagle_eyed.name": "Eagle Eyed",
-  "power.medievalorigins.wood_elf/eagle_eyed.description": "Wood Elves' enhanced perception allows them to keep track of an enemy for a while after hitting them, even when they aren't in view.",
+  "power.medievalorigins.wood_elf/eagle_eyed.description": "Wood Elves can track an enemy for a short time after damaging them, even when they aren't in view.",
 
   "power.medievalorigins.wood_elf/empowered_shot.name": "Focus",
   "power.medievalorigins.wood_elf/empowered_shot.description": "After charging for a few seconds, release an arrow at increased velocity, piercing enemies, flying further, and dealing more damage.",
@@ -181,19 +187,19 @@
   "power.medievalorigins.wood_elf/empowered_shot_apotheosis.description": "After charging for a few seconds, release an arrow at increased velocity, piercing enemies, flying further, and dealing more damage.",
 
   "power.medievalorigins.wood_elf/elegant.name": "Elegant",
-  "power.medievalorigins.wood_elf/elegant.description": "Due to their slender nature, Wood Elves can not wear armor heavier than iron (This can be prevented with an enchantment), and have less health.",
+  "power.medievalorigins.wood_elf/elegant.description": "Wood Elves have less health and can not wear armor heavier than iron (This can be prevented with an enchantment).",
 
   "power.medievalorigins.wood_elf/steward.name": "Steward",
-  "power.medievalorigins.wood_elf/steward.description": "Wood elves live off of the forest and in harmony with it. They can not digest meat.",
+  "power.medievalorigins.wood_elf/steward.description": "Wood elves live off of and in harmony the forest - They can not digest meat.",
 
   "power.medievalorigins.wood_elf/towering.name": "Towering",
-  "power.medievalorigins.wood_elf/towering.description": "Wood elves are taller than the average human. Despite this, they are just as thin.",
+  "power.medievalorigins.wood_elf/towering.description": "Wood elves are slightly taller than the average human.",
 
   "power.medievalorigins.wood_elf/graceful.name": "Graceful",
-  "power.medievalorigins.wood_elf/graceful.description": "Elven arms are not as powerful, but they are quick. They deal reduced damage but attack slightly faster.",
+  "power.medievalorigins.wood_elf/graceful.description": "Wood elves are not as powerful, but they are quick. Your attacks deal reduced damage but are slightly faster.",
 
   "power.medievalorigins.fae/allure.name": "Allure",
-  "power.medievalorigins.fae/allure.description": "Fae are naturally alluring. Unfortunately, this means that mobs will pursue them from much further away than they would other creatures.",
+  "power.medievalorigins.fae/allure.description": "Fae are naturally alluring. Mobs will pursue them from much further away than they would other creatures.",
 
   "power.medievalorigins.fae/diminutive.name": "Diminutive",
   "power.medievalorigins.fae/diminutive.description": "Fae are fairly short, most barely being taller than the average goblin.",
@@ -208,7 +214,7 @@
   "power.medievalorigins.fae/magic_resistance.description": "As magical creatures themselves, faes take less magic damage compared to other creatures.",
 
   "power.medievalorigins.fae/regen.name": "Regeneration",
-  "power.medievalorigins.fae/regen.description": "Fae can channel their magical energy to heal themselves quickly. Press the secondary active key to regenerate health for a short period at the cost of your hunger.",
+  "power.medievalorigins.fae/regen.description": "Fae can channel magical energy and heal themselves quickly, at the cost of hunger.",
 
   "power.medievalorigins.goblin/cunning.name": "Cunning",
   "power.medievalorigins.goblin/cunning.description": "Goblins are clever creatures, and know where to find more rare loot most others would miss.",
@@ -244,10 +250,10 @@
   "power.medievalorigins.gorgon/poison_blood.description": "Gorgons are immune to poison, and have a chance to spill their toxic blood onto nearby enemies when hit, poisoning them.",
 
   "power.medievalorigins.gorgon/revenge.name": "Revenge",
-  "power.medievalorigins.gorgon/revenge.description": "Centuries of being cursed then blamed for their misfortune has left Gorgon's bitter. They deal massively increased damage at low health.",
+  "power.medievalorigins.gorgon/revenge.description": "Gorgons deal signifcantly increased damage at low health.",
 
   "power.medievalorigins.high_elf/elegant.name": "Elegant",
-  "power.medievalorigins.high_elf/elegant.description": "Due to their slender nature, High Elves can not wear armor heavier than iron (This can be prevented with an enchantment), and have less health.",
+  "power.medievalorigins.high_elf/elegant.description": "High Elves can not wear armor heavier than iron (This can be prevented with an enchantment), and have less health.",
 
   "power.medievalorigins.high_elf/ebonbreath.name": "Draw Essence",
   "power.medievalorigins.high_elf/ebonbreath.description": "By holding different items, high elves can channel the object's energy to unleash various magics. Hover over each box to see details.",
@@ -268,7 +274,7 @@
   "power.medievalorigins.high_elf/spell_power_ars.description": "High Elves naturally have more mana than other races, and can channel the power of their elders to regenerate mana quickly.",
 
   "power.medievalorigins.high_elf/towering.name": "Towering",
-  "power.medievalorigins.high_elf/towering.description": "High Elves are slender and taller than the average human.",
+  "power.medievalorigins.high_elf/towering.description": "High Elves are slender and slightly taller than the average human.",
 
   "power.medievalorigins.moon_elf/crazed.name": "Foreign World",
   "power.medievalorigins.moon_elf/crazed.description": "Try as they might, Moon Elves can not sleep in the overworld.",
@@ -277,13 +283,13 @@
   "power.medievalorigins.moon_elf/stealth.description": "In the dark, Moon Elves can turn invisible by sneaking, and move a short distance while stealthed. When attacking from stealth, their first attack deals bonus damage and ends the invisibility. This deals extra damage if wielding a dagger.",
 
   "power.medievalorigins.moon_elf/elegant.name": "Elegant",
-  "power.medievalorigins.moon_elf/elegant.description": "Due to their slim builds, Moon Elves can not wear armor heavier than iron. This can be prevented with an enchantment.",
+  "power.medievalorigins.moon_elf/elegant.description": "Moon Elves can not wear armor heavier than iron. This can be prevented with an enchantment.",
 
   "power.medievalorigins.moon_elf/ethereal.name": "Ethereal",
   "power.medievalorigins.moon_elf/ethereal.description": "Moon elves are thin and even slightly translucent, and their skin has a peculiar blue hue.",
 
   "power.medievalorigins.moon_elf/fragile.name": "Fragile",
-  "power.medievalorigins.moon_elf/fragile.description": "Moon Elves have to stay lightweight to maintain their agility. They have reduced health and take increased physical damage.",
+  "power.medievalorigins.moon_elf/fragile.description": "Moon Elves have reduced health and take increased physical damage.",
   
   "power.medievalorigins.moon_elf/moonlight_rogue.name": "Moonlight Rogue",
   "power.medievalorigins.moon_elf/moonlight_rogue.description": "Moon Elves are most efficient wielding a light and easy to conceal weapon. They deal more damage with daggers and knives.",
@@ -310,13 +316,13 @@
   "power.medievalorigins.ogre/bloodlust.description": "Ogres are known to unpredictably fly into a blinding rage, where they can stomp through a horde of foes quickly but can barely make out what's happening around them. ",
 
   "power.medievalorigins.ogre/sluggish.name": "Sluggish",
-  "power.medievalorigins.ogre/sluggish.description": "Likely as an adaptation to conserve some of their energy despite their massive size, ogres are quite slow.",
+  "power.medievalorigins.ogre/sluggish.description": "Ogres are slower than most, to conserve some of their energy despite their massive size.",
 
   "power.medievalorigins.ogre/stocky.name": "Stocky",
-  "power.medievalorigins.ogre/stocky.description": "Ogre's are beefy and resilient. Their thick skin and dense bones make them able to tank many more hits before needing to recover.",
+  "power.medievalorigins.ogre/stocky.description": "Ogres' thick skin and dense bones make them able to tank many more hits than others.",
 
   "power.medievalorigins.pixie/curse_of_flight.name": "Curse of Flight",
-  "power.medievalorigins.pixie/curse_of_flight.description": "The very wings which allows pixies to fly also prevent them from flying using any other wings, or wearing any chestplates more substantial than leather.",
+  "power.medievalorigins.pixie/curse_of_flight.description": "Pixies cannot wear chestplates more substantial than leather, and can not use other wings to fly differently.",
 
   "power.medievalorigins.pixie/feather_footed.name": "Feather Footed",
   "power.medievalorigins.pixie/feather_footed.description": "Pixies are so light, it is impossible for them to take fall damage.",
@@ -358,7 +364,7 @@
   "power.medievalorigins.plague_victim/eternal_suffering.description": "Once every 5 minutes, upon death, the Plagued are instead forcefully kept alive to prolong their torment.",
 
   "power.medievalorigins.plague_victim/risk_of_transmission.name": "Contagious Hex",
-  "power.medievalorigins.plague_victim/risk_of_transmission.description": "Each contact with the victim is a gamble - everything they hit has a chance to itself become infected.",
+  "power.medievalorigins.plague_victim/risk_of_transmission.description": "Every time you strike, there is a chance to spread the infection.",
 
   "power.medievalorigins.plague_victim/sensitive_skin.name": "Sensitive Skin",
   "power.medievalorigins.plague_victim/sensitive_skin.description": "The Plagued are covered in welts and lesions upon the skin, tender and painful to touch. Its victims cannot wear armor for the pain it causes.",
@@ -382,10 +388,10 @@
   "power.medievalorigins.siren/prone.description": "While sirens can regenerate their bodies, they are weak to blunt force. Melee attacks do more damage to them.",
 
   "power.medievalorigins.siren/siren_song.name": "Siren Song",
-  "power.medievalorigins.siren/siren_song.description": "Sirens are known for their alluring calls. Press the primary active key to make all mobs around you neutral until hit. Does not work on bosses or players.",
+  "power.medievalorigins.siren/siren_song.description": "Press the primary active key to make all mobs around you neutral until hit. Does not work on bosses or players.",
 
   "power.medievalorigins.siren/seduce.name": "Captivating",
-  "power.medievalorigins.siren/seduce.description": "Sirens seem to be able to occasionally receive much better trades from villagers. (Activate with Secondary Active)",
+  "power.medievalorigins.siren/seduce.description": "Press the secondary active key to gain favor with a villager and receive better trades.",
   
   "power.medievalorigins.siren/water_vision.name": "Water Vision",
   "power.medievalorigins.siren/water_vision.description": "Sirens have superior underwater vision compared to other creatures.",
@@ -409,7 +415,7 @@
   "power.medievalorigins.troll/old_blood.description": "The old blood which runs through the veins of the trolls is bound to the mountains. They cannot heal themselves outside of their hilly homelands.",
 
   "power.medievalorigins.troll/out_of_stock.name": "Out of Stock",
-  "power.medievalorigins.troll/out_of_stock.description": "Try as they might, trolls never seem to be able to find any armor in their size. Thus, they are doomed to walk with what coverings nature gave them, and nothing more.",
+  "power.medievalorigins.troll/out_of_stock.description": "There is no armor made to fit trolls - They are doomed to walk with the coverings nature gave them, and nothing more.",
 
   "power.medievalorigins.troll/rock_throw.name": "Rock Throw",
   "power.medievalorigins.troll/rock_throw.description": "A troll can, at will, hurl a large rock into the air, plowing through whatever may cross its path. However, this does come at the cost of 64 precious cobblestone blocks.",
@@ -421,16 +427,16 @@
   "power.medievalorigins.yeti/flammable.description": "Yetis are susceptible to fire damage due to their wintry nature.",
 
   "power.medievalorigins.yeti/frigid_pulse.name": "Frigid Pulse",
-  "power.medievalorigins.yeti/frigid_pulse.description": "A powerful magic runs through the veins of a yeti, allowing them to entomb a group of foes in ice on command. Does not work in the nether or on bosses.",
+  "power.medievalorigins.yeti/frigid_pulse.description": "Yeti can entomb nearby foes in ice on command. Does not work in the nether or on bosses.",
 
   "power.medievalorigins.yeti/from_whence_you_came.name": "From Whence you Came",
-  "power.medievalorigins.yeti/from_whence_you_came.description": "Thriving best in the lands from which they originate, yetis move faster and are carried on the snow to negate fall damage in icy biomes.",
+  "power.medievalorigins.yeti/from_whence_you_came.description": "In icy biomes, yetis move faster and negate fall damage.",
 
   "power.medievalorigins.yeti/frosty_breath.name": "Frosty Breath",
-  "power.medievalorigins.yeti/frosty_breath.description": "The frosty breath of the yeti slows any opponents which get close to them.",
+  "power.medievalorigins.yeti/frosty_breath.description": "The frosty breath of the yeti slows any opponents that get close to them.",
 
   "power.medievalorigins.yeti/thick_fur.name": "Thick Fur",
-  "power.medievalorigins.yeti/thick_fur.description": "The blessing of thick fur becomes a curse in deserts. Their movement is slowed and health reduced.",
+  "power.medievalorigins.yeti/thick_fur.description": "In deserts, thick fur becomes a curse - it slows Yetis' movement and reduces health",
 
   "power.medievalorigins.yeti/titanic.name": "Titanic",
   "power.medievalorigins.yeti/titanic.description": "Yetis have far more health than a regular human.",
@@ -468,18 +474,10 @@
   "power.medievalorigins.revenant/unguarded.name": "Unguarded",
   "power.medievalorigins.revenant/unguarded.description": "Obsessing over the spirit realm leaves revenants more open to attack in the physical realm. Most mobs deal more damage to them.",
 
-  "origin.medievalorigins.icarae.name": "Icarae",
-  "origin.medievalorigins.icarae.description": "-§l Notable Changes§r: \n§o§2+ Self-propelled flight§r \n§o§6• Feathered wings§r \n§o§c- Fragile \n- Unique restrictions§r\n§lIcarae§r are carnivorous birdlike humanoids with powerful wings; they fly low to the ground, weaving nimbly between obstacles to hunt their prey.",
-  "power.medievalorigins.icarae/wings.name": "Feathered",
-  "power.medievalorigins.icarae/wings.description": "Icarae are born with massive white wings, and have powerful flight muscles capable of lifting them up into the air.",
-  "power.medievalorigins.icarae/ravenous_predator.name": "Ravenous Predator",
-  "power.medievalorigins.icarae/ravenous_predator.description": "Icarae can only digest meat, and exhaust extremely quickly while flying.",
-  "power.medievalorigins.icarae/hollow_boned.name": "Hollow Boned",
-  "power.medievalorigins.icarae/hollow_boned.description": "Icarae are more vulnerable to damage, and can not wear armor heavier than chainmail (This can be prevented with an enchantment).",
-  "power.medievalorigins.icarae/aerial_combatant.name": "Aerial Combatant",
-  "power.medievalorigins.icarae/aerial_combatant.description": "Striking an enemy while flying will deal bonus damage and knock them back.",
-  "power.medievalorigins.icarae/lessons_of_flight.name": "Draconic Lessons",
-  "power.medievalorigins.icarae/lessons_of_flight.description": "Upon defeating the ender dragon, flying no longer costs hunger.",
+  "origin.medievalorigins.valkyrie.name": "Valkyrie",
+  "origin.medievalorigins.valkyrie.description": "-§l Notable Changes§r: \n§o§2+ Self-propelled flight§r \n§o§6• Feathered wings§r \n§o§c- Fragile \n- Unique restrictions§r\n§lIcarae§r are carnivorous birdlike humanoids with powerful wings; they fly low to the ground, weaving nimbly between obstacles to hunt their prey.",
+  "power.medievalorigins.valkyrie/wings.name": "Feathered",
+  "power.medievalorigins.valkyrie/wings.description": "Valkyrie are born with massive white wings, and powerful flight muscles capable of lifting themselves up into the air.",
 
 
   "enchantment.medievalorigins.featherweight": "Featherweight",
