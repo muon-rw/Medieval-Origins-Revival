@@ -6,7 +6,9 @@
                 "medievalorigins:banshee/lunar_nexus",
                 "medievalorigins:banshee/dimeritium_shackles",
                 "medievalorigins:banshee/hexed",
-                "medievalorigins:banshee/immaterial"
+                "medievalorigins:banshee/immaterial",
+                "medievalorigins:banshee/cursed_sigil",
+                "medievalorigins:banshee/cursed_ward"
 	],
         "icon": {
                 "item": "minecraft:ink_sac",
