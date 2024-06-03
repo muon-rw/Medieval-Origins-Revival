@@ -1,8 +1,14 @@
 ## 6.3.9
 - Improved Simply Swords compatibility with Moon Elf's Moonlight Rogue power
 - Added Russian Translation (thanks UFOS228)
-- Added Like Water power to Siren
+- Shortened some English descriptions
+- Added Origins' Like Water power to Siren
 - Rewrote most of Siren's underwater bonuses to no longer use status effects (thanks lukaskek!)
+- Fixed Alfiq jump boost sometimes not working
+- Alfiq can now jump more often and charge their jump more quickly
+- Lowered Alfiq's On Your Feet damage nullification threshold from 10 health to 6
+- Added 2 new powers to Banshee, Cursed Sigil and Cursed Ward 
+- Fixed High Elves sometimes receiving two sets of starter items
 
 ## 6.3.8
 - Added more compatibility to Ogre's Ravager passive
@@ -50,6 +56,7 @@
 - Added **Alfiq** - a catlike species who excel at hunting. They can charge up to pounce, climb walls, and deal extra damage with their claws.
 - 75% of a secret third heavily requested origin, currently disabled
 #### Major reworks:
+
 
 - **Banshee**, including a protective shriek, a replacement for diet, and unique ghostly flight.
 - Necromancer, renamed to **Revenant**, an undead who can raise summoned undead which they can equip with weapons, and siphon the life force from enemies.
