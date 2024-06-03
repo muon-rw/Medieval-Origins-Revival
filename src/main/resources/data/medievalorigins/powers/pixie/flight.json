@@ -68,14 +68,23 @@
 	"always_jump": {
 		"type": "origins:grounded",
 		"condition": {
-			"inverted": true,
-			"type": "origins:block_in_radius",
-			"radius": 1,
-			"shape": "cube",
-			"block_condition": {
-				"type": "origins:in_tag",
-				"tag": "medievalorigins:prevents_jump_modifiers"
-			}
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:creative_flying",
+					"inverted": true
+				},
+				{
+					"inverted": true,
+					"type": "origins:block_in_radius",
+					"radius": 1,
+					"shape": "cube",
+					"block_condition": {
+						"type": "origins:in_tag",
+						"tag": "medievalorigins:prevents_jump_modifiers"
+					}
+				}
+			]
 		}
 	},
 	"jump_height": {
@@ -85,10 +94,19 @@
 			"value": 0.3
 		},
 		"condition": {
-			"type": "origins:resource",
-			"resource": "medievalorigins:pixie/flight_doubletap",
-			"compare_to": 0,
-			"comparison": "=="
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:creative_flying",
+					"inverted": true
+				},
+				{
+					"type": "origins:resource",
+					"resource": "medievalorigins:pixie/flight_doubletap",
+					"compare_to": 0,
+					"comparison": "=="
+				}
+			]
 		}
 	},
 	"air_slide": {
@@ -100,6 +118,10 @@
 		"block_condition": {
 			"type": "origins:movement_blocking",
 			"inverted": true
+		},
+		"condition": {
+			"type": "origins:creative_flying",
+			"inverted": true
 		}
 	},
 	"medium_fallspeed": {
@@ -107,10 +129,19 @@
 		"velocity": 0.04,
 		"take_fall_damage": false,
 		"condition": {
-			"type": "origins:resource",
-			"resource": "medievalorigins:pixie/flight_levitate_resource",
-			"compare_to": 0,
-			"comparison": "=="
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:creative_flying",
+					"inverted": true
+				},
+				{
+					"type": "origins:resource",
+					"resource": "medievalorigins:pixie/flight_levitate_resource",
+					"compare_to": 0,
+					"comparison": "=="
+				}
+			]
 		}
 	},
 	"levitate": {

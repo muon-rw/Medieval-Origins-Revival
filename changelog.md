@@ -1,13 +1,14 @@
 ## 6.3.9
 - Improved Simply Swords compatibility with Moon Elf's Moonlight Rogue power
+- Added 2 new powers to Banshee, Cursed Sigil and Cursed Ward
+- Added Origins' Like Water power to Siren
+- Alfiq can now jump more often and charge their jump more quickly
+- Lowered Alfiq's On Your Feet damage threshold from 10 health to 6
 - Added Russian Translation (thanks UFOS228)
 - Shortened some English descriptions
-- Added Origins' Like Water power to Siren
 - Rewrote most of Siren's underwater bonuses to no longer use status effects (thanks lukaskek!)
+- Improved Pixie flight compatibility with Creative flight (pixie flight itself unchanged for now)
 - Fixed Alfiq jump boost sometimes not working
-- Alfiq can now jump more often and charge their jump more quickly
-- Lowered Alfiq's On Your Feet damage nullification threshold from 10 health to 6
-- Added 2 new powers to Banshee, Cursed Sigil and Cursed Ward 
 - Fixed High Elves sometimes receiving two sets of starter items
 
 ## 6.3.8
