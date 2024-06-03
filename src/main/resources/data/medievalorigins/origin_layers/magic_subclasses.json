@@ -1,6 +1,7 @@
 {
     "replace": false,
     "order": 2,
+    "auto_choose": false,
     "origins": [
         {
             "condition": {
