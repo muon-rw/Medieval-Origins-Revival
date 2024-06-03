@@ -9,7 +9,7 @@
             },
             {
                 "type": "origins:amount",
-                "compare_to": 10,
+                "compare_to": 6,
                 "comparison": ">"
             }
         ]
