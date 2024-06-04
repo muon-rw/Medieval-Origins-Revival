@@ -5,7 +5,7 @@
 		"actions": [
 			{
 				"type": "origins:execute_command",
-				"command": "scale set pehkui:visibility 64 @s"
+				"command": "scale set pehkui:visibility 2 @s"
 			},
 			{
 				"type": "origins:execute_command",
