@@ -5,25 +5,25 @@
 		"head": {
 			"type": "origins:ingredient",
 			"ingredient": {
-				"tag": "medievalorigins:iron_armor"
+				"tag": "medievalorigins:silver_armor"
 			}
 		},
 		"chest": {
 			"type": "origins:ingredient",
 			"ingredient": {
-				"tag": "medievalorigins:iron_armor"
+				"tag": "medievalorigins:silver_armor"
 			}
 		},
 		"legs": {
 			"type": "origins:ingredient",
 			"ingredient": {
-				"tag": "medievalorigins:iron_armor"
+				"tag": "medievalorigins:silver_armor"
 			}
 		},
 		"feet": {
 			"type": "origins:ingredient",
 			"ingredient": {
-				"tag": "medievalorigins:iron_armor"
+				"tag": "medievalorigins:silver_armor"
 			}
 		}
 	},
@@ -32,7 +32,7 @@
 		"item_condition": {
 			"type": "origins:ingredient",
 			"ingredient": {
-				"tag": "medievalorigins:iron_armor"
+				"tag": "medievalorigins:silver_armor"
 			}
 		},
 		"text": [
