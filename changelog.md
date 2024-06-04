@@ -1,3 +1,7 @@
+## 6.3.10
+- Lowered Fae attraction range from 2048 blocks to 64 (woops)
+- Fixed Fae's Magical Suppression only checking for Iron and not Silver. 
+
 ## 6.3.9
 - Improved Simply Swords compatibility with Moon Elf's Moonlight Rogue power
 - Added 2 new powers to Banshee, Cursed Sigil and Cursed Ward
