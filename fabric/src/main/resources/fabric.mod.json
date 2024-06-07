@@ -1,6 +1,6 @@
 {
     "schemaVersion": 1,
-    "id": "mod_id",
+    "id": "medievalorigins",
     "version": "${version}",
     "name": "${mod_name}",
     "description": "${description}",
@@ -16,12 +16,12 @@
     "environment": "*",
     "entrypoints": {
         "main": [
-            "com.example.examplemod.ExampleMod"
+          "dev.muon.medievalorigins.ExampleMod"
         ]
     },
     "mixins": [
-        "${mod_id}.mixins.json",
-        "${mod_id}.fabric.mixins.json"
+        "medievalorigins.mixins.json",
+        "medievalorigins.fabric.mixins.json"
     ],
     "depends": {
         "fabricloader": ">=0.14",
