@@ -1,0 +1,8 @@
+{
+	"type": "origins:disable_regen",
+	"condition": {
+		"type": "origins:submerged_in",
+		"fluid": "minecraft:water",
+		"inverted": true
+	}
+}

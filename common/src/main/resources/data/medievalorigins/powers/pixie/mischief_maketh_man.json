@@ -1,0 +1,73 @@
+{
+	"type": "origins:active_self",
+	"entity_action": {
+		"type": "origins:choice",
+		"actions": [{
+				"element": {
+					"type": "origins:execute_command",
+					"command": "function medievalorigins:mdvlorigins/mischief1"
+				},
+				"weight": 7
+			},
+			{
+				"element": {
+					"type": "origins:execute_command",
+					"command": "function medievalorigins:mdvlorigins/mischief2"
+				},
+				"weight": 7
+			},
+			{
+				"element": {
+					"type": "origins:execute_command",
+					"command": "power grant @s medievalorigins:pixie/mischief_launch"
+				},
+				"weight": 7
+			},
+			{
+				"element": {
+					"type": "origins:execute_command",
+					"command": "playsound minecraft:entity.ghast.warn player @a ~ ~ ~ 10 1"
+				},
+				"weight": 3
+			},
+			{
+				"element": {
+					"type": "origins:execute_command",
+					"command": "execute at @p[distance=..30] run playsound minecraft:entity.creeper.primed hostile @s ^ ^ ^-2 1 0.7"
+				},
+				"weight": 5
+			},
+			{
+				"element": {
+					"type": "origins:execute_command",
+					"command": "playsound minecraft:entity.witch.celebrate player @a ~ ~ ~ 10 2"
+				},
+				"weight": 6
+			},
+			{
+				"element": {
+					"type": "origins:play_sound",
+					"sound": "minecraft:entity.parrot.ambient",
+					"volume": 1
+				},
+				"weight": 4
+			},
+			{
+				"element": {
+					"type": "origins:execute_command",
+					"command": "execute at @p[distance=..30] run playsound medievalorigins:door_knock ambient @s ~ ~ ~ 1 1"
+				},
+				"weight": 1
+			}
+		]
+	},
+	"key": {
+		"key": "key.origins.secondary_active"
+	},
+	"hud_render": {
+		"should_render": true,
+		"sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+		"bar_index": 21
+	},
+	"cooldown": 600
+}

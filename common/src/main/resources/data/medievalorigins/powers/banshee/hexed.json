@@ -1,0 +1,32 @@
+{
+	"type": "origins:attacker_action_when_hit",
+	"entity_action": {
+		"type": "origins:choice",
+		"actions": [{
+				"element": {
+					"type": "origins:apply_effect",
+					"effect": {
+						"effect": "minecraft:wither",
+						"is_ambient": true,
+						"show_particles": false,
+						"show_icon": false,
+						"amplifier": 1,
+						"duration": 150
+					}
+				},
+				"weight": 1
+			},
+			{
+				"element": {
+					"type": "origins:execute_command",
+					"command": "particle minecraft:smoke ~ ~ ~"
+				},
+				"weight": 9
+			}
+		]
+	},
+	"cooldown": 0,
+	"hud_render": {
+		"should_render": false
+	}
+}

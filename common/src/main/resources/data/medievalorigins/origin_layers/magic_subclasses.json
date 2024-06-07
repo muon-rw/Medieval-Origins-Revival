@@ -1,0 +1,19 @@
+{
+    "replace": false,
+    "order": 2,
+    "auto_choose": false,
+    "origins": [
+        {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "medievalorigins:high_elf",
+                "layer": "origins:origin"
+            },
+            "origins": [
+                "medievalorigins:high_elf/arcanist",
+                "medievalorigins:high_elf/pyromancer",
+                "medievalorigins:high_elf/cryomancer"
+            ]
+        }
+    ]
+}

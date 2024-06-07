@@ -1,0 +1,21 @@
+{
+	"loading_priority": 11,
+	"powers": [
+		"medievalorigins:pixie/flight",
+		"medievalorigins:pixie/pixie_properties",
+		"medievalorigins:pixie/feather_footed",
+		"medievalorigins:pixie/wings",
+		"medievalorigins:pixie/mount",
+		"medievalorigins:pixie/good_fortunes",
+		"medievalorigins:pixie/mischief_maketh_man",
+		"medievalorigins:pixie/curse_of_flight",
+		"medievalorigins:pixie/soaked",
+		"medievalorigins:pixie/troublemaker"
+	],
+	"icon": {
+		"item": "minecraft:ink_sac",
+		"tag": "{CustomModelData:357}"
+	},
+	"impact": 2,
+	"order": 1
+}

@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    {"id":"#c:rotten_flesh","required":false},
+    {"id":"#forge:rotten_flesh","required":false},
+	  "minecraft:rotten_flesh"
+  ]
+}

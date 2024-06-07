@@ -1,0 +1,20 @@
+{
+	"type": "origins:multiple",
+	"raise_wall": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "function medievalorigins:mdvlorigins/hellraiser"
+		},
+		"cooldown": 900,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+			"bar_index": 5
+		},
+		"key": {
+			"key": "key.origins.secondary_active",
+			"continuous": false
+		}
+	}
+}

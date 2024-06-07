@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+	{"id":"#c:iron_armor","required":false},
+	{"id":"#forge:armor/iron","required":false},
+	  "minecraft:iron_helmet",
+	  "minecraft:iron_chestplate",
+	  "minecraft:iron_leggings",
+	  "minecraft:iron_boots"
+  ]
+}

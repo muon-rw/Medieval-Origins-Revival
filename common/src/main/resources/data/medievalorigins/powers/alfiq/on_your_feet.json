@@ -1,0 +1,21 @@
+{
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:in_tag",
+                "tag": "is_fall"
+            },
+            {
+                "type": "origins:amount",
+                "compare_to": 6,
+                "comparison": ">"
+            }
+        ]
+    },
+    "modifier": {
+        "operation": "set_total",
+        "value": 0
+    }
+}

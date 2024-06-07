@@ -1,0 +1,24 @@
+{
+	"loading_priority": 1,
+	"type": "origins:multiple",
+	"miniature_callback": {
+		"type": "origins:action_on_callback",
+		"entity_action_chosen": {
+			"type": "origins:execute_command",
+			"command": "function medievalorigins:mdvlorigins/dwarf_callon"
+		},
+		"entity_action_lost": {
+			"type": "origins:execute_command",
+			"command": "function medievalorigins:mdvlorigins/dwarf_callback"
+		},
+		"execute_chosen_when_orb": true
+	},
+	"miniature_constant": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "execute unless entity @s[pehkui.scale_nbt={\"pehkui:scale_data_types\":{\"pehkui:height\":{scale:0.5f}}}] run function medievalorigins:mdvlorigins/dwarf_callon"
+		},
+		"interval": 50
+	}
+}

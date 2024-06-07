@@ -1,0 +1,139 @@
+{
+	"type": "origins:active_self",
+	"key": {
+		"key": "key.origins.primary_active"
+	},
+	"entity_action": {
+		"type": "origins:raycast",
+		"distance": 25,
+		"shape_type": "visual",
+		"fluid_handling": "none",
+		"block": true,
+		"entity": true,
+		"before_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "function medievalorigins:mdvlorigins/banshee_shriek"
+				},
+				{
+					"type": "origins:area_of_effect",
+					"radius": 8,
+					"bientity_action": {
+						"type": "origins:add_velocity",
+						"z": 2.5,
+						"y": 0.6
+					},
+					"bientity_condition": {
+						"type": "origins:or",
+						"conditions": [
+							{
+								"type": "origins:and",
+								"conditions": [
+									{
+										"type": "origins:undirected",
+										"condition": {
+											"type": "origins:attacker"
+										}
+									},
+									{
+										"type": "origins:target_condition",
+										"condition": {
+											"type": "origins:entity_type",
+											"entity_type": "player"
+										}
+									}
+								]
+							},
+							{
+								"type": "origins:target_condition",
+								"condition": {
+									"type": "origins:and",
+									"conditions": [
+										{
+											"type": "origins:living"
+										},
+										{
+											"type": "origins:entity_type",
+											"entity_type": "player",
+											"inverted": true
+										},
+										{
+											"type": "origins:in_tag",
+											"tag": "medievalorigins:bosses",
+											"inverted": true
+										}
+									]
+								}
+							}
+						]
+					}
+				}
+			]
+		},
+		"command_along_ray": "function medievalorigins:mdvlorigins/banshee_shriek_ray",
+		"command_along_ray_only_on_hit": false,
+		"command_step": 1,
+		"bientity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:add_velocity",
+					"z": 1.0
+				},
+				{
+					"type": "origins:target_action",
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:apply_effect",
+								"effects": [
+									{
+										"effect": "minecraft:nausea",
+										"duration": 100,
+										"amplifier": 0,
+										"is_ambient": true,
+										"show_particles": true,
+										"show_icon": false
+									},
+									{
+										"effect": "minecraft:weakness",
+										"duration": 100,
+										"amplifier": 0,
+										"is_ambient": true,
+										"show_particles": true,
+										"show_icon": false
+									},
+									{
+										"effect": "minecraft:slowness",
+										"duration": 100,
+										"amplifier": 0,
+										"is_ambient": true,
+										"show_particles": true,
+										"show_icon": false
+									}
+								]
+							},
+							{
+								"type": "origins:damage",
+								"amount": 2,
+								"source": {
+									"name": "sonic_boom.player",
+									"bypasses_armor": true,
+									"magic": true
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	},
+	"cooldown": 800,
+	"hud_render": {
+		"sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+		"bar_index": 0
+	}
+}

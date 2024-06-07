@@ -1,0 +1,64 @@
+{
+	"type": "origins:action_over_time",
+	"condition": {
+		"type": "origins:and",
+		"conditions": [
+			{
+				"type": "origins:exposed_to_sun"
+			},
+			{
+				"type": "origins:equipped_item",
+				"equipment_slot": "head",
+				"item_condition": {
+					"type": "origins:empty",
+					"inverted": true
+				},
+				"inverted": true
+			}
+		]
+	},
+	"entity_action": {
+		"type": "origins:apply_effect",
+		"effects": [
+			{
+				"effect": "minecraft:slowness",
+				"duration": 400,
+				"amplifier": 9,
+				"is_ambient": false,
+				"show_particles": false,
+				"show_icon": true
+			},
+			{
+				"effect": "minecraft:mining_fatigue",
+				"duration": 400,
+				"amplifier": 0,
+				"is_ambient": false,
+				"show_particles": false,
+				"show_icon": true
+			},
+			{
+				"effect": "minecraft:weakness",
+				"duration": 400,
+				"amplifier": 9,
+				"is_ambient": false,
+				"show_particles": false,
+				"show_icon": true
+			}
+		]
+	},
+	"falling_action": {
+		"type": "origins:clear_effect",
+		"effects": [
+			{
+				"effect": "minecraft:slowness"
+			},
+			{
+				"effect": "minecraft:mining_fatigue"
+			},
+			{
+				"effect": "minecraft:weakness"
+			}
+		]
+	},
+	"interval": 20
+}

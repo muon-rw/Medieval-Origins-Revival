@@ -1,0 +1,12 @@
+{
+    "type": "origins:action_on_callback",
+    "entity_action_added": {
+        "type": "origins:delay",
+        "ticks": 2,
+        "action": {
+            "type": "origins:revoke_power",
+            "power": "medievalorigins:high_elf/ebonmark",
+            "source": "apoli:command"
+        }
+    }
+}

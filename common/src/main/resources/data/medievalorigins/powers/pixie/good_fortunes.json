@@ -1,0 +1,44 @@
+{
+	"type": "origins:multiple",
+	"nether": {
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:chance",
+			"action": {
+				"type": "origins:execute_command",
+				"command": "loot spawn ~ ~ ~ loot medievalorigins:generic/good_fortunes_loot"
+			},
+			"chance": 0.025
+		},
+		"block_condition": {
+			"type": "origins:in_tag",
+			"tag": "origins:natural_stone"
+		},
+		"condition": {
+			"type": "origins:dimension",
+			"dimension": "minecraft:nether",
+			"inverted": true
+		},
+		"only_when_harvested": true
+	},
+	"else": {
+		"type": "origins:action_on_block_break",
+		"block_action": {
+			"type": "origins:chance",
+			"action": {
+				"type": "origins:execute_command",
+				"command": "loot spawn ~ ~ ~ loot medievalorigins:generic/good_fortunes_loot_nether"
+			},
+			"chance": 0.025
+		},
+		"block_condition": {
+			"type": "origins:in_tag",
+			"tag": "origins:natural_stone"
+		},
+		"condition": {
+			"type": "origins:dimension",
+			"dimension": "minecraft:nether"
+		},
+		"only_when_harvested": true
+	}
+}

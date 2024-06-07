@@ -1,0 +1,36 @@
+{
+	"type": "origins:multiple",
+	"damage": {
+		"type": "origins:attribute",
+		"modifiers": [
+			{
+				"attribute": "minecraft:generic.attack_damage",
+				"operation": "multiply_base",
+				"value": 0.5
+			},
+			{
+				"attribute": "minecraft:generic.attack_speed",
+				"operation": "multiply_total",
+				"value": -0.25
+			}
+		]
+	},
+	"unarmed": {
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.attack_damage",
+			"operation": "addition",
+			"value": 4.0
+		}
+	},
+	"shieldless": {
+		"type": "origins:prevent_item_use",
+		"hidden": true,
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"tag": "origins:shields"
+			}
+		}
+	}
+}

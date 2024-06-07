@@ -1,0 +1,17 @@
+{
+	"type": "origins:modify_damage_taken",
+	"damage_condition": {
+		"type": "origins:attacker",
+		"condition": {
+			"type": "entity_group",
+			"entity_group": {
+				"tag": "medievalorigins:melee_mobs"
+			}
+		}
+	},
+	"modifier": {
+		"name": "weak to magic",
+		"operation": "addition",
+		"value": 1.0
+	}
+}

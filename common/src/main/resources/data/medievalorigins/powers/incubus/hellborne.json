@@ -1,0 +1,40 @@
+{
+	"type": "origins:multiple",
+	"feed_from_fire": {
+		"type": "origins:action_over_time",
+		"interval": 10,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:food_level",
+					"comparison": "<=",
+					"compare_to": 20
+				},
+				{
+					"type": "origins:on_fire"
+				}
+			]
+		},
+		"entity_action": {
+			"type": "origins:apply_effect",
+			"effect": {
+				"effect": "minecraft:saturation",
+				"duration": 10,
+				"amplifier": 1
+			}
+		}
+	},
+	"no_fire_damage": {
+		"type": "origins:modify_damage_taken",
+		"damage_condition": {
+			"type": "origins:in_tag",
+			"tag": "minecraft:is_fire"
+		},
+		"modifier": {
+			"name": "Fire Damage Immunity",
+			"operation": "multiply_total_multiplicative",
+			"value": -1.0
+		}
+	}
+}

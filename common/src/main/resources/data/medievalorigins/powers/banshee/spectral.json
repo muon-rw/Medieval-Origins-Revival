@@ -1,0 +1,242 @@
+{
+	"type": "origins:multiple",
+	"activate": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "function medievalorigins:mdvlorigins/spectral_activate"
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "medievalorigins:banshee/spectral_duration",
+					"change": 40,
+					"operation": "set"
+				}
+			]
+		},
+		"cooldown": 900,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "medievalorigins:banshee/spectral_duration",
+					"compare_to": 0,
+					"comparison": "=="
+				},
+				{
+					"type": "origins:food_level",
+					"compare_to": 6,
+					"comparison": ">="
+				}
+			]
+		},
+		"key": {
+			"key": "key.origins.secondary_active",
+			"continuous": false
+		},
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+			"bar_index": 5,
+			"condition": {
+				"type": "origins:resource",
+				"resource": "medievalorigins:banshee/spectral_duration",
+				"compare_to": 0,
+				"comparison": "=="
+			}
+		}
+	},
+	"duration": {
+		"type": "origins:resource",
+		"start_value": 0,
+		"min": 0,
+		"max": 40,
+		"hud_render": {
+			"should_render": true,
+			"condition": {
+				"type": "origins:resource",
+				"resource": "medievalorigins:banshee/spectral_duration",
+				"compare_to": 0,
+				"comparison": ">"
+			},
+			"sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+			"bar_index": 5
+		}
+	},
+	"tick_duration_and_hunger": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:if_else",
+			"if_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:change_resource",
+						"change": -1,
+						"operation": "add",
+						"resource": "medievalorigins:banshee/spectral_duration"
+					},
+					{
+						"type": "origins:exhaust",
+						"amount": 1.25
+					}
+				]
+			},
+			"else_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:change_resource",
+						"change": 0,
+						"operation": "set",
+						"resource": "medievalorigins:banshee/spectral_duration"
+					},
+					{
+						"type": "origins:execute_command",
+						"command": "stopsound @s * medievalorigins:channeled_wail"
+					}
+				]
+			},
+			"condition": {
+				"type": "origins:food_level",
+				"compare_to": 7,
+				"comparison": ">="
+			}
+		},
+		"interval": 5,
+		"condition": {
+			"type": "origins:resource",
+			"resource": "medievalorigins:banshee/spectral_duration",
+			"compare_to": 0,
+			"comparison": ">"
+		}
+	},
+	"resistance": {
+		"type": "origins:modify_damage_taken",
+		"modifier": {
+			"operation": "multiply_total_multiplicative",
+			"value": -1
+		},
+		"condition": {
+			"type": "origins:resource",
+			"resource": "medievalorigins:banshee/spectral_duration",
+			"compare_to": 0,
+			"comparison": ">"
+		}
+	},
+	"no_cheez": {
+		"type": "origins:modify_damage_dealt",
+		"modifier": {
+			"operation": "multiply_total_multiplicative",
+			"value": -1
+		},
+		"condition": {
+			"type": "origins:resource",
+			"resource": "medievalorigins:banshee/spectral_duration",
+			"compare_to": 0,
+			"comparison": ">"
+		}
+	},
+	"ghostly": {
+		"type": "origins:model_color",
+		"alpha": 0.7
+	},
+	"untargeted": {
+		"type": "origins:action_over_time",
+		"condition": {
+			"type": "origins:resource",
+			"resource": "medievalorigins:banshee/spectral_duration",
+			"compare_to": 0,
+			"comparison": ">"
+		},
+		"rising_action": {
+			"type": "origins:execute_command",
+			"command": "scale set pehkui:visibility 0 @s"
+		},
+		"falling_action": {
+			"type": "origins:execute_command",
+			"command": "scale reset pehkui:visibility"
+		},
+		"interval": 10
+	},
+	"phase": {
+		"type": "origins:phasing",
+		"blacklist": true,
+		"render_type": "blindness",
+		"view_distance": 10,
+		"block_condition": {
+			"type": "origins:in_tag",
+			"tag": "medievalorigins:unphasable"
+		},
+		"phase_down_condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "medievalorigins:banshee/spectral_duration",
+					"compare_to": 0,
+					"comparison": ">"
+				},
+				{
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:and",
+							"conditions": [
+								{
+									"type": "origins:sneaking"
+								},
+								{
+									"type": "origins:on_block"
+								}
+							]
+						},
+						{
+							"type": "origins:swimming"
+						}
+					]
+				}
+			]
+		},
+		"condition": {
+			"type": "origins:resource",
+			"resource": "medievalorigins:banshee/spectral_duration",
+			"compare_to": 0,
+			"comparison": ">"
+		}
+	},
+	"screen_color": {
+		"type": "origins:modify_camera_submersion",
+		"to": "water",
+		"condition": {
+			"type": "origins:resource",
+			"resource": "medievalorigins:banshee/spectral_duration",
+			"compare_to": 0,
+			"comparison": ">"
+		}
+	},
+	"flight": {
+		"type": "origins:swimming",
+		"condition": {
+			"type": "origins:resource",
+			"resource": "medievalorigins:banshee/spectral_duration",
+			"compare_to": 0,
+			"comparison": ">"
+		}
+	},
+	"increase_view_distance": {
+		"type": "origins:lava_vision",
+		"s": 0,
+		"v": 15,
+		"condition": {
+			"type": "origins:resource",
+			"resource": "medievalorigins:banshee/spectral_duration",
+			"compare_to": 0,
+			"comparison": ">"
+		}
+	}
+}

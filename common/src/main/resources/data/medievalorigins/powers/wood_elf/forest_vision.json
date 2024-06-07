@@ -1,0 +1,93 @@
+{
+	"type": "origins:multiple",
+	"camouflage": {
+		"type": "origins:model_color",
+		"alpha": 0.5,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:in_block_anywhere",
+					"block_condition": {
+						"type": "origins:in_tag",
+						"tag": "medievalorigins:cover"
+					},
+					"comparison": ">=",
+					"compare_to": 2
+				},
+				{
+					"type": "origins:sneaking"
+				}
+			]
+		}
+	},
+	"vision_stealth": {
+		"type": "origins:action_over_time",
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:in_block_anywhere",
+					"block_condition": {
+						"type": "origins:in_tag",
+						"tag": "medievalorigins:cover"
+					},
+					"comparison": ">=",
+					"compare_to": 2
+				},
+				{
+					"type": "origins:sneaking"
+				}
+			]
+		},
+		"rising_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:apply_effect",
+					"effect": {
+						"effect": "minecraft:night_vision",
+						"is_ambient": true,
+						"show_particles": false,
+						"show_icon": false,
+						"amplifier": 0,
+						"duration": 250
+					}
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "scale set pehkui:visibility 0 @s"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "playsound minecraft:block.vine.step player @s ~ ~ ~ 0.15 0.5"
+				}
+			]
+		},
+		"entity_action": {
+			"type": "origins:apply_effect",
+			"effect": {
+				"effect": "minecraft:night_vision",
+				"is_ambient": true,
+				"show_particles": false,
+				"show_icon": false,
+				"amplifier": 0,
+				"duration": 250
+			}
+		},
+		"falling_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:clear_effect",
+					"effect": "minecraft:night_vision"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "scale reset pehkui:visibility @s"
+				}
+			]
+		},
+		"interval": 2
+	}
+}

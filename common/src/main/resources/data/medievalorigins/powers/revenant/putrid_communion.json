@@ -1,0 +1,201 @@
+{
+	"badges": [
+		{
+			"type": "origins:tooltip",
+			"sprite": "medievalorigins:textures/gui/pixie_badge.png",
+			"text": [
+				{
+					"translate": "badges.medievalorigins.revenant.eat"
+				}
+			]
+		}
+	],
+	"type": "origins:multiple",
+	"flesh": {
+		"type": "origins:resource",
+		"start_value": 0,
+		"min": 0,
+		"max": 10,
+		"hud_render": {
+			"should_render": true,
+			"condition": {
+				"type": "origins:resource",
+				"resource": "medievalorigins:revenant/putrid_communion_flesh",
+				"compare_to": 0,
+				"comparison": ">"
+			},
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+			"bar_index": 18
+		}
+	},
+	"bone": {
+		"type": "origins:resource",
+		"start_value": 0,
+		"min": 0,
+		"max": 25,
+		"hud_render": {
+			"should_render": true,
+			"condition": {
+				"type": "origins:resource",
+				"resource": "medievalorigins:revenant/putrid_communion_bone",
+				"compare_to": 0,
+				"comparison": ">"
+			},
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+			"bar_index": 5
+		}
+	},
+	"edible_bones": {
+		"type": "apugli:edible_item",
+		"condition": {
+			"type": "origins:resource",
+			"resource": "medievalorigins:revenant/putrid_communion_bone",
+			"compare_to": 25,
+			"comparison": "<"
+		},
+		"item_condition": {
+			"type": "apoli:ingredient",
+			"ingredient": {
+				"tag": "medievalorigins:skeleton_parts"
+			}
+		},
+		"food_component": {
+			"hunger": 0,
+			"saturation": 0,
+			"meat": false
+		},
+		"use_action": "eat",
+		"item_action": {
+			"type": "origins:consume",
+			"amount": 0
+		},
+		"sound": "medievalorigins:cronch",
+		"entity_action": {
+			"type": "origins:modify_resource",
+			"modifier": {
+				"operation": "add_base_early",
+				"value": 1
+			},
+			"resource": "medievalorigins:revenant/putrid_communion_bone"
+		}
+	},
+	"edible_skulls": {
+		"type": "apugli:edible_item",
+		"condition": {
+			"type": "origins:resource",
+			"resource": "medievalorigins:revenant/putrid_communion_bone",
+			"compare_to": 25,
+			"comparison": "<"
+		},
+		"item_condition": {
+			"type": "apoli:ingredient",
+			"ingredient": {
+				"item": "minecraft:skeleton_skull"
+			}
+		},
+		"food_component": {
+			"hunger": 0,
+			"saturation": 0,
+			"meat": false
+		},
+		"use_action": "eat",
+		"item_action": {
+			"type": "origins:consume",
+			"amount": 0
+		},
+		"sound": "medievalorigins:cronch",
+		"entity_action": {
+			"type": "origins:modify_resource",
+			"modifier": {
+				"operation": "add_base_early",
+				"value": 5
+			},
+			"resource": "medievalorigins:revenant/putrid_communion_bone"
+		}
+	},
+	"edible_wither_skulls": {
+		"type": "apugli:edible_item",
+		"condition": {
+			"type": "origins:resource",
+			"resource": "medievalorigins:revenant/putrid_communion_bone",
+			"compare_to": 25,
+			"comparison": "<"
+		},
+		"item_condition": {
+			"type": "apoli:ingredient",
+			"ingredient": {
+				"item": "minecraft:wither_skeleton_skull"
+			}
+		},
+		"food_component": {
+			"hunger": 0,
+			"saturation": 0,
+			"meat": false
+		},
+		"use_action": "eat",
+		"item_action": {
+			"type": "origins:consume",
+			"amount": 0
+		},
+		"sound": "medievalorigins:cronch",
+		"entity_action": {
+			"type": "origins:modify_resource",
+			"modifier": {
+				"operation": "add_base_early",
+				"value": 15
+			},
+			"resource": "medievalorigins:revenant/putrid_communion_bone"
+		}
+	},
+	"flesh_eat": {
+		"type": "origins:action_on_item_use",
+		"entity_action": {
+			"type": "origins:modify_resource",
+			"modifier": {
+				"operation": "add_base_early",
+				"value": 1
+			},
+			"resource": "medievalorigins:revenant/putrid_communion_flesh"
+		},
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"tag": "medievalorigins:zombie_flesh"
+			}
+		}
+	},
+	"edible_zombie_heads": {
+		"type": "apugli:edible_item",
+		"condition": {
+			"type": "origins:resource",
+			"resource": "medievalorigins:revenant/putrid_communion_flesh",
+			"compare_to": 10,
+			"comparison": "<"
+		},
+		"item_condition": {
+			"type": "apoli:ingredient",
+			"ingredient": {
+				"item": "minecraft:zombie_head"
+			}
+		},
+		"food_component": {
+			"hunger": 0,
+			"saturation": 0,
+			"meat": false
+		},
+		"use_action": "eat",
+		"item_action": {
+			"type": "origins:consume",
+			"amount": 0
+		},
+		"sound": "medievalorigins:cronch",
+		"entity_action": {
+			"type": "origins:modify_resource",
+			"modifier": {
+				"operation": "add_base_early",
+				"value": 5
+			},
+			"resource": "medievalorigins:revenant/putrid_communion_flesh"
+		}
+	}
+}

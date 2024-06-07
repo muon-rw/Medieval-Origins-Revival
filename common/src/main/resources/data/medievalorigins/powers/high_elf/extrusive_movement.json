@@ -1,0 +1,187 @@
+{
+    "hidden": true,
+    "type": "origins:multiple",
+    "walk": {
+        "type": "origins:walk_on_fluid",
+        "fluid": "minecraft:lava",
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:fluid_height",
+                    "fluid": "minecraft:lava",
+                    "comparison": "<=",
+                    "compare_to": 0.4
+                },
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "mainhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "tag": "medievalorigins:obsidian"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "offhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "tag": "medievalorigins:obsidian"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "no_burnies": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:in_tag",
+            "tag": "minecraft:is_fire"
+        },
+        "modifier": {
+            "name": "Origin Fire Immunity",
+            "operation": "multiply_total_multiplicative",
+            "value": -1.0
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:block_in_radius",
+                    "block_condition": {
+                        "type": "origins:fluid",
+                        "fluid_condition": {
+                            "type": "origins:in_tag",
+                            "tag": "minecraft:lava"
+                        }
+                    },
+                    "shape": "cube",
+                    "comparison": ">",
+                    "compare_to": 0,
+                    "radius": 1
+                },
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "mainhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "tag": "medievalorigins:obsidian"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "offhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "tag": "medievalorigins:obsidian"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "particles": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "function medievalorigins:mdvlorigins/lava_walk"
+        },
+        "interval": 10,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:fluid_height",
+                    "fluid": "minecraft:lava",
+                    "comparison": ">",
+                    "compare_to": 0.0
+                },
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "mainhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "tag": "medievalorigins:obsidian"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "offhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "tag": "medievalorigins:obsidian"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "clear_last_tick": {
+        "type": "origins:action_over_time",
+        "falling_action": {
+            "type": "origins:extinguish"
+        },
+        "interval": 5,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:fluid_height",
+                    "fluid": "minecraft:lava",
+                    "comparison": ">",
+                    "compare_to": 0.0
+                },
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "mainhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "tag": "medievalorigins:obsidian"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "offhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "tag": "medievalorigins:obsidian"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

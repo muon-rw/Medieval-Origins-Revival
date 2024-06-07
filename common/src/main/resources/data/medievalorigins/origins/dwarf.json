@@ -1,0 +1,20 @@
+{
+        "loading_priority": 11,
+	"powers": [
+                "medievalorigins:dwarf/dwarven_tech",
+                "medievalorigins:dwarf/miniature",
+		"medievalorigins:dwarf/nocturnal_eyes",
+                "medievalorigins:dwarf/darkness_dweller",
+                "medievalorigins:dwarf/dense",
+                "medievalorigins:dwarf/potent_brew",
+                "medievalorigins:dwarf/mythril_resonance",
+                "medievalorigins:dwarf/pickaxeless_stone",
+                "medievalorigins:dwarf/helmet_spawn"
+	],
+        "icon": {
+                "item": "minecraft:ink_sac",
+                "tag": "{CustomModelData:356}"
+        },
+	"impact": 2,
+        "order": 1
+}

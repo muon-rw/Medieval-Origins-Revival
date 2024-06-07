@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    {"id":"adventurez:stone_golem_chestplate","required":false},
+    {"id":"adventurez:stone_golem_helmet","required":false},
+    {"id":"adventurez:stone_golem_leggings","required":false},
+    {"id":"adventurez:stone_golem_boots","required":false},
+    "minecraft:golden_helmet"
+  ]
+}

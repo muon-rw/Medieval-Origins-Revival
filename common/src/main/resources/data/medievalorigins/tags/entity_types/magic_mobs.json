@@ -1,0 +1,14 @@
+{
+	"replace": false,
+	"values": [
+		"minecraft:witch",
+		"minecraft:enderman",
+		"minecraft:dragon_fireball",
+		"minecraft:shulker_bullet",
+		"minecraft:evoker_fangs",
+		"minecraft:vex",
+		"minecraft:wither_skull",
+		"minecraft:guardian",
+		"minecraft:elder_guardian"
+	]
+}

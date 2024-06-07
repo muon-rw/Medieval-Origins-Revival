@@ -1,0 +1,26 @@
+{
+	"type": "origins:multiple",
+	"hidden": true,
+	"break_speed": {
+		"type": "origins:modify_break_speed",
+		"modifier": {
+			"operation": "multiply_base",
+			"value": 0.25
+		}
+	},
+	"damage": {
+		"type": "origins:attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.attack_damage",
+			"operation": "multiply_base",
+			"value": 0.35
+		}
+	},
+	"better_food": {
+		"type": "origins:modify_food",
+		"saturation_modifer": {
+			"operation": "multiply_base",
+			"value": 1.0
+		}
+	}
+}

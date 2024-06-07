@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:soul_sand",
+    {"id":"quartzelv:quartz_elevator","required":false},
+    {"id":"quartzelv:smooth_quartz_elevator","required":false}
+  ]
+}

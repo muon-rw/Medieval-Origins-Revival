@@ -1,0 +1,21 @@
+{
+	"type": "origins:action_over_time",
+	"condition": {
+		"type": "origins:on_block"
+	},
+	"rising_action": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:revoke_power",
+				"power": "medievalorigins:alfiq/pounce_temp",
+				"source": "apoli:command"
+			},
+			{
+				"type": "origins:revoke_power",
+				"power": "medievalorigins:alfiq/pounce_revoker",
+				"source": "apoli:command"
+			}
+		]
+	}
+}

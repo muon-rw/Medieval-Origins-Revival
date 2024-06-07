@@ -1,0 +1,24 @@
+{
+	"type": "origins:active_self",
+	"entity_action": {
+		"type": "origins:apply_effect",
+		"effect": {
+			"effect": "minecraft:regeneration",
+			"is_ambient": true,
+			"show_particles": false,
+			"show_icon": false,
+			"amplifier": 4,
+			"duration": 200
+		}
+	},
+	"cooldown": 3600,
+	"key": {
+		"key": "key.origins.primary_active",
+		"continuous": false
+	},
+	"hud_render": {
+		"should_render": true,
+		"sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+		"bar_index": 23
+	}
+}

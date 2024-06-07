@@ -1,0 +1,13 @@
+{
+    "type": "origins:modify_damage_dealt",
+	"damage_condition": {
+		"type": "origins:in_tag",
+		"tag": "medievalorigins:is_magic"
+	},
+    "modifier": {
+        "name": "Origin magic damage boost",
+        "operation": "multiply_base",
+        "value": 0.2
+    },
+    "hidden": true
+}

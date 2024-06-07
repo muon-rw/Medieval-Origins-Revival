@@ -1,0 +1,31 @@
+{
+	"type": "origins:multiple",
+	"no_sleep": {
+		"type": "origins:prevent_sleep",
+		"message": "medievalorigins.moon_elf_no_sleep",
+		"set_spawn_point": true,
+		"condition": {
+			"type": "origins:dimension",
+			"dimension": "minecraft:overworld"
+		}
+	},
+	"speed": {
+		"type": "origins:modify_attribute",
+		"attribute": "minecraft:generic.movement_speed",
+		"modifier": {
+			"operation": "multiply_base_additive",
+			"value": 0.2
+		},
+		"condition": {
+			"type": "origins:daytime",
+			"inverted": true
+		}
+	},
+	"no_phantoms": {
+		"type": "origins:modify_insomnia_ticks",
+		"modifier": {
+			"operation": "set_total",
+			"value": 0
+		}
+	}
+}

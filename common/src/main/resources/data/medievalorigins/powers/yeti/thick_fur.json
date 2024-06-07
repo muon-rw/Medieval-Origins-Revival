@@ -1,0 +1,46 @@
+{
+	"type": "origins:multiple",
+	"speed_decrease": {
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.movement_speed",
+			"operation": "addition",
+			"value": -0.015
+		},
+		"condition": {
+			"type": "origins:biome",
+			"condition": {
+				"type": "origins:temperature",
+				"comparison": ">=",
+				"compare_to": 2.0
+			}
+		}
+	},
+	"health_decrease": {
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.max_health",
+			"operation": "addition",
+			"value": -12.0
+		},
+		"condition": {
+			"type": "origins:biome",
+			"condition": {
+				"type": "origins:temperature",
+				"comparison": ">=",
+				"compare_to": 2.0
+			}
+		}
+	},
+	"cold_immunity": {
+		"type": "origins:modify_damage_taken",
+		"damage_condition": {
+			"type": "apoli:in_tag",
+			"tag": "minecraft:is_freezing"
+		},
+		"modifier": {
+			"operation": "multiply_total_multiplicative",
+			"value": -1
+		}
+	}
+}

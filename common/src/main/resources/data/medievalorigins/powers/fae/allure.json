@@ -1,0 +1,30 @@
+{
+	"type": "origins:action_on_callback",
+	"entity_action_chosen": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:execute_command",
+				"command": "scale set pehkui:visibility 2 @s"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "scale persist set pehkui:visibility true @s"
+			}
+		]
+	},
+	"entity_action_lost": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:execute_command",
+				"command": "scale reset pehkui:visibility  @s"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "scale persist reset pehkui:visibility @s"
+			}
+		]
+	},
+	"execute_chosen_when_orb": true
+}

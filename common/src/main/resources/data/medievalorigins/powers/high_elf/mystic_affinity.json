@@ -1,0 +1,11 @@
+{
+	"type": "origins:modify_damage_dealt",
+	"damage_condition": {
+		"type": "origins:in_tag",
+		"tag": "medievalorigins:is_magic"
+	},
+	"modifier": {
+		"operation": "multiply_total_multiplicative",
+		"value": 0.25
+	}
+}

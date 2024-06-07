@@ -1,0 +1,90 @@
+{
+    "hidden": true,
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:raycast",
+        "distance": 50,
+        "block": true,
+        "entity": false,
+        "shape_type": "visual",
+        "fluid_handling": "any",
+        "hit_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:spawn_particles",
+                    "particle": {
+                        "type": "minecraft:portal"
+                    },
+                    "count": 48,
+                    "speed": 1.0,
+                    "force": true,
+                    "spread": {
+                        "x": 0.1,
+                        "y": 0.2,
+                        "z": 0.1
+                    }
+                },
+                {
+                    "type": "origins:delay",
+                    "ticks": 2,
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "playsound minecraft:entity.illusioner.mirror_move ambient @a ~ ~ ~ 1.0 1.0"
+                    }
+                }
+            ]
+        },
+        "command_along_ray": "function medievalorigins:mdvlorigins/void_warp",
+        "command_along_ray_only_on_hit": true,
+        "command_at_hit": "tp @s ~ ~2 ~",
+        "command_step": 1
+    },
+    "cooldown": 300,
+    "hud_render": {
+        "sprite_location": "origins:textures/gui/resource_bar.png",
+        "bar_index": 6
+    },
+    "key": {
+        "key": "key.origins.primary_active",
+        "continuous": false
+    },
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:equipped_item",
+                        "equipment_slot": "mainhand",
+                        "item_condition": {
+                            "type": "origins:ingredient",
+                            "ingredient": {
+                                "tag": "medievalorigins:ender_pearls"
+                            }
+                        }
+                    },
+                    {
+                        "type": "origins:equipped_item",
+                        "equipment_slot": "offhand",
+                        "item_condition": {
+                            "type": "origins:ingredient",
+                            "ingredient": {
+                                "tag": "medievalorigins:ender_pearls"
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "origins:raycast",
+                "distance": 50,
+                "block": true,
+                "entity": false,
+                "shape_type": "visual",
+                "fluid_handling": "any"
+            }
+        ]
+    }
+}

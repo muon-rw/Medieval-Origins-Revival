@@ -1,0 +1,519 @@
+{
+	"type": "origins:active_self",
+	"condition": {
+		"type": "origins:equipped_item",
+		"equipment_slot": "mainhand",
+		"item_condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:ingredient",
+							"ingredient": {
+								"item": "minecraft:bone"
+							}
+						},
+						{
+							"type": "origins:amount",
+							"compare_to": 4,
+							"comparison": ">="
+						}
+					]
+				}
+			]
+		}
+	},
+	"entity_action": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:if_else",
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:equipped_item",
+							"equipment_slot": "mainhand",
+							"item_condition": {
+								"type": "origins:and",
+								"conditions": [
+									{
+										"type": "origins:ingredient",
+										"ingredient": {
+											"item": "minecraft:bone"
+										}
+									},
+									{
+										"type": "origins:amount",
+										"compare_to": 11,
+										"comparison": ">"
+									}
+								]
+							}
+						},
+						{
+							"type": "origins:equipped_item",
+							"equipment_slot": "offhand",
+							"item_condition": {
+								"type": "origins:ingredient",
+								"ingredient": {
+									"item": "minecraft:saddle"
+								}
+							}
+						}
+					]
+				},
+				"if_action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:spawn_entity",
+							"entity_type": "minecraft:skeleton_horse",
+							"tag": "{Tags: [\"necro_summon_temp\"],SaddleItem:{id:saddle,Count:1},Tame:1}",
+							"entity_action": {
+								"type": "origins:and",
+								"actions": [
+									{
+										"type": "origins:grant_power",
+										"power": "medievalorigins:revenant/unwitherable",
+										"source": "medievalorigins:revenant/summons"
+									}
+								]
+							}
+						},
+						{
+							"type": "origins:modify_inventory",
+							"slot": "weapon.mainhand",
+							"item_action": {
+								"type": "origins:consume",
+								"amount": 12
+							}
+						},
+						{
+							"type": "origins:modify_inventory",
+							"slot": "weapon.offhand",
+							"item_action": {
+								"type": "origins:consume",
+								"amount": 1
+							}
+						}
+					]
+				},
+				"else_action": {
+					"type": "origins:if_else",
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:equipped_item",
+								"equipment_slot": "mainhand",
+								"item_condition": {
+									"type": "origins:and",
+									"conditions": [
+										{
+											"type": "origins:ingredient",
+											"ingredient": {
+												"item": "minecraft:bone"
+											}
+										},
+										{
+											"type": "origins:amount",
+											"compare_to": 11,
+											"comparison": ">"
+										}
+									]
+								}
+							},
+							{
+								"type": "origins:equipped_item",
+								"equipment_slot": "offhand",
+								"item_condition": {
+									"type": "origins:ingredient",
+									"ingredient": {
+										"item": "minecraft:wither_skeleton_skull"
+									}
+								}
+							}
+						]
+					},
+					"if_action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "medievalorigins:summon_entity",
+								"entity_type": "medievalorigins:summon_wither_skeleton",
+								"tag": "{Tags: [\"necro_summon_temp\"]}",
+								"entity_action": {
+									"type": "origins:and",
+									"actions": [
+										{
+											"type": "origins:grant_power",
+											"power": "medievalorigins:revenant/unwitherable",
+											"source": "medievalorigins:revenant/summons"
+										},
+										{
+											"type": "origins:grant_power",
+											"power": "medievalorigins:revenant/summon_scaling",
+											"source": "medievalorigins:revenant/summons"
+										},
+										{
+											"type": "origins:execute_command",
+											"command": "function medievalorigins:mdvlorigins/empower_all_wither_summons"
+										}
+									]
+								}
+							},
+							{
+								"type": "origins:modify_inventory",
+								"slot": "weapon.mainhand",
+								"item_action": {
+									"type": "origins:consume",
+									"amount": 12
+								}
+							},
+							{
+								"type": "origins:modify_inventory",
+								"slot": "weapon.offhand",
+								"item_action": {
+									"type": "origins:consume",
+									"amount": 1
+								}
+							}
+						]
+					},
+					"else_action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "medievalorigins:summon_entity",
+								"entity_type": "medievalorigins:summon_skeleton",
+								"tag": "{Tags: [\"necro_summon_temp\"]}",
+								"entity_action": {
+									"type": "origins:and",
+									"actions": [
+										{
+											"type": "origins:grant_power",
+											"power": "medievalorigins:revenant/unwitherable",
+											"source": "medievalorigins:revenant/summons"
+										},
+										{
+											"type": "origins:grant_power",
+											"power": "medievalorigins:revenant/summon_scaling",
+											"source": "medievalorigins:revenant/summons"
+										}
+									]
+								}
+							},
+							{
+								"type": "origins:modify_inventory",
+								"slot": "weapon.mainhand",
+								"item_action": {
+									"type": "origins:consume",
+									"amount": 4
+								}
+							}
+						]
+					}
+				}
+			},
+			{
+				"type": "origins:area_of_effect",
+				"radius": 10,
+				"shape": "sphere",
+				"bientity_condition": {
+					"type": "origins:target_condition",
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:nbt",
+								"nbt": "{Tags: [\"necro_summon_temp\"]}"
+							},
+							{
+								"type": "origins:entity_type",
+								"entity_type": "minecraft:skeleton_horse"
+							}
+						]
+					}
+				},
+				"bientity_action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:actor_action",
+							"action": {
+								"type": "origins:execute_command",
+								"command": "data merge entity @e[tag=necro_summon_temp,limit=1,sort=nearest] {Owner:\"@s\"}"
+							}
+						},
+						{
+							"type": "origins:mount"
+						},
+						{
+							"type": "origins:target_action",
+							"action": {
+								"type": "origins:execute_command",
+								"command": "data merge entity @s {Tags:[\"siphon_immune\"]}"
+							}
+						},
+						{
+							"type": "origins:if_else",
+							"if_action": {
+								"type": "origins:and",
+								"actions": [
+									{
+										"type": "origins:target_action",
+										"action": {
+											"type": "origins:execute_command",
+											"command": "function medievalorigins:mdvlorigins/empowered_skeleton_horse"
+										}
+									},
+									{
+										"type": "origins:actor_action",
+										"action": {
+											"type": "origins:modify_resource",
+											"resource": "medievalorigins:revenant/putrid_communion_bone",
+											"modifier": {
+												"operation": "multiply_total_multiplicative",
+												"value": -1
+											}
+										}
+									}
+								]
+							},
+							"condition": {
+								"type": "origins:actor_condition",
+								"condition": {
+									"type": "origins:resource",
+									"resource": "medievalorigins:revenant/putrid_communion_bone",
+									"compare_to": 25,
+									"comparison": ">="
+								}
+							}
+						}
+					]
+				}
+			},
+			{
+				"type": "origins:area_of_effect",
+				"radius": 10,
+				"shape": "sphere",
+				"bientity_condition": {
+					"type": "origins:target_condition",
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:nbt",
+								"nbt": "{Tags: [\"necro_summon_temp\"]}"
+							},
+							{
+								"type": "origins:in_tag",
+								"tag": "medievalorigins:summon_skeletons"
+							}
+						]
+					}
+				},
+				"bientity_action": {
+					"type": "origins:and",
+					"actions": [
+						{
+							"type": "origins:target_action",
+							"action": {
+								"type": "origins:execute_command",
+								"command": "data merge entity @s {Tags:[\"siphon_immune\"]}"
+							}
+						},
+						{
+							"type": "origins:if_else",
+							"if_action": {
+								"type": "origins:and",
+								"actions": [
+									{
+										"type": "origins:target_action",
+										"action": {
+											"type": "origins:execute_command",
+											"command": "function medievalorigins:mdvlorigins/empowered_skeleton_5"
+										}
+									},
+									{
+										"type": "origins:actor_action",
+										"action": {
+											"type": "origins:modify_resource",
+											"resource": "medievalorigins:revenant/putrid_communion_bone",
+											"modifier": {
+												"operation": "add_base_early",
+												"value": -25
+											}
+										}
+									}
+								]
+							},
+							"condition": {
+								"type": "origins:actor_condition",
+								"condition": {
+									"type": "origins:resource",
+									"resource": "medievalorigins:revenant/putrid_communion_bone",
+									"compare_to": 25,
+									"comparison": ">="
+								}
+							}
+						},
+						{
+							"type": "origins:if_else",
+							"if_action": {
+								"type": "origins:and",
+								"actions": [
+									{
+										"type": "origins:target_action",
+										"action": {
+											"type": "origins:execute_command",
+											"command": "function medievalorigins:mdvlorigins/empowered_skeleton_4"
+										}
+									},
+									{
+										"type": "origins:actor_action",
+										"action": {
+											"type": "origins:modify_resource",
+											"resource": "medievalorigins:revenant/putrid_communion_bone",
+											"modifier": {
+												"operation": "add_base_early",
+												"value": -20
+											}
+										}
+									}
+								]
+							},
+							"condition": {
+								"type": "origins:actor_condition",
+								"condition": {
+									"type": "origins:resource",
+									"resource": "medievalorigins:revenant/putrid_communion_bone",
+									"compare_to": 20,
+									"comparison": ">="
+								}
+							}
+						},
+						{
+							"type": "origins:if_else",
+							"if_action": {
+								"type": "origins:and",
+								"actions": [
+									{
+										"type": "origins:target_action",
+										"action": {
+											"type": "origins:execute_command",
+											"command": "function medievalorigins:mdvlorigins/empowered_skeleton_3"
+										}
+									},
+									{
+										"type": "origins:actor_action",
+										"action": {
+											"type": "origins:modify_resource",
+											"resource": "medievalorigins:revenant/putrid_communion_bone",
+											"modifier": {
+												"operation": "add_base_early",
+												"value": -15
+											}
+										}
+									}
+								]
+							},
+							"condition": {
+								"type": "origins:actor_condition",
+								"condition": {
+									"type": "origins:resource",
+									"resource": "medievalorigins:revenant/putrid_communion_bone",
+									"compare_to": 15,
+									"comparison": ">="
+								}
+							}
+						},
+						{
+							"type": "origins:if_else",
+							"if_action": {
+								"type": "origins:and",
+								"actions": [
+									{
+										"type": "origins:target_action",
+										"action": {
+											"type": "origins:execute_command",
+											"command": "function medievalorigins:mdvlorigins/empowered_skeleton_2"
+										}
+									},
+									{
+										"type": "origins:actor_action",
+										"action": {
+											"type": "origins:modify_resource",
+											"resource": "medievalorigins:revenant/putrid_communion_bone",
+											"modifier": {
+												"operation": "add_base_early",
+												"value": -10
+											}
+										}
+									}
+								]
+							},
+							"condition": {
+								"type": "origins:actor_condition",
+								"condition": {
+									"type": "origins:resource",
+									"resource": "medievalorigins:revenant/putrid_communion_bone",
+									"compare_to": 10,
+									"comparison": ">="
+								}
+							}
+						},
+						{
+							"type": "origins:if_else",
+							"if_action": {
+								"type": "origins:and",
+								"actions": [
+									{
+										"type": "origins:target_action",
+										"action": {
+											"type": "origins:execute_command",
+											"command": "function medievalorigins:mdvlorigins/empowered_skeleton_1"
+										}
+									},
+									{
+										"type": "origins:actor_action",
+										"action": {
+											"type": "origins:modify_resource",
+											"resource": "medievalorigins:revenant/putrid_communion_bone",
+											"modifier": {
+												"operation": "add_base_early",
+												"value": -5
+											}
+										}
+									}
+								]
+							},
+							"condition": {
+								"type": "origins:actor_condition",
+								"condition": {
+									"type": "origins:resource",
+									"resource": "medievalorigins:revenant/putrid_communion_bone",
+									"compare_to": 5,
+									"comparison": ">="
+								}
+							}
+						}
+					]
+				}
+			}
+		]
+	},
+	"cooldown": 50,
+	"hud_render": {
+		"should_render": true,
+		"sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+		"bar_index": 5
+	},
+	"key": {
+		"key": "key.origins.primary_active",
+		"continuous": false
+	}
+}

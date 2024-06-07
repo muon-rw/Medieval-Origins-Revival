@@ -1,0 +1,23 @@
+{
+	"type": "origins:multiple",
+	"diminutive_callback": {
+		"type": "origins:action_on_callback",
+		"entity_action_chosen": {
+			"type": "origins:execute_command",
+			"command": "function medievalorigins:mdvlorigins/fae_callon"
+		},
+		"entity_action_lost": {
+			"type": "origins:execute_command",
+			"command": "function medievalorigins:mdvlorigins/fae_callback"
+		},
+		"execute_chosen_when_orb": true
+	},
+	"diminutive_constant": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "execute unless entity @s[pehkui.scale_nbt={\"pehkui:scale_data_types\":{\"pehkui:height\":{scale:0.66f}}}] run function medievalorigins:mdvlorigins/fae_callon"
+		},
+        "interval": 50
+	}
+}

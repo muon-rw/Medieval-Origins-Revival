@@ -1,0 +1,62 @@
+{
+	"type": "origins:multiple",
+	"speed_increase": {
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.movement_speed",
+			"operation": "addition",
+			"value": 0.03
+		},
+		"condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:biome",
+					"condition": {
+						"type": "origins:temperature",
+						"comparison": "<=",
+						"compare_to": 0.4
+					}
+				},
+				{
+					"type": "origins:biome",
+					"condition": {
+						"type": "origins:in_tag",
+						"tag": "medievalorigins:cold_biomes"
+					}
+				}
+			]
+		}
+	},
+	"better_in_snow": {
+		"type": "origins:modify_damage_taken",
+		"damage_condition": {
+			"type": "origins:name",
+			"name": "fall"
+		},
+		"modifier": {
+			"operation": "multiply_total",
+			"value": -0.5
+		},
+		"condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:biome",
+					"condition": {
+						"type": "origins:temperature",
+						"comparison": "<=",
+						"compare_to": 0.4
+					}
+				},
+				{
+					"type": "origins:biome",
+					"condition": {
+						"type": "origins:in_tag",
+						"tag": "medievalorigins:cold_biomes"
+					}
+				}
+			]
+		}
+	}
+}

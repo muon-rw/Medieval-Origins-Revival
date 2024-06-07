@@ -1,0 +1,9 @@
+{
+    "hidden": true,
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "spell_power:arcane",
+        "operation": "addition",
+        "value": 1.0
+    }
+}

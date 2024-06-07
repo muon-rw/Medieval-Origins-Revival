@@ -1,0 +1,14 @@
+{
+	"type": "origins:attribute",
+	"modifiers": [{
+			"attribute": "minecraft:generic.max_health",
+			"operation": "addition",
+			"value": 80.0
+		},
+		{
+			"attribute": "minecraft:generic.armor_toughness",
+			"operation": "addition",
+			"value": 6.0
+		}
+	]
+}

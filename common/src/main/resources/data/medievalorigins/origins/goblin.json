@@ -1,0 +1,18 @@
+{
+        "loading_priority": 11,
+	"powers": [
+                "medievalorigins:goblin/greedy",
+                "medievalorigins:goblin/green",
+                "medievalorigins:goblin/durability",
+                "medievalorigins:goblin/cunning",
+                "medievalorigins:goblin/nippy",
+                "medievalorigins:goblin/stunted",
+		"medievalorigins:goblin/frail"
+	],
+        "icon": {
+                "item": "minecraft:ink_sac",
+                "tag": "{CustomModelData:362}"
+        },
+	"impact": 1,
+        "order": 10
+}

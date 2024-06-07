@@ -1,0 +1,71 @@
+{
+	"type": "origins:multiple",
+	"nether_strength": {
+		"type": "origins:modify_damage_dealt",
+		"modifier": {
+			"operation": "multiply_total_multiplicative",
+			"value": 0.75
+		},
+		"condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:dimension",
+					"dimension": "minecraft:the_nether"
+				},
+				{
+					"type": "origins:dimension",
+					"dimension": "deeperdarker:otherside"
+				}
+			]
+		}
+	},
+	"nether_health": {
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.max_health",
+			"operation": "addition",
+			"value": 20
+		},
+		"tick_rate": 20,
+		"condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:dimension",
+					"dimension": "minecraft:the_nether"
+				},
+				{
+					"type": "origins:dimension",
+					"dimension": "deeperdarker:otherside"
+				}
+			]
+		}
+	},
+	"overworld_weakness": {
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.max_health",
+			"operation": "addition",
+			"value": -6
+		},
+		"tick_rate": 20,
+		"condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:dimension",
+					"dimension": "minecraft:overworld"
+				},
+				{
+					"type": "origins:dimension",
+					"dimension": "paradise_lost:paradise_lost"
+				},
+				{
+					"type": "origins:dimension",
+					"dimension": "aether:the_aether"
+				}
+			]
+		}
+	}
+}

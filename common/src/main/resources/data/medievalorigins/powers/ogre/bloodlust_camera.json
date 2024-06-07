@@ -1,0 +1,23 @@
+{
+    "hidden": true,
+    "type": "origins:multiple",
+    "red_screen": {
+        "type": "origins:modify_camera_submersion",
+        "to": "lava",
+        "condition": {
+            "type": "origins:status_effect",
+            "effect": "minecraft:haste",
+            "min_amplifier": 10
+        }
+    },
+    "increase_view_distance": {
+        "type": "origins:lava_vision",
+        "s": 0,
+        "v": 15,
+        "condition": {
+            "type": "origins:status_effect",
+            "effect": "minecraft:haste",
+            "min_amplifier": 10
+        }
+    }
+}

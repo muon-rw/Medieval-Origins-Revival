@@ -1,0 +1,69 @@
+{
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:raycast",
+        "distance": 8,
+        "block": false,
+        "entity": true,
+        "shape_type": "outline",
+        "fluid_handling": "any",
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:entity_type",
+                "entity_type": "minecraft:villager"
+            }
+        },
+        "bientity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:target_action",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "tag @s add siren_seduce"
+                    }
+                },
+                {
+                    "type": "origins:delay",
+                    "ticks": 5,
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:actor_action",
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:execute_command",
+                                            "command": "data merge entity @e[type=minecraft:villager,limit=1,sort=nearest,tag=siren_seduce] {Gossips:[{Type:\"major_positive\",Value:20,Target:[I;1,1,1,1]}]}"
+                                        },
+                                        {
+                                            "type": "origins:execute_command",
+                                            "command": "data modify entity @e[type=minecraft:villager,sort=nearest,limit=1,tag=siren_seduce] Gossips[0].Target set from entity @s UUID"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:execute_command",
+                                    "command": "tag @s remove siren_seduce"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    "cooldown": 600,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+        "bar_index": 4
+    },
+    "key": "key.origins.secondary_active"
+}

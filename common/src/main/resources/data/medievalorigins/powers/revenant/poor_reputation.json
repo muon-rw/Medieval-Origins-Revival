@@ -1,0 +1,128 @@
+{
+	"type": "origins:multiple",
+	"poor_reputation": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "function medievalorigins:mdvlorigins/poor_reputation"
+		},
+		"interval": 20
+	},
+	"no_trading": {
+		"type": "origins:prevent_entity_use",
+		"bientity_action": {
+			"type": "origins:actor_action",
+			"action": {
+				"type": "origins:execute_command",
+				"command": "title @s actionbar {\"translate\": \"medievalorigins.poor_reputation_villager\", \"color\": \"red\"}"
+			}
+		},
+		"bientity_condition": {
+			"type": "origins:target_condition",
+			"condition": {
+				"type": "origins:entity_type",
+				"entity_type": "minecraft:villager"
+			}
+		}
+	},
+	"pillager_team": {
+		"type": "apugli:mobs_ignore",
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:*_cooldown",
+			"comparison": "==",
+			"compare_to": 0
+		},
+		"mob_condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:in_tag",
+					"tag": "medievalorigins:pillagers"
+				},
+				{
+					"type": "origins:entity_group",
+					"group": "illager"
+				}
+			]
+		}
+	},
+	"cooldown": {
+		"type": "origins:resource",
+		"start_value": 0,
+		"max": 150,
+		"min": 0,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+			"bar_index": 1,
+			"condition": {
+				"type": "origins:resource",
+				"resource": "*:*_cooldown",
+				"comparison": ">",
+				"compare_to": 0
+			}
+		}
+	},
+	"break": {
+		"type": "origins:action_on_hit",
+		"bientity_action": {
+			"type": "origins:actor_action",
+			"action": {
+				"type": "origins:modify_resource",
+				"resource": "*:*_cooldown",
+				"modifier": {
+					"operation": "set_total",
+					"value": 150
+				}
+			}
+		},
+		"bientity_condition": {
+			"type": "origins:target_condition",
+			"condition": {
+				"type": "origins:or",
+				"conditions": [
+					{
+						"type": "origins:in_tag",
+						"tag": "medievalorigins:pillagers"
+					},
+					{
+						"type": "origins:entity_group",
+						"group": "illager"
+					}
+				]
+			}
+		}
+	},
+	"tick_cooldown": {
+		"type": "origins:action_over_time",
+		"interval": 2,
+		"entity_action": {
+			"type": "origins:modify_resource",
+			"resource": "*:*_cooldown",
+			"modifier": {
+				"operation": "addition",
+				"value": -1
+			}
+		}
+	},
+	"reset": {
+		"type": "origins:action_on_callback",
+		"entity_action_added": {
+			"type": "origins:modify_resource",
+			"resource": "*:*_cooldown",
+			"modifier": {
+				"operation": "set_total",
+				"value": 0
+			}
+		},
+		"entity_action_respawned": {
+			"type": "origins:modify_resource",
+			"resource": "*:*_cooldown",
+			"modifier": {
+				"operation": "set_total",
+				"value": 0
+			}
+		}
+	}
+}

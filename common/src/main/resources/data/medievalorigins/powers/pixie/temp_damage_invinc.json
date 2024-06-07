@@ -1,0 +1,20 @@
+{
+	"type": "origins:multiple",
+	"effect_immunity": {
+		"type": "origins:effect_immunity",
+		"effects": [
+			"minecraft:instant_damage"
+		]
+	},
+	"power_revoke": {
+		"type": "origins:action_on_callback",
+		"entity_action_added": {
+			"type": "origins:delay",
+			"ticks": 10,
+			"action": {
+				"type": "origins:execute_command",
+				"command": "power remove @s medievalorigins:pixie/temp_damage_invinc"
+			}
+		}
+	}
+}

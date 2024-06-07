@@ -1,36 +1,50 @@
 {
-    "schemaVersion": 1,
-    "id": "medievalorigins",
-    "version": "${version}",
-    "name": "${mod_name}",
-    "description": "${description}",
-    "authors": [
-        "${mod_author}"
+  "schemaVersion": 1,
+  "id": "medievalorigins",
+  "version": "${version}",
+
+  "name": "Medieval Origins Revival",
+  "description": "Medieval Origins Revival is an addon for Origins with mythological and medieval themes, focused on mod integration and simplicity.",
+  "authors": [
+    "ItsParkieLad",
+    "Muon"
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/medieval-origins-revival",
+    "source": "https://github.com/muon-rw/Medieval-Origins-Revival",
+    "issues": "https://github.com/muon-rw/Medieval-Origins-Revival"
+  },
+
+  "license": "MIT License",
+  "icon": "assets/medievalorigins/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.muon.medievalorigins.MedievalOrigins"
     ],
-    "contact": {
-        "homepage": "https://fabricmc.net/",
-        "sources": "https://github.com/FabricMC/fabric-example-mod"
-    },
-    "license": "${license}",
-    "icon": "assets/modid/${mod_id}.png",
-    "environment": "*",
-    "entrypoints": {
-        "main": [
-          "dev.muon.medievalorigins.ExampleMod"
-        ]
-    },
-    "mixins": [
-        "medievalorigins.mixins.json",
-        "medievalorigins.fabric.mixins.json"
-    ],
-    "depends": {
-        "fabricloader": ">=0.14",
-        "fabric": "*",
-        "minecraft": "${minecraft_version}",
-        "java": ">=17"
-    },
-    "suggests": {
-        "another-mod": "*"
-    }
+    "client": [
+      "dev.muon.medievalorigins.client.MedievalOriginsClient"
+    ]
+  },
+
+  "depends": {
+    "fabricloader": ">=0.14.21",
+    "fabric": "*",
+    "minecraft": "~1.20",
+    "java": ">=17",
+    "origins": ">=1.7.1",
+    "pehkui": ">=3.0",
+    "spell_power": ">=0.10.0"
+  },
+  "mixins": [
+    "medievalorigins.mixins.json",
+    "medievalorigins.fabric.mixins.json"
+  ],
+  "suggests": {
+    "another-mod": "*"
+  },
+  "breaks": {
+    "icarus": "<=2.5.0"
+  }
 }
-  

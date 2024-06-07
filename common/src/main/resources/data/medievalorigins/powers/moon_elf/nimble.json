@@ -1,0 +1,31 @@
+{
+   "type": "origins:multiple",
+   "dodge": {
+      "type": "origins:modify_damage_taken",
+      "self_action": {
+         "type": "origins:and",
+         "actions": [
+            {
+               "type": "origins:execute_command",
+               "command": "function medievalorigins:mdvlorigins/moon_elf_dodge"
+            }
+         ]
+      },
+      "modifier": {
+         "operation": "multiply_total_multiplicative",
+         "value": -2.0
+      },
+      "condition": {
+         "type": "origins:predicate",
+         "predicate": "medievalorigins:dodge_chance"
+      }
+   },
+	"extra_roll": {
+		"type": "origins:attribute",
+		"modifier": {
+			"attribute": "combatroll:count",
+			"value": 1,
+			"operation": "addition"
+		}
+	}
+}
