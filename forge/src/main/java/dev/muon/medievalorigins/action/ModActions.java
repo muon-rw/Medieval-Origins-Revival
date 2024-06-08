@@ -8,9 +8,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModActions {
     public static final DeferredRegister<EntityAction<?>> ENTITY_ACTIONS = DeferredRegister.create(ApoliRegistries.ENTITY_ACTION_KEY, MedievalOrigins.MODID);
-    public static final RegistryObject<SummonSkeletonAction> SUMMON_SKELETON = ENTITY_ACTIONS.register("summon_skeleton", SummonSkeletonAction::new);
-    public static final RegistryObject<SummonWitherSkeletonAction> SUMMON_WITHER_SKELETON = ENTITY_ACTIONS.register("summon_wither_skeleton", SummonWitherSkeletonAction::new);
-    public static final RegistryObject<SummonZombieAction> SUMMON_ZOMBIE = ENTITY_ACTIONS.register("summon_zombie", SummonZombieAction::new);
+    public static final RegistryObject<SummonEntityAction> SUMMON_SKELETON = ENTITY_ACTIONS.register("summon_entity", SummonEntityAction::new);
 
 
     public static final DeferredRegister<BiEntityAction<?>> BIENTITY_ACTIONS = DeferredRegister.create(ApoliRegistries.BIENTITY_ACTION_KEY, MedievalOrigins.MODID);

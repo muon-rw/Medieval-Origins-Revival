@@ -3,6 +3,7 @@ plugins {
     id 'maven-publish'
     id 'net.minecraftforge.gradle'
     id 'org.spongepowered.mixin'
+    id 'org.parchmentmc.librarian.forgegradle' version '1.+'
 }
 base {
     archivesName = "${mod_name}-forge-${minecraft_version}"
@@ -45,6 +46,7 @@ repositories {
 
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+
     implementation fg.deobf("io.github.edwinmindcraft:calio-forge:${minecraft_version}-${calio_forge_version}")
     implementation fg.deobf("io.github.edwinmindcraft:apoli-forge:${minecraft_version}-${apoli_forge_version}")
     implementation fg.deobf("io.github.edwinmindcraft:origins-forge:${minecraft_version}-${origins_forge_version}")

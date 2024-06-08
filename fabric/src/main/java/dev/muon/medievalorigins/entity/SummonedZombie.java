@@ -29,8 +29,8 @@ import java.util.UUID;
 public class SummonedZombie extends Zombie implements IFollowingSummon, ISummon {
 
     /*
-        Based off of Ars Nouveau, which is under the LGPL-v3.0 license
-    */
+     * Originally based off of Ars Nouveau, which is under the LGPL-v3.0 license
+     */
     private static final EntityDataAccessor<Optional<UUID>> OWNER_UUID;
 
     static {
