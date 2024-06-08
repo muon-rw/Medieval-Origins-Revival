@@ -40,7 +40,11 @@ public class MedievalOrigins implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("Loading Medieval Origins");
+		Constants.LOG.info("Loading Medieval Origins");
+
+		CommonClass.init();
+
+
 		ModEnchantments.register();
 		ModEntities.register();
 		ModEntityActions.register();

@@ -14,6 +14,52 @@ mixin {
     config("${mod_id}.forge.mixins.json")
 }
 
+repositories {
+    maven { url "https://maven.theillusivec4.top/" }
+    maven { url 'https://maven.kosmx.dev/' }
+    maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'}
+    maven { url "https://code.redspace.io/releases" }
+    maven { url "https://code.redspace.io/snapshots" }
+    maven { url "https://maven.blamejared.com" }
+    maven { url "https://maven.ladysnake.org/releases" }
+
+    maven { url "https://www.cursemaven.com"
+        content {
+            includeGroup "curse.maven" }
+    }
+
+    maven { url = 'https://api.modrinth.com/maven'
+        content {
+            includeGroup 'maven.modrinth'}
+    }
+
+    maven {url = 'https://jitpack.io'
+        content {
+            excludeGroup "io.github.edwinmindcraft"}
+    }
+
+    maven { url = 'https://maven.greenhouseteam.dev/releases/' }
+    maven { url = 'https://maven.theillusivec4.top' }
+    maven { url = "https://modmaven.dev"}
+}
+
+dependencies {
+    minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+    implementation fg.deobf("io.github.edwinmindcraft:calio-forge:${minecraft_version}-${calio_forge_version}")
+    implementation fg.deobf("io.github.edwinmindcraft:apoli-forge:${minecraft_version}-${apoli_forge_version}")
+    implementation fg.deobf("io.github.edwinmindcraft:origins-forge:${minecraft_version}-${origins_forge_version}")
+
+    runtimeOnly fg.deobf("top.theillusivec4.caelus:caelus-forge:${caelus_version}")
+    compileOnly fg.deobf("top.theillusivec4.caelus:caelus-forge:${caelus_version}")
+
+    implementation (jarJar(fg.deobf("net.merchantpug:Apugli:${apugli_version}+${minecraft_version}-forge"))) {
+        jarJar.ranged(it, "[${apugli_version},)")
+    }
+
+    compileOnly project(":common")
+    annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT:processor")
+}
+
 minecraft {
     mappings channel: 'official', version: minecraft_version
 
@@ -74,11 +120,6 @@ minecraft {
 
 sourceSets.main.resources.srcDir 'src/generated/resources'
 
-dependencies {
-    minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
-    compileOnly project(":common")
-    annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT:processor")
-}
 
 tasks.withType(JavaCompile).configureEach {
     source(project(":common").sourceSets.main.allSource)
