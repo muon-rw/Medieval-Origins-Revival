@@ -1,35 +1,35 @@
 package dev.muon.medievalorigins.entity;
 
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.OwnableEntity;
+import net.minecraft.world.item.ItemStack;
 
 import javax.annotation.Nullable;
 import java.util.UUID;
 
-/**
- * For entities summoned by spells.
- */
 public interface ISummon extends OwnableEntity {
-        /*
-        Implementation sourced from Ars Nouveau, in compliance with the LGPL-v3.0 license
+    /*
+    * Originally based off of Ars Nouveau, which is under the LGPL-v3.0 license
     */
 
     int getTicksLeft();
 
-    void setTicksLeft(int ticks);
-
     default @Nullable LivingEntity getLivingEntity() {
         return this instanceof LivingEntity ? (LivingEntity) this : null;
     }
+    void setLifeTicks(int lifeTicks);
+    void setIsLimitedLife(boolean bool);
+    void setWeapon(ItemStack item);
+    void setOwner(LivingEntity owner);
+    void setOwnerID(UUID uuid);
+    void reassessWeaponGoal();
 
     @Nullable
     default UUID getOwnerUUID(){
-        return getOwnerID();
+        return null;
     }
-
     @Nullable
     default LivingEntity getOwner(){
         if(this instanceof LivingEntity && ((Entity) this).getCommandSenderWorld() instanceof ServerLevel serverLevel){
@@ -37,25 +37,7 @@ public interface ISummon extends OwnableEntity {
         }
         return null;
     }
-
-    void setOwnerID(UUID uuid);
-
-    default void writeOwner(CompoundTag tag) {
-        if (getOwnerUUID() != null)
-            tag.putUUID("owner", getOwnerUUID());
-    }
-
-    default @Nullable Entity readOwner(ServerLevel world, CompoundTag tag) {
-        return tag.contains("owner") ? world.getEntity(tag.getUUID("owner")) : null;
-    }
-
-
-    @Nullable
-    @Deprecated(forRemoval = true) // Use getOwnerUUID
-    default UUID getOwnerID(){
-        return null;
-    }
-
+    LivingEntity getOwnerFromID();
     @Deprecated(forRemoval = true) // Use getOwner
     default @Nullable Entity getOwner(ServerLevel world) {
         return getOwnerUUID() != null ? world.getEntity(getOwnerUUID()) : null;

@@ -7,7 +7,6 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.PathfinderMob;
-import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.ai.goal.target.TargetGoal;
 import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.level.Level;
@@ -17,8 +16,8 @@ import java.util.UUID;
 
 public interface IFollowingSummon {
     /*
-    Originally based off of Ars Nouveau, which is under the LGPL-v3.0 license
-   */
+    * Originally based off of Ars Nouveau, which is under the LGPL-v3.0 license
+    */
     static EntityDataAccessor<Optional<UUID>> getOwnerUUIDAccessor(Class<? extends Entity> clazz) {
         return SynchedEntityData.defineId(clazz, EntityDataSerializers.OPTIONAL_UUID);
     }
