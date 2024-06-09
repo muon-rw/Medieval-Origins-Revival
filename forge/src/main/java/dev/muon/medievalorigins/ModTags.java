@@ -2,13 +2,24 @@ package dev.muon.medievalorigins;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.*;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.IForgeRegistry;
+import net.minecraftforge.registries.RegistryObject;
 
+import java.util.Map;
 import java.util.function.Predicate;
 
+import static dev.muon.medievalorigins.Constants.MOD_ID;
+/**
+ * Does nothing
+ */
+@Deprecated
 public class ModTags {
+
     public static void registerTags() {
         addToTag("summon_weapons", item -> item == Items.BOW || item instanceof DiggerItem || item instanceof SwordItem);
         addToTag("bows", item -> item instanceof BowItem);
@@ -33,8 +44,6 @@ public class ModTags {
         addToTag("golden_weapons", item -> item instanceof SwordItem && BuiltInRegistries.ITEM.getKey(item).getPath().matches("[a.z_]*(gold|gilded)[a.z_]*"));
         addToTag("golden_tools", item -> item instanceof DiggerItem && BuiltInRegistries.ITEM.getKey(item).getPath().matches("[a.z_]*(gold|gilded)[a.z_]*"));
     }
-
-    public static TagKey<Item> bowsTag = TagKey.create(Registries.ITEM, MedievalOrigins.loc("bows"));
 
     public static void addToTag(String tagName, Predicate<Item> condition) {
     }

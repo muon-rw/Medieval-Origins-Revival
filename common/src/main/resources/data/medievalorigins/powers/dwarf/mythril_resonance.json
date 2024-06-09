@@ -24,21 +24,7 @@
 						}
 					},
 					{
-						"type": "origins:or",
-						"conditions": [
-							{
-								"type": "apoli:ingredient",
-								"ingredient": {
-									"tag": "c:swords"
-								}
-							},
-							{
-								"type": "apoli:ingredient",
-								"ingredient": {
-									"tag": "c:axes"
-								}
-							}
-						]
+						"type": "medievalorigins:is_melee_weapon"
 					}
 				]
 			}
@@ -67,21 +53,7 @@
 						}
 					},
 					{
-						"type": "origins:or",
-						"conditions": [
-							{
-								"type": "apoli:ingredient",
-								"ingredient": {
-									"tag": "c:swords"
-								}
-							},
-							{
-								"type": "apoli:ingredient",
-								"ingredient": {
-									"tag": "c:axes"
-								}
-							}
-						]
+						"type": "medievalorigins:is_melee_weapon"
 					}
 				]
 			}
@@ -110,21 +82,7 @@
 						}
 					},
 					{
-						"type": "origins:or",
-						"conditions": [
-							{
-								"type": "apoli:ingredient",
-								"ingredient": {
-									"tag": "c:pickaxes"
-								}
-							},
-							{
-								"type": "apoli:ingredient",
-								"ingredient": {
-									"tag": "c:shovels"
-								}
-							}
-						]
+						"type": "medievalorigins:is_tool"
 					}
 				]
 			}
@@ -250,10 +208,25 @@
 					}
 				},
 				{
-					"type": "apoli:ingredient",
-					"ingredient": {
-						"tag": "c:armor"
-					}
+					"type": "apoli:or",
+					"conditions": [
+						{
+							"type": "origins:is_equippable",
+							"equipment_slot": "head"
+						},
+						{
+							"type": "origins:is_equippable",
+							"equipment_slot": "chest"
+						},
+						{
+							"type": "origins:is_equippable",
+							"equipment_slot": "legs"
+						},
+						{
+							"type": "origins:is_equippable",
+							"equipment_slot": "feet"
+						}
+					]
 				}
 			]
 		},
@@ -296,21 +269,7 @@
 					}
 				},
 				{
-					"type": "origins:or",
-					"conditions": [
-						{
-							"type": "apoli:ingredient",
-							"ingredient": {
-								"tag": "c:swords"
-							}
-						},
-						{
-							"type": "apoli:ingredient",
-							"ingredient": {
-								"tag": "c:axes"
-							}
-						}
-					]
+					"type": "medievalorigins:is_melee_weapon"
 				}
 			]
 		},
@@ -349,21 +308,7 @@
 					}
 				},
 				{
-					"type": "origins:or",
-					"conditions": [
-						{
-							"type": "apoli:ingredient",
-							"ingredient": {
-								"tag": "c:pickaxes"
-							}
-						},
-						{
-							"type": "apoli:ingredient",
-							"ingredient": {
-								"tag": "c:shovels"
-							}
-						}
-					]
+					"type": "medievalorigins:is_tool"
 				}
 			]
 		},

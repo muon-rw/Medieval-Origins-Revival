@@ -3,28 +3,60 @@
 	"armor_restrict": {
 		"type": "origins:restrict_armor",
 		"head": {
-			"type": "origins:ingredient",
-			"ingredient": {
-				"tag": "medievalorigins:silver_armor"
-			}
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:ingredient",
+					"ingredient": {
+						"tag": "medievalorigins:silver_armor"
+					}
+				},
+				{
+					"type": "medievalorigins:is_silver_armor"
+				}
+			]
 		},
 		"chest": {
-			"type": "origins:ingredient",
-			"ingredient": {
-				"tag": "medievalorigins:silver_armor"
-			}
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:ingredient",
+					"ingredient": {
+						"tag": "medievalorigins:silver_armor"
+					}
+				},
+				{
+					"type": "medievalorigins:is_silver_armor"
+				}
+			]
 		},
 		"legs": {
-			"type": "origins:ingredient",
-			"ingredient": {
-				"tag": "medievalorigins:silver_armor"
-			}
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:ingredient",
+					"ingredient": {
+						"tag": "medievalorigins:silver_armor"
+					}
+				},
+				{
+					"type": "medievalorigins:is_silver_armor"
+				}
+			]
 		},
 		"feet": {
-			"type": "origins:ingredient",
-			"ingredient": {
-				"tag": "medievalorigins:silver_armor"
-			}
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:ingredient",
+					"ingredient": {
+						"tag": "medievalorigins:silver_armor"
+					}
+				},
+				{
+					"type": "medievalorigins:is_silver_armor"
+				}
+			]
 		}
 	},
 	"tool_weakness": {
@@ -46,20 +78,36 @@
 			"type": "origins:equipped_item",
 			"equipment_slot": "mainhand",
 			"item_condition": {
-				"type": "origins:ingredient",
-				"ingredient": {
-					"tag": "medievalorigins:silver_tools"
-				}
+				"type": "origins:or",
+				"conditions": [
+					{
+						"type": "origins:ingredient",
+						"ingredient": {
+							"tag": "medievalorigins:silver_tools"
+						}
+					},
+					{
+						"type": "medievalorigins:is_silver_tool"
+					}
+				]
 			}
 		}
 	},
 	"armor_tooltip": {
 		"type": "apoli:tooltip",
 		"item_condition": {
-			"type": "origins:ingredient",
-			"ingredient": {
-				"tag": "medievalorigins:silver_armor"
-			}
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:ingredient",
+					"ingredient": {
+						"tag": "medievalorigins:silver_armor"
+					}
+				},
+				{
+					"type": "medievalorigins:is_silver_armor"
+				}
+			]
 		},
 		"text": [
 			{
@@ -83,10 +131,18 @@
 	"weapon_tooltip": {
 		"type": "apoli:tooltip",
 		"item_condition": {
-			"type": "origins:ingredient",
-			"ingredient": {
-				"tag": "medievalorigins:silver_tools"
-			}
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:ingredient",
+					"ingredient": {
+						"tag": "medievalorigins:silver_tools"
+					}
+				},
+				{
+					"type": "medievalorigins:is_silver_tool"
+				}
+			]
 		},
 		"text": [
 			{

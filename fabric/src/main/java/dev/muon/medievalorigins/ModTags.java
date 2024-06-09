@@ -9,7 +9,14 @@ import net.minecraft.world.item.*;
 
 import java.util.function.Predicate;
 
+/**
+ * Switching to item conditions for cross-platform consistency
+ * Leaving this in for now, just in case I missed any residual powers that rely on tags
+ */
+@Deprecated
 public class ModTags {
+
+
     public static void registerTags() {
             addToTag("summon_weapons", item -> item == Items.BOW || item instanceof DiggerItem || item instanceof SwordItem);
             addToTag("bows", item -> item instanceof BowItem);
@@ -34,7 +41,6 @@ public class ModTags {
             addToTag("golden_weapons", item -> item instanceof SwordItem && BuiltInRegistries.ITEM.getKey(item).getPath().matches("[a-z_]*(gold|gilded)[a-z_]*"));
             addToTag("golden_tools", item -> item instanceof DiggerItem && BuiltInRegistries.ITEM.getKey(item).getPath().matches("[a-z_]*(gold|gilded)[a-z_]*"));
     }
-    // unused for now
     public static TagKey<Item> bowsTag = TagKey.create(Registries.ITEM, MedievalOrigins.loc("bows"));
 
     public static void addToTag(String tagName, Predicate<Item> condition) {

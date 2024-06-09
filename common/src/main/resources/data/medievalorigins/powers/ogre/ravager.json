@@ -12,13 +12,16 @@
 			"type": "origins:equipped_item",
 			"equipment_slot": "mainhand",
 			"item_condition": {
-				"type": "origins:and",
+				"type": "origins:or",
 				"conditions": [
 					{
 						"type": "apoli:ingredient",
 						"ingredient": {
 							"tag": "medievalorigins:axes"
 						}
+					},
+					{
+						"type": "medievalorigins:is_axe"
 					}
 				]
 			}
@@ -36,13 +39,16 @@
 			"type": "origins:equipped_item",
 			"equipment_slot": "offhand",
 			"item_condition": {
-				"type": "origins:and",
+				"type": "origins:or",
 				"conditions": [
 					{
 						"type": "apoli:ingredient",
 						"ingredient": {
 							"tag": "medievalorigins:axes"
 						}
+					},
+					{
+						"type": "medievalorigins:is_axe"
 					}
 				]
 			}
@@ -51,10 +57,18 @@
 	"axe_tooltip": {
 		"type": "apoli:tooltip",
 		"item_condition": {
-			"type": "apoli:ingredient",
-			"ingredient": {
-				"tag": "medievalorigins:axes"
-			}
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "apoli:ingredient",
+					"ingredient": {
+						"tag": "medievalorigins:axes"
+					}
+				},
+				{
+					"type": "medievalorigins:is_axe"
+				}
+			]
 		},
 		"texts": [
 			{

@@ -13,13 +13,16 @@
             "type": "origins:or",
             "conditions": [
                 {
+                    "type": "origins:empty"
+                },
+                {
                     "type": "origins:ingredient",
                     "ingredient": {
                         "tag": "medievalorigins:fist_weapons"
                     }
                 },
                 {
-                    "type": "origins:empty"
+                    "type": "medievalorigins:is_fist_weapon"
                 }
             ]
         }

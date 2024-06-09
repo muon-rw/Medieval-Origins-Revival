@@ -13,20 +13,36 @@
 					"type": "origins:equipped_item",
 					"equipment_slot": "mainhand",
 					"item_condition": {
-						"type": "apoli:ingredient",
-						"ingredient": {
-							"tag": "medievalorigins:daggers"
-						}
+						"type": "origins:or",
+						"conditions": [
+							{
+								"type": "apoli:ingredient",
+								"ingredient": {
+									"tag": "medievalorigins:daggers"
+								}
+							},
+							{
+								"type": "medievalorigins:is_dagger"
+							}
+						]
 					}
 				},
 				{
 					"type": "origins:equipped_item",
 					"equipment_slot": "offhand",
 					"item_condition": {
-						"type": "apoli:ingredient",
-						"ingredient": {
-							"tag": "medievalorigins:daggers"
-						}
+						"type": "origins:or",
+						"conditions": [
+							{
+								"type": "apoli:ingredient",
+								"ingredient": {
+									"tag": "medievalorigins:daggers"
+								}
+							},
+							{
+								"type": "medievalorigins:is_dagger"
+							}
+						]
 					}
 				}
 			]
@@ -35,10 +51,18 @@
 	"tooltip": {
 		"type": "apoli:tooltip",
 		"item_condition": {
-			"type": "apoli:ingredient",
-			"ingredient": {
-				"tag": "medievalorigins:daggers"
-			}
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "apoli:ingredient",
+					"ingredient": {
+						"tag": "medievalorigins:daggers"
+					}
+				},
+				{
+					"type": "medievalorigins:is_dagger"
+				}
+			]
 		},
 		"texts": [
 			{

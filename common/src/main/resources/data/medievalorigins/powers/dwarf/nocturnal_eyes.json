@@ -26,6 +26,9 @@
 										}
 									},
 									{
+										"type": "medievalorigins:is_golden_armor"
+									},
+									{
 										"type": "origins:enchantment",
 										"enchantment": "medievalorigins:mirroring",
 										"calculation": "sum",

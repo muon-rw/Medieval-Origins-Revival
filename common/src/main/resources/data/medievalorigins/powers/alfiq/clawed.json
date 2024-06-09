@@ -40,6 +40,9 @@
                         "ingredient": {
                             "tag": "medievalorigins:fist_weapons"
                         }
+                    },
+                    {
+                        "type": "medievalorigins:is_fist_weapon"
                     }
                 ]
             }

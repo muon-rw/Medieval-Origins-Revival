@@ -22,16 +22,25 @@
                     }
                 },
                 {
+                    "type": "medievalorigins:is_golden_armor"
+                },
+                {
                     "type": "origins:ingredient",
                     "ingredient": {
                         "tag": "medievalorigins:golden_weapon"
                     }
                 },
                 {
+                    "type": "medievalorigins:is_golden_weapon"
+                },
+                {
                     "type": "origins:ingredient",
                     "ingredient": {
                         "tag": "medievalorigins:golden_tool"
                     }
+                },
+                {
+                    "type": "medievalorigins:is_golden_tool"
                 }
             ]
         }
@@ -56,16 +65,25 @@
                     }
                 },
                 {
+                    "type": "medievalorigins:is_golden_armor"
+                },
+                {
                     "type": "origins:ingredient",
                     "ingredient": {
                         "tag": "medievalorigins:golden_weapon"
                     }
                 },
                 {
+                    "type": "medievalorigins:is_golden_weapon"
+                },
+                {
                     "type": "origins:ingredient",
                     "ingredient": {
                         "tag": "medievalorigins:golden_tool"
                     }
+                },
+                {
+                    "type": "medievalorigins:is_golden_tool"
                 }
             ]
         }

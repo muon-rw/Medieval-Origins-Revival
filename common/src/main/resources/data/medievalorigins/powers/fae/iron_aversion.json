@@ -3,37 +3,77 @@
 	"armor_restrict": {
 		"type": "origins:restrict_armor",
 		"head": {
-			"type": "origins:ingredient",
-			"ingredient": {
-				"tag": "medievalorigins:silver_armor"
-			}
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:ingredient",
+					"ingredient": {
+						"tag": "medievalorigins:silver_armor"
+					}
+				},
+				{
+					"type": "medievalorigins:is_silver_armor"
+				}
+			]
 		},
 		"chest": {
-			"type": "origins:ingredient",
-			"ingredient": {
-				"tag": "medievalorigins:silver_armor"
-			}
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:ingredient",
+					"ingredient": {
+						"tag": "medievalorigins:silver_armor"
+					}
+				},
+				{
+					"type": "medievalorigins:is_silver_armor"
+				}
+			]
 		},
 		"legs": {
-			"type": "origins:ingredient",
-			"ingredient": {
-				"tag": "medievalorigins:silver_armor"
-			}
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:ingredient",
+					"ingredient": {
+						"tag": "medievalorigins:silver_armor"
+					}
+				},
+				{
+					"type": "medievalorigins:is_silver_armor"
+				}
+			]
 		},
 		"feet": {
-			"type": "origins:ingredient",
-			"ingredient": {
-				"tag": "medievalorigins:silver_armor"
-			}
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:ingredient",
+					"ingredient": {
+						"tag": "medievalorigins:silver_armor"
+					}
+				},
+				{
+					"type": "medievalorigins:is_silver_armor"
+				}
+			]
 		}
 	},
 	"armor_tooltip": {
 		"type": "apoli:tooltip",
 		"item_condition": {
-			"type": "origins:ingredient",
-			"ingredient": {
-				"tag": "medievalorigins:silver_armor"
-			}
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:ingredient",
+					"ingredient": {
+						"tag": "medievalorigins:silver_armor"
+					}
+				},
+				{
+					"type": "medievalorigins:is_silver_armor"
+				}
+			]
 		},
 		"text": [
 			{

@@ -8,29 +8,7 @@
 			"value": -0.15
 		},
 		"condition": {
-			"type": "origins:or",
-			"conditions": [
-				{
-					"type": "origins:equipped_item",
-					"equipment_slot": "mainhand",
-					"item_condition": {
-						"type": "origins:ingredient",
-						"ingredient": {
-							"tag": "medievalorigins:swords"
-						}
-					}
-				},
-				{
-					"type": "origins:equipped_item",
-					"equipment_slot": "mainhand",
-					"item_condition": {
-						"type": "origins:ingredient",
-						"ingredient": {
-							"tag": "medievalorigins:axes"
-						}
-					}
-				}
-			]
+			"type": "medievalorigins:is_melee_weapon"
 		}
 	},
 	"attack_speed":
