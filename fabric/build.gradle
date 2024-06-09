@@ -109,7 +109,7 @@ dependencies {
 
     modLocalRuntime("dev.kosmx.player-anim:player-animation-lib-fabric:${project.player_anim_version}")
     implementation("com.github.ZsoltMolnarrr:TinyConfig:${project.tiny_config_version}")
-    modLocalRuntime("mod.azure.azurelibarmor:azurelibarmor-fabric-${project.azure_mc_version}:${project.azure_lib_version}")
+    modLocalRuntime("mod.azure.azurelibarmor:azurelibarmor-fabric-${project.minecraft_version}:${project.azure_lib_version}")
     modCompileOnly ("me.shedaniel:RoughlyEnoughItems-api-fabric:${project.rei_version}")
     modRuntimeOnly ("me.shedaniel:RoughlyEnoughItems-fabric:${project.rei_version}")
     modRuntimeOnly ("curse.maven:jade-324717:${project.jade_id}")
