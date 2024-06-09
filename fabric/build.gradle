@@ -90,7 +90,6 @@ dependencies {
     // Icarus + Deps
     modImplementation ("dev.emi:trinkets:${project.trinkets_version}")
     modImplementation("maven.modrinth:icarus:${project.icarus_version}+Fabric")
-
     modLocalRuntime("com.teamresourceful.resourcefulconfig:resourcefulconfig-fabric-1.20.1:${project.resourceful_version}")
     modLocalRuntime ("mysticdrew:common-networking-fabric:${project.cmnw_version}")
 

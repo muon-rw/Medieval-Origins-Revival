@@ -38,10 +38,16 @@ repositories {
         content {
             excludeGroup "io.github.edwinmindcraft"}
     }
-
+    maven {
+        url = "https://jm.gserv.me/repository/maven-public/"
+    }
     maven { url = 'https://maven.greenhouseteam.dev/releases/' }
     maven { url = 'https://maven.theillusivec4.top' }
-    maven { url = "https://modmaven.dev"}
+    maven { url = "https://modmaven.dev"
+        content {
+            excludeGroup "com.teamresourceful.resourcefulconfig"}
+    }
+    maven { url = "https://nexus.resourcefulbees.com/repository/maven-public/" }
 }
 
 dependencies {
@@ -60,8 +66,24 @@ dependencies {
 
     compileOnly project(":common")
     annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT:processor")
-}
 
+
+    // Optional Compats:
+    // Icarus
+
+    implementation fg.deobf("maven.modrinth:icarus:${project.icarus_version}+NeoForge")
+    runtimeOnly fg.deobf("com.teamresourceful.resourcefulconfig:resourcefulconfig-forge-1.20.1:${project.resourceful_version}")
+    runtimeOnly fg.deobf("mysticdrew:common-networking-forge:${project.cmnw_version}")
+    compileOnly(fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}:api"))
+    runtimeOnly(fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}"))
+
+
+    // I just like these
+
+    implementation fg.deobf("curse.maven:jade-324717:5390389}")
+    runtimeOnly fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}")
+}
+8
 minecraft {
     mappings channel: 'parchment', version: "${parchment_version}-${minecraft_version}"
 
