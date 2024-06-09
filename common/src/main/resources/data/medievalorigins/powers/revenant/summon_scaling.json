@@ -13,7 +13,7 @@
             "value": 0.5
         },
         {
-            "attribute": "minecraft:generic.armor_toughness",
+            "attribute": "projectile_damage:generic",
             "operation": "addition",
             "value": 1
         },
