@@ -37,8 +37,5 @@ public class ModTags {
     public static TagKey<Item> bowsTag = TagKey.create(Registries.ITEM, MedievalOrigins.loc("bows"));
 
     public static void addToTag(String tagName, Predicate<Item> condition) {
-        ResourceLocation tagId = MedievalOrigins.loc(tagName);
-        TagKey<Item> tagKey = TagKey.create(Registries.ITEM, tagId);
-        AutoTagRegistry.registerAutoTag(new AutoTagRegistry.AutoTag<>(tagKey, condition, AutoTag.getUniversalPreventTag(BuiltInRegistries.ITEM)));
     }
 }
