@@ -19,6 +19,7 @@ import java.util.function.BiConsumer;
 
 public class TransferItemAction extends BiEntityAction<NoConfiguration> {
 
+    //todo: rewrite
     public static void transferItem(Entity actor, Entity target) {
         if (!(actor instanceof Player player) || !(target instanceof LivingEntity livingTarget)) {
             return;

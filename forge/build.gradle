@@ -51,19 +51,19 @@ dependencies {
     implementation fg.deobf("io.github.edwinmindcraft:apoli-forge:${minecraft_version}-${apoli_forge_version}")
     implementation fg.deobf("io.github.edwinmindcraft:origins-forge:${minecraft_version}-${origins_forge_version}")
 
-    runtimeOnly fg.deobf("top.theillusivec4.caelus:caelus-forge:${caelus_version}")
-    compileOnly fg.deobf("top.theillusivec4.caelus:caelus-forge:${caelus_version}")
-
     implementation (jarJar(fg.deobf("net.merchantpug:Apugli:${apugli_version}+${minecraft_version}-forge"))) {
         jarJar.ranged(it, "[${apugli_version},)")
     }
+
+    runtimeOnly fg.deobf("top.theillusivec4.caelus:caelus-forge:${caelus_version}")
+    compileOnly fg.deobf("top.theillusivec4.caelus:caelus-forge:${caelus_version}")
 
     compileOnly project(":common")
     annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT:processor")
 }
 
 minecraft {
-    mappings channel: 'official', version: minecraft_version
+    mappings channel: 'parchment', version: "${parchment_version}-${minecraft_version}"
 
     copyIdeResources = true //Calls processResources when in dev
 
