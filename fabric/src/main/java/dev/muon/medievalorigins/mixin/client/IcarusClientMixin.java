@@ -39,10 +39,10 @@ public abstract class IcarusClientMixin {
 
     @ModifyReturnValue(method = "getWingsForRendering", at = @At(value = "RETURN"))
     private static ItemStack renderOriginWings(ItemStack original, LivingEntity entity) {
-        if(original.isEmpty()) {
-            var list = PowerHolderComponent.getPowers(entity, IcarusWingsPower.class);
-            if (!list.isEmpty()) {
-                return list.get(0).getWingsType();
+        if (original.isEmpty()) {
+            var playerPowers = PowerHolderComponent.getPowers(entity, IcarusWingsPower.class);
+            if (!playerPowers.isEmpty()) {
+                return playerPowers.get(0).getWingsType();
             }
         }
         return original;

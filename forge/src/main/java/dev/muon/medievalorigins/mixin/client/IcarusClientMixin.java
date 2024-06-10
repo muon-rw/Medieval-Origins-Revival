@@ -5,6 +5,7 @@ import dev.cammiescorner.icarus.util.IcarusHelper;
 import dev.muon.medievalorigins.enchantment.ModEnchantments;
 import dev.muon.medievalorigins.power.ModPowers;
 import io.github.edwinmindcraft.apoli.api.ApoliAPI;
+import io.github.edwinmindcraft.apoli.api.component.IPowerContainer;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorItem;
@@ -38,18 +39,15 @@ public class IcarusClientMixin {
 
     @ModifyReturnValue(method = "getWingsForRendering", at = @At(value = "RETURN"))
     private static ItemStack renderOriginWings(ItemStack original, LivingEntity entity) {
-        if(original.isEmpty()) {
-            var pc = ApoliAPI.getPowerContainer(entity);
-            if (pc != null) {
-                var powers = pc.getPowers(ModPowers.ICARUS_WINGS.get());
-                if (!powers.isEmpty()) {
-                    return powers.get(0).value().getConfiguration().getWingsType();
+        if (original.isEmpty()) {
+            IPowerContainer powerContainer = ApoliAPI.getPowerContainer(entity);
+            if (powerContainer != null) {
+                var playerPowers = powerContainer.getPowers(ModPowers.ICARUS_WINGS.get());
+                if (!playerPowers.isEmpty()) {
+                    return playerPowers.get(0).value().getConfiguration().getWingsType();
                 }
             }
         }
-
         return original;
     }
-
-
 }
