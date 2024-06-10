@@ -4,6 +4,5 @@
 	],
 	"icon": "icarus:white_feathered_wings",
 	"order": 1,
-	"impact": 3,
-	"unchoosable": true
+	"impact": 3
 }

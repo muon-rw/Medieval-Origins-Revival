@@ -1,6 +1,6 @@
 package dev.muon.medievalorigins;
 
-import net.fabricmc.loader.api.FabricLoader;
+import net.minecraftforge.fml.loading.LoadingModList;
 import org.objectweb.asm.tree.ClassNode;
 import org.spongepowered.asm.mixin.extensibility.IMixinConfigPlugin;
 import org.spongepowered.asm.mixin.extensibility.IMixinInfo;
@@ -11,7 +11,6 @@ import java.util.Set;
 public class MedievalOriginsMixinPlugin implements IMixinConfigPlugin {
     @Override
     public void onLoad(String mixinPackage) {
-
     }
 
     @Override
@@ -19,11 +18,12 @@ public class MedievalOriginsMixinPlugin implements IMixinConfigPlugin {
         return null;
     }
 
+
     @Override
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
         if (mixinClassName.equals("dev.muon.medievalorigins.mixin.client.IcarusClientMixin") ||
-           (mixinClassName.equals("dev.muon.medievalorigins.mixin.client.IcarusHelperMixin"))) {
-            return FabricLoader.getInstance().isModLoaded("icarus");
+                (mixinClassName.equals("dev.muon.medievalorigins.mixin.client.IcarusHelperMixin"))) {
+            return LoadingModList.get().getModFileById("icarus") != null;
         }
         return true;
     }

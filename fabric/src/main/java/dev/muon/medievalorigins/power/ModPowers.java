@@ -14,7 +14,7 @@ import net.minecraft.core.Registry;
 public class ModPowers {
     public static void register() {
         if (FabricLoader.getInstance().isModLoaded("icarus")) {
-            registerPowerFactory(WingsPower.WINGS_FACTORY);
+            registerPowerFactory(IcarusWingsPower.ICARUS_WINGS_FACTORY);
         }
         register(OwnerAttributeTransferPower.createFactory());
     }

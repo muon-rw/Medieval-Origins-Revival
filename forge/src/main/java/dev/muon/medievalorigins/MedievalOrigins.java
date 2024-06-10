@@ -5,6 +5,7 @@ import dev.muon.medievalorigins.action.ModActions;
 import dev.muon.medievalorigins.condition.ModConditions;
 import dev.muon.medievalorigins.enchantment.ModEnchantments;
 import dev.muon.medievalorigins.entity.ModEntities;
+import dev.muon.medievalorigins.power.ModPowers;
 import dev.muon.medievalorigins.sounds.ModSounds;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -54,9 +55,12 @@ public class MedievalOrigins
 
         ModEnchantments.register(modEventBus);
         ModEntities.register(modEventBus);
+        ModSounds.register(modEventBus);
+
         ModActions.register(modEventBus);
         ModConditions.register(modEventBus);
-        ModSounds.register(modEventBus);
+        ModPowers.register(modEventBus);
+
         MinecraftForge.EVENT_BUS.register(this);
     }
 
