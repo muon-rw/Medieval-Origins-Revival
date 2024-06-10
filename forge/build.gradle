@@ -60,6 +60,10 @@ dependencies {
     implementation (jarJar(fg.deobf("net.merchantpug:Apugli:${apugli_version}+${minecraft_version}-forge"))) {
         jarJar.ranged(it, "[${apugli_version},)")
     }
+    implementation(fg.deobf("de.dafuqs:additionalentityattributes-forge:${aea_forge_version}") {
+        exclude group: 'net.minecraftforge'
+        exclude group: 'com.github.llamalad.mixinextras'
+    })
 
     runtimeOnly fg.deobf("top.theillusivec4.caelus:caelus-forge:${caelus_version}")
     compileOnly fg.deobf("top.theillusivec4.caelus:caelus-forge:${caelus_version}")
