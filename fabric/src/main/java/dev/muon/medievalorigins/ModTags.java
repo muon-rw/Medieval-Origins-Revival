@@ -11,9 +11,10 @@ import java.util.function.Predicate;
 
 /**
  * Switching to item conditions for cross-platform consistency
+ * (See condition.ModItemConditions)
  * Leaving this in for now, just in case I missed any residual powers that rely on tags
  */
-@Deprecated
+@Deprecated(forRemoval = true)
 public class ModTags {
 
 
