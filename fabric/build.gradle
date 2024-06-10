@@ -107,6 +107,8 @@ dependencies {
     modLocalRuntime("maven.modrinth:jewelry:${project.jewelry_version}-fabric")
     modLocalRuntime("maven.modrinth:rpgdifficulty:${project.rpg_version}")
 
+    modLocalRuntime("curse.maven:rpgmana-1021902:5382917")
+
     modLocalRuntime("dev.kosmx.player-anim:player-animation-lib-fabric:${project.player_anim_version}")
     implementation("com.github.ZsoltMolnarrr:TinyConfig:${project.tiny_config_version}")
     modLocalRuntime("mod.azure.azurelibarmor:azurelibarmor-fabric-${project.minecraft_version}:${project.azure_lib_version}")

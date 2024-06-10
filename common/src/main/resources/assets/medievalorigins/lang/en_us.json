@@ -264,14 +264,17 @@
   "power.medievalorigins.high_elf/mystic_affinity.name": "Mystic Affinity",
   "power.medievalorigins.high_elf/mystic_affinity.description": "High Elves are powerful and clever manipulators of arcane energy - they deal more magic damage and take less magic damage than other races.",
 
-  "power.medievalorigins.high_elf/spell_power_irons.name": "Highborne",
-  "power.medievalorigins.high_elf/spell_power_irons.description": "High Elves naturally have more mana than other races, and can channel the power of their elders to regenerate mana quickly.",
+  "power.medievalorigins.high_elf/mana_rpgmana.name": "Highborne",
+  "power.medievalorigins.high_elf/mana_rpgmana.description": "High Elves naturally have more mana than other races, and can channel the power of their elders to regenerate mana quickly.",
 
-  "power.medievalorigins.high_elf/spell_power_irons_ars.name": "Highborne",
-  "power.medievalorigins.high_elf/spell_power_irons_ars.description": "High Elves naturally have more mana than other races, and can channel the power of their elders to regenerate mana quickly.",
+  "power.medievalorigins.high_elf/mana_irons.name": "Highborne",
+  "power.medievalorigins.high_elf/mana_irons.description": "High Elves naturally have more mana than other races, and can channel the power of their elders to regenerate mana quickly.",
 
-  "power.medievalorigins.high_elf/spell_power_ars.name": "Highborne",
-  "power.medievalorigins.high_elf/spell_power_ars.description": "High Elves naturally have more mana than other races, and can channel the power of their elders to regenerate mana quickly.",
+  "power.medievalorigins.high_elf/mana_ars.name": "Highborne",
+  "power.medievalorigins.high_elf/mana_ars.description": "High Elves naturally have more mana than other races, and can channel the power of their elders to regenerate mana quickly.",
+
+  "power.medievalorigins.high_elf/mana_irons_ars.name": "Highborne",
+  "power.medievalorigins.high_elf/mana_irons_ars.description": "High Elves naturally have more mana than other races, and can channel the power of their elders to regenerate mana quickly.",
 
   "power.medievalorigins.high_elf/towering.name": "Towering",
   "power.medievalorigins.high_elf/towering.description": "High Elves are slender and slightly taller than the average human.",

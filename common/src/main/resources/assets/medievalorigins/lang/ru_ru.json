@@ -258,14 +258,17 @@
   "power.medievalorigins.high_elf/mystic_affinity.name": "Близость к магии",
   "power.medievalorigins.high_elf/mystic_affinity.description": "Высшие эльфы — мощные и умные манипуляторы тайной энергии: они наносят больше магического урона и получают меньше магического урона, чем другие расы.",
 
-  "power.medievalorigins.high_elf/spell_power_irons.name": "Высокорожденный",
-  "power.medievalorigins.high_elf/spell_power_irons.description": "У высших эльфов от природы больше маны, чем у других рас, и они могут использовать силу своих старейшин для быстрой регенерации маны.",
+  "power.medievalorigins.high_elf/mana_rpgmana.name": "Высокорожденный",
+  "power.medievalorigins.high_elf/mana_rpgmana.description": "У высших эльфов от природы больше маны, чем у других рас, и они могут использовать силу своих старейшин для быстрой регенерации маны.",
 
-  "power.medievalorigins.high_elf/spell_power_irons_ars.name": "Высокорожденный",
-  "power.medievalorigins.high_elf/spell_power_irons_ars.description": "У высших эльфов от природы больше маны, чем у других рас, и они могут использовать силу своих старейшин для быстрой регенерации маны.",
+  "power.medievalorigins.high_elf/mana_irons.name": "Высокорожденный",
+  "power.medievalorigins.high_elf/mana_irons.description": "У высших эльфов от природы больше маны, чем у других рас, и они могут использовать силу своих старейшин для быстрой регенерации маны.",
 
-  "power.medievalorigins.high_elf/spell_power_ars.name": "Высокорожденный",
-  "power.medievalorigins.high_elf/spell_power_ars.description": "У высших эльфов от природы больше маны, чем у других рас, и они могут использовать силу своих старейшин для быстрой регенерации маны.",
+  "power.medievalorigins.high_elf/mana_ars.name": "Высокорожденный",
+  "power.medievalorigins.high_elf/mana_ars.description": "У высших эльфов от природы больше маны, чем у других рас, и они могут использовать силу своих старейшин для быстрой регенерации маны.",
+
+  "power.medievalorigins.high_elf/mana_irons_ars.name": "Высокорожденный",
+  "power.medievalorigins.high_elf/mana_irons_ars.description": "У высших эльфов от природы больше маны, чем у других рас, и они могут использовать силу своих старейшин для быстрой регенерации маны.",
 
   "power.medievalorigins.high_elf/towering.name": "Возвышающийся",
   "power.medievalorigins.high_elf/towering.description": "Высшие эльфы стройнее и выше среднего человека.",
