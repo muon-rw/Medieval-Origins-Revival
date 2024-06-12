@@ -125,13 +125,11 @@
 									"type": "origins:and",
 									"actions": [
 										{
-											"type": "medievalorigins:damage",
+											"type": "medievalorigins:spell_damage",
 											"base": 8,
-											"modifier": {
-												"attribute": "spell_power:soul",
-												"operation": "multiply_base",
-												"value": 0.3
-											},
+											"magic_school": "soul",
+											"crit_behavior": "normal",
+											"scaling_factor": 0.3,
 											"damage_type": "medievalorigins:siphon"
 										},
 										{
@@ -169,13 +167,11 @@
 									"type": "origins:and",
 									"actions": [
 										{
-											"type": "medievalorigins:damage",
+											"type": "medievalorigins:spell_damage",
 											"base": 4,
-											"modifier": {
-												"attribute": "spell_power:soul",
-												"operation": "multiply_base",
-												"value": 0.3
-											},
+											"magic_school": "soul",
+											"crit_behavior": "normal",
+											"scaling_factor": 0.3,
 											"damage_type": "medievalorigins:siphon"
 										},
 										{
@@ -215,13 +211,11 @@
 									"type": "origins:and",
 									"actions": [
 										{
-											"type": "medievalorigins:damage",
+											"type": "medievalorigins:spell_damage",
 											"base": 2,
-											"modifier": {
-												"attribute": "spell_power:soul",
-												"operation": "multiply_base",
-												"value": 0.3
-											},
+											"magic_school": "soul",
+											"crit_behavior": "normal",
+											"scaling_factor": 0.3,
 											"damage_type": "medievalorigins:siphon"
 										},
 										{
@@ -261,13 +255,11 @@
 									"type": "origins:and",
 									"actions": [
 										{
-											"type": "medievalorigins:damage",
+											"type": "medievalorigins:spell_damage",
 											"base": 1,
-											"modifier": {
-												"attribute": "spell_power:soul",
-												"operation": "multiply_base",
-												"value": 0.3
-											},
+											"magic_school": "soul",
+											"crit_behavior": "normal",
+											"scaling_factor": 0.3,
 											"damage_type": "medievalorigins:siphon"
 										},
 										{

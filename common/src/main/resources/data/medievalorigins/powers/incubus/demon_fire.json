@@ -95,23 +95,19 @@
 								{
 									"type": "origins:if_else",
 									"if_action": {
-										"type": "medievalorigins:damage",
+										"type": "medievalorigins:spell_damage",
 										"base": 4,
-										"modifier": {
-											"attribute": "spell_power:fire",
-											"operation": "addition",
-											"value": 1.0
-										},
+										"magic_school": "fire",
+										"crit_behavior": "normal",
+										"scaling_factor": 1.0,
 										"damage_type": "medievalorigins:blazenbreath"
 									},
 									"else_action": {
-										"type": "medievalorigins:damage",
+										"type": "medievalorigins:spell_damage",
 										"base": 7,
-										"modifier": {
-											"attribute": "spell_power:fire",
-											"operation": "addition",
-											"value": 1.5
-										},
+										"magic_school": "fire",
+										"crit_behavior": "normal",
+										"scaling_factor": 1.5,
 										"damage_type": "medievalorigins:blazenbreath"
 									},
 									"condition": {

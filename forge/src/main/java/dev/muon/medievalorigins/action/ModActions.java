@@ -12,6 +12,8 @@ public class ModActions {
 
 
     public static final DeferredRegister<BiEntityAction<?>> BIENTITY_ACTIONS = DeferredRegister.create(ApoliRegistries.BIENTITY_ACTION_KEY, MedievalOrigins.MODID);
+    public static final RegistryObject<AttributedDamageAction> DAMAGE = BIENTITY_ACTIONS.register("damage", AttributedDamageAction::new);
+    public static final RegistryObject<SpellDamageAction> SPELL_DAMAGE = BIENTITY_ACTIONS.register("spell_damage", SpellDamageAction::new);
     public static final RegistryObject<TransferItemAction> TRANSFER_ITEM = BIENTITY_ACTIONS.register("transfer_item",
             () -> new TransferItemAction(TransferItemAction::transferItem));
     public static void register(IEventBus eventBus) {
