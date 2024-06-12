@@ -1,4 +1,5 @@
 package dev.muon.medievalorigins.mixin.client;
+
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import dev.cammiescorner.icarus.client.IcarusClient;
 import dev.cammiescorner.icarus.util.IcarusHelper;
@@ -18,7 +19,6 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
 @Mixin(value = IcarusClient.class, remap = false)
 public class IcarusClientMixin {
-
     @ModifyVariable(method = "onPlayerTick(Lnet/minecraft/world/entity/player/Player;)V",
             at = @At(value = "STORE", opcode = Opcodes.FSTORE),
             ordinal = 0)
