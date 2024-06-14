@@ -1,6 +1,7 @@
 package dev.muon.medievalorigins.action;
 
 import dev.muon.medievalorigins.MedievalOrigins;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -44,36 +45,40 @@ public class SpellDamageAction {
             return;
         }
 
-        String magicSchoolStr = data.get("magic_school");
-        SpellSchool magicSchool;
-        try {
-            magicSchool = SpellSchools.getSchool(magicSchoolStr);
-            if (magicSchool == null) {
-                throw new IllegalArgumentException("Unknown magic school: " + magicSchoolStr);
-            }
-        } catch (IllegalArgumentException e) {
-            throw new IllegalArgumentException("Unknown magic school: " + magicSchoolStr);
-        }
-
-        String critBehavior = data.get("crit_behavior");
-        SpellPower.Result spellPowerResult = SpellPower.getSpellPower(magicSchool, (LivingEntity) actor);
-        double finalSpellPower;
-        switch (critBehavior) {
-            case "always":
-                finalSpellPower = spellPowerResult.forcedCriticalValue();
-                break;
-            case "never":
-                finalSpellPower = spellPowerResult.nonCriticalValue();
-                break;
-            case "normal":
-            default:
-                finalSpellPower = spellPowerResult.randomValue();
-                break;
-        }
-
         float baseDamage = data.get("base");
         float scalingFactor = data.get("scaling_factor");
-        double totalDamage = baseDamage + (finalSpellPower * scalingFactor);
+        double totalDamage = baseDamage;
+
+        if (FabricLoader.getInstance().isModLoaded("spell_power")) {
+            String magicSchoolStr = data.get("magic_school");
+            SpellSchool magicSchool;
+            try {
+                magicSchool = SpellSchools.getSchool(magicSchoolStr);
+                if (magicSchool == null) {
+                    throw new IllegalArgumentException("Unknown magic school: " + magicSchoolStr);
+                }
+            } catch (IllegalArgumentException e) {
+                throw new IllegalArgumentException("Unknown magic school: " + magicSchoolStr);
+            }
+
+            String critBehavior = data.get("crit_behavior");
+            SpellPower.Result spellPowerResult = SpellPower.getSpellPower(magicSchool, (LivingEntity) actor);
+            double finalSpellPower;
+            switch (critBehavior) {
+                case "always":
+                    finalSpellPower = spellPowerResult.forcedCriticalValue();
+                    break;
+                case "never":
+                    finalSpellPower = spellPowerResult.nonCriticalValue();
+                    break;
+                case "normal":
+                default:
+                    finalSpellPower = spellPowerResult.randomValue();
+                    break;
+            }
+
+            totalDamage += finalSpellPower * scalingFactor;
+        }
 
         DamageSource source = MiscUtil.createDamageSource(
                 actor.damageSources(),

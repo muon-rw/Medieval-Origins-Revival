@@ -2,6 +2,7 @@ package dev.muon.medievalorigins.action;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import dev.muon.medievalorigins.Constants;
 import dev.muon.medievalorigins.MedievalOrigins;
 import io.github.apace100.apoli.data.ApoliDataTypes;
 import io.github.apace100.apoli.data.DamageSourceDescription;
@@ -19,6 +20,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import io.redspace.ironsspellbooks.api.spells.SchoolType;
 import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
+import net.minecraftforge.fml.ModList;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -50,24 +52,26 @@ public class SpellDamageAction extends BiEntityAction<SpellDamageAction.Configur
 
         float baseDamage = configuration.base();
         String magicSchoolStr = configuration.magicSchool();
-        ResourceLocation schoolResourceLocation = new ResourceLocation(magicSchoolStr.contains(":") ? magicSchoolStr : "irons_spellbooks:" + magicSchoolStr);
-        SchoolType magicSchool = SchoolRegistry.getSchool(schoolResourceLocation);
 
-        if (magicSchool == null) {
-            String translatedSchool = SCHOOL_TRANSLATION_MAP.get(magicSchoolStr);
-            if (translatedSchool != null) {
-                schoolResourceLocation = new ResourceLocation(translatedSchool.contains(":") ? translatedSchool : "irons_spellbooks:" + translatedSchool);
-                magicSchool = SchoolRegistry.getSchool(schoolResourceLocation);
+        if (ModList.get().isLoaded("irons_spellbooks")) {
+            ResourceLocation schoolResourceLocation = new ResourceLocation(magicSchoolStr.contains(":") ? magicSchoolStr : "irons_spellbooks:" + magicSchoolStr);
+            SchoolType magicSchool = SchoolRegistry.getSchool(schoolResourceLocation);
+
+            if (magicSchool == null) {
+                String translatedSchool = SCHOOL_TRANSLATION_MAP.get(magicSchoolStr);
+                if (translatedSchool != null) {
+                    schoolResourceLocation = new ResourceLocation(translatedSchool.contains(":") ? translatedSchool : "irons_spellbooks:" + translatedSchool);
+                    magicSchool = SchoolRegistry.getSchool(schoolResourceLocation);
+                }
+            }
+
+            if (magicSchool != null) {
+                double spellPower = magicSchool.getPowerFor((LivingEntity) actor);
+                baseDamage += spellPower * configuration.scalingFactor();
+            } else {
+                Constants.LOG.info("No valid Magic School found for type " + magicSchoolStr);
             }
         }
-
-        if (magicSchool == null) {
-            System.out.println("No valid Magic School found for type " + magicSchoolStr);
-            return;
-        }
-
-        double spellPower = magicSchool.getPowerFor((LivingEntity) actor);
-        baseDamage += spellPower * configuration.scalingFactor();
 
         DamageSource source = MiscUtil.createDamageSource(
                 actor.damageSources(),
