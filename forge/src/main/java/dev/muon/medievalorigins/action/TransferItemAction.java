@@ -19,33 +19,26 @@ import java.util.function.BiConsumer;
 
 public class TransferItemAction extends BiEntityAction<NoConfiguration> {
 
-    //todo: rewrite
     public static void transferItem(Entity actor, Entity target) {
-        if (!(actor instanceof Player player) || !(target instanceof LivingEntity livingTarget)) {
-            return;
-        }
-        ItemStack actorItem = player.getMainHandItem().copy();
-        ItemStack targetItem = livingTarget.getMainHandItem().copy();
-        if (actorItem.isEmpty() && targetItem.isEmpty()) {
-            return;
-        }
-        int actorSlotIndex = player.getInventory().selected;
-        boolean shouldTransfer = false;
-        if (target instanceof SummonedSkeleton summonedSkeleton) {
-            shouldTransfer = player.getUUID().equals(summonedSkeleton.getOwnerUUID());
-            if (shouldTransfer) summonedSkeleton.setWeapon(actorItem);
-        } else if (target instanceof SummonedWitherSkeleton summonedWitherSkeleton) {
-            shouldTransfer = player.getUUID().equals(summonedWitherSkeleton.getOwnerUUID());
-            if (shouldTransfer) summonedWitherSkeleton.setWeapon(actorItem);
-        } else if (target instanceof SummonedZombie summonedZombie) {
-            shouldTransfer = player.getUUID().equals(summonedZombie.getOwnerUUID());
-            if (shouldTransfer) summonedZombie.setWeapon(actorItem);
-        } else {
-            livingTarget.setItemInHand(InteractionHand.MAIN_HAND, actorItem);
-            shouldTransfer = true;
-        }
-        if (shouldTransfer) {
-            player.getInventory().setItem(actorSlotIndex, targetItem);
+        if (actor instanceof Player player && target instanceof LivingEntity livingTarget) {
+            ItemStack actorItem = player.getMainHandItem().copy();
+            ItemStack targetItem = livingTarget.getMainHandItem().copy();
+
+            if (!actorItem.isEmpty() || !targetItem.isEmpty()) {
+                boolean shouldTransfer;
+
+                if (target instanceof ISummon summon) {
+                    shouldTransfer = player.getUUID().equals(summon.getOwnerUUID());
+                    if (shouldTransfer) summon.setWeapon(actorItem);
+                } else {
+                    livingTarget.setItemInHand(InteractionHand.MAIN_HAND, actorItem);
+                    shouldTransfer = true;
+                }
+
+                if (shouldTransfer) {
+                    player.getInventory().setItem(player.getInventory().selected, targetItem);
+                }
+            }
         }
     }
 

@@ -1,6 +1,8 @@
 package dev.muon.medievalorigins.action;
 
+import dev.muon.medievalorigins.Constants;
 import dev.muon.medievalorigins.MedievalOrigins;
+import dev.muon.medievalorigins.entity.ISummon;
 import dev.muon.medievalorigins.entity.SummonedSkeleton;
 import dev.muon.medievalorigins.entity.SummonedWitherSkeleton;
 import io.github.apace100.apoli.power.factory.action.ActionFactory;
@@ -27,14 +29,20 @@ public class TransferItemAction {
             ItemStack targetItem = livingTarget.getMainHandItem().copy();
 
             if (!actorItem.isEmpty() || !targetItem.isEmpty()) {
-                if (target instanceof SummonedSkeleton summon) {
-                    summon.setWeapon(actorItem.isEmpty() ? ItemStack.EMPTY : actorItem);
-                } else if (target instanceof SummonedWitherSkeleton summon) {
-                    summon.setWeapon(actorItem.isEmpty() ? ItemStack.EMPTY : actorItem);
+                boolean shouldTransfer;
+
+                if (target instanceof ISummon summon) {
+                    shouldTransfer = livingActor.getUUID().equals(summon.getOwnerUUID());
+                    Constants.LOG.info("Should Transfer:" + shouldTransfer);
+                    if (shouldTransfer) summon.setWeapon(actorItem);
                 } else {
-                    livingTarget.setItemInHand(InteractionHand.MAIN_HAND, actorItem.isEmpty() ? ItemStack.EMPTY : actorItem);
+                    livingTarget.setItemInHand(InteractionHand.MAIN_HAND, actorItem);
+                    shouldTransfer = true;
                 }
-                livingActor.setItemInHand(InteractionHand.MAIN_HAND, targetItem.isEmpty() ? ItemStack.EMPTY : targetItem);
+
+                if (shouldTransfer) {
+                    livingActor.setItemInHand(InteractionHand.MAIN_HAND, targetItem);
+                }
             }
         }
     }
