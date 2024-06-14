@@ -21,10 +21,6 @@
             {
                 "type": "origins:origin",
                 "origin": "medievalorigins:high_elf/cryomancer"
-            },
-            {
-                "type": "origins:origin",
-                "origin": "medievalorigins:high_elf/vitalist"
             }
         ]
     }
