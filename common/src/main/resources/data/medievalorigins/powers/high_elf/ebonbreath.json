@@ -191,7 +191,7 @@
                                 },
                                 {
                                     "type": "medievalorigins:spell_damage",
-                                    "base": 3,
+                                    "base": 4,
                                     "magic_school": "arcane",
                                     "crit_behavior": "normal",
                                     "scaling_factor": 0.5,
@@ -199,7 +199,7 @@
                                 },
                                 {
                                     "type": "medievalorigins:spell_damage",
-                                    "base": 3,
+                                    "base": 4,
                                     "magic_school": "fire",
                                     "crit_behavior": "normal",
                                     "scaling_factor": 0.5,
