@@ -1,0 +1,13 @@
+{
+    "type": "origins:active_self",
+    "key": {
+        "key": "key.origins.primary_active"
+    },
+    "entity_action": {
+        "type": "medievalorigins:cast_spell",
+        "spell": "blood_slash",
+        "power_level": 20,
+        "cast_time": 0,
+        "mana_cost": 10
+    }
+}

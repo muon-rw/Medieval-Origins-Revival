@@ -85,9 +85,9 @@ dependencies {
     compileOnly(fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}:api"))
     runtimeOnly(fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}"))
 
-    // Iron's Spells n Spellbooks
-    compileOnly fg.deobf("io.redspace.ironsspellbooks:irons_spellbooks:${irons_version}:api")
-    runtimeOnly fg.deobf("io.redspace.ironsspellbooks:irons_spellbooks:${irons_version}")
+    // Iron's Spells n Spellbooks4t
+    implementation fg.deobf("io.redspace.ironsspellbooks:irons_spellbooks:${irons_version}:api")
+    implementation fg.deobf("io.redspace.ironsspellbooks:irons_spellbooks:${irons_version}")
     runtimeOnly fg.deobf("software.bernie.geckolib:geckolib-forge-${geckolib_version}")
     runtimeOnly fg.deobf("dev.kosmx.player-anim:player-animation-lib-forge:${player_animator_version}")
 
