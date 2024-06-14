@@ -44,6 +44,7 @@ public class CastSpellAction extends EntityAction<CastSpellAction.Configuration>
 
         String spellStr = configuration.spell().toString();
         ResourceLocation spellResourceLocation = new ResourceLocation(spellStr);
+        // No one should be using the minecraft namespace anyway, and this is simpler
         if ("minecraft".equals(spellResourceLocation.getNamespace())) {
             spellResourceLocation = new ResourceLocation("irons_spellbooks", spellResourceLocation.getPath());
         }
