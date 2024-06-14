@@ -26,12 +26,12 @@ public abstract class IcarusHelperMixin {
         dummyFoodData.setFoodLevel(20);
     }
 
-    @ModifyReturnValue(method = "onFallFlyingTick", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/player/Player;getFoodData()Lnet/minecraft/world/food/FoodData;"))
-    private static FoodData dummyFoodData(Player player) {
+    @WrapOperation(method = "onFallFlyingTick", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/player/Player;getFoodData()Lnet/minecraft/world/food/FoodData;"))
+    private static FoodData dummyFoodData(Player player, Operation<FoodData> original) {
         if (IcarusWingsPower.hasPower(player)) {
             return dummyFoodData;
         }
-        return player.getFoodData();
+        return original.call(player);
     }
 
     @WrapOperation(method = "hasWings", at = @At(value = "INVOKE", target = "Ljava/util/function/Predicate;test(Ljava/lang/Object;)Z"))

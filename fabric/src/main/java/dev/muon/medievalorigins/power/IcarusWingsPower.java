@@ -18,23 +18,21 @@ public class IcarusWingsPower extends Power {
         super(type, entity);
         this.wingsType = wingsType;
     }
+
     public ItemStack getWingsType() {
         return wingsType;
-    }
-    @Override
-    public void onGained() {
-    }
-
-    @Override
-    public void onRemoved() {
-    }
-
-    @Override
-    public void onRespawn() {
     }
 
     public static boolean hasPower(Entity entity) {
         return PowerHolderComponent.hasPower(entity, IcarusWingsPower.class);
+    }
+
+    public static ItemStack getWingsType(LivingEntity entity) {
+        var playerPowers = PowerHolderComponent.getPowers(entity, IcarusWingsPower.class);
+        if (!playerPowers.isEmpty()) {
+            return playerPowers.get(0).getWingsType();
+        }
+        return ItemStack.EMPTY;
     }
 
     public static final PowerFactory<Power> ICARUS_WINGS_FACTORY = new PowerFactory<>(
