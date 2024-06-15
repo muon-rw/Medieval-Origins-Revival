@@ -14,7 +14,9 @@
                 "origins:nether_spawn",
                 "origins_env_deh:heat_resistance",
                 "thermoo-patches:heat_immune",
-                "thermoo-patches:cold_vulnerability"
+                "thermoo-patches:cold_vulnerability",
+                "origins_survive:lava_drinker",
+                "origins_survive:heat_resistance"
 	],
         "icon": {
 		"item": "minecraft:ink_sac",

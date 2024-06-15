@@ -9,7 +9,8 @@
                 "medievalorigins:plague_victim/insomniac",
                 "medievalorigins:plague_victim/sensitive_skin",
                 "medievalorigins:plague_victim/skin_and_bones",
-                "medievalorigins:plague_victim/eternal_suffering"
+                "medievalorigins:plague_victim/eternal_suffering",
+                "origins_survive:illness_resistance"
 	],
         "icon": {
 		"item": "minecraft:ink_sac",

@@ -1,21 +1,21 @@
 {
     "loading_priority": 11,
-	"powers": [
-                "medievalorigins:troll/ironhide",
-                "medievalorigins:troll/ham_fisted",
-                "medievalorigins:troll/mountainous",
-                "medievalorigins:troll/apex_predator",
-                "medievalorigins:troll/lumbering",
-                "medievalorigins:troll/old_blood",
-                "medievalorigins:troll/out_of_stock",
-                "origins_env_deh:cold_resistance",
-                "thermoo-patches:cold_immune",
-                "thermoo-patches:heat_vulnerability"
-	],
-	"icon": {
-		"item": "minecraft:player_head",
-		"tag": "{SkullOwner:{Id:[I;1170465593,41045821,-1120765191,-136118303],Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2E3NzkxNmU4NDc2OWIyYzk1NDc5MzRkZDIxYWViZWRiMTk3Mjc1OGFhNWE3MzliNjEyNzQzNjUzZjZlYSJ9fX0=\"}]}}}"
-	},
-	"impact": 3,
-	"order": 1
+    "powers": [
+        "medievalorigins:troll/ironhide",
+        "medievalorigins:troll/ham_fisted",
+        "medievalorigins:troll/mountainous",
+        "medievalorigins:troll/apex_predator",
+        "medievalorigins:troll/lumbering",
+        "medievalorigins:troll/old_blood",
+        "medievalorigins:troll/out_of_stock",
+        "origins_env_deh:cold_resistance",
+        "thermoo-patches:cold_immune",
+        "origins_survive:cold_resistance"
+    ],
+    "icon": {
+        "item": "minecraft:player_head",
+        "tag": "{SkullOwner:{Id:[I;1170465593,41045821,-1120765191,-136118303],Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2E3NzkxNmU4NDc2OWIyYzk1NDc5MzRkZDIxYWViZWRiMTk3Mjc1OGFhNWE3MzliNjEyNzQzNjUzZjZlYSJ9fX0=\"}]}}}"
+    },
+    "impact": 3,
+    "order": 1
 }

@@ -8,7 +8,8 @@
                 "medievalorigins:moon_elf/elegant",
                 "medievalorigins:moon_elf/nimble",
                 "medievalorigins:moon_elf/fragile",
-                "medievalorigins:moon_elf/towering"
+                "medievalorigins:moon_elf/towering",
+                "origins_survive:sleepless"
         ],
         "icon": {
                 "item": "minecraft:ink_sac",

@@ -12,7 +12,8 @@
                 "medievalorigins:revenant/poor_reputation",
                 "medievalorigins:revenant/black_thumb",
                 "medievalorigins:revenant/disturbed",
-                "medievalorigins:revenant/unguarded"
+                "medievalorigins:revenant/unguarded",
+                "origins_survive:sleepless"
 	],
         "icon": {
                 "item": "minecraft:ink_sac",
