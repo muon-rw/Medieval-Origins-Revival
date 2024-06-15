@@ -103,11 +103,12 @@ public class SummonedWitherSkeleton extends WitherSkeleton implements IFollowing
                         (entity instanceof Mob mob && mob.getTarget() != null && mob.getTarget().equals(this.owner))
                                 || (entity != null && entity.getKillCredit() != null && entity.getKillCredit().equals(this.owner))
         ));
-        // No combat goal type here at p4; it gets assigned by reassessWeaponGoal
-        this.goalSelector.addGoal(5, new FollowSummonerGoal(this, this.owner, 1.0, 9.0f, 3.0f));
-        this.goalSelector.addGoal(6, new WaterAvoidingRandomStrollGoal(this, 1.0D));
-        this.goalSelector.addGoal(9, new LookAtPlayerGoal(this, Player.class, 3.0F, 1.0F));
-        this.goalSelector.addGoal(10, new LookAtPlayerGoal(this, Mob.class, 8.0F));
+
+        // No combat goal selector type here at p0; it gets assigned by reassessWeaponGoal
+        this.goalSelector.addGoal(1, new WaterAvoidingRandomStrollGoal(this, 1.0D));
+        this.goalSelector.addGoal(2, new FollowSummonerGoal(this, this.owner, 1.0, 9.0f, 3.0f));
+        this.goalSelector.addGoal(3, new LookAtPlayerGoal(this, Player.class, 3.0F, 1.0F));
+        this.goalSelector.addGoal(4, new LookAtPlayerGoal(this, Mob.class, 8.0F));
 
     }
 
@@ -128,9 +129,9 @@ public class SummonedWitherSkeleton extends WitherSkeleton implements IFollowing
             ItemStack itemstack = this.getItemInHand(ProjectileUtil.getWeaponHoldingHand(this, Items.BOW));
             if (itemstack.is(Items.BOW)) {
                 this.bowGoal.setMinAttackInterval(20);
-                this.goalSelector.addGoal(4, this.bowGoal);
+                this.goalSelector.addGoal(0, this.bowGoal);
             } else {
-                this.goalSelector.addGoal(4, this.meleeGoal);
+                this.goalSelector.addGoal(0, this.meleeGoal);
             }
         }
     }
