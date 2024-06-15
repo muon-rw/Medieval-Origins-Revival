@@ -22,8 +22,8 @@
 		"max": 100,
 		"hud_render": {
 			"should_render": true,
-			"sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
-			"bar_index": 14,
+			"sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+			"bar_index": 15,
 			"condition": {
 				"type": "origins:resource",
 				"resource": "medievalorigins:revenant/siphon_resource",
