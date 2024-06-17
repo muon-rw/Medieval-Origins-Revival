@@ -6,6 +6,7 @@ import net.minecraft.core.Registry;
 public class ModEntityActions {
     public static void register() {
         register(SummonEntityAction.getFactory());
+        register(CastSpellAction.getFactory());
     }
 
     public static ActionFactory<Entity> register(ActionFactory<Entity> actionFactory) {

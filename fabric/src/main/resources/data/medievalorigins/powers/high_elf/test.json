@@ -1,0 +1,13 @@
+{
+  "type": "origins:active_self",
+  "key": {
+    "key": "key.origins.primary_active"
+  },
+  "entity_action": {
+    "type": "medievalorigins:cast_spell",
+    "spell": "wizards:arcane_blast",
+    "require_ammo": false,
+    "target_type": "area",
+    "range": 5.0
+  }
+}

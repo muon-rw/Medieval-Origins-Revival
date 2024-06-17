@@ -116,7 +116,7 @@ dependencies {
     modLocalRuntime("maven.modrinth:jewelry:${project.jewelry_version}-fabric")
     modLocalRuntime("maven.modrinth:rpgdifficulty:${project.rpg_version}")
 
-    modLocalRuntime("curse.maven:rpgmana-1021902:5382917")
+    modImplementation "curse.maven:rpgmana-1021902:5421309"
 
     modLocalRuntime("dev.kosmx.player-anim:player-animation-lib-fabric:${project.player_anim_version}")
     implementation("com.github.ZsoltMolnarrr:TinyConfig:${project.tiny_config_version}")
