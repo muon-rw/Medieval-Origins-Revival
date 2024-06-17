@@ -8,6 +8,8 @@
 - (Forge) Added compatibility for Iron's Spells n' Spellbooks - more to come!
 - (Forge) Fixed some Goblin gear bonuses not working
 - (Fabric) Added support for RPGMana to High Elf's Highborne power
+- Internal Only - added a new `medievalorigins:cast_spell` entity action, which is integrated with Iron's Spells (Forge) and Spell Engine (Fabric). 
+You can find examples for these in `(fabric/forge)/src/main/resources/data/medievalorigins/powers/high_elf/test.json`
 
 ## 6.3.10
 - Lowered Fae attraction range from 2048 blocks to 64 (woops)
