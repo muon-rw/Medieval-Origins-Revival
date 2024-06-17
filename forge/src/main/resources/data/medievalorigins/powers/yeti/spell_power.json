@@ -1,7 +1,7 @@
 {
 	"type": "origins:conditioned_attribute",
 	"modifier": {
-		"attribute": "irons_spellbooks:holy_spell_power",
+		"attribute": "irons_spellbooks:blood_spell_power",
 		"operation": "addition",
 		"value": 1
 	},
