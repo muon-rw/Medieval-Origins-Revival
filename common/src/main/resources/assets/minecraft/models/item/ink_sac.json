@@ -111,6 +111,12 @@
                 "custom_model_data": 368
             },
             "model": "medievalorigins:item/plague_victim"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 369
+            },
+            "model": "medievalorigins:item/valkyrie"
         }
     ]
 }

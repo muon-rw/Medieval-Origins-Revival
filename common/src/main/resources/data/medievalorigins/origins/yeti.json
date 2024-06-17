@@ -1,4 +1,4 @@
-{    
+{
 	"loading_priority": 11,
 	"powers": [
 		"medievalorigins:yeti/frigid_pulse",
@@ -16,7 +16,7 @@
 	"icon": {
 		"item": "minecraft:ink_sac",
 		"tag": "{CustomModelData:365}"
-},
+	},
 	"impact": 2,
 	"order": 1
 }

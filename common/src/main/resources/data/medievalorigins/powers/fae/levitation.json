@@ -19,7 +19,9 @@
 				"command": "function medievalorigins:mdvlorigins/fae_levitate_clear"
 			}
 		},
-		"key": "key.origins.primary_active",
+		"key": {
+			"key": "key.origins.primary_active"
+		},
 		"cooldown": 0
 	},
 	"levitate_resource": {

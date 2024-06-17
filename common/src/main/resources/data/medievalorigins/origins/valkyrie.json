@@ -1,8 +1,13 @@
 {
 	"powers": [
-		"medievalorigins:valkyrie/wings"
+		"medievalorigins:valkyrie/wings",
+		"medievalorigins:valkyrie/heal",
+		"medievalorigins:valkyrie/sacrifice"
 	],
-	"icon": "icarus:white_feathered_wings",
+	"icon": {
+		"item": "minecraft:ink_sac",
+		"tag": "{CustomModelData:369}"
+	},
 	"order": 1,
 	"impact": 3
 }
