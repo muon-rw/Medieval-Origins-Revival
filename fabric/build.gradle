@@ -59,34 +59,38 @@ dependencies {
     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
     implementation project(":common")
 
-    // Origins Local - Add Apoli and Calio to a /libs/ folder in the root project directory
-    modImplementation('com.github.apace100:origins-fabric:v1.10.0')
-    //modImplementation ("maven.modrinth:origins:${project.origins_version}")
+    // Origins
+    modImplementation("com.github.apace100:origins-fabric:v${project.origins_version}")
+    modImplementation ("com.github.apace100:apoli:${project.apoli_version}")
+    modImplementation ("com.github.apace100:calio:${project.calio_version}")
     //modImplementation fileTree(dir: '/libs/', include: '*.jar')
-
-    //
     modLocalRuntime "dev.onyxstudios.cardinal-components-api:cardinal-components-base:${project.cca_version}"
     modLocalRuntime "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${project.cca_version}"
     //modImplementation include("maven.modrinth:additionalentityattributes:${project.aea_version}")
-
     modImplementation include("com.jamieswhiteshirt:reach-entity-attributes:${project.rea_version}")
-    modImplementation include("com.github.apace100:autotag-api:${autotag_version}")
-    modImplementation include("net.merchantpug:Apugli:${apugli_version}+${minecraft_version}-fabric")
-    modImplementation include("maven.modrinth:projectile-damage-attribute:${project.projectile_damage}-fabric")
 
-    implementation("com.github.LlamaLad7:MixinExtras:0.2.0-beta.4")
-    annotationProcessor("com.github.LlamaLad7:MixinExtras:0.2.0-beta.4")
-
-    modImplementation("com.github.apace100:autotag:${autotag_version}")
-
+    // Other required
     modApi("com.github.Virtuoel:Pehkui:${pehkui_version}", {
         exclude group: "net.fabricmc.fabric-api"
     })
+    modImplementation include("net.merchantpug:Apugli:${apugli_version}+${minecraft_version}-fabric")
+
+    implementation("com.github.LlamaLad7:MixinExtras:0.2.0-beta.4")
+    annotationProcessor("com.github.LlamaLad7:MixinExtras:0.2.0-beta.4")
+    include(implementation(annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-fabric:0.1.2-beta.5")))
+
+
+    // deprecated for removal
+    modImplementation include("com.github.apace100:autotag-api:${autotag_version}")
+    modImplementation include("maven.modrinth:projectile-damage-attribute:${project.projectile_damage}-fabric")
+
+
+
+    // etc
+
     modApi("me.shedaniel.cloth:cloth-config-fabric:${cloth_config_version}") {
         exclude(group: "net.fabricmc.fabric-api")
     }
-
-    include(implementation(annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-fabric:0.1.2-beta.5")))
 
     // Icarus + Deps
     modImplementation ("dev.emi:trinkets:${project.trinkets_version}")
