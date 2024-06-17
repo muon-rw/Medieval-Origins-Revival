@@ -1,4 +1,5 @@
 {
+  "description": "Only the spell field is required - all other fields are optional. Valid target_types are area, raycast, and raycast_multiple",
   "type": "origins:active_self",
   "key": {
     "key": "key.origins.primary_active"
@@ -7,7 +8,7 @@
     "type": "medievalorigins:cast_spell",
     "spell": "wizards:arcane_blast",
     "require_ammo": false,
-    "target_type": "area",
+    "target_type": "raycast",
     "range": 5.0
   }
 }

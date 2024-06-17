@@ -1,6 +1,6 @@
 ## 6.4.0 (WIP)
-- Merged projects to cross-platform (Fabric and Forge/Neoforge will now update simultaneously)
-- Added a new Icarus-specific origin, the Valkyrie
+- Merged projects to cross-platform (Fabric and Forge/Neoforge will now update simultaneously!)
+- Added a new Icarus-exclusive origin, the Valkyrie
 - Made Icarus compat more friendly with other mods (thanks Up!)
 - Revenant summons should do slightly better at avoiding water
 - Made Revenant's siphon resource more visible
@@ -9,7 +9,7 @@
 - (Forge) Fixed some Goblin gear bonuses not working
 - (Fabric) Added support for RPGMana to High Elf's Highborne power
 - Internal Only - added a new `medievalorigins:cast_spell` entity action, which is integrated with Iron's Spells (Forge) and Spell Engine (Fabric). 
-You can find examples for these in `(fabric/forge)/src/main/resources/data/medievalorigins/powers/high_elf/test.json`
+You can find examples for these in `(fabric/forge)/src/main/resources/data/medievalorigins/powers/test.json`
 
 ## 6.3.10
 - Lowered Fae attraction range from 2048 blocks to 64 (woops)

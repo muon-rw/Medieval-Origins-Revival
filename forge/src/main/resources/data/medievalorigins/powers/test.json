@@ -1,4 +1,5 @@
 {
+    "description": "Only the spell field is required, all other fields optional. Only irons_spellbooks spells can be unprefixed, all other spells need a namespace (example fallen_origins:water_slash)",
     "type": "origins:active_self",
     "key": {
         "key": "key.origins.primary_active"
