@@ -1,0 +1,22 @@
+{
+        "loading_priority": 11,
+        "powers": [
+                "medievalorigins:ogre/gargantuan",
+                "medievalorigins:ogre/bloodlust",
+                "medievalorigins:ogre/ravager",
+                "medievalorigins:ogre/lead_belly",
+                "medievalorigins:ogre/stocky",
+                "medievalorigins:ogre/ravenous",
+                "medievalorigins:ogre/sluggish",
+                "medievalorigins:ogre/unwieldy",
+                "medievalorigins:ogre/ogre_properties",
+                "medievalorigins:ogre/bloodlust_camera",
+                "origins_survive:illness_resistance"
+        ],
+        "icon": {
+                "item": "minecraft:ink_sac",
+                "tag": "{CustomModelData:355}"
+        },
+        "impact": 3,
+        "order": 1
+}

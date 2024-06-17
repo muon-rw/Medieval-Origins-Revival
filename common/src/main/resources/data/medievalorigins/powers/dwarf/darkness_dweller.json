@@ -1,0 +1,88 @@
+{
+	"type": "origins:action_over_time",
+	"interval": 10,
+	"condition": {
+		"type": "origins:and",
+		"conditions": [
+			{
+				"type": "origins:exposed_to_sun"
+			},
+			{
+				"type": "origins:equipped_item",
+				"equipment_slot": "head",
+				"item_condition": {
+					"type": "origins:or",
+					"inverted": true,
+					"conditions": [
+						{
+							"type": "origins:ingredient",
+							"ingredient": {
+								"tag": "medievalorigins:golden_armor"
+							}
+						},
+						{
+							"type": "medievalorigins:is_golden_armor"
+						},
+						{
+							"type": "origins:enchantment",
+							"enchantment": "medievalorigins:mirroring",
+							"calculation": "sum",
+							"comparison": ">=",
+							"compare_to": 1
+						}
+					]
+				}
+			}
+		]
+	},
+	"entity_action": {
+		"type": "origins:apply_effect",
+		"effects": [
+			{
+				"effect": "minecraft:blindness",
+				"is_ambient": true,
+				"show_particles": false,
+				"show_icon": false,
+				"amplifier": 0,
+				"duration": 250
+			},
+			{
+				"effect": "minecraft:nausea",
+				"is_ambient": true,
+				"show_particles": false,
+				"show_icon": false,
+				"amplifier": 0,
+				"duration": 250
+			}
+		]
+	},
+	"falling_action": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:if_else",
+				"condition": {
+					"type": "origins:status_effect",
+					"effect": "minecraft:blindness",
+					"max_duration": 250
+				},
+				"if_action": {
+					"type": "origins:clear_effect",
+					"effect": "minecraft:blindness"
+				}
+			},
+			{
+				"type": "origins:if_else",
+				"condition": {
+					"type": "origins:status_effect",
+					"effect": "minecraft:nausea",
+					"max_duration": 250
+				},
+				"if_action": {
+					"type": "origins:clear_effect",
+					"effect": "minecraft:nausea"
+				}
+			}
+		]
+	}
+}

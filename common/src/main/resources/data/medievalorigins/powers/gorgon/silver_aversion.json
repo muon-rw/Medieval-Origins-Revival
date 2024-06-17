@@ -1,0 +1,158 @@
+{
+	"type": "origins:multiple",
+	"armor_restrict": {
+		"type": "origins:restrict_armor",
+		"head": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:ingredient",
+					"ingredient": {
+						"tag": "medievalorigins:silver_armor"
+					}
+				},
+				{
+					"type": "medievalorigins:is_silver_armor"
+				}
+			]
+		},
+		"chest": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:ingredient",
+					"ingredient": {
+						"tag": "medievalorigins:silver_armor"
+					}
+				},
+				{
+					"type": "medievalorigins:is_silver_armor"
+				}
+			]
+		},
+		"legs": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:ingredient",
+					"ingredient": {
+						"tag": "medievalorigins:silver_armor"
+					}
+				},
+				{
+					"type": "medievalorigins:is_silver_armor"
+				}
+			]
+		},
+		"feet": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:ingredient",
+					"ingredient": {
+						"tag": "medievalorigins:silver_armor"
+					}
+				},
+				{
+					"type": "medievalorigins:is_silver_armor"
+				}
+			]
+		}
+	},
+	"tool_weakness": {
+		"type": "origins:action_over_time",
+		"interval": 40,
+		"entity_action": {
+			"type": "origins:apply_effect",
+			"effect": {
+				"effect": "minecraft:wither",
+				"duration": 80,
+				"amplifier": 0
+			}
+		},
+		"falling_action": {
+			"type": "origins:clear_effect",
+			"effect": "minecraft:wither"
+		},
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:ingredient",
+				"ingredient": {
+					"tag": "medievalorigins:silver_tools"
+				}
+			}
+		}
+	},
+	"armor_tooltip": {
+		"type": "apoli:tooltip",
+		"item_condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:ingredient",
+					"ingredient": {
+						"tag": "medievalorigins:silver_armor"
+					}
+				},
+				{
+					"type": "medievalorigins:is_silver_armor"
+				}
+			]
+		},
+		"text": [
+			{
+				"translate": "tooltip.medievalorigins.unwearable",
+				"color": "gray"
+			},
+			{
+				"text": " (",
+				"color": "gray"
+			},
+			{
+				"translate": "power.medievalorigins.gorgon/silver_aversion.name",
+				"color": "red"
+			},
+			{
+				"text": ")",
+				"color": "gray"
+			}
+		]
+	},
+	"weapon_tooltip": {
+		"type": "apoli:tooltip",
+		"item_condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:ingredient",
+					"ingredient": {
+						"tag": "medievalorigins:silver_tools"
+					}
+				},
+				{
+					"type": "medievalorigins:is_silver_tool"
+				}
+			]
+		},
+		"text": [
+			{
+				"translate": "tooltip.medievalorigins.self_wither",
+				"color": "dark_red"
+			},
+			{
+				"text": " (",
+				"color": "gray"
+			},
+			{
+				"translate": "power.medievalorigins.gorgon/silver_aversion.name",
+				"color": "red"
+			},
+			{
+				"text": ")",
+				"color": "gray"
+			}
+		]
+	}
+}

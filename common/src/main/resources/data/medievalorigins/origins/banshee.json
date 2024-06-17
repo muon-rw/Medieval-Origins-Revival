@@ -1,0 +1,20 @@
+{
+        "loading_priority": 11,
+	"powers": [
+		"medievalorigins:banshee/spectral",
+                "medievalorigins:banshee/sonic_shriek",
+                "medievalorigins:banshee/lunar_nexus",
+                "medievalorigins:banshee/dimeritium_shackles",
+                "medievalorigins:banshee/hexed",
+                "medievalorigins:banshee/immaterial",
+                "medievalorigins:banshee/cursed_sigil",
+                "medievalorigins:banshee/cursed_ward",
+                "origins_survive:sleepless"
+	],
+        "icon": {
+                "item": "minecraft:ink_sac",
+                "tag": "{CustomModelData:358}"
+        },
+	"impact": 3,
+        "order": 1
+}

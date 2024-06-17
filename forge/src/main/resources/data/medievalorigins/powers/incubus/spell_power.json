@@ -1,0 +1,9 @@
+{
+	"type": "origins:conditioned_attribute",
+	"modifier": {
+		"attribute": "irons_spellbooks:fire_spell_power",
+		"operation": "addition",
+		"value": 1
+	},
+	"hidden": true
+}

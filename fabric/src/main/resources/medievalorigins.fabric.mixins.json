@@ -1,0 +1,20 @@
+{
+    "required": true,
+    "minVersion": "0.8",
+    "package": "dev.muon.medievalorigins.mixin",
+    "plugin": "dev.muon.medievalorigins.MedievalOriginsMixinPlugin",
+    "refmap": "${mod_id}.refmap.json",
+    "compatibilityLevel": "JAVA_17",
+    "mixins": [
+        "IcarusHelperMixin"
+    ],
+    "client": [
+        "client.IcarusClientMixin"
+    ],
+    "server": [
+    ],
+    "injectors": {
+      "defaultRequire": 1
+    }
+  }
+  

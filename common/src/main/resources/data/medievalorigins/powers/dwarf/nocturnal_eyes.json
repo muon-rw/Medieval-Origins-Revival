@@ -1,0 +1,82 @@
+{
+	"type": "origins:multiple",
+	"night_vision": {
+		"type": "origins:action_over_time",
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:and",
+					"inverted": true,
+					"conditions": [
+						{
+							"type": "origins:exposed_to_sun"
+						},
+						{
+							"type": "origins:equipped_item",
+							"equipment_slot": "head",
+							"item_condition": {
+								"type": "origins:or",
+								"inverted": true,
+								"conditions": [
+									{
+										"type": "origins:ingredient",
+										"ingredient": {
+											"tag": "medievalorigins:golden_armor"
+										}
+									},
+									{
+										"type": "medievalorigins:is_golden_armor"
+									},
+									{
+										"type": "origins:enchantment",
+										"enchantment": "medievalorigins:mirroring",
+										"calculation": "sum",
+										"comparison": ">=",
+										"compare_to": 1
+									}
+								]
+							}
+						}
+					]
+				},
+				{
+					"type": "origins:power_active",
+					"power": "medievalorigins:dwarf/nocturnal_eyes_toggle"
+				}
+			]
+
+		},
+		"entity_action": {
+			"type": "origins:apply_effect",
+			"effect": {
+				"effect": "minecraft:night_vision",
+				"is_ambient": true,
+				"show_particles": false,
+				"show_icon": false,
+				"amplifier": 0,
+				"duration": 250
+			}
+		},
+		"falling_action": {
+			"type": "origins:if_else",
+			"condition": {
+				"type": "origins:status_effect",
+				"effect": "night_vision",
+				"max_duration": 250
+			},
+			"if_action": {
+				"type": "origins:clear_effect",
+				"effect": "minecraft:night_vision"
+			}
+		},
+		"interval": 10
+	},
+	"toggle": {
+		"type": "origins:toggle",
+		"active_by_default": true,
+		"key": {
+			"key": "key.origins.secondary_active"
+		}
+	}
+}

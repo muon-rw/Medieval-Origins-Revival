@@ -1,0 +1,224 @@
+{
+    "hidden": true,
+    "type": "origins:multiple",
+    "marker": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:raycast",
+                    "distance": 30,
+                    "block": true,
+                    "entity": true,
+                    "shape_type": "collider",
+                    "fluid_handling": "any",
+                    "command_at_hit": "summon area_effect_cloud ~ ~ ~ {Duration:5, Tags:[\"blazenmarker\"]}"
+                }
+            ]
+        },
+        "cooldown": 30,
+        "key": {
+            "key": "key.origins.primary_active"
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "mainhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "tag": "medievalorigins:weak_flammables"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "offhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "tag": "medievalorigins:weak_flammables"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:raycast",
+                    "distance": 28,
+                    "block": true,
+                    "entity": true,
+                    "shape_type": "visual",
+                    "fluid_handling": "any"
+                }
+            ]
+        }
+    },
+    "fire": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:delay",
+            "ticks": 1,
+            "action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:raycast",
+                        "distance": 30,
+                        "block": true,
+                        "entity": true,
+                        "shape_type": "collider",
+                        "fluid_handling": "any",
+                        "bientity_action": {
+                            "type": "origins:target_action",
+                            "action": {
+                                "type": "origins:area_of_effect",
+                                "radius": 2.1,
+                                "shape": "sphere",
+                                "include_target": true,
+                                "bientity_action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:target_action",
+                                            "action": {
+                                                "type": "origins:grant_power",
+                                                "power": "medievalorigins:high_elf/blazenmark",
+                                                "source": "apoli:command"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "command_at_hit": "function medievalorigins:mdvlorigins/blazenbreath_weak_hit",
+                        "command_along_ray": "function medievalorigins:mdvlorigins/blazenbreath_weak_ray"
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "kill @e[tag=blazenmarker]"
+                    },
+                    {
+                        "type": "origins:play_sound",
+                        "sound": "minecraft:entity.blaze.shoot",
+                        "volume": 1,
+                        "pitch": 0.75
+                    },
+                    {
+                        "type": "origins:area_of_effect",
+                        "radius": 30,
+                        "bientity_action": {
+                            "type": "origins:and",
+                            "actions": [
+                                {
+                                    "type": "origins:target_action",
+                                    "action": {
+                                        "type": "origins:set_on_fire",
+                                        "duration": 3
+                                    }
+                                },
+                                {
+                                    "type": "medievalorigins:spell_damage",
+                                    "base": 3,
+                                    "magic_school": "fire",
+                                    "crit_behavior": "normal",
+                                    "scaling_factor": 0.6,
+                                    "damage_type": "medievalorigins:blazenbreath"
+                                },
+                                {
+                                    "type": "origins:target_action",
+                                    "action": {
+                                        "type": "origins:revoke_power",
+                                        "power": "medievalorigins:high_elf/blazenmark",
+                                        "source": "apoli:command"
+                                    }
+                                }
+                            ]
+                        },
+                        "bientity_condition": {
+                            "type": "origins:target_condition",
+                            "condition": {
+                                "type": "origins:and",
+                                "conditions": [
+                                    {
+                                        "type": "origins:living"
+                                    },
+                                    {
+                                        "type": "origins:power",
+                                        "power": "medievalorigins:high_elf/blazenmark"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "type": "origins:modify_inventory",
+                        "slots": ["weapon.mainhand","weapon.offhand"],
+                        "item_action": {
+                            "type": "origins:consume"
+                        },
+                        "item_condition": {
+                            "type": "origins:ingredient",
+                            "ingredient": {
+                                "tag": "medievalorigins:weak_flammables"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "cooldown": 30,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/resource_bar.png",
+            "bar_index": 7
+        },
+        "key": {
+            "key": "key.origins.primary_active"
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "mainhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "tag": "medievalorigins:weak_flammables"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "offhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "tag": "medievalorigins:weak_flammables"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:raycast",
+                    "distance": 28,
+                    "block": true,
+                    "entity": true,
+                    "shape_type": "visual",
+                    "fluid_handling": "any"
+                }
+            ]
+        }
+    }
+}

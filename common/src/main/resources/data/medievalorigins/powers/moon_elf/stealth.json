@@ -1,0 +1,305 @@
+{
+	"type": "origins:multiple",
+	"stealth_stab_bonus_no_dagger": {
+		"type": "origins:modify_damage_dealt",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 1.0
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:invisible"
+				},
+				{
+					"type": "origins:sneaking"
+				},
+				{
+					"type": "origins:resource",
+					"resource": "medievalorigins:moon_elf/stealth_cooldown",
+					"comparison": "<",
+					"compare_to": 1
+				},
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "mainhand",
+					"item_condition": {
+						"type": "origins:or",
+						"conditions": [
+							{
+								"type": "apoli:ingredient",
+								"ingredient": {
+									"tag": "medievalorigins:daggers"
+								}
+							},
+							{
+								"type": "medievalorigins:is_dagger"
+							}
+						]
+					},
+					"inverted": true
+				}
+			]
+		},
+		"self_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:clear_effect",
+					"effect": "minecraft:invisibility"
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "medievalorigins:moon_elf/stealth_cooldown",
+					"change": 100
+				}
+			]
+		}
+	},
+	"stealth_stab_bonus_with_dagger": {
+		"type": "origins:modify_damage_dealt",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 2.0
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:invisible"
+				},
+				{
+					"type": "origins:sneaking"
+				},
+				{
+					"type": "origins:resource",
+					"resource": "medievalorigins:moon_elf/stealth_cooldown",
+					"comparison": "<",
+					"compare_to": 1
+				},
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "mainhand",
+					"item_condition": {
+						"type": "origins:or",
+						"conditions": [
+							{
+								"type": "apoli:ingredient",
+								"ingredient": {
+									"tag": "medievalorigins:daggers"
+								}
+							},
+							{
+								"type": "medievalorigins:is_dagger"
+							}
+						]
+					}
+				}
+			]
+		},
+		"self_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:clear_effect",
+					"effect": "minecraft:invisibility"
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "medievalorigins:moon_elf/stealth_cooldown",
+					"change": 100
+				}
+			]
+		}
+	},
+	"meter": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 200,
+		"start_value": 160,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+			"bar_index": 17,
+			"condition": {
+				"type": "origins:resource",
+				"resource": "medievalorigins:moon_elf/stealth_meter",
+				"comparison": "<",
+				"compare_to": 200
+			}
+		}
+	},
+	"cooldown": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 100,
+		"start_value": 0,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+			"bar_index": 1,
+			"condition": {
+				"type": "origins:resource",
+				"resource": "medievalorigins:moon_elf/stealth_cooldown",
+				"comparison": ">",
+				"compare_to": 0
+			}
+		}
+	},
+	"tick_cooldown": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "medievalorigins:moon_elf/stealth_cooldown",
+			"change": -1
+		},
+		"interval": 1
+	},
+	"drain_meter": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "medievalorigins:moon_elf/stealth_meter",
+			"change": -1
+		},
+		"interval": 1,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:invisible"
+				},
+				{
+					"type": "origins:sneaking"
+				},
+				{
+					"type": "origins:moving"
+				}
+			]
+		}
+	},
+	"refill_meter": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "medievalorigins:moon_elf/stealth_meter",
+			"change": 1
+		},
+		"interval": 1,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:invisible"
+				},
+				{
+					"type": "origins:sneaking"
+				}
+			],
+			"inverted": true
+		}
+	},
+	"heartbeat": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "playsound minecraft:entity.warden.heartbeat player @s ~ ~ ~ 0.7 0.5"
+		},
+		"interval": 28,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:invisible"
+				},
+				{
+					"type": "origins:sneaking"
+				}
+			]
+		}
+	},
+	"invisiblity": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:apply_effect",
+			"effect": {
+				"effect": "minecraft:invisibility",
+				"duration": 200,
+				"amplifier": 255,
+				"is_ambient": true,
+				"show_icon": false,
+				"show_particles": false
+			}
+		},
+		"rising_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "scale set pehkui:visibility 0 @s"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "playsound minecraft:entity.player.breath player @s ~ ~ ~ 0.25 1.1"
+				},
+				{
+					"type": "origins:area_of_effect",
+					"radius": 32,
+					"bientity_action": {
+						"type": "origins:target_action",
+						"action": {
+							"type": "origins:execute_command",
+							"command": "data modify entity @s AngryTime set value 0"
+						}
+					},
+					"bientity_condition": {
+						"type": "origins:invert",
+						"condition": {
+							"type": "origins:attack_target"
+						}
+					}
+				}
+			]
+		},
+		"falling_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:clear_effect",
+					"effect": "minecraft:invisibility"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "scale reset pehkui:visibility @s"
+				}
+			]
+		},
+		"interval": 2,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "medievalorigins:moon_elf/stealth_meter",
+					"comparison": ">=",
+					"compare_to": 1
+				},
+				{
+					"type": "origins:resource",
+					"resource": "medievalorigins:moon_elf/stealth_cooldown",
+					"comparison": "<",
+					"compare_to": 1
+				},
+				{
+					"type": "origins:brightness",
+					"comparison": "<=",
+					"compare_to": 0.5
+				},
+				{
+					"type": "origins:sneaking"
+				}
+			]
+		}
+	}
+}

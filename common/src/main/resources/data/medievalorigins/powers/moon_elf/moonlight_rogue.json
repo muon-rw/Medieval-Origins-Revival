@@ -1,0 +1,85 @@
+{
+	"type": "origins:multiple",
+	"dagger_bonus": {
+		"type": "origins:modify_damage_dealt",
+		"modifier": {
+			"operation": "multiply_total_multiplicative",
+			"value": 0.50
+		},
+		"condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "mainhand",
+					"item_condition": {
+						"type": "origins:or",
+						"conditions": [
+							{
+								"type": "apoli:ingredient",
+								"ingredient": {
+									"tag": "medievalorigins:daggers"
+								}
+							},
+							{
+								"type": "medievalorigins:is_dagger"
+							}
+						]
+					}
+				},
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "offhand",
+					"item_condition": {
+						"type": "origins:or",
+						"conditions": [
+							{
+								"type": "apoli:ingredient",
+								"ingredient": {
+									"tag": "medievalorigins:daggers"
+								}
+							},
+							{
+								"type": "medievalorigins:is_dagger"
+							}
+						]
+					}
+				}
+			]
+		}
+	},
+	"tooltip": {
+		"type": "apoli:tooltip",
+		"item_condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "apoli:ingredient",
+					"ingredient": {
+						"tag": "medievalorigins:daggers"
+					}
+				},
+				{
+					"type": "medievalorigins:is_dagger"
+				}
+			]
+		},
+		"texts": [
+			{
+				"translate": "tooltip.medievalorigins.moonlight_rogue",
+				"color": "aqua"
+			},
+			{
+				"translate": "tooltip.medievalorigins.damage_dealt",
+				"with": [
+					"50%"
+				],
+				"color": "dark_aqua"
+			},
+			{
+				"translate": "tooltip.medievalorigins.stab_bonus",
+				"color": "dark_aqua"
+			}
+		]
+	}
+}

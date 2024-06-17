@@ -1,0 +1,334 @@
+{
+	"hidden": true,
+	"type": "origins:multiple",
+	"weapon_boost": {
+		"type": "origins:conditioned_attribute",
+		"tick_rate": 20,
+		"modifiers": [
+			{
+				"attribute": "minecraft:generic.attack_damage",
+				"operation": "multiply_total",
+				"value": 0.1
+			}
+		],
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:and",
+				"conditions": [
+					{
+						"type": "apoli:ingredient",
+						"ingredient": {
+							"tag": "medievalorigins:mythril_gear"
+						}
+					},
+					{
+						"type": "medievalorigins:is_melee_weapon"
+					}
+				]
+			}
+		}
+	},
+	"weapon_boost_offhand": {
+		"type": "origins:conditioned_attribute",
+		"tick_rate": 20,
+		"modifiers": [
+			{
+				"attribute": "minecraft:generic.attack_damage",
+				"operation": "multiply_total",
+				"value": 0.1
+			}
+		],
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "offhand",
+			"item_condition": {
+				"type": "origins:and",
+				"conditions": [
+					{
+						"type": "apoli:ingredient",
+						"ingredient": {
+							"tag": "medievalorigins:mythril_gear"
+						}
+					},
+					{
+						"type": "medievalorigins:is_melee_weapon"
+					}
+				]
+			}
+		}
+	},
+	"tool_boost": {
+		"type": "origins:conditioned_attribute",
+		"tick_rate": 20,
+		"modifiers": [
+			{
+				"attribute": "reach-entity-attributes:reach",
+				"operation": "addition",
+				"value": 2.0
+			}
+		],
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:and",
+				"conditions": [
+					{
+						"type": "apoli:ingredient",
+						"ingredient": {
+							"tag": "medievalorigins:mythril_gear"
+						}
+					},
+					{
+						"type": "medievalorigins:is_tool"
+					}
+				]
+			}
+		}
+	},
+	"helmet_boost": {
+		"type": "origins:conditioned_attribute",
+		"tick_rate": 20,
+		"update_health": true,
+		"modifiers": [
+			{
+				"attribute": "minecraft:generic.knockback_resistance",
+				"operation": "addition",
+				"value": 1
+			},
+			{
+				"attribute": "minecraft:generic.max_health",
+				"operation": "addition",
+				"value": 1
+			}
+		],
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "head",
+			"item_condition": {
+				"type": "origins:ingredient",
+				"ingredient": {
+					"tag": "medievalorigins:mythril_gear"
+				}
+			}
+		}
+	},
+	"chestplate_boost": {
+		"type": "origins:conditioned_attribute",
+		"tick_rate": 20,
+		"update_health": true,
+		"modifiers": [
+			{
+				"attribute": "minecraft:generic.knockback_resistance",
+				"operation": "addition",
+				"value": 1
+			},
+			{
+				"attribute": "minecraft:generic.max_health",
+				"operation": "addition",
+				"value": 1
+			}
+		],
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "chest",
+			"item_condition": {
+				"type": "origins:ingredient",
+				"ingredient": {
+					"tag": "medievalorigins:mythril_gear"
+				}
+			}
+		}
+	},
+	"leggings_boost": {
+		"type": "origins:conditioned_attribute",
+		"tick_rate": 20,
+		"update_health": true,
+		"modifiers": [
+			{
+				"attribute": "minecraft:generic.knockback_resistance",
+				"operation": "addition",
+				"value": 1
+			},
+			{
+				"attribute": "minecraft:generic.max_health",
+				"operation": "addition",
+				"value": 1
+			}
+		],
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "legs",
+			"item_condition": {
+				"type": "origins:ingredient",
+				"ingredient": {
+					"tag": "medievalorigins:mythril_gear"
+				}
+			}
+		}
+	},
+	"boots_boost": {
+		"type": "origins:conditioned_attribute",
+		"tick_rate": 20,
+		"update_health": true,
+		"modifiers": [
+			{
+				"attribute": "minecraft:generic.knockback_resistance",
+				"operation": "addition",
+				"value": 1
+			},
+			{
+				"attribute": "minecraft:generic.max_health",
+				"operation": "addition",
+				"value": 1
+			}
+		],
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "feet",
+			"item_condition": {
+				"type": "origins:ingredient",
+				"ingredient": {
+					"tag": "medievalorigins:mythril_gear"
+				}
+			}
+		}
+	},
+	"armor_tooltip": {
+		"type": "apoli:tooltip",
+		"item_condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "apoli:ingredient",
+					"ingredient": {
+						"tag": "medievalorigins:mythril_gear"
+					}
+				},
+				{
+					"type": "apoli:or",
+					"conditions": [
+						{
+							"type": "origins:is_equippable",
+							"equipment_slot": "head"
+						},
+						{
+							"type": "origins:is_equippable",
+							"equipment_slot": "chest"
+						},
+						{
+							"type": "origins:is_equippable",
+							"equipment_slot": "legs"
+						},
+						{
+							"type": "origins:is_equippable",
+							"equipment_slot": "feet"
+						}
+					]
+				}
+			]
+		},
+		"text": [
+			{
+				"translate": "power.medievalorigins.dwarf/mythril_resonance.name",
+				"color": "aqua"
+			},
+			{
+				"text": ":",
+				"color": "aqua"
+			},
+			{
+				"text": "\n+1 ",
+				"color": "dark_aqua"
+			},
+			{
+				"translate": "attribute.name.generic.knockback_resistance",
+				"color": "dark_aqua"
+			},
+			{
+				"text": "\n+1 ",
+				"color": "dark_aqua"
+			},
+			{
+				"translate": "attribute.name.generic.max_health",
+				"color": "dark_aqua"
+			}
+		]
+	},
+	"weapon_tooltip": {
+		"type": "apoli:tooltip",
+		"item_condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "apoli:ingredient",
+					"ingredient": {
+						"tag": "medievalorigins:mythril_gear"
+					}
+				},
+				{
+					"type": "medievalorigins:is_melee_weapon"
+				}
+			]
+		},
+		"text": [
+			{
+				"translate": "power.medievalorigins.dwarf/mythril_resonance.name",
+				"color": "aqua"
+			},
+			{
+				"text": ":",
+				"color": "aqua"
+			},
+			{
+				"text": "\n+10% ",
+				"color": "dark_aqua"
+			},
+			{
+				"translate": "attribute.name.generic.attack_damage",
+				"color": "dark_aqua"
+			},
+			{
+				"text": "\n",
+				"color": "dark_aqua"
+			}
+		]
+	},
+	"tools_tooltip": {
+		"type": "apoli:tooltip",
+		"item_condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "apoli:ingredient",
+					"ingredient": {
+						"tag": "medievalorigins:mythril_gear"
+					}
+				},
+				{
+					"type": "medievalorigins:is_tool"
+				}
+			]
+		},
+		"text": [
+			{
+				"translate": "power.medievalorigins.dwarf/mythril_resonance.name",
+				"color": "aqua"
+			},
+			{
+				"text": ":",
+				"color": "aqua"
+			},
+			{
+				"text": "\n+2 ",
+				"color": "dark_aqua"
+			},
+			{
+				"translate": "attribute.name.generic.reach-entity-attributes.reach",
+				"color": "dark_aqua"
+			}
+		]
+	}
+}

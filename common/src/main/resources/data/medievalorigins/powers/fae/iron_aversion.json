@@ -1,0 +1,97 @@
+{
+	"type": "origins:multiple",
+	"armor_restrict": {
+		"type": "origins:restrict_armor",
+		"head": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:ingredient",
+					"ingredient": {
+						"tag": "medievalorigins:silver_armor"
+					}
+				},
+				{
+					"type": "medievalorigins:is_silver_armor"
+				}
+			]
+		},
+		"chest": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:ingredient",
+					"ingredient": {
+						"tag": "medievalorigins:silver_armor"
+					}
+				},
+				{
+					"type": "medievalorigins:is_silver_armor"
+				}
+			]
+		},
+		"legs": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:ingredient",
+					"ingredient": {
+						"tag": "medievalorigins:silver_armor"
+					}
+				},
+				{
+					"type": "medievalorigins:is_silver_armor"
+				}
+			]
+		},
+		"feet": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:ingredient",
+					"ingredient": {
+						"tag": "medievalorigins:silver_armor"
+					}
+				},
+				{
+					"type": "medievalorigins:is_silver_armor"
+				}
+			]
+		}
+	},
+	"armor_tooltip": {
+		"type": "apoli:tooltip",
+		"item_condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:ingredient",
+					"ingredient": {
+						"tag": "medievalorigins:silver_armor"
+					}
+				},
+				{
+					"type": "medievalorigins:is_silver_armor"
+				}
+			]
+		},
+		"text": [
+			{
+				"translate": "tooltip.medievalorigins.unwearable",
+				"color": "gray"
+			},
+			{
+				"text": " (",
+				"color": "gray"
+			},
+			{
+				"translate": "power.medievalorigins.fae/iron_aversion.name",
+				"color": "red"
+			},
+			{
+				"text": ")",
+				"color": "gray"
+			}
+		]
+	}
+}

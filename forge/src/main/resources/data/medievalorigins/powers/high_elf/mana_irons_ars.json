@@ -1,0 +1,102 @@
+{
+    "forge:conditions": {
+        "type": "forge:and",
+        "values": [
+            {
+                "type": "forge:mod_loaded",
+                "modid": "ars_nouveau"
+            },
+            {
+                "type": "forge:mod_loaded",
+                "modid": "irons_spellbooks"
+            }
+        ]
+    },
+    "type": "origins:multiple",
+    "max_mana": {
+        "type": "origins:conditioned_attribute",
+        "modifiers": [
+            {
+                "attribute": "ars_nouveau:ars_nouveau.perk.max_mana",
+                "operation": "addition",
+                "value": 50
+            },
+            {
+                "attribute": "irons_spellbooks:max_mana",
+                "operation": "addition",
+                "value": 50
+            }
+        ]
+    },
+    "highborne_regen": {
+        "type": "origins:conditioned_attribute",
+        "modifiers": [
+            {
+                "attribute": "ars_nouveau:ars_nouveau.perk.mana_regen",
+                "operation": "addition",
+                "value": 50
+            },
+            {
+                "attribute": "irons_spellbooks:mana_regen",
+                "operation": "addition",
+                "value": 50
+            }
+        ],
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_highborne_resource",
+            "compare_to": 1,
+            "comparison": ">="
+        },
+        "tick_rate": 10
+    },
+    "highborne_resource": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 11,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "highborne_tick": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_highborne_resource",
+            "change": -1,
+            "operation": "add"
+        },
+        "interval": 25,
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_highborne_resource",
+            "compare_to": 0,
+            "comparison": ">="
+        }
+    },
+    "highborne_active": {
+        "type": "origins:active_self",
+        "key": {
+            "key": "key.origins.secondary_active"
+        },
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 21
+        },
+        "cooldown": 3000,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_highborne_resource",
+            "operation": "set",
+            "change": 11
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_highborne_resource",
+            "compare_to": 0,
+            "comparison": "=="
+        }
+    }
+}

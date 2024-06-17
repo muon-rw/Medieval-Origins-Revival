@@ -1,0 +1,79 @@
+{
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "medievalorigins:textures/gui/pixie_badge.png",
+            "text": {
+                "translate": "badges.medievalorigins.alfiq.wall_climb",
+                "with": [
+                    {
+                        "keybind": "key.origins.secondary_active"
+                    }
+                ]
+            }
+        }
+    ],
+    "type": "origins:multiple",
+    "toggle": {
+        "type": "origins:toggle",
+        "active_by_default": true,
+        "key": "key.origins.secondary_active"
+    },
+    "unarmed_damage": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "generic.attack_damage",
+            "operation": "addition",
+            "value": 4
+        },
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:empty"
+                    },
+                    {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "tag": "medievalorigins:fist_weapons"
+                        }
+                    },
+                    {
+                        "type": "medievalorigins:is_fist_weapon"
+                    }
+                ]
+            }
+        }
+    },
+    "wall_climb": {
+        "type": "origins:climbing",
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:collided_horizontally"
+                },
+                {
+                    "type": "origins:power_active",
+                    "power": "*:*_toggle"
+                }
+            ]
+        },
+        "allow_holding": true,
+        "hold_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:collided_horizontally"
+                },
+                {
+                    "type": "origins:power_active",
+                    "power": "*:*_toggle"
+                }
+            ]
+        }
+    }
+}

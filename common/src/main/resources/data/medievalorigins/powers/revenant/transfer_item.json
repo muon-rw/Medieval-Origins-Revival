@@ -1,0 +1,29 @@
+{
+	"type": "origins:action_on_entity_use",
+	"hidden": true,
+	"bientity_condition": {
+		"type": "origins:and",
+		"conditions": [
+			{
+				"type": "origins:target_condition",
+				"condition": {
+					"type": "origins:in_tag",
+					"tag": "medievalorigins:summon_skeletons"
+				}
+			},
+			{
+				"type": "origins:actor_condition",
+				"condition": {
+					"type": "origins:equipped_item",
+					"equipment_slot": "mainhand",
+					"item_condition": {
+						"type": "medievalorigins:is_summon_weapon"
+					}
+				}
+			}
+		]
+	},
+	"bientity_action": {
+		"type": "medievalorigins:transfer_item"
+	}
+}
