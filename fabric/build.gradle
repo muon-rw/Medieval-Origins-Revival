@@ -64,8 +64,12 @@ dependencies {
     modImplementation ("com.github.apace100:apoli:${project.apoli_version}")
     modImplementation ("com.github.apace100:calio:${project.calio_version}")
     //modImplementation fileTree(dir: '/libs/', include: '*.jar')
-    modLocalRuntime "dev.onyxstudios.cardinal-components-api:cardinal-components-base:${project.cca_version}"
-    modLocalRuntime "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${project.cca_version}"
+    modApi("dev.onyxstudios.cardinal-components-api:cardinal-components-base:${project.cca_version}") {
+        exclude(group: "net.fabricmc.fabric-api")
+    }
+    modApi("dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${project.cca_version}") {
+        exclude(group: "net.fabricmc.fabric-api")
+    }
     //modImplementation include("maven.modrinth:additionalentityattributes:${project.aea_version}")
     modImplementation include("com.jamieswhiteshirt:reach-entity-attributes:${project.rea_version}")
 
@@ -121,11 +125,11 @@ dependencies {
     modRuntimeOnly ("me.shedaniel:RoughlyEnoughItems-fabric:${project.rei_version}")
     modRuntimeOnly ("curse.maven:jade-324717:${project.jade_id}")
 
-    modLocalRuntime "io.github.ladysnake:PlayerAbilityLib:${pal_version}"
+    modImplementation "io.github.ladysnake:PlayerAbilityLib:${pal_version}"
     include "io.github.ladysnake:PlayerAbilityLib:${pal_version}"
 
     // Simply Swords
-    modLocalRuntime("maven.modrinth:simply-swords:${project.simply_swords_version}")
+    //modLocalRuntime("maven.modrinth:simply-swords:${project.simply_swords_version}")
 
 }
 

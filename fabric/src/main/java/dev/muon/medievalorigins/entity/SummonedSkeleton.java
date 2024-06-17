@@ -1,7 +1,5 @@
 package dev.muon.medievalorigins.entity;
 
-import dev.architectury.platform.Mod;
-import dev.muon.medievalorigins.MedievalOrigins;
 import dev.muon.medievalorigins.entity.goal.FollowSummonerGoal;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
