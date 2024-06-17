@@ -1,3 +1,14 @@
+## 6.4.0 (WIP)
+- Merged projects to cross-platform (Fabric and Forge/Neoforge will now update simultaneously)
+- Added a new Icarus-specific origin, the Valkyrie
+- Made Icarus compat more friendly with other mods (thanks Up!)
+- Revenant summons should do slightly better at avoiding water
+- Made Revenant's siphon resource more visible
+- Improved Gorgon icon
+- (Forge) Added compatibility for Iron's Spells n' Spellbooks - more to come!
+- (Forge) Fixed some Goblin gear bonuses not working
+- (Fabric) Added support for RPGMana to High Elf's Highborne power
+
 ## 6.3.10
 - Lowered Fae attraction range from 2048 blocks to 64 (woops)
 - Fixed Fae's Magical Suppression only checking for Iron and not Silver. 
@@ -50,6 +61,7 @@
 - High Elf, Incubus, and Revenant abilities now scale with Spell Power
 - Fixed Revenant's custom aggro breaking vanilla teams
 - Fixed Siren Song causing non-hostile entities to become aggressive
+- Fixed Siren Song creating server lag
 - Fixed magic-based damage changes and damage types not working as intended
 - Switched from custom item conditions to registering with AutoTag API (should improve server performance)
 - Added some barebones internals for other datapack developers to create functional Icarus origins or spell-power scaling abilities of their own
