@@ -2,7 +2,8 @@
 	"powers": [
 		"medievalorigins:valkyrie/wings",
 		"medievalorigins:valkyrie/heal",
-		"medievalorigins:valkyrie/sacrifice"
+		"medievalorigins:valkyrie/sacrifice",
+		"medievalorigins:valkyrie/spell_power"
 	],
 	"icon": {
 		"item": "minecraft:ink_sac",
