@@ -1,8 +1,9 @@
 ## 6.4.0 (WIP)
 - Merged projects to cross-platform (Fabric and Forge/Neoforge will now update simultaneously!)
 - Added a new Icarus-exclusive origin, the Valkyrie
+- Fixed an issue where Pixies would sometimes retain their flight power after switching origins
+- Revenant summons will now move a bit more naturally and try harder to avoid water
 - Made Icarus compat more friendly with other mods (thanks Up!)
-- Revenant summons should do slightly better at avoiding water
 - Made Revenant's siphon resource more visible
 - Improved Gorgon icon
 - (Forge) Added compatibility for Iron's Spells n' Spellbooks - more to come!
