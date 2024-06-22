@@ -1,0 +1,11 @@
+{
+    "forge:conditions": {
+        "type": "forge:not",
+        "value": {
+            "type": "forge:mod_loaded",
+            "modid": "attributeslib"
+        }
+    },
+    "hidden": true,
+    "type": "origins:multiple"
+}

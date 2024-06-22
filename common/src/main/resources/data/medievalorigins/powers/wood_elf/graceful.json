@@ -8,11 +8,14 @@
 			"value": -0.15
 		},
 		"condition": {
-			"type": "medievalorigins:is_melee_weapon"
+			"type": "origins:equipped_item",
+			"item_condition": {
+				"type": "medievalorigins:is_melee_weapon"
+			},
+			"equipment_slot": "mainhand"
 		}
 	},
-	"attack_speed":
-	{
+	"attack_speed": {
 		"type": "origins:attribute",
 		"modifier": {
 			"name": "Attack Speed bonus",
