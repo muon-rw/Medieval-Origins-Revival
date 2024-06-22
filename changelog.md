@@ -1,16 +1,22 @@
 ## 6.4.0 (WIP)
 - Merged projects to cross-platform (Fabric and Forge/Neoforge will now update simultaneously!)
-- Added a new Icarus-exclusive origin, the Valkyrie
+- Added a new Icarus-mod based origin, the Valkyrie
 - Fixed an issue where Pixies would sometimes retain their flight power after switching origins
 - Revenant summons will now move a bit more naturally and try harder to avoid water
+- Fixed Wood Elf's Focus power being mistranslated
+- Elves, Arachnae, and Alfiq are now slowed by heavy armor instead of being unable to equip it
+- Heavy armor is now determined by armor toughness
+- Added pixie wing animations
+- Added a key for pixies to fly down while hovering
+- Made pixie's mischief power play sounds less often
 - Made Icarus compat more friendly with other mods (thanks Up!)
 - Made Revenant's siphon resource more visible
-- Improved Gorgon icon
-- (Forge) Added compatibility for Iron's Spells n' Spellbooks - more to come!
+- Changed the Gorgon icon
 - (Forge) Fixed some Goblin gear bonuses not working
 - (Fabric) Added support for RPGMana to High Elf's Highborne power
-- Internal Only - added a new `medievalorigins:cast_spell` entity action, which is integrated with Iron's Spells (Forge) and Spell Engine (Fabric). 
+- Internal only, note for Origins devs - added a `medievalorigins:cast_spell` entity action, which is integrated with Iron's Spells (Forge) and Spell Engine (Fabric). 
 You can find examples for these in `(fabric/forge)/src/main/resources/data/medievalorigins/powers/test.json`
+- The format may change slightly if features are added.
 
 ## 6.3.10
 - Lowered Fae attraction range from 2048 blocks to 64 (woops)
