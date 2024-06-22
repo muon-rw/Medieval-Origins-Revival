@@ -1,6 +1,7 @@
 package dev.muon.medievalorigins.condition;
 
 import dev.muon.medievalorigins.MedievalOrigins;
+import dev.muon.medievalorigins.enchantment.ModEnchantments;
 import io.github.apace100.apoli.power.factory.condition.ConditionFactory;
 import io.github.apace100.apoli.registry.ApoliRegistries;
 import io.github.apace100.calio.data.SerializableData;
@@ -8,6 +9,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.*;
 import net.minecraft.core.Registry;
 import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 
 public class ModItemConditions {
@@ -46,6 +48,14 @@ public class ModItemConditions {
         register(new ConditionFactory<>(MedievalOrigins.loc("is_tool"), new SerializableData(), (data, stack) ->
                 stack.getItem() instanceof DiggerItem || Enchantments.BLOCK_EFFICIENCY.canEnchant(stack)
         ));
+
+        register(new ConditionFactory<>(MedievalOrigins.loc("is_heavy_armor"), new SerializableData(), (data, stack) -> {
+            if (stack.getItem() instanceof ArmorItem armorItem) {
+                int featherweightLevel = EnchantmentHelper.getItemEnchantmentLevel(ModEnchantments.FEATHERWEIGHT, stack);
+                return armorItem.getToughness() > 0 && featherweightLevel == 0;
+            }
+            return false;
+        }));
 
         register(new ConditionFactory<>(MedievalOrigins.loc("is_golden_armor"), new SerializableData(), (data, stack) -> {
             String itemName = BuiltInRegistries.ITEM.getKey(stack.getItem()).getPath();

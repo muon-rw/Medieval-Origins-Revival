@@ -75,7 +75,7 @@
   "power.medievalorigins.alfiq/poor_grip.description": "Alfiq have reduced breaking speed with tools and reduced damage with handled weapons like swords and axes.",
 
   "power.medievalorigins.alfiq/agile_preference.name": "Agile Preference",
-  "power.medievalorigins.alfiq/agile_preference.description": "Alfiq prefer to wear only light armors for ease of movement. Heavier armors can be worn with an enchantment.",
+  "power.medievalorigins.alfiq/agile_preference.description": "Alfiq prefer to wear only light armors for ease of movement. Heavier armors can be worn without penalty with an enchantment.",
 
   "power.medievalorigins.alfiq/meow.name": "Meow",
   "power.medievalorigins.alfiq/meow.description": "",
@@ -85,7 +85,7 @@
   "power.medievalorigins.arachnae/bottomless_stomach.description": "Arachnae require a larger quantity of food to stay alive.",
 
   "power.medievalorigins.arachnae/brittle.name": "Brittle",
-  "power.medievalorigins.arachnae/brittle.description": "The Arachnae's chitinous exoskeleton cannot support armor heavier than iron. This can be prevented with an enchantment." ,
+  "power.medievalorigins.arachnae/brittle.description": "The Arachnae's chitinous exoskeleton makes it difficult to move if wearing armor heavier than iron. This can be prevented with an enchantment." ,
 
   "power.medievalorigins.arachnae/climber.name": "Climber",
   "power.medievalorigins.arachnae/climber.description": "The fine bristles on the Arachnae's legs allow them to climb up walls.",
@@ -190,7 +190,7 @@
   "power.medievalorigins.wood_elf/empowered_shot_apotheosis.description": "After charging for a few seconds, release an arrow at increased velocity, piercing enemies, flying further, and dealing more damage.",
 
   "power.medievalorigins.wood_elf/elegant.name": "Elegant",
-  "power.medievalorigins.wood_elf/elegant.description": "Wood Elves have less health and can not wear armor heavier than iron (This can be prevented with an enchantment).",
+  "power.medievalorigins.wood_elf/elegant.description": "Wood Elves have less health and are slowed by wearing heavy armor (This can be prevented with an enchantment).",
 
   "power.medievalorigins.wood_elf/steward.name": "Steward",
   "power.medievalorigins.wood_elf/steward.description": "Wood elves live off of and in harmony the forest - They can not digest meat.",
@@ -256,7 +256,7 @@
   "power.medievalorigins.gorgon/revenge.description": "Gorgons deal signifcantly increased damage at low health.",
 
   "power.medievalorigins.high_elf/elegant.name": "Elegant",
-  "power.medievalorigins.high_elf/elegant.description": "High Elves can not wear armor heavier than iron (This can be prevented with an enchantment), and have less health.",
+  "power.medievalorigins.high_elf/elegant.description": "High Elves are slowed by wearing heavy armor (This can be prevented with an enchantment), and have less health.",
 
   "power.medievalorigins.high_elf/ebonbreath.name": "Draw Essence",
   "power.medievalorigins.high_elf/ebonbreath.description": "By holding different items, high elves can channel the object's energy to unleash various magics. Hover over each box to see details.",
@@ -289,7 +289,7 @@
   "power.medievalorigins.moon_elf/stealth.description": "In the dark, Moon Elves can turn invisible by sneaking, and move a short distance while stealthed. When attacking from stealth, their first attack deals bonus damage and ends the invisibility. This deals extra damage if wielding a dagger.",
 
   "power.medievalorigins.moon_elf/elegant.name": "Elegant",
-  "power.medievalorigins.moon_elf/elegant.description": "Moon Elves can not wear armor heavier than iron. This can be prevented with an enchantment.",
+  "power.medievalorigins.moon_elf/elegant.description": "Moon Elves are slowed by wearing heavy armor. This can be prevented with an enchantment.",
 
   "power.medievalorigins.moon_elf/ethereal.name": "Ethereal",
   "power.medievalorigins.moon_elf/ethereal.description": "Moon elves are thin and even slightly translucent, and their skin has a peculiar blue hue.",
@@ -487,7 +487,7 @@
 
 
   "enchantment.medievalorigins.featherweight": "Featherweight",
-  "enchantment.medievalorigins.featherweight.desc": "With this enchantment applied to heavy armor, it can be worn by Arachnae, Elves, Icarae, and Alfiq.",
+  "enchantment.medievalorigins.featherweight.desc": "This enchantment can be applied to heavy armor to prevent slowing down Arachnae, Elves, Alfiq, or those with wings.",
 
   "enchantment.medievalorigins.mirroring": "Mirroring",
   "enchantment.medievalorigins.mirroring.desc": "With this enchantment applied to helmets, players are immune to a Gorgon's petrifying gaze and Dwarves can see normally in the daylight.",

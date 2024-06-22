@@ -1,5 +1,6 @@
 package dev.muon.medievalorigins.condition;
 
+import dev.muon.medievalorigins.enchantment.ModEnchantments;
 import io.github.edwinmindcraft.apoli.api.power.factory.BlockCondition;
 import io.github.edwinmindcraft.apoli.api.power.factory.DamageCondition;
 import io.github.edwinmindcraft.apoli.api.power.factory.EntityCondition;
@@ -19,6 +20,7 @@ import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.state.BlockState;
@@ -62,6 +64,16 @@ public class ModConditions {
     public static final RegistryObject<SimpleItemCondition> IS_TOOL = ITEM_CONDITIONS.register("is_tool", () ->
             new SimpleItemCondition(stack ->
                     stack.getItem() instanceof DiggerItem || Enchantments.BLOCK_EFFICIENCY.canEnchant(stack) )
+    );
+
+    public static final RegistryObject<SimpleItemCondition> IS_HEAVY_ARMOR = ITEM_CONDITIONS.register("is_heavy_armor", () ->
+            new SimpleItemCondition(stack -> {
+                if (stack.getItem() instanceof ArmorItem armorItem) {
+                    int featherweightLevel = EnchantmentHelper.getItemEnchantmentLevel(ModEnchantments.FEATHERWEIGHT.get(), stack);
+                    return armorItem.getToughness() > 0 && featherweightLevel == 0;
+                }
+                return false;
+            })
     );
     public static final RegistryObject<SimpleItemCondition> IS_GOLDEN_ARMOR = ITEM_CONDITIONS.register("is_golden_armor", () ->
             new SimpleItemCondition(stack -> {

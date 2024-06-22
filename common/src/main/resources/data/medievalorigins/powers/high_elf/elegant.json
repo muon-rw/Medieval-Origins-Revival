@@ -1,44 +1,31 @@
 {
 	"type": "origins:multiple",
-	"head_feet_armor_tooltip": {
-		"type": "apoli:tooltip",
+	"health_lower": {
+		"type": "origins:attribute",
+		"modifier": {
+			"name": "Health Penalty",
+			"attribute": "minecraft:generic.max_health",
+			"value": -6.0,
+			"operation": "addition"
+		}
+	},
+	"tooltip": {
+		"type": "origins:tooltip",
 		"item_condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:armor_value",
-					"comparison": ">",
-					"compare_to": 2
-				},
-				{
-					"type": "origins:enchantment",
-					"enchantment": "medievalorigins:featherweight",
-					"comparison": "<",
-					"compare_to": 1
-				},
-				{
-					"type": "origins:or",
-					"conditions": [
-						{
-							"type": "origins:is_equippable",
-							"equipment_slot": "head"
-						},
-						{
-							"type": "origins:is_equippable",
-							"equipment_slot": "feet"
-						}
-					]
-				}
-			]
+			"type": "medievalorigins:is_heavy_armor"
 		},
 		"text": [
 			{
-				"translate": "tooltip.medievalorigins.unwearable",
-				"color": "gray"
+				"text": "-10% ",
+				"color": "red"
+			},
+			{
+				"translate": "attribute.name.generic.movement_speed",
+				"color": "red"
 			},
 			{
 				"text": " (",
-				"color": "gray"
+				"color": "red"
 			},
 			{
 				"translate": "power.medievalorigins.wood_elf/elegant.name",
@@ -46,157 +33,72 @@
 			},
 			{
 				"text": ")",
-				"color": "gray"
-			}
-		]
-	},
-	"chest_armor_tooltip": {
-		"type": "apoli:tooltip",
-		"item_condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:armor_value",
-					"comparison": ">",
-					"compare_to": 6
-				},
-				{
-					"type": "origins:enchantment",
-					"enchantment": "medievalorigins:featherweight",
-					"comparison": "<",
-					"compare_to": 1
-				},
-				{
-					"type": "origins:is_equippable",
-					"equipment_slot": "chest"
-				}
-			]
-		},
-		"text": [
-			{
-				"translate": "tooltip.medievalorigins.unwearable",
-				"color": "gray"
-			},
-			{
-				"text": " (",
-				"color": "gray"
-			},
-			{
-				"translate": "power.medievalorigins.wood_elf/elegant.name",
 				"color": "red"
-			},
-			{
-				"text": ")",
-				"color": "gray"
 			}
 		]
 	},
-	"legs_armor_tooltip": {
-		"type": "apoli:tooltip",
-		"item_condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:armor_value",
-					"comparison": ">",
-					"compare_to": 5
-				},
-				{
-					"type": "origins:enchantment",
-					"enchantment": "medievalorigins:featherweight",
-					"comparison": "<",
-					"compare_to": 1
-				},
-				{
-					"type": "origins:is_equippable",
-					"equipment_slot": "legs"
-				}
-			]
+	"head_check": {
+		"type": "origins:conditioned_attribute",
+		"tick_rate": 30,
+		"modifier": {
+			"attribute": "minecraft:generic.movement_speed",
+			"operation": "multiply_base",
+			"value": -0.1
 		},
-		"text": [
-			{
-				"translate": "tooltip.medievalorigins.unwearable",
-				"color": "gray"
-			},
-			{
-				"text": " (",
-				"color": "gray"
-			},
-			{
-				"translate": "power.medievalorigins.wood_elf/elegant.name",
-				"color": "red"
-			},
-			{
-				"text": ")",
-				"color": "gray"
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "head",
+			"item_condition": {
+				"type": "medievalorigins:is_heavy_armor"
 			}
-		]
+		}
 	},
-	"armor_restrict": {
-		"type": "origins:restrict_armor",
-		"head": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:armor_value",
-					"comparison": ">",
-					"compare_to": 2
-				},
-				{
-					"type": "origins:enchantment",
-					"enchantment": "medievalorigins:featherweight",
-					"comparison": "<",
-					"compare_to": 1
-				}
-			]
+	"chest_check": {
+		"type": "origins:conditioned_attribute",
+		"tick_rate": 30,
+		"modifier": {
+			"attribute": "minecraft:generic.movement_speed",
+			"operation": "multiply_base",
+			"value": -0.1
 		},
-		"chest": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:armor_value",
-					"comparison": ">",
-					"compare_to": 6
-				},
-				{
-					"type": "origins:enchantment",
-					"enchantment": "medievalorigins:featherweight",
-					"comparison": "<",
-					"compare_to": 1
-				}
-			]
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "chest",
+			"item_condition": {
+				"type": "medievalorigins:is_heavy_armor"
+			}
+		}
+	},
+	"legs_check": {
+		"type": "origins:conditioned_attribute",
+		"tick_rate": 30,
+		"modifier": {
+			"attribute": "minecraft:generic.movement_speed",
+			"operation": "multiply_base",
+			"value": -0.1
 		},
-		"legs": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:armor_value",
-					"comparison": ">",
-					"compare_to": 5
-				},
-				{
-					"type": "origins:enchantment",
-					"enchantment": "medievalorigins:featherweight",
-					"comparison": "<",
-					"compare_to": 1
-				}
-			]
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "legs",
+			"item_condition": {
+				"type": "medievalorigins:is_heavy_armor"
+			}
+		}
+	},
+	"feet_check": {
+		"type": "origins:conditioned_attribute",
+		"tick_rate": 30,
+		"modifier": {
+			"attribute": "minecraft:generic.movement_speed",
+			"operation": "multiply_base",
+			"value": -0.1
 		},
-		"feet": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:armor_value",
-					"comparison": ">",
-					"compare_to": 2
-				},
-				{
-					"type": "origins:enchantment",
-					"enchantment": "medievalorigins:featherweight",
-					"comparison": "<",
-					"compare_to": 1
-				}
-			]
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "feet",
+			"item_condition": {
+				"type": "medievalorigins:is_heavy_armor"
+			}
 		}
 	}
 }
