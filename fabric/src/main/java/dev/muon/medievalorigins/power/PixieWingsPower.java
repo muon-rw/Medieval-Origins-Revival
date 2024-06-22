@@ -16,8 +16,7 @@ public class PixieWingsPower extends Power {
     }
 
     public static boolean hasPower(Entity entity) {
-        return true;
-        //PowerHolderComponent.hasPower(entity, PixieWingsPower.class);
+        return PowerHolderComponent.hasPower(entity, PixieWingsPower.class);
     }
     public static final PowerFactory<Power> PIXIE_WINGS_FACTORY = new PowerFactory<>(
             MedievalOrigins.loc("pixie_wings"),
