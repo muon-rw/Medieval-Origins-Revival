@@ -109,7 +109,7 @@ https://discord.gg/lunapixel
   > Magically suppressive metals, such as iron or silver, are completely intolerable to banshees.
 
 - **Lunar Nexus:**
-  > Banshees restore no hunger from food - their energy is only restored by direct moonlight, however, they cannot starve.
+  > Banshees restore no hunger from food - their energy is only restored by direct moonlight. However, they cannot starve.
 
 - **Preemptive Elegy:**
   > Banshee's shrieks forewarn death. They can unleash an earsplitting wail, pushing back nearby entities and summoning a small protective circle. Targets hit directly by the shriek will be disoriented.
@@ -181,9 +181,6 @@ https://discord.gg/lunapixel
 
 - **Stocky:**
   > Dwarves are just short enough to fit into a 1 meter tall tunnel (and almost as wide as one).
-
-- **Mythril Resonance:**
-  > Powerful metals which carry the spirit of your people fill you with might.
 
 - **Nocturnal Eyes:**
   > Dwarves can focus to see clearly without needing any light source.
