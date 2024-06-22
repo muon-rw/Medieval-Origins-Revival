@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.At;
 
 @Mixin(ElytraModel.class)
 public abstract class ElytraModelMixin<T extends LivingEntity> {
-
+/*
     @WrapOperation(method = "setupAnim(Lnet/minecraft/world/entity/LivingEntity;FFFFF)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/LivingEntity;isFallFlying()Z"))
     private boolean hasPixieWings(LivingEntity entity, Operation<Boolean> original) {
         if (entity.getDeltaMovement().y() > 0) {
@@ -20,11 +20,12 @@ public abstract class ElytraModelMixin<T extends LivingEntity> {
         }
         return original.call(entity);
     }
-
+*/
     @WrapOperation(method = "setupAnim(Lnet/minecraft/world/entity/LivingEntity;FFFFF)V", at = @At(value = "FIELD", target = "Lnet/minecraft/client/player/AbstractClientPlayer;elytraRotX:F", opcode = Opcodes.PUTFIELD))
     private void modifyElytraRotX(AbstractClientPlayer player, float value, Operation<Void> original) {
         if (PixieWingsPower.hasPower(player)) {
-            value += (0.6981317F - value) * 0.1F;
+            //f xRot
+            value += (0.8981317F - value) * 0.1F;
         }
         original.call(player, value);
     }
@@ -32,6 +33,7 @@ public abstract class ElytraModelMixin<T extends LivingEntity> {
     @WrapOperation(method = "setupAnim(Lnet/minecraft/world/entity/LivingEntity;FFFFF)V", at = @At(value = "FIELD", target = "Lnet/minecraft/client/player/AbstractClientPlayer;elytraRotY:F", opcode = Opcodes.PUTFIELD))
     private void modifyElytraRotY(AbstractClientPlayer player, float value, Operation<Void> original) {
         if (PixieWingsPower.hasPower(player)) {
+            // f3 yRot
             value += (0.08726646F - value) * 0.1F;
         }
         original.call(player, value);
@@ -40,7 +42,8 @@ public abstract class ElytraModelMixin<T extends LivingEntity> {
     @WrapOperation(method = "setupAnim(Lnet/minecraft/world/entity/LivingEntity;FFFFF)V", at = @At(value = "FIELD", target = "Lnet/minecraft/client/player/AbstractClientPlayer;elytraRotZ:F", opcode = Opcodes.PUTFIELD))
     private void modifyElytraRotZ(AbstractClientPlayer player, float value, Operation<Void> original) {
         if (PixieWingsPower.hasPower(player)) {
-            value += (-0.7853982F - value) * 0.1F;
+            // f1 zRot
+            value += (-0.5F - (float)Math.PI/4F - value) * 0.1F;
         }
         original.call(player, value);
     }
