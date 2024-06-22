@@ -12,39 +12,27 @@ import org.spongepowered.asm.mixin.injection.At;
 
 @Mixin(ElytraModel.class)
 public abstract class ElytraModelMixin<T extends LivingEntity> {
-/*
-    @WrapOperation(method = "setupAnim(Lnet/minecraft/world/entity/LivingEntity;FFFFF)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/LivingEntity;isFallFlying()Z"))
-    private boolean hasPixieWings(LivingEntity entity, Operation<Boolean> original) {
-        if (entity.getDeltaMovement().y() > 0) {
-            return PixieWingsPower.hasPower(entity);
-        }
-        return original.call(entity);
-    }
-*/
     @WrapOperation(method = "setupAnim(Lnet/minecraft/world/entity/LivingEntity;FFFFF)V", at = @At(value = "FIELD", target = "Lnet/minecraft/client/player/AbstractClientPlayer;elytraRotX:F", opcode = Opcodes.PUTFIELD))
-    private void modifyElytraRotX(AbstractClientPlayer player, float value, Operation<Void> original) {
+    private void modifyElytraRotX(AbstractClientPlayer player, float elytraRotX, Operation<Void> original) {
         if (PixieWingsPower.hasPower(player)) {
-            //f xRot
-            value += (0.8981317F - value) * 0.1F;
+            elytraRotX += (0.8981317F - elytraRotX) * 0.1F;
         }
-        original.call(player, value);
+        original.call(player, elytraRotX);
     }
 
     @WrapOperation(method = "setupAnim(Lnet/minecraft/world/entity/LivingEntity;FFFFF)V", at = @At(value = "FIELD", target = "Lnet/minecraft/client/player/AbstractClientPlayer;elytraRotY:F", opcode = Opcodes.PUTFIELD))
-    private void modifyElytraRotY(AbstractClientPlayer player, float value, Operation<Void> original) {
+    private void modifyElytraRotY(AbstractClientPlayer player, float elytraRotY, Operation<Void> original) {
         if (PixieWingsPower.hasPower(player)) {
-            // f3 yRot
-            value += (0.08726646F - value) * 0.1F;
+            elytraRotY += (0.08726646F - elytraRotY) * 0.1F;
         }
-        original.call(player, value);
+        original.call(player, elytraRotY);
     }
 
     @WrapOperation(method = "setupAnim(Lnet/minecraft/world/entity/LivingEntity;FFFFF)V", at = @At(value = "FIELD", target = "Lnet/minecraft/client/player/AbstractClientPlayer;elytraRotZ:F", opcode = Opcodes.PUTFIELD))
-    private void modifyElytraRotZ(AbstractClientPlayer player, float value, Operation<Void> original) {
+    private void modifyElytraRotZ(AbstractClientPlayer player, float elytraRotZ, Operation<Void> original) {
         if (PixieWingsPower.hasPower(player)) {
-            // f1 zRot
-            value += (-0.5F - (float)Math.PI/4F - value) * 0.1F;
+            elytraRotZ += (-0.5F - (float)Math.PI/4F - elytraRotZ) * 0.1F;
         }
-        original.call(player, value);
+        original.call(player, elytraRotZ);
     }
 }
