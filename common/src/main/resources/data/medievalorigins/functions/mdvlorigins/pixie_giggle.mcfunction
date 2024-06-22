@@ -1,1 +1,0 @@
-playsound minecraft:entity.witch.celebrate player @a ~ ~ ~ 1 2
