@@ -87,6 +87,33 @@
 			]
 		}
 	},
+	"hover_down": {
+		"type": "origins:action_over_time",
+		"interval": 2,
+		"entity_action": {
+			"type": "origins:add_velocity",
+			"space": "world",
+			"y": -0.15
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "apugli:key_pressed",
+					"key": {
+						"key": "key.sneak",
+						"continuous": true
+					}
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:*_levitate_resource",
+					"comparison": "==",
+					"compare_to": 1
+				}
+			]
+		}
+	},
 	"jump_height": {
 		"type": "origins:modify_jump",
 		"modifier": {
@@ -158,8 +185,12 @@
 				"type": "origins:and",
 				"actions": [
 					{
-						"type": "origins:execute_command",
-						"command": "function medievalorigins:mdvlorigins/pixie_levitate"
+						"type": "origins:modify_resource",
+						"resource": "*:*_levitate_resource",
+						"modifier": {
+							"value": 1,
+							"operation": "set_total"
+						}
 					},
 					{
 						"type": "origins:add_velocity",
@@ -169,8 +200,12 @@
 				]
 			},
 			"else_action": {
-				"type": "origins:execute_command",
-				"command": "function medievalorigins:mdvlorigins/pixie_levitate_clear"
+				"type": "origins:modify_resource",
+				"resource": "*:*_levitate_resource",
+				"modifier": {
+					"value": 0,
+					"operation": "set_total"
+				}
 			}
 		},
 		"key": "key.origins.primary_active",
@@ -222,13 +257,22 @@
 	},
 	"no_random_floaties": {
 		"type": "origins:action_on_callback",
+
 		"entity_action_added": {
-			"type": "origins:execute_command",
-			"command": "function medievalorigins:mdvlorigins/pixie_levitate_clear"
+			"type": "origins:modify_resource",
+			"resource": "*:*_levitate_resource",
+			"modifier": {
+				"value": 0,
+				"operation": "set_total"
+			}
 		},
 		"entity_action_removed": {
-			"type": "origins:execute_command",
-			"command": "function medievalorigins:mdvlorigins/pixie_levitate_clear"
+			"type": "origins:modify_resource",
+			"resource": "*:*_levitate_resource",
+			"modifier": {
+				"value": 0,
+				"operation": "set_total"
+			}
 		},
 		"execute_chosen_when_orb": true
 	},
