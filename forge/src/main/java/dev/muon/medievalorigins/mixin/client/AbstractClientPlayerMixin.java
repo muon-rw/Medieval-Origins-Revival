@@ -37,6 +37,7 @@ public abstract class AbstractClientPlayerMixin extends Player {
                 player.elytraRotZ = (-0.5F - (float) Math.PI / 4F);
             } else {
                 Vec3 playerMovement = player.getDeltaMovement();
+                if (playerMovement.y < -0.5) return;
                 double speedMagnitude = Math.sqrt(playerMovement.x * playerMovement.x + playerMovement.z * playerMovement.z + Math.max(playerMovement.y, 0) * Math.max(playerMovement.y, 0)) * 4;
                 float flapStrength = (float) Math.min(speedMagnitude, 1.0);
 
