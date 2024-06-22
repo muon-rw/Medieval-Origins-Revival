@@ -9,7 +9,9 @@
         "IcarusHelperMixin"
     ],
     "client": [
-        "client.IcarusClientMixin"
+        "client.IcarusClientMixin",
+        "client.AbstractClientPlayerMixin",
+        "client.ElytraModelMixin"
     ],
     "server": [
     ],
