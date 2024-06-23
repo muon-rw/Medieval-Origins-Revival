@@ -10,7 +10,8 @@
     "shape": "sphere",
     "bientity_action": {
       "type": "medievalorigins:cast_spell",
-      "spell": "paladins:judgement"
+      "spell": "paladins:judgement",
+      "require_ammo": false
     },
     "bientity_condition": {
       "type": "origins:and",
