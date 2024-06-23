@@ -3,6 +3,7 @@ package dev.muon.medievalorigins.mixin;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import dev.muon.medievalorigins.action.CastSpellAction;
+import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.spell_engine.SpellEngineMod;
@@ -14,17 +15,17 @@ import org.spongepowered.asm.mixin.injection.At;
 @Mixin(SpellHelper.class)
 public class SpellHelperMixin {
     @WrapOperation(
-            method = "performSpell",
+            method = "ammoForSpell",
             at = @At(
                     value = "INVOKE",
-                    target = "Lnet/spell_engine/internals/SpellHelper;ammoForSpell(Lnet/minecraft/world/entity/player/Player;Lnet/spell_engine/api/spell/Spell;Lnet/minecraft/world/item/ItemStack;)Lnet/spell_engine/internals/SpellHelper$AmmoResult;"
+                    target = "Lnet/minecraft/world/entity/player/Inventory;contains(Lnet/minecraft/world/item/ItemStack;)Z"
             )
     )
-    private static SpellHelper.AmmoResult bypassAmmoCheck(Player player, Spell spell, ItemStack ammo, Operation<SpellHelper.AmmoResult> original) {
-        if (!player.getAbilities().instabuild && SpellEngineMod.config.spell_cost_item_allowed && !CastSpellAction.requiresAmmo()) {
-            return new SpellHelper.AmmoResult(true, ammo);
+    private static boolean bypassAmmoCheck(Inventory instance, ItemStack $$0, Operation<Boolean> original) {
+        if (!CastSpellAction.requiresAmmo()) {
+            return true;
         } else {
-            return original.call(player, spell, ammo);
+            return original.call(instance, $$0);
         }
     }
 }
