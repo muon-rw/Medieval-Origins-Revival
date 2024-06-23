@@ -81,7 +81,6 @@ dependencies {
 
     implementation("com.github.LlamaLad7:MixinExtras:0.2.0-beta.4")
     annotationProcessor("com.github.LlamaLad7:MixinExtras:0.2.0-beta.4")
-    include(implementation(annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-fabric:0.1.2-beta.5")))
 
 
     // deprecated for removal
@@ -126,7 +125,6 @@ dependencies {
     modRuntimeOnly ("curse.maven:jade-324717:${project.jade_id}")
 
     modImplementation "io.github.ladysnake:PlayerAbilityLib:${pal_version}"
-    include "io.github.ladysnake:PlayerAbilityLib:${pal_version}"
 
     // Simply Swords
     //modLocalRuntime("maven.modrinth:simply-swords:${project.simply_swords_version}")
