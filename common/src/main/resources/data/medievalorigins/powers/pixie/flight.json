@@ -65,19 +65,19 @@
 	"thanks_pug": {
 		"type": "apugli:prevent_movement_checks"
 	},
-	"oopsie_patch": {
+	"cursed": {
 		"type": "origins:action_on_callback",
 		"entity_action_added": {
-			"type": "origins:if_else",
-			"condition": {
-				"type": "origins:power",
-				"power": "medievalorigins:pixie/wings",
-				"inverted": true
-			},
-			"if_action": {
-				"type": "origins:delay",
-				"ticks": 10,
-				"action": {
+			"type": "origins:delay",
+			"ticks": 20,
+			"action": {
+				"type": "origins:if_else",
+				"condition": {
+					"type": "origins:power",
+					"power": "medievalorigins:pixie/wings",
+					"inverted": true
+				},
+				"if_action": {
 					"type": "origins:revoke_power",
 					"power": "medievalorigins:pixie/flight",
 					"source": "apoli:command"
@@ -109,11 +109,11 @@
 	},
 	"hover_down": {
 		"type": "origins:action_over_time",
-		"interval": 2,
+		"interval": 1,
 		"entity_action": {
 			"type": "origins:add_velocity",
 			"space": "world",
-			"y": -0.15
+			"y": -0.125
 		},
 		"condition": {
 			"type": "origins:and",
