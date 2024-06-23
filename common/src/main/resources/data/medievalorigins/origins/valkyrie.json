@@ -1,6 +1,7 @@
 {
 	"powers": [
 		"medievalorigins:valkyrie/wings",
+		"medievalorigins:valkyrie/divine_smite",
 		"medievalorigins:valkyrie/heal",
 		"medievalorigins:valkyrie/sacrifice",
 		"medievalorigins:valkyrie/spell_power"

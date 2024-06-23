@@ -1,6 +1,8 @@
 package dev.muon.medievalorigins.action;
 
+import dev.muon.medievalorigins.Constants;
 import dev.muon.medievalorigins.MedievalOrigins;
+import dev.muon.medievalorigins.util.SpellCastingUtil;
 import io.github.apace100.apoli.power.factory.action.ActionFactory;
 import io.github.apace100.calio.data.SerializableData;
 import io.github.apace100.calio.data.SerializableDataTypes;
@@ -19,43 +21,45 @@ import java.util.List;
 
 
 public class CastSpellAction {
-    private static boolean requireAmmo = true;
-
-    public static boolean requiresAmmo() {
-        return requireAmmo;
-    }
-    public static void setRequireAmmo(boolean value) {
-        requireAmmo = value;
-    }
     public static void action(SerializableData.Instance data, Entity entity) {
         if (entity instanceof Player player) {
             ItemStack itemStack = player.getMainHandItem();
             ResourceLocation spellId = data.getId("spell");
-            boolean requireAmmoField = data.getBoolean("require_ammo");
+            boolean requireAmmo = data.getBoolean("require_ammo");
             String targetType = data.getString("target_type");
             float range = data.getFloat("range");
 
-            SpellCast.Attempt attempt = SpellHelper.attemptCasting(player, itemStack, spellId, requireAmmoField);
+            // Couldn't I just
+            /*
+            SpellCastingUtil.setBypassesCooldown(true);
+            SpellCast.Attempt attempt = SpellHelper.attemptCasting(player, itemStack, spellId, requireAmmo);
             if (!attempt.isSuccess()) {
+                Constants.LOG.info("you done fucked up a a ron ");
                 return;
             }
-            setRequireAmmo(requireAmmoField);
-            if (entity instanceof ServerPlayer) {
-                List<Entity> targets = switch (targetType) {
-                    case "area" ->
-                            TargetHelper.targetsFromArea(player, range, new Spell.Release.Target.Area(), e -> e instanceof LivingEntity);
-                    case "raycast" -> {
-                        Entity target = TargetHelper.targetFromRaycast(player, range, e -> e instanceof LivingEntity);
-                        yield target != null ? List.of(target) : List.of();
-                    }
-                    case "raycast_multiple" ->
-                            TargetHelper.targetsFromRaycast(player, range, e -> e instanceof LivingEntity);
-                    default -> List.of();
-                };
+            */
 
-                if (!targets.isEmpty()) {
-                    SpellHelper.performSpell(player.level(), player, spellId, targets, SpellCast.Action.RELEASE, 1.0f);
+            SpellCastingUtil.setRequireAmmo(requireAmmo);
+            try {
+                if (entity instanceof ServerPlayer) {
+                    List<Entity> targets = switch (targetType) {
+                        case "area" ->
+                                TargetHelper.targetsFromArea(player, range, new Spell.Release.Target.Area(), e -> e instanceof LivingEntity);
+                        case "raycast" -> {
+                            Entity target = TargetHelper.targetFromRaycast(player, range, e -> e instanceof LivingEntity);
+                            yield target != null ? List.of(target) : List.of();
+                        }
+                        case "raycast_multiple" ->
+                                TargetHelper.targetsFromRaycast(player, range, e -> e instanceof LivingEntity);
+                        default -> List.of();
+                    };
+
+                    if (!targets.isEmpty()) {
+                        SpellHelper.performSpell(player.level(), player, spellId, targets, SpellCast.Action.RELEASE, 1.0f);
+                    }
                 }
+            } finally {
+                SpellCastingUtil.setRequireAmmo(true);
             }
         }
     }
