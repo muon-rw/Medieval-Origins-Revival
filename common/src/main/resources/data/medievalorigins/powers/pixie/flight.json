@@ -65,6 +65,26 @@
 	"thanks_pug": {
 		"type": "apugli:prevent_movement_checks"
 	},
+	"oopsie_patch": {
+		"type": "origins:action_on_callback",
+		"entity_action_added": {
+			"type": "origins:if_else",
+			"condition": {
+				"type": "origins:power",
+				"power": "medievalorigins:pixie/wings",
+				"inverted": true
+			},
+			"if_action": {
+				"type": "origins:delay",
+				"ticks": 10,
+				"action": {
+					"type": "origins:revoke_power",
+					"power": "medievalorigins:pixie/flight",
+					"source": "apoli:command"
+				}
+			}
+		}
+	},
 	"always_jump": {
 		"type": "origins:grounded",
 		"condition": {
@@ -257,7 +277,6 @@
 	},
 	"no_random_floaties": {
 		"type": "origins:action_on_callback",
-
 		"entity_action_added": {
 			"type": "origins:modify_resource",
 			"resource": "*:*_levitate_resource",
