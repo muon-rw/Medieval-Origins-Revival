@@ -29,15 +29,12 @@ public class CastSpellAction {
             String targetType = data.getString("target_type");
             float range = data.getFloat("range");
 
-            // Couldn't I just
-            /*
             SpellCastingUtil.setBypassesCooldown(true);
             SpellCast.Attempt attempt = SpellHelper.attemptCasting(player, itemStack, spellId, requireAmmo);
             if (!attempt.isSuccess()) {
-                Constants.LOG.info("you done fucked up a a ron ");
                 return;
             }
-            */
+
 
             SpellCastingUtil.setRequireAmmo(requireAmmo);
             try {

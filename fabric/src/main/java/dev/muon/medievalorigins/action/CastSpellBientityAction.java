@@ -34,7 +34,6 @@ public class CastSpellBientityAction {
         SpellCastingUtil.setBypassesCooldown(true);
         SpellCast.Attempt attempt = SpellHelper.attemptCasting(player, itemStack, spellId, requireAmmo);
         if (!attempt.isSuccess()) {
-            Constants.LOG.info("you done fucked up a a ron ");
             return;
         }
 

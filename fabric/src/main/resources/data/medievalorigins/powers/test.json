@@ -1,5 +1,5 @@
 {
-  "description": "Only the spell field is required - all other fields are optional. Valid target_types are area, raycast, and raycast_multiple",
+  "description": "Only the spell field is required - all other fields are optional. Valid target_types are area, raycast, and raycast_multiple. Default raycast, 20 range.",
   "type": "origins:active_self",
   "key": {
     "key": "key.origins.primary_active"

@@ -11,7 +11,7 @@ public class SpellCastingUtil {
         requireAmmo.set(value);
     }
 
-    private static final ThreadLocal<Boolean> bypassesCooldown = ThreadLocal.withInitial(() -> true);
+    private static final ThreadLocal<Boolean> bypassesCooldown = ThreadLocal.withInitial(() -> false);
 
     public static boolean bypassesCooldown() {
         return bypassesCooldown.get();
