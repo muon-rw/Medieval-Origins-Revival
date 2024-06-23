@@ -469,7 +469,7 @@
   "power.medievalorigins.revenant/unwitherable.description": "Revenants are immune to wither, and, like undead, they take extra damage from smite, receive inverted effects from harming and healing effects, and are immune to poison and regeneration effects.",
 
   "power.medievalorigins.revenant/skeleton_summons.name": "Revenance",
-  "power.medievalorigins.revenant/skeleton_summons.description": "Revenants can reconstruct creatures of the night modified to do their own bidding. These act as pets, will follow and teleport, and skeletons can be equipped with any weapon. Strength of non-mounts scales with Soul Spell Power. Summon by activating while holding: \n§lSkeleton:§r \n- Mainhand: 4 bones\n§lSkeleton Horse:§r\n- Mainhand: 12 bones\n- Offhand: 1 saddle \n§lWither Skeleton:§r \n- Mainhand: 12 bones\n- Offhand: 1 wither skull\n§lZombie:§r \n- Mainhand: 4 flesh\n§lZombie Horse:§r \n- Mainhand: 12 flesh\n- Offhand: 1 saddle",
+  "power.medievalorigins.revenant/skeleton_summons.description": "Revenants can reconstruct creatures of the night modified to do their own bidding. These act as pets, will follow and teleport, and skeletons can be equipped with any weapon. Strength of non-mounts scales with Soul/Blood Spell Power. Summon by activating while holding: \n§lSkeleton:§r \n- Mainhand: 4 bones\n§lSkeleton Horse:§r\n- Mainhand: 12 bones\n- Offhand: 1 saddle \n§lWither Skeleton:§r \n- Mainhand: 12 bones\n- Offhand: 1 wither skull\n§lZombie:§r \n- Mainhand: 4 flesh\n§lZombie Horse:§r \n- Mainhand: 12 flesh\n- Offhand: 1 saddle",
 
   "power.medievalorigins.revenant/poor_reputation.name": "Chaotic Ally",
   "power.medievalorigins.revenant/poor_reputation.description": "Villagers will refuse to trade with revenants and iron golems will attack them on sight. However, they are accepted amongst the ranks of the Pillagers.",
@@ -517,9 +517,9 @@
   "badges.medievalorigins.high_elf.instant_cure": "§eInstant Cure:§r Right click a villager with a golden apple to directly channel its healing energy without needing to weaken them",
   "badges.medievalorigins.high_elf.void_warp": "§5Void Warp:§r Press %s while holding an ender pearl to rip through the fabric of reality and teleport yourself directly where you're looking, up to 50 blocks away",
   "badges.medievalorigins.high_elf.blazenbreath": "§cBlazenbreath:§r Press %s while holding coal in either hand to shoot forth a weak cone of flame. Hold blaze powder instead to shoot forth a moderate cone of flame. Scales with Fire Spell Power.",
-  "badges.medievalorigins.high_elf.ebonbreath": "§dEbonbreath:§r Press %s while holding bottled dragon's breath in either hand to shoot forth a cone of strong magical flame. Scales with Fire and Arcane Spell Power.",
+  "badges.medievalorigins.high_elf.ebonbreath": "§dEbonbreath:§r Press %s while holding bottled dragon's breath in either hand to shoot forth a cone of strong magical flame. Scales with Fire and Arcane/Ender Spell Power.",
 
-  "badges.medievalorigins.revenant.siphon": "Hit a living creature to drain its life force. Damage scales with accumulated resource and Soul Spell Power.",
+  "badges.medievalorigins.revenant.siphon": "Hit a living creature to drain its life force. Damage scales with accumulated resource and Soul/Blood Spell Power.",
   "badges.medievalorigins.revenant.eat": "Besides bones and rotten flesh, eating certain monster heads can charge this resource more quickly.",
 
   "badges.medievalorigins.alfiq.wall_climb": "Press %s to toggle wall climbing.",
