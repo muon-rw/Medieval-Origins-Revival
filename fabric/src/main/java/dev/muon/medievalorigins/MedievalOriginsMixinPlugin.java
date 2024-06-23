@@ -22,8 +22,12 @@ public class MedievalOriginsMixinPlugin implements IMixinConfigPlugin {
     @Override
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
         if (mixinClassName.equals("dev.muon.medievalorigins.mixin.client.IcarusClientMixin") ||
-           (mixinClassName.equals("dev.muon.medievalorigins.mixin.client.IcarusHelperMixin"))) {
+           (mixinClassName.equals("dev.muon.medievalorigins.mixin.IcarusHelperMixin"))) {
             return FabricLoader.getInstance().isModLoaded("icarus");
+        }
+        if (mixinClassName.equals("dev.muon.medievalorigins.mixin.SpellCooldownMixin") ||
+                (mixinClassName.equals("dev.muon.medievalorigins.mixin.SpellHelperMixin"))) {
+            return FabricLoader.getInstance().isModLoaded("spell_engine");
         }
         return true;
     }
