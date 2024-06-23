@@ -5,6 +5,7 @@ import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import dev.muon.medievalorigins.action.CastSpellAction;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.spell_engine.SpellEngineMod;
 import net.spell_engine.api.spell.Spell;
 import net.spell_engine.internals.SpellHelper;
 import org.spongepowered.asm.mixin.Mixin;
@@ -19,11 +20,11 @@ public class SpellHelperMixin {
                     target = "Lnet/spell_engine/internals/SpellHelper;ammoForSpell(Lnet/minecraft/world/entity/player/Player;Lnet/spell_engine/api/spell/Spell;Lnet/minecraft/world/item/ItemStack;)Lnet/spell_engine/internals/SpellHelper$AmmoResult;"
             )
     )
-    private static SpellHelper.AmmoResult bypassAmmoCheck(Player player, Spell spell, ItemStack itemStack, Operation<SpellHelper.AmmoResult> original) {
-        if (!CastSpellAction.requiresAmmo()) {
-            return new SpellHelper.AmmoResult(true, itemStack);
+    private static SpellHelper.AmmoResult bypassAmmoCheck(Player player, Spell spell, ItemStack ammo, Operation<SpellHelper.AmmoResult> original) {
+        if (!player.getAbilities().instabuild && SpellEngineMod.config.spell_cost_item_allowed && !CastSpellAction.requiresAmmo()) {
+            return new SpellHelper.AmmoResult(true, ammo);
         } else {
-            return original.call(player, spell, itemStack);
+            return original.call(player, spell, ammo);
         }
     }
 }
