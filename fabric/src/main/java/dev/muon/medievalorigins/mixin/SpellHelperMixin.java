@@ -1,6 +1,5 @@
 package dev.muon.medievalorigins.mixin;
 
-import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import dev.muon.medievalorigins.util.SpellCastingUtil;
@@ -25,21 +24,6 @@ public class SpellHelperMixin {
             return true;
         } else {
             return original.call(instance, $$0);
-        }
-    }
-
-    @ModifyExpressionValue(
-            method = "performSpell",
-            at = @At(
-                    value = "INVOKE",
-                    target = "Lnet/spell_engine/internals/casting/SpellCast$Attempt;isSuccess()Z"
-            )
-    )
-    private static boolean bypassesChecks(boolean original) {
-        if (SpellCastingUtil.bypassesCooldown()) {
-            return true;
-        } else {
-            return original;
         }
     }
 }
