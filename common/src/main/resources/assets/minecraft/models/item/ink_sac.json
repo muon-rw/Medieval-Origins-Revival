@@ -6,12 +6,6 @@
     "overrides": [
         {
             "predicate": {
-                "custom_model_data": 351
-            },
-            "model": "medievalorigins:item/paladin"
-        },
-        {
-            "predicate": {
                 "custom_model_data": 352
             },
             "model": "medievalorigins:item/gorgon"

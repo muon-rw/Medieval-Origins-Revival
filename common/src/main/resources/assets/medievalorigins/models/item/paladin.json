@@ -1,6 +1,0 @@
-{
-    "parent": "item/bowl",
-    "textures": {
-        "layer0": "medievalorigins:item/paladin"
-    }
-}
