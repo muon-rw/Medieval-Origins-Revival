@@ -8,6 +8,9 @@ plugins {
 base {
     archivesName = "${mod_name}-forge-${minecraft_version}"
 }
+
+jarJar.enable()
+
 mixin {
     add(sourceSets.main, "${mod_id}.refmap.json")
 
@@ -61,6 +64,16 @@ dependencies {
 
     implementation (jarJar(fg.deobf("net.merchantpug:Apugli:${apugli_version}+${minecraft_version}-forge"))) {
         jarJar.ranged(it, "[${apugli_version},)")
+
+        exclude group: 'mezz.jei', module: 'jei-1.20.1-forge'
+        exclude group: 'io.github.edwinmindcraft', module: 'calio-forge'
+        exclude group: 'top.theillusivec4.caelus', module: 'caelus-forge'
+        exclude group: 'io.github.edwinmindcraft', module: 'apoli-forge'
+        exclude group: 'de.dafuqs', module: 'additionalentityattributes-forge'
+        //exclude group: 'org.spongepowered', module: 'mixin'
+        //exclude group: 'io.github.llamalad7', module: 'mixinextras-common'
+        //exclude group: 'io.github.llamalad7', module: 'mixinextras-forge'
+
     }
     implementation(fg.deobf("de.dafuqs:additionalentityattributes-forge:${aea_forge_version}") {
         exclude group: 'net.minecraftforge'
@@ -95,7 +108,7 @@ dependencies {
     implementation fg.deobf("curse.maven:jade-324717:5390389}")
     runtimeOnly fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}")
 }
-8
+
 minecraft {
     mappings channel: 'parchment', version: "${parchment_version}-${minecraft_version}"
 
@@ -160,9 +173,6 @@ sourceSets.main.resources.srcDir 'src/generated/resources'
 tasks.withType(JavaCompile).configureEach {
     source(project(":common").sourceSets.main.allSource)
 }
-tasks.withType(Javadoc).configureEach {
-    source(project(":common").sourceSets.main.allJava)
-}
 tasks.named("sourcesJar", Jar) {
     from(project(":common").sourceSets.main.allSource)
 }
@@ -187,3 +197,14 @@ publishing {
         }
     }
 }
+
+tasks.jarJar.configure {
+    archiveClassifier = ""
+    dependsOn('reobfJar')
+}
+
+reobf {
+    jarJar {}
+}
+
+jar.finalizedBy('reobfJarJar')
