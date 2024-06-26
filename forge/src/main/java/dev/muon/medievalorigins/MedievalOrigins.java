@@ -48,7 +48,6 @@ public class MedievalOrigins
 
         // Use Forge to bootstrap the Common mod.
         Constants.LOG.info("Loading Medieval Origins");
-        CommonClass.init();
 
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);

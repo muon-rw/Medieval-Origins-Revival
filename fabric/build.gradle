@@ -1,15 +1,51 @@
+import net.darkhax.curseforgegradle.TaskPublishCurseForge
+
 plugins {
-    id 'java'
-    id 'idea'
-    id 'maven-publish'
     id 'fabric-loom'
-}
-base {
-    archivesName = "${mod_name}-fabric-${minecraft_version}"
+    id 'maven-publish'
+    id 'idea'
+    id "net.darkhax.curseforgegradle" version "1.0.7"
+    id "com.modrinth.minotaur" version "2.+"
 }
 
+archivesBaseName = "${mod_name}"
+version = "${rootProject.version}+${minecraft_version}-fabric"
+
+
+loom {
+    mixin.defaultRefmapName = "medievalorigins.refmap.json"
+
+    runs {
+        client {
+            client()
+            setConfigName("Fabric Client")
+            ideConfigGenerated(true)
+            runDir("run")
+        }
+        server {
+            server()
+            setConfigName("Fabric Server")
+            ideConfigGenerated(true)
+            runDir("run")
+        }
+    }
+}
 repositories {
-    maven { url = "https://maven.jamieswhiteshirt.com/libs-release" }
+    maven {
+        name = "Greenhouse"
+        url = 'https://maven.greenhouseteam.dev/releases/'
+    }
+    maven {
+        name = "Jamie's White Shirt"
+        url "https://maven.jamieswhiteshirt.com/libs-release"
+        content {
+            includeGroup "com.jamieswhiteshirt"
+        }
+    }
+    maven {
+        name = 'ParchmentMC'
+        url = 'https://maven.parchmentmc.org'
+    }
     maven { url = "https://maven.nucleoid.xyz/" }
     maven { url = 'https://maven.blamejared.com' }
     maven { url = "https://maven.willbl.dev/releases" }
@@ -39,58 +75,59 @@ repositories {
     maven { url "https://maven.bai.lol" }
     maven { url 'https://maven.kosmx.dev/' }
     maven { url 'https://libs.azuredoom.com:4443/mods' }
-    maven { url = "https://maven.parchmentmc.org" }
     maven { url "https://maven.willbl.dev/releases" }
     maven { url "https://cursemaven.com" }
     maven { url = "https://nexus.resourcefulbees.com/repository/maven-public/" }
     maven { url = "https://jm.gserv.me/repository/maven-public/" }
 
+    mavenCentral()
+    mavenLocal()
 }
 
 dependencies {
+    //Minecraft
     minecraft "com.mojang:minecraft:${minecraft_version}"
     mappings loom.layered() {
         officialMojangMappings()
-        // Use parchment mappings. NOTE: Parchment maven must be manually added. (https://maven.parchmentmc.org)
         parchment("org.parchmentmc.data:parchment-${minecraft_version}:${parchment_version}@zip")
     }
+    //Fabric
     modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
+    //ModMenu
+    modImplementation "com.terraformersmc:modmenu:${modmenu_version}"
+    //Origins
+    modImplementation("com.github.apace100:calio:${calio_fabric_version}")
+    modImplementation("com.github.apace100:apoli:${apoli_fabric_version}")
+    modImplementation "com.github.apace100:origins-fabric:${origins_fabric_version}"
+    //Apugli
+    include(modImplementation("net.merchantpug:Apugli:${apugli_version}+${minecraft_version}-fabric"))
+    // MixinExtras
+    implementation(annotationProcessor("io.github.llamalad7:mixinextras-fabric:${mixin_extras_version}"))
+    //JSR305
     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
-    implementation project(":common")
+    //Service
+    compileOnly group:'com.google.auto.service', name:'auto-service', version:'1.0.1'
+    annotationProcessor group:'com.google.auto.service', name:'auto-service', version:'1.0.1'
+    // Water Walking Fix
+    include(modImplementation("com.github.MerchantPug.water-walking-fix:WaterWalkingFix-Fabric:${wwfix_fabric_version}"))
+    //Relying on the Common Project for sure
+    implementation project(path: ":Common", configuration: "namedElements")
 
-    // Origins
-    modImplementation("com.github.apace100:origins-fabric:v${project.origins_version}")
-    modImplementation ("com.github.apace100:apoli:${project.apoli_version}")
-    modImplementation ("com.github.apace100:calio:${project.calio_version}")
-    //modImplementation fileTree(dir: '/libs/', include: '*.jar')
-    modApi("dev.onyxstudios.cardinal-components-api:cardinal-components-base:${project.cca_version}") {
-        exclude(group: "net.fabricmc.fabric-api")
-    }
-    modApi("dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${project.cca_version}") {
-        exclude(group: "net.fabricmc.fabric-api")
-    }
-    //modImplementation include("maven.modrinth:additionalentityattributes:${project.aea_version}")
-    modImplementation include("com.jamieswhiteshirt:reach-entity-attributes:${project.rea_version}")
-
-    // Other required
-    modApi("com.github.Virtuoel:Pehkui:${pehkui_version}", {
-        exclude group: "net.fabricmc.fabric-api"
-    })
-    modImplementation include("net.merchantpug:Apugli:${apugli_version}+${minecraft_version}-fabric")
-
-    implementation("com.github.LlamaLad7:MixinExtras:0.2.0-beta.4")
-    annotationProcessor("com.github.LlamaLad7:MixinExtras:0.2.0-beta.4")
+    // break - memememe
 
 
-    // deprecated for removal
     modImplementation include("com.github.apace100:autotag-api:${autotag_version}")
+
     modImplementation include("maven.modrinth:projectile-damage-attribute:${project.projectile_damage}-fabric")
 
 
 
-    // etc
+    modImplementation include("com.jamieswhiteshirt:reach-entity-attributes:${project.rea_version}")
 
+    modApi("com.github.Virtuoel:Pehkui:${pehkui_version}", {
+        exclude group: "net.fabricmc.fabric-api"
+    })
     modApi("me.shedaniel.cloth:cloth-config-fabric:${cloth_config_version}") {
         exclude(group: "net.fabricmc.fabric-api")
     }
@@ -126,55 +163,97 @@ dependencies {
 
     modImplementation "io.github.ladysnake:PlayerAbilityLib:${pal_version}"
 
-    // Simply Swords
-    //modLocalRuntime("maven.modrinth:simply-swords:${project.simply_swords_version}")
-
-}
-
-loom {
-    if (project(":common").file("src/main/resources/${mod_id}.accesswidener").exists()) {
-        accessWidenerPath.set(project(":common").file("src/main/resources/${mod_id}.accesswidener"))
-    }
-    mixin {
-        defaultRefmapName.set("${mod_id}.refmap.json")
-    }
-    runs {
-        client {
-            client()
-            setConfigName("Fabric Client")
-            ideConfigGenerated(true)
-            runDir("run")
-        }
-        server {
-            server()
-            setConfigName("Fabric Server")
-            ideConfigGenerated(true)
-            runDir("run")
-        }
-    }
-}
-
-tasks.withType(JavaCompile).configureEach {
-    source(project(":common").sourceSets.main.allSource)
-}
-tasks.named("sourcesJar", Jar) {
-    from(project(":common").sourceSets.main.allSource)
 }
 
 processResources {
-    from project(":common").sourceSets.main.resources
+    from project(":Common").sourceSets.main.resources
+    exclude "medievalorigins.common.accesswidener"
+
+    inputs.property "version", project.version
+
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version
+    }
+}
+
+processTestResources {
+    outputs.upToDateWhen { false }
+    from project(":Common").sourceSets.test.resources
+}
+
+tasks.withType(JavaCompile) {
+    source(project(":Common").sourceSets.main.allSource)
 }
 
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            artifactId base.archivesName.get()
+            groupId project.group
+            artifactId project.archivesBaseName
+            version project.version
             from components.java
         }
     }
+
     repositories {
         maven {
-            url "file://" + System.getenv("local_maven")
+            name = "greenhouse"
+            url = "https://maven.greenhouseteam.dev/releases"
+            credentials {
+                username System.getenv('MAVEN_USERNAME')
+                password System.getenv('MAVEN_PASSWORD')
+            }
+            authentication {
+                create("basic", BasicAuthentication)
+            }
+        }
+        mavenLocal()
+    }
+}
+
+tasks.register('curseforge', TaskPublishCurseForge) {
+    disableVersionDetection()
+    apiToken = System.getenv("CURSEFORGE_TOKEN")
+
+    def mainFile = upload(cf_project_id, remapJar)
+    mainFile.displayName = "Fabric v${rootProject.version}+${minecraft_version}"
+    mainFile.releaseType = "release"
+    mainFile.changelog = new File("$project.rootDir/CHANGELOG.md").getText('UTF-8')
+    mainFile.changelogType = "markdown"
+    fabric_mod_loaders.split(", ").each {
+        mainFile.addModLoader(it)
+    }
+    fabric_game_versions.split(", ").each {
+        mainFile.addGameVersion(it)
+    }
+    java_versions.split(", ").each {
+        mainFile.addJavaVersion(it)
+    }
+    fabric_required_deps.split(", ").each {
+        mainFile.addRequirement(it)
+    }
+    common_embedded_deps.split(", ").each {
+        mainFile.addEmbedded(it)
+    }
+}
+
+modrinth {
+    token = System.getenv("MODRINTH_TOKEN")
+    projectId = mr_project_id
+    versionNumber = "${version}"
+    versionType = "release"
+    versionName = "Fabric/Quilt v${rootProject.version}+${minecraft_version}"
+    changelog = new File("$project.rootDir/CHANGELOG.md").getText('UTF-8')
+    uploadFile = remapJar
+    gameVersions = fabric_game_versions.split(", ").toList()
+    loaders = fabric_mod_loaders.split(", ").collect { return it.toLowerCase(Locale.ROOT) }
+    dependencies {
+        fabric_required_deps.split(", ").each {
+            required.project it
+        }
+
+        common_embedded_deps.split(", ").each {
+            embedded.project it
         }
     }
 }

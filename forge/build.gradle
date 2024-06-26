@@ -1,25 +1,53 @@
+import net.darkhax.curseforgegradle.TaskPublishCurseForge
+
+buildscript {
+    repositories {
+        maven { url 'https://maven.minecraftforge.net' }
+        maven { url 'https://repo.spongepowered.org/repository/maven-public/' }
+        maven { url "https://plugins.gradle.org/m2/" }
+        maven { url 'https://maven.parchmentmc.org' }
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
 plugins {
-    id 'idea'
-    id 'maven-publish'
-    id 'net.minecraftforge.gradle'
-    id 'org.spongepowered.mixin'
+    id 'java'
+    id 'net.minecraftforge.gradle' version '6.+'
     id 'org.parchmentmc.librarian.forgegradle' version '1.+'
+    id 'eclipse'
+    id 'org.spongepowered.mixin' version '0.7.+'
+    id 'maven-publish'
+    id "net.darkhax.curseforgegradle" version "1.0.7"
+    id "com.modrinth.minotaur" version "2.+"
 }
-base {
-    archivesName = "${mod_name}-forge-${minecraft_version}"
-}
+
+archivesBaseName = "${mod_name}"
+version = "${rootProject.version}+${minecraft_version}-forge"
 
 jarJar.enable()
 
-mixin {
-    add(sourceSets.main, "${mod_id}.refmap.json")
-
-    config("${mod_id}.mixins.json")
-    config("${mod_id}.forge.mixins.json")
-}
-
 repositories {
-    maven { url "https://maven.theillusivec4.top/" }
+    maven {
+        name = "Greenhouse"
+        url = 'https://maven.greenhouseteam.dev/releases/'
+    }
+
+    maven {
+        name = "JitPack"
+        url = 'https://jitpack.io'
+        content {
+            excludeGroup "io.github.edwinmindcraft"
+        }
+    }
+
+    maven {
+        name = "Modrinth"
+        url = "https://api.modrinth.com/maven"
+        content {
+            includeGroup "maven.modrinth"
+        }
+    }
     maven { url 'https://maven.kosmx.dev/' }
     maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'}
     maven { url "https://code.redspace.io/releases" }
@@ -32,15 +60,6 @@ repositories {
             includeGroup "curse.maven" }
     }
 
-    maven { url = 'https://api.modrinth.com/maven'
-        content {
-            includeGroup 'maven.modrinth'}
-    }
-
-    maven {url = 'https://jitpack.io'
-        content {
-            excludeGroup "io.github.edwinmindcraft"}
-    }
     maven {
         url = "https://jm.gserv.me/repository/maven-public/"
     }
@@ -51,45 +70,101 @@ repositories {
             excludeGroup "com.teamresourceful.resourcefulconfig"}
     }
     maven { url = "https://nexus.resourcefulbees.com/repository/maven-public/" }
+
+    mavenCentral()
+    mavenLocal()
 }
 
-dependencies {
-    minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+mixin {
+    add sourceSets.main, "medievalorigins.refmap.json"
 
+    config "${mod_id}.mixins.json"
+    config "${mod_id}.forge.mixins.json"
+}
+
+minecraft {
+    mappings channel: 'parchment', version: "${parchment_version}-${minecraft_version}"
+    accessTransformer file('src/main/resources/META-INF/accesstransformer.cfg')
+
+    runs {
+        client {
+            workingDirectory project.file('run')
+            ideaModule "${rootProject.name}.${project.name}.main"
+            taskName 'Client'
+            args "-mixin.config=${mod_id}.mixins.json", "-mixin.config=${mod_id}.forge.mixins.json"
+            mods {
+                create(mod_id) {
+                    source sourceSets.main
+                    source sourceSets.test
+                    source project(":Common").sourceSets.main
+                    source project(":Common").sourceSets.test
+                }
+            }
+        }
+
+        server {
+            workingDirectory project.file('run')
+            ideaModule "${rootProject.name}.${project.name}.main"
+            taskName 'Server'
+            args "-mixin.config=${mod_id}.mixins.json", "-mixin.config=${mod_id}.forge.mixins.json"
+            mods {
+                create(mod_id) {
+                    source sourceSets.main
+                    source sourceSets.test
+                    source project(":Common").sourceSets.main
+                    source project(":Common").sourceSets.test
+                }
+            }
+        }
+
+        data {
+            workingDirectory project.file('run')
+            ideaModule "${rootProject.name}.${project.name}.main"
+            args '--mod', mod_id, '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            taskName 'Data'
+            args "-mixin.config=${mod_id}.mixins.json", "-mixin.config=${mod_id}.forge.mixins.json"
+            mods {
+                create(mod_id) {
+                    source sourceSets.main
+                    source project(":Common").sourceSets.main
+                }
+            }
+        }
+    }
+}
+
+sourceSets.main.resources.srcDir 'src/generated/resources'
+
+dependencies {
+    //Forge
+    minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+    //Origins
     implementation fg.deobf("io.github.edwinmindcraft:calio-forge:${minecraft_version}-${calio_forge_version}")
     implementation fg.deobf("io.github.edwinmindcraft:apoli-forge:${minecraft_version}-${apoli_forge_version}")
     implementation fg.deobf("io.github.edwinmindcraft:origins-forge:${minecraft_version}-${origins_forge_version}")
-
-    implementation fg.deobf("com.github.Virtuoel:Pehkui:${pehkui_version}")
-
+    implementation fg.deobf("top.theillusivec4.caelus:caelus-forge:${caelus_version}+1.20")
+    // Apugli
     implementation (jarJar(fg.deobf("net.merchantpug:Apugli:${apugli_version}+${minecraft_version}-forge"))) {
         jarJar.ranged(it, "[${apugli_version},)")
-
         exclude group: 'mezz.jei', module: 'jei-1.20.1-forge'
         exclude group: 'io.github.edwinmindcraft', module: 'calio-forge'
         exclude group: 'top.theillusivec4.caelus', module: 'caelus-forge'
         exclude group: 'io.github.edwinmindcraft', module: 'apoli-forge'
         exclude group: 'de.dafuqs', module: 'additionalentityattributes-forge'
-        //exclude group: 'org.spongepowered', module: 'mixin'
-        //exclude group: 'io.github.llamalad7', module: 'mixinextras-common'
-        //exclude group: 'io.github.llamalad7', module: 'mixinextras-forge'
-
+        exclude group: 'org.spongepowered', module: 'mixin'
+        exclude group: 'io.github.llamalad7', module: 'mixinextras-common'
+        exclude group: 'io.github.llamalad7', module: 'mixinextras-forge'
     }
-    implementation(fg.deobf("de.dafuqs:additionalentityattributes-forge:${aea_forge_version}") {
-        exclude group: 'net.minecraftforge'
-        exclude group: 'com.github.llamalad.mixinextras'
-    })
 
-    runtimeOnly fg.deobf("top.theillusivec4.caelus:caelus-forge:${caelus_version}")
-    compileOnly fg.deobf("top.theillusivec4.caelus:caelus-forge:${caelus_version}")
+    compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:${mixin_extras_version}"))
+    implementation(jarJar("io.github.llamalad7:mixinextras-forge:${mixin_extras_version}")) {
+        jarJar.ranged(it, "[${mixin_extras_version},)")
+    }
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+    //compileOnly group:'com.google.auto.service', name:'auto-service', version:'1.0.1'
+    //annotationProcessor group:'com.google.auto.service', name:'auto-service', version:'1.0.1'
 
-    compileOnly project(":common")
-    annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT:processor")
-
-    implementation(annotationProcessor("io.github.llamalad7:mixinextras-common:${mixin_extras_version}"))
-    implementation("io.github.llamalad7:mixinextras-forge:${mixin_extras_version}")
-
-    // Optional Compats:
+    implementation project(":Common")
 
     // Icarus
     implementation fg.deobf("maven.modrinth:icarus:${project.icarus_version}+NeoForge")
@@ -103,98 +178,29 @@ dependencies {
     implementation fg.deobf("io.redspace.ironsspellbooks:irons_spellbooks:${irons_version}")
     runtimeOnly fg.deobf("software.bernie.geckolib:geckolib-forge-${geckolib_version}")
     runtimeOnly fg.deobf("dev.kosmx.player-anim:player-animation-lib-forge:${player_animator_version}")
-
-    // Useful stuff
-    implementation fg.deobf("curse.maven:jade-324717:5390389}")
-    runtimeOnly fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}")
 }
 
-minecraft {
-    mappings channel: 'parchment', version: "${parchment_version}-${minecraft_version}"
-
-    copyIdeResources = true //Calls processResources when in dev
-
-    // Automatically enable forge AccessTransformers if the file exists
-    // This location is hardcoded in Forge and can not be changed.
-    // https://github.com/MinecraftForge/MinecraftForge/blob/be1698bb1554f9c8fa2f58e32b9ab70bc4385e60/fmlloader/src/main/java/net/minecraftforge/fml/loading/moddiscovery/ModFile.java#L123
-    if (file('src/main/resources/META-INF/accesstransformer.cfg').exists()) {
-        accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
-    }
-
-    runs {
-        client {
-            workingDirectory project.file('run')
-            ideaModule "${rootProject.name}.${project.name}.main"
-            taskName 'Client'
-            property 'mixin.env.remapRefMap', 'true'
-            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-            mods {
-                modClientRun {
-                    source sourceSets.main
-                    source project(":common").sourceSets.main
-                }
-            }
-        }
-
-        server {
-            workingDirectory project.file('run')
-            ideaModule "${rootProject.name}.${project.name}.main"
-            taskName 'Server'
-            property 'mixin.env.remapRefMap', 'true'
-            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-            mods {
-                modServerRun {
-                    source sourceSets.main
-                    source project(":common").sourceSets.main
-                }
-            }
-        }
-
-        data {
-            workingDirectory project.file('run')
-            ideaModule "${rootProject.name}.${project.name}.main"
-            args '--mod', mod_id, '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
-            taskName 'Data'
-            property 'mixin.env.remapRefMap', 'true'
-            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-            mods {
-                modDataRun {
-                    source sourceSets.main
-                    source project(":common").sourceSets.main
-                }
-            }
-        }
-    }
-}
-
-sourceSets.main.resources.srcDir 'src/generated/resources'
-
-
-tasks.withType(JavaCompile).configureEach {
-    source(project(":common").sourceSets.main.allSource)
-}
-tasks.named("sourcesJar", Jar) {
-    from(project(":common").sourceSets.main.allSource)
+tasks.withType(JavaCompile) {
+    source(project(":Common").sourceSets.main.allSource)
 }
 
 processResources {
-    from project(":common").sourceSets.main.resources
+    from project(':Common').sourceSets.main.resources
+    exclude "medievalorigins.common.accesswidener"
+
+    inputs.property 'version', project.version
+
+    filesMatching('META-INF/mods.toml') {
+        expand 'version': project.version
+    }
 }
 
-jar.finalizedBy('reobfJar')
+processTestResources {
+    outputs.upToDateWhen { false }
+    from project(":Common").sourceSets.test.resources
 
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            artifactId base.archivesName.get()
-            from components.java
-            fg.component(it)
-        }
-    }
-    repositories {
-        maven {
-            url "file://" + System.getenv("local_maven")
-        }
+    filesMatching('META-INF/mods.toml') {
+        expand 'version': project.version
     }
 }
 
@@ -208,3 +214,83 @@ reobf {
 }
 
 jar.finalizedBy('reobfJarJar')
+
+tasks.withType(AbstractPublishToMaven) {
+    dependsOn('jarJar')
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId project.group
+            artifactId project.archivesBaseName
+            version project.version
+            artifact jar
+        }
+    }
+
+    repositories {
+        maven {
+            name = "greenhouse"
+            url = "https://maven.greenhouseteam.dev/releases"
+            credentials {
+                username System.getenv('MAVEN_USERNAME')
+                password System.getenv('MAVEN_PASSWORD')
+            }
+            authentication {
+                create("basic", BasicAuthentication)
+            }
+        }
+        mavenLocal()
+    }
+}
+
+
+tasks.register('curseforge', TaskPublishCurseForge) {
+    disableVersionDetection()
+    apiToken = System.getenv("CURSEFORGE_TOKEN")
+
+    def mainFile = upload(cf_project_id, jar)
+    mainFile.displayName = "Forge v${rootProject.version}+${minecraft_version}"
+    mainFile.releaseType = "release"
+    mainFile.changelog = new File("$project.rootDir/CHANGELOG.md").getText('UTF-8')
+    mainFile.changelogType = "markdown"
+    forge_mod_loaders.split(", ").each {
+        mainFile.addModLoader(it)
+    }
+    forge_game_versions.split(", ").each {
+        mainFile.addGameVersion(it)
+    }
+    java_versions.split(", ").each {
+        mainFile.addJavaVersion(it)
+    }
+    forge_required_deps.split(", ").each {
+        mainFile.addRequirement(it)
+    }
+    cf_forge_optional_deps.split(", ").each {
+        mainFile.addOptional(it)
+    }
+    common_embedded_deps.split(", ").each {
+        mainFile.addEmbedded(it)
+    }
+}
+
+modrinth {
+    token = System.getenv("MODRINTH_TOKEN")
+    projectId = mr_project_id
+    versionNumber = "${version}"
+    versionType = "release"
+    versionName = "Forge v${rootProject.version}+${minecraft_version}"
+    changelog = new File("$project.rootDir/CHANGELOG.md").getText('UTF-8')
+    uploadFile = jar
+    gameVersions = forge_game_versions.split(", ").toList()
+    loaders = forge_mod_loaders.split(", ").collect { return it.toLowerCase(Locale.ROOT) }
+    dependencies {
+        forge_required_deps.split(", ").each {
+            required.project it
+        }
+        common_embedded_deps.split(", ").each {
+            embedded.project it
+        }
+    }
+}

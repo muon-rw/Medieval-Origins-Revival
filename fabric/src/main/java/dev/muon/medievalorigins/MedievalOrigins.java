@@ -17,32 +17,9 @@ import org.apache.logging.log4j.Logger;
 public class MedievalOrigins implements ModInitializer {
 	public static final Logger LOGGER = LogManager.getLogger("medievalorigins");
 
-	// Unused, using custom conditions or registering to our tags with AutoTag API
-	// TODO: use for legacy icon config
-	/*
-	public static void resourceOverrides() {
-		ResourceLocation id = MedievalOrigins.loc("tag_loader");
-		ModContainer container = getModContainer(id);
-		ResourceManagerHelper.registerBuiltinResourcePack(id, container, ResourcePackActivationType.DEFAULT_ENABLED);
-	}
-	private static ModContainer getModContainer(ResourceLocation pack) {
-		if (FabricLoader.getInstance().isDevelopmentEnvironment()) {
-			for (ModContainer mod : FabricLoader.getInstance().getAllMods()) {
-				if (mod.findPath("resourcepacks/" + pack.getPath()).isPresent()) {
-					LOGGER.info("LOADING DEV ENVIRONMENT DATAPACK");
-					return mod;
-				}
-			}
-		}
-		return FabricLoader.getInstance().getModContainer(pack.getNamespace()).orElseThrow();
-	}
-	*/
-
 	@Override
 	public void onInitialize() {
 		Constants.LOG.info("Loading Medieval Origins");
-
-		CommonClass.init();
 
 
 		ModEnchantments.register();

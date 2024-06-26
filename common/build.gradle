@@ -1,34 +1,86 @@
 plugins {
-    id 'idea'
     id 'java'
+    id 'fabric-loom'
     id 'maven-publish'
-    id 'org.spongepowered.gradle.vanilla'
+    id "com.github.breadmoirai.github-release" version "2.4.1"
 }
-base {
-    archivesName = "${mod_name}-common-${minecraft_version}"
+
+archivesBaseName = "${mod_name}"
+version = "${rootProject.version}+${minecraft_version}-common"
+
+repositories {
+    maven {
+        name = "Greenhouse"
+        url = 'https://maven.greenhouseteam.dev/releases/'
+    }
+    maven {
+        name = 'Sponge / Mixin'
+        url = 'https://repo.spongepowered.org/repository/maven-public/'
+    }
+    maven {
+        name = "JitPack"
+        url = 'https://jitpack.io'
+    }
+    maven {
+        name = 'ParchmentMC'
+        url = 'https://maven.parchmentmc.org'
+    }
+    mavenCentral()
+    mavenLocal()
 }
-minecraft {
-    version(minecraft_version)
-    if(file("src/main/resources/${mod_id}.accesswidener").exists()){
-        accessWideners(file("src/main/resources/${mod_id}.accesswidener"))
+
+loom {
+    accessWidenerPath = file("src/main/resources/medievalorigins.common.accesswidener")
+    mixin {
+        useLegacyMixinAp = false
     }
 }
 
 dependencies {
-     compileOnly group:'org.spongepowered', name:'mixin', version:'0.8.5'
-     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
+    // Minecraft
+    minecraft "com.mojang:minecraft:${minecraft_version}"
+    mappings loom.layered() {
+        officialMojangMappings()
+        parchment("org.parchmentmc.data:parchment-${minecraft_version}:${parchment_version}@zip")
+    }
+    // Origins
+    modCompileOnly("com.github.apace100:calio:${calio_fabric_version}") { transitive false }
+    modCompileOnly("com.github.apace100:apoli:${apoli_fabric_version}") { transitive false }
+    modCompileOnly("com.github.apace100:origins-fabric:${origins_fabric_version}") { transitive false }
+    // Apugli
+    modCompileOnly("net.merchantpug:Apugli:${apugli_version}+${minecraft_version}-fabric") { transitive false }
+    // MixinExtras
+    compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:${mixin_extras_version}"))
+    //Mixin
+    compileOnly group:'org.spongepowered', name:'mixin', version:'0.8.5'
+    compileOnly group: 'org.ow2.asm', name: 'asm-tree', version: '9.4'
+
+    implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
 }
 
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            artifactId base.archivesName.get()
-            from components.java
+            groupId project.group
+            artifactId project.archivesBaseName
+            version project.version
+            artifact jar
+            artifact sourcesJar
         }
     }
+
     repositories {
         maven {
-            url "file://" + System.getenv("local_maven")
+            name = "greenhouse"
+            url = "https://maven.greenhouseteam.dev/releases"
+            credentials {
+                username System.getenv('MAVEN_USERNAME')
+                password System.getenv('MAVEN_PASSWORD')
+            }
+            authentication {
+                create("basic", BasicAuthentication)
+            }
         }
+        mavenLocal()
     }
 }
