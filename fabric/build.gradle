@@ -215,6 +215,7 @@ publishing {
 modrinth {
     token = System.getenv("MODRINTH_TOKEN")
     projectId = "medieval-origins-revival"
+    versionNumber = "${version}"
     versionType = "release"
     versionName = "Fabric-${rootProject.version}+${minecraft_version}"
     uploadFile = remapJar

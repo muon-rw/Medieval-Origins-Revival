@@ -247,7 +247,7 @@ publishing {
 
 modrinth {
     token = System.getenv("MODRINTH_TOKEN")
-    projectId = mr_project_id
+    projectId = "medieval-origins-revival"
     versionNumber = "${version}"
     versionType = "release"
     versionName = "Forge/Neoforge-${rootProject.version}+${minecraft_version}"
