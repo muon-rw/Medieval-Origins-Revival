@@ -23,7 +23,10 @@ public final class IcarusWingsPower implements IDynamicFeatureConfiguration {
 
     public static boolean hasPower(Entity entity) {
         IPowerContainer powerContainer = ApoliAPI.getPowerContainer(entity);
-        return powerContainer != null && powerContainer.hasPower(ModPowers.ICARUS_WINGS.get());
+        if (powerContainer != null) {
+            return powerContainer.hasPower(ModPowers.ICARUS_WINGS.get());
+        }
+        return false;
     }
 
     public static ItemStack getWingsType(LivingEntity entity) {
