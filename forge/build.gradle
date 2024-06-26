@@ -245,13 +245,27 @@ publishing {
     }
 }
 
+modrinth {
+    token = System.getenv("MODRINTH_TOKEN")
+    projectId = mr_project_id
+    versionNumber = "${version}"
+    versionType = "release"
+    versionName = "Forge/Neoforge-${rootProject.version}+${minecraft_version}"
+    changelog = new File("$project.rootDir/CHANGELOG.md").getText('UTF-8')
+    uploadFile = jar
+    gameVersions = forge_game_versions.split(", ").toList()
+    loaders = forge_mod_loaders.split(", ").collect { return it.toLowerCase(Locale.ROOT) }
+    dependencies {
+        required.project("origins-forge")
+        required.project("pehkui")
+    }
+}
 
-tasks.register('curseforge', TaskPublishCurseForge) {
-    disableVersionDetection()
+task publishCurseForge(type: net.darkhax.curseforgegradle.TaskPublishCurseForge) {
     apiToken = System.getenv("CURSEFORGE_TOKEN")
 
-    def mainFile = upload(cf_project_id, jar)
-    mainFile.displayName = "Forge v${rootProject.version}+${minecraft_version}"
+    def mainFile = upload(897171, jarJar)
+    mainFile.displayName = "Forge/Neoforge-${rootProject.version}+${minecraft_version}"
     mainFile.releaseType = "release"
     mainFile.changelog = new File("$project.rootDir/CHANGELOG.md").getText('UTF-8')
     mainFile.changelogType = "markdown"
@@ -261,36 +275,7 @@ tasks.register('curseforge', TaskPublishCurseForge) {
     forge_game_versions.split(", ").each {
         mainFile.addGameVersion(it)
     }
-    java_versions.split(", ").each {
-        mainFile.addJavaVersion(it)
-    }
-    forge_required_deps.split(", ").each {
-        mainFile.addRequirement(it)
-    }
-    cf_forge_optional_deps.split(", ").each {
-        mainFile.addOptional(it)
-    }
-    common_embedded_deps.split(", ").each {
-        mainFile.addEmbedded(it)
-    }
+    mainFile.addRequirement("origins")
+    mainFile.addRequirement("pehkui")
 }
 
-modrinth {
-    token = System.getenv("MODRINTH_TOKEN")
-    projectId = mr_project_id
-    versionNumber = "${version}"
-    versionType = "release"
-    versionName = "Forge v${rootProject.version}+${minecraft_version}"
-    changelog = new File("$project.rootDir/CHANGELOG.md").getText('UTF-8')
-    uploadFile = jar
-    gameVersions = forge_game_versions.split(", ").toList()
-    loaders = forge_mod_loaders.split(", ").collect { return it.toLowerCase(Locale.ROOT) }
-    dependencies {
-        forge_required_deps.split(", ").each {
-            required.project it
-        }
-        common_embedded_deps.split(", ").each {
-            embedded.project it
-        }
-    }
-}
