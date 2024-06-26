@@ -11,7 +11,8 @@
         "medievalorigins:troll/spell_power",
         "origins_env_deh:cold_resistance",
         "thermoo-patches:cold_immune",
-        "origins_survive:cold_resistance"
+        "origins_survive:cold_resistance",
+        "origins_toughasnails:cold_resistance"
     ],
     "icon": {
         "item": "minecraft:player_head",

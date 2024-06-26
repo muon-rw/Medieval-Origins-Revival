@@ -16,7 +16,9 @@
                 "thermoo-patches:heat_immune",
                 "thermoo-patches:cold_vulnerability",
                 "origins_survive:lava_drinker",
-                "origins_survive:heat_resistance"
+                "origins_survive:heat_resistance",
+                "origins_toughasnails:lava_drinker",
+                "origins_toughasnails:thermal_regulator"
 	],
         "icon": {
 		"item": "minecraft:ink_sac",
