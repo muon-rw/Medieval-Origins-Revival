@@ -3,14 +3,15 @@ import io.github.edwinmindcraft.apoli.api.power.factory.*;
 import io.github.edwinmindcraft.apoli.api.registry.ApoliRegistries;
 import dev.muon.medievalorigins.MedievalOrigins;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModActions {
     public static final DeferredRegister<EntityAction<?>> ENTITY_ACTIONS = DeferredRegister.create(ApoliRegistries.ENTITY_ACTION_KEY, MedievalOrigins.MODID);
     public static final RegistryObject<SummonEntityAction> SUMMON_ENTITY = ENTITY_ACTIONS.register("summon_entity", SummonEntityAction::new);
-    public static final RegistryObject<CastSpellAction> CAST_SPELL = ENTITY_ACTIONS.register("cast_spell", CastSpellAction::new);
-
+    public static final RegistryObject<CastSpellAction> CAST_SPELL = ModList.get().isLoaded("irons_spellbooks") ?
+            ENTITY_ACTIONS.register("cast_spell", CastSpellAction::new) : null;
 
     public static final DeferredRegister<BiEntityAction<?>> BIENTITY_ACTIONS = DeferredRegister.create(ApoliRegistries.BIENTITY_ACTION_KEY, MedievalOrigins.MODID);
     public static final RegistryObject<AttributedDamageAction> DAMAGE = BIENTITY_ACTIONS.register("damage", AttributedDamageAction::new);
