@@ -225,7 +225,7 @@ modrinth {
     dependencies {
         required.project("origins")
         required.project("pehkui")
-        required.project("spell-power")
+        required.project("spell-engine")
     }
 }
 
@@ -240,5 +240,5 @@ task publishCurseForge(type: net.darkhax.curseforgegradle.TaskPublishCurseForge)
     mainFile.displayName = "Fabric-${rootProject.version}+${minecraft_version}"
     mainFile.addRequirement("origins")
     mainFile.addRequirement("pehkui")
-    mainFile.addRequirement("spell-power")
+    mainFile.addRequirement("spell-engine")
 }
