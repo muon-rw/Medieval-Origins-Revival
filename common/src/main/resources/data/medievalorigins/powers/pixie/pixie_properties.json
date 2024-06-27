@@ -1,5 +1,6 @@
 {
 	"type": "origins:multiple",
+	"hidden": true,
 	"attributes": {
 		"type": "origins:attribute",
 		"modifiers": [
@@ -19,7 +20,7 @@
 		"type": "origins:attribute_modify_transfer",
 		"class": "modify_air_speed",
 		"attribute": "minecraft:generic.movement_speed",
-		"multiplier": 1
+		"multiplier": -0.4
 	},
 	"size_callon": {
 		"type": "origins:action_on_callback",
