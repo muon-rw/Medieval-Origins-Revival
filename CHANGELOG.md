@@ -7,7 +7,7 @@
 - Elves, Arachnae, and Alfiq are now slowed by heavy armor instead of being unable to equip it
 - Heavy armor is now determined by armor toughness
 - Added pixie wing animations
-- Added a key for pixies to fly down while hovering
+- Remade pixie flight to be easier to use, but operate based on a limited resource
 - Made pixie's mischief power play sounds less often
 - Made Icarus compat more friendly with other mods (thanks Up!)
 - Made Revenant's siphon resource more visible

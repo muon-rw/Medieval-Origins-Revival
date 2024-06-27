@@ -6,6 +6,7 @@ import dev.cammiescorner.icarus.util.IcarusHelper;
 import dev.muon.medievalorigins.enchantment.ModEnchantments;
 import dev.muon.medievalorigins.power.IcarusWingsPower;
 import dev.muon.medievalorigins.power.ModPowers;
+import dev.muon.medievalorigins.power.PixieWingsPower;
 import io.github.edwinmindcraft.apoli.api.ApoliAPI;
 import io.github.edwinmindcraft.apoli.api.component.IPowerContainer;
 import net.minecraft.world.entity.LivingEntity;
@@ -45,6 +46,8 @@ public class IcarusClientMixin {
             if (!wingsType.isEmpty()) {
                 return wingsType;
             }
+        } else if (PixieWingsPower.hasPower(entity)) {
+            return null;
         }
         return original;
     }

@@ -5,10 +5,12 @@ import dev.cammiescorner.icarus.client.IcarusClient;
 import dev.cammiescorner.icarus.util.IcarusHelper;
 import dev.muon.medievalorigins.enchantment.ModEnchantments;
 import dev.muon.medievalorigins.power.IcarusWingsPower;
+import dev.muon.medievalorigins.power.PixieWingsPower;
 import io.github.apace100.apoli.component.PowerHolderComponent;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
@@ -48,6 +50,8 @@ public abstract class IcarusClientMixin {
             if (!wingsType.isEmpty()) {
                 return wingsType;
             }
+        } else if (PixieWingsPower.hasPower(entity)) {
+            return new ItemStack(Items.AIR);
         }
         return original;
     }
