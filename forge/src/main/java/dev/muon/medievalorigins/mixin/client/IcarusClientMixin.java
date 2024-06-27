@@ -21,6 +21,11 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
 @Mixin(value = IcarusClient.class, remap = false)
 public class IcarusClientMixin {
+
+    /*
+     * TODO: Rewrite to be less invasive
+     *  Use ModifyExpressionValue, target getArmorValue
+     */
     @ModifyVariable(method = "onPlayerTick(Lnet/minecraft/world/entity/player/Player;)V",
             at = @At(value = "STORE", opcode = Opcodes.FSTORE),
             ordinal = 0)
