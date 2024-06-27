@@ -37,9 +37,22 @@
             }
         }
     },
-    "spell_power_increase": {
+    "spell_power_fabric": {
         "type": "origins:modify_attribute",
         "attribute": "spell_power:healing",
+        "modifier": {
+            "operation": "addition",
+            "resource": "medievalorigins:valkyrie/vanquisher_vanquished",
+            "value": 0,
+            "modifier": {
+                "operation": "multiply_total_multiplicative",
+                "value": -0.999
+            }
+        }
+    },
+    "spell_power_forge": {
+        "type": "origins:modify_attribute",
+        "attribute": "irons_spellbooks:holy_spell_power",
         "modifier": {
             "operation": "addition",
             "resource": "medievalorigins:valkyrie/vanquisher_vanquished",
