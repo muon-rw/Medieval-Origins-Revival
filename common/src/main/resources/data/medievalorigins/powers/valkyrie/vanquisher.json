@@ -1,0 +1,53 @@
+{
+    "type": "origins:multiple",
+    "vanquished": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 1000,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+            "bar_index": 20
+        }
+    },
+    "add": {
+        "type": "origins:self_action_on_kill",
+        "target_condition": {
+            "type": "origins:entity_group",
+            "group": "undead"
+        },
+        "entity_action": {
+            "type": "origins:modify_resource",
+            "resource": "*:*_vanquished",
+            "modifier": {
+                "operation": "add_base_early",
+                "value": 1
+            }
+        },
+        "cooldown": 0
+    },
+    "lose": {
+        "type": "origins:action_on_callback",
+        "entity_action_respawned": {
+            "type": "origins:modify_resource",
+            "resource": "medievalorigins:valkyrie/vanquisher_vanquished",
+            "modifier": {
+                "operation": "multiply_total_multiplicative",
+                "value": -0.5
+            }
+        }
+    },
+    "spell_power_increase": {
+        "type": "origins:modify_attribute",
+        "attribute": "spell_power:healing",
+        "modifier": {
+            "operation": "addition",
+            "resource": "medievalorigins:valkyrie/vanquisher_vanquished",
+            "value": 0,
+            "modifier": {
+                "operation": "multiply_total_multiplicative",
+                "value": -0.999
+            }
+        }
+    }
+}

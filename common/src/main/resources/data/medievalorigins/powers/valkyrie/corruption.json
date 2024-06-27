@@ -1,0 +1,21 @@
+{
+    "type": "origins:action_over_time",
+    "condition": {
+        "type": "apugli:entity_in_radius",
+        "condition": {
+            "type": "origins:entity_group",
+            "group": "undead"
+        },
+        "radius": 8
+    },
+    "rising_action": {
+        "type": "origins:grant_power",
+        "power": "medievalorigins:valkyrie/corruption_temp",
+        "source": "medievalorigins:valkyrie/corruption"
+    },
+    "falling_action": {
+        "type": "origins:revoke_power",
+        "power": "medievalorigins:valkyrie/corruption_temp",
+        "source": "medievalorigins:valkyrie/corruption"
+    }
+}
