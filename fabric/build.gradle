@@ -94,35 +94,19 @@ dependencies {
     //Fabric
     modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
-    //ModMenu
-    modImplementation "com.terraformersmc:modmenu:${modmenu_version}"
-    //Origins
+
+
     modImplementation("com.github.apace100:calio:${calio_fabric_version}")
     modImplementation("com.github.apace100:apoli:${apoli_fabric_version}")
     modImplementation "com.github.apace100:origins-fabric:${origins_fabric_version}"
-    //Apugli
     include(modImplementation("net.merchantpug:Apugli:${apugli_version}+${minecraft_version}-fabric"))
-    // MixinExtras
     implementation(annotationProcessor("io.github.llamalad7:mixinextras-fabric:${mixin_extras_version}"))
-    //JSR305
-    implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
-    //Service
-    compileOnly group:'com.google.auto.service', name:'auto-service', version:'1.0.1'
-    annotationProcessor group:'com.google.auto.service', name:'auto-service', version:'1.0.1'
-    // Water Walking Fix
-    include(modImplementation("com.github.MerchantPug.water-walking-fix:WaterWalkingFix-Fabric:${wwfix_fabric_version}"))
-    //Relying on the Common Project for sure
+    implementation(annotationProcessor("net.fabricmc:sponge-mixin:0.13.3+mixin.0.8.5"))
+
     implementation project(path: ":Common", configuration: "namedElements")
-
-    // break - memememe
-
-
+    modImplementation "com.terraformersmc:modmenu:${modmenu_version}"
     modImplementation include("com.github.apace100:autotag-api:${autotag_version}")
-
     modImplementation include("maven.modrinth:projectile-damage-attribute:${project.projectile_damage}-fabric")
-
-
-
     modImplementation include("com.jamieswhiteshirt:reach-entity-attributes:${project.rea_version}")
 
     modApi("com.github.Virtuoel:Pehkui:${pehkui_version}", {
