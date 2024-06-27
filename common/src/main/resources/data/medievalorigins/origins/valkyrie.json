@@ -1,9 +1,11 @@
 {
 	"powers": [
 		"medievalorigins:valkyrie/wings",
+		"medievalorigins:valkyrie/intervention",
 		"medievalorigins:valkyrie/divine_smite",
-		"medievalorigins:valkyrie/heal",
-		"medievalorigins:valkyrie/sacrifice",
+		"medievalorigins:valkyrie/corruption",
+		"medievalorigins:valkyrie/vanquisher",
+		"medievalorigins:valkyrie/heavenly_implements",
 		"medievalorigins:valkyrie/spell_power"
 	],
 	"icon": {
@@ -11,5 +13,5 @@
 		"tag": "{CustomModelData:369}"
 	},
 	"order": 1,
-	"impact": 3
+	"impact": 2
 }

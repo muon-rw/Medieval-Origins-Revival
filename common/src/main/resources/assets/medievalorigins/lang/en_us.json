@@ -481,10 +481,25 @@
   "power.medievalorigins.revenant/unguarded.description": "Obsessing over the spirit realm leaves revenants more open to attack in the physical realm. Most mobs deal more damage to them.",
 
   "origin.medievalorigins.valkyrie.name": "Valkyrie",
-  "origin.medievalorigins.valkyrie.description": "-§l Notable Changes§r: \n§o§2+ Self-propelled flight§r \n§o§6• Feathered wings§r \n§o§c- Fragile \n- Unique restrictions§r\n§lIcarae§r are carnivorous birdlike humanoids with powerful wings; they fly low to the ground, weaving nimbly between obstacles to hunt their prey.",
-  "power.medievalorigins.valkyrie/wings.name": "Feathered",
-  "power.medievalorigins.valkyrie/wings.description": "Valkyrie are born with massive white wings, and powerful flight muscles capable of lifting themselves up into the air.",
+  "origin.medievalorigins.valkyrie.description": "-§l Notable Changes§r: \n§o§2+ Healing§r \n§o§6• Feathered wings§r \n§o§c- Weak to Undead§r\n§lValkyrie§r are winged warriors who decide the fate of those in battle; they have potent holy magic, and were said to have carried the dead to Odin's Valhalla",
 
+  "power.medievalorigins.valkyrie/wings.name": "Feathered",
+  "power.medievalorigins.valkyrie/wings.description": "Valkyrie are born with massive white feathered wings, and can fly freely.",
+
+  "power.medievalorigins.valkyrie/intervention.name": "Intervention",
+  "power.medievalorigins.valkyrie/intervention.description": "Dash to the nearest allied player, shielding them and cleansing negative effects. Shield scales with healing/holy spell power",
+
+  "power.medievalorigins.valkyrie/divine_smite.name": "Divine Smite",
+  "power.medievalorigins.valkyrie/divine_smite.description": "Every third attack, call down a powerful force to smite nearby foes. Damage scales with healing/holy spell power.",
+
+  "power.medievalorigins.valkyrie/corruption.name": "Corruption",
+  "power.medievalorigins.valkyrie/corruption.description": "Nearby undead mobs weaken and slow you, and their hits deal more damage.",
+
+  "power.medievalorigins.valkyrie/vanquisher.name": "Vanquisher",
+  "power.medievalorigins.valkyrie/vanquisher.description": "Each undead mob slain increases the potency and range of §lDivine Smite§r and reduces the effects of §lCorruption§r. Lose half stacks on death.",
+
+  "power.medievalorigins.valkyrie/heavenly_implements.name": "Heavenly Implements",
+  "power.medievalorigins.valkyrie/heavenly_implements.description": "Valkyrie have innately more healing/holy spell power and are more potent with silver and gold weapons.",
 
   "enchantment.medievalorigins.featherweight": "Featherweight",
   "enchantment.medievalorigins.featherweight.desc": "This enchantment can be applied to heavy armor to prevent slowing down Arachnae, Elves, Alfiq, or those with wings.",
