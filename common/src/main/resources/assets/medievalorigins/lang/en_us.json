@@ -521,10 +521,11 @@
   "entity.medievalorigins.summon_skeleton": "Summoner's Skeleton",
   "entity.medievalorigins.summon_wither_skeleton": "Summoner's Wither Skeleton",
 
-  "badges.medievalorigins.pixie.jump": "Jumps can be repeated infinitely in the air, and are slightly higher.",
-  "badges.medievalorigins.pixie.dash_forward": "Press %s twice quickly to dash forward.",
-  "badges.medievalorigins.pixie.dash_upward": "Quickly press %s then %s to dash upward.",
-  "badges.medievalorigins.pixie.hover": "Press %s to hover in place. Press again to fall freely.",
+  "badges.medievalorigins.pixie.jump": "Pixie jumps are 2 blocks high. They can also fly, which uses up §bFlight Power (FP)§r. \n\n §bFP§r only regenerates while on the ground.",
+  "badges.medievalorigins.pixie.glide": "Glide - Press %s in the air to glide gently using your wings. \n\nUses no §bFP§r.",
+  "badges.medievalorigins.pixie.hover": "Hover - Quickly press %s twice to begin hovering (a slower creative flight) and slowly drain §bFP§r. \n\nIf your §bFP§r runs out completely, you won't be able to fly again until it §lfully§r restores.",
+  "badges.medievalorigins.pixie.dash_forward": "Dash - Press %s twice quickly to dash forward. \n\nThis uses 50 §bFP§r if gliding, and 25 §bFP§r otherwise.",
+  "badges.medievalorigins.pixie.dash_upward": "Dash Up - Quickly press %s then %s to dash upward. \n\nThis also uses 50 §bFP§r if gliding, and 25 §bFP§r otherwise.",
   "badges.medievalorigins.pixie.disable_effects": "Press %s while sneaking to disable sounds and particle effects",
 
   "badges.medievalorigins.high_elf.glacial_step": "§bGlacial Step:§r Hold an ice block to manipulate the entropy of water molecules, allowing you to walk as if you had Frost Walker",
