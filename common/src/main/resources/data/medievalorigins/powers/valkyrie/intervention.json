@@ -1,0 +1,44 @@
+{
+    "cooldown": 600,
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:if_else",
+        "condition": {
+            "type": "origins:fall_flying"
+        },
+        "if_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:add_velocity",
+                    "space": "local",
+                    "z": 4
+                },
+                {
+                    "type": "origins:grant_power",
+                    "power": "medievalorigins:valkyrie/dive",
+                    "source": "*:*"
+                }
+            ]
+        },
+        "else_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:add_velocity",
+                    "space": "world",
+                    "y": 6
+                },
+                {
+                    "type": "origins:delay",
+                    "ticks": 2,
+                    "action": {
+                        "type": "origins:grant_power",
+                        "power": "medievalorigins:valkyrie/dive",
+                        "source": "*:*"
+                    }
+                }
+            ]
+        }
+    }
+}

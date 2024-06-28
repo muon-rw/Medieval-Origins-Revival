@@ -26,7 +26,8 @@ public class ModSounds {
     public static RegistryObject<SoundEvent> BOOST = registerSoundEvents("boost");
     public static RegistryObject<SoundEvent> JUMP = registerSoundEvents("jump");
     public static RegistryObject<SoundEvent> HOVER = registerSoundEvents("hover");
-
+    public static RegistryObject<SoundEvent> VALKYRIE_CHANNEL = registerSoundEvents("valkyrie_channel");
+    public static RegistryObject<SoundEvent> VALKYRIE_LAND = registerSoundEvents("valkyrie_land");
 
     private static RegistryObject<SoundEvent> registerSoundEvents(String name) {
         return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(MedievalOrigins.MODID, name)));

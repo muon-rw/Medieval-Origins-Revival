@@ -1,0 +1,110 @@
+{
+    "hidden": true,
+    "type": "origins:multiple",
+    "immunity": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "fall"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "flyIntoWall"
+                }
+            ]
+        }
+    },
+    "land": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "condition": {
+            "type": "origins:on_block",
+            "block_condition": {
+                "type": "origins:movement_blocking"
+            }
+        },
+        "rising_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "playsound medievalorigins:valkyrie_land player @a ~ ~ ~ 1 1"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "stopsound @a player medievalorigins:valkyrie_channel"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:flash ~ ~ ~ 0 0 0 0.0 1"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "summon area_effect_cloud ~ ~ ~ {Particle:\"dust 1 0.91 0.47 1\",Radius:5,Duration:60}"
+                },
+                {
+                    "type": "origins:area_of_effect",
+                    "radius": 5,
+                    "bientity_action": {
+                        "type": "origins:target_action",
+                        "action": {
+                            "type": "origins:and",
+                            "actions": [
+                                {
+                                    "type": "origins:heal",
+                                    "amount": 10
+                                },
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "particle minecraft:heart ~ ~ ~ 0.4 1 0.4 1 8"
+                                },
+                                {
+                                    "type": "medievalorigins:clear_negative_effects"
+                                }
+                            ]
+                        }
+                    },
+                    "bientity_condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:player"
+                                }
+                            },
+                            {
+                                "type": "medievalorigins:allied"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:revoke_power",
+                    "power": "*:*",
+                    "source": "medievalorigins:valkyrie/intervention"
+                }
+            ]
+        }
+    },
+    "particles": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "particle instant_effect ^ ^ ^0.5 0.1 0.2 0.1 1 1"
+        },
+        "interval": 1
+    },
+    "channel_sound": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "playsound medievalorigins:valkyrie_channel player @a ~ ~ ~ 1 1"
+        },
+        "interval": 10
+    }
+}

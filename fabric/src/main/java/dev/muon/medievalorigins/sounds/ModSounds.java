@@ -18,6 +18,8 @@ public class ModSounds {
     public static final SoundEvent BOOST = register("boost");
     public static final SoundEvent JUMP = register("jump");
     public static final SoundEvent HOVER = register("hover");
+    public static final SoundEvent VALKYRIE_CHANNEL = register("valkyrie_channel");
+    public static final SoundEvent VALKYRIE_LAND = register("valkyrie_land");
 
     private static SoundEvent register(String name) {
         ResourceLocation id = MedievalOrigins.loc(name);

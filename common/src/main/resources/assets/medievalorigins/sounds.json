@@ -72,5 +72,17 @@
         "sounds": [
             "medievalorigins:hover"
         ]
+    },
+    "valkyrie_channel": {
+        "subtitles": "sounds.medievalorigins.valkyrie_channel",
+        "sounds": [
+            "medievalorigins:valkyrie_channel"
+        ]
+    },
+    "valkyrie_land": {
+        "subtitles": "sounds.medievalorigins.valkyrie_land",
+        "sounds": [
+            "medievalorigins:valkyrie_land"
+        ]
     }
 }
