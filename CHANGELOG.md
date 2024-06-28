@@ -1,4 +1,5 @@
 ## 6.4.0 (WIP)
+**Initial release of a large project restructure. There may be bugs!**
 - Merged projects to cross-platform (Fabric and Forge/Neoforge will now update simultaneously!)
 - Added a new Icarus-mod based origin, the Valkyrie
 - Fixed an issue where Pixies would sometimes retain their flight power after switching origins
