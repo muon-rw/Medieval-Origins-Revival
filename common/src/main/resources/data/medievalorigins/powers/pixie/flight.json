@@ -151,6 +151,7 @@
 	"flight_resource": {
 		"type": "origins:resource",
 		"min": 0,
+		"start_value": 100,
 		"max": 100,
 		"min_action": {
 			"type": "origins:modify_resource",
