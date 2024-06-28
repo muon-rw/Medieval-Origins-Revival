@@ -1,0 +1,14 @@
+{
+    "hidden": true,
+    "type": "origins:modify_attribute",
+    "attribute": "generic.attack_damage",
+    "modifier": {
+        "operation": "multiply_base",
+        "resource": "medievalorigins:valkyrie/vanquisher_vanquished",
+        "value": 0,
+        "modifier": {
+            "operation": "multiply_total_multiplicative",
+            "value": -0.99825
+        }
+    }
+}

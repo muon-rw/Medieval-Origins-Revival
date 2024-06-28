@@ -9,13 +9,53 @@
         "radius": 8
     },
     "rising_action": {
-        "type": "origins:grant_power",
-        "power": "medievalorigins:valkyrie/corruption_temp",
-        "source": "medievalorigins:valkyrie/corruption"
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:grant_power",
+                "power": "medievalorigins:valkyrie/corruption_temp_neg_ad",
+                "source": "medievalorigins:valkyrie/corruption"
+            },
+            {
+                "type": "origins:grant_power",
+                "power": "medievalorigins:valkyrie/corruption_temp_neg_ms",
+                "source": "medievalorigins:valkyrie/corruption"
+            },
+            {
+                "type": "origins:grant_power",
+                "power": "medievalorigins:valkyrie/corruption_temp_pos_ad",
+                "source": "medievalorigins:valkyrie/corruption"
+            },
+            {
+                "type": "origins:grant_power",
+                "power": "medievalorigins:valkyrie/corruption_temp_pos_ms",
+                "source": "medievalorigins:valkyrie/corruption"
+            }
+        ]
     },
     "falling_action": {
-        "type": "origins:revoke_power",
-        "power": "medievalorigins:valkyrie/corruption_temp",
-        "source": "medievalorigins:valkyrie/corruption"
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:revoke_power",
+                "power": "medievalorigins:valkyrie/corruption_temp_neg_ad",
+                "source": "medievalorigins:valkyrie/corruption"
+            },
+            {
+                "type": "origins:revoke_power",
+                "power": "medievalorigins:valkyrie/corruption_temp_neg_ms",
+                "source": "medievalorigins:valkyrie/corruption"
+            },
+            {
+                "type": "origins:revoke_power",
+                "power": "medievalorigins:valkyrie/corruption_temp_pos_ad",
+                "source": "medievalorigins:valkyrie/corruption"
+            },
+            {
+                "type": "origins:revoke_power",
+                "power": "medievalorigins:valkyrie/corruption_temp_pos_ms",
+                "source": "medievalorigins:valkyrie/corruption"
+            }
+        ]
     }
 }
