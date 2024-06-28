@@ -1,10 +1,10 @@
 {
 	"powers": [
 		"medievalorigins:valkyrie/wings",
-		"medievalorigins:valkyrie/intervention",
 		"medievalorigins:valkyrie/divine_smite",
 		"medievalorigins:valkyrie/corruption",
 		"medievalorigins:valkyrie/vanquisher",
+		"medievalorigins:valkyrie/intervention",
 		"medievalorigins:valkyrie/heavenly_implements",
 		"medievalorigins:valkyrie/spell_power"
 	],
