@@ -1,0 +1,58 @@
+{
+	"type": "origins:multiple",
+	"golden_weapon_boosts": {
+		"type": "origins:modify_damage_dealt",
+        "modifier": {
+            "operation": "multiply_total_multiplicative",
+            "value": 0.25
+        },
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:or",
+				"conditions": [
+                    {
+                        "type": "apoli:ingredient",
+                        "ingredient": {
+                            "tag": "medievalorigins:valkyrie_weapons"
+                        }
+                    },
+                    {
+                        "type": "medievalorigins:is_valkyrie_weapon"
+                    }
+				]
+			}
+		}
+	},
+	"weapon_tooltip": {
+		"type": "apoli:tooltip",
+		"item_condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "apoli:ingredient",
+					"ingredient": {
+						"tag": "medievalorigins:valkyrie_weapons"
+					}
+				},
+				{
+					"type": "medievalorigins:is_valkyrie_weapon"
+				}
+			]
+		},
+		"texts": [
+			{
+				"translate": "tooltip.medievalorigins.heavenly_implements",
+				"color": "gold"
+			},
+			{
+				"translate": "tooltip.medievalorigins.damage_dealt",
+				"with": [
+					"25%"
+				],
+				"color": "yellow"
+			}
+		]
+	}
+}

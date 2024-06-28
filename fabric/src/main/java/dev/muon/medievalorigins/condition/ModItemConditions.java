@@ -40,6 +40,11 @@ public class ModItemConditions {
             return Enchantments.SHARPNESS.canEnchant(stack) && (itemName.contains("dagger") || itemName.contains("knife") || itemName.contains("sai") || itemName.contains("athame"));
         }));
 
+        register(new ConditionFactory<>(MedievalOrigins.loc("is_valkyrie_weapon"), new SerializableData(), (data, stack) -> {
+            String itemName = BuiltInRegistries.ITEM.getKey(stack.getItem()).getPath();
+            return Enchantments.SHARPNESS.canEnchant(stack) && (itemName.contains("glaive") || itemName.contains("spear") || itemName.contains("lance") || itemName.contains("halberd"));
+        }));
+
         register(new ConditionFactory<>(MedievalOrigins.loc("is_fist_weapon"), new SerializableData(), (data, stack) -> {
             String itemName = BuiltInRegistries.ITEM.getKey(stack.getItem()).getPath();
             return Enchantments.SHARPNESS.canEnchant(stack) && (itemName.contains("fist") || itemName.contains("claw") || itemName.contains("gauntlet"));

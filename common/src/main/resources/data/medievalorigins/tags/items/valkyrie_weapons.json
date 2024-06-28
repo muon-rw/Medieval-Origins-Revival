@@ -1,0 +1,12 @@
+{
+    "replace": false,
+    "values": [
+      "minecraft:golden_sword",
+      {"id":"simplyswords:arcanethyst","required":false},
+      {"id":"simplyswords:flamewind","required":false},
+      {"id":"simplyswords:sword_on_a_stick","required":false},
+      {"id":"simplyswords:wickpiercer","required":false},
+      {"id":"simplyswords:thunderbrand","required":false}
+    ]
+  }
+  

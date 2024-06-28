@@ -499,7 +499,7 @@
   "power.medievalorigins.valkyrie/vanquisher.description": "Each undead mob slain increases the potency and range of §lDivine Smite §rand reduces the effects of §lCorruption§r. Lose half stacks on death.",
 
   "power.medievalorigins.valkyrie/heavenly_implements.name": "Heavenly Implements",
-  "power.medievalorigins.valkyrie/heavenly_implements.description": "Valkyrie have innately more healing/holy spell power and are more potent with silver and gold weapons.",
+  "power.medievalorigins.valkyrie/heavenly_implements.description": "Valkyrie have innately more healing/holy spell power and are more potent with lance or spear-like weapons.",
 
   "enchantment.medievalorigins.featherweight": "Featherweight",
   "enchantment.medievalorigins.featherweight.desc": "This enchantment can be applied to heavy armor to prevent slowing down Arachnae, Elves, Alfiq, or those with wings.",
@@ -552,12 +552,13 @@
   "tooltip.medievalorigins.water_protection": "Water Protection",
   "tooltip.medievalorigins.looting_bonus": "Chance to increase mob loot",
   "tooltip.medievalorigins.unwearable": "Unwearable",
-  "tooltip.medievalorigins.damage_dealt": "%s Damage Dealt",
+  "tooltip.medievalorigins.damage_dealt": "+%s Damage Dealt",
   "tooltip.medievalorigins.attack_damage_bonus": "+%s Attack Damage",
   "tooltip.medievalorigins.stab_bonus": "Stealth Break Bonus",
   "tooltip.medievalorigins.self_wither": "Withered while holding",
   "tooltip.medievalorigins.restores_no_hunger": "Restores no Hunger",
   "tooltip.medievalorigins.moonlight_rogue": "Moonlight Rogue:",
+  "tooltip.medievalorigins.heavenly_implements": "Heavenly Implements:",
   "tooltip.medievalorigins.greedy": "Greedy:",
   "tooltip.medievalorigins.ravager": "Ravager:",
 
