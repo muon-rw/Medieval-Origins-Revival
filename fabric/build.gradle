@@ -219,6 +219,7 @@ task publishCurseForge(type: net.darkhax.curseforgegradle.TaskPublishCurseForge)
     //debugMode = true
     def mainFile = upload(897171, remapJar)
     mainFile.changelog = new File("$project.rootDir/CHANGELOG.md").getText('UTF-8')
+    mainFile.changelogType = "markdown"
     mainFile.releaseType = "release"
     mainFile.addGameVersion("1.20.1")
     mainFile.addModLoader("fabric")
