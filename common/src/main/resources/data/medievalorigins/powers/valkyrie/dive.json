@@ -59,7 +59,7 @@
                                 },
                                 {
                                     "type": "origins:execute_command",
-                                    "command": "particle minecraft:heart ~ ~ ~ 0.4 1 0.4 1 8"
+                                    "command": "particle minecraft:happy_villager ~ ~ ~ 0.3 1 0.3 1 18"
                                 },
                                 {
                                     "type": "medievalorigins:clear_negative_effects"
@@ -73,12 +73,22 @@
                             {
                                 "type": "origins:target_condition",
                                 "condition": {
-                                    "type": "origins:entity_type",
-                                    "entity_type": "minecraft:player"
+                                    "type": "origins:living"
                                 }
                             },
                             {
-                                "type": "medievalorigins:allied"
+                                "type": "origins:or",
+                                "conditions": [
+                                    {
+                                        "type": "medievalorigins:allied"
+                                    },
+                                    {
+                                        "type": "origins:owner"
+                                    },
+                                    {
+                                        "type": "origins:riding"
+                                    }
+                                ]
                             }
                         ]
                     }
