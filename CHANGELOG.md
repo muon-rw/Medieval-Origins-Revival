@@ -1,4 +1,4 @@
-## 6.4.0 (WIP)
+## 6.4.0
 **Initial release of a large project restructure. There may be bugs!**
 - Merged projects to cross-platform (Fabric and Forge/Neoforge will now update simultaneously!)
 - Added a new Icarus-mod based origin, the Valkyrie
