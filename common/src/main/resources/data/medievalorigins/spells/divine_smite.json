@@ -55,6 +55,8 @@
     }
   ],
   "cost": {
-    "cooldown_duration": 10
+    "rpgmana": 30,
+    "cooldown_duration": 10,
+    "item_id": "runes:healing_stone"
   }
 }

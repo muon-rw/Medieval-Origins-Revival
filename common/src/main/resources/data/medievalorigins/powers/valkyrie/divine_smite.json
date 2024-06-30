@@ -1,0 +1,290 @@
+{
+  "type": "origins:multiple",
+  "counter": {
+    "type": "origins:resource",
+    "start_value": 0,
+    "min": 0,
+    "max": 2,
+    "hud_render": {
+      "should_render": true
+    }
+  },
+  "count": {
+    "type": "origins:action_on_hit",
+    "cooldown": 1,
+    "damage_condition": {
+      "type": "origins:in_tag",
+      "tag": "medievalorigins:player_attack"
+    },
+    "bientity_action": {
+      "type": "origins:if_else",
+      "condition": {
+        "type": "origins:actor_condition",
+        "condition": {
+          "type": "origins:resource",
+          "resource": "*:*_counter",
+          "comparison": "==",
+          "compare_to": 2
+        }
+      },
+      "if_action": {
+        "type": "origins:and",
+        "actions": [
+          {
+            "type": "origins:actor_action",
+            "action": {
+              "type": "origins:and",
+              "actions": [
+                {
+                  "type": "origins:modify_resource",
+                  "resource": "*:*_counter",
+                  "modifier": {
+                    "operation": "set_total",
+                    "value": 0
+                  }
+                },
+                {
+                  "type": "origins:area_of_effect",
+                  "radius": 3,
+                  "shape": "sphere",
+                  "bientity_action": {
+                    "type": "origins:and",
+                    "actions": [
+                      {
+                        "type": "medievalorigins:spell_damage",
+                        "base": 4,
+                        "magic_school": "healing",
+                        "crit_behavior": "normal",
+                        "scaling_factor": 0.7,
+                        "damage_type": "medievalorigins:smite"
+                      }
+                    ]
+                  },
+                  "bientity_condition": {
+                    "type": "origins:and",
+                    "conditions": [
+                      {
+                        "type": "origins:target_condition",
+                        "condition": {
+                          "type": "origins:living"
+                        }
+                      },
+                      {
+                        "type": "medievalorigins:allied",
+                        "inverted": true
+                      },
+                      {
+                        "type": "origins:owner",
+                        "inverted": true
+                      },
+                      {
+                        "type": "origins:riding",
+                        "inverted": true
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "origins:modify_resource",
+                  "resource": "*:*_counter",
+                  "modifier": {
+                    "operation": "set_total",
+                    "value": 0
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "origins:target_action",
+            "action": {
+              "type": "origins:and",
+              "actions": [
+                {
+                  "type": "origins:execute_command",
+                  "command": "particle minecraft:flash ~ ~-1 ~ 1 1 1 1 1"
+                },
+                {
+                  "type": "origins:choice",
+                  "actions": [
+                    {
+                      "element": {
+                        "type": "origins:execute_command",
+                        "command": "playsound medievalorigins:divine_smite player @a ~ ~ ~ 0.2 1.0"
+                      },
+                      "weight": 1
+                    },
+                    {
+                      "element": {
+                        "type": "origins:execute_command",
+                        "command": "playsound medievalorigins:divine_smite player @a ~ ~ ~ 0.2 1.05"
+                      },
+                      "weight": 1
+                    },
+                    {
+                      "element": {
+                        "type": "origins:execute_command",
+                        "command": "playsound medievalorigins:divine_smite player @a ~ ~ ~ 0.2 1.1"
+                      },
+                      "weight": 1
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "else_action": {
+        "type": "origins:actor_action",
+        "action": {
+          "type": "origins:modify_resource",
+          "resource": "*:*_counter",
+          "modifier": {
+            "operation": "add_base_early",
+            "value": 1
+          }
+        }
+      }
+    }
+  },
+  "on_kill": {
+    "type": "apugli:action_on_target_death",
+    "cooldown": 3,
+    "bientity_condition": {
+      "type": "origins:target_condition",
+      "condition": {
+        "type": "origins:entity_group",
+        "group": "undead"
+      }
+    },
+    "bientity_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:actor_action",
+          "action": {
+            "type": "origins:and",
+            "actions": [
+              {
+                "type": "origins:modify_resource",
+                "resource": "*:*_counter",
+                "modifier": {
+                  "operation": "set_total",
+                  "value": 0
+                }
+              },
+              {
+                "type": "origins:area_of_effect",
+                "radius": 5,
+                "shape": "sphere",
+                "bientity_action": {
+                  "type": "origins:and",
+                  "actions": [
+                    {
+                      "type": "medievalorigins:spell_damage",
+                      "base": 4,
+                      "magic_school": "healing",
+                      "crit_behavior": "normal",
+                      "scaling_factor": 0.7,
+                      "damage_type": "medievalorigins:smite"
+                    }
+                  ]
+                },
+                "bientity_condition": {
+                  "type": "origins:and",
+                  "conditions": [
+                    {
+                      "type": "origins:target_condition",
+                      "condition": {
+                        "type": "origins:living"
+                      }
+                    },
+                    {
+                      "type": "medievalorigins:allied",
+                      "inverted": true
+                    },
+                    {
+                      "type": "origins:owner",
+                      "inverted": true
+                    },
+                    {
+                      "type": "origins:riding",
+                      "inverted": true
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "origins:modify_resource",
+                "resource": "*:*_counter",
+                "modifier": {
+                  "operation": "set_total",
+                  "value": 0
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "origins:target_action",
+          "action": {
+            "type": "origins:and",
+            "actions": [
+              {
+                "type": "origins:execute_command",
+                "command": "particle minecraft:flash ~ ~ ~ 0 0 0 1 1"
+              },
+              {
+                "type": "origins:execute_command",
+                "command": "particle spell_engine:holy_spark ~ ~ ~ 0.3 3.5 0.3 0.01 20"
+              },
+              {
+                "type": "origins:execute_command",
+                "command": "particle irons_spellbooks:firefly ~ ~ ~ 0.35 3 0.35 0.005 100"
+              },
+              {
+                "type": "origins:execute_command",
+                "command": "particle spell_engine:holy_spark_mini ~ ~ ~ 0.35 3 0.35 0.005 150"
+              },
+              {
+                "type": "origins:execute_command",
+                "command": "particle irons_spellbooks:wisp ~ ~ ~ 0.2 2.5 0.2 0.01 75"
+              },
+              {
+                "type": "origins:execute_command",
+                "command": "particle spell_engine:holy_ascend ~ ~ ~ 0.25 2 0.25 0.02 40"
+              },
+              {
+                "type": "origins:choice",
+                "actions": [
+                  {
+                    "element": {
+                      "type": "origins:execute_command",
+                      "command": "playsound medievalorigins:divine_smite player @a ~ ~ ~ 0.3 1.2"
+                    },
+                    "weight": 1
+                  },
+                  {
+                    "element": {
+                      "type": "origins:execute_command",
+                      "command": "playsound medievalorigins:divine_smite player @a ~ ~ ~ 0.3 1.1"
+                    },
+                    "weight": 1
+                  },
+                  {
+                    "element": {
+                      "type": "origins:execute_command",
+                      "command": "playsound medievalorigins:divine_smite player @a ~ ~ ~ 0.3 1.0"
+                    },
+                    "weight": 1
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

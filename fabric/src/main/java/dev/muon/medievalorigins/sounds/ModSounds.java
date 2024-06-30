@@ -20,6 +20,7 @@ public class ModSounds {
     public static final SoundEvent HOVER = register("hover");
     public static final SoundEvent VALKYRIE_CHANNEL = register("valkyrie_channel");
     public static final SoundEvent VALKYRIE_LAND = register("valkyrie_land");
+    public static final SoundEvent DIVINE_SMITE = register("divine_smite");
 
     private static SoundEvent register(String name) {
         ResourceLocation id = MedievalOrigins.loc(name);

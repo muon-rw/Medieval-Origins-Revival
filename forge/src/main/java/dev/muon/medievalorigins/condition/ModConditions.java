@@ -1,16 +1,17 @@
 package dev.muon.medievalorigins.condition;
 
 import dev.muon.medievalorigins.enchantment.ModEnchantments;
-import io.github.edwinmindcraft.apoli.api.power.factory.BlockCondition;
-import io.github.edwinmindcraft.apoli.api.power.factory.DamageCondition;
-import io.github.edwinmindcraft.apoli.api.power.factory.EntityCondition;
-import io.github.edwinmindcraft.apoli.api.power.factory.ItemCondition;
+import io.github.edwinmindcraft.apoli.api.power.factory.*;
 import io.github.edwinmindcraft.apoli.api.registry.ApoliRegistries;
+import io.github.edwinmindcraft.apoli.common.condition.bientity.SimpleBiEntityCondition;
 import io.github.edwinmindcraft.apoli.common.condition.block.SimpleBlockCondition;
 import io.github.edwinmindcraft.apoli.common.condition.damage.InTagCondition;
 import io.github.edwinmindcraft.apoli.common.condition.entity.SimpleEntityCondition;
 import io.github.edwinmindcraft.apoli.common.condition.item.SimpleItemCondition;
 import dev.muon.medievalorigins.MedievalOrigins;
+import net.minecraft.util.Tuple;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.item.TieredItem;
 import net.minecraft.world.item.BowItem;
@@ -29,9 +30,12 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.Objects;
+
 
 public class ModConditions {
     public static final DeferredRegister<EntityCondition<?>> ENTITY_CONDITIONS = DeferredRegister.create(ApoliRegistries.ENTITY_CONDITION_KEY, MedievalOrigins.MODID);
+    public static final DeferredRegister<BiEntityCondition<?>> BIENTITY_CONDITIONS = DeferredRegister.create(ApoliRegistries.BIENTITY_CONDITION_KEY, MedievalOrigins.MODID);
     public static final DeferredRegister<BlockCondition<?>> BLOCK_CONDITIONS = DeferredRegister.create(ApoliRegistries.BLOCK_CONDITION_KEY, MedievalOrigins.MODID);
     public static final DeferredRegister<DamageCondition<?>> DAMAGE_CONDITIONS = DeferredRegister.create(ApoliRegistries.DAMAGE_CONDITION_KEY, MedievalOrigins.MODID);
     public static final DeferredRegister<ItemCondition<?>> ITEM_CONDITIONS = DeferredRegister.create(ApoliRegistries.ITEM_CONDITION_KEY, MedievalOrigins.MODID);
@@ -39,6 +43,9 @@ public class ModConditions {
     /**Entity*/
     public static final RegistryObject<SimpleEntityCondition> IS_ARROW = ENTITY_CONDITIONS.register("is_arrow", () ->
             new SimpleEntityCondition(entity -> entity instanceof AbstractArrow));
+    /**Bientity*/
+    public static final RegistryObject<SimpleBiEntityCondition> IS_ALLIED = BIENTITY_CONDITIONS.register("allied", () ->
+            new SimpleBiEntityCondition((actor, target) -> actor.isAlliedTo(target)));
 
     /**Item*/
     public static final RegistryObject<SimpleItemCondition> IS_MELEE_WEAPON = ITEM_CONDITIONS.register("is_melee_weapon", () ->
@@ -150,6 +157,7 @@ public class ModConditions {
     public static final RegistryObject<DamageCondition> IN_TAG = DAMAGE_CONDITIONS.register("in_tag", InTagCondition::new);
     public static void register(IEventBus eventBus) {
         ENTITY_CONDITIONS.register(eventBus);
+        BIENTITY_CONDITIONS.register(eventBus);
         BLOCK_CONDITIONS.register(eventBus);
         DAMAGE_CONDITIONS.register(eventBus);
         ITEM_CONDITIONS.register(eventBus);

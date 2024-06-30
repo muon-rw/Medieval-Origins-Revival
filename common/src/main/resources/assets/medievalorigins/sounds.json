@@ -84,5 +84,11 @@
         "sounds": [
             "medievalorigins:valkyrie_land"
         ]
+    },
+    "divine_smite": {
+        "subtitles": "sounds.medievalorigins.divine_smite",
+        "sounds": [
+            "medievalorigins:divine_smite"
+        ]
     }
 }

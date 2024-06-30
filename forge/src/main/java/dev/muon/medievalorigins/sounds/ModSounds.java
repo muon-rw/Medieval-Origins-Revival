@@ -28,6 +28,7 @@ public class ModSounds {
     public static RegistryObject<SoundEvent> HOVER = registerSoundEvents("hover");
     public static RegistryObject<SoundEvent> VALKYRIE_CHANNEL = registerSoundEvents("valkyrie_channel");
     public static RegistryObject<SoundEvent> VALKYRIE_LAND = registerSoundEvents("valkyrie_land");
+    public static RegistryObject<SoundEvent> DIVINE_SMITE = registerSoundEvents("divine_smite");
 
     private static RegistryObject<SoundEvent> registerSoundEvents(String name) {
         return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(MedievalOrigins.MODID, name)));
