@@ -31,7 +31,7 @@ public abstract class AbstractClientPlayerMixin extends Player {
     private void onTick(CallbackInfo ci) {
         AbstractClientPlayer player = (AbstractClientPlayer) (Player) this;
         if (player.tickCount % TICK_INTERVAL == 0 && PixieWingsPower.hasPower(player)) {
-            if (player.hasEffect(MobEffects.LEVITATION)) {
+            if (player.getAbilities().flying) {
                 player.elytraRotX = 1.4981317F;
                 player.elytraRotY = 0.58726646F;
                 player.elytraRotZ = (-0.5F - (float) Math.PI / 4F);
@@ -46,7 +46,7 @@ public abstract class AbstractClientPlayerMixin extends Player {
 
                 boolean isCloseToGround = hitResult.getType() != HitResult.Type.MISS && hitResult.getLocation().distanceTo(startPos) <= GROUND_DISTANCE_THRESHOLD;
 
-                if (player.isFallFlying() || playerMovement.y > 0.1 || player.hasEffect(MobEffects.LEVITATION) || (!isCloseToGround && (Math.abs(playerMovement.x) + Math.abs(playerMovement.z) > 0.1))) {
+                if (player.isFallFlying() || playerMovement.y > 0.1 || player.getAbilities().flying || (!isCloseToGround && (Math.abs(playerMovement.x) + Math.abs(playerMovement.z) > 0.1))) {
                     player.elytraRotX = 1.4981317F * flapStrength;
                     player.elytraRotY = 0.58726646F * flapStrength;
                     player.elytraRotZ = (-0.5F - (float) Math.PI / 4F) * flapStrength;
