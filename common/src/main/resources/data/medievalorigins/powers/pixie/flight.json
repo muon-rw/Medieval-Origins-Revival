@@ -183,7 +183,7 @@
 	},
 	"tick_resource": {
 		"type": "origins:action_over_time",
-		"interval": 8,
+		"interval": 5,
 		"condition": {
 			"type": "origins:creative_flying"
 		},
