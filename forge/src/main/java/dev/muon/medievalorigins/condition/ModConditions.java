@@ -13,13 +13,7 @@ import net.minecraft.util.Tuple;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.projectile.AbstractArrow;
-import net.minecraft.world.item.TieredItem;
-import net.minecraft.world.item.BowItem;
-import net.minecraft.world.item.DiggerItem;
-import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.AxeItem;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.Items;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
@@ -59,19 +53,22 @@ public class ModConditions {
     public static final RegistryObject<SimpleItemCondition> IS_DAGGER = ITEM_CONDITIONS.register("is_dagger", () ->
             new SimpleItemCondition(stack -> {
                 String itemName = ForgeRegistries.ITEMS.getKey(stack.getItem()).getPath();
-                return Enchantments.SHARPNESS.canEnchant(stack) && (itemName.contains("dagger") || itemName.contains("knife") || itemName.contains("sai") || itemName.contains("athame"));
+                return (stack.getItem() instanceof SwordItem || Enchantments.SHARPNESS.canEnchant(stack))
+                        && (itemName.contains("dagger") || itemName.contains("knife") || itemName.contains("sai") || itemName.contains("athame"));
             })
     );
     public static final RegistryObject<SimpleItemCondition> IS_VALKYRIE_WEAPON = ITEM_CONDITIONS.register("is_valkyrie_weapon", () ->
             new SimpleItemCondition(stack -> {
                 String itemName = ForgeRegistries.ITEMS.getKey(stack.getItem()).getPath();
-                return Enchantments.SHARPNESS.canEnchant(stack) && (itemName.contains("glaive") || itemName.contains("spear") || itemName.contains("lance") || itemName.contains("halberd"));
+                return (stack.getItem() instanceof SwordItem || stack.getItem() instanceof TridentItem || Enchantments.SHARPNESS.canEnchant(stack) || Enchantments.PIERCING.canEnchant(stack))
+                        && (itemName.contains("glaive") || itemName.contains("spear") || itemName.contains("lance") || itemName.contains("halberd"));
             })
     );
     public static final RegistryObject<SimpleItemCondition> IS_FIST_WEAPON = ITEM_CONDITIONS.register("is_fist_weapon", () ->
             new SimpleItemCondition(stack -> {
                 String itemName = ForgeRegistries.ITEMS.getKey(stack.getItem()).getPath();
-                return Enchantments.SHARPNESS.canEnchant(stack) && (itemName.contains("fist") || itemName.contains("claw") || itemName.contains("gauntlet"));
+                return (stack.getItem() instanceof SwordItem || Enchantments.SHARPNESS.canEnchant(stack))
+                        && (itemName.contains("fist") || itemName.contains("claw") || itemName.contains("gauntlet"));
             })
     );
     public static final RegistryObject<SimpleItemCondition> IS_TOOL = ITEM_CONDITIONS.register("is_tool", () ->

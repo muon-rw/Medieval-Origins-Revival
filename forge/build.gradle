@@ -263,9 +263,9 @@ modrinth {
 }
 
 task publishCurseForge(type: net.darkhax.curseforgegradle.TaskPublishCurseForge) {
-    apiToken = System.getenv("CURSEFORGE_TOKEN")
+    apiToken = System.getenv("CF_TOKEN")
 
-    def mainFile = upload(897171, jarJar)
+    def mainFile = upload(897171, jar)
     mainFile.displayName = "Forge/Neoforge-${rootProject.version}+${minecraft_version}"
     mainFile.releaseType = "release"
     mainFile.changelog = new File("$project.rootDir/CHANGELOG.md").getText('UTF-8')
