@@ -4,6 +4,9 @@
 	  {"id": "#forge:tools/knives","required":false},
 	  {"id": "bewitchment:athame","required":false},
 	  {"id": "simplyswords:soulstealer","required":false},
-    {"id": "simplyswords:emberlash","required":false}
+    {"id": "simplyswords:emberlash","required":false},
+    {"id": "arphex:dagger_of_dissolution","required":false},
+    {"id": "arphex:abyssal_dagger","required":false},
+    {"id": "mowziesmobs:naga_fang_dagger","required":false}
   ]
 }
