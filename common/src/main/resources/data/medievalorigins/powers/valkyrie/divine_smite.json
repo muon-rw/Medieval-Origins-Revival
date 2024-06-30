@@ -110,21 +110,21 @@
                     {
                       "element": {
                         "type": "origins:execute_command",
-                        "command": "playsound medievalorigins:divine_smite player @a ~ ~ ~ 0.2 1.0"
+                        "command": "playsound medievalorigins:divine_smite player @a ~ ~ ~ 0.31 1.0"
                       },
                       "weight": 1
                     },
                     {
                       "element": {
                         "type": "origins:execute_command",
-                        "command": "playsound medievalorigins:divine_smite player @a ~ ~ ~ 0.2 1.05"
+                        "command": "playsound medievalorigins:divine_smite player @a ~ ~ ~ 0.31 1.2"
                       },
                       "weight": 1
                     },
                     {
                       "element": {
                         "type": "origins:execute_command",
-                        "command": "playsound medievalorigins:divine_smite player @a ~ ~ ~ 0.2 1.1"
+                        "command": "playsound medievalorigins:divine_smite player @a ~ ~ ~ 0.31 1.1"
                       },
                       "weight": 1
                     }
@@ -261,21 +261,21 @@
                   {
                     "element": {
                       "type": "origins:execute_command",
-                      "command": "playsound medievalorigins:divine_smite player @a ~ ~ ~ 0.3 1.2"
+                      "command": "playsound medievalorigins:divine_smite player @a ~ ~ ~ 0.38 1.2"
                     },
                     "weight": 1
                   },
                   {
                     "element": {
                       "type": "origins:execute_command",
-                      "command": "playsound medievalorigins:divine_smite player @a ~ ~ ~ 0.3 1.1"
+                      "command": "playsound medievalorigins:divine_smite player @a ~ ~ ~ 0.38 1.1"
                     },
                     "weight": 1
                   },
                   {
                     "element": {
                       "type": "origins:execute_command",
-                      "command": "playsound medievalorigins:divine_smite player @a ~ ~ ~ 0.3 1.0"
+                      "command": "playsound medievalorigins:divine_smite player @a ~ ~ ~ 0.38 1.0"
                     },
                     "weight": 1
                   }
