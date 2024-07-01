@@ -1,14 +1,5 @@
 {
 	"type": "origins:multiple",
-	"health_lower": {
-		"type": "origins:attribute",
-		"modifier": {
-			"name": "Health Penalty",
-			"attribute": "minecraft:generic.max_health",
-			"value": -6.0,
-			"operation": "addition"
-		}
-	},
 	"tooltip": {
 		"type": "origins:tooltip",
 		"item_condition": {
@@ -28,7 +19,7 @@
 				"color": "red"
 			},
 			{
-				"translate": "power.medievalorigins.wood_elf/elegant.name",
+				"translate": "power.medievalorigins.alfiq/agile_preference.name",
 				"color": "red"
 			},
 			{
