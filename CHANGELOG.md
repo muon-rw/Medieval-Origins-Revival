@@ -1,3 +1,8 @@
+## 6.4.2
+- Fixed Arachae, Alfiq, Moon Elves, and High Elves having 3 fewer hearts than before
+- Updated Korean translation thanks to Colddo118 (other translations are also out of date - if you'd like to contribute, please do so on Github!)
+- Fixed Valkyrie's divine smite being too quiet
+
 ## 6.4.1
 - Added Tridents to Valkyrie's Heavenly Implements and automatically support many more modded items 
 
