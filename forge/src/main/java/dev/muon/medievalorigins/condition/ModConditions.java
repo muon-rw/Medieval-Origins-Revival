@@ -12,6 +12,7 @@ import dev.muon.medievalorigins.MedievalOrigins;
 import net.minecraft.util.Tuple;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.TamableAnimal;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.enchantment.Enchantment;
@@ -37,6 +38,11 @@ public class ModConditions {
     /**Entity*/
     public static final RegistryObject<SimpleEntityCondition> IS_ARROW = ENTITY_CONDITIONS.register("is_arrow", () ->
             new SimpleEntityCondition(entity -> entity instanceof AbstractArrow));
+
+    public static final RegistryObject<SimpleEntityCondition> CREATIVE_MODE = ENTITY_CONDITIONS.register("creative_mode", () ->
+            new SimpleEntityCondition(entity ->
+                    entity instanceof Player player && player.getAbilities().instabuild));
+
     /**Bientity*/
     public static final RegistryObject<SimpleBiEntityCondition> IS_ALLIED = BIENTITY_CONDITIONS.register("allied", () ->
             new SimpleBiEntityCondition((actor, target) -> actor.isAlliedTo(target)));

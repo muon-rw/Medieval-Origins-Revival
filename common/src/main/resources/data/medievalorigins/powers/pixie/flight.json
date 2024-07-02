@@ -119,33 +119,13 @@
 			"inverted": true
 		}
 	},
-	"creative_toggle": {
-		"type": "origins:resource",
-		"min": 0,
-		"max": 1,
-		"start_value": 0,
-		"hud_render": {
-			"should_render": false
-		}
-	},
 	"flight": {
 		"type": "origins:creative_flight",
 		"condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:resource",
-					"resource": "*:*_creative_toggle",
-					"compare_to": 1,
-					"comparison": "=="
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:*_flight_resource",
-					"compare_to": 0,
-					"comparison": ">"
-				}
-			]
+			"type": "origins:resource",
+			"resource": "*:*_flight_resource",
+			"compare_to": 0,
+			"comparison": ">"
 		}
 	},
 	"flight_resource": {
@@ -153,22 +133,6 @@
 		"min": 0,
 		"start_value": 100,
 		"max": 100,
-		"min_action": {
-			"type": "origins:modify_resource",
-			"resource": "*:*_creative_toggle",
-			"modifier": {
-				"operation": "set_total",
-				"value": 0
-			}
-		},
-		"max_action": {
-			"type": "origins:modify_resource",
-			"resource": "*:*_creative_toggle",
-			"modifier": {
-				"operation": "set_total",
-				"value": 1
-			}
-		},
 		"hud_render": {
 			"should_render": true,
 			"sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
@@ -185,7 +149,16 @@
 		"type": "origins:action_over_time",
 		"interval": 5,
 		"condition": {
-			"type": "origins:creative_flying"
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:creative_flying"
+				},
+				{
+					"type": "medievalorigins:creative_mode",
+					"inverted": true
+				}
+			]
 		},
 		"entity_action": {
 			"type": "origins:modify_resource",
@@ -198,17 +171,25 @@
 	},
 	"restore_resource": {
 		"type": "origins:action_over_time",
-		"interval": 6,
+		"interval": 10,
 		"condition": {
-			"type": "origins:and",
+			"type": "origins:or",
 			"conditions": [
 				{
-					"type": "origins:creative_flying",
-					"inverted": true
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:creative_flying",
+							"inverted": true
+						},
+						{
+							"type": "origins:fall_flying",
+							"inverted": true
+						}
+					]
 				},
 				{
-					"type": "origins:fall_flying",
-					"inverted": true
+					"type": "medievalorigins:creative_mode"
 				}
 			]
 		},
@@ -233,36 +214,14 @@
 			"type": "origins:and",
 			"conditions": [
 				{
-					"type": "origins:resource",
-					"resource": "medievalorigins:pixie/flight_creative_toggle",
-					"comparison": "==",
-					"compare_to": 1
+					"type": "origins:creative_flying"
 				},
 				{
-					"type": "origins:creative_flying"
+					"type": "medievalorigins:creative_mode",
+					"inverted": true
 				}
 			]
 		}
-	},
-	"fallback_clear": {
-		"type": "origins:action_on_callback",
-		"entity_action_added": {
-			"type": "origins:modify_resource",
-			"resource": "*:*_creative_toggle",
-			"modifier": {
-				"value": 0,
-				"operation": "set_total"
-			}
-		},
-		"entity_action_removed": {
-			"type": "origins:modify_resource",
-			"resource": "*:*_creative_toggle",
-			"modifier": {
-				"value": 0,
-				"operation": "set_total"
-			}
-		},
-		"execute_chosen_when_orb": true
 	},
 	"hover_particles": {
 		"type": "origins:action_over_time",
@@ -270,13 +229,16 @@
 			"type": "origins:and",
 			"conditions": [
 				{
-					"type": "origins:resource",
-					"resource": "medievalorigins:pixie/flight_creative_toggle",
-					"comparison": "==",
-					"compare_to": 1
-				},
-				{
-					"type": "origins:creative_flying"
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:creative_flying"
+						},
+						{
+							"type": "medievalorigins:creative_mode",
+							"inverted": true
+						}
+					]
 				},
 				{
 					"type": "origins:resource",
@@ -298,13 +260,16 @@
 			"type": "origins:and",
 			"conditions": [
 				{
-					"type": "origins:resource",
-					"resource": "medievalorigins:pixie/flight_creative_toggle",
-					"comparison": "==",
-					"compare_to": 1
-				},
-				{
-					"type": "origins:creative_flying"
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:creative_flying"
+						},
+						{
+							"type": "medievalorigins:creative_mode",
+							"inverted": true
+						}
+					]
 				},
 				{
 					"type": "origins:resource",
@@ -354,7 +319,16 @@
 					"compare_to": 1
 				},
 				{
-					"type": "origins:creative_flying"
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:creative_flying"
+						},
+						{
+							"type": "medievalorigins:creative_mode",
+							"inverted": true
+						}
+					]
 				},
 				{
 					"type": "origins:resource",
@@ -382,7 +356,16 @@
 					"compare_to": 1
 				},
 				{
-					"type": "origins:creative_flying"
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:creative_flying"
+						},
+						{
+							"type": "medievalorigins:creative_mode",
+							"inverted": true
+						}
+					]
 				},
 				{
 					"type": "origins:resource",
@@ -410,7 +393,16 @@
 					"compare_to": 1
 				},
 				{
-					"type": "origins:creative_flying"
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:creative_flying"
+						},
+						{
+							"type": "medievalorigins:creative_mode",
+							"inverted": true
+						}
+					]
 				},
 				{
 					"type": "origins:resource",
@@ -438,7 +430,16 @@
 					"compare_to": 1
 				},
 				{
-					"type": "origins:creative_flying"
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:creative_flying"
+						},
+						{
+							"type": "medievalorigins:creative_mode",
+							"inverted": true
+						}
+					]
 				},
 				{
 					"type": "origins:resource",
