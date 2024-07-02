@@ -1,3 +1,7 @@
+## 6.4.3
+- Fixed Pixie's hover being unusable when relogging or first selecting the origin
+- Fixed an incorrect dependency on Curseforge (Forge versions were being directed to install Origins Fabric)
+
 ## 6.4.2
 - Fixed Arachae, Alfiq, Moon Elves, and High Elves having 3 fewer hearts than before
 - Updated Korean translation thanks to Colddo118 (other translations are also out of date - if you'd like to contribute, please do so on Github!)
