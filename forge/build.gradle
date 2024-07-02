@@ -276,7 +276,7 @@ task publishCurseForge(type: net.darkhax.curseforgegradle.TaskPublishCurseForge)
     forge_game_versions.split(", ").each {
         mainFile.addGameVersion(it)
     }
-    mainFile.addRequirement("origins")
+    mainFile.addRequirement("origins-forge")
     mainFile.addRequirement("pehkui")
 }
 
