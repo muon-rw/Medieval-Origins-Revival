@@ -164,6 +164,12 @@ dependencies {
         jarJar.ranged(it, "[${mixin_extras_version},)")
     }
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+    // Additional Entity Attributes
+    implementation(fg.deobf("de.dafuqs:additionalentityattributes-forge:${aea_forge_version}") {
+        exclude group: 'net.minecraftforge'
+        exclude group: 'com.github.llamalad.mixinextras'
+    })
+
     // Common stuff idk ask Pug
     implementation project(":Common")
 
