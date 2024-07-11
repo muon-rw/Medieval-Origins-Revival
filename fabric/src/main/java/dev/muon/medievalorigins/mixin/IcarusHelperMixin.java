@@ -54,7 +54,7 @@ public abstract class IcarusHelperMixin {
 
                 @Override
                 public float exhaustionAmount() {
-                    return original.exhaustionAmount();
+                    return original.exhaustionAmount()/4;
                 }
 
                 @Override
