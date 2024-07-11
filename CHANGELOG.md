@@ -1,7 +1,7 @@
 ## 6.4.4
 - Added sounds and effects to Sirens' Song
 - Increased the radius and duration of Sirens' Song, but increased its cooldown
-- (Forge) Fixed Siren Song not pacifying not already aggressive mobs
+- (Forge) Fixed Siren Song not pacifying already aggressive mobs
 - Cleaned up/shortened a few more power descriptions
 - Reduced the hunger cost of Valkyrie flight by 75%
 
