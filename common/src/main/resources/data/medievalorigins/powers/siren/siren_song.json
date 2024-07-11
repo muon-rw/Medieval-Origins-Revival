@@ -3,26 +3,56 @@
 	"active": {
 		"type": "origins:active_self",
 		"entity_action": {
-			"type": "origins:area_of_effect",
-			"radius": 32,
-			"bientity_action": {
-				"type": "origins:target_action",
-				"action": {
-					"type": "origins:grant_power",
-					"power": "medievalorigins:siren/captivated",
-					"source": "apoli:command"
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "scale set pehkui:visibility 0 @s"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "playsound medievalorigins:sirens_song player @a ~ ~ ~ 0.6 1"
+				},
+				{
+					"type": "origins:area_of_effect",
+					"radius": 48,
+					"bientity_action": {
+						"type": "origins:target_action",
+						"action": {
+							"type": "origins:and",
+							"actions": [
+								{
+									"type": "origins:grant_power",
+									"power": "medievalorigins:siren/captivated",
+									"source": "medievalorigins:siren/siren_song_active"
+								},
+								{
+									"type": "origins:execute_command",
+									"command": "data modify entity @s AngryTime set value 0"
+								}
+							]
+						}
+					},
+					"bientity_condition": {
+						"type": "apoli:target_condition",
+						"condition": {
+							"type": "origins:in_tag",
+							"tag": "medievalorigins:bosses",
+							"inverted": true
+						}
+					}
+				},
+				{
+					"type": "origins:delay",
+					"ticks": 20,
+					"action": {
+						"type": "origins:execute_command",
+						"command": "scale reset pehkui:visibility @s"
+					}
 				}
-			},
-			"bientity_condition": {
-				"type": "apoli:target_condition",
-				"condition": {
-					"type": "origins:in_tag",
-					"tag": "medievalorigins:bosses",
-					"inverted": true
-				}
-			}
+			]
 		},
-		"cooldown": 900,
+		"cooldown": 1500,
 		"key": {
 			"key": "key.origins.primary_active",
 			"continuous": false
@@ -33,12 +63,54 @@
 			"bar_index": 1
 		}
 	},
+	"ground_effect": {
+		"type": "origins:action_over_time",
+		"interval": 20,
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "particle minecraft:sculk_charge_pop ~ ~0.2 ~ 7 0.5 7 0 85"
+		},
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:*_active",
+			"comparison": ">=",
+			"compare_to": 1170
+		}
+	},
+	"small_effect": {
+		"type": "origins:action_over_time",
+		"interval": 7,
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "particle minecraft:bubble_pop ~ ~0.8 ~ 1.5 0.3 1.5 0 10"
+		},
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:*_active",
+			"comparison": ">=",
+			"compare_to": 1170
+		}
+	},
+	"sound_waves": {
+		"type": "origins:action_over_time",
+		"interval": 50,
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "particle minecraft:sonic_boom ^ ^1.7 ^-0.8 0 0 0 0 1"
+		},
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:*_active",
+			"comparison": ">=",
+			"compare_to": 1170
+		}
+	},
 	"apply": {
 		"type": "apugli:mobs_ignore",
 		"mob_condition": {
 			"type": "origins:power",
 			"power": "medievalorigins:siren/captivated",
-			"source": "apoli:command"
+			"source": "medievalorigins:siren/siren_song_active"
 		}
 	}
 }

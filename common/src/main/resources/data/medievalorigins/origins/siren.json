@@ -1,16 +1,15 @@
 {
         "loading_priority": 11,
 	"powers": [
-                "medievalorigins:siren/siren_song",
                 "medievalorigins:siren/amphibious",
+                "medievalorigins:siren/siren_song",
                 "medievalorigins:siren/holy_water",
                 "medievalorigins:siren/out_of_your_depth",
-                "medievalorigins:siren/prone",
                 "medievalorigins:siren/flammable",
                 "medievalorigins:siren/water_vision",
-                "medievalorigins:siren/seduce",
                 "origins:aquatic",
                 "origins:like_water",
+                "medievalorigins:siren/seduce",
                 "mermod:fabulous_fins",
                 "origins_env_deh:water_dweller",
                 "origins_env_deh:cold_resistance",

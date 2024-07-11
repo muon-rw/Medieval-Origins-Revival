@@ -1,3 +1,10 @@
+## 6.4.4
+- Added sounds and effects to Sirens' Song
+- Increased the radius and duration of Sirens' Song, but increased its cooldown
+- (Forge) Fixed Siren Song not pacifying not already aggressive mobs
+- Cleaned up/shortened a few more power descriptions
+- Reduced the hunger cost of Valkyrie flight by 75%
+
 ## 6.4.3
 - Fixed Pixie's hover being unusable when relogging or first selecting the origin
 - Made pixie's flight resource regenerate a bit slower (for balance)

@@ -4,14 +4,29 @@
     "thaw": {
         "type": "origins:resource",
         "min": 0,
-        "max": 10,
+        "max": 19,
         "hud_render": {
             "should_render": false
         },
         "max_action": {
             "type": "origins:revoke_power",
             "power": "medievalorigins:siren/captivated",
-            "source": "apoli:command"
+            "source": "medievalorigins:siren/siren_song_active"
+        }
+    },
+    "failsafe": {
+        "type": "origins:action_over_time",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_thaw",
+            "comparison": ">=",
+            "compare_to": 19
+        },
+        "interval": 100,
+        "entity_action": {
+            "type": "origins:revoke_power",
+            "power": "medievalorigins:siren/captivated",
+            "source": "medievalorigins:siren/siren_song_active"
         }
     },
     "timer": {

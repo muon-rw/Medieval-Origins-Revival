@@ -379,31 +379,25 @@
   "power.medievalorigins.plague_victim/skin_and_bones.description": "This illness drains the spirit, resulting in reduced health and speed.",
 
   "power.medievalorigins.siren/amphibious.name": "Amphibious",
-  "power.medievalorigins.siren/amphibious.description": "Sirens, being a subset of Mer, can survive in water, and swim with increased speed.",
+  "power.medievalorigins.siren/amphibious.description": "In water, sirens can breathe and interact normally, see perfectly clearly, and they swim with increased speed.",
 
   "power.medievalorigins.siren/flammable.name": "Flammable",
-  "power.medievalorigins.siren/flammable.description": "Sirens and fire do not mix. Any contact with flames results in instant death. Be sure to watch your step in the nether!",
+  "power.medievalorigins.siren/flammable.description": "Sirens and fire do not mix. Any contact with flame will result in near-instant death.",
 
   "power.medievalorigins.siren/holy_water.name": "Holy Water",
-  "power.medievalorigins.siren/holy_water.description": "Sirens have regenerative powers, which are at full force when they are in water.",
+  "power.medievalorigins.siren/holy_water.description": "Sirens have much more quickly regenerating bodies, but only while fully submerged.",
 
   "power.medievalorigins.siren/out_of_your_depth.name": "Out of Your Depth",
-  "power.medievalorigins.siren/out_of_your_depth.description": "Although sirens can survive just fine on land, it is not their natural environment. As such, their regenerative abilities do not apply, and any damage taken can only be healed with potions.",
+  "power.medievalorigins.siren/out_of_your_depth.description": "While on land, Sirens can only heal or regenerate by using potions.",
 
-  "power.medievalorigins.siren/prone.name": "Prone",
-  "power.medievalorigins.siren/prone.description": "While sirens can regenerate their bodies, they are weak to blunt force. Melee attacks do more damage to them.",
-
-  "power.medievalorigins.siren/siren_song.name": "Siren Song",
-  "power.medievalorigins.siren/siren_song.description": "Press the primary active key to make all mobs around you neutral until hit. Does not work on bosses or players.",
+  "power.medievalorigins.siren/siren_song.name": "Sirens' Song",
+  "power.medievalorigins.siren/siren_song.description": "Activate to overwhelm enemies in a large area, preventing them from harming you for a short time. Does not work on bosses or players.",
 
   "power.medievalorigins.siren/seduce.name": "Captivating",
-  "power.medievalorigins.siren/seduce.description": "Press the secondary active key to gain favor with a villager and receive better trades.",
-  
-  "power.medievalorigins.siren/water_vision.name": "Water Vision",
-  "power.medievalorigins.siren/water_vision.description": "Sirens have superior underwater vision compared to other creatures.",
+  "power.medievalorigins.siren/seduce.description": "Press the secondary active key to gain favor with a villager and receive better trades from them.",
 
   "power.medievalorigins.troll/apex_predator.name": "Apex Predator",
-  "power.medievalorigins.troll/apex_predator.description": "Trolls cannot eat regular foodstuffs, and can only satiate their hunger by slaughtering other creautres.",
+  "power.medievalorigins.troll/apex_predator.description": "Trolls cannot eat regular food - they can only satiate their hunger by slaughtering other creatures.",
 
   "power.medievalorigins.troll/ham_fisted.name": "Ham Fisted",
   "power.medievalorigins.troll/ham_fisted.description": "While the huge fists of the troll pack a mighty punch, they are far too cumbersome to hold a shield.",
@@ -516,6 +510,7 @@
   "sounds.medievalorigins.boost": "String Arpeggio",
   "sounds.medievalorigins.hover": "Faint Hum",
   "sounds.medievalorigins.jump": "Soft Chimes",
+  "sounds.medievalorigins.sirens_song": "Siren's Song",
 
   "entity.medievalorigins.summon_zombie": "Summoner's Zombie",
   "entity.medievalorigins.summon_skeleton": "Summoner's Skeleton",

@@ -1,4 +1,5 @@
 {
+	"hidden": true,
 	"type": "origins:action_over_time",
 	"condition": {
 		"type": "origins:submerged_in",

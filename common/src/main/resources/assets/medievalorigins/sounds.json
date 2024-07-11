@@ -90,5 +90,11 @@
         "sounds": [
             "medievalorigins:divine_smite"
         ]
+    },
+    "sirens_song": {
+        "subtitles": "sounds.medievalorigins.sirens_song",
+        "sounds": [
+            "medievalorigins:sirens_song"
+        ]
     }
 }
