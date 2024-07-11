@@ -6,7 +6,8 @@
     "refmap": "medievalorigins.refmap.json",
     "compatibilityLevel": "JAVA_17",
     "mixins": [
-        "IcarusHelperMixin"
+        "IcarusHelperMixin",
+        "MermodPlatformImplMixin"
     ],
     "client": [
         "client.IcarusClientMixin",

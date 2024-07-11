@@ -1,3 +1,6 @@
+## 6.4.5
+- Added compatibility for Mermod on Forge (should be compatible with any existing Fabric datapacks)
+
 ## 6.4.4
 - Added sounds and effects to Sirens' Song
 - Increased the radius and duration of Sirens' Song, but increased its cooldown

@@ -173,6 +173,10 @@ dependencies {
     // Common stuff idk ask Pug
     implementation project(":Common")
 
+    // Mermod
+    implementation fg.deobf("curse.maven:mermod-forge-709092:5436218")
+    runtimeOnly fg.deobf("curse.maven:architectury-api-419699:5137938")
+
     // Icarus
     implementation fg.deobf("maven.modrinth:icarus:${project.icarus_version}+NeoForge")
     runtimeOnly fg.deobf("com.teamresourceful.resourcefulconfig:resourcefulconfig-forge-1.20.1:${project.resourceful_version}")
