@@ -1,4 +1,4 @@
-## 6.5.0
+## 6.4.6
 - Fixed compatibility with Mermod 3.0.1+
 - Fixed mana inconsistencies with the `cast_spell` entity action with Iron's
 - Added a few new fields to the cast spell entity action, see the `test` power for an example
