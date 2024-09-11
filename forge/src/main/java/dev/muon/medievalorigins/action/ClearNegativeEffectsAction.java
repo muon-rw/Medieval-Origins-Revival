@@ -16,8 +16,8 @@ public class ClearNegativeEffectsAction extends EntityAction<NoConfiguration> {
     public void execute(NoConfiguration configuration, Entity entity) {
         if (entity instanceof LivingEntity livingEntity) {
             livingEntity.getActiveEffects().stream()
-                    .filter(effect -> !effect.getEffect().isBeneficial())
                     .map(MobEffectInstance::getEffect)
+                    .filter(effect -> !effect.isBeneficial())
                     .forEach(livingEntity::removeEffect);
         }
     }

@@ -1,3 +1,9 @@
+## 6.5.0
+- Fixed compatibility with Mermod 3.0.1+
+- Fixed mana inconsistencies with the `cast_spell` entity action with Iron's
+- Added a few new fields to the cast spell entity action, see the `test` power for an example
+- Fixed a potential crash when Valkyries land near a player with negative effects
+
 ## 6.4.5
 - Added compatibility for Mermod on Forge (should be compatible with any existing Fabric datapacks)
 - Fix startup crash with Serious Player Animations

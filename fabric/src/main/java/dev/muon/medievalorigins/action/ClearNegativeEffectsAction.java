@@ -11,8 +11,8 @@ public class ClearNegativeEffectsAction {
     public static void action(SerializableData.Instance data, Entity entity) {
         if (entity instanceof LivingEntity livingEntity) {
             livingEntity.getActiveEffects().stream()
-                    .filter(effect -> !effect.getEffect().isBeneficial())
                     .map(MobEffectInstance::getEffect)
+                    .filter(effect -> !effect.isBeneficial())
                     .forEach(livingEntity::removeEffect);
         }
     }

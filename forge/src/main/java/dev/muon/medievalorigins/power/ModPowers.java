@@ -2,11 +2,9 @@ package dev.muon.medievalorigins.power;
 
 import dev.muon.medievalorigins.MedievalOrigins;
 import dev.muon.medievalorigins.power.factory.IcarusWingsPowerFactory;
-import dev.muon.medievalorigins.power.factory.MermodTailPowerFactory;
 import dev.muon.medievalorigins.power.factory.OwnerAttributeTransferPowerFactory;
 import io.github.edwinmindcraft.apoli.api.power.factory.PowerFactory;
 import io.github.edwinmindcraft.apoli.api.registry.ApoliRegistries;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.registries.DeferredRegister;
@@ -23,7 +21,6 @@ public class ModPowers {
 
     // Conditional registrations
     public static final RegistryObject<PowerFactory<IcarusWingsPower>> ICARUS_WINGS = registerConditional("icarus_wings", IcarusWingsPowerFactory::new, "icarus");
-    public static RegistryObject<PowerFactory<MermodTailPower>> MERMOD_TAIL;
 
     private static <T extends PowerFactory<?>> RegistryObject<T> registerConditional(String name, Supplier<T> factory, String modId) {
         if (ModList.get().isLoaded(modId)) {
@@ -34,9 +31,5 @@ public class ModPowers {
 
     public static void register(IEventBus eventBus) {
         POWER_FACTORIES.register(eventBus);
-        if (ModList.get().isLoaded("mermod")) {
-            MERMOD_TAIL = MERMOD_POWER_FACTORIES.register("tail_style", MermodTailPowerFactory::new);
-            MERMOD_POWER_FACTORIES.register(eventBus);
-        }
     }
 }

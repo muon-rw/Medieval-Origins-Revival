@@ -1,5 +1,7 @@
 package dev.muon.medievalorigins;
 
+import net.minecraftforge.fml.ModList;
+import net.minecraftforge.fml.loading.moddiscovery.ModInfo;
 import net.minecraftforge.fml.loading.LoadingModList;
 import org.objectweb.asm.tree.ClassNode;
 import org.spongepowered.asm.mixin.extensibility.IMixinConfigPlugin;
@@ -23,13 +25,21 @@ public class MedievalOriginsMixinPlugin implements IMixinConfigPlugin {
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
         if (mixinClassName.equals("dev.muon.medievalorigins.mixin.client.IcarusClientMixin") ||
                 mixinClassName.equals("dev.muon.medievalorigins.mixin.IcarusHelperMixin")) {
-            return LoadingModList.get().getModFileById("icarus") != null;
+            return isModLoaded("icarus");
         }
-        if (mixinClassName.equals("dev.muon.medievalorigins.mixin.MermodPlatformImplMixin")) {
-            return LoadingModList.get().getModFileById("mermod") != null;
+        if (mixinClassName.equals("dev.muon.medievalorigins.mixin.AbstractSpellMixin")) {
+            return isModLoaded("irons_spellbooks");
         }
         return true;
     }
+
+    private static boolean isModLoaded(String modId) {
+        if (ModList.get() == null) {
+            return LoadingModList.get().getMods().stream().map(ModInfo::getModId).anyMatch(modId::equals);
+        }
+        return ModList.get().isLoaded(modId);
+    }
+
 
     @Override
     public void acceptTargets(Set<String> myTargets, Set<String> otherTargets) {

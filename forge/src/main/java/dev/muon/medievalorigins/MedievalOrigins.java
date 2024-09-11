@@ -38,7 +38,7 @@ public class MedievalOrigins
     public static ResourceLocation loc(String id) {
         return new ResourceLocation(MODID, id);
     }
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     public MedievalOrigins()
     {

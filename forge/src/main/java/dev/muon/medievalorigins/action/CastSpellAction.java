@@ -2,10 +2,11 @@ package dev.muon.medievalorigins.action;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import dev.muon.medievalorigins.Constants;
+import dev.muon.medievalorigins.MedievalOrigins;
 import io.github.apace100.calio.data.SerializableDataTypes;
 import io.github.edwinmindcraft.apoli.api.IDynamicFeatureConfiguration;
 import io.github.edwinmindcraft.apoli.api.power.factory.EntityAction;
+import io.redspace.ironsspellbooks.api.events.ChangeManaEvent;
 import io.redspace.ironsspellbooks.api.events.SpellPreCastEvent;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.spells.CastResult;
@@ -27,9 +28,13 @@ import net.minecraft.world.level.Level;
 import net.minecraftforge.common.MinecraftForge;
 
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
+import java.util.UUID;
 
 public class CastSpellAction extends EntityAction<CastSpellAction.Configuration> {
+    private static final Map<UUID, ContinuousCastData> CONTINUOUS_CASTS = new HashMap<>();
 
     public CastSpellAction() {
         super(Configuration.CODEC);
@@ -38,7 +43,7 @@ public class CastSpellAction extends EntityAction<CastSpellAction.Configuration>
     @Override
     public void execute(Configuration configuration, Entity entity) {
         if (!(entity instanceof LivingEntity)) {
-            Constants.LOG.info("Entity is not a LivingEntity: " + entity);
+            MedievalOrigins.LOGGER.info("Entity is not a LivingEntity: " + entity);
             return;
         }
 
@@ -51,11 +56,11 @@ public class CastSpellAction extends EntityAction<CastSpellAction.Configuration>
 
         AbstractSpell spell = SpellRegistry.getSpell(spellResourceLocation);
         if (spell == null || "none".equals(spell.getSpellName())) {
-            Constants.LOG.info("No valid spell found for resource location " + spellResourceLocation);
+            MedievalOrigins.LOGGER.info("No valid spell found for resource location " + spellResourceLocation);
             return;
         }
 
-        Level world = entity.getCommandSenderWorld();
+        Level world = entity.level();
         if (world.isClientSide) {
             return;
         }
@@ -90,12 +95,21 @@ public class CastSpellAction extends EntityAction<CastSpellAction.Configuration>
 
                 if (manaCostOpt.isPresent()) {
                     int manaCost = manaCostOpt.get();
-                    if (magicData.getMana() < manaCost) {
+                    if (!serverPlayer.getAbilities().instabuild && magicData.getMana() < manaCost) {
                         Messages.sendToPlayer(new ClientboundCastErrorMessage(ClientboundCastErrorMessage.ErrorType.MANA, spell), serverPlayer);
                         return;
                     }
-                    magicData.setMana(magicData.getMana() - manaCost);
+                    if (!serverPlayer.getAbilities().instabuild) {
+                        setManaWithEvent(serverPlayer, magicData, magicData.getMana() - manaCost);
+                    }
                 }
+
+                if (configuration.continuousCost() && manaCostOpt.isPresent() && !serverPlayer.getAbilities().instabuild) {
+                    int manaCost = manaCostOpt.get();
+                    int costInterval = configuration.costInterval();
+                    CONTINUOUS_CASTS.put(serverPlayer.getUUID(), new ContinuousCastData(manaCost, costInterval, 0));
+                }
+
 
                 magicData.initiateCast(spell, powerLevel, effectiveCastTime, CastSource.COMMAND, "command");
                 magicData.setPlayerCastingItem(serverPlayer.getItemInHand(InteractionHand.MAIN_HAND));
@@ -108,7 +122,48 @@ public class CastSpellAction extends EntityAction<CastSpellAction.Configuration>
                 Utils.serverSideCancelCast(serverPlayer);
             }
         } else {
-            Constants.LOG.info("Entity is not a valid caster (currently only players can cast spells with this entity action): " + entity);
+            MedievalOrigins.LOGGER.info("Entity is not a valid caster (currently only players can cast spells with this entity action): " + entity);
+        }
+    }
+
+    public static void onSpellTick(ServerPlayer player, MagicData magicData) {
+        UUID playerId = player.getUUID();
+        ContinuousCastData data = CONTINUOUS_CASTS.get(playerId);
+        if (data != null) {
+            data.ticksElapsed++;
+            if (data.ticksElapsed >= data.costInterval) {
+                data.ticksElapsed = 0;
+                if (magicData.getMana() >= data.manaCost) {
+                    setManaWithEvent(player, magicData, magicData.getMana() - data.manaCost);
+                    MedievalOrigins.LOGGER.info("Draining mana: " + data.manaCost + ". Remaining mana: " + magicData.getMana());
+                } else {
+                    Utils.serverSideCancelCast(player);
+                    CONTINUOUS_CASTS.remove(playerId);
+                }
+            }
+        }
+    }
+
+    private static void setManaWithEvent(ServerPlayer player, MagicData magicData, float newMana) {
+        ChangeManaEvent event = new ChangeManaEvent(player, magicData, magicData.getMana(), newMana);
+        if (!MinecraftForge.EVENT_BUS.post(event)) {
+            magicData.setMana(event.getNewMana());
+        }
+    }
+
+    public static void onSpellEnd(ServerPlayer player) {
+        CONTINUOUS_CASTS.remove(player.getUUID());
+    }
+
+    private static class ContinuousCastData {
+        final int manaCost;
+        final int costInterval;
+        int ticksElapsed;
+
+        ContinuousCastData(int manaCost, int costInterval, int ticksElapsed) {
+            this.manaCost = manaCost;
+            this.costInterval = costInterval;
+            this.ticksElapsed = ticksElapsed;
         }
     }
 
@@ -117,20 +172,27 @@ public class CastSpellAction extends EntityAction<CastSpellAction.Configuration>
                 SerializableDataTypes.IDENTIFIER.fieldOf("spell").forGetter(Configuration::spell),
                 Codec.INT.optionalFieldOf("power_level", 1).forGetter(Configuration::powerLevel),
                 Codec.INT.optionalFieldOf("cast_time").forGetter(Configuration::castTime),
-                Codec.INT.optionalFieldOf("mana_cost").forGetter(Configuration::manaCost)
+                Codec.INT.optionalFieldOf("mana_cost").forGetter(Configuration::manaCost),
+                Codec.BOOL.optionalFieldOf("continuous_cost", false).forGetter(Configuration::continuousCost),
+                Codec.INT.optionalFieldOf("cost_interval", 20).forGetter(Configuration::costInterval)
         ).apply(instance, Configuration::new));
 
         private final ResourceLocation spell;
         private final int powerLevel;
         private final Optional<Integer> castTime;
         private final Optional<Integer> manaCost;
+        private final boolean continuousCost;
+        private final int costInterval;
 
-        public Configuration(ResourceLocation spell, int powerLevel, Optional<Integer> castTime, Optional<Integer> manaCost) {
+        public Configuration(ResourceLocation spell, int powerLevel, Optional<Integer> castTime, Optional<Integer> manaCost, boolean continuousCost, int costInterval) {
             this.spell = spell;
             this.powerLevel = powerLevel;
             this.castTime = castTime;
             this.manaCost = manaCost;
+            this.continuousCost = continuousCost;
+            this.costInterval = costInterval;
         }
+
 
         public ResourceLocation spell() {
             return spell;
@@ -146,6 +208,14 @@ public class CastSpellAction extends EntityAction<CastSpellAction.Configuration>
 
         public Optional<Integer> manaCost() {
             return manaCost;
+        }
+
+        public boolean continuousCost() {
+            return continuousCost;
+        }
+
+        public int costInterval() {
+            return costInterval;
         }
     }
 }
