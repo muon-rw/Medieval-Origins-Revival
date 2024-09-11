@@ -3,6 +3,7 @@
 - Fixed mana inconsistencies with the `cast_spell` entity action with Iron's
 - Added a few new fields to the cast spell entity action, see the `test` power for an example
 - Fixed a potential crash when Valkyries land near a player with negative effects
+- Siren Song will no longer add particles to players
 
 ## 6.4.5
 - Added compatibility for Mermod on Forge (should be compatible with any existing Fabric datapacks)
@@ -13,6 +14,7 @@
 - Increased the radius and duration of Sirens' Song, but increased its cooldown
 - (Forge) Fixed Siren Song not pacifying already aggressive mobs
 - Cleaned up/shortened a few more power descriptions
+- Fixed siren song particles sometimes never despawning
 - Reduced the hunger cost of Valkyrie flight by 75%
 
 ## 6.4.3
