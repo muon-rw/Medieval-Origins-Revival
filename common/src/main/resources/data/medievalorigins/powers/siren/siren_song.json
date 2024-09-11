@@ -36,9 +36,19 @@
 					"bientity_condition": {
 						"type": "apoli:target_condition",
 						"condition": {
-							"type": "origins:in_tag",
-							"tag": "medievalorigins:bosses",
-							"inverted": true
+							"type": "origins:and",
+							"conditions": [
+								{
+									"type": "origins:in_tag",
+									"tag": "medievalorigins:bosses",
+									"inverted": true
+								},
+								{
+									"type": "origins:entity_type",
+									"entity_type": "minecraft:player",
+									"inverted": true
+								}
+							]
 						}
 					}
 				},
