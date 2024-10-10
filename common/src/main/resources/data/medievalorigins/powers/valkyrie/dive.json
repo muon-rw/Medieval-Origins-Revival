@@ -21,10 +21,7 @@
         "type": "origins:action_over_time",
         "interval": 1,
         "condition": {
-            "type": "origins:on_block",
-            "block_condition": {
-                "type": "origins:movement_blocking"
-            }
+            "type": "origins:on_block"
         },
         "rising_action": {
             "type": "origins:and",
