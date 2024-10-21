@@ -471,6 +471,26 @@
   "power.medievalorigins.revenant/unguarded.name": "Неохраняемый",
   "power.medievalorigins.revenant/unguarded.description": "Одержимость духовным миром делает ревенантов более уязвимыми для атак в физическом мире. Большинство мобов наносят им больше урона.",
 
+  "origin.medievalorigins.valkyrie.name": "Валькирия",
+  "origin.medievalorigins.valkyrie.description": "-§l Изменения§r: \n§o§2+ Исцеление§r \n§o§6• Крылья§r \n§o§c- Слабость к нежити§r\n§lВалькирии§r бесстрашные крылатые воительницы, которые вершат судьбы павших в бою. Считается, что они переносят умерших в Вальгаллу",
+
+  "power.medievalorigins.valkyrie/wings.name": "Крылатая",
+  "power.medievalorigins.valkyrie/wings.description": "Валькирии имеют крупные покрытые белыми перьями крылья и могут свободно летать",
+
+  "power.medievalorigins.valkyrie/intervention.name": "Вмешательство",
+  "power.medievalorigins.valkyrie/intervention.description": "Прыжок вверх или рывок вперед, если уже в полёте, получая неуязвимость к падению до приземления. \n\nВо время приземления, наносится удар по области энергией света, снимающий негативные эффекты союзников поблизости и исцеляющий их. Сила исцеления увеличивается от силы заклинаний исцеления/света.",
+
+  "power.medievalorigins.valkyrie/divine_smite.name": "Божественный удар",
+  "power.medievalorigins.valkyrie/divine_smite.description": "Каждая третья атака поражает ближайших врагов. Урон увеличивается от силы заклинаний исцеления/света.",
+
+  "power.medievalorigins.valkyrie/corruption.name": "Порча",
+  "power.medievalorigins.valkyrie/corruption.description": "Нежить рядом ослабляет и замедляет вас, а также её атаки наносят вам больше урона",
+
+  "power.medievalorigins.valkyrie/vanquisher.name": "Победитель",
+  "power.medievalorigins.valkyrie/vanquisher.description": "После убийства нежити, запускается §nБожественный удар§r§r§r, а также снижается эффект от §nПорчи§r за каждое убийство. При смерти теряется половина показателя.",
+
+  "power.medievalorigins.valkyrie/heavenly_implements.name": "Небесный инструмент",
+  "power.medievalorigins.valkyrie/heavenly_implements.description": "Валькирии имеют бóльшую мощность заклинаний исцеления/света и более сильны в использовании копий и древкового оружия.",
 
   "enchantment.medievalorigins.featherweight": "Лёгкий вес",
   "enchantment.medievalorigins.featherweight.desc": "Если это зачарование применить к тяжелым доспехам, их смогут носить Арахны, Эльфы и Альфик.",
