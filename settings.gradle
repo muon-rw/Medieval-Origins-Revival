@@ -18,4 +18,4 @@ pluginManagement {
 }
 
 rootProject.name = 'Medieval-Origins-Revival'
-include("Common", "Fabric", "Forge")
+include("common", "fabric", "forge")

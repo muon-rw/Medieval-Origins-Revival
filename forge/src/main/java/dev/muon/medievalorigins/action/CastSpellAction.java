@@ -135,7 +135,7 @@ public class CastSpellAction extends EntityAction<CastSpellAction.Configuration>
                 data.ticksElapsed = 0;
                 if (magicData.getMana() >= data.manaCost) {
                     setManaWithEvent(player, magicData, magicData.getMana() - data.manaCost);
-                    MedievalOrigins.LOGGER.info("Draining mana: " + data.manaCost + ". Remaining mana: " + magicData.getMana());
+                    MedievalOrigins.LOGGER.debug("Draining mana: " + data.manaCost + ". Remaining mana: " + magicData.getMana());
                 } else {
                     Utils.serverSideCancelCast(player);
                     CONTINUOUS_CASTS.remove(playerId);

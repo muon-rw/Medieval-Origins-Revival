@@ -31,21 +31,14 @@ loom {
     }
 }
 repositories {
+    maven { url = 'https://maven.greenhouseteam.dev/releases/' }
     maven {
-        name = "Greenhouse"
-        url = 'https://maven.greenhouseteam.dev/releases/'
-    }
-    maven {
-        name = "Jamie's White Shirt"
         url "https://maven.jamieswhiteshirt.com/libs-release"
         content {
             includeGroup "com.jamieswhiteshirt"
         }
     }
-    maven {
-        name = 'ParchmentMC'
-        url = 'https://maven.parchmentmc.org'
-    }
+    maven { url = 'https://maven.parchmentmc.org' }
     maven { url = "https://maven.nucleoid.xyz/" }
     maven { url = 'https://maven.blamejared.com' }
     maven { url = "https://maven.willbl.dev/releases" }
@@ -74,7 +67,7 @@ repositories {
     maven { url "https://maven.shedaniel.me" }
     maven { url "https://maven.bai.lol" }
     maven { url 'https://maven.kosmx.dev/' }
-    maven { url 'https://libs.azuredoom.com:4443/mods' }
+    maven { url 'https://maven.azuredoom.com/mods' }
     maven { url "https://maven.willbl.dev/releases" }
     maven { url "https://cursemaven.com" }
     maven { url = "https://nexus.resourcefulbees.com/repository/maven-public/" }
@@ -95,7 +88,6 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
 
-
     modImplementation("com.github.apace100:calio:${calio_fabric_version}")
     modImplementation("com.github.apace100:apoli:${apoli_fabric_version}")
     modImplementation "com.github.apace100:origins-fabric:${origins_fabric_version}"
@@ -103,7 +95,7 @@ dependencies {
     implementation(annotationProcessor("io.github.llamalad7:mixinextras-fabric:${mixin_extras_version}"))
     implementation(annotationProcessor("net.fabricmc:sponge-mixin:0.13.3+mixin.0.8.5"))
 
-    implementation project(path: ":Common", configuration: "namedElements")
+    implementation project(path: ":common", configuration: "namedElements")
     modImplementation "com.terraformersmc:modmenu:${modmenu_version}"
     modImplementation include("com.github.apace100:autotag-api:${autotag_version}")
     modImplementation include("maven.modrinth:projectile-damage-attribute:${project.projectile_damage}-fabric")
@@ -150,7 +142,7 @@ dependencies {
 }
 
 processResources {
-    from project(":Common").sourceSets.main.resources
+    from project(":common").sourceSets.main.resources
     exclude "medievalorigins.common.accesswidener"
 
     inputs.property "version", project.version
@@ -162,11 +154,11 @@ processResources {
 
 processTestResources {
     outputs.upToDateWhen { false }
-    from project(":Common").sourceSets.test.resources
+    from project(":common").sourceSets.test.resources
 }
 
 tasks.withType(JavaCompile) {
-    source(project(":Common").sourceSets.main.allSource)
+    source(project(":common").sourceSets.main.allSource)
 }
 
 publishing {

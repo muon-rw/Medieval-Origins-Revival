@@ -96,8 +96,8 @@ minecraft {
                 create(mod_id) {
                     source sourceSets.main
                     source sourceSets.test
-                    source project(":Common").sourceSets.main
-                    source project(":Common").sourceSets.test
+                    source project(":common").sourceSets.main
+                    source project(":common").sourceSets.test
                 }
             }
         }
@@ -111,8 +111,8 @@ minecraft {
                 create(mod_id) {
                     source sourceSets.main
                     source sourceSets.test
-                    source project(":Common").sourceSets.main
-                    source project(":Common").sourceSets.test
+                    source project(":common").sourceSets.main
+                    source project(":common").sourceSets.test
                 }
             }
         }
@@ -126,7 +126,7 @@ minecraft {
             mods {
                 create(mod_id) {
                     source sourceSets.main
-                    source project(":Common").sourceSets.main
+                    source project(":common").sourceSets.main
                 }
             }
         }
@@ -171,11 +171,7 @@ dependencies {
     })
 
     // Common stuff idk ask Pug
-    implementation project(":Common")
-
-    // Mermod
-    implementation fg.deobf("curse.maven:mermod-forge-709092:5436218")
-    runtimeOnly fg.deobf("curse.maven:architectury-api-419699:5137938")
+    implementation project(":common")
 
     // Icarus
     implementation fg.deobf("maven.modrinth:icarus:${project.icarus_version}+NeoForge")
@@ -192,11 +188,11 @@ dependencies {
 }
 
 tasks.withType(JavaCompile) {
-    source(project(":Common").sourceSets.main.allSource)
+    source(project(":common").sourceSets.main.allSource)
 }
 
 processResources {
-    from project(':Common').sourceSets.main.resources
+    from project(':common').sourceSets.main.resources
     exclude "medievalorigins.common.accesswidener"
 
     inputs.property 'version', project.version
@@ -208,7 +204,7 @@ processResources {
 
 processTestResources {
     outputs.upToDateWhen { false }
-    from project(":Common").sourceSets.test.resources
+    from project(":common").sourceSets.test.resources
 
     filesMatching('META-INF/mods.toml') {
         expand 'version': project.version
