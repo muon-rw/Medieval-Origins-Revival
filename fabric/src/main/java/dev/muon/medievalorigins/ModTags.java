@@ -28,8 +28,7 @@ public class ModTags {
             );
 
             addToTag("daggers", item ->
-                    item instanceof SwordItem && BuiltInRegistries.ITEM.getKey(item).getPath().matches("[a-z_]*(dagger|sai|knife)[a-z_]*") ||
-                    item instanceof SwordItem && BuiltInRegistries.ITEM.getKey(item).toString().matches("simplyswords:.*[a-z_]*(cutlass)[a-z_]*")
+                    item instanceof SwordItem && BuiltInRegistries.ITEM.getKey(item).getPath().matches("[a-z_]*(dagger|sai|knife)[a-z_]*")
             );
 
             addToTag("fist_weapons", item -> item instanceof SwordItem && BuiltInRegistries.ITEM.getKey(item).getPath().matches("[a-z_]*(fist|claw|gauntlet)[a-z_]*"));
