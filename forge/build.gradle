@@ -136,9 +136,9 @@ minecraft {
 sourceSets.main.resources.srcDir 'src/generated/resources'
 
 dependencies {
-    //Forge
+    // Forge
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
-    //Origins
+    // Origins
     implementation fg.deobf("io.github.edwinmindcraft:calio-forge:${minecraft_version}-${calio_forge_version}")
     implementation fg.deobf("io.github.edwinmindcraft:apoli-forge:${minecraft_version}-${apoli_forge_version}")
     implementation fg.deobf("io.github.edwinmindcraft:origins-forge:${minecraft_version}-${origins_forge_version}")
@@ -155,7 +155,7 @@ dependencies {
         exclude group: 'io.github.llamalad7', module: 'mixinextras-common'
         exclude group: 'io.github.llamalad7', module: 'mixinextras-forge'
     }
-    //Pehkui
+    // Pehkui
     implementation fg.deobf("com.github.Virtuoel:Pehkui:${pehkui_version}-${minecraft_version}-forge")
 
     // Mixin
@@ -170,7 +170,7 @@ dependencies {
         exclude group: 'com.github.llamalad.mixinextras'
     })
 
-    // Common stuff idk ask Pug
+    // Common project
     implementation project(":common")
 
     // Icarus
@@ -185,6 +185,10 @@ dependencies {
     implementation fg.deobf("io.redspace.ironsspellbooks:irons_spellbooks:${irons_version}")
     runtimeOnly fg.deobf("software.bernie.geckolib:geckolib-forge-${geckolib_version}")
     runtimeOnly fg.deobf("dev.kosmx.player-anim:player-animation-lib-forge:${player_animator_version}")
+
+    // Ice and Fire
+    implementation fg.deobf("curse.maven:ice-and-fire-dragons-264231:5633453")
+    implementation fg.deobf("curse.maven:citadel-331936:5633260")
 }
 
 tasks.withType(JavaCompile) {

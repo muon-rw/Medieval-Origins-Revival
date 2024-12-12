@@ -31,7 +31,6 @@ public class MedievalOrigins implements ModInitializer {
 		ModBientityConditions.register();
 		ModSounds.register();
 		ModPowers.register();
-		ModTags.registerTags();
 	}
 	static String MOD_ID = "medievalorigins";
 	public static ResourceLocation loc(String id) {

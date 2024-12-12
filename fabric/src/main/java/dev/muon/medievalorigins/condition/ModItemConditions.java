@@ -43,8 +43,16 @@ public class ModItemConditions {
 
         register(new ConditionFactory<>(MedievalOrigins.loc("is_valkyrie_weapon"), new SerializableData(), (data, stack) -> {
             String itemName = BuiltInRegistries.ITEM.getKey(stack.getItem()).getPath();
-            return (stack.getItem() instanceof SwordItem || stack.getItem() instanceof TridentItem || Enchantments.SHARPNESS.canEnchant(stack) || Enchantments.PIERCING.canEnchant(stack))
-                    && (itemName.contains("glaive") || itemName.contains("spear") || itemName.contains("lance") || itemName.contains("halberd"));
+            return (stack.getItem() instanceof SwordItem ||
+                    stack.getItem() instanceof TridentItem ||
+                    Enchantments.SHARPNESS.canEnchant(stack) ||
+                    Enchantments.PIERCING.canEnchant(stack))
+                        &&
+                            (itemName.contains("glaive") ||
+                            itemName.contains("spear") ||
+                            itemName.contains("lance") ||
+                            itemName.contains("trident") ||
+                            itemName.contains("halberd"));
         }));
 
         register(new ConditionFactory<>(MedievalOrigins.loc("is_fist_weapon"), new SerializableData(), (data, stack) -> {
