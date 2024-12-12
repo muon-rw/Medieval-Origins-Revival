@@ -1,94 +1,149 @@
 {
-    "type": "origins:action_on_entity_use",
-    "bientity_action": {
-        "type": "origins:choice",
-        "actions": [
-            {
-                "element": {
-                    "type": "origins:damage",
-                    "amount": 1,
-                    "damage_type": "generic"
+    "type": "origins:multiple",
+    "active": {
+        "type": "origins:action_on_entity_use",
+        "bientity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:modify_resource",
+                    "modifier": {
+                        "operation": "set_total",
+                        "value": 20
+                    },
+                    "resource": "*:*_cooldown"
                 },
-                "weight": 1
-            },
-            {
-                "element": {
-                    "type": "origins:actor_action",
-                    "action": {
-                        "type": "origins:choice",
-                        "actions": [
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:damage",
+                                "amount": 1,
+                                "damage_type": "generic"
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:actor_action",
+                                "action": {
+                                    "type": "origins:choice",
+                                    "actions": [
+                                        {
+                                            "element": {
+                                                "type": "origins:give",
+                                                "stack": {
+                                                    "item": "minecraft:emerald",
+                                                    "amount": 1
+                                                }
+                                            },
+                                            "weight": 1
+                                        },
+                                        {
+                                            "element": {
+                                                "type": "origins:give",
+                                                "stack": {
+                                                    "item": "minecraft:emerald",
+                                                    "amount": 2
+                                                }
+                                            },
+                                            "weight": 1
+                                        },
+                                        {
+                                            "element": {
+                                                "type": "origins:give",
+                                                "stack": {
+                                                    "item": "minecraft:emerald",
+                                                    "amount": 3
+                                                }
+                                            },
+                                            "weight": 1
+                                        }
+                                    ]
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        "bientity_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:target_condition",
+                    "condition": {
+                        "type": "origins:or",
+                        "conditions": [
                             {
-                                "element": {
-                                    "type": "origins:give",
-                                    "stack": {
-                                        "item": "minecraft:emerald",
-                                        "amount": 1
-                                    }
-                                },
-                                "weight": 1
+                                "type": "origins:entity_type",
+                                "entity_type": "minecraft:villager"
                             },
                             {
-                                "element": {
-                                    "type": "origins:give",
-                                    "stack": {
-                                        "item": "minecraft:emerald",
-                                        "amount": 2
-                                    }
-                                },
-                                "weight": 1
-                            },
-                            {
-                                "element": {
-                                    "type": "origins:give",
-                                    "stack": {
-                                        "item": "minecraft:emerald",
-                                        "amount": 3
-                                    }
-                                },
-                                "weight": 1
+                                "type": "origins:entity_type",
+                                "entity_type": "minecraft:wandering_trader"
                             }
                         ]
                     }
                 },
-                "weight": 1
-            }
-        ]
-    },
-    "bientity_condition": {
-        "type": "origins:and",
-        "conditions": [
-            {
-                "type": "origins:target_condition",
-                "condition": {
-                    "type": "origins:or",
-                    "conditions": [
-                        {
-                            "type": "origins:entity_type",
-                            "entity_type": "minecraft:villager"
-                        },
-                        {
-                            "type": "origins:entity_type",
-                            "entity_type": "minecraft:wandering_trader"
-                        }
-                    ]
+                {
+                    "type": "origins:relative_rotation",
+                    "actor_rotation": "head",
+                    "target_rotation": "head",
+                    "comparison": ">=",
+                    "compare_to": 0.4
                 }
+            ]
+        },
+        "item_condition": {
+            "type": "origins:empty"
+        },
+        "hands": [
+            "main_hand"
+        ],
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_cooldown",
+                    "compare_to": 0,
+                    "comparison": "=="
+                }
+            ]
+        }
+    },
+    "cooldown": {
+        "type": "origins:resource",
+        "max": 20,
+        "min": 0,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+            "bar_index": 1
+        }
+    },
+    "tick_cooldown": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:modify_resource",
+            "modifier": {
+                "operation": "addition",
+                "value": -1
             },
-            {
-                "type": "origins:relative_rotation",
-                "actor_rotation": "head",
-                "target_rotation": "head",
-                "comparison": ">=",
-                "compare_to": 0.4
-            }
-        ]
-    },
-    "item_condition": {
-        "type": "origins:empty"
-    },
-    "hands": [
-        "main_hand"
-    ],
-    "condition": {
-        "type": "origins:sneaking"
+            "resource": "*:*_cooldown"
+        },
+        "condition": {
+            "type": "origins:resource",
+            "comparison": ">",
+            "compare_to": 0,
+            "resource": "*:*_cooldown"
+        }
     }
 }
