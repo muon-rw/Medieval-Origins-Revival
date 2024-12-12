@@ -1,14 +1,11 @@
-package dev.muon.medievalorigins.mixin.client;
+package dev.muon.medievalorigins.mixin.compat.icarus;
 
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import dev.cammiescorner.icarus.client.IcarusClient;
 import dev.cammiescorner.icarus.util.IcarusHelper;
 import dev.muon.medievalorigins.enchantment.ModEnchantments;
 import dev.muon.medievalorigins.power.IcarusWingsPower;
-import dev.muon.medievalorigins.power.ModPowers;
 import dev.muon.medievalorigins.power.PixieWingsPower;
-import io.github.edwinmindcraft.apoli.api.ApoliAPI;
-import io.github.edwinmindcraft.apoli.api.component.IPowerContainer;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorItem;

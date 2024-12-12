@@ -30,7 +30,7 @@ jarJar.enable()
 repositories {
     maven {
         name = "Greenhouse"
-        url = 'https://maven.greenhouseteam.dev/releases/'
+        url = 'https://repo.greenhouse.house/releases'
     }
 
     maven {

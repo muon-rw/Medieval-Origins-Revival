@@ -1,4 +1,4 @@
-package dev.muon.medievalorigins.mixin;
+package dev.muon.medievalorigins.mixin.compat.icarus;
 
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;

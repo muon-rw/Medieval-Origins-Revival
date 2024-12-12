@@ -1,4 +1,4 @@
-package dev.muon.medievalorigins.mixin;
+package dev.muon.medievalorigins.mixin.compat.irons_spellbooks;
 
 import dev.muon.medievalorigins.action.CastSpellAction;
 import io.redspace.ironsspellbooks.api.magic.MagicData;

@@ -1,3 +1,9 @@
+## 6.5.0
+- Valkyrie's Heavenly Implements passive now works with Ice and Fire's Tide Trident
+- Forge Only: The Mirroring Enchantment now works on Gorgons from Ice and Fire
+- Forge Only: Siren origins will no longer be affected by Sirens from Ice and Fire
+- Forge Only: Pixie origins will no longer be targeted by Pixies from Ice and Fire
+
 ## 6.4.6
 - Fixed compatibility with Mermod 3.0.1+
 - Fixed mana inconsistencies with the `cast_spell` entity action with Iron's

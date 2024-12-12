@@ -31,7 +31,7 @@ loom {
     }
 }
 repositories {
-    maven { url = 'https://maven.greenhouseteam.dev/releases/' }
+    maven { url = 'https://repo.greenhouse.house/releases' }
     maven {
         url "https://maven.jamieswhiteshirt.com/libs-release"
         content {
@@ -69,7 +69,16 @@ repositories {
     maven { url 'https://maven.kosmx.dev/' }
     maven { url 'https://maven.azuredoom.com/mods' }
     maven { url "https://maven.willbl.dev/releases" }
-    maven { url "https://cursemaven.com" }
+    exclusiveContent {
+        forRepository {
+            maven {
+                url = "https://cursemaven.com"
+            }
+        }
+        filter {
+            includeGroup "curse.maven"
+        }
+    }
     maven { url = "https://nexus.resourcefulbees.com/repository/maven-public/" }
     maven { url = "https://jm.gserv.me/repository/maven-public/" }
 
