@@ -1,4 +1,9 @@
 ## 6.5.0
+- Fixed Arachnae not actually being a carnivore (thanks ghotiPhoti)
+- Removed Simply Swords cutlasses from Moonlight Rogue passive, due to balance
+- Added Simply Swords' unique greataxes to Ravager passive (thanks ghotiPhoti)
+- Potentially fixed the dive of Divine Intervention sometimes not triggering when landing (thanks RDaneliya)
+- Updated Russian Translation (thanks Rdaneliya)
 - Valkyrie's Heavenly Implements passive now works with Ice and Fire's Tide Trident
 - Forge Only: The Mirroring Enchantment now works on Gorgons from Ice and Fire
 - Forge Only: Siren origins will no longer be affected by Sirens from Ice and Fire
