@@ -70,15 +70,51 @@
 					"type": "origins:exposed_to_sky"
 				},
 				{
-					"type": "origins:daytime",
+					"type": "origins:dimension",
+					"dimension": "aether:the_aether",
 					"inverted": true
+				},
+				{
+					"type": "origins:dimension",
+					"dimension": "paradise_lost:paradise_lost",
+					"inverted": true
+				},
+				{
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:daytime",
+							"inverted": true
+						},
+						{
+							"type": "origins:dimension",
+							"dimension": "eternal_starlight:starlight"
+						},
+						{
+							"type": "origins:dimension",
+							"dimension": "blue_skies:everdawn"
+						},
+						{
+							"type": "origins:dimension",
+							"dimension": "twilightforest:twilight_forest"
+						}
+					]
 				}
 			]
 		},
 		"entity_action": {
-			"type": "origins:feed",
-			"food": 1,
-			"saturation": 0.25
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:feed",
+					"food": 1,
+					"saturation": 0.25
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "particle minecraft:wax_off ~ ~ ~ 0.3 0.6 0.3 1 30"
+				}
+			]
 		}
 	}
 }

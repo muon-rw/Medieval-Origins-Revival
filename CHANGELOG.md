@@ -1,4 +1,7 @@
 ## 6.5.0
+*This will most likely be the final 1.20.1 release.*
+
+*For a number of reasons, the 1.21.1 port will be a major rewrite with fully incompatible changes*
 - Fixed Arachnae not actually being a carnivore (thanks ghotiPhoti)
 - Removed Simply Swords cutlasses from Moonlight Rogue passive, due to balance
 - Added Simply Swords' unique greataxes to Ravager passive (thanks ghotiPhoti)
@@ -8,6 +11,7 @@
 - Forge Only: The Mirroring Enchantment now works on Gorgons from Ice and Fire
 - Forge Only: Siren origins will no longer be affected by Sirens from Ice and Fire
 - Forge Only: Pixie origins will no longer be targeted by Pixies from Ice and Fire
+- Fixed Lunar Nexus hunger restoration logic for modded dimensions where time of day is fixed
 
 ## 6.4.6
 - Fixed compatibility with Mermod 3.0.1+
