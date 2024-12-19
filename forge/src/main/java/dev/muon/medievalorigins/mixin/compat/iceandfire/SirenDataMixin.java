@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-@Mixin(SirenData.class)
+@Mixin(value = SirenData.class, remap = false)
 public class SirenDataMixin {
 
     @Inject(method = "setCharmed", at = @At("HEAD"), cancellable = true)
