@@ -10,6 +10,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
@@ -49,7 +50,7 @@ public class IcarusClientMixin {
                 return wingsType;
             }
         } else if (PixieWingsPower.hasPower(entity)) {
-            return null;
+            return new ItemStack(Items.AIR);
         }
         return original;
     }
