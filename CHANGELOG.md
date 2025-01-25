@@ -1,3 +1,10 @@
+## 6.5.1
+*One (hopefully) last little hotfix for 1.20.1. Many new features are already present in 1.21.1!*
+- Added FTB Teams support to Valkyrie's intervention/divine smite targeting logic
+- (Forge) Fix client crash if a Pixie equipped Icarus wings
+- (Fabric) Fix crash if both Amethyst Imbuement and Mythic Upgrades were installed 
+- Remove Pixie's Curse of Flight power (Origins Forge's power type for such was badly implemented, and pixies were probably a bit too weak)
+
 ## 6.5.0
 *This will most likely be the final 1.20.1 release.*
 
