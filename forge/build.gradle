@@ -192,7 +192,7 @@ dependencies {
 
     // FTB
     implementation fg.deobf("curse.maven:ftb-library-forge-404465:5543335")
-    runtimeOnly fg.deobf("curse.maven:ftb-teams-forge-404468:5267190")
+    implementation fg.deobf("curse.maven:ftb-teams-forge-404468:5267190")
     runtimeOnly fg.deobf("curse.maven:architectury-api-419699:5137938")
 }
 

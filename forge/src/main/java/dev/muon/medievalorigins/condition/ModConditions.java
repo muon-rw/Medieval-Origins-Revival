@@ -44,8 +44,7 @@ public class ModConditions {
                     entity instanceof Player player && player.getAbilities().instabuild));
 
     /**Bientity*/
-    public static final RegistryObject<SimpleBiEntityCondition> IS_ALLIED = BIENTITY_CONDITIONS.register("allied", () ->
-            new SimpleBiEntityCondition((actor, target) -> actor.isAlliedTo(target)));
+    public static final RegistryObject<AlliedCondition> ALLIED = BIENTITY_CONDITIONS.register("allied", AlliedCondition::new);
 
     /**Item*/
     public static final RegistryObject<SimpleItemCondition> IS_MELEE_WEAPON = ITEM_CONDITIONS.register("is_melee_weapon", () ->
