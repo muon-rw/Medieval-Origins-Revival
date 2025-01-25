@@ -22,6 +22,7 @@ import java.util.List;
 
 public class CastSpellAction {
     public static void action(SerializableData.Instance data, Entity entity) {
+        if (entity.level().isClientSide) return;
         if (entity instanceof Player player) {
             ItemStack itemStack = player.getMainHandItem();
             ResourceLocation spellId = data.getId("spell");

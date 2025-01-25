@@ -23,7 +23,7 @@ public class CastSpellBientityAction {
         Entity actor = entities.getA();
         Entity target = entities.getB();
 
-        if (!(actor instanceof Player player) || target == null) {
+        if (!(actor instanceof Player player) || target == null || actor.level().isClientSide || target.level().isClientSide) {
             return;
         }
 
