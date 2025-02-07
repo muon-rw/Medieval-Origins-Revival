@@ -1,5 +1,12 @@
-# This page is out of date. 
+# Medieval Origins Revival 
+**Medieval Origins Revival** is an addon for Origins, adding medieval, fantasy, and mythology inspired origins. 
 
-Moved to https://github.com/muon-rw/Medieval-Origins due to a limitation with Github forks
+It was originally based off of Medieval Origins by ItsParkieLad.
 
-Looking for Origin descriptions? A wiki is being worked on that will have all origin descriptions up-to-date automatically! Coming soon! 
+You can download it here:
+- https://modrinth.com/mod/medieval-origins-revival
+- https://www.curseforge.com/minecraft/mc-mods/medieval-origins-revival
+
+If you'd like to ask a question or get support, head to #muons-projects in the Lunapixel Studios discord:
+
+https://discord.gg/lunapixel
