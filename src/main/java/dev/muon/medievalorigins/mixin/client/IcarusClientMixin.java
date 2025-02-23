@@ -1,6 +1,8 @@
 package dev.muon.medievalorigins.mixin.client;
 
+import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
+import com.llamalad7.mixinextras.sugar.Local;
 import dev.cammiescorner.icarus.client.IcarusClient;
 import dev.cammiescorner.icarus.util.IcarusHelper;
 import dev.muon.medievalorigins.enchantment.ModEnchantments;
@@ -9,6 +11,7 @@ import dev.muon.medievalorigins.power.PixieWingsPowerType;
 import dev.muon.medievalorigins.util.ItemDataUtil;
 import io.github.apace100.apoli.component.PowerHolderComponent;
 import io.github.apace100.apoli.power.type.PowerType;
+import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorItem;
@@ -22,15 +25,12 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 @Mixin(IcarusClient.class)
 public abstract class IcarusClientMixin {
 
-    /*
-     * TODO: Rewrite to be less invasive
-     *  Use ModifyExpressionValue, target getArmorValue
-     */
-    @ModifyVariable(method = "onPlayerTick(Lnet/minecraft/world/entity/player/Player;)V",
-            at = @At(value = "STORE", opcode = Opcodes.FSTORE),
-            ordinal = 0)
-    private static float modifyArmorModifier(float modifier, Player player) {
-        var cfg = IcarusHelper.getConfigValues(player);
+
+    // Todo: change Player->AbstractClientPlayer and Icarus to 4.5.0 if it stops breaking dev environment
+    @ModifyExpressionValue(method = "onPlayerTick",
+            at = @At(value = "INVOKE",
+                    target = "Lnet/minecraft/world/entity/player/Player;getArmorValue()I"))
+    private static int modifyArmorModifier(int original, @Local(argsOnly = true) Player player) {
         int armorValueSum = 0;
         Iterable<ItemStack> armorSlots = player.getArmorSlots();
         for (ItemStack slottedStack : armorSlots ) {
@@ -41,7 +41,7 @@ public abstract class IcarusClientMixin {
                 armorValueSum += armorItem.getDefense();
             }
         }
-        return cfg.armorSlows() ? Math.max(1.0F, armorValueSum / 20.0F * cfg.maxSlowedMultiplier()) : 1.0F;
+        return armorValueSum;
     }
 
     @ModifyReturnValue(method = "getWingsForRendering", at = @At(value = "RETURN"))
