@@ -9,8 +9,6 @@
     "LivingEntityMixin",
     "MobMixin",
     "NearestAttackableTargetGoalMixin",
-    "SpellCooldownMixin",
-    "SpellHelperMixin",
     "TargetingConditionsMixin"
   ],
   "client": [

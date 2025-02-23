@@ -25,8 +25,7 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 @Mixin(IcarusClient.class)
 public abstract class IcarusClientMixin {
 
-
-    // Todo: change Player->AbstractClientPlayer and Icarus to 4.5.0 if it stops breaking dev environment
+    // Todo: Maybe change Player->AbstractClientPlayer and Icarus to 4.5.0+ if it stops breaking dev environment
     @ModifyExpressionValue(method = "onPlayerTick",
             at = @At(value = "INVOKE",
                     target = "Lnet/minecraft/world/entity/player/Player;getArmorValue()I"))

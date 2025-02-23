@@ -18,7 +18,6 @@ public class ModBientityActionTypes {
             (configurations, id) -> "Bi-entity action type \"" + id + "\" is undefined!"
     );
 
-    public static final ActionConfiguration<CastSpellBientityActionType> CAST_SPELL = register(ActionConfiguration.of(MedievalOrigins.loc("cast_spell"), CastSpellBientityActionType.DATA_FACTORY));
     public static final ActionConfiguration<SpellDamageActionType> SPELL_DAMAGE = register(ActionConfiguration.of(MedievalOrigins.loc("spell_damage"), SpellDamageActionType.DATA_FACTORY));
     public static final ActionConfiguration<TransferItemActionType> TRANSFER_ITEM = register(ActionConfiguration.of(MedievalOrigins.loc("transfer_item"), TransferItemActionType.DATA_FACTORY));
     public static final ActionConfiguration<RaycastBetweenActionType> RAYCAST_BETWEEN = register(ActionConfiguration.of(MedievalOrigins.loc("raycast_between"), RaycastBetweenActionType.DATA_FACTORY));
