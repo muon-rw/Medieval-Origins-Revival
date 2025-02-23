@@ -35,6 +35,10 @@
 		"java": ">=21",
 		"fabric-api": "*",
 		"origins": "1.13.0-alpha.12",
-		"spell_engine": "<1.5.0"
+		"spell_engine": "*",
+		"icarus": "<=4.2.0"
+	},
+	"breaks": {
+		"sparkweave": "*"
 	}
 }
