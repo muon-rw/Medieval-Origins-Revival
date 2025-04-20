@@ -1,8 +1,6 @@
-## 7.0.1-alpha-4
-- Restrict Icarus compat to 4.2.0 or older and mark incompatible with Sparkweave. 
-Note: I wanted to just update the compatibility, but it breaks my dev environment and I don't really care to figure out why, 
-since new versions seem to add no meaningful features except adding their own lib mod which itself also causes other crashes.
-If they fix the issue I'll most likely update and remove the version restriction. 
+## 7.0.1-alpha-5
+- Fix compatibility with new versions of Icarus
+- Fixed a crash caused by Revenant's using Hellraiser
 
 ## 7.0.2-alpha-2/3
 - Removed unused Spell Engine compat. Allowed any version of spell engine. 

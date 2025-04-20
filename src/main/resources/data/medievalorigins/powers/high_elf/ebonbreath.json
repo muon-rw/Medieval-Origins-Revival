@@ -14,13 +14,6 @@
 			"type": "origins:tooltip",
 			"sprite": "medievalorigins:textures/gui/pixie_badge.png",
 			"text": {
-				"translate": "badges.medievalorigins.high_elf.extrusive_movement"
-			}
-		},
-		{
-			"type": "origins:tooltip",
-			"sprite": "medievalorigins:textures/gui/pixie_badge.png",
-			"text": {
 				"translate": "badges.medievalorigins.high_elf.void_warp",
 				"with": [
 					{
