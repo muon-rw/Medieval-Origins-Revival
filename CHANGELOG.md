@@ -1,3 +1,8 @@
+## 7.0.1-alpha-6
+- Added a tiny grace period after triggering Intervention where Valkyries still have fall immunity 
+- Fixed Revenant's Black Thumb not working
+- Added a usability hint to Black Thumb
+
 ## 7.0.1-alpha-5
 - Fix compatibility with new versions of Icarus
 - Fixed a crash caused by Revenant's using Hellraiser

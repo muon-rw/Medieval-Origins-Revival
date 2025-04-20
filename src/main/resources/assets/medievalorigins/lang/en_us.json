@@ -515,6 +515,7 @@
   "medievalorigins.poor_reputation_villager": "The villager is too scared to trade with you!",
   "medievalorigins.troublemaker": "Villagers don't trade with the likes of you!",
   "medievalorigins.uncastable": "You can't use this ability right now.",
+  "medievalorigins.black_thumb": "The crops wilt at your touch!",
 
   "tooltip.medievalorigins.set_bonus": "Set Bonus:",
   "tooltip.medievalorigins.water_protection": "Water Protection",

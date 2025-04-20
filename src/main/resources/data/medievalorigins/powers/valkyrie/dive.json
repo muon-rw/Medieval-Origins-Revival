@@ -174,9 +174,13 @@
 					}
 				},
 				{
-					"type": "origins:revoke_power",
-					"power": "*:*",
-					"source": "medievalorigins:valkyrie/intervention"
+					"type": "origins:delay",
+					"ticks": 2,
+					"action": {
+						"type": "origins:revoke_power",
+						"power": "*:*",
+						"source": "medievalorigins:valkyrie/intervention"
+					}
 				}
 			]
 		}
