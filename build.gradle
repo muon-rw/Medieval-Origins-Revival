@@ -47,7 +47,7 @@ repositories {
 	exclusiveContent {
 		forRepository {
 			maven {
-				url = "https://maven.saps.dev/releases"
+				url = "https://maven.ftb.dev/releases"
 			}
 		}
 		filter {
