@@ -172,7 +172,7 @@ public class SummonedZombie extends Zombie implements SummonedMob {
 
     @Override
     public boolean isAlliedTo(Entity entity) {
-        return isAllied(entity);
+        return SummonedMob.checkAllyStatus(this, entity);
     }
 
     @Override

@@ -204,7 +204,7 @@ public class SummonedSkeleton extends Skeleton implements SummonedMob {
 
     @Override
     public boolean isAlliedTo(Entity entity) {
-        return isAllied(entity);
+        return SummonedMob.checkAllyStatus(this, entity);
     }
 
     @Override

@@ -72,34 +72,77 @@ public interface SummonedMob extends OwnableEntity {
         }
 
         LivingEntity myOwner = getOwner();
-        LivingEntity otherOwner = getWorld().getPlayerByUUID(otherOwnerId);
-        return myOwner != null && otherOwner != null && myOwner.isAlliedTo(otherOwner);
-    }
-
-    default boolean isAllied(Entity entity) {
-        LivingEntity owner = this.getOwner();
-        if (owner == null) {
-            return getSelfAsMob().isAlliedTo(entity);
+        Entity potentialOtherOwner = null;
+        if (getWorld() instanceof net.minecraft.server.level.ServerLevel serverLevel) {
+             potentialOtherOwner = serverLevel.getEntity(otherOwnerId);
+        } else if (getWorld().isClientSide() && getWorld().getPlayerByUUID(otherOwnerId) != null){
+            potentialOtherOwner = getWorld().getPlayerByUUID(otherOwnerId);
         }
 
-        if (entity == owner) {
+
+        if (potentialOtherOwner instanceof LivingEntity otherOwner) {
+            return myOwner != null && myOwner.isAlliedTo(otherOwner);
+        }
+
+        return false;
+    }
+
+    @Override
+    default LivingEntity getOwner() {
+        UUID ownerUUID = getOwnerUUID();
+        if (ownerUUID != null) {
+            Entity owner = getWorld().getPlayerByUUID(ownerUUID);
+            if (owner instanceof LivingEntity livingEntity) {
+                return livingEntity;
+            }
+        }
+        return OwnableEntity.super.getOwner();
+    }
+
+    static boolean checkAllyStatus(SummonedMob mob, Entity target) {
+        Mob self = mob.getSelfAsMob();
+        if (target == self) {
             return true;
         }
 
-        if (FabricLoader.getInstance().isModLoaded("ftbteams")) {
-            TeamManager manager = FTBTeamsAPI.api().getManager();
-            if (entity instanceof Player player && owner instanceof Player ownerPlayer) {
-                if (manager.arePlayersInSameTeam(ownerPlayer.getUUID(), player.getUUID())) {
-                    return true;
+        LivingEntity owner = mob.getOwner();
+
+        // Case 1: Owner exists
+        if (owner != null) {
+            if (target == owner) {
+                return true;
+            }
+
+            UUID ownerId = mob.getOwnerUUID(); // Known not null because owner exists
+
+            // FTB Teams Check (if applicable)
+            if (FabricLoader.getInstance().isModLoaded("ftbteams")) {
+                TeamManager manager = FTBTeamsAPI.api().getManager();
+                if (target instanceof Player targetPlayer) {
+                    if (manager.arePlayersInSameTeam(ownerId, targetPlayer.getUUID())) {
+                        return true;
+                    }
+                } else if (target instanceof OwnableEntity ownableTarget) {
+                    UUID targetOwnerId = ownableTarget.getOwnerUUID();
+                    if (targetOwnerId != null && manager.arePlayersInSameTeam(ownerId, targetOwnerId)) {
+                        return true;
+                    }
                 }
             }
-        }
 
-        if (entity instanceof OwnableEntity ownable) {
-            UUID otherOwnerId = ownable.getOwnerUUID();
-            return isAlliedOwner(otherOwnerId);
-        }
+            // Check if target is Ownable (covers other SummonedMobs) using vanilla/FTB teams of owners
+            if (target instanceof OwnableEntity ownableTarget) {
+                return mob.isAlliedOwner(ownableTarget.getOwnerUUID());
+            }
 
-        return owner.isAlliedTo(entity);
+            // Fallback: Use owner's vanilla isAlliedTo check for other entity types
+            return owner.isAlliedTo(target);
+        }
+        // Case 2: No owner
+        else {
+            // If there's no owner, it can't be allied through ownership.
+            // Reverting to false as a safe default.
+            return false;
+        }
     }
 }

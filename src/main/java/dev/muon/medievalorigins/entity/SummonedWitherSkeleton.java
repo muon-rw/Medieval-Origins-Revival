@@ -205,7 +205,7 @@ public class SummonedWitherSkeleton extends WitherSkeleton implements SummonedMo
 
     @Override
     public boolean isAlliedTo(Entity entity) {
-        return isAllied(entity);
+        return SummonedMob.checkAllyStatus(this, entity);
     }
 
     @Override
