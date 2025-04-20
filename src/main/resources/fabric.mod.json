@@ -36,9 +36,6 @@
 		"fabric-api": "*",
 		"origins": "1.13.0-alpha.12",
 		"spell_engine": "*",
-		"icarus": "<=4.2.0"
-	},
-	"breaks": {
-		"sparkweave": "*"
+		"icarus": ">=4.5.0"
 	}
 }

@@ -25,11 +25,10 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 @Mixin(IcarusClient.class)
 public abstract class IcarusClientMixin {
 
-    // Todo: Maybe change Player->AbstractClientPlayer and Icarus to 4.5.0+ if it stops breaking dev environment
     @ModifyExpressionValue(method = "onPlayerTick",
             at = @At(value = "INVOKE",
-                    target = "Lnet/minecraft/world/entity/player/Player;getArmorValue()I"))
-    private static int modifyArmorModifier(int original, @Local(argsOnly = true) Player player) {
+                    target = "Lnet/minecraft/client/player/AbstractClientPlayer;getArmorValue()I"))
+    private static int modifyArmorModifier(int original, @Local(argsOnly = true) AbstractClientPlayer player) {
         int armorValueSum = 0;
         Iterable<ItemStack> armorSlots = player.getArmorSlots();
         for (ItemStack slottedStack : armorSlots ) {

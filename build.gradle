@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.9-SNAPSHOT'
+	id 'fabric-loom' version '1.10-SNAPSHOT'
 	id 'maven-publish'
 	id 'idea'
 	id "net.darkhax.curseforgegradle" version "1.0.7"
@@ -69,6 +69,9 @@ repositories {
 	maven { url = "https://jm.gserv.me/repository/maven-public/" }
 	maven { url = "https://masa.dy.fi/maven" }
 	maven { url = "https://maven.quiltmc.org/repository/release" }
+	maven { url = "https://maven.uuid.gg/releases" }
+
+
 }
 
 loom {
@@ -109,10 +112,11 @@ dependencies {
 	implementation("com.github.ZsoltMolnarrr:TinyConfig:${project.tiny_config_version}")
 
 	// Icarus
-	modImplementation("maven.modrinth:icarus:${project.icarus_version}")
+	modImplementation ("maven.modrinth:icarus:${project.icarus_version}")
 	modImplementation ("dev.emi:trinkets:${project.trinkets_version}")
-	modLocalRuntime("com.teamresourceful.resourcefulconfig:resourcefulconfig-fabric-1.21:${project.resourceful_version}")
+	modLocalRuntime ("com.teamresourceful.resourcefulconfig:resourcefulconfig-fabric-1.21:${project.resourceful_version}")
 	modLocalRuntime ("mysticdrew:common-networking-fabric:${project.cmnw_version}")
+	modLocalRuntime "dev.upcraft.sparkweave:Sparkweave-Fabric:${project.sparkweave_version}"
 
 	// FTB
 	modImplementation("dev.ftb.mods:ftb-library-fabric:${project.ftb_library_version}")
