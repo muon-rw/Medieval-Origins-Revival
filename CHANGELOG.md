@@ -1,3 +1,11 @@
+## 7.0.2-alpha-1
+- Mirroring and Featherweight are no longer treasure-only enchantments
+- Add integration for Ice and Fire: Community Edition:
+- The Mirroring Enchantment now works on Gorgons from Ice and Fire
+- Sirens will no longer be able to charm Siren players
+- Pixies will no longer steal from Pixie players
+- Added mild heat resistance to Dwarf and Alfiq (with Thermoo Patches)
+
 ## 7.0.1-alpha-6
 - Added a tiny grace period after triggering Intervention where Valkyries still have fall immunity 
 - Fixed Revenant's Black Thumb not working

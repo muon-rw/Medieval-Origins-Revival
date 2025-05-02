@@ -1,10 +1,9 @@
-package dev.muon.medievalorigins.mixin.client;
+package dev.muon.medievalorigins.mixin.compat.icarus;
 
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.llamalad7.mixinextras.sugar.Local;
 import dev.cammiescorner.icarus.client.IcarusClient;
-import dev.cammiescorner.icarus.util.IcarusHelper;
 import dev.muon.medievalorigins.enchantment.ModEnchantments;
 import dev.muon.medievalorigins.power.IcarusWingsPowerType;
 import dev.muon.medievalorigins.power.PixieWingsPowerType;
@@ -13,14 +12,11 @@ import io.github.apace100.apoli.component.PowerHolderComponent;
 import io.github.apace100.apoli.power.type.PowerType;
 import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
 @Mixin(IcarusClient.class)
 public abstract class IcarusClientMixin {

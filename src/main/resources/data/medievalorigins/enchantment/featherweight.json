@@ -4,7 +4,7 @@
 		"translate": "enchantment.medievalorigins.featherweight"
 	},
 	"max_cost": {
-		"base": 50,
+		"base": 100,
 		"per_level_above_first": 0
 	},
 	"max_level": 1,
@@ -16,6 +16,6 @@
 		"armor"
 	],
 	"supported_items": "#minecraft:enchantable/armor",
-	"treasure_only": true,
+	"treasure_only": false,
 	"weight": 1
 }

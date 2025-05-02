@@ -9,6 +9,8 @@ import java.util.List;
 import java.util.Set;
 
 public class MedievalOriginsMixinPlugin implements IMixinConfigPlugin {
+    private static final String COMPAT_PACKAGE_PREFIX = "dev.muon.medievalorigins.mixin.compat.";
+
     @Override
     public void onLoad(String mixinPackage) {
 
@@ -21,14 +23,22 @@ public class MedievalOriginsMixinPlugin implements IMixinConfigPlugin {
 
     @Override
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
-        if (mixinClassName.equals("dev.muon.medievalorigins.mixin.client.IcarusClientMixin") ||
-           (mixinClassName.equals("dev.muon.medievalorigins.mixin.IcarusHelperMixin"))) {
-            return FabricLoader.getInstance().isModLoaded("icarus");
+        if (mixinClassName.startsWith(COMPAT_PACKAGE_PREFIX)) {
+            String remainingPath = mixinClassName.substring(COMPAT_PACKAGE_PREFIX.length());
+            int firstDotIndex = remainingPath.indexOf('.');
+            if (firstDotIndex != -1) {
+                String modId = remainingPath.substring(0, firstDotIndex);
+                boolean shouldApply = FabricLoader.getInstance().isModLoaded(modId);
+                if (!shouldApply) {
+                    MedievalOrigins.LOGGER.info("Skipping compat mixin " + mixinClassName + " because mod '" + modId + "' is not loaded.");
+                }
+                return shouldApply;
+            } else {
+                MedievalOrigins.LOGGER.warn("Warning: Malformed compat mixin path: {}", mixinClassName);
+                return false;
+            }
         }
-        if (mixinClassName.equals("dev.muon.medievalorigins.mixin.SpellCooldownMixin") ||
-                (mixinClassName.equals("dev.muon.medievalorigins.mixin.SpellHelperMixin"))) {
-            return FabricLoader.getInstance().isModLoaded("spell_engine");
-        }
+
         return true;
     }
 
