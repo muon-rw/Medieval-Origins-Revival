@@ -20,7 +20,7 @@ public class PixieAIStealMixin {
     @Unique
     private static final ResourceLocation PIXIE_ORIGIN_ID = MedievalOrigins.loc("pixie");
 
-    @ModifyReturnValue(method = "canUse", at = @At("RETURN"))
+    @ModifyReturnValue(method = "canUse", at = @At("RETURN"), remap = true)
     private boolean preventPixieTheft(boolean original) {
         if (original && temptingPlayer != null) {
             OriginComponent originComponent = ModComponents.ORIGIN.get(temptingPlayer);

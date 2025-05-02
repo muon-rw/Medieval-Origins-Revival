@@ -1,3 +1,6 @@
+## 7.0.2-alpha-2
+- Fix mixin crash with Ice and Fire outside of dev
+
 ## 7.0.2-alpha-1
 - Mirroring and Featherweight are no longer treasure-only enchantments
 - Add integration for Ice and Fire: Community Edition:
