@@ -65,6 +65,13 @@ public interface SummonedMob extends OwnableEntity {
         }
 
         if (FabricLoader.getInstance().isModLoaded("ftbteams")) {
+            boolean managerAvailable = this.getWorld().isClientSide() ?
+                    FTBTeamsAPI.api().isClientManagerLoaded() :
+                    FTBTeamsAPI.api().isManagerLoaded();
+            if (!managerAvailable) {
+                return true;
+            }
+
             TeamManager manager = FTBTeamsAPI.api().getManager();
             if (manager.arePlayersInSameTeam(myOwnerId, otherOwnerId)) {
                 return true;

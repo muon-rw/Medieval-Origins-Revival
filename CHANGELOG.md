@@ -1,3 +1,6 @@
+## 7.0.2-alpha-3
+- Fix a rare crash caused by FTB Teams integration in the Medieval MC modpack
+
 ## 7.0.2-alpha-2
 - Fix mixin crash with Ice and Fire outside of dev
 

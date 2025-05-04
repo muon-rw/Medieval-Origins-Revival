@@ -30,10 +30,19 @@ public class AlliedConditionType extends BiEntityConditionType {
 
     public static boolean isAllied(Entity actor, Entity target) {
         if (FabricLoader.getInstance().isModLoaded("ftbteams")) {
+
+            boolean managerAvailable = actor.level().isClientSide ?
+                    FTBTeamsAPI.api().isClientManagerLoaded() :
+                    FTBTeamsAPI.api().isManagerLoaded();
+            if (!managerAvailable) {
+                return true;
+            }
+
             TeamManager manager = FTBTeamsAPI.api().getManager();
             if (manager.arePlayersInSameTeam(actor.getUUID(), target.getUUID())) {
                 return true;
             }
+
         }
         return actor.isAlliedTo(target);
     }
