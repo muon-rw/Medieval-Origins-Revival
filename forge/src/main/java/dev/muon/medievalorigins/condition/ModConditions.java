@@ -43,6 +43,9 @@ public class ModConditions {
             new SimpleEntityCondition(entity ->
                     entity instanceof Player player && player.getAbilities().instabuild));
 
+    public static final RegistryObject<LookingDownCondition> LOOKING_DOWN = ENTITY_CONDITIONS.register("looking_down", LookingDownCondition::new);
+
+
     /**Bientity*/
     public static final RegistryObject<AlliedCondition> ALLIED = BIENTITY_CONDITIONS.register("allied", AlliedCondition::new);
 

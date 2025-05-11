@@ -191,9 +191,9 @@ dependencies {
     implementation fg.deobf("curse.maven:citadel-331936:5633260")
 
     // FTB
-    implementation fg.deobf("curse.maven:ftb-library-forge-404465:5543335")
-    implementation fg.deobf("curse.maven:ftb-teams-forge-404468:5267190")
-    runtimeOnly fg.deobf("curse.maven:architectury-api-419699:5137938")
+    compileOnly fg.deobf("curse.maven:ftb-library-forge-404465:5543335")
+    compileOnly fg.deobf("curse.maven:ftb-teams-forge-404468:5267190")
+    //runtimeOnly fg.deobf("curse.maven:architectury-api-419699:5137938")
 }
 
 tasks.withType(JavaCompile) {

@@ -15,6 +15,7 @@ public class ModEntityConditions {
                 -> entity instanceof AbstractArrow));
         register(new ConditionFactory<>(MedievalOrigins.loc("creative_mode"), new SerializableData(), (data, entity)
                 -> entity instanceof Player player && player.getAbilities().instabuild));
+        register(LookingDownCondition.getFactory());
     }
 
     private static void register(ConditionFactory<Entity> serializer) {
