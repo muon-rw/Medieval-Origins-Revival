@@ -1,8 +1,13 @@
 ## 6.6.0
+- Changed Alfiq fall damage negation to be look-direction based, instead of fall distance
+- Made Alfiq meows louder and more spammable
+- Fix Alfiq pickpocket not having a cooldown/cooldown bar always showing
+- Alfiq can now charge their pounce while moving
 - Fix Mirroring compat with Ice and Fire
 - Made Mirroring a treasure-only enchantment
 - Fixed some sounds not playing due to being corrupted
 - Fixed a crash caused when a Valkyrie lands near a player with negative effects
+- Fixed some log spam on Forge caused by Revenants if playing without Iron's Spells and Spellbooks
 
 ## 6.5.1
 *One (hopefully) last little hotfix for 1.20.1. Many new features are already present in 1.21.1!*

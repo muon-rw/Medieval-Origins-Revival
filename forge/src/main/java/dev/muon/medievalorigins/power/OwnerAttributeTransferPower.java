@@ -13,6 +13,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraftforge.fml.ModList;
 
 import java.util.Collections;
 import java.util.LinkedList;
@@ -50,6 +51,11 @@ public class OwnerAttributeTransferPower extends Power implements IDynamicFeatur
     }
 
     private void applyModifiers() {
+        // It would be better to allow other types of this power, and maybe optional attribute instances without throwing errors
+        // But I don't plan to use this for anything else. 
+        if (!(ModList.get().isLoaded("irons_spellbooks"))) {
+            return;
+        }
         if (entity instanceof ISummon) {
             double previousMaxHealth = entity.getMaxHealth();
             double previousHealthPercent = entity.getHealth() / previousMaxHealth;
