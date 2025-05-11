@@ -32,6 +32,11 @@ public class ModEnchantments {
                 public int getMinLevel() {
                     return 1;
                 }
+
+                @Override
+                public boolean isTreasureOnly() {
+                    return true;
+                }
             });
     public static void register(IEventBus eventBus) {
         ENCHANTMENTS.register(eventBus);

@@ -1,3 +1,7 @@
+## 6.6.0
+- Fix Mirroring compat with Ice and Fire
+- Made Mirroring a treasure-only enchantment
+
 ## 6.5.1
 *One (hopefully) last little hotfix for 1.20.1. Many new features are already present in 1.21.1!*
 - Added FTB Teams support to Valkyrie's intervention/divine smite targeting logic

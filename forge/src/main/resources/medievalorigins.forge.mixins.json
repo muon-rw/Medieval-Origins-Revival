@@ -7,8 +7,8 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "compat.icarus.IcarusHelperMixin",
+    "compat.iceandfire.EntityGorgonMixin",
     "compat.iceandfire.PixieAIStealMixin",
-    "compat.iceandfire.PlayerMixin",
     "compat.iceandfire.SirenDataMixin",
     "compat.irons_spellbooks.AbstractSpellMixin"
   ],
