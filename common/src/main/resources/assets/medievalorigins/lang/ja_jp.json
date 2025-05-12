@@ -1,0 +1,561 @@
+{
+"origin.origins.human.description": "-§l 主な変化§r:\n§oなし§r\n\n人間の運命は他の種族よりも自由で、利点も欠点もなく、未知の冒険へと踏み出すことができる。",
+"origin.medievalorigins.alfiq.name": "アルフィク",
+"origin.medievalorigins.alfiq.description": "-§l 主な変化§r:\n§o§2+ 素手攻撃強化§r\n§o§2+ 特殊な移動§r\n§o§6• 肉食§r\n§o§c- 防御力低下§r\n§lアルフィク§rは鋭い爪と優れた敏捷性を持つ、狡猾な擬人化された猫の種族である。彼らの旅路は、しばしば温かな砂地へと続く。",
+"origin.medievalorigins.arachnae.name": "アラクネ",
+"origin.medievalorigins.arachnae.description": "-§l 主な変化§r:\n§o§2+ 毒・群体制御\n+ 壁登り§r\n§o§6• 肉食§r\n§o§c- 空腹度増加、防具制限§r\nアラクネは蜘蛛と人間が混ざり合った異形の存在で、毒牙と剛毛の足を持ちながらも直立歩行と武器の使用が可能である。",
+"origin.medievalorigins.banshee.name": "バンシー",
+"origin.medievalorigins.banshee.description": "-§l 主な変化§r:\n§o§2+ 飛行、支援、位相移動§r\n§o§c- 防御力低下§r\n§o§c- 大きな変化あり、要確認！§r\n§lバンシー§rは、悲しみに満ちた霊体で、その叫びはガラスを砕き、人の心を狂わせるとされる。神話では死の前兆とみなされる存在。",
+"origin.medievalorigins.incubus.name": "インキュバス",
+"origin.medievalorigins.incubus.description": "-§l 主な変化§r:\n§o§2+ ネザー環境強化§r\n§o§6• 火属性§r\n§o§c- 水によるダメージ§r\n§o§c- 通常世界で弱体化§r\n§lインキュバス§rは闇の力に仕える邪悪な存在。自らの魂を代償に強大な力を得たが、純粋な力には弱い。",
+"origin.medievalorigins.dwarf.name": "ドワーフ",
+"origin.medievalorigins.dwarf.description": "-§l 主な変化§r:\n§o§2+ 採掘、洞窟探査§r\n§o§6• 小柄: 102cm/3'7\"§r\n§o§c- 日光に弱い\n- 泳げない§r\n§lドワーフ§rは実直で頑丈な種族。地下生活と鉱業に優れるが、日光に弱い。『岩と石だ、兄弟よ』。",
+"origin.medievalorigins.wood_elf.name": "ウッドエルフ",
+"origin.medievalorigins.wood_elf.description": "-§l 主な変化§r:\n§o§2+ 遠距離戦、素早さ§r\n§o§6• ステルス、菜食主義§r\n§o§c- 近接攻撃、耐久力§r\n§lウッドエルフ§rは地と調和して生きる長寿の賢者たち。剣と弓に長け、森では敵を翻弄する。",
+"origin.medievalorigins.high_elf.name": "ハイエルフ",
+"origin.medievalorigins.high_elf.description": "-§l 主な変化§r:\n§o§2+ 魔法、固有能力§r\n§o§c- 物理攻撃力低下\n- 防御力低下§r\n§lハイエルフ§rは高慢で知られるが、その才能は確か。血に宿る魔力は強力だが、武器の扱いには不向き。",
+"origin.medievalorigins.fae.name": "フェイ",
+"origin.medievalorigins.fae.description": "-§l 主な変化§r:\n§o§2+ 滞空、魔法§r\n§o§6• 小柄: 122cm/4'0\"§r\n§o§c- モブに好かれる§r\n§o§c- 防御力低下§r\n§lフェイ§rは羽を持つ小さな魔法の存在で、自然の精霊とされる。森を彷徨い、人々を迷わせることもある。",
+"origin.medievalorigins.goblin.name": "ゴブリン",
+"origin.medievalorigins.goblin.description": "-§l 主な変化§r:\n§o§2+ 金装備強化§r\n§o§2+ 幸運、素早さ§r\n§o§6• 超小型: 92cm/3'3\"§r\n§o§c- 体力、防御力低下§r\n§lゴブリン§rは金と財宝に執着し、あらゆる場所で戦利品を見つけやすいが、身体が小さいため戦闘には弱い。",
+"origin.medievalorigins.gorgon.name": "ゴルゴン",
+"origin.medievalorigins.gorgon.description": "-§l 主な変化§r:\n§o§2+ 毒ダメージ、耐性§r\n§o§2+ 群体制御§r\n§o§c- 水恐怖症\n- 特異な弱点§r\n§lゴルゴン§rはかつて人間だった呪われし存在。髪は蛇でできており、その姿を見た者は石になるとされる。",
+"origin.medievalorigins.moon_elf.name": "ムーンエルフ",
+"origin.medievalorigins.moon_elf.description": "-§l 主な変化§r:\n§o§2+ ダガーダメージ\n+ 器用さ§r\n§o§6• ステルス、睡眠不要§r\n§o§c- 防御力低下§r\n神秘的かつ異質な存在、§lムーンエルフ§rはこの世界のものではない。犠牲者が最後に見るのは、月の光だけ。",
+"origin.medievalorigins.ogre.name": "オーガ",
+"origin.medievalorigins.ogre.description": "-§l 主な変化§r:\n§o§2+ 斧使用時強化、防御力強化§r\n§o§6• 巨体: 268cm/9'5\"§r\n§o§c- 空腹度増加、鈍足§r\n§lオーガ§rはオークの亜種で、粗野かつ短気な巨人。知性は低いが、圧倒的な腕力を誇る。",
+"origin.medievalorigins.pixie.name": "ピクシー",
+"origin.medievalorigins.pixie.description": "-§l 主な変化§r:\n§o§2+ 特殊飛行、奇妙な存在§r\n§o§6• 極小: 22cm/9\"§r\n§o§c- 防御力、評判低下§r\nピクシーは幸運を運ぶとされる一方、悪戯好きで信用ならぬ存在とも言われる。気まぐれで非常に小さい。",
+"origin.medievalorigins.plague_victim.name": "疫病の犠牲者",
+"origin.medievalorigins.plague_victim.description": "-§l 主な変化§r:\n§o§2+ ウィザー効果§r\n§o§6• 特殊なプレイスタイル§r\n§o§6• アンデッド§r\n§o§c- 防御力、評判低下\n§o§c- 高難易度§r\n奇病により呪われた、もはや人間とは言えない半死の存在。永遠の苦しみに囚われている。",
+"origin.medievalorigins.revenant.name": "リヴナント",
+"origin.medievalorigins.revenant.description": "-§l 主な変化§r:\n§o§2+ 召喚能力§r\n§o§2+ 略奪者と友好関係§r\n§o§6• アンデッド、複雑§r\n§o§c- 評判低下\n- 生者との交流困難§r\n§lリヴナント§rは無惨に死んだ者が奇跡的に蘇った存在。他者の命と死を操ることに執着するようになる。",
+"origin.medievalorigins.siren.name": "セイレーン",
+"origin.medievalorigins.siren.description": "-§l 主な変化§r:\n§o§2+ 水中能力、支援特化§r\n§o§6• 地上では弱体化§r\n§o§c- 火に弱い§r\n§lセイレーン§rは人魚族の一種とされ、その魅惑の歌声と美しさは多くの船乗りを破滅に導いた。",
+"origin.medievalorigins.troll.name": "トロール",
+"origin.medievalorigins.troll.description": "-§l 主な変化§r:\n§o§c現在未実装§r\n山岳地帯に住む巨大な野生の巨人。攻撃的で自立志向が強く、単独行動を好む。",
+"origin.medievalorigins.yeti.name": "イエティ",
+"origin.medievalorigins.yeti.description": "-§l 主な変化§r:\n§o§2+ 氷属性、タンク役§r\n§o§6• 大柄: 203cm/6'8\"§r\n§o§c- 熱に弱い§r\n雪深い森に棲む毛むくじゃらの怪物で、氷の力で敵を凍らせるが、火には非常に弱い。",
+
+  
+"power.medievalorigins.alfiq/clawed.name": "鋭い爪",
+"power.medievalorigins.alfiq/clawed.description": "アルフィクは鋭い引き込み式の爪を持ち、素手での攻撃力が増加し、急な斜面を登ってしがみつくことができます（切り替え可能）。",
+
+"power.medievalorigins.alfiq/crepuscular.name": "薄明活動",
+"power.medievalorigins.alfiq/crepuscular.description": "日の出と日の入りの時間帯に、アルフィクは移動速度と攻撃速度が大幅に向上します。それ以外の時間帯では、動きが鈍くなります。",
+
+"power.medievalorigins.alfiq/on_your_feet.name": "着地の達人",
+"power.medievalorigins.alfiq/on_your_feet.description": "まっすぐ下を見ながら着地すると、落下ダメージをまったく受けなくなります。",
+
+"power.medievalorigins.alfiq/pickpocket.name": "スリ",
+"power.medievalorigins.alfiq/pickpocket.description": "しゃがんだ状態で素手で村人の背後を右クリックすると、エメラルドを盗むチャンスがあります。ただし、見つかる可能性もあります。他のプレイヤーからも盗めるという噂があります。",
+
+"power.medievalorigins.alfiq/pounce.name": "跳躍攻撃",
+"power.medievalorigins.alfiq/pounce.description": "動かずにしゃがんでチャージした後、Alfiqは前方に大きく跳躍できます。跳躍中に敵に当たると追加ダメージを与えます。",
+
+"power.medievalorigins.alfiq/poor_grip.name": "握力不足",
+"power.medievalorigins.alfiq/poor_grip.description": "Alfiqは道具の使用速度が遅く、剣や斧などの武器でのダメージも減少します。",
+
+"power.medievalorigins.alfiq/agile_preference.name": "軽装好み",
+"power.medievalorigins.alfiq/agile_preference.description": "Alfiqは動きやすさを重視し、軽装を好みます。重い防具を着用するとペナルティがありますが、エンチャントによって無効化できます。",
+
+"power.medievalorigins.alfiq/meow.name": "ニャー",
+
+  "power.medievalorigins.alfiq/meow.description": "",
+
+
+"power.medievalorigins.arachnae/bottomless_stomach.name": "底なしの胃袋",
+  "power.medievalorigins.arachnae/bottomless_stomach.description": "アラクネは生き延びるために大量の食物を必要とする。",
+  
+  "power.medievalorigins.arachnae/brittle.name": "脆弱",
+  "power.medievalorigins.arachnae/brittle.description": "アラクネのキチン質の外骨格は重装備との相性が悪く、鉄以上の防具を装備すると動きが鈍くなる（エンチャントで無効化可能）。",
+  
+  "power.medievalorigins.arachnae/climber.name": "登攀能力",
+  "power.medievalorigins.arachnae/climber.description": "アラクネの脚に生えた細かい毛が、壁を登る能力を与える。",
+  
+  "power.medievalorigins.arachnae/fragile_exoskeleton.name": "壊れやすい外骨格",
+  "power.medievalorigins.arachnae/fragile_exoskeleton.description": "アラクネの外骨格は損傷に弱く、通常の人間より体力がわずかに少ない。",
+  
+  "power.medievalorigins.arachnae/many_eyes.name": "多眼",
+  "power.medievalorigins.arachnae/many_eyes.description": "アラクネの8つの目はすべて暗所に適応しており、わずかな光でもはっきりと視認できる。",
+  
+  "power.medievalorigins.arachnae/venomous_bite.name": "毒牙",
+  "power.medievalorigins.arachnae/venomous_bite.description": "アラクネの牙には毒があり、攻撃ごとに毒を与える可能性がある。",
+  
+  "power.medievalorigins.arachnae/web_slinger.name": "糸使い",
+  "power.medievalorigins.arachnae/web_slinger.description": "アラクネは命令により糸を吐き、敵を一時的に動けなくすることができる。",
+  
+  "power.medievalorigins.banshee/spectral.name": "幽体",
+  "power.medievalorigins.banshee/spectral.description": "バンシーは物理世界を自由に移動できるが干渉はできない幽体化能力を持つ。発動には多大なエネルギーを消費し、空腹時には使用できない。",
+  
+  "power.medievalorigins.banshee/hexed.name": "呪詛",
+  "power.medievalorigins.banshee/hexed.description": "バンシーは呪いに包まれており、攻撃されるとごく稀に敵をゆっくりと苦しませながら死に至らしめる。",
+  
+  "power.medievalorigins.banshee/immaterial.name": "非物質的存在",
+  "power.medievalorigins.banshee/immaterial.description": "バンシーは生者の半分の体力しか持たない。",
+  
+  "power.medievalorigins.banshee/dimeritium_shackles.name": "ダイメリティウムの枷",
+  "power.medievalorigins.banshee/dimeritium_shackles.description": "鉄や銀など魔力を抑制する金属は、バンシーにとって耐えがたい存在である。",
+  
+  "power.medievalorigins.banshee/lunar_nexus.name": "月光の核",
+  "power.medievalorigins.banshee/lunar_nexus.description": "バンシーは食物から空腹を回復できず、代わりに月光を浴びることでのみエネルギーを得る。ただし飢えることはない。",
+  
+  "power.medievalorigins.banshee/sonic_shriek.name": "予兆の哀歌",
+  "power.medievalorigins.banshee/sonic_shriek.description": "バンシーの悲鳴は死の予兆であり、耳をつんざく叫びで周囲の存在を吹き飛ばし、護りの円を展開する。直撃した敵は混乱状態になる。",
+  
+  "power.medievalorigins.banshee/cursed_sigil.name": "呪印",
+  "power.medievalorigins.banshee/cursed_sigil.description": "呪われた武器を使うと与えるダメージが増加する。",
+  
+  "power.medievalorigins.banshee/cursed_ward.name": "呪装の加護",
+  "power.medievalorigins.banshee/cursed_ward.description": "装備している呪われた防具1つごとに受けるダメージが軽減される。",
+  
+  "power.medievalorigins.incubus/carnivore.name": "肉食嗜好",
+  "power.medievalorigins.incubus/carnivore.description": "インキュバスの血への渇きは止めようがない。動物の肉でなければ意味がない。",
+  
+  "power.medievalorigins.incubus/demon_fire.name": "魔焔",
+  "power.medievalorigins.incubus/demon_fire.description": "インキュバスは火の魔法に長けており、任意で火炎を放つことができる（火属性魔力により威力上昇）。",
+  
+  "power.medievalorigins.incubus/hellborne.name": "地獄の産子",
+  "power.medievalorigins.incubus/hellborne.description": "炎は安らぎのようなものであり、インキュバスにダメージを与えず、空腹も満たしてくれる。",
+  
+  "power.medievalorigins.incubus/hydrophobe.name": "水忌み",
+  "power.medievalorigins.incubus/hydrophobe.description": "水はインキュバスにとって有害で、触れるとダメージを受ける。",
+  
+  "power.medievalorigins.incubus/impure.name": "不浄",
+  "power.medievalorigins.incubus/impure.description": "インキュバスはスマイト（聖なる攻撃）に弱く、回復・治癒魔法の効果が逆になる。",
+  
+  "power.medievalorigins.incubus/dimension_strength.name": "異界の力",
+  "power.medievalorigins.incubus/dimension_strength.description": "インキュバスは太陽の照る次元では力が弱まるが、ネザーでは逆に大きく強化される。",
+  
+  "power.medievalorigins.incubus/unholy_deal.name": "邪なる契約",
+  "power.medievalorigins.incubus/unholy_deal.description": "インキュバスは一時的に体力と引き換えに力を得ることができる（メインアクティブキーで発動）。",
+  
+  "power.medievalorigins.dwarf/darkness_dweller.name": "闇の住人",
+  "power.medievalorigins.dwarf/darkness_dweller.description": "直射日光はドワーフの目を焼き、視界を奪う（エンチャントや金の兜で防止可能）。",
+  
+  "power.medievalorigins.dwarf/dense.name": "重厚",
+  "power.medievalorigins.dwarf/dense.description": "ドワーフは体格に対して非常に重く、水中では素早く沈む。",
+  
+  "power.medievalorigins.dwarf/dwarven_tech.name": "ドワーフ技術",
+  "power.medievalorigins.dwarf/dwarven_tech.description": "ドワーフはツルハシなしでも石を掘ることができ、あらゆる採掘速度が他種族より速い。",
+  
+  "power.medievalorigins.dwarf/miniature.name": "小柄",
+  "power.medievalorigins.dwarf/miniature.description": "ドワーフは身長が低く、1メートルの高さのトンネルにも通れる（幅はほぼ同等）。",
+  
+  "power.medievalorigins.dwarf/mythril_resonance.name": "ミスリルの共鳴",
+  "power.medievalorigins.dwarf/mythril_resonance.description": "魂のこもった強力な金属が、ドワーフに力を与える。",
+  
+  "power.medievalorigins.dwarf/nocturnal_eyes.name": "夜目",
+  "power.medievalorigins.dwarf/nocturnal_eyes.description": "ドワーフは集中することで光源がなくてもはっきりと視界を得られる。",
+  
+  "power.medievalorigins.dwarf/potent_brew.name": "強烈な酒",
+  "power.medievalorigins.dwarf/potent_brew.description": "ドワーフの酒は非常に強力で、大柄な相手でも酔い潰す。発動すると一気に体力が回復する。",
+  
+  "power.medievalorigins.human/description.name": "備考",
+  "power.medievalorigins.human/description.description": "人間にはベースゲームからの変更点はありません。",
+  
+  "power.medievalorigins.wood_elf/archer.name": "生まれながらの射手",
+  "power.medievalorigins.wood_elf/archer.description": "ウッドエルフは生涯を弓の鍛錬に費やしており、矢は常に致命的である。",
+  
+  "power.medievalorigins.wood_elf/forest_vision.name": "森の視界",
+  "power.medievalorigins.wood_elf/forest_vision.description": "背の高い草や葉の中でしゃがむと、ウッドエルフは暗視を得て周囲の敵に気付かれなくなる。",
+  
+  "power.medievalorigins.wood_elf/eagle_eyed.name": "鷹の眼",
+  "power.medievalorigins.wood_elf/eagle_eyed.description": "ウッドエルフは一度傷つけた敵を短時間追跡でき、視界外でも位置を把握できる。",
+  
+  "power.medievalorigins.wood_elf/empowered_shot.name": "集中",
+  "power.medievalorigins.wood_elf/empowered_shot.description": "数秒のチャージ後に矢を放つと、速度が増し、敵を貫通し、遠くまで飛び、大きなダメージを与える。",
+  
+  "power.medievalorigins.wood_elf/empowered_shot_zenith.name": "集中",
+  "power.medievalorigins.wood_elf/empowered_shot_zenith.description": "数秒のチャージ後に矢を放つと、速度が増し、敵を貫通し、遠くまで飛び、大きなダメージを与える。",
+  
+  "power.medievalorigins.wood_elf/empowered_shot_apotheosis.name": "集中",
+  "power.medievalorigins.wood_elf/empowered_shot_apotheosis.description": "数秒のチャージ後に矢を放つと、速度が増し、敵を貫通し、遠くまで飛び、大きなダメージを与える。",
+  
+  "power.medievalorigins.wood_elf/elegant.name": "優雅",
+  "power.medievalorigins.wood_elf/elegant.description": "ウッドエルフは体力が少なく、重装備を身につけると動きが遅くなる（エンチャントで無効化可能）。",
+  
+  "power.medievalorigins.wood_elf/steward.name": "森の守り手",
+  "power.medievalorigins.wood_elf/steward.description": "ウッドエルフは森と共に生きており、肉を消化できない。",
+  
+  "power.medievalorigins.wood_elf/towering.name": "長身",
+  "power.medievalorigins.wood_elf/towering.description": "ウッドエルフは一般的な人間よりわずかに背が高い。",
+  "power.medievalorigins.wood_elf/graceful.name": "優雅",
+  "power.medievalorigins.wood_elf/graceful.description": "ウッドエルフはそれほど強力ではありませんが、素早いです。攻撃のダメージは減少しますが、わずかに速くなります。",
+
+  "power.medievalorigins.fae/iron_aversion.name": "魔力抑制",
+  "power.medievalorigins.fae/iron_aversion.description": "鉄や銀はフェイの力を抑えます。これらを身に着けるのは耐えられません。",
+
+  "power.medievalorigins.fae/levitation.name": "浮遊",
+  "power.medievalorigins.fae/levitation.description": "フェイは軽やかで羽のある存在。空中を簡単に漂うことができます。主要アクティブキーを押すと上昇してホバリングします。",
+
+  "power.medievalorigins.fae/magic_resistance.name": "魔法耐性",
+  "power.medievalorigins.fae/magic_resistance.description": "フェイ自身が魔法的な存在であるため、他の生き物より魔法ダメージを受けにくいです。",
+
+  "power.medievalorigins.fae/regen.name": "再生",
+  "power.medievalorigins.fae/regen.description": "フェイは魔力を使って素早く自分を回復できますが、その分空腹が早くなります。",
+
+  "power.medievalorigins.goblin/cunning.name": "狡猾",
+  "power.medievalorigins.goblin/cunning.description": "ゴブリンは賢く、他の者が見逃すような珍しい戦利品の場所を知っています。",
+
+  "power.medievalorigins.goblin/frail.name": "虚弱",
+  "power.medievalorigins.goblin/frail.description": "小柄な体格のため、ゴブリンは体力が少なく、ダメージを受けやすいです。",
+
+  "power.medievalorigins.goblin/greedy.name": "強欲",
+  "power.medievalorigins.goblin/greedy.description": "ゴブリンは宝物に特別な執着があり、金装備を使ったり身に着けたりすると追加ボーナスを得ます。",
+
+  "power.medievalorigins.goblin/durability.name": "慎重な収集家",
+  "power.medievalorigins.goblin/durability.description": "ゴブリンが扱う金は、他の者よりもずっと長持ちします。",
+
+  "power.medievalorigins.goblin/nippy.name": "俊敏",
+  "power.medievalorigins.goblin/nippy.description": "背は低いですが、ゴブリンはとても素早く、多くの強敵から戦わずに逃げ切ることができます。",
+
+  "power.medievalorigins.goblin/stunted.name": "極小",
+  "power.medievalorigins.goblin/stunted.description": "ゴブリンは非常に背が低く、人間の半分以下の身長です。",
+
+  "power.medievalorigins.gorgon/hydrophobe.name": "水嫌い",
+  "power.medievalorigins.gorgon/hydrophobe.description": "ゴルゴンは水の純粋さに耐えられず、触れるとダメージを受けます。",
+
+  "power.medievalorigins.gorgon/to_stone.name": "石化",
+  "power.medievalorigins.gorgon/to_stone.description": "ゴルゴンは暗い洞窟や古いダンジョンに縛られた存在。昼間に外にいると夜まで石化してしまいます。ヘルメットをかぶることで防げます。",
+
+  "power.medievalorigins.gorgon/silver_aversion.name": "銀への弱点",
+  "power.medievalorigins.gorgon/silver_aversion.description": "ゴルゴンは銀の純粋さに弱く、身に着けることができません。銀や鉄を扱うとダメージを受けます。",
+
+  "power.medievalorigins.gorgon/petrifying_gaze.name": "石化の視線",
+  "power.medievalorigins.gorgon/petrifying_gaze.description": "向かい合ったモブと目を合わせると、短時間その相手を石に変えます。ボスには無効です。",
+
+  "power.medievalorigins.gorgon/poison_blood.name": "毒の血",
+  "power.medievalorigins.gorgon/poison_blood.description": "ゴルゴンは毒に完全耐性を持ち、攻撃されると毒の血を周囲の敵に浴びせて毒状態にすることがあります。",
+
+  "power.medievalorigins.gorgon/revenge.name": "復讐",
+  "power.medievalorigins.gorgon/revenge.description": "ゴルゴンは体力が低い時、大幅に攻撃力が上昇します。",
+
+  "power.medievalorigins.high_elf/elegant.name": "優雅",
+  "power.medievalorigins.high_elf/elegant.description": "ハイエルフは重い防具を着ると動きが遅くなり（エンチャントで無効化可能）、体力も少なめです。",
+
+  "power.medievalorigins.high_elf/ebonbreath.name": "精気吸収",
+  "power.medievalorigins.high_elf/ebonbreath.description": "ハイエルフは様々なアイテムを持つことで、そのエネルギーを引き出して多彩な魔法を使えます。各ボックスにカーソルを合わせると詳細が見られます。",
+
+  "power.medievalorigins.high_elf/fragile.name": "脆弱",
+  "power.medievalorigins.high_elf/fragile.description": "ハイエルフは肉弾戦向きではありません。物理ダメージを受けやすく、体力も少なめです。",
+
+  "power.medievalorigins.high_elf/mystic_affinity.name": "魔術親和",
+  "power.medievalorigins.high_elf/mystic_affinity.description": "ハイエルフは強力で巧みに魔力を操る種族。他種族より魔法ダメージを多く与え、受ける魔法ダメージも少なくなります。",
+
+  "power.medievalorigins.high_elf/mana_rpgmana.name": "高貴なる血統",
+  "power.medievalorigins.high_elf/mana_rpgmana.description": "ハイエルフは他種族よりも多くのマナを持ち、祖先の力で素早くマナを回復できます。",
+
+  "power.medievalorigins.high_elf/mana_irons.name": "高貴なる血統",
+  "power.medievalorigins.high_elf/mana_irons.description": "ハイエルフは他種族よりも多くのマナを持ち、祖先の力で素早くマナを回復できます。",
+
+  "power.medievalorigins.high_elf/mana_ars.name": "高貴なる血統",
+  "power.medievalorigins.high_elf/mana_ars.description": "ハイエルフは他種族よりも多くのマナを持ち、祖先の力で素早くマナを回復できます。",
+
+  "power.medievalorigins.high_elf/mana_irons_ars.name": "高貴なる血統",
+  "power.medievalorigins.high_elf/mana_irons_ars.description": "ハイエルフは他種族よりも多くのマナを持ち、祖先の力で素早くマナを回復できます。",
+
+  "power.medievalorigins.high_elf/towering.name": "高身長",
+  "power.medievalorigins.high_elf/towering.description": "ハイエルフは細身で、平均的な人間よりもやや背が高いです。",
+
+  "power.medievalorigins.moon_elf/crazed.name": "異郷の民",
+  "power.medievalorigins.moon_elf/crazed.description": "どんなに頑張っても、ムーンエルフはオーバーワールドで眠ることができません。",
+
+  "power.medievalorigins.moon_elf/stealth.name": "影へと溶ける",
+  "power.medievalorigins.moon_elf/stealth.description": "暗闇の中でムーンエルフはしゃがむことで透明化し、短い距離を隠れたまま移動できます。ステルス状態から攻撃すると最初の一撃が追加ダメージを与え、透明化が解除されます。ダガーを使うとさらに大きなダメージを与えます。",
+
+"power.medievalorigins.moon_elf/elegant.name": "優雅",
+"power.medievalorigins.moon_elf/elegant.description": "ムーンエルフは重い防具を着ると動きが遅くなります（エンチャントで無効化可能）。",
+
+"power.medievalorigins.moon_elf/ethereal.name": "幽玄",
+"power.medievalorigins.moon_elf/ethereal.description": "ムーンエルフは細身で、少し透き通っており、肌は独特の青みを帯びています。",
+
+"power.medievalorigins.moon_elf/fragile.name": "脆弱",
+"power.medievalorigins.moon_elf/fragile.description": "ムーンエルフは体力が低く、物理ダメージを多く受けます。",
+
+"power.medievalorigins.moon_elf/moonlight_rogue.name": "月光の盗賊",
+"power.medievalorigins.moon_elf/moonlight_rogue.description": "ムーンエルフは軽く隠しやすい武器を使うのが得意です。ダガーやナイフでより多くのダメージを与えます。",
+
+"power.medievalorigins.moon_elf/nimble.name": "俊敏",
+"power.medievalorigins.moon_elf/nimble.description": "素早い反射神経により、ムーンエルフは攻撃を回避できることがあります。",
+
+"power.medievalorigins.moon_elf/towering.name": "高身長",
+"power.medievalorigins.moon_elf/towering.description": "ムーンエルフは森の親戚たちと同じくらいの背丈で、人間よりやや高いです。",
+
+"power.medievalorigins.ogre/gargantuan.name": "巨大",
+"power.medievalorigins.ogre/gargantuan.description": "オーガは非常に大きく、ドアや小さな建物には入れません。",
+
+"power.medievalorigins.ogre/lead_belly.name": "鉄の胃袋",
+"power.medievalorigins.ogre/lead_belly.description": "オーガは食べ物にこだわりません。どんなものでも食べます。毒や空腹を感じません。",
+
+"power.medievalorigins.ogre/ravenous.name": "大食漢",
+"power.medievalorigins.ogre/ravenous.description": "オーガはほとんど満腹になることがなく、常に何かを食べ続ける必要があります。",
+
+"power.medievalorigins.ogre/ravager.name": "荒ぶる者",
+"power.medievalorigins.ogre/ravager.description": "オーガは斧を持つとしっくりきて、より大きな力で振るうことができます。",
+
+"power.medievalorigins.ogre/bloodlust.name": "血の渇望",
+"power.medievalorigins.ogre/bloodlust.description": "オーガは突発的に激しい怒りに駆られ、周囲の敵をなぎ倒しますが、周囲の状況を把握しにくくなります。",
+
+"power.medievalorigins.ogre/sluggish.name": "鈍重",
+"power.medievalorigins.ogre/sluggish.description": "オーガは巨大な体を維持するため、他よりも動きが遅いです。",
+
+"power.medievalorigins.ogre/stocky.name": "頑丈",
+"power.medievalorigins.ogre/stocky.description": "オーガの厚い皮膚と密な骨は、多くの攻撃を耐える力を与えます。",
+
+"power.medievalorigins.pixie/curse_of_flight.name": "飛翔の呪い",
+"power.medievalorigins.pixie/curse_of_flight.description": "ピクシーは革より重いチェストプレートを装備できず、他の翼で異なる飛び方もできません。",
+
+"power.medievalorigins.pixie/feather_footed.name": "羽のごとき足取り",
+"power.medievalorigins.pixie/feather_footed.description": "ピクシーは非常に軽いため、落下ダメージを受けません。",
+
+"power.medievalorigins.pixie/flight.name": "妖精の飛翔",
+"power.medievalorigins.pixie/flight.description": "ピクシーは自力で空を飛び、前方や上方に進むことができます。\n飛び方の詳細は隣のボックスを参照してください。",
+
+"power.medievalorigins.pixie/mount.name": "おんぶ",
+"power.medievalorigins.pixie/mount.description": "空の手で他のプレイヤーを右クリックすると、その頭の上に座ることができます。",
+
+"power.medievalorigins.pixie/good_fortunes.name": "幸運の妖精",
+"power.medievalorigins.pixie/good_fortunes.description": "ピクシーはいたずら好きですが、幸運とも結びついています。採掘時、普通の石からたまに貴重なものが手に入ります。",
+
+"power.medievalorigins.pixie/mischief_maketh_man.name": "いたずら好き",
+"power.medievalorigins.pixie/mischief_maketh_man.description": "ピクシーは数々のいたずらを仕掛けることができ、その多くは危険ではないものの、とても騒々しいです。",
+
+"power.medievalorigins.pixie/pixie_properties.name": "小柄",
+"power.medievalorigins.pixie/pixie_properties.description": "ピクシーは大地を歩く中で最も小さな存在のひとつで、人間の膝にも届かないことがほとんどです。",
+
+"power.medievalorigins.pixie/soaked.name": "びしょ濡れ",
+"power.medievalorigins.pixie/soaked.description": "ピクシーは小さいため、水は大きな脅威となります。水に濡れると動きが鈍り、飛行能力も低下します。",
+
+"power.medievalorigins.pixie/troublemaker.name": "厄介者",
+"power.medievalorigins.pixie/troublemaker.description": "村人たちはピクシーのいたずら伝説を知っており、彼らとは取引しません。",
+
+"power.medievalorigins.plague_victim/contagious.name": "感染性",
+"power.medievalorigins.plague_victim/contagious.description": "疫病に冒された者は恐ろしい見た目で、村人は恐れて取引を拒みます。",
+
+"power.medievalorigins.plague_victim/foul_aura.name": "邪悪なオーラ",
+"power.medievalorigins.plague_victim/foul_aura.description": "恐ろしい魔力が犠牲者を包み、周囲の生き物の命を徐々に蝕みます。",
+
+"power.medievalorigins.plague_victim/insomniac.name": "不眠症",
+"power.medievalorigins.plague_victim/insomniac.description": "絶え間ない苦痛のため、疫病に冒された者は眠ることができません。",
+
+"power.medievalorigins.plague_victim/plague_immunity.name": "疫病耐性",
+"power.medievalorigins.plague_victim/plague_immunity.description": "激しい痛みは終わりませんが、死ぬ組織にも限界があります。感染者は毒やウィザーに耐性があります。",
+
+"power.medievalorigins.plague_victim/eternal_suffering.name": "永遠の苦しみ",
+"power.medievalorigins.plague_victim/eternal_suffering.description": "5分ごとに一度、死亡時に強制的に生き返らされ、苦しみが続きます。",
+
+"power.medievalorigins.plague_victim/risk_of_transmission.name": "呪いの伝染",
+"power.medievalorigins.plague_victim/risk_of_transmission.description": "攻撃するたび、感染を広げる可能性があります。",
+
+"power.medievalorigins.plague_victim/sensitive_skin.name": "敏感な皮膚",
+"power.medievalorigins.plague_victim/sensitive_skin.description": "感染者の皮膚は腫れやただれで覆われ、触れるだけで痛みます。防具を着ることができません。",
+
+"power.medievalorigins.plague_victim/skin_and_bones.name": "骨と皮",
+"power.medievalorigins.plague_victim/skin_and_bones.description": "この病は気力を奪い、体力と移動速度が低下します。",
+
+"power.medievalorigins.siren/amphibious.name": "両生",
+"power.medievalorigins.siren/amphibious.description": "サイレンは水中で呼吸や行動ができ、視界も良好で、泳ぐ速度も上がります。",
+
+"power.medievalorigins.siren/flammable.name": "可燃性",
+"power.medievalorigins.siren/flammable.description": "サイレンは火に非常に弱く、炎に触れるとほぼ即死します。",
+
+"power.medievalorigins.siren/holy_water.name": "聖なる水",
+"power.medievalorigins.siren/holy_water.description": "サイレンは完全に水中にいる間のみ、体を素早く再生できます。",
+
+"power.medievalorigins.siren/out_of_your_depth.name": "陸の不適応",
+"power.medievalorigins.siren/out_of_your_depth.description": "陸上では、サイレンはポーションを使わない限り回復できません。",
+
+"power.medievalorigins.siren/siren_song.name": "サイレンの歌",
+"power.medievalorigins.siren/siren_song.description": "発動すると広範囲の敵を魅了し、短時間無力化します（ボスやプレイヤーには無効）。",
+
+"power.medievalorigins.siren/seduce.name": "魅了",
+"power.medievalorigins.siren/seduce.description": "サブアクティブキーを押すと村人の好感度が上がり、取引条件が良くなります。",
+
+"power.medievalorigins.troll/apex_predator.name": "頂点捕食者",
+"power.medievalorigins.troll/apex_predator.description": "トロールは通常の食べ物を食べられず、他の生き物を倒してのみ空腹を満たせます。",
+
+"power.medievalorigins.troll/ham_fisted.name": "大きな拳",
+"power.medievalorigins.troll/ham_fisted.description": "トロールの巨大な拳は強力ですが、盾を持つには大きすぎます。",
+
+"power.medievalorigins.troll/ironhide.name": "鉄の皮膚",
+"power.medievalorigins.troll/ironhide.description": "トロールは非常に厚い皮膚を持ち、自然な防御力と大幅な体力増加を得ます。",
+
+"power.medievalorigins.troll/lumbering.name": "のっそり",
+"power.medievalorigins.troll/lumbering.description": "トロールほど大きいと、動くのも一苦労。サイズの割に動きがかなり遅いです。",
+
+"power.medievalorigins.troll/mountainous.name": "山のごとく",
+"power.medievalorigins.troll/mountainous.description": "トロールは山のように巨大で、一般人の2倍の背丈があります。",
+
+"power.medievalorigins.troll/old_blood.name": "古き血",
+"power.medievalorigins.troll/old_blood.description": "トロールの血は山と結びついており、故郷の丘以外では自己回復できません。",
+
+"power.medievalorigins.troll/out_of_stock.name": "規格外",
+"power.medievalorigins.troll/out_of_stock.description": "トロールに合う防具は存在せず、生まれ持った体だけで歩む運命です。",
+
+"power.medievalorigins.troll/rock_throw.name": "岩投げ",
+"power.medievalorigins.troll/rock_throw.description": "トロールは意志で巨大な岩を投げ飛ばせますが、貴重な丸石64個を消費します。",
+
+"power.medievalorigins.troll/thunderous_stride.name": "雷鳴の歩み",
+"power.medievalorigins.troll/thunderous_stride.description": "トロールは力強く歩き続け、十分な時間が経てば障害物を突き破って進めます。",
+
+"power.medievalorigins.yeti/flammable.name": "可燃性",
+"power.medievalorigins.yeti/flammable.description": "イエティは寒冷地の生き物のため、火に弱いです。",
+
+"power.medievalorigins.yeti/frigid_pulse.name": "冷気の波動",
+"power.medievalorigins.yeti/frigid_pulse.description": "イエティはコマンドで周囲の敵を氷漬けにできます（ネザーやボスには無効）。",
+
+"power.medievalorigins.yeti/from_whence_you_came.name": "故郷の力",
+"power.medievalorigins.yeti/from_whence_you_came.description": "氷雪バイオームではイエティの移動速度が上がり、落下ダメージを無効化します。",
+
+"power.medievalorigins.yeti/frosty_breath.name": "冷気の吐息",
+"power.medievalorigins.yeti/frosty_breath.description": "イエティの冷たい息は近づく敵の動きを遅くします。",
+
+"power.medievalorigins.yeti/thick_fur.name": "厚い毛皮",
+"power.medievalorigins.yeti/thick_fur.description": "砂漠では厚い毛皮が仇となり、イエティの移動速度と体力が低下します。",
+
+"power.medievalorigins.yeti/titanic.name": "巨体",
+"power.medievalorigins.yeti/titanic.description": "イエティは普通の人間よりもはるかに多くの体力を持ちます。",
+
+"power.medievalorigins.yeti/unstoppable.name": "止まらぬ者",
+"power.medievalorigins.yeti/unstoppable.description": "イエティは鈍足効果を受けません。",
+
+"power.medievalorigins.yeti/winter_body.name": "冬の体",
+"power.medievalorigins.yeti/winter_body.description": "イエティは通常の人間より少し背が高く、体もかなり大きいです。",
+
+"power.medievalorigins.revenant/black_thumb.name": "死の手",
+"power.medievalorigins.revenant/black_thumb.description": "リベナントは作物を収穫できません。触れると枯れてしまいます。",
+
+"power.medievalorigins.revenant/disturbed.name": "心の乱れ",
+"power.medievalorigins.revenant/disturbed.description": "禁断の実験は精神を歪めます。リベナントは恐怖で眠れません。",
+
+"power.medievalorigins.revenant/hellraiser.name": "死神の守り",
+"power.medievalorigins.revenant/hellraiser.description": "リベナントは意志で不活性なスケルトンの円を呼び出し、一時的な盾として敵を攻撃から守ります。",
+
+"power.medievalorigins.revenant/putrid_communion.name": "腐敗の共鳴",
+"power.medievalorigins.revenant/putrid_communion.description": "アンデッドの肉や骨を食べることで、次に同種を召喚した際に強化できます。",
+
+"power.medievalorigins.revenant/unwitherable.name": "死の呪い",
+"power.medievalorigins.revenant/unwitherable.description": "リベナントはウィザーに耐性があり、アンデッド同様、スマイトで追加ダメージを受け、回復や治癒効果が逆転し、毒や再生効果も無効です。",
+
+"power.medievalorigins.revenant/skeleton_summons.name": "復讐の召喚",
+"power.medievalorigins.revenant/skeleton_summons.description": "リベナントは夜の生き物を再構成し、従者として使役できます。これらはペットのように従い、スケルトンには武器を装備可能。非騎乗型の強さはソウル/ブラッド魔力に依存。\n召喚方法：\n§lスケルトン:§r \n- メインハンド: 骨4本\n§lスケルトンホース:§r\n- メインハンド: 骨12本\n- オフハンド: 鞍1つ\n§lウィザースケルトン:§r \n- メインハンド: 骨12本\n- オフハンド: ウィザースカル1つ\n§lゾンビ:§r \n- メインハンド: 腐肉4つ\n§lゾンビホース:§r \n- メインハンド: 腐肉12個\n- オフハンド: 鞍1つ",
+
+"power.medievalorigins.revenant/poor_reputation.name": "混沌の仲間",
+"power.medievalorigins.revenant/poor_reputation.description": "村人はリベナントと取引せず、アイアンゴーレムは見つけ次第攻撃しますが、略奪者には受け入れられます。",
+
+"power.medievalorigins.revenant/siphon.name": "精気吸収",
+"power.medievalorigins.revenant/siphon.description": "生きている存在を攻撃すると、その生命力を吸収する力を得ます。召喚したアンデッド以外に有効です。",
+
+"power.medievalorigins.revenant/unguarded.name": "無防備",
+"power.medievalorigins.revenant/unguarded.description": "霊界への執着により、リベナントは現世で無防備になり、多くのモブからより多くのダメージを受けます。",
+
+"origin.medievalorigins.valkyrie.name": "ヴァルキリー",
+"origin.medievalorigins.valkyrie.description": "-§l 主な特徴§r: \n§o§2+ 回復力§r \n§o§6• 羽根の翼§r \n§o§c- アンデッドに弱い§r\n§lヴァルキリー§rは恐れを知らぬ翼の戦士で、戦場で死者の運命を決め、オーディンのヴァルハラへと導くと伝えられています。",
+
+"power.medievalorigins.valkyrie/wings.name": "羽根の翼",
+"power.medievalorigins.valkyrie/wings.description": "ヴァルキリーは巨大な白い羽根の翼を持ち、自由に空を飛べます。",
+
+"power.medievalorigins.valkyrie/intervention.name": "天の介入",
+"power.medievalorigins.valkyrie/intervention.description": "空中に跳び上がるか、飛行中なら前方にダッシュし、着地まで落下ダメージを無効化します。\n\n着地時には聖なる力で地面を打ちつけ、近くの味方の負の効果を浄化し、回復させます。回復量は治癒/聖なる魔法威力に依存します。",
+
+"power.medievalorigins.valkyrie/divine_smite.name": "聖なる一撃",
+"power.medievalorigins.valkyrie/divine_smite.description": "3回目の攻撃ごとに、近くの敵に聖なる一撃を与えます。ダメージは治癒/聖なる魔法威力に依存します。",
+
+"power.medievalorigins.valkyrie/corruption.name": "堕落",
+"power.medievalorigins.valkyrie/corruption.description": "近くのアンデッドモブはあなたを弱体化させ、鈍足にし、彼らの攻撃はあなたにより多くのダメージを与えます。",
+
+"power.medievalorigins.valkyrie/vanquisher.name": "征服者",
+"power.medievalorigins.valkyrie/vanquisher.description": "アンデッドモブを倒すと、§n聖なる一撃§r§r§rを発動し、倒したごとに§n堕落§rの効果をわずかに減少させます。死亡時にスタックの半分を失います。",
+
+"power.medievalorigins.valkyrie/heavenly_implements.name": "天の神器",
+"power.medievalorigins.valkyrie/heavenly_implements.description": "ヴァルキリーは生まれつき治癒/聖なる魔法威力が高く、槍のような武器でより強力です。",
+
+"sounds.medievalorigins.banshee_cry": "バンシーの叫び",
+"sounds.medievalorigins.channeled_wail": "溜めた嘆き声",
+"sounds.medievalorigins.horrible_screech": "恐ろしい金切り声",
+"sounds.medievalorigins.zhh_voo_woop": "謎の異常音",
+"sounds.medievalorigins.bone_crunch": "骨の砕ける音",
+"sounds.medievalorigins.dash": "ピクシーの突進",
+"sounds.medievalorigins.boost": "弦のアルペジオ",
+"sounds.medievalorigins.hover": "かすかなハミング",
+"sounds.medievalorigins.jump": "柔らかなチャイム音",
+"sounds.medievalorigins.sirens_song": "サイレンの歌",
+
+"entity.medievalorigins.summon_zombie": "召喚者のゾンビ",
+"entity.medievalorigins.summon_skeleton": "召喚者のスケルトン",
+"entity.medievalorigins.summon_wither_skeleton": "召喚者のウィザースケルトン",
+
+"badges.medievalorigins.pixie.jump": "ピクシーのジャンプは2ブロック分の高さです。また、§b飛行力(FP)§rを消費して飛行も可能です。\n\n§bFP§rは地上にいるときのみ回復します。",
+"badges.medievalorigins.pixie.glide": "滑空 - 空中で%sを押すと、翼でゆっくり滑空できます。\n\n§bFP§rは消費しません。",
+"badges.medievalorigins.pixie.hover": "ホバリング - %sを素早く2回押すと、ゆっくりとしたクリエイティブ飛行のようにホバリングし、§bFP§rを徐々に消費します。\n\n§bFP§rが完全に切れるとホバリングは終了します。",
+"badges.medievalorigins.pixie.dash_forward": "前方ダッシュ - %sを素早く2回押すと前方にダッシュします。\n\n滑空中は§bFP§rを50消費し、それ以外は25消費します。",
+"badges.medievalorigins.pixie.dash_upward": "上昇ダッシュ - %sを素早く押した後、%sを押すと上方にダッシュします。\n\n滑空中は§bFP§rを50消費し、それ以外は25消費します。",
+"badges.medievalorigins.pixie.disable_effects": "しゃがみながら%sを押すと、音やパーティクル効果を無効化できます。",
+
+"badges.medievalorigins.high_elf.glacial_step": "§b氷雪の歩み:§r 氷ブロックを持つことで水分子のエントロピーを操作し、フロストウォーカーのように歩けます。",
+"badges.medievalorigins.high_elf.extrusive_movement": "§4溶岩歩行:§r 黒曜石を持つことで熱の流れを操り、灼熱の溶岩上も自由に歩けます。",
+"badges.medievalorigins.high_elf.instant_cure": "§e即時治癒:§r 村人を右クリックして金のリンゴの癒しの力を直接発動できます（弱体化不要）。",
+"badges.medievalorigins.high_elf.void_warp": "§5虚空転移:§r エンダーパールを持ちながら%sを押すと、現実の裂け目を切り裂いて最大50ブロック先に瞬間移動します。",
+"badges.medievalorigins.high_elf.blazenbreath": "§cブレイズブレス:§r どちらかの手に石炭を持ち%sを押すと弱い炎の円錐を発射。ブレイズパウダーなら中程度の炎。炎魔法威力で威力増加。",
+"badges.medievalorigins.high_elf.ebonbreath": "§dエボンブレス:§r どちらかの手にドラゴンブレス入り瓶を持ち%sを押すと強力な魔法の炎の円錐を発射。炎およびアーケイン/エンダー魔法威力で威力増加。",
+
+"badges.medievalorigins.revenant.siphon": "生きている存在を攻撃すると、その生命力を吸収します。ダメージは蓄積リソースと魂/血魔法威力に比例します。",
+"badges.medievalorigins.revenant.eat": "骨や腐肉のほか、一部のモンスターの頭を食べるとこのリソースがより早く蓄積されます。",
+
+"badges.medievalorigins.alfiq.wall_climb": "%sを押すと壁登りを切り替えます。",
+
+"medievalorigins.contagious_villager": "この村人はあなたと取引しません！",
+"medievalorigins.disturbed_restless": "知ってしまったことがあなたを滅ぼすが、あなたは笑いながら死ぬだろう。",
+"medievalorigins.moon_elf_no_sleep": "この異郷の奇妙な音があなたを眠れなくする。",
+"medievalorigins.insomniac_welts": "腫れ物がひりひりと痛む。今夜は眠れそうにない。",
+"medievalorigins.poor_reputation_villager": "村人は怖がって取引してくれません！",
+"medievalorigins.troublemaker": "村人はあなたのような厄介者とは取引しません！",
+"medievalorigins.uncastable": "今はこの能力を使えません。",
+
+"tooltip.medievalorigins.set_bonus": "セットボーナス：",
+"tooltip.medievalorigins.water_protection": "水耐性",
+"tooltip.medievalorigins.looting_bonus": "モブのドロップ増加の可能性",
+"tooltip.medievalorigins.unwearable": "装備不可",
+"tooltip.medievalorigins.damage_dealt": "+%s 与ダメージ",
+"tooltip.medievalorigins.attack_damage_bonus": "+%s 攻撃力",
+"tooltip.medievalorigins.stab_bonus": "ステルス解除ボーナス",
+"tooltip.medievalorigins.self_wither": "所持中ウィザー効果",
+"tooltip.medievalorigins.restores_no_hunger": "空腹度を回復しない",
+"tooltip.medievalorigins.moonlight_rogue": "月光の盗賊：",
+"tooltip.medievalorigins.heavenly_implements": "天の神器：",
+"tooltip.medievalorigins.greedy": "強欲：",
+"tooltip.medievalorigins.ravager": "荒ぶる者：",
+
+"layer.medievalorigins.magic_subclasses.name": "魔法の専門分野",
+
+"origin.medievalorigins.high_elf/arcanist.name": "秘術師",
+"origin.medievalorigins.high_elf/arcanist.description": "ハイエルフは生まれつき一つの属性に長けています。\n\n秘奥と未知の探求に没頭する魔導士。\n\n+1 アーケイン魔法威力",
+"power.medievalorigins.high_elf/arcanist/gear_spawn.name": "初期装備：",
+"power.medievalorigins.high_elf/arcanist/gear_spawn.description": "- 秘術の杖\n- 秘術のルーン16個",
+
+"origin.medievalorigins.high_elf/pyromancer.name": "火炎術師",
+"origin.medievalorigins.high_elf/pyromancer.description": "燃えるものを見るのが好きな狂人。\n\n+1 炎魔法威力",
+"power.medievalorigins.high_elf/pyromancer/gear_spawn.name": "初期装備：",
+"power.medievalorigins.high_elf/pyromancer/gear_spawn.description": "- 炎の杖\n- 炎のルーン16個",
+
+"origin.medievalorigins.high_elf/cryomancer.name": "氷結術師",
+"origin.medievalorigins.high_elf/cryomancer.description": "冷静で賢明、制御と戦略を重視する魂。\n\n+1 氷魔法威力",
+"power.medievalorigins.high_elf/cryomancer/gear_spawn.name": "初期装備：",
+"power.medievalorigins.high_elf/cryomancer/gear_spawn.description": "- 氷の杖\n- 氷のルーン16個",
+
+"death.attack.siphon.player": "%は%sに魂を引き裂かれた",
+"death.attack.smite.player": "%は%sに討たれた",
+
+"power.medievalorigins.fae/allure.name": "誘引",
+"power.medievalorigins.fae/allure.description": "フェイは自然と魅力的です。モブは他の生き物よりもはるかに遠くから彼らを追いかけます。",
+
+"power.medievalorigins.fae/diminutive.name": "小柄",
+"power.medievalorigins.fae/diminutive.description": "フェイはかなり背が低く、ほとんどが平均的なゴブリンよりわずかに高い程度です。",
+
+"enchantment.medievalorigins.featherweight": "フェザーウェイト",
+"enchantment.medievalorigins.featherweight.desc": "このエンチャントは重装鎧に適用でき、アラクネ、エルフ、アルフィク、または翼を持つ者の速度低下を防ぎます。",
+
+"enchantment.medievalorigins.mirroring": "ミラーリング",
+"enchantment.medievalorigins.mirroring.desc": "このエンチャントが兜に適用されると、プレイヤーはゴルゴンの石化の視線に免疫を持ち、ドワーフは日光の下で通常通り見ることができます。"
+}

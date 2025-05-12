@@ -8,6 +8,8 @@
 - Made Mirroring a treasure-only enchantment
 - Add Celestisynth's Keres to Valkyrie weapons
 - Add Epic Knight's + addons' relevant weapons for Valkyrie weapons (Thank you CyrusWalker!) 
+- Added Japanese Translation (Thank you SAGA!)
+- Updated other translations
 - Fix Yeti and Revenant's having the wrong Spell Power bonuses on Forge
 - Fix Revenant's summon blood spell power scaling not working properly on Forge
 - Fix Banshee's Dimeritium Shackles debuff not detecting any weapons
