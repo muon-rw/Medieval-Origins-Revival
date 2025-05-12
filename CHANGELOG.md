@@ -8,6 +8,8 @@
 - Made Mirroring a treasure-only enchantment
 - Add Celestisynth's Keres to Valkyrie weapons
 - Add Epic Knight's + addons' relevant weapons for Valkyrie weapons (Thank you CyrusWalker!) 
+- Fix Yeti and Revenant's having the wrong Spell Power bonuses on Forge
+- Fix Revenant's summon blood spell power scaling not working properly on Forge
 - Fix Banshee's Dimeritium Shackles debuff not detecting any weapons
 - Fix some sounds not playing due to being corrupted
 - Fix a crash caused when a Valkyrie lands near a player with negative effects
