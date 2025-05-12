@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.gen.Invoker;
 import javax.annotation.Nullable;
 import java.util.UUID;
 
-@Mixin(ZombieVillager.class)
+@Mixin(value = ZombieVillager.class, remap = true)
 public interface ZombieVillagerInvoker {
     /**
      * Invokes the private method {@code startConverting(UUID, int)} in {@link ZombieVillager}.
