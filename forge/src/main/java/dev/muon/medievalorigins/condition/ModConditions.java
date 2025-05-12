@@ -65,21 +65,7 @@ public class ModConditions {
                         && (itemName.contains("dagger") || itemName.contains("knife") || itemName.contains("sai") || itemName.contains("athame"));
             })
     );
-    public static final RegistryObject<SimpleItemCondition> IS_VALKYRIE_WEAPON = ITEM_CONDITIONS.register("is_valkyrie_weapon", () ->
-            new SimpleItemCondition(stack -> {
-                String itemName = ForgeRegistries.ITEMS.getKey(stack.getItem()).getPath();
-                return (stack.getItem() instanceof SwordItem ||
-                        stack.getItem() instanceof TridentItem ||
-                        Enchantments.SHARPNESS.canEnchant(stack) ||
-                        Enchantments.PIERCING.canEnchant(stack))
-                            &&
-                                (itemName.contains("glaive") ||
-                                itemName.contains("spear") ||
-                                itemName.contains("lance") ||
-                                itemName.contains("trident") ||
-                                itemName.contains("halberd"));
-            })
-    );
+    public static final RegistryObject<IsValkyrieWeaponCondition> IS_VALKYRIE_WEAPON = ITEM_CONDITIONS.register("is_valkyrie_weapon", IsValkyrieWeaponCondition::new);
     public static final RegistryObject<SimpleItemCondition> IS_FIST_WEAPON = ITEM_CONDITIONS.register("is_fist_weapon", () ->
             new SimpleItemCondition(stack -> {
                 String itemName = ForgeRegistries.ITEMS.getKey(stack.getItem()).getPath();
