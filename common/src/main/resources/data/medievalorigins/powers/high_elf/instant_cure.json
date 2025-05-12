@@ -2,36 +2,7 @@
     "hidden": true,
     "type": "origins:action_on_entity_use",
     "bientity_action": {
-        "type": "origins:and",
-        "actions": [
-            {
-                "type": "origins:target_action",
-                "action": {
-                    "type": "origins:and",
-                    "actions": [
-                        {
-                            "type": "origins:execute_command",
-                            "command": "data modify entity @s ConversionTime set value 0"
-                        },
-                        {
-                            "type": "origins:execute_command",
-                            "command": "particle heart ~ ~0.5 ~ 0.3 0.3 0.3 0.009 4 normal @a"
-                        },
-                        {
-                            "type": "origins:execute_command",
-                            "command": "playsound minecraft:item.totem.use player @a ~ ~ ~ 1.0 0.5"
-                        }
-                    ]
-                }
-            },
-            {
-                "type": "origins:actor_action",
-                "action": {
-                    "type": "origins:grant_advancement",
-                    "advancement": "minecraft:story/cure_zombie_villager"
-                }
-            }
-        ]
+        "type": "medievalorigins:cure_villager"
     },
     "bientity_condition": {
         "type": "origins:target_condition",

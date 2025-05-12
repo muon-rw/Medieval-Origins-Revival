@@ -4,6 +4,7 @@
 - Fix Alfiq pickpocket not having a cooldown/cooldown bar always showing
 - Alfiq can now charge their pounce while moving
 - Fix Mirroring compat with Ice and Fire
+- Fix High Elf instant cure not working (Players might need to reselect their Origin first)
 - Made Mirroring a treasure-only enchantment
 - Fixed some sounds not playing due to being corrupted
 - Fixed a crash caused when a Valkyrie lands near a player with negative effects

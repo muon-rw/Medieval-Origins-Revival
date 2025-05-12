@@ -20,6 +20,8 @@ public class ModActions {
     public static final RegistryObject<SpellDamageAction> SPELL_DAMAGE = BIENTITY_ACTIONS.register("spell_damage", SpellDamageAction::new);
     public static final RegistryObject<TransferItemAction> TRANSFER_ITEM = BIENTITY_ACTIONS.register("transfer_item",
             () -> new TransferItemAction(TransferItemAction::transferItem));
+    public static final RegistryObject<CureVillagerAction> CURE_VILLAGER = BIENTITY_ACTIONS.register("cure_villager",
+            () -> new CureVillagerAction(CureVillagerAction::cureVillager));
 
     public static void register(IEventBus eventBus) {
         ENTITY_ACTIONS.register(eventBus);

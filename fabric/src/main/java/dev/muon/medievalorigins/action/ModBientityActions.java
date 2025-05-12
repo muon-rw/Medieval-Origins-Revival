@@ -12,6 +12,7 @@ public class ModBientityActions {
         register(AttributedDamageAction.getFactory());
         register(SpellDamageAction.getFactory());
         register(CastSpellBientityAction.getFactory());
+        register(CureVillagerAction.getFactory());
     }
 
     private static void register(ActionFactory<Tuple<Entity, Entity>> serializer) {
