@@ -2,6 +2,7 @@
     "replace": false,
     "values": [
       "minecraft:trident",
+      {"id":"celestisynth:keres","required":false},
       {"id":"simplyswords:arcanethyst","required":false},
       {"id":"simplyswords:flamewind","required":false},
       {"id":"simplyswords:sword_on_a_stick","required":false},

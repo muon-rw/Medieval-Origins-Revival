@@ -6,6 +6,8 @@
 - Fix Mirroring compat with Ice and Fire
 - Fix High Elf instant cure not working (Players might need to reselect their Origin first)
 - Made Mirroring a treasure-only enchantment
+- Added Celestisynth's Keres to Valkyrie weapons
+- Fixed Banshee's Dimeritium Shackles debuff not detecting any weapons
 - Fixed some sounds not playing due to being corrupted
 - Fixed a crash caused when a Valkyrie lands near a player with negative effects
 - Fixed some log spam on Forge caused by Revenants if playing without Iron's Spells and Spellbooks

@@ -88,6 +88,15 @@
 					},
 					{
 						"type": "medievalorigins:is_silver_tool"
+					},
+					{
+						"type": "origins:ingredient",
+						"ingredient": {
+							"tag": "medievalorigins:silver_weapons"
+						}
+					},
+					{
+						"type": "medievalorigins:is_silver_weapon"
 					}
 				]
 			}
@@ -141,6 +150,15 @@
 				},
 				{
 					"type": "medievalorigins:is_silver_tool"
+				},
+				{
+					"type": "origins:ingredient",
+					"ingredient": {
+						"tag": "medievalorigins:silver_weapons"
+					}
+				},
+				{
+					"type": "medievalorigins:is_silver_weapon"
 				}
 			]
 		},
