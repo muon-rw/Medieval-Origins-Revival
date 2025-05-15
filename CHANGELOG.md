@@ -1,3 +1,6 @@
+## 7.0.2-alpha-4
+- Properly fix FTB Teams client-side checks. 
+
 ## 7.0.2-alpha-3
 - Fix a rare crash caused by FTB Teams integration in the Medieval MC modpack
 
