@@ -96,6 +96,12 @@ public class SummonedSkeleton extends Skeleton implements SummonedMob {
             }
         }
     }
+
+    @Override
+    protected boolean shouldDespawnInPeaceful() {
+        return false;
+    }
+
     @Override
     public boolean isOrderedToSit() {
         return this.entityData.get(SITTING);

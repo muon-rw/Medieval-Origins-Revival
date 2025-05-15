@@ -100,6 +100,12 @@ public class SummonedWitherSkeleton extends WitherSkeleton implements SummonedMo
             }
         }
     }
+
+    @Override
+    protected boolean shouldDespawnInPeaceful() {
+        return false;
+    }
+
     @Override
     public boolean isOrderedToSit() {
         return this.entityData.get(SITTING);

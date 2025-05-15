@@ -11,17 +11,29 @@
                 "type": "origins:target_condition",
                 "condition": {
                     "type": "origins:in_tag",
-                    "tag": "medievalorigins:summon_skeletons"
+                    "tag": "medievalorigins:equippable_summons"
                 }
             },
             {
                 "type": "origins:actor_condition",
                 "condition": {
-                    "type": "origins:equipped_item",
-                    "equipment_slot": "mainhand",
-                    "item_condition": {
-                        "type": "medievalorigins:is_summon_equipment"
-                    }
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "mainhand",
+                            "item_condition": {
+                                "type": "medievalorigins:is_summon_equipment"
+                            }
+                        },
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "mainhand",
+                            "item_condition": {
+                                "type": "origins:empty"
+                            }
+                        }
+                    ]
                 }
             }
         ]

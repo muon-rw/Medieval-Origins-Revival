@@ -25,9 +25,6 @@
         "key": {
             "key": "key.medievalorigins.tertiary_active"
         },
-        "condition": {
-            "type": "origins:sneaking"
-        },
         "entity_action": {
             "type": "origins:if_else_list",
             "actions": [

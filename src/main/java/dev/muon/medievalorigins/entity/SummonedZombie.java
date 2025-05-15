@@ -95,6 +95,12 @@ public class SummonedZombie extends Zombie implements SummonedMob {
             }
         }
     }
+
+    @Override
+    protected boolean shouldDespawnInPeaceful() {
+        return false;
+    }
+
     @Override
     public boolean isOrderedToSit() {
         return this.entityData.get(SITTING);

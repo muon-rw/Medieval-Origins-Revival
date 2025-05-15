@@ -5,7 +5,9 @@
 		"type": "origins:and",
 		"actions": [
 			{
-				"type": "medievalorigins:transfer_item"
+				"type": "medievalorigins:transfer_item",
+				"prioritize_mainhand_for_take": true,
+				"allow_empty_hand_mainhand_take": true
 			},
 			{
 				"type": "origins:actor_action",

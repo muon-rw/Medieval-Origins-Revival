@@ -15,7 +15,8 @@ public class IsSummonEquipmentConditionType extends ItemConditionType {
         Item item = stack.getItem();
         return item instanceof BowItem ||
                 item instanceof DiggerItem ||
-                item instanceof SwordItem;
+                item instanceof SwordItem ||
+                item instanceof ArmorItem;
     }
 
     @Override
