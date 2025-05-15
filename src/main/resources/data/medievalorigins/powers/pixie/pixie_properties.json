@@ -38,13 +38,13 @@
 			{
 				"id": "*:*",
 				"attribute": "additionalentityattributes:generic.hitbox_height",
-				"amount": 0.5,
+				"amount": 0.25,
 				"operation": "add_multiplied_base"
 			},
 			{
 				"id": "*:*",
 				"attribute": "additionalentityattributes:generic.hitbox_width",
-				"amount": 1.0,
+				"amount": 0.5,
 				"operation": "add_multiplied_base"
 			},
 			{

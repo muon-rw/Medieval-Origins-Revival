@@ -6,13 +6,13 @@
 			{
 				"id": "*:*",
 				"attribute": "additionalentityattributes:generic.height",
-				"amount": 1.08,
+				"amount": 0.08,
 				"operation": "add_multiplied_base"
 			},
 			{
 				"id": "*:*",
 				"attribute": "additionalentityattributes:generic.width",
-				"amount": 1.2,
+				"amount": 0.2,
 				"operation": "add_multiplied_base"
 			}
 		]
