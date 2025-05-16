@@ -9,7 +9,7 @@
     - `Iron Aversion`: Cannot wear iron/silver.
     - `Reduced Health`: Lower base health.
   - **New/Reworked Abilities**:
-    - `Wings`: Provides passive elytra flight visuals while levitating, similar to Pixie wings (currently the same texture). 
+    - `Wings`: Custom wings, animated while jumping or flying, similar to Pixie wings (currently the same texture).
     - `Nature's Blessing` (Tertiary Active): Activates a temporary surge of nature magic.
       - During the surge:
         - Automatically plants seeds from a defined tag in a small radius around the Fae while moving.
