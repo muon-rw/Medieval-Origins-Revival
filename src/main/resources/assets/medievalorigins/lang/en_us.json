@@ -23,7 +23,7 @@
   "origin.medievalorigins.high_elf.description": "-§l Notable Changes§r: \n§o§2+ Magic, Unique Abilities§r\n§o§c- Physical Damage\n- Defense§r\n§lHigh Elves§r are notoriously arrogant, though undeniably talented; elemental magics course strongly through their blood, though they are weaker with weaponry.",
 
   "origin.medievalorigins.fae.name": "Fae",
-  "origin.medievalorigins.fae.description": "-§l Notable Changes§r: \n§o§2+ Hovering, Magic§r\n§o§6• Short: 122cm.4'0\"§r\n§o§c- Loved by Mobs§r\n§o§c- Defense§r\n§lFae§r are short magical winged humanoids, regarded as spirits of nature and said to haunt forests and lead travelers' astray. They are equal parts mystic and trickster.",
+  "origin.medievalorigins.fae.description": "-§l Notable Changes§r: \n§o§2+ Hovering, Magic§r\n§o§6• Short: 122cm.4'0\"§r\n§o§c- Loved by Mobs§r\n§lFae§r are magical woodland creatures of elegance, infused with natural magic and deeply connected to the forests from which they hail.",
 
   "origin.medievalorigins.goblin.name": "Goblin",
   "origin.medievalorigins.goblin.description": "-§l Notable Changes§r: \n§o§2+ Gold Gear Bonuses§r\n§o§2+ Luck, Speed§r \n§o§6• Small: 92cm.3'3\"§r \n§o§c- Health, Defense§r\n§lGoblins§r are obsessed with gold and treasure and tend to find a little more loot wherever they look, but their small size leaves them vulnerable in combat.",
@@ -204,14 +204,23 @@
   "power.medievalorigins.fae.iron_aversion.name": "Magical Suppression",
   "power.medievalorigins.fae.iron_aversion.description": "Iron and silver inhibit fae powers. It is unbearable for them to wear it.",
 
-  "power.medievalorigins.fae.levitation.name": "Levitation",
-  "power.medievalorigins.fae.levitation.description": "Fae are light, winged creatures who can float effortlessly on the air. Press the primary active key to hover upward.",
+  "power.medievalorigins.fae.levitation.name": "Wings",
+  "power.medievalorigins.fae.levitation.description": "Fae are light, winged creatures who can float effortlessly on the air.",
 
-  "power.medievalorigins.fae.magic_resistance.name": "Magic Resistance",
-  "power.medievalorigins.fae.magic_resistance.description": "As magical creatures themselves, faes take less magic damage compared to other creatures.",
+  "power.medievalorigins.fae.natures_blessing.name": "Nature's Blessing",
+  "power.medievalorigins.fae.natures_blessing.description": "Channel potent life energies for a short duration. While active, spread seeds onto stepped-on farmland and pulse healing and cleansing energy to nearby allies.",
 
-  "power.medievalorigins.fae.regen.name": "Regeneration",
-  "power.medievalorigins.fae.regen.description": "Fae can channel magical energy and heal themselves quickly, at the cost of hunger.",
+  "power.medievalorigins.fae.nourishment.name": "Nourishment",
+  "power.medievalorigins.fae.nourishment.description": "Spread a burst of vital life energy, instantly fertilizing plants in an area around you.",
+
+  "power.medievalorigins.fae.forest_kin.name": "Forest Kin",
+  "power.medievalorigins.fae.forest_kin.description": "While you are within the embrace of a forest, your wounds mend faster.",
+
+  "power.medievalorigins.fae.natures_ward.name": "Nature's Ward",
+  "power.medievalorigins.fae.natures_ward.description": "You are bound to nature, granting you immunity to poison and nausea, and resistance against magical attacks.",
+
+  "power.medievalorigins.fae.reduced_health.name": "Fragile Frame",
+  "power.medievalorigins.fae.reduced_health.description": "Fae are delicate creatures with less health than a human.",
 
   "power.medievalorigins.goblin.cunning.name": "Cunning",
   "power.medievalorigins.goblin.cunning.description": "Goblins are clever creatures, and know where to find more rare loot most others would miss.",
@@ -430,7 +439,7 @@
   "power.medievalorigins.revenant.putrid_communion.description": "Through the unsettling act of consuming the flesh or bones of the undead, a revenant can empower their next summon of the same type. \nFor combat creatures, extend their duration, making them permanent at max power. For undead steeds, enhance their attributes at max power.",
 
   "power.medievalorigins.revenant.skeleton_summons.name": "Revenance",
-  "power.medievalorigins.revenant.skeleton_summons.description": "Revenants can reconstruct creatures of the night modified to do their own bidding. These act as pets, will follow and teleport, and §nskeletons§r can be equipped with any weapon. Hover the badges for details.",
+  "power.medievalorigins.revenant.skeleton_summons.description": "Revenants can reconstruct creatures of the night modified to do their own bidding. These act as pets, will follow and teleport, and can be equipped with weapons or armor. Zombies can not use bows. Hover the badges for details.",
 
   "power.medievalorigins.revenant.poor_reputation.name": "Chaotic Ally",
   "power.medievalorigins.revenant.poor_reputation.description": "Villagers will refuse to trade with revenants and iron golems will attack them on sight. However, they are tolerated (tenuously) by Pillagers.",
@@ -487,7 +496,7 @@
   "badges.medievalorigins.pixie.dash_upward": "Dash Up - Quickly press %s then %s to dash upward. \n\nThis also uses 50 §bFP§r if gliding, and 25 §bFP§r otherwise.",
   "badges.medievalorigins.pixie.disable_effects": "Press %s while sneaking to disable sounds and particle effects",
 
-  "badges.medievalorigins.revenant.command": "Press %s while sneaking to cycle between commanding your summons to sit, follow, or teleport to you.",
+  "badges.medievalorigins.revenant.command": "Press %s to cycle between commanding your summons to sit, follow, or teleport to you.",
 
   "badges.medievalorigins.revenant.summons_limit": "You can only sustain up to 5 combat summons at a time.",
   "badges.medievalorigins.revenant.summon_skeleton": "§f§nSkeleton§r:\n- Mainhand: 4 bones\n§oDuration: 10 minutes§r",

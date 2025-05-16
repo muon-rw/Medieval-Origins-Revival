@@ -5,6 +5,7 @@ import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.llamalad7.mixinextras.sugar.Local;
 import dev.cammiescorner.icarus.client.IcarusClient;
 import dev.muon.medievalorigins.enchantment.ModEnchantments;
+import dev.muon.medievalorigins.power.FaeWingsPowerType;
 import dev.muon.medievalorigins.power.IcarusWingsPowerType;
 import dev.muon.medievalorigins.power.PixieWingsPowerType;
 import dev.muon.medievalorigins.util.ItemDataUtil;
@@ -51,10 +52,10 @@ public abstract class IcarusClientMixin {
                 return icarusWings.get().getWingsType();
             }
         } else {
-            var pixieWings = powerHolder.get().getPowerTypes(PixieWingsPowerType.class).stream()
-                    .filter(PowerType::isActive)
-                    .findFirst();
-            if (pixieWings.isPresent()) {
+            boolean hasPixieWings = powerHolder.get().getPowerTypes(PixieWingsPowerType.class).stream().anyMatch(PowerType::isActive);
+            boolean hasFaeWings = powerHolder.get().getPowerTypes(FaeWingsPowerType.class).stream().anyMatch(PowerType::isActive);
+
+            if (hasPixieWings || hasFaeWings) {
                 return new ItemStack(Items.AIR);
             }
         }

@@ -22,6 +22,8 @@ public class ModEntityActionTypes {
     public static final ActionConfiguration<SummonEntityActionType> SUMMON_ENTITY = register(ActionConfiguration.of(MedievalOrigins.loc("summon_entity"), SummonEntityActionType.DATA_FACTORY));
     public static final ActionConfiguration<CommandSummonsActionType> COMMAND_SUMMONS = register(ActionConfiguration.of(MedievalOrigins.loc("command_summons"), CommandSummonsActionType.DATA_FACTORY));
     public static final ActionConfiguration<ModifyDurationActionType> MODIFY_DURATION = register(ActionConfiguration.of(MedievalOrigins.loc("modify_duration"), ModifyDurationActionType.DATA_FACTORY));
+    public static final ActionConfiguration<AreaBonemealActionType> AREA_BONEMEAL = register(ActionConfiguration.of(MedievalOrigins.loc("area_bonemeal"), AreaBonemealActionType.DATA_FACTORY));
+    public static final ActionConfiguration<AutoPlantSeedsActionType> AUTO_PLANT_SEEDS = register(ActionConfiguration.of(MedievalOrigins.loc("auto_plant_seeds"), AutoPlantSeedsActionType.DATA_FACTORY));
 
 
     public static void register() {}

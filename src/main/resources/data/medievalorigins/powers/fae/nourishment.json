@@ -1,0 +1,27 @@
+{
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "medievalorigins:area_bonemeal",
+                "radius": 6,
+                "vertical_radius": 3,
+                "particle_effect": "minecraft:composter"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "playsound minecraft:item.bone_meal.use master @s ~ ~ ~ 0.8 1.2"
+            }
+        ]
+    },
+    "cooldown": 300,
+    "key": {
+        "key": "key.origins.secondary_active"
+    },
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+        "bar_index": 8
+    }
+}

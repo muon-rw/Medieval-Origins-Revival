@@ -5,11 +5,12 @@
   "refmap": "medievalorigins.refmap.json",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "compat.icarus.IcarusHelperMixin",
+    "FarmBlockMixin",
     "LivingEntityMixin",
     "MobMixin",
     "NearestAttackableTargetGoalMixin",
     "TargetingConditionsMixin",
+    "compat.icarus.IcarusHelperMixin",
     "compat.iceandfire.PixieAIStealMixin",
     "compat.iceandfire.PlayerMixin",
     "compat.iceandfire.SirenDataMixin"
@@ -17,8 +18,8 @@
   "client": [
     "client.AbstractClientPlayerMixin",
     "client.ElytraModelMixin",
-    "compat.icarus.IcarusClientMixin",
-    "client.LivingEntityRendererMixin"
+    "client.LivingEntityRendererMixin",
+    "compat.icarus.IcarusClientMixin"
   ],
   "injectors": {
     "defaultRequire": 1

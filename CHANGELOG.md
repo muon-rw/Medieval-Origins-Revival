@@ -1,3 +1,29 @@
+## 7.0.3-alpha-1
+- **Fae Rewrite**!
+  - *Players with the Fae Origin will need to reselect their origin to receive any of the new powers.*
+  - **Overall Role**: Support, Nature Magic, Protector.
+  - **Kept Abilities**:
+    - `Levitation`: Active upward flight.
+    - `Allure`: Increased mob detection range.
+    - `Diminutive`: Small size and adjusted speed.
+    - `Iron Aversion`: Cannot wear iron/silver.
+    - `Reduced Health`: Lower base health.
+  - **New/Reworked Abilities**:
+    - `Wings`: Provides passive elytra flight visuals while levitating, similar to Pixie wings (currently the same texture). 
+    - `Nature's Blessing` (Tertiary Active): Activates a temporary surge of nature magic.
+      - During the surge:
+        - Automatically plants seeds from a defined tag in a small radius around the Fae while moving.
+        - Periodically pulses a heal to nearby players and cleanses negative effects from self and allies.
+        - Accompanied by visual particle effects.
+    - `Nourishment` (Secondary Active): Unleashes a burst of life energy, instantly bonemealing plants in an area.
+    - `Forest Kin`: Grants passive health regeneration while in forest biomes.
+    - `Nature's Ward`: Provides immunity to poison and nausea, and resistance to magic damage.
+- Fix Revenant summons despawning in Peaceful difficulty
+- Allow Revenant summons to be equipped with armor 
+- Revenant's command power hotkey no longer requires sneaking
+- Fixed Pixie hitbox
+- Fixed the size of Yeti
+
 ## 7.0.2-alpha-4
 - Properly fix FTB Teams client-side checks. 
 

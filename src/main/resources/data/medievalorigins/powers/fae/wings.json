@@ -1,0 +1,12 @@
+{
+    "type": "origins:multiple",
+    "hidden": true,
+    "wings": {
+        "type": "origins:elytra_flight",
+        "render_elytra": true,
+        "texture_location": "medievalorigins:textures/entity/pixie_wings.png"
+    },
+    "flapper": {
+        "type": "medievalorigins:fae_wings"
+    }
+}

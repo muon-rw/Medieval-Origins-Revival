@@ -7,9 +7,6 @@
 		"texture_location": "medievalorigins:textures/entity/pixie_wings.png"
 	},
 	"flapper": {
-		"type": "medievalorigins:pixie_wings",
-		"wings_type": {
-			"id": "icarus:white_feathered_wings"
-		}
+		"type": "medievalorigins:pixie_wings"
 	}
 }

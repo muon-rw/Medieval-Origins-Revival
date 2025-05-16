@@ -1,0 +1,129 @@
+{
+    "type": "origins:multiple",
+    "active": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "playsound minecraft:event.axolotl.idle_water player @s ~ ~ ~ 1.5 0.8"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:totem_of_undying ~ ~1 ~ 2 1 2 0.1 75"
+                }
+            ]
+        },
+        "cooldown": 900,
+        "key": {
+            "key": "key.medievalorigins.tertiary_active"
+        },
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+            "bar_index": 9
+        }
+    },
+    "plant_seeds": {
+        "type": "origins:action_over_time",
+        "interval": 3,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_active",
+                    "comparison": ">",
+                    "compare_to": 780
+                },
+                {
+                    "type": "origins:moving"
+                }
+            ]
+        },
+        "entity_action": {
+            "type": "medievalorigins:auto_plant_seeds",
+            "chance": 1.0,
+            "block_tag": "medievalorigins:plantable_crop_blocks",
+            "horizontal_radius": 0,
+            "vertical_radius_player": 1
+        }
+    },
+    "heal_cleanse": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_active",
+            "comparison": ">",
+            "compare_to": 780
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:area_of_effect",
+                    "radius": 5,
+                    "bientity_action": {
+                        "type": "medievalorigins:spell_heal",
+                        "magic_school": "earth",
+                        "base": 2.0,
+                        "scaling_factor": 1.0,
+                        "crit_behavior": "normal"
+                    },
+                    "bientity_condition": {
+                        "type": "origins:target_condition",
+                        "condition": {
+                            "type": "origins:entity_type",
+                            "entity_type": "minecraft:player"
+                        }
+                    }
+                },
+                {
+                    "type": "origins:area_of_effect",
+                    "radius": 5,
+                    "include_actor": false,
+                    "bientity_action": {
+                        "type": "origins:target_action",
+                        "action": {
+                            "type": "medievalorigins:clear_negative_effects"
+                        }
+                    },
+                    "bientity_condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:entity_type",
+                                    "entity_type": "minecraft:player"
+                                }
+                            },
+                            {
+                                "type": "medievalorigins:allied"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "medievalorigins:clear_negative_effects"
+                }
+            ]
+        }
+    },
+    "particles": {
+        "type": "origins:action_over_time",
+        "interval": 15,
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_active",
+            "comparison": ">",
+            "compare_to": 780
+        },
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "particle minecraft:happy_villager ~ ~0.2 ~ 1 0.1 1 0 10"
+        }
+    }
+}
