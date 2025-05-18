@@ -26,6 +26,13 @@
 			"type": "origins:tooltip",
 			"sprite": "medievalorigins:textures/gui/pixie_badge.png",
 			"text": {
+				"translate": "badges.medievalorigins.high_elf.instant_cure"
+			}
+		},
+		{
+			"type": "origins:tooltip",
+			"sprite": "medievalorigins:textures/gui/pixie_badge.png",
+			"text": {
 				"translate": "badges.medievalorigins.high_elf.blazenbreath",
 				"with": [
 					{

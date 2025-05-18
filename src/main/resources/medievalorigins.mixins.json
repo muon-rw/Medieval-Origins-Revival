@@ -12,6 +12,7 @@
     "NearestAttackableTargetGoalMixin",
     "ProjectileMixin",
     "TargetingConditionsMixin",
+    "ZombieVillagerInvoker",
     "compat.icarus.IcarusHelperMixin",
     "compat.iceandfire.PixieAIStealMixin",
     "compat.iceandfire.PlayerMixin",

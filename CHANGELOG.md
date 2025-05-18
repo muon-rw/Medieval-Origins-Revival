@@ -1,6 +1,7 @@
 ## 7.0.3-alpha-2
-- Fix Wood Elf's Empowered Shot not working. Also now compatible with other arrow-modifying mods 
+- Fix Wood Elf's **Focus** power not working. Also now compatible with other arrow-modifying mods 
 - Change "Notable Changes" in origin descriptions to "Overview"
+- Re-add High Elf's Instant Cure power
 
 ## 7.0.3-alpha-1
 - **Fae Rewrite**!
