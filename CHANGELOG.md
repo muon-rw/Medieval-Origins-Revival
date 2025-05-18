@@ -1,3 +1,7 @@
+## 7.0.3-alpha-2
+- Fix Wood Elf's Empowered Shot not working. Also now compatible with other arrow-modifying mods 
+- Change "Notable Changes" in origin descriptions to "Overview"
+
 ## 7.0.3-alpha-1
 - **Fae Rewrite**!
   - *Players with the Fae Origin will need to reselect their origin to receive any of the new powers.*

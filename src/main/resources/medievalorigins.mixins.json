@@ -5,10 +5,12 @@
   "refmap": "medievalorigins.refmap.json",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "AbstractArrowMixin",
     "FarmBlockMixin",
     "LivingEntityMixin",
     "MobMixin",
     "NearestAttackableTargetGoalMixin",
+    "ProjectileMixin",
     "TargetingConditionsMixin",
     "compat.icarus.IcarusHelperMixin",
     "compat.iceandfire.PixieAIStealMixin",

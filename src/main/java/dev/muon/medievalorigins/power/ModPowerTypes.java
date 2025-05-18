@@ -16,6 +16,9 @@ public class ModPowerTypes {
     public static final PowerConfiguration<ActionOnJumpPowerType> ACTION_ON_JUMP = register(ActionOnJumpPowerType.FACTORY);
     public static final PowerConfiguration<AttributePowerType> ATTRIBUTE = register(AttributePowerType.FACTORY);
     public static final PowerConfiguration<PreventCropTramplePowerType> PREVENT_CROP_TRAMPLE = register(PreventCropTramplePowerType.FACTORY);
+    public static final PowerConfiguration<ModifyProjectileVelocityPowerType> MODIFY_PROJECTILE_VELOCITY = register(ModifyProjectileVelocityPowerType.FACTORY);
+    public static final PowerConfiguration<ModifyPierceLevelPowerType> MODIFY_PIERCE_LEVEL = register(ModifyPierceLevelPowerType.FACTORY);
+    public static final PowerConfiguration<ModifyProjectileAccuracyPowerType> MODIFY_PROJECTILE_ACCURACY = register(ModifyProjectileAccuracyPowerType.FACTORY);
 
     public static void register() {
     }
