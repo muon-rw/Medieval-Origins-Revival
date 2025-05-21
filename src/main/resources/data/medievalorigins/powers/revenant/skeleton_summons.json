@@ -47,9 +47,9 @@
 				"translate": "badges.medievalorigins.revenant.summon_zombie_horse"
 			}
 		},
-				{
+		{
 			"type": "origins:tooltip",
-			"sprite": "medievalorigins:textures/gui/revenant_badge.png",
+			"sprite": "origins:textures/gui/badge/info.png",
 			"text": {
 				"translate": "badges.medievalorigins.revenant.summons_limit"
 			}
