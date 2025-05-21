@@ -1,3 +1,13 @@
+## 7.0.3-alpha-4
+- Improve Nature's Blessing particle effects
+- Fix Nature's Blessing not clearing negative effects
+- Improve logic of allied checks for cases of other player's tamed pets
+- Fix one last check that improperly referenced FTB Teams data on the client-side
+- Added keybind info to Revenant's summoning power 
+
+## 7.0.3-alpha-3
+- Fix Fae heal crashing if no mod providing `spell_power:earth` was installed
+
 ## 7.0.3-alpha-2
 - Fix Wood Elf's **Focus** power not working. Also now compatible with other arrow-modifying mods 
 - Change "Notable Changes" in origin descriptions to "Overview"

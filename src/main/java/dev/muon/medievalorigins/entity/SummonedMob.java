@@ -1,8 +1,6 @@
 package dev.muon.medievalorigins.entity;
 
-import dev.ftb.mods.ftbteams.api.FTBTeamsAPI;
-import dev.ftb.mods.ftbteams.api.client.KnownClientPlayer;
-import net.fabricmc.loader.api.FabricLoader;
+import dev.muon.medievalorigins.util.AllianceUtil;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
@@ -12,7 +10,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
 import javax.annotation.Nullable;
-import java.util.Optional;
 import java.util.UUID;
 
 public interface SummonedMob extends OwnableEntity {
@@ -65,30 +62,8 @@ public interface SummonedMob extends OwnableEntity {
             return true;
         }
 
-        if (FabricLoader.getInstance().isModLoaded("ftbteams")) {
-            boolean inSameTeam = false;
-            if (this.getWorld().isClientSide()) {
-                if (!FTBTeamsAPI.api().isClientManagerLoaded()) {
-                    return true; // Permissive fallback: if client manager not loaded, assume allied
-                }
-                var clientManager = FTBTeamsAPI.api().getClientManager();
-                Optional<KnownClientPlayer> owner1Opt = clientManager.getKnownPlayer(myOwnerId);
-                Optional<KnownClientPlayer> owner2Opt = clientManager.getKnownPlayer(otherOwnerId);
-
-                if (owner1Opt.isPresent() && owner2Opt.isPresent()) {
-                    inSameTeam = owner1Opt.get().teamId().equals(owner2Opt.get().teamId());
-                }
-            } else {
-                if (!FTBTeamsAPI.api().isManagerLoaded()) {
-                    return true; // Permissive fallback: if server manager not loaded, assume allied
-                }
-                var serverManager = FTBTeamsAPI.api().getManager();
-                inSameTeam = serverManager.arePlayersInSameTeam(myOwnerId, otherOwnerId);
-            }
-
-            if (inSameTeam) {
-                return true;
-            }
+        if (AllianceUtil.areEntitiesAlliedByFTBTeams(myOwnerId, otherOwnerId, this.getWorld())) {
+            return true;
         }
 
         LivingEntity myOwner = getOwner();
@@ -98,7 +73,6 @@ public interface SummonedMob extends OwnableEntity {
         } else if (getWorld().isClientSide()){
             potentialOtherOwner = getWorld().getPlayerByUUID(otherOwnerId);
         }
-
 
         if (myOwner != null && potentialOtherOwner instanceof LivingEntity otherOwnerLiving) {
             return myOwner.isAlliedTo(otherOwnerLiving);
@@ -136,29 +110,9 @@ public interface SummonedMob extends OwnableEntity {
             return true;
         }
 
-        if (FabricLoader.getInstance().isModLoaded("ftbteams")) {
-            UUID targetAffiliationId = null;
-            if (target instanceof Player targetPlayer) {
-                targetAffiliationId = targetPlayer.getUUID();
-            } else if (target instanceof OwnableEntity ownableTarget) {
-                targetAffiliationId = ownableTarget.getOwnerUUID();
-            }
-
-            if (targetAffiliationId != null) {
-                boolean managerAvailable = mob.getWorld().isClientSide() ?
-                        FTBTeamsAPI.api().isClientManagerLoaded() :
-                        FTBTeamsAPI.api().isManagerLoaded();
-
-                if (!managerAvailable) {
-                    return true; // Permissive fallback: if manager not loaded, assume allied (consistent with isAlliedOwner)
-                }
-
-                boolean ftbAllied = isFtbAllied(mob, ownerId, targetAffiliationId);
-
-                if (ftbAllied) {
-                    return true;
-                }
-            }
+        UUID targetAffiliationId = AllianceUtil.getPlayerAffiliationIdRecursive(target);
+        if (AllianceUtil.areEntitiesAlliedByFTBTeams(ownerId, targetAffiliationId, mob.getWorld())) {
+            return true;
         }
 
         if (target instanceof OwnableEntity ownableTarget) {
@@ -166,23 +120,5 @@ public interface SummonedMob extends OwnableEntity {
         }
 
         return owner.isAlliedTo(target);
-    }
-
-    private static boolean isFtbAllied(SummonedMob mob, UUID ownerId, UUID targetAffiliationId) {
-        boolean ftbAllied = false;
-        if (mob.getWorld().isClientSide()) {
-            var clientManager = FTBTeamsAPI.api().getClientManager();
-            Optional<KnownClientPlayer> mobOwnerOpt = clientManager.getKnownPlayer(ownerId);
-            Optional<KnownClientPlayer> targetAffiliationOpt = clientManager.getKnownPlayer(targetAffiliationId);
-            if (mobOwnerOpt.isPresent() && targetAffiliationOpt.isPresent() && mobOwnerOpt.get().teamId().equals(targetAffiliationOpt.get().teamId())) {
-                ftbAllied = true;
-            }
-        } else {
-            var serverManager = FTBTeamsAPI.api().getManager();
-            if (serverManager.arePlayersInSameTeam(ownerId, targetAffiliationId)) {
-                ftbAllied = true;
-            }
-        }
-        return ftbAllied;
     }
 }

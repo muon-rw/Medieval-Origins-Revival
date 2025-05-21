@@ -1,48 +1,60 @@
 {
 	"badges": [
-        {
-            "type": "origins:tooltip",
-            "sprite": "medievalorigins:textures/gui/revenant_badge.png",
-            "text": {
-                "translate": "badges.medievalorigins.revenant.summons_limit"
-            }
-        },
-        {
-            "type": "origins:tooltip",
-            "sprite": "medievalorigins:textures/gui/revenant_badge.png",
-            "text": {
-                "translate": "badges.medievalorigins.revenant.summon_skeleton"
-            }
-        },
-        {
-            "type": "origins:tooltip",
-            "sprite": "medievalorigins:textures/gui/revenant_badge.png",
-            "text": {
-                "translate": "badges.medievalorigins.revenant.summon_skeleton_horse"
-            }
-        },
-        {
-            "type": "origins:tooltip",
-            "sprite": "medievalorigins:textures/gui/revenant_badge.png",
-            "text": {
-                "translate": "badges.medievalorigins.revenant.summon_wither"
-            }
-        },
-        {
-            "type": "origins:tooltip",
-            "sprite": "medievalorigins:textures/gui/revenant_badge.png",
-            "text": {
-                "translate": "badges.medievalorigins.revenant.summon_zombie"
-            }
-        },
-        {
-            "type": "origins:tooltip",
-            "sprite": "medievalorigins:textures/gui/revenant_badge.png",
-            "text": {
-                "translate": "badges.medievalorigins.revenant.summon_zombie_horse"
-            }
-        }
-    ],
+		{
+			"type": "origins:tooltip",
+			"sprite": "origins:textures/gui/badge/active.png",
+			"text": {
+				"translate": "badges.medievalorigins.revenant.summon_key",
+				"with": [
+					{
+						"keybind": "key.origins.primary_active"
+					}
+				]
+			}
+		},
+		{
+			"type": "origins:tooltip",
+			"sprite": "medievalorigins:textures/gui/revenant_badge.png",
+			"text": {
+				"translate": "badges.medievalorigins.revenant.summon_skeleton"
+			}
+		},
+		{
+			"type": "origins:tooltip",
+			"sprite": "medievalorigins:textures/gui/revenant_badge.png",
+			"text": {
+				"translate": "badges.medievalorigins.revenant.summon_skeleton_horse"
+			}
+		},
+		{
+			"type": "origins:tooltip",
+			"sprite": "medievalorigins:textures/gui/revenant_badge.png",
+			"text": {
+				"translate": "badges.medievalorigins.revenant.summon_wither"
+			}
+		},
+		{
+			"type": "origins:tooltip",
+			"sprite": "medievalorigins:textures/gui/revenant_badge.png",
+			"text": {
+				"translate": "badges.medievalorigins.revenant.summon_zombie"
+			}
+		},
+		{
+			"type": "origins:tooltip",
+			"sprite": "medievalorigins:textures/gui/revenant_badge.png",
+			"text": {
+				"translate": "badges.medievalorigins.revenant.summon_zombie_horse"
+			}
+		},
+				{
+			"type": "origins:tooltip",
+			"sprite": "medievalorigins:textures/gui/revenant_badge.png",
+			"text": {
+				"translate": "badges.medievalorigins.revenant.summons_limit"
+			}
+		}
+	],
 	"type": "origins:active_self",
 	"condition": {
 		"type": "origins:equipped_item",

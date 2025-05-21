@@ -18,6 +18,8 @@ import net.minecraft.world.entity.LivingEntity;
 import net.spell_power.api.SpellPower;
 import net.spell_power.api.SpellSchool;
 import net.spell_power.api.SpellSchools;
+import dev.muon.medievalorigins.util.SpellSchoolUtil;
+import dev.muon.medievalorigins.MedievalOrigins;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
@@ -82,24 +84,18 @@ public class SpellDamageActionType extends BiEntityActionType {
                     float totalDamage = damage;
 
                     if (FabricLoader.getInstance().isModLoaded("spell_power")) {
-                        SpellSchool school;
                         try {
-                            school = SpellSchools.getSchool(magicSchool);
-                            if (school == null) {
-                                throw new IllegalArgumentException("Unknown magic school: " + magicSchool);
-                            }
+                            SpellSchool school = SpellSchoolUtil.getSpellSchoolWithFallback(magicSchool);
+                            SpellPower.Result spellPowerResult = SpellPower.getSpellPower(school, (LivingEntity) actor);
+                            double finalSpellPower = switch (critBehavior) {
+                                case "always" -> spellPowerResult.forcedCriticalValue();
+                                case "never" -> spellPowerResult.nonCriticalValue();
+                                default -> spellPowerResult.randomValue();
+                            };
+                            totalDamage += finalSpellPower * scalingFactor;
                         } catch (IllegalArgumentException e) {
-                            throw new IllegalArgumentException("Unknown magic school: " + magicSchool);
+                            MedievalOrigins.LOGGER.warn("SpellDamageAction: Could not apply spell power scaling for school '{}' (actor: {}, target: {}). Error: {}", magicSchool, actor.getName().getString(), target.getName().getString(), e.getMessage());
                         }
-
-                        SpellPower.Result spellPowerResult = SpellPower.getSpellPower(school, (LivingEntity) actor);
-                        double finalSpellPower = switch (critBehavior) {
-                            case "always" -> spellPowerResult.forcedCriticalValue();
-                            case "never" -> spellPowerResult.nonCriticalValue();
-                            default -> spellPowerResult.randomValue();
-                        };
-
-                        totalDamage += finalSpellPower * scalingFactor;
                     }
 
                     target.hurt(actor.damageSources().source(this.damageType, actor), totalDamage);

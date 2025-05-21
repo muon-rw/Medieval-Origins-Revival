@@ -492,6 +492,7 @@
 
   "badges.medievalorigins.revenant.command": "Press %s to cycle between commanding your summons to sit, follow, or teleport to you.",
 
+  "badges.medievalorigins.revenant.summon_key": "Summon with [%s] while holding the items listed in the other badges",
   "badges.medievalorigins.revenant.summons_limit": "You can only sustain up to 5 combat summons at a time.",
   "badges.medievalorigins.revenant.summon_skeleton": "§f§nSkeleton§r:\n- Mainhand: 4 bones\n§oDuration: 10 minutes§r",
   "badges.medievalorigins.revenant.summon_skeleton_horse": "§f§nSkeleton Horse§r:\n- Mainhand: 12 bones\n- Offhand: 1 saddle\n§oPermanent duration§r",
