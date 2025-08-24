@@ -52,12 +52,10 @@
 			"pitch": 2
 		},
 		"condition": {
-			"type": "origins:modify_resource",
+			"type": "origins:resource",
 			"resource": "*:*_hold_time",
-			"modifier": {
-				"operation": "set_total",
-				"amount": 0
-			}
+			"comparison": ">=",
+			"compare_to": 60
 		}
 	},
 	"modify_velocity": {
