@@ -2,7 +2,7 @@
     "type": "medievalorigins:attribute",
     "modifier": {
         "id": "minecraft:generic.max_health",
-        "value": -4.0,
+        "amount": -4.0,
         "operation": "add_value"
     }
 } 
