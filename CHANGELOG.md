@@ -2,6 +2,7 @@
 - Update to support IceAndFire-CE 2.0
 - Add Power Cache for power lookups in Origins, should reduce CPU server load from this mod by a huge amount
 - Banshee sonic shriek now scales with soul spell power and properly attributes damage dealt to the player
+- Autodetect epic knights weapons for Valkyrie
 - Add workaround for an Origins bug causing attribute changes to reset on death
 - Add workaround for an Origins bug causing empowered shot to sometimes get softlocked at full charge value
 
