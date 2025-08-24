@@ -6,6 +6,7 @@ import dev.muon.medievalorigins.power.ActionOnJumpPowerType;
 import dev.muon.medievalorigins.power.ActionOnTargetDeathPowerType;
 import dev.muon.medievalorigins.power.CustomDeathSoundPowerType;
 import dev.muon.medievalorigins.power.MobsIgnorePowerType;
+import dev.muon.medievalorigins.util.PowerCache;
 import io.github.apace100.apoli.component.PowerHolderComponent;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.damagesource.DamageSource;
@@ -23,7 +24,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class LivingEntityMixin {
     @Unique
     private boolean shouldIgnoreTarget(Player player) {
-        return PowerHolderComponent.hasPowerType(
+        return PowerCache.hasPowerType(
                 player,
                 MobsIgnorePowerType.class,
                 powerType -> powerType.shouldIgnore((LivingEntity) (Object) this, player)

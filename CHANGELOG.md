@@ -1,8 +1,9 @@
 ## 7.0.3-alpha-5
 - Update to support IceAndFire-CE 2.0
-- Add Power Cache for power lookups in Origins, should reduce CPU server load from this mod by a huge amount (~99%!)
+- Add Power Cache for power lookups in Origins, should reduce CPU server load from this mod by a huge amount
+- Banshee sonic shriek now scales with soul spell power and properly attributes damage dealt to the player
 - Add workaround for an Origins bug causing attribute changes to reset on death
-- Add workaround for an Origins bug causing empowered shot to sometimes get softlocked at full
+- Add workaround for an Origins bug causing empowered shot to sometimes get softlocked at full charge value
 
 ## 7.0.3-alpha-4
 - Improve Nature's Blessing particle effects
