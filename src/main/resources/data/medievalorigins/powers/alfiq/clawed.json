@@ -20,7 +20,7 @@
 		"key": "key.origins.secondary_active"
 	},
 	"unarmed_damage": {
-		"type": "origins:conditioned_attribute",
+		"type": "medievalorigins:conditioned_attribute",
 		"modifier": {
 			"id": "*:*",
 			"attribute": "generic.attack_damage",

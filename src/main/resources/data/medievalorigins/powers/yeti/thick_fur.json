@@ -1,7 +1,7 @@
 {
 	"type": "origins:multiple",
 	"speed_decrease": {
-		"type": "origins:conditioned_attribute",
+		"type": "medievalorigins:conditioned_attribute",
 		"modifier": {
 			"attribute": "minecraft:generic.movement_speed",
 			"operation": "add_value",
@@ -18,7 +18,7 @@
 		}
 	},
 	"health_decrease": {
-		"type": "origins:conditioned_attribute",
+		"type": "medievalorigins:conditioned_attribute",
 		"modifier": {
 			"attribute": "minecraft:generic.max_health",
 			"operation": "add_value",

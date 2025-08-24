@@ -1,5 +1,5 @@
 {
-	"type": "origins:conditioned_attribute",
+	"type": "medievalorigins:conditioned_attribute",
 	"modifier": {
 		"attribute": "generic.attack_damage",
 		"operation": "add_multiplied_base",

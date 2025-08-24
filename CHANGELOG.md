@@ -1,7 +1,8 @@
 ## 7.0.3-alpha-5
-- Add Power Cache, should reduce CPU server load from this mod by a huge amount (~90%)
-- Update to support IceAndFire-CE 2.0 
-- 
+- Update to support IceAndFire-CE 2.0
+- Add Power Cache to workaround inefficient power lookups in Origins, should reduce CPU server load from this mod by a huge amount (~90%)
+- Add workaround for an Origins bug causing attribute changes to reset on death
+- Add workaround for an Origins bug causing empowered shot to sometimes get softlocked at full
 
 ## 7.0.3-alpha-4
 - Improve Nature's Blessing particle effects

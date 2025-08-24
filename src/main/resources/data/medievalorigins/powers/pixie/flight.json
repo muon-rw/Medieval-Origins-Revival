@@ -200,7 +200,7 @@
 		}
 	},
 	"slower_creative": {
-		"type": "origins:conditioned_attribute",
+		"type": "medievalorigins:conditioned_attribute",
 		"tick_rate": 10,
 		"modifier": {
 			"attribute": "minecraft:generic.movement_speed",

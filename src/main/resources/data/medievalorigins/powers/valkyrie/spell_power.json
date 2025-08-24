@@ -1,5 +1,5 @@
 {
-	"type": "origins:conditioned_attribute",
+	"type": "medievalorigins:conditioned_attribute",
 	"modifier": {
 		"attribute": "spell_power:healing",
 		"operation": "add_value",

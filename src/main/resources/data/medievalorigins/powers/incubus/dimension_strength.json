@@ -21,7 +21,7 @@
 		}
 	},
 	"nether_health": {
-		"type": "origins:conditioned_attribute",
+		"type": "medievalorigins:conditioned_attribute",
 		"modifier": {
 			"attribute": "minecraft:generic.max_health",
 			"operation": "add_value",
@@ -44,7 +44,7 @@
 		}
 	},
 	"overworld_weakness": {
-		"type": "origins:conditioned_attribute",
+		"type": "medievalorigins:conditioned_attribute",
 		"modifier": {
 			"attribute": "minecraft:generic.max_health",
 			"operation": "add_value",

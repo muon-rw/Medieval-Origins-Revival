@@ -1,7 +1,7 @@
 {
 	"type": "origins:multiple",
 	"speed_increase": {
-		"type": "origins:conditioned_attribute",
+		"type": "medievalorigins:conditioned_attribute",
 		"modifier": {
 			"attribute": "minecraft:generic.movement_speed",
 			"operation": "add_value",

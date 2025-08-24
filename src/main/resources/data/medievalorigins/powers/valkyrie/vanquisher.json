@@ -75,19 +75,5 @@
 			}
 		},
 		"id": "*:*"
-	},
-	"spell_power_forge": {
-		"type": "origins:modify_attribute",
-		"attribute": "irons_spellbooks:holy_spell_power",
-		"modifier": {
-			"operation": "add_base_early",
-			"resource": "medievalorigins:valkyrie/vanquisher_vanquished",
-			"amount": 0,
-			"modifier": {
-				"operation": "multiply_total_multiplicative",
-				"amount": -0.999
-			}
-		},
-		"id": "*:*"
 	}
 }

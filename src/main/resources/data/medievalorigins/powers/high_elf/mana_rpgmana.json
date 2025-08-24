@@ -9,7 +9,7 @@
 	],
 	"type": "origins:multiple",
 	"max_mana": {
-		"type": "origins:conditioned_attribute",
+		"type": "medievalorigins:conditioned_attribute",
 		"modifiers": [
 			{
 				"attribute": "rpgmana:mana",
@@ -20,7 +20,7 @@
 		]
 	},
 	"highborne_regen": {
-		"type": "origins:conditioned_attribute",
+		"type": "medievalorigins:conditioned_attribute",
 		"modifiers": [
 			{
 				"attribute": "rpgmana:manaregen",

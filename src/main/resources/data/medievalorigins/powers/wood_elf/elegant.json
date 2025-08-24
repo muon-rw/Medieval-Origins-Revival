@@ -38,7 +38,7 @@
 		]
 	},
 	"head_check": {
-		"type": "origins:conditioned_attribute",
+		"type": "medievalorigins:conditioned_attribute",
 		"tick_rate": 30,
 		"modifier": {
 			"attribute": "minecraft:generic.movement_speed",
@@ -55,7 +55,7 @@
 		}
 	},
 	"chest_check": {
-		"type": "origins:conditioned_attribute",
+		"type": "medievalorigins:conditioned_attribute",
 		"tick_rate": 30,
 		"modifier": {
 			"attribute": "minecraft:generic.movement_speed",
@@ -72,7 +72,7 @@
 		}
 	},
 	"legs_check": {
-		"type": "origins:conditioned_attribute",
+		"type": "medievalorigins:conditioned_attribute",
 		"tick_rate": 30,
 		"modifier": {
 			"attribute": "minecraft:generic.movement_speed",
@@ -89,7 +89,7 @@
 		}
 	},
 	"feet_check": {
-		"type": "origins:conditioned_attribute",
+		"type": "medievalorigins:conditioned_attribute",
 		"tick_rate": 30,
 		"modifier": {
 			"attribute": "minecraft:generic.movement_speed",

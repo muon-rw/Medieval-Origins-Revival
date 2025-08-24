@@ -52,10 +52,12 @@
 			"pitch": 2
 		},
 		"condition": {
-			"type": "origins:resource",
+			"type": "origins:modify_resource",
 			"resource": "*:*_hold_time",
-			"comparison": "==",
-			"compare_to": 60
+			"modifier": {
+				"operation": "set_total",
+				"amount": 0
+			}
 		}
 	},
 	"modify_velocity": {
@@ -70,10 +72,16 @@
 			}
 		},
 		"self_action": {
-			"type": "origins:change_resource",
-			"resource": "*:*_hold_time",
-			"change": 0,
-			"operation": "set"
+			"type": "origins:delay",
+			"ticks": 2,
+			"action": {
+				"type": "origins:modify_resource",
+				"resource": "*:*_hold_time",
+				"modifier": {
+					"operation": "set_total",
+					"amount": 0
+				}
+			}
 		}
 	},
 	"modify_pierce": {
@@ -87,6 +95,27 @@
 			"resource": "*:*_hold_time",
 			"comparison": ">=",
 			"compare_to": 60
+		},
+		"self_action": {
+			"type": "origins:delay",
+			"ticks": 2,
+			"action": {
+				"type": "origins:if_else",
+				"if_action": {
+					"type": "origins:modify_resource",
+					"resource": "*:*_hold_time",
+					"modifier": {
+						"operation": "set_total",
+						"amount": 0
+					}
+				},
+				"condition": {
+					"type": "origins:resource",
+					"resource": "*:*_hold_time",
+					"comparison": ">=",
+					"compare_to": 60
+				}
+			}
 		}
 	},
 	"modify_accuracy": {
@@ -100,6 +129,27 @@
 			"resource": "*:*_hold_time",
 			"comparison": ">=",
 			"compare_to": 60
+		},
+		"self_action": {
+			"type": "origins:delay",
+			"ticks": 2,
+			"action": {
+				"type": "origins:if_else",
+				"if_action": {
+					"type": "origins:modify_resource",
+					"resource": "*:*_hold_time",
+					"modifier": {
+						"operation": "set_total",
+						"amount": 0
+					}
+				},
+				"condition": {
+					"type": "origins:resource",
+					"resource": "*:*_hold_time",
+					"comparison": ">=",
+					"compare_to": 60
+				}
+			}
 		}
 	}
 }

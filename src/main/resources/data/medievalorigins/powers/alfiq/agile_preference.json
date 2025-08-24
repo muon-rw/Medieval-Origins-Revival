@@ -29,7 +29,7 @@
 		]
 	},
 	"head_check": {
-		"type": "origins:conditioned_attribute",
+		"type": "medievalorigins:conditioned_attribute",
 		"tick_rate": 30,
 		"modifier": {
 			"id": "*:*",
@@ -46,7 +46,7 @@
 		}
 	},
 	"chest_check": {
-		"type": "origins:conditioned_attribute",
+		"type": "medievalorigins:conditioned_attribute",
 		"tick_rate": 30,
 		"modifier": {
 			"id": "*:*",
@@ -63,7 +63,7 @@
 		}
 	},
 	"legs_check": {
-		"type": "origins:conditioned_attribute",
+		"type": "medievalorigins:conditioned_attribute",
 		"tick_rate": 30,
 		"modifier": {
 			"id": "*:*",
@@ -80,7 +80,7 @@
 		}
 	},
 	"feet_check": {
-		"type": "origins:conditioned_attribute",
+		"type": "medievalorigins:conditioned_attribute",
 		"tick_rate": 30,
 		"modifier": {
 			"id": "*:*",
