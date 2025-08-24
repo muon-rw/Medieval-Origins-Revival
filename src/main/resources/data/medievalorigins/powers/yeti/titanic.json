@@ -1,9 +1,0 @@
-{
-	"type": "medievalorigins:attribute",
-	"modifier": {
-		"attribute": "minecraft:generic.max_health",
-		"operation": "add_value",
-		"amount": 12.0,
-		"id": "*:*"
-	}
-}

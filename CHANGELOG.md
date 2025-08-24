@@ -5,6 +5,7 @@
 - Autodetect epic knights weapons for Valkyrie
 - Add workaround for an Origins bug causing attribute changes to reset on death
 - Add workaround for an Origins bug causing empowered shot to sometimes get softlocked at full charge value
+- Removed Yeti
 
 ## 7.0.3-alpha-4
 - Improve Nature's Blessing particle effects
