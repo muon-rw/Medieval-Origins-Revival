@@ -9,7 +9,7 @@ import dev.muon.medievalorigins.power.FaeWingsPowerType;
 import dev.muon.medievalorigins.power.IcarusWingsPowerType;
 import dev.muon.medievalorigins.power.PixieWingsPowerType;
 import dev.muon.medievalorigins.util.ItemDataUtil;
-import io.github.apace100.apoli.component.PowerHolderComponent;
+import dev.muon.medievalorigins.util.PowerCache;
 import io.github.apace100.apoli.power.type.PowerType;
 import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.world.entity.LivingEntity;
@@ -41,19 +41,14 @@ public abstract class IcarusClientMixin {
 
     @ModifyReturnValue(method = "getWingsForRendering", at = @At(value = "RETURN"))
     private static ItemStack renderOriginWings(ItemStack original, LivingEntity entity) {
-        var powerHolder = PowerHolderComponent.getOptional(entity);
-        if (powerHolder.isEmpty()) return original;
-
         if (original.isEmpty()) {
-            var icarusWings = powerHolder.get().getPowerTypes(IcarusWingsPowerType.class).stream()
-                    .filter(PowerType::isActive)
-                    .findFirst();
+            var icarusWings = PowerCache.getFirstPowerType(entity, IcarusWingsPowerType.class, PowerType::isActive);
             if (icarusWings.isPresent()) {
                 return icarusWings.get().getWingsType();
             }
         } else {
-            boolean hasPixieWings = powerHolder.get().getPowerTypes(PixieWingsPowerType.class).stream().anyMatch(PowerType::isActive);
-            boolean hasFaeWings = powerHolder.get().getPowerTypes(FaeWingsPowerType.class).stream().anyMatch(PowerType::isActive);
+            boolean hasPixieWings = PowerCache.hasPowerType(entity, PixieWingsPowerType.class, PowerType::isActive);
+            boolean hasFaeWings = PowerCache.hasPowerType(entity, FaeWingsPowerType.class, PowerType::isActive);
 
             if (hasPixieWings || hasFaeWings) {
                 return new ItemStack(Items.AIR);

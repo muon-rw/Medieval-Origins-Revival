@@ -123,9 +123,9 @@ dependencies {
 	modImplementation("dev.ftb.mods:ftb-teams-fabric:${project.ftb_teams_version}")
 
 	// Ice and Fire: CE
-	modImplementation "curse.maven:iceandfire-ce-1040076:6435216"
-	modImplementation "maven.modrinth:uranus:4mfB8LLj"
-	modImplementation "maven.modrinth:jupiter:yHfucqRJ"
+	modImplementation "curse.maven:iceandfire-ce-1040076:6921929"
+	modImplementation "curse.maven:uranus-1010827:6919183"
+	modImplementation "curse.maven:jupiter-1072905:6907817"
 }
 
 processResources {

@@ -7,7 +7,7 @@ import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import dev.cammiescorner.icarus.api.IcarusPlayerValues;
 import dev.cammiescorner.icarus.util.IcarusHelper;
 import dev.muon.medievalorigins.power.IcarusWingsPowerType;
-import io.github.apace100.apoli.component.PowerHolderComponent;
+import dev.muon.medievalorigins.util.PowerCache;
 import io.github.apace100.apoli.power.type.PowerType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
@@ -23,13 +23,7 @@ public abstract class IcarusHelperMixin {
 
     @ModifyReturnValue(method = "getConfigValues", at = @At("RETURN"))
     private static IcarusPlayerValues modifyConfigValues(IcarusPlayerValues original, LivingEntity entity) {
-        var powerHolder = PowerHolderComponent.getOptional(entity);
-        if (powerHolder.isEmpty()) return original;
-
-        var icarusWings = powerHolder.get().getPowerTypes(IcarusWingsPowerType.class).stream()
-                .filter(PowerType::isActive)
-                .findFirst();
-
+        var icarusWings = PowerCache.getFirstPowerType(entity, IcarusWingsPowerType.class, PowerType::isActive);
         if (icarusWings.isEmpty()) return original;
 
         //TODO: Add as fields to power json
@@ -83,13 +77,13 @@ public abstract class IcarusHelperMixin {
 
     @WrapOperation(method = "hasWings", at = @At(value = "INVOKE", target = "Ljava/util/function/Predicate;test(Ljava/lang/Object;)Z"))
     private static boolean hasWingsFromOrigin(Predicate<LivingEntity> instance, Object entity, Operation<Boolean> original) {
-        return PowerHolderComponent.hasPowerType((LivingEntity) entity, IcarusWingsPowerType.class)
+        return PowerCache.hasPowerType((LivingEntity) entity, IcarusWingsPowerType.class)
                 || original.call(instance, entity);
     }
 
     @WrapOperation(method = "getEquippedWings", at = @At(value = "INVOKE", target = "Ljava/util/function/Function;apply(Ljava/lang/Object;)Ljava/lang/Object;"))
     private static Object getOriginWings(Function<LivingEntity, ItemStack> instance, Object entity, Operation<ItemStack> original) {
-        if (PowerHolderComponent.hasPowerType((LivingEntity) entity, IcarusWingsPowerType.class)) {
+        if (PowerCache.hasPowerType((LivingEntity) entity, IcarusWingsPowerType.class)) {
             return null;
         }
         return original.call(instance, entity);

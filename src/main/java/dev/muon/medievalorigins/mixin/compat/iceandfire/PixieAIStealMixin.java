@@ -1,6 +1,6 @@
 package dev.muon.medievalorigins.mixin.compat.iceandfire;
-import com.iafenvoy.iceandfire.entity.ai.PixieAISteal;
 
+import com.iafenvoy.iceandfire.entity.ai.PixieAIStealGoal;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import dev.muon.medievalorigins.MedievalOrigins;
 import io.github.apace100.origins.component.OriginComponent;
@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 
-@Mixin(value = PixieAISteal.class, remap = false)
+@Mixin(value = PixieAIStealGoal.class, remap = false)
 public class PixieAIStealMixin {
     @Shadow(remap = false) private Player temptingPlayer;
 

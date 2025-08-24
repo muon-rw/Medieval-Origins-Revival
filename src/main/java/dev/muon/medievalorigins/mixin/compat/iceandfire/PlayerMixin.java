@@ -1,6 +1,6 @@
 package dev.muon.medievalorigins.mixin.compat.iceandfire;
 
-import com.iafenvoy.iceandfire.entity.util.IBlacklistedFromStatues;
+import com.iafenvoy.iceandfire.entity.util.BlacklistedFromStatues;
 import dev.muon.medievalorigins.enchantment.ModEnchantments;
 import dev.muon.medievalorigins.util.ItemDataUtil;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.Mixin;
 
 
 @Mixin(value = Player.class, remap = true)
-public class PlayerMixin implements IBlacklistedFromStatues {
+public class PlayerMixin implements BlacklistedFromStatues {
     @Override
     public boolean canBeTurnedToStone() {
         Player player = ((Player)(Object)this);

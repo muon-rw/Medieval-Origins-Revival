@@ -1,3 +1,8 @@
+## 7.0.3-alpha-5
+- Add Power Cache, should reduce CPU server load from this mod by a huge amount (~90%)
+- Update to support IceAndFire-CE 2.0 
+- 
+
 ## 7.0.3-alpha-4
 - Improve Nature's Blessing particle effects
 - Fix Nature's Blessing not clearing negative effects

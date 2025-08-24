@@ -22,7 +22,7 @@ public abstract class SirenDataMixin {
     @Unique
     private static final ResourceLocation SIREN_ORIGIN_ID = MedievalOrigins.loc("siren");
 
-    @Inject(method = "tickCharmed", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "tick(Lnet/minecraft/world/entity/LivingEntity;)V", at = @At("HEAD"), cancellable = true)
     private void medievalorigins$preventSirenCharmOnSirenOrigin(LivingEntity holder, CallbackInfo ci) {
         if (holder instanceof Player player) {
             OriginComponent component = ModComponents.ORIGIN.get(player);

@@ -10,6 +10,7 @@
     "LivingEntityMixin",
     "MobMixin",
     "NearestAttackableTargetGoalMixin",
+    "PowerHolderComponentImplMixin",
     "ProjectileMixin",
     "TargetingConditionsMixin",
     "ZombieVillagerInvoker",
