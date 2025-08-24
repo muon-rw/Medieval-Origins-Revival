@@ -93,6 +93,10 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
+	// Dev Env
+	modLocalRuntime "curse.maven:spark-361579:5759670"
+	modLocalRuntime("maven.modrinth:fabric-permissions-api:0.3.1-fabric")
+
 	// Origins
 	modImplementation("io.github.apace100:apoli:${apoli_fabric_version}")
 	modImplementation "io.github.apace100:origins-fabric:${origins_fabric_version}"
