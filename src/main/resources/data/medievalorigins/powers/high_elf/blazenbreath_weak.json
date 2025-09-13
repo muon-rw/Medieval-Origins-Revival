@@ -81,7 +81,7 @@
 								"type": "origins:area_of_effect",
 								"radius": 2.1,
 								"shape": "sphere",
-								"include_target": true,
+								"include_actor": true,
 								"bientity_action": {
 									"type": "origins:and",
 									"actions": [

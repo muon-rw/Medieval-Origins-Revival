@@ -1,3 +1,6 @@
+## 7.0.3-alpha-6
+- Fix Incubus' Demon Fire and High Elf's Ebon/Blazenbreath frequently not damaging the primary target, only surrounding entities
+
 ## 7.0.3-alpha-5
 - Update to support IceAndFire-CE 2.0
 - Add Power Cache for power lookups in Origins, should reduce CPU server load from this mod by a huge amount
