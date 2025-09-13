@@ -1,5 +1,16 @@
 {
 	"hidden": true,
-	"type": "origins:modify_type_tag",
-	"tag": "undead"
+	"type": "origins:multiple",
+	"poison_regen": {
+		"type": "origins:modify_type_tag",
+		"tag": "ignores_poison_and_regen"
+	},
+	"healing_harming": {
+		"type": "origins:modify_type_tag",
+		"tag": "inverted_healing_and_harm"
+	},
+	"smite": {
+		"type": "origins:modify_type_tag",
+		"tag": "sensitive_to_smite"
+	}
 }
