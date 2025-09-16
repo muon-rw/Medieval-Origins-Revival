@@ -1,3 +1,7 @@
+## 7.0.3-alpha-7
+- Fix Incubus being unable to fight the Wither, and being immune to poison/regen
+- Banshees are now considered Undead
+
 ## 7.0.3-alpha-6
 - Fix Incubus' Demon Fire and High Elf's Ebon/Blazenbreath frequently not damaging the primary target, only surrounding entities
 - Fix Gorgons being able to jump while petrified
