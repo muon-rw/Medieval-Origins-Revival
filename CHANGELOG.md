@@ -1,3 +1,8 @@
+## 7.0.3-alpha-8
+- Fix Revenant and Pixie being able to bypass trading restrictions using a Trading Post
+- Fix Fae not having reduced health (for realsies this time)
+- Fix Banshee Hexed not working at all
+
 ## 7.0.3-alpha-7
 - Fix Incubus being unable to fight the Wither, and being immune to poison/regen
 - Banshees are now considered Undead

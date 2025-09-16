@@ -24,6 +24,24 @@
       }
     }
   },
+  "tradingpost": {
+    "type": "origins:prevent_block_use",
+    "block_condition": {
+      "type": "origins:block",
+      "block": "tradingpost:trading_post"
+    }
+  },
+  "tradingpost_msg": {
+    "type": "origins:action_on_block_use",
+    "block_condition": {
+      "type": "origins:block",
+      "block": "tradingpost:trading_post"
+    },
+    "entity_action": {
+      "type": "origins:execute_command",
+      "command": "title @s actionbar {\"translate\": \"medievalorigins.poor_reputation_block\", \"color\": \"red\"}"
+    }
+  },
   "pillager_team": {
     "type": "medievalorigins:mobs_ignore",
     "condition": {
