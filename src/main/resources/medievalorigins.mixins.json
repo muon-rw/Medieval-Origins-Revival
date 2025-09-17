@@ -19,7 +19,7 @@
     "compat.icarus.IcarusHelperMixin",
     "compat.iceandfire.PixieAIStealMixin",
     "compat.iceandfire.PlayerMixin",
-    "compat.iceandfire.SirenDataMixin"
+    "compat.iceandfire.SirenEntityMixin"
   ],
   "client": [
     "client.AbstractClientPlayerMixin",

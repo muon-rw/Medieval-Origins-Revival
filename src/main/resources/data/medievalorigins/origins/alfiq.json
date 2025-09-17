@@ -12,7 +12,7 @@
 		"origins:velvet_paws",
 		"origins:scare_creepers",
 		"medievalorigins:alfiq/meow",
-		"thermoo-patches:extra_heat_resistance"
+		"medievalorigins:thermoo/extra_heat_resistance"
 	],
 	"icon": {
 		"id": "medievalorigins:alfiq"
