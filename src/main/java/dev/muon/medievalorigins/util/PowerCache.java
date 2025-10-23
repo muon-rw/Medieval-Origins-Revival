@@ -4,21 +4,32 @@ import io.github.apace100.apoli.component.PowerHolderComponent;
 import io.github.apace100.apoli.power.type.PowerType;
 import net.minecraft.world.entity.Entity;
 
-import java.lang.ref.WeakReference;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Predicate;
 
 /**
  * Thread-safe cache for expensive PowerHolderComponent lookups.
- * Uses weak references to avoid memory leaks when entities are removed.
+ * Uses entity IDs to avoid memory leaks and automatic cleanup on tick.
  */
 public class PowerCache {
-    // Cache structure: Entity -> PowerClass -> List of cached power types
-    private static final Map<WeakReference<Entity>, Map<Class<?>, CachedPowerData<?>>> cache = new ConcurrentHashMap<>();
+    // Cache structure: EntityId -> PowerClass -> List of cached power types
+    private static final Map<Integer, EntityCacheEntry> cache = new ConcurrentHashMap<>();
     
-    // Track weak references for cleanup
-    private static final Map<Entity, WeakReference<Entity>> entityRefs = new WeakHashMap<>();
+    // Tick counter for periodic cleanup
+    private static long tickCounter = 0;
+    private static final int CLEANUP_INTERVAL = 600; // Clean every 30 seconds (20 ticks/sec * 30)
+    private static final long MAX_AGE_TICKS = 6000; // 5 minutes
+    
+    private static class EntityCacheEntry {
+        final Map<Class<?>, CachedPowerData<?>> powerDataMap = new ConcurrentHashMap<>();
+        long lastAccessTick = tickCounter;
+        final UUID entityUuid; // Validate we're caching the right entity
+        
+        EntityCacheEntry(UUID entityUuid) {
+            this.entityUuid = entityUuid;
+        }
+    }
     
     private static class CachedPowerData<T extends PowerType> {
         final List<T> powerTypes;
@@ -35,19 +46,33 @@ public class PowerCache {
      */
     @SuppressWarnings("unchecked")
     public static <T extends PowerType> List<T> getPowerTypes(Entity entity, Class<T> powerClass) {
-        if (entity == null) return Collections.emptyList();
+        if (entity == null || entity.isRemoved()) return Collections.emptyList();
         
-        WeakReference<Entity> ref = getOrCreateRef(entity);
-        Map<Class<?>, CachedPowerData<?>> entityCache = cache.computeIfAbsent(ref, k -> new ConcurrentHashMap<>());
+        int entityId = entity.getId();
+        UUID entityUuid = entity.getUUID();
+        EntityCacheEntry entry = cache.get(entityId);
         
-        CachedPowerData<?> cached = entityCache.get(powerClass);
+        // Validate cached entry belongs to this entity (guards against ID reuse)
+        if (entry != null && !entry.entityUuid.equals(entityUuid)) {
+            cache.remove(entityId); // Stale entry from different entity
+            entry = null;
+        }
+        
+        if (entry == null) {
+            entry = new EntityCacheEntry(entityUuid);
+            cache.put(entityId, entry);
+        }
+        
+        entry.lastAccessTick = tickCounter;
+        
+        CachedPowerData<?> cached = entry.powerDataMap.get(powerClass);
         if (cached != null) {
             return (List<T>) cached.powerTypes;
         }
         
         // Compute and cache
         List<T> powerTypes = PowerHolderComponent.getPowerTypes(entity, powerClass);
-        entityCache.put(powerClass, new CachedPowerData<>(powerTypes, !powerTypes.isEmpty()));
+        entry.powerDataMap.put(powerClass, new CachedPowerData<>(powerTypes, !powerTypes.isEmpty()));
         
         return powerTypes;
     }
@@ -56,13 +81,21 @@ public class PowerCache {
      * Check if entity has a power type (cached).
      */
     public static <T extends PowerType> boolean hasPowerType(Entity entity, Class<T> powerClass) {
-        if (entity == null) return false;
+        if (entity == null || entity.isRemoved()) return false;
         
-        WeakReference<Entity> ref = getOrCreateRef(entity);
-        Map<Class<?>, CachedPowerData<?>> entityCache = cache.get(ref);
+        int entityId = entity.getId();
+        UUID entityUuid = entity.getUUID();
+        EntityCacheEntry entry = cache.get(entityId);
         
-        if (entityCache != null) {
-            CachedPowerData<?> cached = entityCache.get(powerClass);
+        // Validate cached entry belongs to this entity
+        if (entry != null && !entry.entityUuid.equals(entityUuid)) {
+            cache.remove(entityId);
+            entry = null;
+        }
+        
+        if (entry != null) {
+            entry.lastAccessTick = tickCounter;
+            CachedPowerData<?> cached = entry.powerDataMap.get(powerClass);
             if (cached != null) {
                 return cached.hasAny;
             }
@@ -77,7 +110,7 @@ public class PowerCache {
      * Check if entity has a power type matching a predicate (cached).
      */
     public static <T extends PowerType> boolean hasPowerType(Entity entity, Class<T> powerClass, Predicate<T> filter) {
-        if (entity == null) return false;
+        if (entity == null || entity.isRemoved()) return false;
         
         List<T> powerTypes = getPowerTypes(entity, powerClass);
         return powerTypes.stream().anyMatch(filter);
@@ -87,7 +120,7 @@ public class PowerCache {
      * Get the first power type matching a predicate (uses cache).
      */
     public static <T extends PowerType> Optional<T> getFirstPowerType(Entity entity, Class<T> powerClass, Predicate<T> filter) {
-        if (entity == null) return Optional.empty();
+        if (entity == null || entity.isRemoved()) return Optional.empty();
         
         List<T> powerTypes = getPowerTypes(entity, powerClass);
         return powerTypes.stream().filter(filter).findFirst();
@@ -98,15 +131,7 @@ public class PowerCache {
      */
     public static void invalidate(Entity entity) {
         if (entity == null) return;
-        
-        WeakReference<Entity> ref = entityRefs.get(entity);
-        if (ref != null) {
-            cache.remove(ref);
-            entityRefs.remove(entity);
-        }
-        
-        // Clean up stale references while we're at it
-        cleanupStaleReferences();
+        cache.remove(entity.getId());
     }
     
     /**
@@ -115,12 +140,9 @@ public class PowerCache {
     public static void invalidate(Entity entity, Class<? extends PowerType> powerClass) {
         if (entity == null) return;
         
-        WeakReference<Entity> ref = entityRefs.get(entity);
-        if (ref != null) {
-            Map<Class<?>, CachedPowerData<?>> entityCache = cache.get(ref);
-            if (entityCache != null) {
-                entityCache.remove(powerClass);
-            }
+        EntityCacheEntry entry = cache.get(entity.getId());
+        if (entry != null) {
+            entry.powerDataMap.remove(powerClass);
         }
     }
     
@@ -129,14 +151,38 @@ public class PowerCache {
      */
     public static void clearAll() {
         cache.clear();
-        entityRefs.clear();
+        tickCounter = 0;
     }
     
-    private static WeakReference<Entity> getOrCreateRef(Entity entity) {
-        return entityRefs.computeIfAbsent(entity, WeakReference::new);
+    /**
+     * Periodic cleanup of stale cache entries.
+     */
+    public static void tick() {
+        tickCounter++;
+        
+        if (tickCounter % CLEANUP_INTERVAL == 0) {
+            cleanupStaleEntries();
+        }
     }
     
-    private static void cleanupStaleReferences() {
-        cache.entrySet().removeIf(entry -> entry.getKey().get() == null);
+    /**
+     * Remove cache entries that haven't been accessed recently.
+     */
+    private static void cleanupStaleEntries() {
+        long cutoffTick = tickCounter - MAX_AGE_TICKS;
+        cache.entrySet().removeIf(entry -> entry.getValue().lastAccessTick < cutoffTick);
     }
+    
+    /**
+     * Get cache statistics for monitoring.
+     */
+    public static CacheStats getStats() {
+        int totalEntries = cache.size();
+        int totalPowerTypes = cache.values().stream()
+                .mapToInt(entry -> entry.powerDataMap.size())
+                .sum();
+        return new CacheStats(totalEntries, totalPowerTypes, tickCounter);
+    }
+    
+    public static record CacheStats(int cachedEntities, int cachedPowerTypes, long currentTick) {}
 }

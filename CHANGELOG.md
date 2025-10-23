@@ -1,3 +1,7 @@
+## 7.0.3-alpha-9
+- Fix Dwarves sometimes not sinking in water
+- Fix a gradual memory leak when worlds were left open for a very long time
+
 ## 7.0.3-alpha-8
 - Fix Revenant and Pixie being able to bypass trading restrictions using a Trading Post
 - Fix Fae not having reduced health (for realsies this time)
