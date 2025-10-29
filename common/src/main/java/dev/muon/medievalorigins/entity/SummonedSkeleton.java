@@ -5,6 +5,8 @@ import dev.muon.medievalorigins.platform.Services;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.DifficultyInstance;
@@ -37,6 +39,7 @@ public class SummonedSkeleton extends Skeleton implements IFollowingSummon, ISum
      * Originally based off of Ars Nouveau, which is under the LGPL-v3.0 license
      */
     private static final EntityDataAccessor<Optional<UUID>> OWNER_UUID;
+    private static final EntityDataAccessor<Boolean> ORDERED_TO_SIT = SynchedEntityData.defineId(SummonedSkeleton.class, EntityDataSerializers.BOOLEAN);
 
     static {
         OWNER_UUID = IFollowingSummon.getOwnerUUIDAccessor(SummonedSkeleton.class);
@@ -221,6 +224,7 @@ public class SummonedSkeleton extends Skeleton implements IFollowingSummon, ISum
         if (ownerUuid != null) {
             compound.putUUID("OwnerUUID", ownerUuid);
         }
+        compound.putBoolean("OrderedToSit", this.isOrderedToSit());
     }
 
     public void readAdditionalSaveData(CompoundTag compound) {
@@ -237,6 +241,9 @@ public class SummonedSkeleton extends Skeleton implements IFollowingSummon, ISum
         }
         if (compound.hasUUID("OwnerUUID")) {
             this.setOwnerID(compound.getUUID("OwnerUUID"));
+        }
+        if (compound.contains("OrderedToSit")) {
+            this.setOrderedToSit(compound.getBoolean("OrderedToSit"));
         }
     }
 
@@ -269,6 +276,7 @@ public class SummonedSkeleton extends Skeleton implements IFollowingSummon, ISum
     protected void defineSynchedData() {
         super.defineSynchedData();
         this.getEntityData().define(OWNER_UUID, Optional.empty());
+        this.getEntityData().define(ORDERED_TO_SIT, false);
     }
 
     @Override
@@ -285,6 +293,16 @@ public class SummonedSkeleton extends Skeleton implements IFollowingSummon, ISum
     @Override
     public void setOwnerID(UUID uuid) {
         this.entityData.set(OWNER_UUID, Optional.ofNullable(uuid));
+    }
+
+    @Override
+    public void setOrderedToSit(boolean sit) {
+        this.entityData.set(ORDERED_TO_SIT, sit);
+    }
+
+    @Override
+    public boolean isOrderedToSit() {
+        return this.entityData.get(ORDERED_TO_SIT);
     }
 
 }

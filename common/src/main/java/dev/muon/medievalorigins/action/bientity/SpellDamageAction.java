@@ -1,4 +1,4 @@
-package dev.muon.medievalorigins.action;
+package dev.muon.medievalorigins.action.bientity;
 
 import dev.muon.medievalorigins.MedievalOrigins;
 import dev.muon.medievalorigins.platform.Services;
@@ -41,8 +41,7 @@ public class SpellDamageAction {
         float scalingFactor = data.get("scaling_factor");
         String magicSchool = data.get("magic_school");
         String critBehavior = data.get("crit_behavior");
-        
-        // Use platform service to get spell power scaling
+
         double spellPower = Services.SPELL_POWER.getSpellPower(magicSchool, (LivingEntity) actor, critBehavior);
         double totalDamage = baseDamage + (spellPower * scalingFactor);
 

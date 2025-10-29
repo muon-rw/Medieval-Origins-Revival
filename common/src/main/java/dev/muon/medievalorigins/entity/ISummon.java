@@ -3,6 +3,7 @@ package dev.muon.medievalorigins.entity;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.OwnableEntity;
 import net.minecraft.world.item.ItemStack;
 
@@ -19,12 +20,21 @@ public interface ISummon extends OwnableEntity {
     default @Nullable LivingEntity getLivingEntity() {
         return this instanceof LivingEntity ? (LivingEntity) this : null;
     }
+    
     void setLifeTicks(int lifeTicks);
     void setIsLimitedLife(boolean bool);
     void setWeapon(ItemStack item);
     void setOwner(LivingEntity owner);
     void setOwnerID(UUID uuid);
     void reassessWeaponGoal();
+    
+    // Command-related methods
+    void setOrderedToSit(boolean sit);
+    boolean isOrderedToSit();
+    
+    default Mob getSelfAsMob() {
+        return this instanceof Mob ? (Mob) this : null;
+    }
 
     @Nullable
     default UUID getOwnerUUID(){

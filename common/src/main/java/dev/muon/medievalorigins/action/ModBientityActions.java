@@ -1,4 +1,5 @@
 package dev.muon.medievalorigins.action;
+import dev.muon.medievalorigins.action.bientity.*;
 import io.github.apace100.apoli.power.factory.action.ActionFactory;
 import io.github.apace100.apoli.registry.ApoliRegistries;
 import net.minecraft.world.entity.Entity;
@@ -12,6 +13,7 @@ public class ModBientityActions {
         register(SpellDamageAction.getFactory());
         register(CastSpellBientityAction.getFactory());
         register(CureVillagerAction.getFactory());
+        register(RaycastBetweenAction.getFactory());
     }
 
     private static void register(ActionFactory<Tuple<Entity, Entity>> serializer) {

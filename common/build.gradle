@@ -73,7 +73,6 @@ dependencies {
     }
     
     // Origins
-
     modCompileOnly("io.github.apace100:calio-1.11.2+mc.1.20.x") {transitive false}
     modCompileOnly("io.github.apace100:apoli-2.9.2+mc.1.20.x") {transitive false}
     modCompileOnly("io.github.apace100:Origins-1.10.2+mc.1.20.x") {transitive false}

@@ -2,6 +2,7 @@ package dev.muon.medievalorigins;
 
 import dev.muon.medievalorigins.action.ModBientityActions;
 import dev.muon.medievalorigins.action.ModEntityActions;
+import dev.muon.medievalorigins.attribute.ModAttributes;
 import dev.muon.medievalorigins.condition.ModBientityConditions;
 import dev.muon.medievalorigins.condition.ModEntityConditions;
 import dev.muon.medievalorigins.condition.ModItemConditions;
@@ -31,8 +32,8 @@ public class MedievalOrigins {
     public static void init() {
         LOG.info("Hello from Common init on {}! we are currently in a {} environment!", Services.PLATFORM.getPlatformName(), Services.PLATFORM.getEnvironmentName());
 
+        ModAttributes.register();
         ModEnchantments.register();
-        // ModEntities.register();
         ModEntityActions.register();
         ModBientityActions.register();
         ModItemConditions.register();

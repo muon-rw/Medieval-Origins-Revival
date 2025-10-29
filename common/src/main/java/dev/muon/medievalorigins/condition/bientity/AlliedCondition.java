@@ -1,4 +1,4 @@
-package dev.muon.medievalorigins.condition;
+package dev.muon.medievalorigins.condition.bientity;
 
 import dev.muon.medievalorigins.MedievalOrigins;
 import dev.muon.medievalorigins.compat.FTBTeamsUtils;

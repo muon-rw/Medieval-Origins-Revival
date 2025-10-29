@@ -5,6 +5,8 @@ import dev.muon.medievalorigins.platform.Services;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.damagesource.DamageSource;
@@ -33,6 +35,7 @@ public class SummonedZombie extends Zombie implements IFollowingSummon, ISummon 
      * Originally based off of Ars Nouveau, which is under the LGPL-v3.0 license
      */
     private static final EntityDataAccessor<Optional<UUID>> OWNER_UUID;
+    private static final EntityDataAccessor<Boolean> ORDERED_TO_SIT = SynchedEntityData.defineId(SummonedZombie.class, EntityDataSerializers.BOOLEAN);
 
     static {
         OWNER_UUID = IFollowingSummon.getOwnerUUIDAccessor(SummonedZombie.class);
@@ -178,6 +181,7 @@ public class SummonedZombie extends Zombie implements IFollowingSummon, ISummon 
         if (ownerUuid != null) {
             compound.putUUID("OwnerUUID", ownerUuid);
         }
+        compound.putBoolean("OrderedToSit", this.isOrderedToSit());
     }
     public void readAdditionalSaveData(CompoundTag compound) {
         super.readAdditionalSaveData(compound);
@@ -192,6 +196,9 @@ public class SummonedZombie extends Zombie implements IFollowingSummon, ISummon 
         }
         if (compound.hasUUID("OwnerUUID")) {
             this.setOwnerID(compound.getUUID("OwnerUUID"));
+        }
+        if (compound.contains("OrderedToSit")) {
+            this.setOrderedToSit(compound.getBoolean("OrderedToSit"));
         }
     }
 
@@ -221,6 +228,7 @@ public class SummonedZombie extends Zombie implements IFollowingSummon, ISummon 
     protected void defineSynchedData() {
         super.defineSynchedData();
         this.getEntityData().define(OWNER_UUID, Optional.empty());
+        this.getEntityData().define(ORDERED_TO_SIT, false);
     }
 
     @Override
@@ -237,6 +245,16 @@ public class SummonedZombie extends Zombie implements IFollowingSummon, ISummon 
     @Override
     public void setOwnerID(UUID uuid) {
         this.entityData.set(OWNER_UUID, Optional.ofNullable(uuid));
+    }
+
+    @Override
+    public void setOrderedToSit(boolean sit) {
+        this.entityData.set(ORDERED_TO_SIT, sit);
+    }
+
+    @Override
+    public boolean isOrderedToSit() {
+        return this.entityData.get(ORDERED_TO_SIT);
     }
 
     @Override

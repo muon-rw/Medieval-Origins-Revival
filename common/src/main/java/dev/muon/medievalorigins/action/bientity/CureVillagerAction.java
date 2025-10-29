@@ -1,4 +1,4 @@
-package dev.muon.medievalorigins.action;
+package dev.muon.medievalorigins.action.bientity;
 
 import dev.muon.medievalorigins.MedievalOrigins;
 import dev.muon.medievalorigins.mixin.ZombieVillagerInvoker;

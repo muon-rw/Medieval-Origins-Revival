@@ -1,3 +1,9 @@
+## 6.7.0
+- Add support for Origins (Fabric) 1.10.2+
+- Origins (Forge) is no longer supported. Forge versions now require Origins (Fabric), Sinytra Connector, and Connector Extras.
+- Removed Apugli (fixes incomatibility with Hold My Items, should greatly improve performance)
+
+
 ## 6.6.0
 - Changed Alfiq fall damage negation to be look-direction based, instead of fall distance
 - Made Alfiq meows louder and more spammable

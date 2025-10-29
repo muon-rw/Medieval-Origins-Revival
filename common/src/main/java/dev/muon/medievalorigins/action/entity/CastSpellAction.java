@@ -1,4 +1,4 @@
-package dev.muon.medievalorigins.action;
+package dev.muon.medievalorigins.action.entity;
 
 import dev.muon.medievalorigins.MedievalOrigins;
 import dev.muon.medievalorigins.platform.Services;

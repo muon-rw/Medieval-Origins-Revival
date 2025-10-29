@@ -1,4 +1,4 @@
-package dev.muon.medievalorigins.condition;
+package dev.muon.medievalorigins.condition.entity;
 
 import dev.muon.medievalorigins.MedievalOrigins;
 import io.github.apace100.apoli.power.factory.condition.ConditionFactory;

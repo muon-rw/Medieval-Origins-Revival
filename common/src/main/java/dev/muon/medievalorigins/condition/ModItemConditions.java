@@ -1,6 +1,7 @@
 package dev.muon.medievalorigins.condition;
 
 import dev.muon.medievalorigins.MedievalOrigins;
+import dev.muon.medievalorigins.condition.item.IsValkyrieWeaponCondition;
 import dev.muon.medievalorigins.enchantment.ModEnchantments;
 import io.github.apace100.apoli.power.factory.condition.ConditionFactory;
 import io.github.apace100.apoli.registry.ApoliRegistries;
