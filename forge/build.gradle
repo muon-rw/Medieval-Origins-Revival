@@ -60,6 +60,7 @@ repositories {
     maven { url "https://maven.blamejared.com" }
     maven { url "https://maven.ladysnake.org/releases" }
 
+    maven { url = "https://maven.bawnorton.com/releases" }
     maven { url "https://www.cursemaven.com"
         content {
             includeGroup "curse.maven" }
@@ -99,7 +100,7 @@ sourceSets.main.resources.srcDir 'src/generated/resources'
 dependencies {
     // Origins (from local libs/forge directory)
     // This is a modified version of the Origins jar, with Reach Entity Attributes removed manually, since gradle was failing to exclude it
-    // modImplementation ("io.github:Origins-1.10.2+mc.1.20.x_mapped_srg_1.20.1")
+    modImplementation ("io.github:Origins-1.10.2+mc.1.20.x_mapped_srg_1.20.1")
     // Remapped versions of Origins' bundled jars
     modImplementation ("io.github:Origins-1.10.2+mc.1.20.x\$apoli-2.9.2+mc.1.20.x_mapped_srg_1.20.1")
     modImplementation ("io.github:Origins-1.10.2+mc.1.20.x\$apoli-2.9.2+mc.1.20.x\$calio-1.11.2+mc.1.20.x_mapped_srg_1.20.1")
@@ -109,6 +110,8 @@ dependencies {
     modImplementation ("io.github:Origins-1.10.2+mc.1.20.x\$apoli-2.9.2+mc.1.20.x\$AdditionalEntityAttributes-1.7.4+1.20.0_mapped_srg_1.20.1")
 
     // Mixin
+    implementation(annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-common:${mixin_squared_version}"))
+    implementation(annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-forge:${mixin_squared_version}"))
     implementation(annotationProcessor("io.github.llamalad7:mixinextras-common:${mixin_extras_version}"))
     jarJar(implementation("io.github.llamalad7:mixinextras-forge:${mixin_extras_version}")) {
         version {
@@ -120,7 +123,7 @@ dependencies {
 
     // Connector
     modImplementation ("curse.maven:sinytra-connector-890127:5761411")
-    // implementation ("curse.maven:connector-extras-913445:5490637")
+    modImplementation ("curse.maven:connector-extras-913445:5490637")
     modImplementation ("curse.maven:forgified-fabric-api-889079:6885853")
 
     // Icarus

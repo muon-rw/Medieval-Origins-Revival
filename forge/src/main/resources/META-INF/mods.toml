@@ -26,6 +26,12 @@ versionRange = "[1.20.1]"
 ordering = "NONE"
 side = "BOTH"
 [[dependencies.medievalorigins]]
+modId = "origins"
+mandatory = true
+versionRange = "*"
+ordering = "NONE"
+side = "BOTH"
+[[dependencies.medievalorigins]]
 modId = "pehkui"
 mandatory = false
 versionRange = "*"

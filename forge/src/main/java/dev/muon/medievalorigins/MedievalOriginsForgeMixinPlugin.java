@@ -1,5 +1,7 @@
 package dev.muon.medievalorigins;
 
+import com.bawnorton.mixinsquared.canceller.MixinCancellerRegistrar;
+import dev.muon.medievalorigins.mixin.MedievalOriginsMixinCanceller;
 import net.minecraftforge.fml.loading.moddiscovery.ModInfo;
 import net.minecraftforge.fml.loading.LoadingModList;
 import org.objectweb.asm.tree.ClassNode;
@@ -12,8 +14,8 @@ import java.util.Set;
 public class MedievalOriginsForgeMixinPlugin implements IMixinConfigPlugin {
     @Override
     public void onLoad(String mixinPackage) {
+        MixinCancellerRegistrar.register(new MedievalOriginsMixinCanceller());
     }
-
     @Override
     public String getRefMapperConfig() {
         return null;
