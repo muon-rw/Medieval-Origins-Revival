@@ -2,6 +2,7 @@ package dev.muon.medievalorigins;
 
 import dev.muon.medievalorigins.entity.ModEntities;
 import dev.muon.medievalorigins.sounds.ModSounds;
+import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;

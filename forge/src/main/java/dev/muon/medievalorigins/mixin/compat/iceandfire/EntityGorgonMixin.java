@@ -3,14 +3,10 @@ package dev.muon.medievalorigins.mixin.compat.iceandfire;
 import com.github.alexthe666.iceandfire.entity.EntityGorgon;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import dev.muon.medievalorigins.enchantment.ModEnchantments;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.enchantment.Enchantment;
-import net.minecraftforge.registries.ForgeRegistries;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 

@@ -10,7 +10,6 @@
     "ZombieVillagerInvoker"
   ],
   "client": [
-    "client.compat.icarus.IcarusClientMixin",
     "client.AbstractClientPlayerMixin",
     "client.ElytraModelMixin"
   ],

@@ -11,6 +11,9 @@
     "compat.iceandfire.SirenDataMixin",
     "compat.irons_spellbooks.AbstractSpellMixin"
   ],
+  "client": [
+    "client.compat.icarus.IcarusClientMixin"
+  ],
   "injectors": {
     "defaultRequire": 1
   }

@@ -7,8 +7,8 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "compat.icarus.IcarusHelperMixin",
-    "spell_engine.SpellCooldownMixin",
-    "spell_engine.SpellHelperMixin",
+    "compat.spell_engine.SpellCooldownMixin",
+    "compat.spell_engine.SpellHelperMixin",
     "ZombieVillagerInvoker"
   ],
   "client": [

@@ -15,7 +15,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-@Mixin(AbstractClientPlayer.class)
+@Mixin(value = AbstractClientPlayer.class, remap = true)
 public abstract class AbstractClientPlayerMixin extends Player {
     @Unique
     private static final int TICK_INTERVAL = 2;
@@ -26,7 +26,7 @@ public abstract class AbstractClientPlayerMixin extends Player {
         super(pLevel, pPos, pYRot, pGameProfile);
     }
 
-    @Inject(method = "tick()V", at = @At("TAIL"), remap = false)
+    @Inject(method = "tick()V", at = @At("TAIL"))
     private void onTick(CallbackInfo ci) {
         AbstractClientPlayer player = (AbstractClientPlayer) (Player) this;
         if (player.tickCount % TICK_INTERVAL == 0 && PixieWingsPower.hasPower(player)) {

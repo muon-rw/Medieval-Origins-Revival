@@ -1,4 +1,4 @@
-package dev.muon.medievalorigins.mixin.spell_engine;
+package dev.muon.medievalorigins.mixin.compat.spell_engine;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
