@@ -21,7 +21,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "dev.muon.medievalorigins.MedievalOrigins"
+      "dev.muon.medievalorigins.MedievalOriginsFabric"
     ],
     "client": [
       "dev.muon.medievalorigins.client.MedievalOriginsClient"

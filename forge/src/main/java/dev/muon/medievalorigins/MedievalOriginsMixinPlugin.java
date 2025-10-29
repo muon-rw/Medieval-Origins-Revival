@@ -1,6 +1,5 @@
 package dev.muon.medievalorigins;
 
-import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.loading.moddiscovery.ModInfo;
 import net.minecraftforge.fml.loading.LoadingModList;
 import org.objectweb.asm.tree.ClassNode;
@@ -34,10 +33,7 @@ public class MedievalOriginsMixinPlugin implements IMixinConfigPlugin {
     }
 
     private static boolean isModLoaded(String modId) {
-        if (ModList.get() == null) {
-            return LoadingModList.get().getMods().stream().map(ModInfo::getModId).anyMatch(modId::equals);
-        }
-        return ModList.get().isLoaded(modId);
+        return LoadingModList.get().getMods().stream().map(ModInfo::getModId).anyMatch(modId::equals);
     }
 
 

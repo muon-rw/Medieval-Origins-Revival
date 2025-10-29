@@ -27,6 +27,6 @@ public class ModSounds {
         return Registry.register(BuiltInRegistries.SOUND_EVENT, id, SoundEvent.createVariableRangeEvent(id));
     }
     public static void register() {
-        MedievalOrigins.LOGGER.info("Registering Sounds for " + MedievalOrigins.LOGGER.getName());
+        MedievalOrigins.LOG.info("Registering Sounds for " + MedievalOrigins.MOD_NAME);
     }
 }

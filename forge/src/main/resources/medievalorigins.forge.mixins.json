@@ -6,17 +6,12 @@
   "refmap": "medievalorigins.refmap.json",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "ZombieVillagerInvoker",
-    "compat.icarus.IcarusHelperMixin",
     "compat.iceandfire.EntityGorgonMixin",
     "compat.iceandfire.PixieAIStealMixin",
     "compat.iceandfire.SirenDataMixin",
     "compat.irons_spellbooks.AbstractSpellMixin"
   ],
   "client": [
-    "client.AbstractClientPlayerMixin",
-    "client.ElytraModelMixin",
-    "compat.icarus.IcarusClientMixin"
   ],
   "server": [
   ],

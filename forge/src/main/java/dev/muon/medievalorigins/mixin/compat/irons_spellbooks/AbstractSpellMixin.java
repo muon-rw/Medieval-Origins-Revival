@@ -1,6 +1,6 @@
 package dev.muon.medievalorigins.mixin.compat.irons_spellbooks;
 
-import dev.muon.medievalorigins.action.CastSpellAction;
+import dev.muon.medievalorigins.compat.IronsSpellbooksUtils;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import net.minecraft.server.level.ServerPlayer;
@@ -17,14 +17,14 @@ public class AbstractSpellMixin {
     @Inject(method = "onServerCastTick", at = @At("HEAD"))
     private void onSpellTick(Level level, int spellLevel, LivingEntity entity, MagicData playerMagicData, CallbackInfo ci) {
         if (entity instanceof ServerPlayer serverPlayer) {
-            CastSpellAction.onSpellTick(serverPlayer, playerMagicData);
+            IronsSpellbooksUtils.onSpellTick(serverPlayer, playerMagicData);
         }
     }
 
     @Inject(method = "onServerCastComplete", at = @At("HEAD"))
     private void onSpellEnd(Level level, int spellLevel, LivingEntity entity, MagicData playerMagicData, boolean cancelled, CallbackInfo ci) {
         if (entity instanceof ServerPlayer serverPlayer) {
-            CastSpellAction.onSpellEnd(serverPlayer);
+            IronsSpellbooksUtils.onSpellEnd(serverPlayer);
         }
     }
 }

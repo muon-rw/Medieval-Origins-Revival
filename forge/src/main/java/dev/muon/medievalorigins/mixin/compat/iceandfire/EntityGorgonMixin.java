@@ -25,7 +25,7 @@ public abstract class EntityGorgonMixin {
         if (attackTarget instanceof Player player) {
             ItemStack helmet = player.getItemBySlot(EquipmentSlot.HEAD);
             if (!helmet.isEmpty()) {
-                if (helmet.getEnchantmentLevel(ModEnchantments.MIRRORING.get()) > 0) {
+                if (helmet.getEnchantmentLevel(ModEnchantments.MIRRORING) > 0) {
                     return true;
                 }
             }

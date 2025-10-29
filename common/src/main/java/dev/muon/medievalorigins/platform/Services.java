@@ -1,7 +1,9 @@
 package dev.muon.medievalorigins.platform;
 
-import dev.muon.medievalorigins.Constants;
+import dev.muon.medievalorigins.MedievalOrigins;
+import dev.muon.medievalorigins.platform.services.IEntityHelper;
 import dev.muon.medievalorigins.platform.services.IPlatformHelper;
+import dev.muon.medievalorigins.platform.services.ISpellHelper;
 
 import java.util.ServiceLoader;
 
@@ -15,6 +17,12 @@ public class Services {
     // mod is loaded.
     public static final IPlatformHelper PLATFORM = load(IPlatformHelper.class);
 
+    // Spell power and spell casting helper - handles Spell Engine (Fabric) and Iron's Spellbooks (Forge)
+    public static final ISpellHelper SPELL_POWER = load(ISpellHelper.class);
+
+    // Entity helper - provides access to registered entity types
+    public static final IEntityHelper ENTITIES = load(IEntityHelper.class);
+
     // This code is used to load a service for the current environment. Your implementation of the service must be defined
     // manually by including a text file in META-INF/services named with the fully qualified class name of the service.
     // Inside the file you should write the fully qualified class name of the implementation to load for the platform. For
@@ -24,7 +32,7 @@ public class Services {
         final T loadedService = ServiceLoader.load(clazz)
                 .findFirst()
                 .orElseThrow(() -> new NullPointerException("Failed to load service for " + clazz.getName()));
-        Constants.LOG.debug("Loaded {} for service {}", loadedService, clazz);
+        MedievalOrigins.LOG.debug("Loaded {} for service {}", loadedService, clazz);
         return loadedService;
     }
 }
