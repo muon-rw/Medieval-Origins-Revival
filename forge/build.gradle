@@ -1,31 +1,47 @@
-import net.darkhax.curseforgegradle.TaskPublishCurseForge
+plugins {
+    id 'multiloader-loader'
+    id 'net.neoforged.moddev.legacyforge'
+}
 
-buildscript {
-    repositories {
-        maven { url 'https://maven.minecraftforge.net' }
-        maven { url 'https://repo.spongepowered.org/repository/maven-public/' }
-        maven { url "https://plugins.gradle.org/m2/" }
-        maven { url 'https://maven.parchmentmc.org' }
-        mavenCentral()
-        gradlePluginPortal()
+mixin {
+    add(sourceSets.main, "${mod_id}.refmap.json")
+
+    config("${mod_id}.mixins.json")
+    config("${mod_id}.forge.mixins.json")
+}
+
+legacyForge {
+    version = "${minecraft_version}-${forge_version}"
+
+    validateAccessTransformers = true
+
+    def at = project(':common').file('src/main/resources/META-INF/accesstransformer.cfg')
+    if (at.exists()) {
+        accessTransformers = ["src/main/resources/META-INF/accesstransformer.cfg"]
+    }
+    parchment {
+        minecraftVersion = parchment_minecraft
+        mappingsVersion = parchment_version
+    }
+    runs {
+        client {
+            client()
+        }
+        data {
+            data()
+            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
+        }
+        server {
+            server()
+        }
+    }
+
+    mods {
+        "${mod_id}" {
+            sourceSet sourceSets.main
+        }
     }
 }
-
-plugins {
-    id 'java'
-    id 'net.minecraftforge.gradle' version '6.+'
-    id 'org.parchmentmc.librarian.forgegradle' version '1.+'
-    id 'eclipse'
-    id 'org.spongepowered.mixin' version '0.7.+'
-    id 'maven-publish'
-    id "net.darkhax.curseforgegradle" version "1.0.7"
-    id "com.modrinth.minotaur" version "2.+"
-}
-
-archivesBaseName = "${mod_name}"
-version = "${rootProject.version}+${minecraft_version}-forge"
-
-jarJar.enable()
 
 repositories {
     flatDir { dir "${rootProject.rootDir}/libs/forge/" }
@@ -78,214 +94,61 @@ repositories {
 
 }
 
-mixin {
-    add sourceSets.main, "medievalorigins.refmap.json"
-
-    config "${mod_id}.mixins.json"
-    config "${mod_id}.forge.mixins.json"
-}
-
-minecraft {
-    mappings channel: 'parchment', version: "${parchment_version}-${minecraft_version}"
-    accessTransformer file('src/main/resources/META-INF/accesstransformer.cfg')
-
-    runs {
-        client {
-            workingDirectory project.file('run')
-            ideaModule "${rootProject.name}.${project.name}.main"
-            taskName 'Client'
-            args "-mixin.config=${mod_id}.mixins.json", "-mixin.config=${mod_id}.forge.mixins.json", "--username", "Dev2"
-            mods {
-                create(mod_id) {
-                    source sourceSets.main
-                    source sourceSets.test
-                    source project(":common").sourceSets.main
-                    source project(":common").sourceSets.test
-                }
-            }
-        }
-
-        server {
-            workingDirectory project.file('run')
-            ideaModule "${rootProject.name}.${project.name}.main"
-            taskName 'Server'
-            args "-mixin.config=${mod_id}.mixins.json", "-mixin.config=${mod_id}.forge.mixins.json"
-            mods {
-                create(mod_id) {
-                    source sourceSets.main
-                    source sourceSets.test
-                    source project(":common").sourceSets.main
-                    source project(":common").sourceSets.test
-                }
-            }
-        }
-
-        data {
-            workingDirectory project.file('run')
-            ideaModule "${rootProject.name}.${project.name}.main"
-            args '--mod', mod_id, '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
-            taskName 'Data'
-            args "-mixin.config=${mod_id}.mixins.json", "-mixin.config=${mod_id}.forge.mixins.json"
-            mods {
-                create(mod_id) {
-                    source sourceSets.main
-                    source project(":common").sourceSets.main
-                }
-            }
-        }
-    }
-}
-
 sourceSets.main.resources.srcDir 'src/generated/resources'
 
 dependencies {
-    // Forge
-    minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
-
-
     // Origins (from local libs/forge directory)
-    implementation ("io.github:Origins-1.10.2+mc.1.20.x_mapped_srg_1.20.1")
-    implementation ("io.github:Origins-1.10.2+mc.1.20.x\$apoli-2.9.2+mc.1.20.x_mapped_srg_1.20.1")
-    implementation ("io.github:Origins-1.10.2+mc.1.20.x\$apoli-2.9.2+mc.1.20.x\$calio-1.11.2+mc.1.20.x_mapped_srg_1.20.1")
-    implementation ("io.github:Origins-1.10.2+mc.1.20.x\$apoli-2.9.2+mc.1.20.x\$cardinal-components-base-5.2.1_mapped_srg_1.20.1")
-    implementation ("io.github:Origins-1.10.2+mc.1.20.x\$apoli-2.9.2+mc.1.20.x\$cardinal-components-entity-5.2.1_mapped_srg_1.20.1")
-    implementation ("io.github:Origins-1.10.2+mc.1.20.x\$apoli-2.9.2+mc.1.20.x\$PlayerAbilityLib-1.8.0_mapped_srg_1.20.1")
-    implementation ("io.github:Origins-1.10.2+mc.1.20.x\$apoli-2.9.2+mc.1.20.x\$AdditionalEntityAttributes-1.7.4+1.20.0_mapped_srg_1.20.1")
+    // This is a modified version of the Origins jar, with Reach Entity Attributes removed manually, since gradle was failing to exclude it
+    // modImplementation ("io.github:Origins-1.10.2+mc.1.20.x_mapped_srg_1.20.1")
+    // Remapped versions of Origins' bundled jars
+    modImplementation ("io.github:Origins-1.10.2+mc.1.20.x\$apoli-2.9.2+mc.1.20.x_mapped_srg_1.20.1")
+    modImplementation ("io.github:Origins-1.10.2+mc.1.20.x\$apoli-2.9.2+mc.1.20.x\$calio-1.11.2+mc.1.20.x_mapped_srg_1.20.1")
+    modImplementation ("io.github:Origins-1.10.2+mc.1.20.x\$apoli-2.9.2+mc.1.20.x\$cardinal-components-base-5.2.1_mapped_srg_1.20.1")
+    modImplementation ("io.github:Origins-1.10.2+mc.1.20.x\$apoli-2.9.2+mc.1.20.x\$cardinal-components-entity-5.2.1_mapped_srg_1.20.1")
+    modImplementation ("io.github:Origins-1.10.2+mc.1.20.x\$apoli-2.9.2+mc.1.20.x\$PlayerAbilityLib-1.8.0_mapped_srg_1.20.1")
+    modImplementation ("io.github:Origins-1.10.2+mc.1.20.x\$apoli-2.9.2+mc.1.20.x\$AdditionalEntityAttributes-1.7.4+1.20.0_mapped_srg_1.20.1")
 
     // Mixin
-    compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:${mixin_extras_version}"))
-    implementation(jarJar("io.github.llamalad7:mixinextras-forge:${mixin_extras_version}")) {
-        jarJar.ranged(it, "[${mixin_extras_version},)")
+    implementation(annotationProcessor("io.github.llamalad7:mixinextras-common:${mixin_extras_version}"))
+    jarJar(implementation("io.github.llamalad7:mixinextras-forge:${mixin_extras_version}")) {
+        version {
+        strictly '[0.5.0, 1.0)'
+        prefer '0.5.0'
+        }
     }
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
-    // Connector (from Maven)
-    implementation fg.deobf("curse.maven:sinytra-connector-890127:5761411")
-    implementation fg.deobf("curse.maven:connector-extras-913445:5490637")
-    implementation fg.deobf("curse.maven:forgified-fabric-api-889079:6885853")
-
-    // Pehkui
-    implementation fg.deobf("com.github.Virtuoel:Pehkui:${pehkui_version}-${minecraft_version}-forge")
-
-    // Common project
-    implementation project(":common")
+    // Connector
+    modImplementation ("curse.maven:sinytra-connector-890127:5761411")
+    // implementation ("curse.maven:connector-extras-913445:5490637")
+    modImplementation ("curse.maven:forgified-fabric-api-889079:6885853")
 
     // Icarus
-    implementation fg.deobf("maven.modrinth:icarus:${project.icarus_version}+NeoForge")
-    runtimeOnly fg.deobf("com.teamresourceful.resourcefulconfig:resourcefulconfig-forge-1.20.1:${project.resourceful_version}")
-    runtimeOnly fg.deobf("mysticdrew:common-networking-forge:${project.cmnw_version}")
-    compileOnly(fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}:api"))
-    runtimeOnly(fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}"))
+    modImplementation ("maven.modrinth:icarus:${project.icarus_version}+NeoForge")
+    modRuntimeOnly ("com.teamresourceful.resourcefulconfig:resourcefulconfig-forge-1.20.1:${project.resourceful_version}")
+    modRuntimeOnly ("mysticdrew:common-networking-forge:${project.cmnw_version}")
+    modCompileOnly(("top.theillusivec4.curios:curios-forge:${curios_version}:api"))
+    modRuntimeOnly(("top.theillusivec4.curios:curios-forge:${curios_version}"))
 
     // Iron's Spells n Spellbooks
-    implementation fg.deobf("io.redspace.ironsspellbooks:irons_spellbooks:${irons_version}")
-    runtimeOnly fg.deobf("software.bernie.geckolib:geckolib-forge-${geckolib_version}")
-    runtimeOnly fg.deobf("dev.kosmx.player-anim:player-animation-lib-forge:${player_animator_version}")
+    modImplementation ("io.redspace.ironsspellbooks:irons_spellbooks:${irons_version}")
+    modRuntimeOnly ("software.bernie.geckolib:geckolib-forge-${geckolib_version}")
+    modRuntimeOnly ("dev.kosmx.player-anim:player-animation-lib-forge:${player_animator_version}")
+    modRuntimeOnly ("top.theillusivec4.caelus:caelus-forge:${caelus_version}+1.20")
 
     // Ice and Fire
-    implementation fg.deobf("curse.maven:ice-and-fire-dragons-264231:5633453")
-    implementation fg.deobf("curse.maven:citadel-331936:5633260")
+    modImplementation ("curse.maven:ice-and-fire-dragons-264231:5633453")
+    modImplementation ("curse.maven:citadel-331936:5633260")
 
     // FTB
-    implementation fg.deobf("dev.ftb.mods:ftb-teams-forge:${project.ftb_teams_version}")
+    modImplementation ("dev.ftb.mods:ftb-teams-forge:${project.ftb_teams_version}")
+    modRuntimeOnly ("dev.ftb.mods:ftb-library-forge:${project.ftb_library_version}")
+    modRuntimeOnly ("curse.maven:architectury-api-419699:5137938")
 }
 
-tasks.withType(JavaCompile) {
-    source(project(":common").sourceSets.main.allSource)
+jar {
+    finalizedBy('reobfJar')
+    manifest.attributes([
+            "MixinConfigs": "${mod_id}.mixins.json,${mod_id}.forge.mixins.json"
+    ])
 }
-
-processResources {
-    from project(':common').sourceSets.main.resources
-    exclude "medievalorigins.common.accesswidener"
-
-    inputs.property 'version', project.version
-
-    filesMatching('META-INF/mods.toml') {
-        expand 'version': project.version
-    }
-}
-
-processTestResources {
-    outputs.upToDateWhen { false }
-    from project(":common").sourceSets.test.resources
-
-    filesMatching('META-INF/mods.toml') {
-        expand 'version': project.version
-    }
-}
-
-tasks.jarJar.configure {
-    archiveClassifier = ""
-    dependsOn('reobfJar')
-}
-
-reobf {
-    jarJar {}
-}
-
-jar.finalizedBy('reobfJarJar')
-
-tasks.withType(AbstractPublishToMaven) {
-    dependsOn('jarJar')
-}
-
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            groupId project.group
-            artifactId project.archivesBaseName
-            version project.version
-            artifact jar
-        }
-    }
-
-    repositories {
-        maven {
-            name = "greenhouse"
-            url = "https://maven.greenhouseteam.dev/releases"
-            credentials {
-                username System.getenv('MAVEN_USERNAME')
-                password System.getenv('MAVEN_PASSWORD')
-            }
-            authentication {
-                create("basic", BasicAuthentication)
-            }
-        }
-        mavenLocal()
-    }
-}
-
-modrinth {
-    token = System.getenv("MODRINTH_TOKEN")
-    projectId = "medieval-origins-revival"
-    versionNumber = "${version}"
-    versionType = "release"
-    versionName = "Forge-${rootProject.version}+${minecraft_version}"
-    changelog = new File("$project.rootDir/CHANGELOG.md").getText('UTF-8')
-    uploadFile = jar
-    gameVersions = forge_game_versions.split(", ").toList()
-    loaders = forge_mod_loaders.split(", ").collect { return it.toLowerCase(Locale.ROOT) }
-    dependencies {
-        required.project("origins-forge")
-        required.project("pehkui")
-    }
-}
-
-task publishCurseForge(type: net.darkhax.curseforgegradle.TaskPublishCurseForge) {
-    apiToken = System.getenv("CF_TOKEN")
-
-    def mainFile = upload(897171, jar)
-    mainFile.displayName = "Forge-${rootProject.version}+${minecraft_version}"
-    mainFile.releaseType = "release"
-    mainFile.changelog = new File("$project.rootDir/CHANGELOG.md").getText('UTF-8')
-    mainFile.changelogType = "markdown"
-    forge_mod_loaders.split(", ").each {
-        mainFile.addModLoader(it)
-    }
-    forge_game_versions.split(", ").each {
-        mainFile.addGameVersion(it)
-    }
-    mainFile.addRequirement("origins-forge")
-    mainFile.addRequirement("pehkui")
-}
-

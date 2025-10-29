@@ -1,5 +1,6 @@
 package dev.muon.medievalorigins.mixin.compat.iceandfire;
 
+/*
 import com.github.alexthe666.iceandfire.entity.ai.PixieAISteal;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import dev.muon.medievalorigins.MedievalOrigins;
@@ -25,3 +26,6 @@ public class PixieAIStealMixin {
         return original;
     }
 }
+
+
+ */

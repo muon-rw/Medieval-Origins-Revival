@@ -5,13 +5,13 @@ license = "MIT" # Review your options at https://choosealicense.com/.
 [[mods]] #mandatory
 modId = "medievalorigins" #mandatory
 version = "${version}" #mandatory
-displayName = "MedievalOriginsRevival" #mandatory
+displayName = "Medieval Origins Revival" #mandatory
 refmapName="medievalorigins.refmap.json"
 #updateJSONURL="https://change.me.example.invalid/updates.json" #optional (see https://mcforge.readthedocs.io/en/latest/gettingstarted/autoupdate/)
 #displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional (displayed in the mod UI)
 logoFile = "icon.png" #optional (needs to be in the root of your mod jar (root of your 'resources' folder))
-credits = "Thank you for this template MerchantPug you saved my life" #optional
-authors = "Muon" #optional
+credits = "" #optional
+authors = "MuonR" #optional
 description = 'Origins inspired by mythology, fantasy, and the medieval era' #mandatory (Supports multiline text)
 [[dependencies.medievalorigins]] #optional
 modId = "forge" #mandatory

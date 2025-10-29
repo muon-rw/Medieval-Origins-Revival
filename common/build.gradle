@@ -1,11 +1,20 @@
 plugins {
-    id 'java'
+    id 'multiloader-common'
     id 'fabric-loom'
-    id 'maven-publish'
 }
 
 archivesBaseName = "${mod_name}"
 version = "${rootProject.version}+${minecraft_version}-common"
+
+loom {
+    if (file("src/main/resources/${mod_id}.accesswidener").exists()) {
+        accessWidenerPath.set(file("src/main/resources/${mod_id}.accesswidener"))
+    }
+    mixin {
+        defaultRefmapName.set("${mod_id}.mixins.refmap.json")
+    }
+}
+
 
 repositories {
     flatDir { dir "${rootProject.rootDir}/libs/" }
@@ -51,25 +60,20 @@ repositories {
     }
     maven { url "https://maven.shedaniel.me" }
     maven { url = 'https://maven.ladysnake.org/releases' }
+
     mavenCentral()
     mavenLocal()
 }
 
-loom {
-    accessWidenerPath = file("src/main/resources/medievalorigins.common.accesswidener")
-    mixin {
-        useLegacyMixinAp = false
-    }
-}
-
 dependencies {
-    // Minecraft
     minecraft "com.mojang:minecraft:${minecraft_version}"
     mappings loom.layered() {
         officialMojangMappings()
-        parchment("org.parchmentmc.data:parchment-${minecraft_version}:${parchment_version}@zip")
+        parchment("org.parchmentmc.data:parchment-${parchment_minecraft}:${parchment_version}@zip")
     }
+    
     // Origins
+
     modCompileOnly("io.github.apace100:calio-1.11.2+mc.1.20.x") {transitive false}
     modCompileOnly("io.github.apace100:apoli-2.9.2+mc.1.20.x") {transitive false}
     modCompileOnly("io.github.apace100:Origins-1.10.2+mc.1.20.x") {transitive false}
@@ -82,11 +86,25 @@ dependencies {
     modCompileOnly("maven.modrinth:icarus:${project.icarus_version}+Fabric")
 
     compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:${mixin_extras_version}"))
-    implementation("io.github.llamalad7:mixinextras-forge:${mixin_extras_version}")
+    compileOnly group:'org.spongepowered', name:'mixin', version:'0.8.5'
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
-    compileOnly group:'org.spongepowered', name:'mixin', version:'0.8.5'
     compileOnly group: 'org.ow2.asm', name: 'asm-tree', version: '9.4'
 
     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
+}
+configurations {
+    commonJava {
+        canBeResolved = false
+        canBeConsumed = true
+    }
+    commonResources {
+        canBeResolved = false
+        canBeConsumed = true
+    }
+}
+
+artifacts {
+    commonJava sourceSets.main.java.sourceDirectories.singleFile
+    commonResources sourceSets.main.resources.sourceDirectories.singleFile
 }

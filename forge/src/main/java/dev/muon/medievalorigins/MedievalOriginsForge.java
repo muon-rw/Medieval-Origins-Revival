@@ -11,7 +11,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 @Mod(MedievalOrigins.MOD_ID)
 public class MedievalOriginsForge {
 
-    public MedievalOriginsForge(FMLJavaModLoadingContext context, IEventBus modEventBus) {
+    public MedievalOriginsForge() {
+        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         MedievalOrigins.LOG.info("Loading Medieval Origins");
         modEventBus.addListener(this::commonSetup);
         MedievalOrigins.init();

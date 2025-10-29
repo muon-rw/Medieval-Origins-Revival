@@ -1,5 +1,6 @@
 package dev.muon.medievalorigins.mixin.compat.iceandfire;
 
+/*
 import com.github.alexthe666.iceandfire.entity.props.SirenData;
 import dev.muon.medievalorigins.MedievalOrigins;
 import io.github.apace100.origins.component.OriginComponent;
@@ -26,3 +27,5 @@ public class SirenDataMixin {
         }
     }
 }
+
+ */

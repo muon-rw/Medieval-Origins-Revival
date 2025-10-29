@@ -1,11 +1,6 @@
-import net.darkhax.curseforgegradle.TaskPublishCurseForge
-
 plugins {
+    id 'multiloader-loader'
     id 'fabric-loom'
-    id 'maven-publish'
-    id 'idea'
-    id "net.darkhax.curseforgegradle" version "1.0.7"
-    id "com.modrinth.minotaur" version "2.+"
 }
 
 archivesBaseName = "${mod_name}"
@@ -13,8 +8,12 @@ version = "${rootProject.version}+${minecraft_version}-fabric"
 
 
 loom {
-    mixin.defaultRefmapName = "medievalorigins.refmap.json"
-
+    if (project(":common").file("src/main/resources/${mod_id}.accesswidener").exists()) {
+        accessWidenerPath.set(project(":common").file("src/main/resources/${mod_id}.accesswidener"))
+    }
+    mixin {
+        defaultRefmapName.set("${mod_id}.refmap.json")
+    }
     runs {
         client {
             client()
@@ -30,6 +29,7 @@ loom {
         }
     }
 }
+
 repositories {
 
     flatDir { dir "${rootProject.rootDir}/libs/" }
@@ -123,12 +123,11 @@ dependencies {
     modApi("dev.onyxstudios.cardinal-components-api:cardinal-components-base:${project.cca_version}") {exclude(group: "net.fabricmc.fabric-api")}
     modApi("dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${project.cca_version}") {exclude(group: "net.fabricmc.fabric-api")}
     modApi("me.shedaniel.cloth:cloth-config-fabric:${cloth_config_version}") {exclude(group: "net.fabricmc.fabric-api")}
-    modApi("com.jamieswhiteshirt:reach-entity-attributes:${project.rea_version}")
-    modImplementation("com.jamieswhiteshirt:reach-entity-attributes:${project.rea_version}")
+    // modImplementation("com.jamieswhiteshirt:reach-entity-attributes:${project.rea_version}")
     include(modApi("maven.modrinth:AdditionalEntityAttributes:${project.aea_version}"))
 
     // Misc Required
-    implementation project(path: ":common", configuration: "namedElements")
+    // implementation project(path: ":common", configuration: "namedElements")
     modImplementation include("maven.modrinth:projectile-damage-attribute:${project.projectile_damage}-fabric")
     modApi("com.github.Virtuoel:Pehkui:${pehkui_version}", {exclude group: "net.fabricmc.fabric-api"})
 
@@ -153,84 +152,4 @@ dependencies {
     modImplementation("dev.ftb.mods:ftb-teams-fabric:${project.ftb_teams_version}")
 
     //runtimeOnly "curse.maven:architectury-api-419699:5137936"
-}
-
-processResources {
-    from project(":common").sourceSets.main.resources
-    exclude "medievalorigins.common.accesswidener"
-
-    inputs.property "version", project.version
-
-    filesMatching("fabric.mod.json") {
-        expand "version": project.version
-    }
-}
-
-processTestResources {
-    outputs.upToDateWhen { false }
-    from project(":common").sourceSets.test.resources
-}
-
-tasks.withType(JavaCompile) {
-    source(project(":common").sourceSets.main.allSource)
-}
-
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            groupId project.group
-            artifactId project.archivesBaseName
-            version project.version
-            from components.java
-        }
-    }
-
-    repositories {
-        maven {
-            name = "greenhouse"
-            url = "https://maven.greenhouseteam.dev/releases"
-            credentials {
-                username System.getenv('MAVEN_USERNAME')
-                password System.getenv('MAVEN_PASSWORD')
-            }
-            authentication {
-                create("basic", BasicAuthentication)
-            }
-        }
-        mavenLocal()
-    }
-}
-
-
-modrinth {
-    token = System.getenv("MODRINTH_TOKEN")
-    projectId = "medieval-origins-revival"
-    versionNumber = "${version}"
-    versionType = "release"
-    versionName = "Fabric-${rootProject.version}+${minecraft_version}"
-    uploadFile = remapJar
-    gameVersions = ["1.20.1"]
-    loaders = ["fabric"]
-    changelog = new File("$project.rootDir/CHANGELOG.md").getText('UTF-8')
-    //debugMode = true
-    dependencies {
-        required.project("origins")
-        required.project("pehkui")
-        required.project("spell-engine")
-    }
-}
-
-task publishCurseForge(type: net.darkhax.curseforgegradle.TaskPublishCurseForge) {
-    apiToken = System.getenv("CF_TOKEN")
-    //debugMode = true
-    def mainFile = upload(897171, remapJar)
-    mainFile.changelog = new File("$project.rootDir/CHANGELOG.md").getText('UTF-8')
-    mainFile.changelogType = "markdown"
-    mainFile.releaseType = "release"
-    mainFile.addGameVersion("1.20.1")
-    mainFile.addModLoader("fabric")
-    mainFile.displayName = "Fabric-${rootProject.version}+${minecraft_version}"
-    mainFile.addRequirement("origins")
-    mainFile.addRequirement("pehkui")
-    mainFile.addRequirement("spell-engine")
 }
