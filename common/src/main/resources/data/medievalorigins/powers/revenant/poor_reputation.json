@@ -26,7 +26,7 @@
 		}
 	},
 	"pillager_team": {
-		"type": "apugli:mobs_ignore",
+		"type": "medievalorigins:mobs_ignore",
 		"condition": {
 			"type": "origins:resource",
 			"resource": "*:*_cooldown",

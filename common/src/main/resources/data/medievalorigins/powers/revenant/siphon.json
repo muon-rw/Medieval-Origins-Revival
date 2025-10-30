@@ -62,12 +62,12 @@
 			"type": "origins:and",
 			"actions": [
 				{
-					"type": "apugli:raycast_between",
+					"type": "medievalorigins:raycast_between",
 					"particle": "minecraft:enchant",
 					"spacing": 0.33
 				},
 				{
-					"type": "apugli:raycast_between",
+					"type": "medievalorigins:raycast_between",
 					"particle": "minecraft:smoke",
 					"spacing": 1
 				},

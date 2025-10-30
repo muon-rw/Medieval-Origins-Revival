@@ -1,6 +1,7 @@
 package dev.muon.medievalorigins.condition;
 
 import dev.muon.medievalorigins.MedievalOrigins;
+import dev.muon.medievalorigins.condition.item.IsSummonEquipmentCondition;
 import dev.muon.medievalorigins.condition.item.IsValkyrieWeaponCondition;
 import dev.muon.medievalorigins.enchantment.ModEnchantments;
 import io.github.apace100.apoli.power.factory.condition.ConditionFactory;
@@ -43,6 +44,7 @@ public class ModItemConditions {
         }));
 
         register(IsValkyrieWeaponCondition.getFactory());
+        register(IsSummonEquipmentCondition.getFactory());
 
         register(new ConditionFactory<>(MedievalOrigins.loc("is_fist_weapon"), new SerializableData(), (data, stack) -> {
             String itemName = BuiltInRegistries.ITEM.getKey(stack.getItem()).getPath();

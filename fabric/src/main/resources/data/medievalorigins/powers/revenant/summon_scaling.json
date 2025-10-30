@@ -3,6 +3,11 @@
     "owner_attribute": "spell_power:soul",
     "modifiers": [
         {
+            "attribute": "medievalorigins:summon.ranged_damage",
+            "operation": "addition",
+            "value": 0.5
+        },
+        {
             "attribute": "minecraft:generic.max_health",
             "operation": "addition",
             "value": 5.0

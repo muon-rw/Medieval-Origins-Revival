@@ -46,7 +46,7 @@
 		}
 	},
 	"edible_bones": {
-		"type": "apugli:edible_item",
+		"type": "medievalorigins:edible_item",
 		"condition": {
 			"type": "origins:resource",
 			"resource": "medievalorigins:revenant/putrid_communion_bone",
@@ -62,7 +62,8 @@
 		"food_component": {
 			"hunger": 0,
 			"saturation": 0,
-			"meat": false
+			"meat": false,
+			"can_always_eat": true
 		},
 		"use_action": "eat",
 		"item_action": {
@@ -80,7 +81,7 @@
 		}
 	},
 	"edible_skulls": {
-		"type": "apugli:edible_item",
+		"type": "medievalorigins:edible_item",
 		"condition": {
 			"type": "origins:resource",
 			"resource": "medievalorigins:revenant/putrid_communion_bone",
@@ -96,7 +97,8 @@
 		"food_component": {
 			"hunger": 0,
 			"saturation": 0,
-			"meat": false
+			"meat": false,
+			"can_always_eat": true
 		},
 		"use_action": "eat",
 		"item_action": {
@@ -114,7 +116,7 @@
 		}
 	},
 	"edible_wither_skulls": {
-		"type": "apugli:edible_item",
+		"type": "medievalorigins:edible_item",
 		"condition": {
 			"type": "origins:resource",
 			"resource": "medievalorigins:revenant/putrid_communion_bone",
@@ -130,7 +132,8 @@
 		"food_component": {
 			"hunger": 0,
 			"saturation": 0,
-			"meat": false
+			"meat": false,
+			"can_always_eat": true
 		},
 		"use_action": "eat",
 		"item_action": {
@@ -165,7 +168,7 @@
 		}
 	},
 	"edible_zombie_heads": {
-		"type": "apugli:edible_item",
+		"type": "medievalorigins:edible_item",
 		"condition": {
 			"type": "origins:resource",
 			"resource": "medievalorigins:revenant/putrid_communion_flesh",
@@ -181,7 +184,17 @@
 		"food_component": {
 			"hunger": 0,
 			"saturation": 0,
-			"meat": false
+			"meat": false,
+			"can_always_eat": true,
+			"effects": [
+				{
+					"effect": {
+						"effect": "minecraft:resistance",
+						"amplifier": 1,
+						"duration": 30
+					}
+				}
+			]
 		},
 		"use_action": "eat",
 		"item_action": {

@@ -746,7 +746,7 @@
 		}
 	},
 	"jump_effects": {
-		"type": "apugli:action_on_jump",
+		"type": "medievalorigins:action_on_jump",
 		"condition": {
 			"type": "origins:resource",
 			"resource": "medievalorigins:pixie/flight_effects_toggle",

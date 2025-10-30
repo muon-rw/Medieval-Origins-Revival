@@ -87,8 +87,28 @@ public class SummonedZombie extends Zombie implements IFollowingSummon, ISummon 
                                 || (entity != null && entity.getKillCredit() != null && entity.getKillCredit().equals(this.owner))
         ));
 
-        this.goalSelector.addGoal(0, new MeleeAttackGoal(this, 1.1f, true));
-        this.goalSelector.addGoal(1, new WaterAvoidingRandomStrollGoal(this, 1.0D));
+        this.goalSelector.addGoal(0, new MeleeAttackGoal(this, 1.1f, true) {
+            @Override
+            public boolean canUse() {
+                return !SummonedZombie.this.isOrderedToSit() && super.canUse();
+            }
+            
+            @Override
+            public boolean canContinueToUse() {
+                return !SummonedZombie.this.isOrderedToSit() && super.canContinueToUse();
+            }
+        });
+        this.goalSelector.addGoal(1, new WaterAvoidingRandomStrollGoal(this, 1.0D) {
+            @Override
+            public boolean canUse() {
+                return !SummonedZombie.this.isOrderedToSit() && super.canUse();
+            }
+            
+            @Override
+            public boolean canContinueToUse() {
+                return !SummonedZombie.this.isOrderedToSit() && super.canContinueToUse();
+            }
+        });
         this.goalSelector.addGoal(2, new FollowSummonerGoal(this, this.owner, 1.0, 9.0f, 3.0f));
         this.goalSelector.addGoal(3, new LookAtPlayerGoal(this, Player.class, 3.0F, 1.0F));
         this.goalSelector.addGoal(4, new LookAtPlayerGoal(this, Mob.class, 8.0F));
@@ -213,6 +233,11 @@ public class SummonedZombie extends Zombie implements IFollowingSummon, ISummon 
     @Override
     public void setIsLimitedLife(boolean bool) {
         this.isLimitedLifespan = bool;
+    }
+
+    @Override
+    public boolean isLimitedLife() {
+        return this.isLimitedLifespan;
     }
 
     public LivingEntity getOwnerFromID() {

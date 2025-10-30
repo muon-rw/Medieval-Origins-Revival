@@ -9,6 +9,7 @@ public class ModPowers {
     public static void register() {
         register(OwnerAttributeTransferPower.createFactory());
         registerPowerFactory(PixieWingsPower.PIXIE_WINGS_FACTORY);
+        registerPowerFactory(EdibleItemPower.createFactory());
         if (Services.PLATFORM.isModLoaded("icarus")) {
             registerPowerFactory(IcarusWingsPower.ICARUS_WINGS_FACTORY);
         }

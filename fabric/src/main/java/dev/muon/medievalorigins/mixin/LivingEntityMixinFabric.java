@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.At;
 public class LivingEntityMixinFabric {
     @ModifyReturnValue(method = "createLivingAttributes()Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier$Builder;", at = @At("RETURN"))
     private static AttributeSupplier.Builder addAttributes(AttributeSupplier.Builder original) {
-        original.add(ModAttributes.PROJECTILE_DAMAGE_BONUS);
+        original.add(ModAttributes.SUMMON_RANGED_DAMAGE);
         return original;
     }
 }

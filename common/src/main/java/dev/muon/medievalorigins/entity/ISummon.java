@@ -23,6 +23,7 @@ public interface ISummon extends OwnableEntity {
     
     void setLifeTicks(int lifeTicks);
     void setIsLimitedLife(boolean bool);
+    boolean isLimitedLife();
     void setWeapon(ItemStack item);
     void setOwner(LivingEntity owner);
     void setOwnerID(UUID uuid);

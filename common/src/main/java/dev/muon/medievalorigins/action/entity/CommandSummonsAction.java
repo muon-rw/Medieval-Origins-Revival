@@ -34,6 +34,10 @@ public class CommandSummonsAction {
             case "sit" -> {
                 summons.forEach(summon -> {
                     summon.setOrderedToSit(true);
+                    // Stop current navigation when ordered to sit
+                    if (summon.getSelfAsMob() != null) {
+                        summon.getSelfAsMob().getNavigation().stop();
+                    }
                     if (entity instanceof Player player) {
                         player.displayClientMessage(Component.translatable("message.medievalorigins.summon.sit"), true);
                     }

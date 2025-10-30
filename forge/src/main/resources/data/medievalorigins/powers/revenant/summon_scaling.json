@@ -3,6 +3,11 @@
     "owner_attribute": "irons_spellbooks:blood_spell_power",
     "modifiers": [
         {
+            "attribute": "medievalorigins:summon.ranged_damage",
+            "operation": "add_value",
+            "value": 0.5
+        },
+        {
             "attribute": "minecraft:generic.max_health",
             "operation": "addition",
             "value": 5.0

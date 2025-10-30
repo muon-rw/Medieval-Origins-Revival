@@ -30,7 +30,7 @@ public class MedievalOrigins {
     // write the majority of your code here and load it from your loader specific projects. This example has some
     // code that gets invoked by the entry point of the loader specific projects.
     public static void init() {
-        LOG.info("Hello from Common init on {}! we are currently in a {} environment!", Services.PLATFORM.getPlatformName(), Services.PLATFORM.getEnvironmentName());
+        LOG.info("Registering {} {} for {}", MOD_NAME, Services.PLATFORM.getPlatformName(), Services.PLATFORM.getEnvironmentName());
 
         ModAttributes.register();
         ModEnchantments.register();
@@ -39,7 +39,6 @@ public class MedievalOrigins {
         ModItemConditions.register();
         ModEntityConditions.register();
         ModBientityConditions.register();
-        // ModSounds.register();
         ModPowers.register();
     }
 }

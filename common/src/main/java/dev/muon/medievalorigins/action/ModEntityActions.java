@@ -14,6 +14,7 @@ public class ModEntityActions {
         register(AreaBonemealAction.getFactory());
         register(AutoPlantSeedsAction.getFactory());
         register(CommandSummonsAction.getFactory());
+        register(ModifyDurationAction.getFactory());
     }
 
     public static ActionFactory<Entity> register(ActionFactory<Entity> actionFactory) {

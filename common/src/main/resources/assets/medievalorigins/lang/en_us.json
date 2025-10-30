@@ -447,6 +447,9 @@
   "power.medievalorigins.yeti/winter_body.name": "Winter Body",
   "power.medievalorigins.yeti/winter_body.description": "Yetis are marginally taller than a regular human, and significantly wider.",
 
+  "power.medievalorigins.revenant.command_summons.name": "Command Undead",
+  "power.medievalorigins.revenant.command_summons.description": "Command your summoned combat undead (not horses) to follow, sit, or teleport to you.",
+
   "power.medievalorigins.revenant/black_thumb.name": "Black Thumb",
   "power.medievalorigins.revenant/black_thumb.description": "A Revenant can not harvest any crops; they wilt at their deathly touch. ",
 
@@ -456,17 +459,17 @@
   "power.medievalorigins.revenant/hellraiser.name": "Reaper's Ward",
   "power.medievalorigins.revenant/hellraiser.description": "At will, a revenant can raise a circle of inert skeletons, acting as a temporary shield to protect them from danger and damage nearby enemies.",
 
-  "power.medievalorigins.revenant/putrid_communion.name": "Putrid Communion",
-  "power.medievalorigins.revenant/putrid_communion.description": "Through the unsettling act of consuming the flesh or bones of the undead, a revenant can empower their next summon of the same type.",
-
   "power.medievalorigins.revenant/unwitherable.name": "Necrotic Curse",
   "power.medievalorigins.revenant/unwitherable.description": "Revenants are immune to wither, and, like undead, they take extra damage from smite, receive inverted effects from harming and healing effects, and are immune to poison and regeneration effects.",
 
+  "power.medievalorigins.revenant/putrid_communion.name": "Putrid Communion",
+  "power.medievalorigins.revenant/putrid_communion.description": "Through the unsettling act of consuming the flesh or bones of the undead, a revenant can empower their next summon of the same type. \nFor combat creatures, extend their duration, making them permanent at max power. For undead steeds, enhance their attributes at max power.",
+
   "power.medievalorigins.revenant/skeleton_summons.name": "Revenance",
-  "power.medievalorigins.revenant/skeleton_summons.description": "Revenants can reconstruct creatures of the night modified to do their own bidding. These act as pets, will follow and teleport, and skeletons can be equipped with any weapon. Strength of non-mounts scales with Soul/Blood Spell Power. Summon by activating while holding: \n§lSkeleton:§r \n- Mainhand: 4 bones\n§lSkeleton Horse:§r\n- Mainhand: 12 bones\n- Offhand: 1 saddle \n§lWither Skeleton:§r \n- Mainhand: 12 bones\n- Offhand: 1 wither skull\n§lZombie:§r \n- Mainhand: 4 flesh\n§lZombie Horse:§r \n- Mainhand: 12 flesh\n- Offhand: 1 saddle",
+  "power.medievalorigins.revenant/skeleton_summons.description": "Revenants can reconstruct creatures of the night modified to do their own bidding. These act as pets, will follow and teleport, and can be equipped with weapons or armor. Zombies can not use bows. Hover the badges for details.",
 
   "power.medievalorigins.revenant/poor_reputation.name": "Chaotic Ally",
-  "power.medievalorigins.revenant/poor_reputation.description": "Villagers will refuse to trade with revenants and iron golems will attack them on sight. However, they are accepted amongst the ranks of the Pillagers.",
+  "power.medievalorigins.revenant/poor_reputation.description": "Villagers will refuse to trade with revenants and iron golems will attack them on sight. However, they are tolerated (tenuously) by Pillagers.",
 
   "power.medievalorigins.revenant/siphon.name": "Essence Extraction",
   "power.medievalorigins.revenant/siphon.description": "When hit, revenants slowly build up a power which allows them to siphon life from their enemies. This affects all creatures for better or worse, except summoned dead.",
@@ -530,8 +533,19 @@
   "badges.medievalorigins.high_elf.blazenbreath": "§cBlazenbreath:§r Press %s while holding coal in either hand to shoot forth a weak cone of flame. Hold blaze powder instead to shoot forth a moderate cone of flame. Scales with Fire Spell Power.",
   "badges.medievalorigins.high_elf.ebonbreath": "§dEbonbreath:§r Press %s while holding bottled dragon's breath in either hand to shoot forth a cone of strong magical flame. Scales with Fire and Arcane/Ender Spell Power.",
 
+
+  "badges.medievalorigins.revenant.command": "Press %s to cycle between commanding your summons to sit, follow, or teleport to you.",
+
   "badges.medievalorigins.revenant.siphon": "Hit a living creature to drain its life force. Damage scales with accumulated resource and Soul/Blood Spell Power.",
   "badges.medievalorigins.revenant.eat": "Besides bones and rotten flesh, eating certain monster heads can charge this resource more quickly.",
+
+  "badges.medievalorigins.revenant.summon_key": "Summon with [%s] while holding the items listed in the other badges",
+  "badges.medievalorigins.revenant.summons_limit": "You can only sustain up to 5 combat summons at a time.",
+  "badges.medievalorigins.revenant.summon_skeleton": "§f§nSkeleton§r:\n- Mainhand: 4 bones\n§oDuration: 10 minutes§r",
+  "badges.medievalorigins.revenant.summon_skeleton_horse": "§f§nSkeleton Horse§r:\n- Mainhand: 12 bones\n- Offhand: 1 saddle\n§oPermanent duration§r",
+  "badges.medievalorigins.revenant.summon_wither": "§7§nWither Skeleton§r:\n- Mainhand: 12 bones\n- Offhand: 1 wither skull\n§oDuration: 30 minutes§r",
+  "badges.medievalorigins.revenant.summon_zombie": "§2§nZombie§r:\n- Mainhand: 4 flesh\n§oDuration: 5 minutes§r",
+  "badges.medievalorigins.revenant.summon_zombie_horse": "§2§nZombie Horse§r:\n- Mainhand: 12 flesh\n- Offhand: 1 saddle\n§oPermanent duration§r",
 
   "badges.medievalorigins.alfiq.wall_climb": "Press %s to toggle wall climbing.",
 
@@ -573,7 +587,30 @@
   "origin.medievalorigins.high_elf/cryomancer.description": "A calm, wise soul who focuses on control and strategy. \n\n+1 Frost Spell Power",
   "power.medievalorigins.high_elf/cryomancer/gear_spawn.name": "Starting Equipment:",
   "power.medievalorigins.high_elf/cryomancer/gear_spawn.description": "- Frost Wand \n- 16 Frost Runes",
-  
-  "death.attack.siphon.player": "% had their soul ripped apart by %s",
-  "death.attack.smite.player": "% was smeeted by %s"
+
+  "message.medievalorigins.summon.sit": "§oHalt§r. Your summons are ordered to sit.",
+  "message.medievalorigins.summon.follow": "§oHeed§r. Your summons are following you.",
+  "message.medievalorigins.summon.come": "§oHeel§r. Your summons are called to you.",
+
+  "message.medievalorigins.summon_limit_reached": "Oldest summon dismissed:",
+  "message.medievalorigins.summon_location": "(%s: %d, %d, %d)",
+
+  "key.medievalorigins.tertiary_active": "Medieval Origins: Tertiary Active",
+  "category.medievalorigins.general": "Medieval Origins",
+
+  "death.attack.blazenbreath": "%1$s was burnt to a crisp",
+  "death.attack.blazenbreath.player": "%1$s was burnt to a crisp by %2$s",
+  "death.attack.blazenbreath.item": "%1$s was burnt to a crisp by %2$s using %3$s",
+
+  "death.attack.ebonbreath": "%1$s was purified by dragonfire",
+  "death.attack.ebonbreath.player": "%1$s was purified by %2$s's dragonfire",
+  "death.attack.ebonbreath.item": "%1$s was purified by %2$s's dragonfire using %3$s",
+
+  "death.attack.siphon": "%1$s had their soul ripped apart",
+  "death.attack.siphon.player": "%1$s had their soul ripped apart by %2$s",
+  "death.attack.siphon.item": "%1$s had their soul ripped apart by %2$s's %3$s",
+
+  "death.attack.smite": "%1$s faced divine judgment",
+  "death.attack.smite.player": "%1$s faced the divine judgment of %2$s",
+  "death.attack.smite.item": "%1$s faced the divine judgment of %2$s's %3$s"
 }

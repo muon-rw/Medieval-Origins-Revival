@@ -1,8 +1,13 @@
 ## 6.7.0
 - Add support for Origins (Fabric) 1.10.2+
 - Origins (Forge) is no longer supported. Forge versions now require Origins (Fabric), Sinytra Connector, and Connector Extras.
-- Removed Apugli (fixes incomatibility with Hold My Items, should greatly improve performance)
-
+- Removed Apugli, which fixes an incomatibility with Hold My Items and should greatly improve overall performance
+- Added a new keybind, Tertiary Active (default V)
+- Revenant Summons can now be equipped with armor
+- Revenant Summons now have a time limit by default, extendable by Putrid Communion
+- Summon skeletons ranged damage, attack damage, health, and armor now all properly scale with owner's `spell_power:soul` or `irons_spellbooks:blood` attribute at the time of summoning
+- Revenants can command all their summons to follow, teleport to them, or sit (stop moving/attacking)
+- Revenants now have a limit of 5 combat summons at a time
 
 ## 6.6.0
 - Changed Alfiq fall damage negation to be look-direction based, instead of fall distance

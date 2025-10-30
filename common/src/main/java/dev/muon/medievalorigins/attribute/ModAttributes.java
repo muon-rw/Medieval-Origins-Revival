@@ -9,8 +9,8 @@ import net.minecraft.world.entity.ai.attributes.RangedAttribute;
 public class ModAttributes {
 
     // Projectile damage attributes
-    public static final Attribute PROJECTILE_DAMAGE_BONUS = register("projectile_damage_bonus",
-            new RangedAttribute("attribute.name.medievalorigins.projectile_damage_bonus", 0.0D, 0.0D, 2048.0D)
+    public static final Attribute SUMMON_RANGED_DAMAGE = register("summon.ranged_damage",
+            new RangedAttribute("attribute.name.medievalorigins.summon.ranged_damage", 0.0D, 0.0D, 2048.0D)
                     .setSyncable(true));
     
     private static Attribute register(String name, Attribute attribute) {

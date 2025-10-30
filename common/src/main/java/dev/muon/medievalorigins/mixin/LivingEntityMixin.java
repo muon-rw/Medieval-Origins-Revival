@@ -1,30 +1,50 @@
 package dev.muon.medievalorigins.mixin;
 
+import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
+import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
+import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
+import com.llamalad7.mixinextras.sugar.Local;
 import dev.muon.medievalorigins.attribute.ModAttributes;
+import dev.muon.medievalorigins.power.EdibleItemPower;
+import io.github.apace100.apoli.component.PowerHolderComponent;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.tags.TagKey;
+import net.minecraft.util.Tuple;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.damagesource.DamageType;
-import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.UseAnim;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(LivingEntity.class)
-public class LivingEntityMixin {
+public abstract class LivingEntityMixin {
 
+    @Shadow public abstract ItemStack getItemInHand(InteractionHand pHand);
+
+    @Unique
+    private static final org.apache.logging.log4j.Logger LOGGER = org.apache.logging.log4j.LogManager.getLogger("MedievalOrigins/EdibleItemPower");
 
     @Unique
     private static final TagKey<DamageType> MAGIC_DAMAGE = TagKey.create(
             Registries.DAMAGE_TYPE,
             new ResourceLocation("medievalorigins", "is_magic")
     );
-
 
     @ModifyVariable(
             method = "hurt",
@@ -39,10 +59,281 @@ public class LivingEntityMixin {
 
         if (damageSource.getEntity() instanceof LivingEntity attacker) {
             if (damageSource.getDirectEntity() instanceof Projectile || damageSource.is(DamageTypeTags.IS_PROJECTILE)) {
-                damageAmount += (float) attacker.getAttributeValue(ModAttributes.PROJECTILE_DAMAGE_BONUS);
+                damageAmount += (float) attacker.getAttributeValue(ModAttributes.SUMMON_RANGED_DAMAGE);
             }
         }
 
         return damageAmount;
     }
+
+    // Edible Item Power support
+
+    @Inject(method = "shouldTriggerItemUseEffects", at = @At("HEAD"), cancellable = true)
+    private void medievalorigins$shouldTriggerItemUseEffects(CallbackInfoReturnable<Boolean> cir) {
+        LivingEntity self = (LivingEntity) (Object) this;
+        ItemStack useItem = this.getItemInHand(self.getUsedItemHand());
+        
+        for (EdibleItemPower power : PowerHolderComponent.getPowers(self, EdibleItemPower.class)) {
+            if (power.doesApply(self.level(), useItem)) {
+                int i = self.getUseItemRemainingTicks();
+                FoodProperties foodProperties = power.getFoodComponent();
+                boolean isFastFood = foodProperties != null && foodProperties.isFastFood();
+                int useDuration = foodProperties != null && foodProperties.isFastFood() ? 16 : 32;
+                isFastFood |= i <= useDuration - 7;
+                cir.setReturnValue(isFastFood && i % 4 == 0);
+                return;
+            }
+        }
+    }
+
+    // Handle getUseDuration in shouldTriggerItemUseEffects
+    @WrapOperation(
+            method = "shouldTriggerItemUseEffects",
+            at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;getUseDuration()I")
+    )
+    private int medievalorigins$customUseDurationInShouldTrigger(ItemStack stack, Operation<Integer> original) {
+        LivingEntity self = (LivingEntity) (Object) this;
+        int originalDuration = original.call(stack);
+        
+        if (originalDuration == 0) {
+            for (EdibleItemPower power : PowerHolderComponent.getPowers(self, EdibleItemPower.class)) {
+                if (power.doesApply(self.level(), stack)) {
+                    FoodProperties foodProps = power.getFoodComponent();
+                    if (foodProps != null) {
+                        return foodProps.isFastFood() ? 16 : 32;
+                    }
+                }
+            }
+        }
+        
+        return originalDuration;
+    }
+
+    @WrapOperation(
+            method = "triggerItemUseEffects",
+            at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;getUseAnimation()Lnet/minecraft/world/item/UseAnim;")
+    )
+    private UseAnim medievalorigins$modifyUseAnimation(ItemStack stack, Operation<UseAnim> original) {
+        LivingEntity self = (LivingEntity) (Object) this;
+        
+        for (EdibleItemPower power : PowerHolderComponent.getPowers(self, EdibleItemPower.class)) {
+            if (power.doesApply(self.level(), stack)) {
+                UseAnim customAnim = power.getUseAction();
+                if (customAnim != null && customAnim != UseAnim.NONE) {
+                    return customAnim;
+                }
+            }
+        }
+        
+        return original.call(stack);
+    }
+
+    @WrapOperation(
+            method = "triggerItemUseEffects",
+            at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/LivingEntity;getEatingSound(Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/sounds/SoundEvent;")
+    )
+    private SoundEvent medievalorigins$customEatingTickSound(LivingEntity instance, ItemStack stack, Operation<SoundEvent> original) {
+        LivingEntity self = (LivingEntity) (Object) this;
+        
+        // Check for custom sound from edible item power during eating ticks
+        for (EdibleItemPower power : PowerHolderComponent.getPowers(self, EdibleItemPower.class)) {
+            if (power.doesApply(self.level(), stack)) {
+                SoundEvent customSound = power.getSound();
+                if (customSound != null) {
+                    return customSound;
+                }
+            }
+        }
+        
+        return original.call(instance, stack);
+    }
+
+    @WrapOperation(
+            method = "triggerItemUseEffects",
+            at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/LivingEntity;getDrinkingSound(Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/sounds/SoundEvent;")
+    )
+    private SoundEvent medievalorigins$customDrinkingTickSound(LivingEntity instance, ItemStack stack, Operation<SoundEvent> original) {
+        LivingEntity self = (LivingEntity) (Object) this;
+        
+        // Check for custom sound from edible item power during drinking ticks
+        for (EdibleItemPower power : PowerHolderComponent.getPowers(self, EdibleItemPower.class)) {
+            if (power.doesApply(self.level(), stack)) {
+                SoundEvent customSound = power.getSound();
+                if (customSound != null) {
+                    return customSound;
+                }
+            }
+        }
+        
+        return original.call(instance, stack);
+    }
+
+    @Inject(method = "completeUsingItem", at = @At("HEAD"))
+    private void medievalorigins$completeUsingItem(CallbackInfo ci) {
+        LivingEntity self = (LivingEntity) (Object) this;
+        ItemStack useItem = this.getItemInHand(self.getUsedItemHand());
+        
+        for (EdibleItemPower power : PowerHolderComponent.getPowers(self, EdibleItemPower.class)) {
+            if (power.doesApply(self.level(), useItem)) {
+                // Execute entity actions
+                if (power.entityActionWhenEaten != null) {
+                    power.entityActionWhenEaten.accept(self);
+                }
+                
+                // Execute item actions
+                if (power.itemActionWhenEaten != null) {
+                    power.itemActionWhenEaten.accept(new Tuple<>(self.level(), useItem));
+                }
+                
+                // Handle return stack
+                ItemStack returnStack = power.getReturnStack();
+                if (returnStack != null && !returnStack.isEmpty()) {
+                    if (self instanceof Player player) {
+                        if (!player.getInventory().add(returnStack.copy())) {
+                            player.drop(returnStack.copy(), false);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Inject into eat method to handle custom sounds and edible items
+    @ModifyExpressionValue(
+            method = "eat",
+            at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;isEdible()Z")
+    )
+    private boolean medievalorigins$isEdibleInEat(boolean original, @Local(argsOnly = true) ItemStack food) {
+        LivingEntity self = (LivingEntity) (Object) this;
+        if (!original) {
+            for (EdibleItemPower power : PowerHolderComponent.getPowers(self, EdibleItemPower.class)) {
+                if (power.doesApply(self.level(), food)) {
+                    return true;
+                }
+            }
+        }
+        return original;
+    }
+
+    @WrapOperation(
+            method = "eat",
+            at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/LivingEntity;getEatingSound(Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/sounds/SoundEvent;")
+    )
+    private SoundEvent medievalorigins$customEatingSound(LivingEntity instance, ItemStack food, Operation<SoundEvent> original) {
+        LivingEntity self = (LivingEntity) (Object) this;
+        
+        // Check for custom sound from edible item power
+        for (EdibleItemPower power : PowerHolderComponent.getPowers(self, EdibleItemPower.class)) {
+            if (power.doesApply(self.level(), food)) {
+                SoundEvent customSound = power.getSound();
+                if (customSound != null) {
+                    return customSound;
+                }
+            }
+        }
+        
+        return original.call(instance, food);
+    }
+
+    // For some reason, MixinExtras thinks this LivingEntity local doesn't exist
+    @ModifyExpressionValue(
+            method = "addEatEffect",
+            at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/Item;isEdible()Z")
+    )
+    private boolean medievalorigins$isEdibleInAddEatEffect(boolean original, @Local(argsOnly = true) ItemStack food, @Local(argsOnly = true) LivingEntity livingEntity) {
+        if (!original) {
+            for (EdibleItemPower power : PowerHolderComponent.getPowers(livingEntity, EdibleItemPower.class)) {
+                if (power.doesApply(livingEntity.level(), food)) {
+                    return true;
+                }
+            }
+        }
+        return original;
+    }
+
+    // For some reason, MixinExtras thinks this LivingEntity local doesn't exist
+    @WrapOperation(
+            method = "addEatEffect",
+            at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/Item;getFoodProperties()Lnet/minecraft/world/food/FoodProperties;")
+    )
+    private FoodProperties medievalorigins$customFoodPropertiesInAddEatEffect(Item instance, Operation<FoodProperties> original, @Local(argsOnly = true) ItemStack food,  @Local(argsOnly = true) LivingEntity livingEntity) {
+        FoodProperties originalFood = original.call(instance);
+        if (originalFood != null) {
+            return originalFood;
+        }
+        
+        // Check for custom food properties from edible item power
+        for (EdibleItemPower power : PowerHolderComponent.getPowers(livingEntity, EdibleItemPower.class)) {
+            if (power.doesApply(livingEntity.level(), food)) {
+                return power.getFoodComponent();
+            }
+        }
+        
+        return null;
+    }
+
+    // Sync power to client when starting to use an edible item
+    @Inject(method = "startUsingItem", at = @At("TAIL"))
+    private void medievalorigins$syncEdiblePowerOnStart(InteractionHand hand, CallbackInfo ci) {
+        LivingEntity self = (LivingEntity) (Object) this;
+        if (self.level().isClientSide) return;
+
+        ItemStack stack = this.getItemInHand(hand);
+        for (EdibleItemPower power : PowerHolderComponent.getPowers(self, EdibleItemPower.class)) {
+            if (power.doesApply(self.level(), stack)) {
+                PowerHolderComponent.syncPower(self, power.getType());
+                LOGGER.info("EdibleItemPower: Synced power {} to client for {}", power.getType().getIdentifier(), stack.getItem());
+                return; // Only sync once
+            }
+        }
+    }
+
+    // Handle getUseDuration in startUsingItem
+    @WrapOperation(
+            method = "startUsingItem",
+            at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;getUseDuration()I")
+    )
+    private int medievalorigins$customUseDurationInStart(ItemStack stack, Operation<Integer> original) {
+        LivingEntity self = (LivingEntity) (Object) this;
+        int originalDuration = original.call(stack);
+        
+        if (originalDuration == 0) {
+            // Check for edible item power
+            for (EdibleItemPower power : PowerHolderComponent.getPowers(self, EdibleItemPower.class)) {
+                if (power.doesApply(self.level(), stack)) {
+                    FoodProperties foodProps = power.getFoodComponent();
+                    if (foodProps != null) {
+                        return foodProps.isFastFood() ? 16 : 32;
+                    }
+                }
+            }
+        }
+        
+        return originalDuration;
+    }
+
+    // Handle getUseDuration in onSyncedDataUpdated
+    @WrapOperation(
+            method = "onSyncedDataUpdated",
+            at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;getUseDuration()I")
+    )
+    private int medievalorigins$customUseDurationInSync(ItemStack stack, Operation<Integer> original) {
+        LivingEntity self = (LivingEntity) (Object) this;
+        int originalDuration = original.call(stack);
+        
+        if (originalDuration == 0) {
+            // Check for edible item power
+            for (EdibleItemPower power : PowerHolderComponent.getPowers(self, EdibleItemPower.class)) {
+                if (power.doesApply(self.level(), stack)) {
+                    FoodProperties foodProps = power.getFoodComponent();
+                    if (foodProps != null) {
+                        return foodProps.isFastFood() ? 16 : 32;
+                    }
+                }
+            }
+        }
+        
+        return originalDuration;
+    }
 }
+

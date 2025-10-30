@@ -6,11 +6,14 @@
   "refmap": "medievalorigins.refmap.json",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "ItemMixin",
     "LivingEntityMixin",
     "ZombieVillagerInvoker",
     "compat.icarus.IcarusHelperMixin"
   ],
   "client": [
+    "client.ItemInHandRendererMixin",
+    "client.PlayerRendererMixin",
     "client.AbstractClientPlayerMixin",
     "client.ElytraModelMixin"
   ],
