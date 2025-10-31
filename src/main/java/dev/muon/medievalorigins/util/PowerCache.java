@@ -10,10 +10,48 @@ import java.util.concurrent.atomic.AtomicLong;
 import java.util.function.Predicate;
 
 /**
- * Thread-safe cache for expensive PowerHolderComponent lookups.
- * Invalidates upon entity unload and periodically.
- * TODO: Invalidate cache on power changes
- * Should be identical between Client and Server
+ * Thread-safe cache for expensive PowerHolderComponent.getPowerTypes() lookups.
+ *
+ * <p>Caches the list of PowerType instances for each (Entity, PowerClass) pair.
+ * Returned PowerType instances are live objects - calling {@link PowerType#isActive()}
+ * will evaluate the current condition state, not a cached state.
+ *
+ * <p><b>Performance Benefits:</b>
+ * The uncached {@code PowerHolderComponent.getPowerTypes()} method has cumulative overhead
+ * when called repeatedly:
+ * <ul>
+ *   <li>Iterates through <b>all</b> power types in the entity's ConcurrentHashMap</li>
+ *   <li>Allocates a new LinkedList for every single call</li>
+ *   <li>Performs stream operations (filter, map, collect) on every call</li>
+ *   <li>Most critically: the same entity/power class pair is often queried multiple times per tick</li>
+ * </ul>
+ * This cache is most beneficial when power queries are repeated frequently (e.g., AI targeting checks
+ * every tick, repeated combat calculations, rendering updates). The aggregate savings from avoiding
+ * repeated iteration and collection allocation add up significantly in multiplayer environments
+ * with many entities checking each other's powers.
+ *
+ * <p><b>Memory Optimization:</b>
+ * This cache references entities by their numeric ID and UUID rather than storing direct
+ * entity references. This approach significantly reduces memory overhead and prevents
+ * potential memory leaks from retaining entity references after they should be garbage
+ * collected. The UUID validation ensures correctness when entity IDs are reused.
+ *
+ * <p><b>Cache Invalidation:</b>
+ * <ul>
+ *   <li>LRU cleanup every 30s (600 ticks), removing entries older than 5 minutes</li>
+ *   <li>Automatically invalidates on power add/remove via {@code PowerHolderComponentImplMixin}</li>
+ *   <li><b>Server-side:</b> Entity unload via {@code ServerEntityEvents.ENTITY_UNLOAD},
+ *       cache clear on server stop via {@code ServerLifecycleEvents.SERVER_STOPPING}</li>
+ *   <li><b>Client-side:</b> Entity unload via {@code ClientEntityEvents.ENTITY_UNLOAD},
+ *       cache clear on disconnect via {@code ClientPlayConnectionEvents.DISCONNECT}</li>
+ *   <li>Manual invalidation via {@link #invalidate(Entity)} or {@link #invalidate(Entity, Class)}</li>
+ *   <li>UUID validation: Detects and handles entity ID reuse</li>
+ * </ul>
+ *
+ * <p><b>Thread-Safety:</b> All public methods are safe for concurrent access using
+ * {@code ConcurrentHashMap} and atomic operations.
+ *
+ * @see PowerHolderComponent#getPowerTypes(Entity, Class)
  */
 public class PowerCache {
     // Cache structure: EntityId -> PowerClass -> List of cached power types
@@ -34,11 +72,11 @@ public class PowerCache {
             this.lastAccessTick = tickCounter.get(); // Read current value
         }
     }
-    
+
     private static class CachedPowerData<T extends PowerType> {
         final List<T> powerTypes;
         final boolean hasAny;
-        
+
         CachedPowerData(List<T> powerTypes, boolean hasAny) {
             this.powerTypes = Collections.unmodifiableList(new ArrayList<>(powerTypes));
             this.hasAny = hasAny;
@@ -74,7 +112,8 @@ public class PowerCache {
     }
 
     /**
-     * Check if entity has a power type (cached).
+     * Check if entity has ANY power types of this class (regardless of active state).
+     * To check for active powers, use: hasPowerType(entity, powerClass, PowerType::isActive)
      */
     public static <T extends PowerType> boolean hasPowerType(Entity entity, Class<T> powerClass) {
         if (entity == null || entity.isRemoved()) return false;
