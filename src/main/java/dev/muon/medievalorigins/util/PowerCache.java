@@ -68,6 +68,11 @@ import java.util.function.Predicate;
  *
  * @see PowerHolderComponent#getPowerTypes(Entity, Class)
  */
+
+// TODO: Potentially still a memory leak here as PowerType instances end up cached, which hold references to their entity
+// Could instead store only the boolean state of hasPowerType, and allow getPowerTypes to always compute -
+// though this may significantly reduce the optimization for repeated calls to getPowerTypes, if that occurs
+
 public class PowerCache {
     // Cache structure: EntityId -> PowerClass -> List of cached power types
     private static final Map<Integer, EntityCacheEntry> cache = new ConcurrentHashMap<>();
