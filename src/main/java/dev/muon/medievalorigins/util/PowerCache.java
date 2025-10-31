@@ -16,6 +16,21 @@ import java.util.function.Predicate;
  * Returned PowerType instances are live objects - calling {@link PowerType#isActive()}
  * will evaluate the current condition state, not a cached state.
  *
+ * <p><b>Usage:</b>
+ * This cache provides drop-in replacements for {@code PowerHolderComponent} methods.
+ * Simply replace:
+ * <pre>{@code
+ * PowerHolderComponent.getPowerTypes(entity, MyPowerType.class)
+ * PowerHolderComponent.hasPowerType(entity, MyPowerType.class)
+ * }</pre>
+ * with:
+ * <pre>{@code
+ * PowerCache.getPowerTypes(entity, MyPowerType.class)
+ * PowerCache.hasPowerType(entity, MyPowerType.class)
+ * }</pre>
+ * The behavior is identical, but subsequent calls with the same entity/class pair
+ * will use cached results instead of re-querying the component.
+ *
  * <p><b>Performance Benefits:</b>
  * The uncached {@code PowerHolderComponent.getPowerTypes()} method has cumulative overhead
  * when called repeatedly:
