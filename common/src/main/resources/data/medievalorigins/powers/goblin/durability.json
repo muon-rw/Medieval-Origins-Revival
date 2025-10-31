@@ -1,13 +1,9 @@
 {
     "type": "origins:multiple",
     "soft_cap": {
-        "type": "apugli:modify_durability_change",
-        "comparisons": [
-            {
-                "comparison": ">=",
-                "compare_to": 5
-            }
-        ],
+        "type": "medievalorigins:modify_durability_change",
+        "comparison": ">=",
+        "compare_to": 5,
         "modifier": {
             "operation": "multiply_base_multiplicative",
             "value": -0.8
@@ -46,7 +42,7 @@
         }
     },
     "chance_clear": {
-        "type": "apugli:modify_durability_change",
+        "type": "medievalorigins:modify_durability_change",
         "condition": {
             "type": "origins:predicate",
             "predicate": "medievalorigins:unbreak_chance"

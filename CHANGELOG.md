@@ -8,6 +8,7 @@
 - Summon skeletons ranged damage, attack damage, health, and armor now all properly scale with owner's `spell_power:soul` or `irons_spellbooks:blood` attribute at the time of summoning
 - Revenants can command all their summons to follow, teleport to them, or sit (stop moving/attacking)
 - Revenants now have a limit of 5 combat summons at a time
+- Fixed Wood Elf Empowered shot compatibility with other mods (added 3 new power types modify_pierce_level modify_velocity modify_projectile_accuracy)
 
 ## 6.6.0
 - Changed Alfiq fall damage negation to be look-direction based, instead of fall distance
