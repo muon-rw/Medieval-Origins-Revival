@@ -38,8 +38,8 @@ public class ItemMixin {
     }
 
     // This target isn't useable on forge and there's no alternative, but it should be covered by the coremod
-    // Maybe need to similarly coremod IForgeItem for edge cases - probably not
-    @WrapOperation(method = "use", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;getFoodProperties(Lnet/minecraft/world/entity/LivingEntity;)Lnet/minecraft/world/food/FoodProperties;"))
+    // Leaving it in as it doesn't cause compile errors
+    @WrapOperation(method = "use", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;getFoodProperties(Lnet/minecraft/world/entity/LivingEntity;)Lnet/minecraft/world/food/FoodProperties;"), remap = false)
     private FoodProperties injectCustomFoodProperties(ItemStack instance, LivingEntity livingEntity, Operation<FoodProperties> original, @Local(argsOnly = true) Player player, @Local(argsOnly = true) Level level, @Local(argsOnly = true) InteractionHand hand) {
         FoodProperties originalFood = original.call(instance, livingEntity);
         if (originalFood != null) {
