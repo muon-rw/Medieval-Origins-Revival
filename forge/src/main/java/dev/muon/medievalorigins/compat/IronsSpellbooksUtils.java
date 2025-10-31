@@ -131,7 +131,7 @@ public class IronsSpellbooksUtils {
 
         AbstractSpell spell = SpellRegistry.getSpell(spellResourceLocation);
         if (spell == null || "none".equals(spell.getSpellName())) {
-            MedievalOrigins.LOG.info("No valid spell found for resource location " + spellResourceLocation);
+            MedievalOrigins.LOG.warn("No valid spell found for resource location: {}", spellResourceLocation);
             return;
         }
         

@@ -1,4 +1,4 @@
-package dev.muon.medievalorigins.mixin;
+package dev.muon.medievalorigins;
 
 import com.bawnorton.mixinsquared.api.MixinCanceller;
 import dev.muon.medievalorigins.MedievalOrigins;

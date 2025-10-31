@@ -1,23 +1,22 @@
 plugins {
     id 'multiloader-common'
-    id 'fabric-loom'
+    id 'net.neoforged.moddev.legacyforge'
 }
 
-archivesBaseName = "${mod_name}"
-version = "${rootProject.version}+${minecraft_version}-common"
-
-loom {
-    if (file("src/main/resources/${mod_id}.accesswidener").exists()) {
-        accessWidenerPath.set(file("src/main/resources/${mod_id}.accesswidener"))
+legacyForge {
+    mcpVersion = minecraft_version
+    if (file("src/main/resources/META-INF/accesstransformer.cfg").exists()) {
+        accessTransformers = ["src/main/resources/META-INF/accesstransformer.cfg"]
     }
-    mixin {
-        defaultRefmapName.set("${mod_id}.mixins.refmap.json")
+    parchment {
+        minecraftVersion = parchment_minecraft
+        mappingsVersion = parchment_version
     }
 }
-
 
 repositories {
-    flatDir { dir "${rootProject.rootDir}/libs/" }
+    flatDir { dir "${rootProject.rootDir}/libs/forge/" }
+    // flatDir { dir "${rootProject.rootDir}/libs/" }
     maven {
         name = 'Sponge / Mixin'
         url = 'https://repo.spongepowered.org/repository/maven-public/'
@@ -58,34 +57,35 @@ repositories {
             includeGroup("dev.ftb.mods")
         }
     }
+    // Architectury, for FTB - for some reason Loom needs repos for recursive dependencies even if the root dependency is compileOnly?
     maven { url "https://maven.shedaniel.me" }
+    // Origins
     maven { url = 'https://maven.ladysnake.org/releases' }
-
+    // UpCraft, for Icarus
+    maven { url "https://maven.uuid.gg/releases" }
+    // Common Network API used by Icarus - for some reason Loom needs repos for recursive dependencies even if the root dependency is compileOnly?
+    maven {url = "https://jm.gserv.me/repository/maven-public/"}
+    // Resourceful Config, same as above
+    maven {url = "https://maven.teamresourceful.com/repository/maven-public/"}
     mavenCentral()
     mavenLocal()
 }
 
 dependencies {
-    minecraft "com.mojang:minecraft:${minecraft_version}"
-    mappings loom.layered() {
-        officialMojangMappings()
-        parchment("org.parchmentmc.data:parchment-${parchment_minecraft}:${parchment_version}@zip")
-    }
-    
     // Origins
-    modCompileOnly("io.github.apace100:calio-1.11.2+mc.1.20.x") {transitive false}
-    modCompileOnly("io.github.apace100:apoli-2.9.2+mc.1.20.x") {transitive false}
-    modCompileOnly("io.github.apace100:Origins-1.10.2+mc.1.20.x") {transitive false}
+    modCompileOnly ("io.github:Origins-1.10.2+mc.1.20.x_mapped_srg_1.20.1")
+    modCompileOnly ("io.github:Origins-1.10.2+mc.1.20.x\$apoli-2.9.2+mc.1.20.x_mapped_srg_1.20.1")
+    modCompileOnly ("io.github:Origins-1.10.2+mc.1.20.x\$apoli-2.9.2+mc.1.20.x\$calio-1.11.2+mc.1.20.x_mapped_srg_1.20.1")
 
+    // If using MDG and these need to be directly used, they will need to be remapped (but we don't reference them ourselves)
     modCompileOnly("dev.onyxstudios.cardinal-components-api:cardinal-components-base:${project.cca_version}") {exclude(group: "net.fabricmc.fabric-api") transitive false}
     modCompileOnly("dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${project.cca_version}") {exclude(group: "net.fabricmc.fabric-api") transitive false}
 
     modCompileOnly("dev.ftb.mods:ftb-teams:${project.ftb_teams_version}")
 
-    modCompileOnly("maven.modrinth:icarus:${project.icarus_version}+Fabric")
+    modCompileOnly("dev.cammiescorner.icarus:Icarus-Common:${project.icarus_version}")
 
     compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:${mixin_extras_version}"))
-    compileOnly group:'org.spongepowered', name:'mixin', version:'0.8.5'
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
     compileOnly group: 'org.ow2.asm', name: 'asm-tree', version: '9.4'

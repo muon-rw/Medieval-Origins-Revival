@@ -3,10 +3,6 @@ plugins {
     id 'fabric-loom'
 }
 
-archivesBaseName = "${mod_name}"
-version = "${rootProject.version}+${minecraft_version}-fabric"
-
-
 loom {
     if (project(":common").file("src/main/resources/${mod_id}.accesswidener").exists()) {
         accessWidenerPath.set(project(":common").file("src/main/resources/${mod_id}.accesswidener"))
@@ -102,10 +98,10 @@ dependencies {
     }
     modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
+    implementation project(":common")
 
     // Mixin
-    implementation(annotationProcessor("io.github.llamalad7:mixinextras-fabric:${mixin_extras_version}"))
-    implementation(annotationProcessor("net.fabricmc:sponge-mixin:0.13.3+mixin.0.8.5"))
+    include(implementation(annotationProcessor("io.github.llamalad7:mixinextras-fabric:${mixin_extras_version}")))
 
     // Dev Env
     modRuntimeOnly "curse.maven:jade-324717:6291330"
@@ -127,7 +123,6 @@ dependencies {
     include(modApi("maven.modrinth:AdditionalEntityAttributes:${project.aea_version}"))
 
     // Misc Required
-    // implementation project(path: ":common", configuration: "namedElements")
     modImplementation include("maven.modrinth:projectile-damage-attribute:${project.projectile_damage}-fabric")
     modApi("com.github.Virtuoel:Pehkui:${pehkui_version}", {exclude group: "net.fabricmc.fabric-api"})
 

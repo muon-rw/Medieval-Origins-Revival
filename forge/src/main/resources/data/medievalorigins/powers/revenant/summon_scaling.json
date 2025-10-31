@@ -4,7 +4,7 @@
     "modifiers": [
         {
             "attribute": "medievalorigins:summon.ranged_damage",
-            "operation": "add_value",
+            "operation": "addition",
             "value": 0.5
         },
         {

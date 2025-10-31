@@ -6,7 +6,10 @@
   "refmap": "medievalorigins.refmap.json",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "LivingEntityMixinFabric",
+    "FoodDataMixin",
+    "ItemMixin",
+    "ItemStackMixin",
+    "LivingEntityMixin",
     "ZombieVillagerInvoker",
     "compat.icarus.IcarusHelperMixin",
     "compat.spell_engine.SpellCooldownMixin",
@@ -15,6 +18,8 @@
   "client": [
     "client.AbstractClientPlayerMixin",
     "client.ElytraModelMixin",
+    "client.ItemInHandRendererMixin",
+    "client.PlayerRendererMixin",
     "client.compat.icarus.IcarusClientMixin"
   ],
   "server": [
@@ -22,5 +27,5 @@
   "injectors": {
     "defaultRequire": 1
   }
-  }
+}
   

@@ -1,7 +1,6 @@
 package dev.muon.medievalorigins;
 
 import com.bawnorton.mixinsquared.canceller.MixinCancellerRegistrar;
-import dev.muon.medievalorigins.mixin.MedievalOriginsMixinCanceller;
 import net.minecraftforge.fml.loading.moddiscovery.ModInfo;
 import net.minecraftforge.fml.loading.LoadingModList;
 import org.apache.logging.log4j.LogManager;
@@ -19,7 +18,9 @@ public class MedievalOriginsForgeMixinPlugin implements IMixinConfigPlugin {
 
     @Override
     public void onLoad(String mixinPackage) {
+        LOGGER.info("MedievalOriginsForgeMixinPlugin.onLoad called with package: {}", mixinPackage);
         MixinCancellerRegistrar.register(new MedievalOriginsMixinCanceller());
+        LOGGER.info("MedievalOriginsForgeMixinPlugin initialized successfully");
     }
     @Override
     public String getRefMapperConfig() {
@@ -29,6 +30,8 @@ public class MedievalOriginsForgeMixinPlugin implements IMixinConfigPlugin {
 
     @Override
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
+        LOGGER.info("shouldApplyMixin called - target: {}, mixin: {}", targetClassName, mixinClassName);
+        
         if (mixinClassName.contains(".compat.")) {
 
             // Each subdirectory within /compat/ is a modid
@@ -53,7 +56,7 @@ public class MedievalOriginsForgeMixinPlugin implements IMixinConfigPlugin {
             }
 
             for (String modId : requiredMods) {
-                if (isModLoaded(modId)) {
+                if (!isModLoaded(modId)) {
                     LOGGER.info("Disabling mixin {} because required mod '{}' is not loaded",
                             getSimpleMixinName(mixinClassName), modId);
                     return false;
@@ -66,6 +69,7 @@ public class MedievalOriginsForgeMixinPlugin implements IMixinConfigPlugin {
             return true;
         }
 
+        LOGGER.info("Enabling mixin {} (not a compat mixin)", getSimpleMixinName(mixinClassName));
         return true;
     }
     private String getSimpleMixinName(String mixinClassName) {

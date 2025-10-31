@@ -7,7 +7,6 @@ import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.OwnableEntity;
 import net.minecraft.world.item.ItemStack;
 
-import javax.annotation.Nullable;
 import java.util.UUID;
 
 public interface ISummon extends OwnableEntity {
@@ -17,7 +16,7 @@ public interface ISummon extends OwnableEntity {
 
     int getTicksLeft();
 
-    default @Nullable LivingEntity getLivingEntity() {
+    default LivingEntity getLivingEntity() {
         return this instanceof LivingEntity ? (LivingEntity) this : null;
     }
     
@@ -37,11 +36,9 @@ public interface ISummon extends OwnableEntity {
         return this instanceof Mob ? (Mob) this : null;
     }
 
-    @Nullable
     default UUID getOwnerUUID(){
         return null;
     }
-    @Nullable
     default LivingEntity getOwner(){
         if(this instanceof LivingEntity && ((Entity) this).getCommandSenderWorld() instanceof ServerLevel serverLevel){
             return (LivingEntity) this.getOwner(serverLevel);
@@ -50,7 +47,7 @@ public interface ISummon extends OwnableEntity {
     }
     LivingEntity getOwnerFromID();
     @Deprecated(forRemoval = true) // Use getOwner
-    default @Nullable Entity getOwner(ServerLevel world) {
+    default Entity getOwner(ServerLevel world) {
         return getOwnerUUID() != null ? world.getEntity(getOwnerUUID()) : null;
     }
 }

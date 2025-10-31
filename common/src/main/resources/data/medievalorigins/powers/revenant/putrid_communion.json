@@ -63,7 +63,7 @@
 			"hunger": 0,
 			"saturation": 0,
 			"meat": false,
-			"can_always_eat": true
+			"always_edible": true
 		},
 		"use_action": "eat",
 		"item_action": {
@@ -98,7 +98,7 @@
 			"hunger": 0,
 			"saturation": 0,
 			"meat": false,
-			"can_always_eat": true
+			"always_edible": true
 		},
 		"use_action": "eat",
 		"item_action": {
@@ -133,7 +133,7 @@
 			"hunger": 0,
 			"saturation": 0,
 			"meat": false,
-			"can_always_eat": true
+			"always_edible": true
 		},
 		"use_action": "eat",
 		"item_action": {
@@ -185,7 +185,7 @@
 			"hunger": 0,
 			"saturation": 0,
 			"meat": false,
-			"can_always_eat": true,
+			"always_edible": true,
 			"effects": [
 				{
 					"effect": {

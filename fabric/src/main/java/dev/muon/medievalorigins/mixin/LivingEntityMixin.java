@@ -1,6 +1,7 @@
 package dev.muon.medievalorigins.mixin;
 
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
+import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Local;
@@ -17,6 +18,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.damagesource.DamageType;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.food.FoodProperties;
@@ -24,7 +26,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.UseAnim;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -34,11 +35,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(LivingEntity.class)
 public abstract class LivingEntityMixin {
-
-    @Shadow public abstract ItemStack getItemInHand(InteractionHand pHand);
-
-    @Unique
-    private static final org.apache.logging.log4j.Logger LOGGER = org.apache.logging.log4j.LogManager.getLogger("MedievalOrigins/EdibleItemPower");
 
     @Unique
     private static final TagKey<DamageType> MAGIC_DAMAGE = TagKey.create(
@@ -66,13 +62,18 @@ public abstract class LivingEntityMixin {
         return damageAmount;
     }
 
-    // Edible Item Power support
+
+    @ModifyReturnValue(method = "createLivingAttributes()Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier$Builder;", at = @At("RETURN"))
+    private static AttributeSupplier.Builder addAttributes(AttributeSupplier.Builder original) {
+        original.add(ModAttributes.SUMMON_RANGED_DAMAGE);
+        return original;
+    }
 
     @Inject(method = "shouldTriggerItemUseEffects", at = @At("HEAD"), cancellable = true)
     private void medievalorigins$shouldTriggerItemUseEffects(CallbackInfoReturnable<Boolean> cir) {
         LivingEntity self = (LivingEntity) (Object) this;
-        ItemStack useItem = this.getItemInHand(self.getUsedItemHand());
-        
+        ItemStack useItem = self.getItemInHand(self.getUsedItemHand());
+
         for (EdibleItemPower power : PowerHolderComponent.getPowers(self, EdibleItemPower.class)) {
             if (power.doesApply(self.level(), useItem)) {
                 int i = self.getUseItemRemainingTicks();
@@ -94,7 +95,7 @@ public abstract class LivingEntityMixin {
     private int medievalorigins$customUseDurationInShouldTrigger(ItemStack stack, Operation<Integer> original) {
         LivingEntity self = (LivingEntity) (Object) this;
         int originalDuration = original.call(stack);
-        
+
         if (originalDuration == 0) {
             for (EdibleItemPower power : PowerHolderComponent.getPowers(self, EdibleItemPower.class)) {
                 if (power.doesApply(self.level(), stack)) {
@@ -105,7 +106,7 @@ public abstract class LivingEntityMixin {
                 }
             }
         }
-        
+
         return originalDuration;
     }
 
@@ -115,7 +116,7 @@ public abstract class LivingEntityMixin {
     )
     private UseAnim medievalorigins$modifyUseAnimation(ItemStack stack, Operation<UseAnim> original) {
         LivingEntity self = (LivingEntity) (Object) this;
-        
+
         for (EdibleItemPower power : PowerHolderComponent.getPowers(self, EdibleItemPower.class)) {
             if (power.doesApply(self.level(), stack)) {
                 UseAnim customAnim = power.getUseAction();
@@ -124,7 +125,7 @@ public abstract class LivingEntityMixin {
                 }
             }
         }
-        
+
         return original.call(stack);
     }
 
@@ -134,7 +135,7 @@ public abstract class LivingEntityMixin {
     )
     private SoundEvent medievalorigins$customEatingTickSound(LivingEntity instance, ItemStack stack, Operation<SoundEvent> original) {
         LivingEntity self = (LivingEntity) (Object) this;
-        
+
         // Check for custom sound from edible item power during eating ticks
         for (EdibleItemPower power : PowerHolderComponent.getPowers(self, EdibleItemPower.class)) {
             if (power.doesApply(self.level(), stack)) {
@@ -144,7 +145,7 @@ public abstract class LivingEntityMixin {
                 }
             }
         }
-        
+
         return original.call(instance, stack);
     }
 
@@ -154,7 +155,7 @@ public abstract class LivingEntityMixin {
     )
     private SoundEvent medievalorigins$customDrinkingTickSound(LivingEntity instance, ItemStack stack, Operation<SoundEvent> original) {
         LivingEntity self = (LivingEntity) (Object) this;
-        
+
         // Check for custom sound from edible item power during drinking ticks
         for (EdibleItemPower power : PowerHolderComponent.getPowers(self, EdibleItemPower.class)) {
             if (power.doesApply(self.level(), stack)) {
@@ -164,27 +165,27 @@ public abstract class LivingEntityMixin {
                 }
             }
         }
-        
+
         return original.call(instance, stack);
     }
 
     @Inject(method = "completeUsingItem", at = @At("HEAD"))
     private void medievalorigins$completeUsingItem(CallbackInfo ci) {
         LivingEntity self = (LivingEntity) (Object) this;
-        ItemStack useItem = this.getItemInHand(self.getUsedItemHand());
-        
+        ItemStack useItem = self.getItemInHand(self.getUsedItemHand());
+
         for (EdibleItemPower power : PowerHolderComponent.getPowers(self, EdibleItemPower.class)) {
             if (power.doesApply(self.level(), useItem)) {
                 // Execute entity actions
                 if (power.entityActionWhenEaten != null) {
                     power.entityActionWhenEaten.accept(self);
                 }
-                
+
                 // Execute item actions
                 if (power.itemActionWhenEaten != null) {
                     power.itemActionWhenEaten.accept(new Tuple<>(self.level(), useItem));
                 }
-                
+
                 // Handle return stack
                 ItemStack returnStack = power.getReturnStack();
                 if (returnStack != null && !returnStack.isEmpty()) {
@@ -221,7 +222,7 @@ public abstract class LivingEntityMixin {
     )
     private SoundEvent medievalorigins$customEatingSound(LivingEntity instance, ItemStack food, Operation<SoundEvent> original) {
         LivingEntity self = (LivingEntity) (Object) this;
-        
+
         // Check for custom sound from edible item power
         for (EdibleItemPower power : PowerHolderComponent.getPowers(self, EdibleItemPower.class)) {
             if (power.doesApply(self.level(), food)) {
@@ -231,7 +232,7 @@ public abstract class LivingEntityMixin {
                 }
             }
         }
-        
+
         return original.call(instance, food);
     }
 
@@ -256,19 +257,19 @@ public abstract class LivingEntityMixin {
             method = "addEatEffect",
             at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/Item;getFoodProperties()Lnet/minecraft/world/food/FoodProperties;")
     )
-    private FoodProperties medievalorigins$customFoodPropertiesInAddEatEffect(Item instance, Operation<FoodProperties> original, @Local(argsOnly = true) ItemStack food,  @Local(argsOnly = true) LivingEntity livingEntity) {
+    private FoodProperties medievalorigins$customFoodPropertiesInAddEatEffect(Item instance, Operation<FoodProperties> original, @Local(argsOnly = true) ItemStack food, @Local(argsOnly = true) LivingEntity livingEntity) {
         FoodProperties originalFood = original.call(instance);
         if (originalFood != null) {
             return originalFood;
         }
-        
+
         // Check for custom food properties from edible item power
         for (EdibleItemPower power : PowerHolderComponent.getPowers(livingEntity, EdibleItemPower.class)) {
             if (power.doesApply(livingEntity.level(), food)) {
                 return power.getFoodComponent();
             }
         }
-        
+
         return null;
     }
 
@@ -278,12 +279,11 @@ public abstract class LivingEntityMixin {
         LivingEntity self = (LivingEntity) (Object) this;
         if (self.level().isClientSide) return;
 
-        ItemStack stack = this.getItemInHand(hand);
+        ItemStack stack = self.getItemInHand(hand);
         for (EdibleItemPower power : PowerHolderComponent.getPowers(self, EdibleItemPower.class)) {
             if (power.doesApply(self.level(), stack)) {
                 PowerHolderComponent.syncPower(self, power.getType());
-                LOGGER.info("EdibleItemPower: Synced power {} to client for {}", power.getType().getIdentifier(), stack.getItem());
-                return; // Only sync once
+                return;
             }
         }
     }
@@ -296,7 +296,7 @@ public abstract class LivingEntityMixin {
     private int medievalorigins$customUseDurationInStart(ItemStack stack, Operation<Integer> original) {
         LivingEntity self = (LivingEntity) (Object) this;
         int originalDuration = original.call(stack);
-        
+
         if (originalDuration == 0) {
             // Check for edible item power
             for (EdibleItemPower power : PowerHolderComponent.getPowers(self, EdibleItemPower.class)) {
@@ -308,7 +308,7 @@ public abstract class LivingEntityMixin {
                 }
             }
         }
-        
+
         return originalDuration;
     }
 
@@ -320,9 +320,8 @@ public abstract class LivingEntityMixin {
     private int medievalorigins$customUseDurationInSync(ItemStack stack, Operation<Integer> original) {
         LivingEntity self = (LivingEntity) (Object) this;
         int originalDuration = original.call(stack);
-        
+
         if (originalDuration == 0) {
-            // Check for edible item power
             for (EdibleItemPower power : PowerHolderComponent.getPowers(self, EdibleItemPower.class)) {
                 if (power.doesApply(self.level(), stack)) {
                     FoodProperties foodProps = power.getFoodComponent();
@@ -332,8 +331,9 @@ public abstract class LivingEntityMixin {
                 }
             }
         }
-        
+
         return originalDuration;
     }
+
 }
 

@@ -1,17 +1,24 @@
 {
   "required": true,
-  "minVersion": "0.8",
   "package": "dev.muon.medievalorigins.mixin",
   "plugin": "dev.muon.medievalorigins.MedievalOriginsForgeMixinPlugin",
   "refmap": "medievalorigins.refmap.json",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "FoodDataMixin",
+    "ItemMixin",
+    "ItemStackMixin",
+    "LivingEntityMixin",
+    "ZombieVillagerInvoker",
+    "compat.icarus.IcarusHelperMixin",
     "compat.iceandfire.EntityGorgonMixin",
-    "compat.iceandfire.PixieAIStealMixin",
-    "compat.iceandfire.SirenDataMixin",
     "compat.irons_spellbooks.AbstractSpellMixin"
   ],
   "client": [
+    "client.AbstractClientPlayerMixin",
+    "client.ElytraModelMixin",
+    "client.ItemInHandRendererMixin",
+    "client.PlayerRendererMixin",
     "client.compat.icarus.IcarusClientMixin"
   ],
   "injectors": {

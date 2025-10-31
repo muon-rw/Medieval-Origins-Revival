@@ -447,8 +447,8 @@
   "power.medievalorigins.yeti/winter_body.name": "Winter Body",
   "power.medievalorigins.yeti/winter_body.description": "Yetis are marginally taller than a regular human, and significantly wider.",
 
-  "power.medievalorigins.revenant.command_summons.name": "Command Undead",
-  "power.medievalorigins.revenant.command_summons.description": "Command your summoned combat undead (not horses) to follow, sit, or teleport to you.",
+  "power.medievalorigins.revenant/command_summons.name": "Command Undead",
+  "power.medievalorigins.revenant/command_summons.description": "Command your summoned combat undead (not horses) to follow, sit, or teleport to you.",
 
   "power.medievalorigins.revenant/black_thumb.name": "Black Thumb",
   "power.medievalorigins.revenant/black_thumb.description": "A Revenant can not harvest any crops; they wilt at their deathly touch. ",

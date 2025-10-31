@@ -4,6 +4,7 @@ import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Local;
+import dev.muon.medievalorigins.MedievalOrigins;
 import dev.muon.medievalorigins.power.EdibleItemPower;
 import io.github.apace100.apoli.component.PowerHolderComponent;
 import net.minecraft.world.InteractionHand;
@@ -16,10 +17,10 @@ import net.minecraft.world.level.Level;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
-@Mixin(Item.class)
+@Mixin(value = Item.class, priority = 1500)
 public class ItemMixin {
 
-    @ModifyExpressionValue(method = "use", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/Item;isEdible()Z"))
+    @ModifyExpressionValue(method = "use", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;isEdible()Z"))
     private boolean makeEdible(boolean original, Level level, Player player, InteractionHand hand) {
         ItemStack stack = player.getItemInHand(hand);
         return original || PowerHolderComponent.hasPower(player, EdibleItemPower.class, power -> power.doesApply(level, stack));
@@ -27,7 +28,7 @@ public class ItemMixin {
 
     @ModifyExpressionValue(method = "use", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/food/FoodProperties;canAlwaysEat()Z"))
     private boolean makeEdibleWhenPlayerFull(boolean original, Level level, Player player, InteractionHand hand) {
-        return original || PowerHolderComponent.hasPower(player, EdibleItemPower.class, power -> power.getFoodComponent().canAlwaysEat());
+        return original || PowerHolderComponent.hasPower(player, EdibleItemPower.class, power -> power.getFoodComponent() != null && power.getFoodComponent().canAlwaysEat());
     }
 
     @ModifyExpressionValue(method = "finishUsingItem", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/Item;isEdible()Z"))
@@ -36,10 +37,11 @@ public class ItemMixin {
         return original || PowerHolderComponent.hasPower(entity, EdibleItemPower.class, power -> power.doesApply(level, entity.getItemInHand(hand)));
     }
 
-
-    @WrapOperation(method = "use", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/Item;getFoodProperties()Lnet/minecraft/world/food/FoodProperties;"))
-    private FoodProperties injectCustomFoodProperties(Item instance, Operation<FoodProperties> original, @Local(argsOnly = true) Player player, @Local(argsOnly = true) Level level, @Local(argsOnly = true) InteractionHand hand) {
-        FoodProperties originalFood = original.call(instance);
+    // This target isn't useable on forge and there's no alternative, but it should be covered by the coremod
+    // Maybe need to similarly coremod IForgeItem for edge cases - probably not
+    @WrapOperation(method = "use", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;getFoodProperties(Lnet/minecraft/world/entity/LivingEntity;)Lnet/minecraft/world/food/FoodProperties;"))
+    private FoodProperties injectCustomFoodProperties(ItemStack instance, LivingEntity livingEntity, Operation<FoodProperties> original, @Local(argsOnly = true) Player player, @Local(argsOnly = true) Level level, @Local(argsOnly = true) InteractionHand hand) {
+        FoodProperties originalFood = original.call(instance, livingEntity);
         if (originalFood != null) {
             return originalFood;
         }
@@ -50,7 +52,6 @@ public class ItemMixin {
                 return power.getFoodComponent();
             }
         }
-        
         return null;
     }
 }

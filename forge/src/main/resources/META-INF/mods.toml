@@ -13,6 +13,8 @@ logoFile = "icon.png" #optional (needs to be in the root of your mod jar (root o
 credits = "" #optional
 authors = "MuonR" #optional
 description = 'Origins inspired by mythology, fantasy, and the medieval era' #mandatory (Supports multiline text)
+[[mixins]]
+config = "medievalorigins.forge.mixins.json"
 [[dependencies.medievalorigins]] #optional
 modId = "forge" #mandatory
 mandatory = true #mandatory
@@ -27,7 +29,7 @@ ordering = "NONE"
 side = "BOTH"
 [[dependencies.medievalorigins]]
 modId = "origins"
-mandatory = true
+mandatory = false
 versionRange = "*"
 ordering = "NONE"
 side = "BOTH"

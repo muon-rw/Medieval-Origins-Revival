@@ -29,7 +29,6 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.scores.Team;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
 import java.util.UUID;
@@ -84,7 +83,7 @@ public class SummonedWitherSkeleton extends WitherSkeleton implements IFollowing
     };
 
     private LivingEntity owner;
-    @Nullable
+    
     private BlockPos boundOrigin;
     private boolean isLimitedLifespan;
     private int limitedLifeTicks;
@@ -98,8 +97,8 @@ public class SummonedWitherSkeleton extends WitherSkeleton implements IFollowing
         return Services.ENTITIES.getEntityType(SummonedWitherSkeleton.class);
     }
 
-    @Nullable
-    public SpawnGroupData finalizeSpawn(ServerLevelAccessor worldIn, DifficultyInstance difficultyIn, MobSpawnType reason, @Nullable SpawnGroupData spawnDataIn, @Nullable CompoundTag dataTag) {
+    
+    public SpawnGroupData finalizeSpawn(ServerLevelAccessor worldIn, DifficultyInstance difficultyIn, MobSpawnType reason,  SpawnGroupData spawnDataIn,  CompoundTag dataTag) {
         this.populateDefaultEquipmentSlots(getRandom(), difficultyIn);
         this.populateDefaultEquipmentEnchantments(getRandom(), difficultyIn);
         return null;
@@ -118,7 +117,7 @@ public class SummonedWitherSkeleton extends WitherSkeleton implements IFollowing
         this.targetSelector.addGoal(1, new CopyOwnerTargetGoal<>(this));
         this.targetSelector.addGoal(2, new HurtByTargetGoal(this, SummonedSkeleton.class){
             @Override
-            protected boolean canAttack(@Nullable LivingEntity pPotentialTarget, TargetingConditions pTargetPredicate) {
+            protected boolean canAttack( LivingEntity pPotentialTarget, TargetingConditions pTargetPredicate) {
                 return pPotentialTarget != null && super.canAttack(pPotentialTarget, pTargetPredicate) && !pPotentialTarget.getUUID().equals(getOwnerUUID()) ;
             }
         });
@@ -309,7 +308,7 @@ public class SummonedWitherSkeleton extends WitherSkeleton implements IFollowing
         return false;
     }
 
-    @Nullable
+    
     @Override
     public UUID getOwnerUUID() {
         return this.entityData.get(OWNER_UUID).orElse(null);

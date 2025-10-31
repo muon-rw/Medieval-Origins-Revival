@@ -1,7 +1,7 @@
 package dev.muon.medievalorigins.action.bientity;
 
 import dev.muon.medievalorigins.MedievalOrigins;
-import dev.muon.medievalorigins.mixin.ZombieVillagerInvoker;
+import dev.muon.medievalorigins.platform.Services;
 import io.github.apace100.apoli.power.factory.action.ActionFactory;
 import io.github.apace100.calio.data.SerializableData;
 import net.minecraft.util.Tuple;
@@ -22,7 +22,7 @@ public class CureVillagerAction {
             ItemStack itemInHand = player.getMainHandItem();
             if (itemInHand.is(Items.GOLDEN_APPLE)) {
                 if (!zombieVillager.level().isClientSide()) {
-                    ((ZombieVillagerInvoker) zombieVillager).callStartConverting(player.getUUID(), 1);
+                    Services.VILLAGER.startVillagerConversion(zombieVillager, player.getUUID(), 1);
                 }
             }
         }

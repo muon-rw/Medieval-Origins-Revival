@@ -13,7 +13,6 @@ import net.minecraft.world.entity.Mob;
 import net.minecraft.world.item.*;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
 
@@ -67,7 +66,7 @@ public class TransferItemAction {
         }
     }
 
-    private static void handleTakingItem(LivingEntity livingActor, LivingEntity livingTarget, @Nullable Vec3 hitVec,
+    private static void handleTakingItem(LivingEntity livingActor, LivingEntity livingTarget,  Vec3 hitVec,
                                           EquipmentSlot sourceSlot, boolean prioritizeMainhandForTake, boolean allowEmptyHandMainhandTake) {
         EquipmentSlot slotOnSummonToInteract = null;
 
@@ -105,7 +104,7 @@ public class TransferItemAction {
 
 
     private static void handleGivingOrSwappingItem(LivingEntity livingActor, LivingEntity livingTarget, ItemStack playerItemInSourceSlot, 
-                                                     @Nullable Vec3 hitVec, EquipmentSlot sourceSlot, EquipmentSlot targetSlot) {
+                                                      Vec3 hitVec, EquipmentSlot sourceSlot, EquipmentSlot targetSlot) {
         EquipmentSlot slotOnSummonToInteract;
         if (targetSlot != null) {
             slotOnSummonToInteract = targetSlot;
@@ -150,7 +149,7 @@ public class TransferItemAction {
         return defaultSlot;
     }
 
-    @Nullable
+    
     private static EquipmentSlot getClickedSlotOnSummon(LivingEntity summon, Vec3 worldHitPos, boolean forTakingItem) {
         double localOriginY = summon.getY();
         double hitY = worldHitPos.y();

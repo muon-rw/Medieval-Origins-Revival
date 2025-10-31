@@ -3,7 +3,7 @@
 	"badges": [
 		{
 			"type": "origins:tooltip",
-			"sprite": "medievalorigins:textures/gui/pixie_badge.png",
+			"sprite": "medievalorigins:textures/gui/revenant_badge.png",
 			"text": [
 				{
 					"translate": "badges.medievalorigins.revenant.siphon",

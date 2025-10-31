@@ -4,6 +4,7 @@ import dev.muon.medievalorigins.MedievalOrigins;
 import dev.muon.medievalorigins.platform.services.IEntityHelper;
 import dev.muon.medievalorigins.platform.services.IPlatformHelper;
 import dev.muon.medievalorigins.platform.services.ISpellHelper;
+import dev.muon.medievalorigins.platform.services.IVillagerHelper;
 
 import java.util.ServiceLoader;
 
@@ -22,6 +23,9 @@ public class Services {
 
     // Entity helper - provides access to registered entity types
     public static final IEntityHelper ENTITIES = load(IEntityHelper.class);
+
+    // Villager helper - provides access to villager-related operations
+    public static final IVillagerHelper VILLAGER = load(IVillagerHelper.class);
 
     // This code is used to load a service for the current environment. Your implementation of the service must be defined
     // manually by including a text file in META-INF/services named with the fully qualified class name of the service.

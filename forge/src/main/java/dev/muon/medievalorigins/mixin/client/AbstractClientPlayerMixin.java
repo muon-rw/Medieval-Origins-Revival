@@ -15,7 +15,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-@Mixin(value = AbstractClientPlayer.class, remap = true)
+@Mixin(value = AbstractClientPlayer.class)
 public abstract class AbstractClientPlayerMixin extends Player {
     @Unique
     private static final int TICK_INTERVAL = 2;

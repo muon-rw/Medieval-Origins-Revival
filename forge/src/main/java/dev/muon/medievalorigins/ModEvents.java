@@ -5,6 +5,7 @@ import dev.muon.medievalorigins.entity.ModEntities;
 import dev.muon.medievalorigins.entity.SummonedSkeleton;
 import dev.muon.medievalorigins.entity.SummonedZombie;
 import dev.muon.medievalorigins.entity.SummonedWitherSkeleton;
+import net.minecraft.world.entity.EntityType;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.event.entity.EntityAttributeModificationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -21,8 +22,9 @@ public class ModEvents {
 
     @SubscribeEvent
     public void applyAttribs(EntityAttributeModificationEvent event) {
-        event.add(ModEntities.SUMMON_SKELETON.get(), ModAttributes.SUMMON_RANGED_DAMAGE, 0);
-        event.add(ModEntities.SUMMON_WITHER_SKELETON.get(), ModAttributes.SUMMON_RANGED_DAMAGE, 0);
+        event.add(EntityType.PLAYER, ModAttributes.SUMMON_RANGED_DAMAGE);
+        event.add(ModEntities.SUMMON_SKELETON.get(), ModAttributes.SUMMON_RANGED_DAMAGE);
+        event.add(ModEntities.SUMMON_WITHER_SKELETON.get(), ModAttributes.SUMMON_RANGED_DAMAGE);
     }
 
 }
