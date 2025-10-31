@@ -25,8 +25,8 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.entity.PartEntity;
 
-import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
@@ -38,11 +38,6 @@ public class IronsSpellbooksUtils {
     // Continuous casting tracking for mana drain over time
     private static final Map<UUID, ContinuousCastData> CONTINUOUS_CASTS = new HashMap<>();
 
-    // Reflection cache for PartEntity handling
-    private static Class<?> partEntityClass = null;
-    private static Method getParentMethod = null;
-    private static boolean partEntityCheckAttempted = false;
-
     private static class ContinuousCastData {
         final int manaCost;
         final int costInterval;
@@ -53,34 +48,6 @@ public class IronsSpellbooksUtils {
             this.costInterval = costInterval;
             this.ticksElapsed = ticksElapsed;
         }
-    }
-
-    private static Entity getParentFromPartEntity(Entity entity) {
-        if (!partEntityCheckAttempted) {
-            partEntityCheckAttempted = true;
-            try {
-                partEntityClass = Class.forName("net.minecraftforge.entity.PartEntity");
-                getParentMethod = partEntityClass.getMethod("getParent");
-            } catch (ClassNotFoundException e) {
-                MedievalOrigins.LOG.warn("PartEntity not found", e);
-            } catch (NoSuchMethodException e) {
-                MedievalOrigins.LOG.warn("PartEntity found but getParent method not found", e);
-            }
-        }
-        if (partEntityClass != null && getParentMethod != null) {
-            try {
-                if (partEntityClass.isInstance(entity)) {
-                    Object parent = getParentMethod.invoke(entity);
-                    if (parent instanceof Entity) {
-                        return (Entity) parent;
-                    }
-                }
-            } catch (Exception e) {
-                MedievalOrigins.LOG.error("Error accessing PartEntity parent via reflection", e);
-            }
-        }
-
-        return null;
     }
 
     /**
@@ -320,9 +287,9 @@ public class IronsSpellbooksUtils {
         LivingEntity livingTarget = null;
         if (entityHit instanceof LivingEntity livingEntity && filter.test(livingEntity)) {
             livingTarget = livingEntity;
-        } else {
-            // Try to get parent entity via reflection (for Forge's PartEntity)
-            Entity parent = getParentFromPartEntity(entityHit);
+        } else if (entityHit instanceof PartEntity<?> partEntity) {
+            // Handle Forge's PartEntity (e.g., dragon body parts)
+            Entity parent = partEntity.getParent();
             if (parent instanceof LivingEntity livingParent && filter.test(livingParent)) {
                 livingTarget = livingParent;
             }
