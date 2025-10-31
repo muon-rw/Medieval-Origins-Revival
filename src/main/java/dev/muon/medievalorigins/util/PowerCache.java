@@ -105,19 +105,8 @@ public class PowerCache {
     public static <T extends PowerType> List<T> getPowerTypes(Entity entity, Class<T> powerClass) {
         if (entity == null || entity.isRemoved()) return Collections.emptyList();
 
-        int entityId = entity.getId();
-        UUID entityUuid = entity.getUUID();
+        EntityCacheEntry entry = getOrCreateEntityEntry(entity);
 
-        EntityCacheEntry entry = cache.compute(entityId, (id, existing) -> {
-            if (existing == null || !existing.entityUuid.equals(entityUuid)) {
-                return new EntityCacheEntry(entityUuid);
-            }
-            existing.lastAccessTick = tickCounter.get();
-            return existing;
-        });
-
-        // Atomically get or compute the power data
-        // The computeIfAbsent block is only executed if powerClass is not in the map
         CachedPowerData<?> cached = entry.powerDataMap.computeIfAbsent(powerClass, pc -> {
             List<T> powerTypes = PowerHolderComponent.getPowerTypes(entity, powerClass);
             return new CachedPowerData<>(powerTypes, !powerTypes.isEmpty());
@@ -133,29 +122,25 @@ public class PowerCache {
     public static <T extends PowerType> boolean hasPowerType(Entity entity, Class<T> powerClass) {
         if (entity == null || entity.isRemoved()) return false;
 
-        int entityId = entity.getId();
-        UUID entityUuid = entity.getUUID();
+        // 1. Use the helper method
+        EntityCacheEntry entry = getOrCreateEntityEntry(entity);
 
-        EntityCacheEntry entry = cache.compute(entityId, (id, existing) -> {
-            if (existing == null || !existing.entityUuid.equals(entityUuid)) {
-                return null; // Don't create, just invalidate
-            }
-            existing.lastAccessTick = tickCounter.get();
-            return existing;
-        });
-
-
-        if (entry != null) {
-            // Check if data is already cached
-            CachedPowerData<?> cached = entry.powerDataMap.get(powerClass);
-            if (cached != null) {
-                return cached.hasAny;
-            }
+        // 2. Try a fast 'get' first. This is non-blocking and very cheap.
+        CachedPowerData<?> cached = entry.powerDataMap.get(powerClass);
+        if (cached != null) {
+            return cached.hasAny; // Fast path: cache hit
         }
 
-        // If not cached or entry didn't exist, fall back to getPowerTypes,
-        // which will safely compute and cache it.
-        return !getPowerTypes(entity, powerClass).isEmpty();
+        // 3. Slow path: cache miss. Compute, store, and return.
+        //    This is the same logic as getPowerTypes, but we return 'hasAny'.
+        CachedPowerData<?> newlyCached = entry.powerDataMap.computeIfAbsent(powerClass, pc -> {
+            // This lambda only runs if 'cached' was null and another thread
+            // didn't just add it in the meantime.
+            List<T> powerTypes = PowerHolderComponent.getPowerTypes(entity, powerClass);
+            return new CachedPowerData<>(powerTypes, !powerTypes.isEmpty());
+        });
+
+        return newlyCached.hasAny;
     }
     
     /**
@@ -176,6 +161,25 @@ public class PowerCache {
         
         List<T> powerTypes = getPowerTypes(entity, powerClass);
         return powerTypes.stream().filter(filter).findFirst();
+    }
+
+    /**
+     * Gets or creates the cache entry for a given entity, handling
+     * UUID validation and access tick updates.
+     */
+    private static EntityCacheEntry getOrCreateEntityEntry(Entity entity) {
+        int entityId = entity.getId();
+        UUID entityUuid = entity.getUUID();
+
+        return cache.compute(entityId, (id, existing) -> {
+            // If new or UUID mismatch, create a new entry
+            if (existing == null || !existing.entityUuid.equals(entityUuid)) {
+                return new EntityCacheEntry(entityUuid);
+            }
+            // Otherwise, update access tick and return existing
+            existing.lastAccessTick = tickCounter.get();
+            return existing;
+        });
     }
     
     /**
