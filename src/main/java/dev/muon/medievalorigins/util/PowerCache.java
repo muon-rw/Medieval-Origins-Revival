@@ -71,7 +71,9 @@ import java.util.function.Predicate;
 
 // TODO: Potentially still a memory leak here as PowerType instances end up cached, which hold references to their entity
 // Could instead store only the boolean state of hasPowerType, and allow getPowerTypes to always compute -
-// though this may significantly reduce the optimization for repeated calls to getPowerTypes, if that occurs
+// Though this may significantly reduce the optimization for repeated calls to getPowerTypes, if that occurs
+// However, to my knowledge getPowerTypes is *not* on any particular hot paths, so it may be worth making this change.
+// For now, the periodic cleanup prevents egregious leaks
 
 public class PowerCache {
     // Cache structure: EntityId -> PowerClass -> List of cached power types
