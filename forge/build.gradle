@@ -1,6 +1,7 @@
 plugins {
     id 'multiloader-loader'
     id 'net.neoforged.moddev.legacyforge'
+    id "me.modmuss50.mod-publish-plugin" version "1.1.0"
 }
 
 mixin {
@@ -151,4 +152,36 @@ jar {
     manifest.attributes([
             "MixinConfigs": "${mod_id}.mixins.json,${mod_id}.forge.mixins.json"
     ])
+}
+
+publishMods {
+    file = reobfJar.archiveFile
+    modLoaders.add("forge")
+    changelog = new File("$project.rootDir/CHANGELOG.md").getText('UTF-8')
+    version = "Forge-${project.version}+${minecraft_version}"
+    type = STABLE
+    displayName = "Forge-${project.version}+${minecraft_version}"
+
+    curseforge {
+        projectId = "${curseforge_project}"
+        accessToken = System.getenv("CF_TOKEN")
+
+        minecraftVersions.add(minecraft_version)
+
+        clientRequired = true
+        serverRequired = true
+
+        // Dependencies
+        requires "origins"
+        requires "icarus"
+        requires "pehkui"
+    }
+    modrinth {
+        projectId = "${modrinth_project}"
+        accessToken = System.getenv("MODRINTH_TOKEN")
+        minecraftVersions.add(minecraft_version)
+        requires "origins"
+        requires "icarus"
+        requires "pehkui"
+    }
 }

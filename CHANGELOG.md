@@ -1,26 +1,10 @@
-## 6.7.0
+# 6.7.0
 - Add support for Origins (Fabric) 1.10.2+
 - Origins (Forge) is no longer supported. Forge versions now require Origins (Fabric), Sinytra Connector, and Connector Extras.
 - Removed Apugli, which fixes an incompatibility with Hold My Items and should greatly improve overall performance
 - Added a new keybind, Tertiary Active (default V)
 
-### Fae Rewrite
-- **Fae** origin has been completely reworked with new nature-themed abilities
-  - *Players with the Fae Origin will need to reselect their origin to receive the new powers.*
-  - **Overall Role**: Support, Nature Magic, Protector.
-  - **Kept Abilities**:
-    - `Levitation`: Active upward flight.
-    - `Allure`: Increased mob detection range.
-    - `Diminutive`: Small size.
-    - `Iron Aversion`: Cannot wear iron/silver.
-  - **New/Reworked Abilities**:
-    - `Wings`: Custom wings, animated while jumping or flying (similar to Pixie wings).
-    - `Nature's Blessing` (Tertiary Active): Channel nature magic to auto-plant seeds while moving and pulse healing/cleansing to nearby allies.
-    - `Nourishment` (Secondary Active): Instantly bonemeal plants in an area.
-    - `Forest Kin`: Grants passive health regeneration while in forest biomes.
-    - `Nature's Ward`: Immunity to poison and nausea, plus resistance to magic damage.
-    - `Fragile Frame`: Reduced health (-2 hearts).
-
+*And all of the following, to celebrate Origins for 1.20.1 having risen from the grave. Happy Halloween!*
 ### Revenant
 - Revenant Summons can now be equipped with armor
 - Revenant Summons now have a time limit by default, extendable by Putrid Communion
@@ -31,17 +15,32 @@
 - Fixed Guards and Iron Golems not attacking Revenants
 - Revenant and Pixie can no longer bypass trading restrictions using a Trading Post
 
+### Fae
+- **Fae** has been reworked!
+  - ***Fae*** are magical woodland creatures of elegance, infused with natural magic and deeply connected to the forests from which they hail.
+  - *Players with the Fae Origin may need to reselect their origin to receive the new powers.*
+  - **Kept Abilities**:
+    - `Levitation`: Active upward flight.
+    - `Allure`: Increased mob detection range.
+    - `Diminutive`: Small size.
+    - `Iron Aversion`: Cannot wear iron/silver.
+  - **New/Reworked Abilities**:
+    - `Wings`: Custom wings, animated while jumping or flying (currently identical to Pixie wings)
+    - `Nature's Blessing` (Tertiary Active): Channel nature magic to auto-plant seeds while moving and pulse healing/cleansing to nearby allies.
+    - `Nourishment` (Secondary Active): Instantly bonemeal plants in an area.
+    - `Forest Kin`: Grants passive health regeneration while in forest biomes.
+    - `Nature's Ward`: Immunity to poison and nausea, plus resistance to magic damage.
+    - `Fragile Frame`: Reduced health (-2 hearts).
+
 ### Wood Elf
-- Fixed Wood Elf **Focus** (Empowered Shot) power and made it compatible with all arrow-modifying mods
-- Added 3 new power types: `modify_pierce_level`, `modify_projectile_velocity`, `modify_projectile_accuracy`
+- Rewrite Wood Elf **Focus** (Empowered Shot) power, making it compatible with (almost) all arrow-modifying mods
 
 ### Siren  
-- Greatly improved Siren Song performance and reliability
-- Removed unnecessary workarounds from Siren Song (visibility scaling and AngryTime manipulation)
-- Siren's mobs_ignore power now properly interrupts mob targeting
+- Siren Song now reliably interrupts mobs that were already targeting the player
 
 ### Pixie
 - The key modifier for dashing has been changed from Sprint to Tertiary Active (default V)
+- Increased maximum FP from 100 to 150
 - Flight Power now regenerates twice as fast after defeating the Ender Dragon
 - Glow Berries and Dragon Breath can now be consumed to restore FP 
 
@@ -49,11 +48,10 @@
 - Heal from Intervention now scales with `spell_power_healing` or `irons_spellbooks:holy_spell_power`
 - The three-hit tracker for Divine Smite is no longer displayed on the HUD
 
-## Banshee
-- Sonic Shriek now scales with `spell_power:soul` or `irons_spellbooks:blood_spell_power` 
+### Banshee
+- Sonic Shriek damage now scales with `spell_power:soul` or `irons_spellbooks:blood_spell_power` 
 
-### New Power Types
-Added power types (mostly backported from 1.21.1):
+### New Powers
 - `medievalorigins:modify_durability_change` - Modify item durability damage
 - `medievalorigins:modify_projectile_velocity` - Modify arrow/projectile velocity
 - `medievalorigins:modify_projectile_accuracy` - Modify arrow/projectile accuracy
@@ -64,24 +62,22 @@ Added power types (mostly backported from 1.21.1):
 - `medievalorigins:action_on_jump` - Execute actions when jumping
 - `medievalorigins:modify_reputation` - Modify villager reputation
 - `medievalorigins:fae_wings` - Wings power (for Fae origin)
-- 
-### New Condition Types
-Added condition types (backported from 1.21.1):
+### New Conditions
 - `medievalorigins:entity_in_radius` (entity condition) - Count entities in radius matching a condition
 - `medievalorigins:covered_by_block` (entity condition) - Check if entity is fully covered by blocks
 - `medievalorigins:is_crop` (block condition) - Check if block is a crop
 - `medievalorigins:is_flower` (block condition) - Check if block is a flower
-
-### Compatibility Improvements
-- **FTB Teams**: `medievalorigins:allied` condition now properly works client-side with FTB Teams
-- Improved allied checks to recursively check entity ownership (so your allies' pets and summons now appropriately count as allied)
-
 ### New Actions
 - `medievalorigins:spell_heal` (bientity action) - Heal with spell power scaling
 - `medievalorigins:raycast_between` (bientity action) - Perform a raycast in a line between entities
 - `medievalorigins:area_bonemeal` (entity action) - Bonemeal crops in an area
 - `medievalorigins:auto_plant_seeds` (entity action) - Plant seeds automatically as you walk
+### Misc:
+- **FTB Teams**: `medievalorigins:allied` condition now properly works client-side with FTB Teams
+- Improved allied checks to recursively check entity ownership (so your allies' pets and summons now appropriately count as allied)
 
+
+---
 ## 6.6.0
 - Changed Alfiq fall damage negation to be look-direction based, instead of fall distance
 - Made Alfiq meows louder and more spammable

@@ -1,6 +1,7 @@
 plugins {
     id 'multiloader-loader'
     id 'fabric-loom'
+    id "me.modmuss50.mod-publish-plugin" version "1.1.0"
 }
 
 loom {
@@ -147,4 +148,37 @@ dependencies {
     modImplementation("dev.ftb.mods:ftb-teams-fabric:${project.ftb_teams_version}")
 
     //runtimeOnly "curse.maven:architectury-api-419699:5137936"
+}
+
+
+publishMods {
+    file = remapJar.archiveFile
+    modLoaders.add("fabric")
+    changelog = new File("$project.rootDir/CHANGELOG.md").getText('UTF-8')
+    version = "Fabric-${project.version}+${minecraft_version}"
+    type = STABLE
+    displayName = "Fabric-${project.version}+${minecraft_version}"
+
+    curseforge {
+        projectId = "${curseforge_project}"
+        accessToken = System.getenv("CF_TOKEN")
+
+        minecraftVersions.add(minecraft_version)
+
+        clientRequired = true
+        serverRequired = true
+
+        // Dependencies
+        requires "origins"
+        requires "icarus"
+        requires "pehkui"
+    }
+    modrinth {
+        projectId = "3FJ8AhW0"
+        accessToken = System.getenv("MODRINTH_TOKEN")
+        minecraftVersions.add(minecraft_version)
+        requires "origins"
+        requires "icarus"
+        requires "pehkui"
+    }
 }
