@@ -27,6 +27,7 @@ public class ItemStackMixin {
         return original || PowerHolderComponent.hasPower(heldStack.getEntity(), EdibleItemPower.class, power -> power.doesApply(heldStack.getEntity().level(), self));
     }
 
+    @SuppressWarnings("all")
     @ModifyVariable(method = "setDamageValue", at = @At(value = "HEAD"), argsOnly = true)
     private int medievalorigins$modifyDurabilityChange(int damage) {
         ItemStack self = (ItemStack) (Object) this;
