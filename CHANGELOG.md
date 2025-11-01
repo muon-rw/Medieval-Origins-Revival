@@ -1,3 +1,6 @@
+## 6.7.1
+- Spell Engine is no longer marked as required
+
 # 6.7.0
 - Add support for Origins (Fabric) 1.10.2+
 - Origins (Forge) is no longer supported. Forge versions now require Origins (Fabric), Sinytra Connector, and Connector Extras.
