@@ -1,59 +1,59 @@
 {
-  "origin.origins.human.description": "-§l Notable Changes§r: \n§oNone§r\n\n A human's fate is more open than most - venture forth with no benefits or drawbacks.",
+  "origin.origins.human.description": "-§l Overview§r: \n§oNone§r\n\n A human's fate is more open than most - venture forth with no benefits or drawbacks.",
 
   "origin.medievalorigins.alfiq.name": "Alfiq",
-  "origin.medievalorigins.alfiq.description": "-§l Notable Changes§r: \n§o§2+ Unarmed Bonus§r\n§o§2+ Unique Movement§r\n§o§6• Carnivore§r\n§o§c- Defense§r\n§lAlfiq§r are a cunning species of anthropomorphic felines with sharp claws and excellent agility. Their roads often lead to warm sands.",
+  "origin.medievalorigins.alfiq.description": "-§l Overview§r: \n§o§2+ Unarmed Bonus§r\n§o§2+ Unique Movement§r\n§o§6• Carnivore§r\n§o§c- Defense§r\n§lAlfiq§r are a cunning species of anthropomorphic felines with sharp claws and excellent agility. Their roads often lead to warm sands.",
 
   "origin.medievalorigins.arachnae.name": "Arachnae",
-  "origin.medievalorigins.arachnae.description": "-§l Notable Changes§r: \n§o§2+ Poison, Crowd Control\n+ Wall Climbing§r\n§o§6• Carnivore§r\n§o§c- Hunger, Armor§r\nA grotesque amalgamation of spider and human, with venomous fangs and bristled feet yet the ability to walk upright and wield weaponry.",
+  "origin.medievalorigins.arachnae.description": "-§l Overview§r: \n§o§2+ Poison, Crowd Control\n+ Wall Climbing§r\n§o§6• Carnivore§r\n§o§c- Hunger, Armor§r\nA grotesque amalgamation of spider and human, with venomous fangs and bristled feet yet the ability to walk upright and wield weaponry.",
 
   "origin.medievalorigins.banshee.name": "Banshee",
-  "origin.medievalorigins.banshee.description": "-§l Notable Changes§r: \n§o§2+ Flight, Support, Phasing§r\n§o§c- Defense§r\n§o§c- Extreme changes, read first!§r\n§lBanshees§r are anguished spirits whose cries can shatter glass and drive people to madness. In myth, their presence is often considered an omen of death.",
+  "origin.medievalorigins.banshee.description": "-§l Overview§r: \n§o§2+ Flight, Support, Phasing§r\n§o§c- Defense§r\n§o§c- Extreme changes, read first!§r\n§lBanshees§r are anguished spirits whose cries can shatter glass and drive people to madness. In myth, their presence is often considered an omen of death.",
 
   "origin.medievalorigins.incubus.name": "Incubus",
-  "origin.medievalorigins.incubus.description": "-§l Notable Changes§r: \n§o§2+ Nether Bonuses\n§o§6• Fire-based\n§o§c- Damaged by Water§r\n§o§c- Weak in Overworld§r\n§lIncubi§r are evil servants of a dark power. They are powerful in their own realm, but in exchange for this they have given up their soul, and are weak to pure sources.",
+  "origin.medievalorigins.incubus.description": "-§l Overview§r: \n§o§2+ Nether Bonuses\n§o§6• Fire-based\n§o§c- Damaged by Water§r\n§o§c- Weak in Overworld§r\n§lIncubi§r are evil servants of a dark power. They are powerful in their own realm, but in exchange for this they have given up their soul, and are weak to pure sources.",
 
   "origin.medievalorigins.dwarf.name": "Dwarf",
-  "origin.medievalorigins.dwarf.description": "-§l Notable Changes§r: \n§o§2+ Mining, Caving§r\n§o§6• Short: 102cm/3'7\"§r\n§o§c- Sun sensitive \n- Can't swim§r\n§lDwarves§r are practical, stocky, and prideful. They excel at mining and living underground, but struggle with the daylight. Rock and stone, brother.",
+  "origin.medievalorigins.dwarf.description": "-§l Overview§r: \n§o§2+ Mining, Caving§r\n§o§6• Short: 102cm/3'7\"§r\n§o§c- Sun sensitive \n- Can't swim§r\n§lDwarves§r are practical, stocky, and prideful. They excel at mining and living underground, but struggle with the daylight. Rock and stone, brother.",
 
   "origin.medievalorigins.wood_elf.name": "Wood Elf",
-  "origin.medievalorigins.wood_elf.description": "-§l Notable Changes§r: \n§o§2+ Ranged Bonuses, Speed§r\n§o§6• Stealthy, Vegetarian§r\n§o§c- Melee Damage, Defense§r\n§lWood Elves§r are a wise, long-lived race who live in harmony with the Earth. They are quick with a sword and bow and can outwit their enemies while among the trees.",
+  "origin.medievalorigins.wood_elf.description": "-§l Overview§r: \n§o§2+ Ranged Bonuses, Speed§r\n§o§6• Stealthy, Vegetarian§r\n§o§c- Melee Damage, Defense§r\n§lWood Elves§r are a wise, long-lived race who live in harmony with the Earth. They are quick with a sword and bow and can outwit their enemies while among the trees.",
 
   "origin.medievalorigins.high_elf.name": "High Elf",
-  "origin.medievalorigins.high_elf.description": "-§l Notable Changes§r: \n§o§2+ Magic, Unique Abilities§r\n§o§c- Physical Damage\n- Defense§r\n§lHigh Elves§r are notoriously arrogant, though undeniably talented; elemental magics course strongly through their blood, though they are weaker with weaponry.",
+  "origin.medievalorigins.high_elf.description": "-§l Overview§r: \n§o§2+ Magic, Unique Abilities§r\n§o§c- Physical Damage\n- Defense§r\n§lHigh Elves§r are notoriously arrogant, though undeniably talented; elemental magics course strongly through their blood, though they are weaker with weaponry.",
 
   "origin.medievalorigins.fae.name": "Fae",
-  "origin.medievalorigins.fae.description": "-§l Notable Changes§r: \n§o§2+ Hovering, Magic§r\n§o§6• Short: 122cm/4'0\"§r\n§o§c- Loved by Mobs§r\n§o§c- Defense§r\n§lFae§r are short magical winged humanoids, regarded as spirits of nature and said to haunt forests and lead travelers' astray. They are equal parts mystic and trickster.",
+  "origin.medievalorigins.fae.description": "§l§Overview§r: \n§o§2+ Hovering, Magic§r\n§o§6• Short: 122cm/4'0\"§r\n§o§c- Loved by Mobs§r\n§lFae§r are magical woodland creatures of elegance, infused with natural magic and deeply connected to the forests from which they hail.",
 
   "origin.medievalorigins.goblin.name": "Goblin",
-  "origin.medievalorigins.goblin.description": "-§l Notable Changes§r: \n§o§2+ Gold Gear Bonuses§r\n§o§2+ Luck, Speed§r \n§o§6• Small: 92cm/3'3\"§r \n§o§c- Health, Defense§r\n§lGoblins§r are obsessed with gold and treasure and tend to find a little more loot wherever they look, but their small size leaves them vulnerable in combat.",
+  "origin.medievalorigins.goblin.description": "-§l Overview§r: \n§o§2+ Gold Gear Bonuses§r\n§o§2+ Luck, Speed§r \n§o§6• Small: 92cm/3'3\"§r \n§o§c- Health, Defense§r\n§lGoblins§r are obsessed with gold and treasure and tend to find a little more loot wherever they look, but their small size leaves them vulnerable in combat.",
 
   "origin.medievalorigins.gorgon.name": "Gorgon",
-  "origin.medievalorigins.gorgon.description": "-§l Notable Changes§r: \n§o§2+ Poison Damage, Immunity§r\n§o§2+ Crowd Control§r\n§o§c- Hydrophobe \n- Unique weaknesses§r\n§lGorgons§r are cursed creatures who were once human, with hair made of writhing snakes and a haunting visage said to petrify those who witness it.",
+  "origin.medievalorigins.gorgon.description": "-§l Overview§r: \n§o§2+ Poison Damage, Immunity§r\n§o§2+ Crowd Control§r\n§o§c- Hydrophobe \n- Unique weaknesses§r\n§lGorgons§r are cursed creatures who were once human, with hair made of writhing snakes and a haunting visage said to petrify those who witness it.",
 
   "origin.medievalorigins.moon_elf.name": "Moon Elf",
-  "origin.medievalorigins.moon_elf.description": "-§l Notable Changes§r: \n§o§2+ Dagger Damage\n+ Dextrous§r\n§o§6• Stealthy, Doesn't Sleep§r\n§o§c- Defense§r\nMysterious, ethereal beings not of this world. Moon elves are named not for their homeland, but for the only thing their victims can see before their end.",
+  "origin.medievalorigins.moon_elf.description": "-§l Overview§r: \n§o§2+ Dagger Damage\n+ Dextrous§r\n§o§6• Stealthy, Doesn't Sleep§r\n§o§c- Defense§r\nMysterious, ethereal beings not of this world. Moon elves are named not for their homeland, but for the only thing their victims can see before their end.",
 
   "origin.medievalorigins.ogre.name": "Ogre",
-  "origin.medievalorigins.ogre.description": "-§l Notable Changes§r: \n§o§2+ Axe Bonuses, Defense §r\n§o§6• Massive: 268cm/9'5\"§r\n§o§c- Hunger, Speed §r\n§lOgres§r are a large, short-tempered, and brutish subspecies of Orc. Their lumbering size and limited intelligence are made up for by their raw strength.",
+  "origin.medievalorigins.ogre.description": "-§l Overview§r: \n§o§2+ Axe Bonuses, Defense §r\n§o§6• Massive: 268cm/9'5\"§r\n§o§c- Hunger, Speed §r\n§lOgres§r are a large, short-tempered, and brutish subspecies of Orc. Their lumbering size and limited intelligence are made up for by their raw strength.",
 
   "origin.medievalorigins.pixie.name": "Pixie",
-  "origin.medievalorigins.pixie.description": "-§l Notable Changes§r: \n§o§2+ Unique Flight, Odd§r\n§o§6• Tiny: 22cm/9\" §r\n§o§c- Defense, Reputation §r\nOften considered harbingers of good fortune, but also tricky, untrustworthy agents of mischief. Pixies are whimsical and very, very small.",
+  "origin.medievalorigins.pixie.description": "-§l Overview§r: \n§o§2+ Unique Flight, Odd§r\n§o§6• Tiny: 22cm/9\" §r\n§o§c- Defense, Reputation §r\nOften considered harbingers of good fortune, but also tricky, untrustworthy agents of mischief. Pixies are whimsical and very, very small.",
 
   "origin.medievalorigins.plague_victim.name": "Plague Victim",
-  "origin.medievalorigins.plague_victim.description": "-§l Notable Changes§r: \n§o§2+ Withering §r\n§o§6• Unique playstyle §r\n§o§6• Undead §r\n§o§c- Defense, Reputation \n§o§c- Difficult§r\nDisease-ridden half-dead creatures who can no longer be called human, cursed and trapped in eternal suffering as a result of a strange magical illness.",
+  "origin.medievalorigins.plague_victim.description": "-§l Overview§r: \n§o§2+ Withering §r\n§o§6• Unique playstyle §r\n§o§6• Undead §r\n§o§c- Defense, Reputation \n§o§c- Difficult§r\nDisease-ridden half-dead creatures who can no longer be called human, cursed and trapped in eternal suffering as a result of a strange magical illness.",
 
   "origin.medievalorigins.revenant.name": "Revenant",
-  "origin.medievalorigins.revenant.description": "-§l Notable Changes§r: \n§o§2+ Summons §r\n§o§2+ Illager Friendly \n§o§6• Undead, Complex §r\n§o§c- Reputation\n- Living interactions §r\n§lRevenants§r are misfortunate souls who died gruesome and painful deaths, but inexplicably returned to life. As a result, they become obsessed with manipulating life and death in other creatures.",
+  "origin.medievalorigins.revenant.description": "-§l Overview§r: \n§o§2+ Summons §r\n§o§2+ Illager Friendly \n§o§6• Undead, Complex §r\n§o§c- Reputation\n- Living interactions §r\n§lRevenants§r are misfortunate souls who died gruesome and painful deaths, but inexplicably returned to life. As a result, they become obsessed with manipulating life and death in other creatures.",
 
   "origin.medievalorigins.siren.name": "Siren",
-  "origin.medievalorigins.siren.description": "-§l Notable Changes§r: \n§o§2+ Water-Based, Utility §r\n§o§6• Weaker on Land§r\n§o§c- Vulnerable to Fire§r\n§lSirens§r are said to be a type of Merfolk. They have an ensnaring aura and their irresistible beauty is said to be the downfall of many a foolish sailor.",
+  "origin.medievalorigins.siren.description": "-§l Overview§r: \n§o§2+ Water-Based, Utility §r\n§o§6• Weaker on Land§r\n§o§c- Vulnerable to Fire§r\n§lSirens§r are said to be a type of Merfolk. They have an ensnaring aura and their irresistible beauty is said to be the downfall of many a foolish sailor.",
 
   "origin.medievalorigins.troll.name": "Troll",
-  "origin.medievalorigins.troll.description": "-§l Notable Changes§r: \n§o§cNOT CURRENTLY IMPLEMENTED§r\nLarge, lumbering giants who hail from the mountains, trolls are aggressive and self sufficient - they prefer to live and fight alone.",
+  "origin.medievalorigins.troll.description": "-§l Overview§r: \n§o§cNOT CURRENTLY IMPLEMENTED§r\nLarge, lumbering giants who hail from the mountains, trolls are aggressive and self sufficient - they prefer to live and fight alone.",
 
   "origin.medievalorigins.yeti.name": "Yeti",
-  "origin.medievalorigins.yeti.description": "-§l Notable Changes§r: \n§o§2+ Frost-Based, Tanky§r\n§o§6• Large: 203cm/6'8\"§r\n§o§c- Heat Sensitive§r\nThick-furred beasts from frosty woods, a Yeti's dominion over ice allows them to freeze foes, but they are especially vulnerable to fiery attacks.",
+  "origin.medievalorigins.yeti.description": "-§l Overview§r: \n§o§2+ Frost-Based, Tanky§r\n§o§6• Large: 203cm/6'8\"§r\n§o§c- Heat Sensitive§r\nThick-furred beasts from frosty woods, a Yeti's dominion over ice allows them to freeze foes, but they are especially vulnerable to fiery attacks.",
 
   
   "power.medievalorigins.alfiq/clawed.name": "Clawed",
@@ -210,14 +210,26 @@
   "power.medievalorigins.fae/iron_aversion.name": "Magical Suppression",
   "power.medievalorigins.fae/iron_aversion.description": "Iron and silver inhibit fae powers. It is unbearable for them to wear it.",
 
-  "power.medievalorigins.fae/levitation.name": "Levitation",
-  "power.medievalorigins.fae/levitation.description": "Fae are light, winged creatures who can float effortlessly on the air. Press the primary active key to hover upward.",
+  "power.medievalorigins.fae/levitation.name": "Wings",
+  "power.medievalorigins.fae/levitation.description": "Fae are light, winged creatures who can float effortlessly on the air.",
 
-  "power.medievalorigins.fae/magic_resistance.name": "Magic Resistance",
-  "power.medievalorigins.fae/magic_resistance.description": "As magical creatures themselves, faes take less magic damage compared to other creatures.",
+  "power.medievalorigins.fae/wings.name": "Wings",
+  "power.medievalorigins.fae/wings.description": "Fae have delicate wings that allow them to glide through the air.",
 
-  "power.medievalorigins.fae/regen.name": "Regeneration",
-  "power.medievalorigins.fae/regen.description": "Fae can channel magical energy and heal themselves quickly, at the cost of hunger.",
+  "power.medievalorigins.fae/natures_blessing.name": "Nature's Blessing",
+  "power.medievalorigins.fae/natures_blessing.description": "Channel potent life energies for a short duration. While active, spread seeds onto stepped-on farmland and pulse healing and cleansing energy to nearby allies.",
+
+  "power.medievalorigins.fae/nourishment.name": "Nourishment",
+  "power.medievalorigins.fae/nourishment.description": "Spread a burst of vital life energy, instantly fertilizing plants in an area around you.",
+
+  "power.medievalorigins.fae/forest_kin.name": "Forest Kin",
+  "power.medievalorigins.fae/forest_kin.description": "While you are within the embrace of a forest, your wounds mend faster.",
+
+  "power.medievalorigins.fae/natures_ward.name": "Nature's Ward",
+  "power.medievalorigins.fae/natures_ward.description": "You are bound to nature, granting you immunity to poison and nausea, and resistance against magical attacks.",
+
+  "power.medievalorigins.fae/reduced_health.name": "Fragile Frame",
+  "power.medievalorigins.fae/reduced_health.description": "Fae are delicate creatures with less health than a human.",
 
   "power.medievalorigins.goblin/cunning.name": "Cunning",
   "power.medievalorigins.goblin/cunning.description": "Goblins are clever creatures, and know where to find more rare loot most others would miss.",
@@ -478,7 +490,7 @@
   "power.medievalorigins.revenant/unguarded.description": "Obsessing over the spirit realm leaves revenants more open to attack in the physical realm. Most mobs deal more damage to them.",
 
   "origin.medievalorigins.valkyrie.name": "Valkyrie",
-  "origin.medievalorigins.valkyrie.description": "-§l Notable Changes§r: \n§o§2+ Healing§r \n§o§6• Feathered wings§r \n§o§c- Weak to Undead§r\n§lValkyrie§r are fearless winged warriors who decide the fate of those in battle; they were said to have carried the dead to Odin's Valhalla",
+  "origin.medievalorigins.valkyrie.description": "-§l Overview§r: \n§o§2+ Healing§r \n§o§6• Feathered wings§r \n§o§c- Weak to Undead§r\n§lValkyrie§r are fearless winged warriors who decide the fate of those in battle; they were said to have carried the dead to Odin's Valhalla",
 
   "power.medievalorigins.valkyrie/wings.name": "Feathered",
   "power.medievalorigins.valkyrie/wings.description": "Valkyrie have massive white feathered wings, and can fly freely.",
@@ -525,6 +537,7 @@
   "badges.medievalorigins.pixie.dash_forward": "Dash - Press %s twice quickly to dash forward. \n\nThis uses 50 §bFP§r if gliding, and 25 §bFP§r otherwise.",
   "badges.medievalorigins.pixie.dash_upward": "Dash Up - Quickly press %s then %s to dash upward. \n\nThis also uses 50 §bFP§r if gliding, and 25 §bFP§r otherwise.",
   "badges.medievalorigins.pixie.disable_effects": "Press %s while sneaking to disable sounds and particle effects",
+  "badges.medievalorigins.pixie.restore_fp": "§bFP§r slowly regenerates over time. \n\nDefeating the §dEnder Dragon§r causes it to regenerate twice as fast.\n\nConsuming §dDragon Breath§r or §6Glow Berries§r also restores §bFP§r.",
 
   "badges.medievalorigins.high_elf.glacial_step": "§bGlacial Step:§r Hold an ice block to manipulate the entropy of water molecules, allowing you to walk as if you had Frost Walker",
   "badges.medievalorigins.high_elf.extrusive_movement": "§4Extrusive Movement:§r Hold obsidian to channel the flow of heat and walk freely on smoldering lava",
@@ -558,6 +571,7 @@
   "medievalorigins.uncastable": "You can't use this ability right now.",
 
   "tooltip.medievalorigins.set_bonus": "Set Bonus:",
+  "tooltip.medievalorigins.when_consumed": "When Consumed: ",
   "tooltip.medievalorigins.water_protection": "Water Protection",
   "tooltip.medievalorigins.looting_bonus": "Chance to increase mob loot",
   "tooltip.medievalorigins.unwearable": "Unwearable",

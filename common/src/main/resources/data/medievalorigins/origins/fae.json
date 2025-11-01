@@ -1,18 +1,20 @@
 {
-        "loading_priority": 11,
-        "powers": [
-                "medievalorigins:fae/levitation",
-                "medievalorigins:fae/magic_resistance",
-                "medievalorigins:fae/magic_damage_boost",
-                "medievalorigins:fae/regen",
-                "medievalorigins:fae/allure",
-                "medievalorigins:fae/diminutive",
-                "medievalorigins:fae/iron_aversion"
-        ],
-        "icon": {
-                "item": "minecraft:ink_sac",
-                "tag": "{CustomModelData:367}"
-        },
-        "impact": 2,
-        "order": 1
+	"powers": [
+		"medievalorigins:fae/levitation",
+		"medievalorigins:fae/wings",
+		"medievalorigins:fae/natures_blessing",
+		"medievalorigins:fae/nourishment",
+		"medievalorigins:fae/forest_kin",
+		"medievalorigins:fae/natures_ward",
+		"medievalorigins:fae/allure",
+		"medievalorigins:fae/diminutive",
+		"medievalorigins:fae/iron_aversion",
+		"medievalorigins:fae/reduced_health"
+	],
+	"icon": {
+		"item": "minecraft:ink_sac",
+		"tag": "{CustomModelData:367}"
+	},
+	"impact": 3,
+	"order": 1
 }

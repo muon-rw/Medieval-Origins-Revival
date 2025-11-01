@@ -11,6 +11,7 @@ public class ModBientityActions {
         register(TransferItemAction.getFactory());
         register(AttributedDamageAction.getFactory());
         register(SpellDamageAction.getFactory());
+        register(SpellHealAction.getFactory());
         register(CastSpellBientityAction.getFactory());
         register(CureVillagerAction.getFactory());
         register(RaycastBetweenAction.getFactory());

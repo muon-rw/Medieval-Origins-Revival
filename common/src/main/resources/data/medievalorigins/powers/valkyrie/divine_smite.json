@@ -149,7 +149,7 @@
     }
   },
   "on_kill": {
-    "type": "apugli:action_on_target_death",
+    "type": "medievalorigins:action_on_target_death",
     "cooldown": 3,
     "bientity_condition": {
       "type": "origins:target_condition",

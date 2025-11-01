@@ -1,15 +1,69 @@
 ## 6.7.0
 - Add support for Origins (Fabric) 1.10.2+
 - Origins (Forge) is no longer supported. Forge versions now require Origins (Fabric), Sinytra Connector, and Connector Extras.
-- Removed Apugli, which fixes an incomatibility with Hold My Items and should greatly improve overall performance
+- Removed Apugli, which fixes an incompatibility with Hold My Items and should greatly improve overall performance
 - Added a new keybind, Tertiary Active (default V)
+
+### Fae Rewrite
+- **Fae** origin has been completely reworked with new nature-themed abilities
+  - *Players with the Fae Origin will need to reselect their origin to receive the new powers.*
+  - **Overall Role**: Support, Nature Magic, Protector.
+  - **Kept Abilities**:
+    - `Levitation`: Active upward flight.
+    - `Allure`: Increased mob detection range.
+    - `Diminutive`: Small size.
+    - `Iron Aversion`: Cannot wear iron/silver.
+  - **New/Reworked Abilities**:
+    - `Wings`: Custom wings, animated while jumping or flying (similar to Pixie wings).
+    - `Nature's Blessing` (Tertiary Active): Channel nature magic to auto-plant seeds while moving and pulse healing/cleansing to nearby allies.
+    - `Nourishment` (Secondary Active): Instantly bonemeal plants in an area.
+    - `Forest Kin`: Grants passive health regeneration while in forest biomes.
+    - `Nature's Ward`: Immunity to poison and nausea, plus resistance to magic damage.
+    - `Fragile Frame`: Reduced health (-2 hearts).
+
+### Revenant Improvements
 - Revenant Summons can now be equipped with armor
 - Revenant Summons now have a time limit by default, extendable by Putrid Communion
 - Summon skeletons ranged damage, attack damage, health, and armor now all properly scale with owner's `spell_power:soul` or `irons_spellbooks:blood` attribute at the time of summoning
 - Revenants can command all their summons to follow, teleport to them, or sit (stop moving/attacking)
 - Revenants now have a limit of 5 combat summons at a time
-- Fixed Wood Elf Empowered shot compatibility with other mods (added 3 new power types modify_pierce_level modify_velocity modify_projectile_accuracy)
+- Improved performance of Revenant reputation modifications (now uses a proper power type instead of mcfunction)
+- Fixed Guards and Iron Golems not attacking Revenants
+- Revenant and Pixie can no longer bypass trading restrictions using a Trading Post
 
+### Wood Elf Improvements
+- Fixed Wood Elf **Focus** (Empowered Shot) power and made it compatible with all arrow-modifying mods
+- Added 3 new power types: `modify_pierce_level`, `modify_projectile_velocity`, `modify_projectile_accuracy`
+
+### Siren Improvements  
+- Greatly improved Siren Song performance and reliability
+- Removed unnecessary workarounds from Siren Song (visibility scaling and AngryTime manipulation)
+- Siren's mobs_ignore power now properly interrupts mob targeting
+
+### Pixie Improvements
+- The key modifier for dashing has been changed from Sprint to Tertiary Active (default V)
+- Flight Power now regenerates twice as fast after defeating the Ender Dragon
+- Glow Berries and Dragon Breath can now be consumed to restore FP 
+
+### New Power Types
+Added power types (mostly backported from 1.21.1):
+- `medievalorigins:modify_durability_change` - Modify item durability damage
+- `medievalorigins:modify_projectile_velocity` - Modify arrow/projectile velocity
+- `medievalorigins:modify_projectile_accuracy` - Modify arrow/projectile accuracy
+- `medievalorigins:modify_pierce_level` - Modify arrow pierce level
+- `medievalorigins:mobs_ignore` - Make specific mobs ignore the player
+- `medievalorigins:custom_death_sound` - Custom death sounds
+- `medievalorigins:action_on_target_death` - Execute actions when killing targets
+- `medievalorigins:action_on_jump` - Execute actions when jumping
+- `medievalorigins:modify_reputation` - Modify villager reputation
+- `medievalorigins:fae_wings` - Wings power (for Fae origin)
+Added entity conditions: 
+- `medievalorigins:entity_in_radius` Count entities in radius
+Added entity actions: 
+- `medievalorigins:raycast_between` - Perform a raycast in a line between entities
+- `medievalorigins:area_bonemeal` - Bonemeal crops in an area
+- `medievalorigins:auto_plant_seeds` - Plant seeds automatically as you walk
+- ``
 ## 6.6.0
 - Changed Alfiq fall damage negation to be look-direction based, instead of fall distance
 - Made Alfiq meows louder and more spammable

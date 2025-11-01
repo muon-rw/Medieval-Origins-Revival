@@ -12,6 +12,7 @@
     "ItemStackMixin",
     "LivingEntityMixin",
     "ProjectileMixin",
+    "VillagerMixin",
     "ZombieVillagerInvoker",
     "compat.icarus.IcarusHelperMixin",
     "compat.spell_engine.SpellCooldownMixin",

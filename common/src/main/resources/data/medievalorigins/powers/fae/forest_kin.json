@@ -1,0 +1,45 @@
+{
+	"hidden": false,
+	"type": "origins:action_over_time",
+	"interval": 20,
+	"condition": {
+		"type": "origins:biome",
+		"condition": {
+			"type": "origins:in_tag",
+			"tag": "minecraft:is_forest"
+		}
+	},
+	"entity_action": {
+		"type": "origins:apply_effect",
+		"effect": {
+			"effect": "minecraft:regeneration",
+			"amplifier": 0,
+			"duration": 59,
+			"show_particles": false,
+			"show_icon": false
+		}
+	},
+	"rising_action": {
+		"type": "origins:apply_effect",
+		"effect": {
+			"effect": "minecraft:regeneration",
+			"amplifier": 0,
+			"duration": 59,
+			"show_particles": false,
+			"show_icon": false
+		}
+	},
+	"falling_action": {
+		"type": "origins:if_else",
+		"condition": {
+			"type": "origins:status_effect",
+			"effect": "minecraft:regeneration",
+			"max_duration": 60
+		},
+		"if_action": {
+			"type": "origins:clear_effect",
+			"effect": "minecraft:regeneration"
+		}
+	}
+}
+

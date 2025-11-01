@@ -1,0 +1,105 @@
+{
+    "hidden":true,
+    "type": "origins:multiple",
+    "drink_suace_yumiy": {
+        "type": "medievalorigins:edible_item",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "medievalorigins:pixie/flight_flight_resource",
+            "compare_to": 150,
+            "comparison": "<"
+        },
+        "item_condition": {
+            "type": "apoli:ingredient",
+            "ingredient": {
+                "item": "minecraft:dragon_breath"
+            }
+        },
+        "food_component": {
+            "hunger": 0,
+            "saturation": 0,
+            "meat": false,
+            "always_edible": true
+        },
+        "use_action": "drink",
+        "item_action": {
+            "type": "origins:consume",
+            "amount": 1
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:modify_resource",
+                    "modifier": {
+                        "operation": "add_base_early",
+                        "value": 150
+                    },
+                    "resource": "medievalorigins:pixie/flight_flight_resource"
+                },
+                {
+                    "type": "origins:give",
+                    "stack": {
+                        "item": "minecraft:glass_bottle",
+                        "amount": 1
+                    }
+                }
+            ]
+        }
+    },
+    "glow_berries": {
+        "type": "origins:action_on_item_use",
+        "entity_action": {
+            "type": "origins:modify_resource",
+            "modifier": {
+                "operation": "add_base_early",
+                "value": 10
+            },
+            "resource": "medievalorigins:pixie/flight_flight_resource"
+        },
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "minecraft:glow_berries"
+            }
+        }
+    },
+    "glowberries_tooltip": {
+        "type": "origins:tooltip",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "minecraft:glow_berries"
+            }
+        },
+		"text": [
+			{
+				"translate": "tooltip.medievalorigins.when_consumed",
+				"color": "blue"
+			},
+			{
+				"text": "+10 FP",
+				"color": "aqua"
+			}
+		]
+    },
+    "breath_tooltip": {
+        "type": "origins:tooltip",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "minecraft:dragon_breath"
+            }
+        },
+		"text": [
+			{
+				"translate": "tooltip.medievalorigins.when_consumed",
+				"color": "blue"
+			},
+			{
+				"text": "+150 FP",
+				"color": "aqua"
+			}
+		]
+    }
+}

@@ -1,12 +1,29 @@
 {
 	"type": "origins:multiple",
 	"poor_reputation": {
-		"type": "origins:action_over_time",
+		"type": "medievalorigins:modify_reputation",
+		"modifier": {
+			"operation": "set_total",
+			"value": -100
+		}
+	},
+	"tradingpost": {
+		"type": "origins:prevent_block_use",
+		"block_condition": {
+			"type": "origins:block",
+			"block": "tradingpost:trading_post"
+		}
+	},
+	"tradingpost_msg": {
+		"type": "origins:action_on_block_use",
+		"block_condition": {
+			"type": "origins:block",
+			"block": "tradingpost:trading_post"
+		},
 		"entity_action": {
 			"type": "origins:execute_command",
-			"command": "function medievalorigins:mdvlorigins/poor_reputation"
-		},
-		"interval": 20
+			"command": "title @s actionbar {\"translate\": \"medievalorigins.poor_reputation_block\", \"color\": \"red\"}"
+		}
 	},
 	"no_trading": {
 		"type": "origins:prevent_entity_use",

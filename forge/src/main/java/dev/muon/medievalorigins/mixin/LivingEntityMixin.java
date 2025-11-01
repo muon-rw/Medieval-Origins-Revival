@@ -5,7 +5,7 @@ import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Local;
 import dev.muon.medievalorigins.attribute.ModAttributes;
-import dev.muon.medievalorigins.power.EdibleItemPower;
+import dev.muon.medievalorigins.power.*;
 import io.github.apace100.apoli.component.PowerHolderComponent;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
@@ -28,6 +28,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(LivingEntity.class)
 public class LivingEntityMixin {
@@ -333,4 +334,55 @@ public class LivingEntityMixin {
 
         return originalDuration;
     }
+
+    @Unique
+    private boolean medievalorigins$shouldIgnoreTarget(Player player) {
+        LivingEntity self = (LivingEntity) (Object) this;
+        return PowerHolderComponent.getPowers(player, MobsIgnorePower.class).stream()
+                .filter(MobsIgnorePower::isActive)
+                .anyMatch(power -> power.shouldIgnore(self, player));
+    }
+
+    @Inject(method = "canAttack(Lnet/minecraft/world/entity/LivingEntity;)Z",
+            at = @At("HEAD"),
+            cancellable = true)
+    private void medievalorigins$preventAttackValidation(LivingEntity target, CallbackInfoReturnable<Boolean> cir) {
+        if (target instanceof Player player && medievalorigins$shouldIgnoreTarget(player)) {
+            cir.setReturnValue(false);
+        }
+    }
+
+    @Inject(method = "hurt", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/LivingEntity;die(Lnet/minecraft/world/damagesource/DamageSource;)V"))
+    private void medievalorigins$invokeTargetDeathAction(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
+        if (source.getEntity() instanceof LivingEntity attacker) {
+            LivingEntity self = (LivingEntity) (Object) this;
+            PowerHolderComponent.getPowers(attacker, ActionOnTargetDeathPower.class).stream()
+                    .filter(power -> power.doesApply(self, source, amount))
+                    .forEach(power -> power.executeActions(self, source, amount));
+        }
+    }
+
+    @WrapOperation(method = "handleEntityEvent", at = @At(value = "INVOKE",
+            target = "Lnet/minecraft/world/entity/LivingEntity;playSound(Lnet/minecraft/sounds/SoundEvent;FF)V",
+            ordinal = 0))
+    private void medievalorigins$onDeathSound(LivingEntity instance, SoundEvent soundEvent, float volume, float pitch, Operation<Void> original) {
+        LivingEntity self = (LivingEntity) (Object) this;
+        var powers = PowerHolderComponent.getPowers(self, CustomDeathSoundPower.class);
+        if (!powers.isEmpty()) {
+            boolean anyMuted = powers.stream().anyMatch(CustomDeathSoundPower::isMuted);
+            if (!anyMuted) {
+                powers.forEach(power -> power.playDeathSound(self));
+            }
+        } else {
+            original.call(instance, soundEvent, volume, pitch);
+        }
+    }
+
+    @Inject(method = "jumpFromGround", at = @At("TAIL"))
+    private void medievalorigins$onJump(CallbackInfo ci) {
+        LivingEntity self = (LivingEntity) (Object) this;
+        PowerHolderComponent.getPowers(self, ActionOnJumpPower.class)
+                .forEach(power -> power.executeAction(self));
+    }
+
 }

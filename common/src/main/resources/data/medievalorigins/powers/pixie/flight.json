@@ -41,7 +41,7 @@
 				"translate": "badges.medievalorigins.pixie.dash_forward",
 				"with": [
 					{
-						"keybind": "key.sprint"
+						"keybind": "key.medievalorigins.tertiary_active"
 					}
 				]
 			}
@@ -53,7 +53,7 @@
 				"translate": "badges.medievalorigins.pixie.dash_upward",
 				"with": [
 					{
-						"keybind": "key.sprint"
+						"keybind": "key.medievalorigins.tertiary_active"
 					},
 					{
 						"keybind": "key.jump"
@@ -72,11 +72,15 @@
 					}
 				]
 			}
+		},
+		{
+			"type": "origins:tooltip",
+			"sprite": "medievalorigins:textures/gui/pixie_badge.png",
+			"text": {
+				"translate": "badges.medievalorigins.pixie.restore_fp"
+			}
 		}
 	],
-	"prevent_server_kick": {
-		"type": "apugli:prevent_movement_checks"
-	},
 	"clear_old_bug": {
 		"type": "origins:action_on_callback",
 		"entity_action_added": {
@@ -132,7 +136,7 @@
 		"type": "origins:resource",
 		"min": 0,
 		"start_value": 100,
-		"max": 100,
+		"max": 150,
 		"hud_render": {
 			"should_render": true,
 			"sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
@@ -140,33 +144,9 @@
 			"condition": {
 				"type": "origins:resource",
 				"resource": "*:*_flight_resource",
-				"compare_to": 100,
+				"compare_to": 150,
 				"comparison": "<"
 			}
-		}
-	},
-	"tick_resource": {
-		"type": "origins:action_over_time",
-		"interval": 5,
-		"condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:creative_flying"
-				},
-				{
-					"type": "medievalorigins:creative_mode",
-					"inverted": true
-				}
-			]
-		},
-		"entity_action": {
-			"type": "origins:modify_resource",
-			"modifier": {
-				"operation": "add_base_early",
-				"value": -1
-			},
-			"resource": "*:*_flight_resource"
 		}
 	},
 	"restore_resource": {
@@ -198,6 +178,46 @@
 			"modifier": {
 				"operation": "add_base_early",
 				"value": 1
+			},
+			"resource": "*:*_flight_resource"
+		}
+	},
+	"restore_resource_upg": {
+		"type": "origins:action_over_time",
+		"interval": 10,
+		"condition": {
+			"type": "origins:advancement",
+			"advancement": "minecraft:end/kill_dragon"
+		},
+		"entity_action": {
+			"type": "origins:modify_resource",
+			"modifier": {
+				"operation": "add_base_early",
+				"value": 1
+			},
+			"resource": "*:*_flight_resource"
+		}
+	},
+	"tick_resource": {
+		"type": "origins:action_over_time",
+		"interval": 5,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:creative_flying"
+				},
+				{
+					"type": "medievalorigins:creative_mode",
+					"inverted": true
+				}
+			]
+		},
+		"entity_action": {
+			"type": "origins:modify_resource",
+			"modifier": {
+				"operation": "add_base_early",
+				"value": -1
 			},
 			"resource": "*:*_flight_resource"
 		}
@@ -606,7 +626,7 @@
 			}
 		},
 		"key": {
-			"key": "key.sprint"
+			"key": "key.medievalorigins.tertiary_active"
 		}
 	},
 	"dash_upward": {

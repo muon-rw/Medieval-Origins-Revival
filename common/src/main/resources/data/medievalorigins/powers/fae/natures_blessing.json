@@ -1,0 +1,112 @@
+{
+	"type": "origins:multiple",
+	"active": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "playsound minecraft:entity.axolotl.idle_water player @s ~ ~ ~ 1.5 0.8"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "particle minecraft:totem_of_undying ~ ~1 ~ 0.5 0.3 0.5 0.1 20"
+				}
+			]
+		},
+		"cooldown": 900,
+		"key": {
+			"key": "key.medievalorigins.tertiary_active"
+		},
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+			"bar_index": 9
+		}
+	},
+	"plant_seeds": {
+		"type": "origins:action_over_time",
+		"interval": 3,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:*_active",
+					"comparison": ">",
+					"compare_to": 780
+				},
+				{
+					"type": "origins:moving"
+				}
+			]
+		},
+		"entity_action": {
+			"type": "medievalorigins:auto_plant_seeds",
+			"chance": 1.0,
+			"block_tag": "medievalorigins:plantable_crop_blocks",
+			"horizontal_radius": 0,
+			"vertical_radius_player": 1
+		}
+	},
+	"heal_cleanse": {
+		"type": "origins:action_over_time",
+		"interval": 10,
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:*_active",
+			"comparison": ">",
+			"compare_to": 780
+		},
+		"entity_action": {
+			"type": "origins:area_of_effect",
+			"radius": 5,
+			"bientity_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "medievalorigins:spell_heal",
+						"magic_school": "earth",
+						"base": 2.0,
+						"scaling_factor": 1.0,
+						"crit_behavior": "normal"
+					},
+					{
+						"type": "origins:target_action",
+						"action": {
+							"type": "origins:and",
+							"actions": [
+								{
+									"type": "medievalorigins:clear_negative_effects"
+								},
+								{
+									"type": "origins:execute_command",
+									"command": "particle minecraft:heart ~ ~1 ~ 0.3 0.3 0.3 1 3"
+								}
+							]
+						}
+					}
+				]
+			},
+			"bientity_condition": {
+				"type": "medievalorigins:allied"
+			}
+		}
+	},
+	"wave": {
+		"type": "origins:action_over_time",
+		"interval": 5,
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:*_active",
+			"comparison": ">",
+			"compare_to": 780
+		},
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "particle minecraft:wax_off ~ ~0.8 ~ 0.3 0.3 0.3 1 3"
+		}
+	}
+}
+

@@ -35,7 +35,7 @@ public class AutoPlantSeedsAction {
                 MedievalOrigins.loc("auto_plant_seeds"),
                 new SerializableData()
                         .add("chance", SerializableDataTypes.FLOAT, 0.25f)
-                        .add("block_tag", SerializableDataTypes.IDENTIFIER, MedievalOrigins.loc("crops"))
+                        .add("block_tag", SerializableDataTypes.IDENTIFIER, MedievalOrigins.loc("plantable_crop_blocks"))
                         .add("horizontal_radius", SerializableDataTypes.INT, 1)
                         .add("vertical_radius_player", SerializableDataTypes.INT, 0),
                 AutoPlantSeedsAction::action

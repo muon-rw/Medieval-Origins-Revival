@@ -1,0 +1,16 @@
+{
+	"hidden": true,
+	"type": "origins:multiple",
+	"wings": {
+		"type": "origins:elytra_flight",
+		"render_elytra": true,
+		"texture_location": "medievalorigins:textures/entity/pixie_wings.png"
+	},
+	"flapper": {
+		"type": "medievalorigins:fae_wings",
+		"wings_type": {
+			"item": "icarus:white_feathered_wings"
+		}
+	}
+}
+

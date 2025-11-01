@@ -2,6 +2,7 @@ package dev.muon.medievalorigins.compat.icarus;
 
 import dev.cammiescorner.icarus.util.IcarusHelper;
 import dev.muon.medievalorigins.enchantment.ModEnchantments;
+import dev.muon.medievalorigins.power.FaeWingsPower;
 import dev.muon.medievalorigins.power.IcarusWingsPower;
 import dev.muon.medievalorigins.power.PixieWingsPower;
 import net.minecraft.world.entity.LivingEntity;
@@ -46,8 +47,13 @@ public class IcarusClientCompat {
             if (!wingsType.isEmpty()) {
                 return wingsType;
             }
-        } else if (PixieWingsPower.hasPower(entity)) {
-            return new ItemStack(Items.AIR);
+        } else {
+            boolean hasPixieWings = PixieWingsPower.hasPower(entity);
+            boolean hasFaeWings = FaeWingsPower.hasPower(entity);
+
+            if (hasPixieWings || hasFaeWings) {
+                return new ItemStack(Items.AIR);
+            }
         }
         return original;
     }

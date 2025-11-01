@@ -2,6 +2,7 @@
 	"loading_priority": 11,
 	"powers": [
 		"medievalorigins:pixie/flight",
+		"medievalorigins:pixie/food_restore",
 		"medievalorigins:pixie/pixie_properties",
 		"medievalorigins:pixie/feather_footed",
 		"medievalorigins:pixie/wings",

@@ -7,10 +7,6 @@
 			"actions": [
 				{
 					"type": "origins:execute_command",
-					"command": "scale set pehkui:visibility 0 @s"
-				},
-				{
-					"type": "origins:execute_command",
 					"command": "playsound medievalorigins:sirens_song player @a ~ ~ ~ 0.6 1"
 				},
 				{
@@ -19,18 +15,9 @@
 					"bientity_action": {
 						"type": "origins:target_action",
 						"action": {
-							"type": "origins:and",
-							"actions": [
-								{
-									"type": "origins:grant_power",
-									"power": "medievalorigins:siren/captivated",
-									"source": "medievalorigins:siren/siren_song_active"
-								},
-								{
-									"type": "origins:execute_command",
-									"command": "data modify entity @s AngryTime set value 0"
-								}
-							]
+							"type": "origins:grant_power",
+							"power": "medievalorigins:siren/captivated",
+							"source": "medievalorigins:siren/siren_song_active"
 						}
 					},
 					"bientity_condition": {
@@ -50,14 +37,6 @@
 								}
 							]
 						}
-					}
-				},
-				{
-					"type": "origins:delay",
-					"ticks": 20,
-					"action": {
-						"type": "origins:execute_command",
-						"command": "scale reset pehkui:visibility @s"
 					}
 				}
 			]
@@ -116,7 +95,7 @@
 		}
 	},
 	"apply": {
-		"type": "apugli:mobs_ignore",
+		"type": "medievalorigins:mobs_ignore",
 		"mob_condition": {
 			"type": "origins:power",
 			"power": "medievalorigins:siren/captivated",

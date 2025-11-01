@@ -11,6 +11,7 @@
     "ItemStackMixin",
     "LivingEntityMixin",
     "ProjectileMixin",
+    "VillagerMixin",
     "ZombieVillagerInvoker",
     "compat.icarus.IcarusHelperMixin",
     "compat.iceandfire.EntityGorgonMixin",

@@ -1,7 +1,7 @@
 {
     "type": "origins:action_over_time",
     "condition": {
-        "type": "apugli:entity_in_radius",
+        "type": "medievalorigins:entity_in_radius",
         "condition": {
             "type": "origins:entity_group",
             "group": "undead"

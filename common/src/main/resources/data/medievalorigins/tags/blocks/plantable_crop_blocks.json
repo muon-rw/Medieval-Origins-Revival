@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    {"id": "#c:crops","required": false},
+    "minecraft:carrots",
+    "minecraft:potatoes",
+    "minecraft:beetroots",
+    "minecraft:wheat"
+  ]
+}
