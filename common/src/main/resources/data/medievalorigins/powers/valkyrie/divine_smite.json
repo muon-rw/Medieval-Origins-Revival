@@ -6,7 +6,7 @@
     "min": 0,
     "max": 2,
     "hud_render": {
-      "should_render": true
+      "should_render": false
     }
   },
   "count": {

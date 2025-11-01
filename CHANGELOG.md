@@ -21,7 +21,7 @@
     - `Nature's Ward`: Immunity to poison and nausea, plus resistance to magic damage.
     - `Fragile Frame`: Reduced health (-2 hearts).
 
-### Revenant Improvements
+### Revenant
 - Revenant Summons can now be equipped with armor
 - Revenant Summons now have a time limit by default, extendable by Putrid Communion
 - Summon skeletons ranged damage, attack damage, health, and armor now all properly scale with owner's `spell_power:soul` or `irons_spellbooks:blood` attribute at the time of summoning
@@ -31,19 +31,26 @@
 - Fixed Guards and Iron Golems not attacking Revenants
 - Revenant and Pixie can no longer bypass trading restrictions using a Trading Post
 
-### Wood Elf Improvements
+### Wood Elf
 - Fixed Wood Elf **Focus** (Empowered Shot) power and made it compatible with all arrow-modifying mods
 - Added 3 new power types: `modify_pierce_level`, `modify_projectile_velocity`, `modify_projectile_accuracy`
 
-### Siren Improvements  
+### Siren  
 - Greatly improved Siren Song performance and reliability
 - Removed unnecessary workarounds from Siren Song (visibility scaling and AngryTime manipulation)
 - Siren's mobs_ignore power now properly interrupts mob targeting
 
-### Pixie Improvements
+### Pixie
 - The key modifier for dashing has been changed from Sprint to Tertiary Active (default V)
 - Flight Power now regenerates twice as fast after defeating the Ender Dragon
 - Glow Berries and Dragon Breath can now be consumed to restore FP 
+
+### Valkyrie
+- Heal from Intervention now scales with `spell_power_healing` or `irons_spellbooks:holy_spell_power`
+- The three-hit tracker for Divine Smite is no longer displayed on the HUD
+
+## Banshee
+- Sonic Shriek now scales with `spell_power:soul` or `irons_spellbooks:blood_spell_power` 
 
 ### New Power Types
 Added power types (mostly backported from 1.21.1):
@@ -57,13 +64,24 @@ Added power types (mostly backported from 1.21.1):
 - `medievalorigins:action_on_jump` - Execute actions when jumping
 - `medievalorigins:modify_reputation` - Modify villager reputation
 - `medievalorigins:fae_wings` - Wings power (for Fae origin)
-Added entity conditions: 
-- `medievalorigins:entity_in_radius` Count entities in radius
-Added entity actions: 
-- `medievalorigins:raycast_between` - Perform a raycast in a line between entities
-- `medievalorigins:area_bonemeal` - Bonemeal crops in an area
-- `medievalorigins:auto_plant_seeds` - Plant seeds automatically as you walk
-- ``
+- 
+### New Condition Types
+Added condition types (backported from 1.21.1):
+- `medievalorigins:entity_in_radius` (entity condition) - Count entities in radius matching a condition
+- `medievalorigins:covered_by_block` (entity condition) - Check if entity is fully covered by blocks
+- `medievalorigins:is_crop` (block condition) - Check if block is a crop
+- `medievalorigins:is_flower` (block condition) - Check if block is a flower
+
+### Compatibility Improvements
+- **FTB Teams**: `medievalorigins:allied` condition now properly works client-side with FTB Teams
+- Improved allied checks to recursively check entity ownership (so your allies' pets and summons now appropriately count as allied)
+
+### New Actions
+- `medievalorigins:spell_heal` (bientity action) - Heal with spell power scaling
+- `medievalorigins:raycast_between` (bientity action) - Perform a raycast in a line between entities
+- `medievalorigins:area_bonemeal` (entity action) - Bonemeal crops in an area
+- `medievalorigins:auto_plant_seeds` (entity action) - Plant seeds automatically as you walk
+
 ## 6.6.0
 - Changed Alfiq fall damage negation to be look-direction based, instead of fall distance
 - Made Alfiq meows louder and more spammable

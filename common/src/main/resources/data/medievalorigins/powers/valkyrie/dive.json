@@ -46,23 +46,31 @@
                     "type": "origins:area_of_effect",
                     "radius": 5,
                     "bientity_action": {
-                        "type": "origins:target_action",
-                        "action": {
-                            "type": "origins:and",
-                            "actions": [
-                                {
-                                    "type": "origins:heal",
-                                    "amount": 10
-                                },
-                                {
-                                    "type": "origins:execute_command",
-                                    "command": "particle minecraft:happy_villager ~ ~ ~ 0.3 1 0.3 1 18"
-                                },
-                                {
-                                    "type": "medievalorigins:clear_negative_effects"
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "medievalorigins:spell_heal",
+                                "magic_school": "healing",
+                                "base": 5.0,
+                                "scaling_factor": 2.0,
+                                "crit_behavior": "normal"
+                            },
+                            {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:execute_command",
+                                            "command": "particle minecraft:happy_villager ~ ~ ~ 0.3 1 0.3 1 18"
+                                        },
+                                        {
+                                            "type": "medievalorigins:clear_negative_effects"
+                                        }
+                                    ]
                                 }
-                            ]
-                        }
+                            }
+                        ]
                     },
                     "bientity_condition": {
                         "type": "origins:and",

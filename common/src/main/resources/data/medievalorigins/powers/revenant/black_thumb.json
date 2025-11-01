@@ -1,8 +1,57 @@
 {
-	"type": "origins:modify_harvest",
-	"block_condition": {
-		"type": "origins:in_tag",
-		"tag": "medievalorigins:crops"
+	"type": "origins:multiple",
+	"prevent": {
+		"type": "origins:modify_harvest",
+		"block_condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:in_tag",
+					"tag": "medievalorigins:crops"
+				},
+				{
+					"type": "medievalorigins:is_crop"
+				}
+			]
+		},
+		"allow": false
 	},
-	"allow": false
+	"hint_break_block": {
+		"type": "origins:action_on_block_break",
+		"block_condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:in_tag",
+					"tag": "medievalorigins:crops"
+				},
+				{
+					"type": "medievalorigins:is_crop"
+				}
+			]
+		},
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "title @s actionbar {\"translate\": \"medievalorigins.black_thumb\", \"color\": \"red\"}"
+		}
+	},
+	"hint_use_block": {
+		"type": "origins:action_on_block_use",
+		"block_condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:in_tag",
+					"tag": "medievalorigins:crops"
+				},
+				{
+					"type": "medievalorigins:is_crop"
+				}
+			]
+		},
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "title @s actionbar {\"translate\": \"medievalorigins.black_thumb\", \"color\": \"red\"}"
+		}
+	}
 }

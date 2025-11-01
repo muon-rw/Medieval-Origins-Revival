@@ -567,8 +567,10 @@
   "medievalorigins.moon_elf_no_sleep": "The strange sounds of this foreign world leave you restless.",
   "medievalorigins.insomniac_welts": "Your welts sting and burn. There will be no sleep for you tonight.",
   "medievalorigins.poor_reputation_villager": "The villager is too scared to trade with you!",
+  "medievalorigins.poor_reputation_block": "No villagers are willing to trade with you!",
   "medievalorigins.troublemaker": "Villagers don't trade with the likes of you!",
   "medievalorigins.uncastable": "You can't use this ability right now.",
+  "medievalorigins.black_thumb": "The crops wilt at your touch.",
 
   "tooltip.medievalorigins.set_bonus": "Set Bonus:",
   "tooltip.medievalorigins.when_consumed": "When Consumed: ",
@@ -623,6 +625,10 @@
   "death.attack.siphon": "%1$s had their soul ripped apart",
   "death.attack.siphon.player": "%1$s had their soul ripped apart by %2$s",
   "death.attack.siphon.item": "%1$s had their soul ripped apart by %2$s's %3$s",
+
+  "death.attack.sonic_shriek": "%1$s couldn't handle the screams.",
+  "death.attack.sonic_shriek.player": "%1$s got yelled at by %2$s",
+  "death.attack.sonic_shriek.item": "%1$s was driven to insanity by %2$s's %3$s",
 
   "death.attack.smite": "%1$s faced divine judgment",
   "death.attack.smite.player": "%1$s faced the divine judgment of %2$s",

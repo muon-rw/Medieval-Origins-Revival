@@ -1,6 +1,7 @@
 package dev.muon.medievalorigins.condition;
 
 import dev.muon.medievalorigins.MedievalOrigins;
+import dev.muon.medievalorigins.condition.entity.CoveredByBlockCondition;
 import dev.muon.medievalorigins.condition.entity.EntityInRadiusCondition;
 import dev.muon.medievalorigins.condition.entity.LookingDownCondition;
 import io.github.apace100.apoli.power.factory.condition.ConditionFactory;
@@ -19,6 +20,7 @@ public class ModEntityConditions {
                 -> entity instanceof Player player && player.getAbilities().instabuild));
         register(LookingDownCondition.getFactory());
         register(EntityInRadiusCondition.getFactory());
+        register(CoveredByBlockCondition.getFactory());
     }
 
     private static void register(ConditionFactory<Entity> serializer) {

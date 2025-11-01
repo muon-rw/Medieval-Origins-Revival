@@ -7,13 +7,11 @@
 			"type": "origins:and",
 			"conditions": [
 				{
-					"type": "origins:in_block_anywhere",
+					"type": "medievalorigins:covered_by_block",
 					"block_condition": {
 						"type": "origins:in_tag",
 						"tag": "medievalorigins:cover"
-					},
-					"comparison": ">=",
-					"compare_to": 2
+					}
 				},
 				{
 					"type": "origins:sneaking"
@@ -27,13 +25,11 @@
 			"type": "origins:and",
 			"conditions": [
 				{
-					"type": "origins:in_block_anywhere",
+					"type": "medievalorigins:covered_by_block",
 					"block_condition": {
 						"type": "origins:in_tag",
 						"tag": "medievalorigins:cover"
-					},
-					"comparison": ">=",
-					"compare_to": 2
+					}
 				},
 				{
 					"type": "origins:sneaking"

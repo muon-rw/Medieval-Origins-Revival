@@ -4,6 +4,7 @@ import dev.muon.medievalorigins.action.ModBientityActions;
 import dev.muon.medievalorigins.action.ModEntityActions;
 import dev.muon.medievalorigins.attribute.ModAttributes;
 import dev.muon.medievalorigins.condition.ModBientityConditions;
+import dev.muon.medievalorigins.condition.ModBlockConditions;
 import dev.muon.medievalorigins.condition.ModEntityConditions;
 import dev.muon.medievalorigins.condition.ModItemConditions;
 import dev.muon.medievalorigins.enchantment.ModEnchantments;
@@ -37,6 +38,7 @@ public class MedievalOrigins {
         ModEntityActions.register();
         ModBientityActions.register();
         ModItemConditions.register();
+        ModBlockConditions.register();
         ModEntityConditions.register();
         ModBientityConditions.register();
         ModPowers.register();
