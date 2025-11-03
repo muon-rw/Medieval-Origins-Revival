@@ -1,3 +1,6 @@
+## 7.0.4-alpha-2
+- Change Arachnae's many eyes toggle 
+
 ## 7.0.4-alpha-1
 - More improvements to power caching
 
