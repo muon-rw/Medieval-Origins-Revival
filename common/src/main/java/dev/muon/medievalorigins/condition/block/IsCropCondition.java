@@ -10,6 +10,9 @@ import net.minecraft.world.level.block.state.pattern.BlockInWorld;
 public class IsCropCondition {
 
     public static boolean condition(SerializableData.Instance data, BlockInWorld cachedBlock) {
+        if (cachedBlock == null) {
+            return false;
+        }
         BlockState state = cachedBlock.getState();
         return state.getBlock() instanceof CropBlock;
     }
