@@ -1,3 +1,7 @@
+## 6.7.2
+- Fix an intermittent crash in some Forge modpacks, when Revenants broke multiple blocks consecutively
+- Change Arachnae night vision toggle key to Tertiary Active (default V)
+
 ## 6.7.1
 - Spell Engine is no longer marked as required
 
