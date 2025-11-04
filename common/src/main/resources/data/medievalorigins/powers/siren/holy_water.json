@@ -5,7 +5,19 @@
 		"conditions": [
 			{
 				"type": "origins:submerged_in",
-				"fluid": "minecraft:water"
+				"fluid": "water"
+			},
+			{
+				"type": "origins:in_block_anywhere",
+				"comparison": ">=",
+				"compare_to": 1,
+				"block_condition": {
+					"type": "origins:fluid",
+					"fluid_condition": {
+						"type": "origins:in_tag",
+						"tag": "minecraft:water"
+					}
+				}
 			},
 			{
 				"type": "origins:in_rain"

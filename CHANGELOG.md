@@ -1,3 +1,6 @@
+## 6.7.3
+- Add workaround for broken fluid conditions on Forge, fixes Siren powers being mostly nonfunctional
+
 ## 6.7.2
 - Fix an intermittent crash in some Forge modpacks, when Revenants broke multiple blocks consecutively
 - Change Arachnae night vision toggle key to Tertiary Active (default V)

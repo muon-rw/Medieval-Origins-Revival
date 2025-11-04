@@ -10,8 +10,25 @@
 			"type": "origins:and",
 			"conditions": [
 				{
-					"type": "origins:submerged_in",
-					"fluid": "minecraft:water"
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:submerged_in",
+							"fluid": "water"
+						},
+						{
+							"type": "origins:in_block_anywhere",
+							"comparison": ">=",
+							"compare_to": 1,
+							"block_condition": {
+								"type": "origins:fluid",
+								"fluid_condition": {
+									"type": "origins:in_tag",
+									"tag": "minecraft:water"
+								}
+							}
+						}
+					]
 				},
 				{
 					"type": "origins:enchantment",
@@ -47,8 +64,25 @@
 	"amphibious": {
 		"type": "origins:action_over_time",
 		"condition": {
-			"type": "origins:submerged_in",
-			"fluid": "minecraft:water"
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:submerged_in",
+					"fluid": "water"
+				},
+				{
+					"type": "origins:in_block_anywhere",
+					"comparison": ">=",
+					"compare_to": 1,
+					"block_condition": {
+						"type": "origins:fluid",
+						"fluid_condition": {
+							"type": "origins:in_tag",
+							"tag": "minecraft:water"
+						}
+					}
+				}
+			]
 		},
 		"entity_action": {
 			"type": "origins:gain_air",
@@ -59,7 +93,7 @@
 	"waterspeed": {
 		"type": "origins:modify_swim_speed",
 		"modifier": {
-			"operation":"multiply_base",
+			"operation": "multiply_base",
 			"value": 0.5
 		}
 	}

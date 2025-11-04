@@ -1,7 +1,8 @@
 {
-    "type": "medievalorigins:mobs_ignore",
-    "mob_condition": {
-      "type": "origins:entity_type",
-      "entity_type": "iceandfire:siren"
-    }
+  "hidden": true,
+  "type": "medievalorigins:mobs_ignore",
+  "mob_condition": {
+    "type": "origins:entity_type",
+    "entity_type": "iceandfire:siren"
   }
+}
