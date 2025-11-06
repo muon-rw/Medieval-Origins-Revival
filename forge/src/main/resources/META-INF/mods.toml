@@ -29,8 +29,8 @@ ordering = "NONE"
 side = "BOTH"
 [[dependencies.medievalorigins]]
 modId = "origins"
-mandatory = false
-versionRange = "*"
+mandatory = true
+versionRange = "[1.10.2,)"
 ordering = "NONE"
 side = "BOTH"
 [[dependencies.medievalorigins]]

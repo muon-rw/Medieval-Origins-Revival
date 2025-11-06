@@ -1,5 +1,7 @@
 ## 6.7.4
 - Fix MixinSquared not being bundled on Forge
+- Mark Origins 1.10.2+ as required
+- Change License to MIT + CC-BY-4.0
 
 ## 6.7.3
 - Add workaround for broken fluid conditions on Forge, fixes Siren powers being mostly nonfunctional
