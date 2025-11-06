@@ -1,3 +1,6 @@
+## 6.7.4
+- Fix MixinSquared not being bundled on Forge
+
 ## 6.7.3
 - Add workaround for broken fluid conditions on Forge, fixes Siren powers being mostly nonfunctional
 
