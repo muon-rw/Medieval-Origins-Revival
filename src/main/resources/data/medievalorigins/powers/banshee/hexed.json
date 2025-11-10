@@ -4,10 +4,10 @@
 		"type": "origins:choice",
 		"actions": [
 			{
-				"type": "origins:and",
-				"actions": [
-					{
-						"element": {
+				"element": {
+					"type": "origins:and",
+					"actions": [
+						{
 							"type": "origins:apply_effect",
 							"effect": {
 								"id": "minecraft:wither",
@@ -18,13 +18,13 @@
 								"duration": 150
 							}
 						},
-						"weight": 1
-					},
-					{
-						"type": "origins:execute_command",
-						"command": "particle minecraft:smoke ~ ~ ~"
-					}
-				]
+						{
+							"type": "origins:execute_command",
+							"command": "particle minecraft:smoke ~ ~ ~"
+						}
+					]
+				},
+				"weight": 1
 			},
 			{
 				"element": {

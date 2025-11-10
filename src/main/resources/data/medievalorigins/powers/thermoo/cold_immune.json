@@ -1,0 +1,23 @@
+{
+    "name": {
+        "translate": "power.thermoo-patches.cold_immune.name"
+    },
+    "description": {
+        "translate": "power.thermoo-patches.cold_immune.description"
+    },
+    "type": "medievalorigins:attribute",
+    "modifiers": [
+        {
+            "id": "thermoo-patches:frost_resistance_immunity",
+            "attribute": "thermoo:generic.frost_resistance",
+            "amount": 10000,
+            "operation": "add_value"
+        },
+        {
+            "id": "thermoo-patches:environment_frost_resistance_immunity",
+            "attribute": "thermoo:generic.environment_frost_resistance",
+            "amount": 10000,
+            "operation": "add_value"
+        }
+    ]
+}

@@ -1,9 +1,31 @@
+## 7.0.4-alpha-2
+- Change Arachnae's many eyes toggle 
+
+## 7.0.4-alpha-1
+- More improvements to power caching
+
+## 7.0.3-alpha-9
+- Fix Dwarves sometimes not sinking in water
+- Fix a gradual memory leak when worlds were left open for a very long time
+
+## 7.0.3-alpha-8
+- Fix Revenant and Pixie being able to bypass trading restrictions using a Trading Post
+- Fix Fae not having reduced health (for realsies this time)
+- Fix Banshee Hexed not working at all
+- Fix thermoo patches compat powers resetting on death 
+- Ice and Fire compat with Sirens should now be a little bit more stable. 
+
+## 7.0.3-alpha-7
+- Fix Incubus being unable to fight the Wither, and being immune to poison/regen
+- Banshees are now considered Undead
+
 ## 7.0.3-alpha-6
 - Fix Incubus' Demon Fire and High Elf's Ebon/Blazenbreath frequently not damaging the primary target, only surrounding entities
 - Fix Gorgons being able to jump while petrified
 - Revenants and Plague Victims are no longer ignored by the Wither, or able to breathe infinitely underwater
 - Fix Dwarves not sinking in water
-- Revenant summon limit is now properly 5 instead of 4
+- Fix Guards and Iron Golems not attacking Revenants
+- Revenant summons will now teleport to the player when set to follow, if they get stuck too far away.
 
 ## 7.0.3-alpha-5
 - Update to support IceAndFire-CE 2.0

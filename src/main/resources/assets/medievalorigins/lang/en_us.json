@@ -8,7 +8,7 @@
   "origin.medievalorigins.arachnae.description": "§l§nOverview§r: \n§o§2+ Poison, Crowd Control\n+ Wall Climbing§r\n§o§6• Carnivore§r\n§o§c- Hunger, Armor§r\nA grotesque amalgamation of spider and human, with venomous fangs and bristled feet yet the ability to walk upright and wield weaponry.",
 
   "origin.medievalorigins.banshee.name": "Banshee",
-  "origin.medievalorigins.banshee.description": "§l§nOverview§r: \n§o§2+ Flight, Support, Phasing§r\n§o§c- Defense§r\n§o§c- Extreme changes, read first!§r\n§lBanshees§r are anguished spirits whose cries can shatter glass and drive people to madness. In myth, their presence is often considered an omen of death.",
+  "origin.medievalorigins.banshee.description": "§l§nOverview§r: \n§o§2+ Flight, Support, Phasing§r\n§o§6• Undead\n§o§c- Defense§r\n§o§c- Extreme changes, read first!§r\n§lBanshees§r are anguished spirits whose cries can shatter glass and drive people to madness. In myth, their presence is often considered an omen of death.",
 
   "origin.medievalorigins.incubus.name": "Incubus",
   "origin.medievalorigins.incubus.description": "§l§nOverview§r: \n§o§2+ Nether Bonuses\n§o§6• Fire-based\n§o§c- Damaged by Water§r\n§o§c- Weak in Overworld§r\n§lIncubi§r are evil servants of a dark power. They are powerful in their own realm, but in exchange for this they have given up their soul, and are weak to pure sources.",
@@ -517,6 +517,7 @@
   "medievalorigins.moon_elf_no_sleep": "The strange sounds of this foreign world leave you restless.",
   "medievalorigins.insomniac_welts": "Your welts sting and burn. There will be no sleep for you tonight.",
   "medievalorigins.poor_reputation_villager": "The villager is too scared to trade with you!",
+  "medievalorigins.poor_reputation_block": "No villagers are willing to trade with you!",
   "medievalorigins.troublemaker": "Villagers don't trade with the likes of you!",
   "medievalorigins.uncastable": "You can't use this ability right now.",
   "medievalorigins.black_thumb": "The crops wilt at your touch!",

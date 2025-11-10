@@ -6,13 +6,14 @@
 		"medievalorigins:siren/out_of_your_depth",
 		"medievalorigins:siren/flammable",
 		"medievalorigins:siren/water_vision",
+		"medievalorigins:siren/siren_ignore",
 		"origins:aquatic",
 		"origins:like_water",
 		"medievalorigins:siren/seduce",
 		"mermod:fabulous_fins",
 		"origins_env_deh:water_dweller",
 		"origins_env_deh:cold_resistance",
-		"thermoo-patches:cold_immune",
+		"medievalorigins:thermoo/cold_immune",
 		"survive:cold_blooded"
 	],
 	"icon": {
