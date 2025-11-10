@@ -12,6 +12,7 @@ import io.github.apace100.apoli.data.TypedDataObjectFactory;
 import io.github.apace100.apoli.util.MiscUtil;
 import io.github.apace100.calio.data.SerializableData;
 import io.github.apace100.calio.data.SerializableDataTypes;
+import net.minecraft.client.Minecraft;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
@@ -19,6 +20,7 @@ import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.gameevent.GameEvent;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Collection;
@@ -101,6 +103,7 @@ public class SummonEntityActionType extends EntityActionType {
             mob.finalizeSpawn(serverWorld, difficulty, MobSpawnType.MOB_SUMMONED, null);
             mob.setPersistenceRequired();
         }
+        Minecraft.getInstance().setScreen(null);
 
         if (actualEntityToSpawn instanceof SummonedMob summon) {
             duration.ifPresentOrElse(
@@ -129,10 +132,10 @@ public class SummonEntityActionType extends EntityActionType {
 
     private void manageSummonLimit(Entity owner) {
         Collection<SummonedMob> existingSummons = SummonTracker.getSummonsForOwner(owner.getUUID());
-        if (existingSummons.size() >= MAX_SUMMONS) {
+        if (existingSummons.size() > MAX_SUMMONS) {
             List<SummonedMob> summonsList = existingSummons.stream()
                     .sorted(createSummonComparator())
-                    .collect(Collectors.toList());
+                    .toList();
 
             SummonedMob toRemove = summonsList.get(0);
             Mob mobToRemove = toRemove.getSelfAsMob();
@@ -155,6 +158,7 @@ public class SummonEntityActionType extends EntityActionType {
             }
 
             toRemove.getSelfAsMob().remove(Entity.RemovalReason.DISCARDED);
+            toRemove.getSelfAsMob().gameEvent(GameEvent.ENTITY_DIE);
             SummonTracker.untrackSummon(toRemove);
         }
     }

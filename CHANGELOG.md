@@ -3,6 +3,7 @@
 - Fix Gorgons being able to jump while petrified
 - Revenants and Plague Victims are no longer ignored by the Wither, or able to breathe infinitely underwater
 - Fix Dwarves not sinking in water
+- Revenant summon limit is now properly 5 instead of 4
 
 ## 7.0.3-alpha-5
 - Update to support IceAndFire-CE 2.0
