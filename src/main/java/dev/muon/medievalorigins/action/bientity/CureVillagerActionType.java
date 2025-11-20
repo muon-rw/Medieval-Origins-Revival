@@ -1,7 +1,6 @@
 package dev.muon.medievalorigins.action.bientity;
 
 import dev.muon.medievalorigins.action.ModBientityActionTypes;
-import dev.muon.medievalorigins.action.entity.ClearNegativeEffectsActionType;
 import dev.muon.medievalorigins.mixin.ZombieVillagerInvoker;
 import io.github.apace100.apoli.action.ActionConfiguration;
 import io.github.apace100.apoli.action.context.BiEntityActionContext;
@@ -10,8 +9,6 @@ import io.github.apace100.apoli.data.TypedDataObjectFactory;
 import io.github.apace100.calio.data.SerializableData;
 import net.minecraft.world.entity.monster.ZombieVillager;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import org.jetbrains.annotations.NotNull;
 
 public class CureVillagerActionType extends BiEntityActionType {
