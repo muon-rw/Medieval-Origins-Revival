@@ -103,7 +103,6 @@ public class SummonEntityActionType extends EntityActionType {
             mob.finalizeSpawn(serverWorld, difficulty, MobSpawnType.MOB_SUMMONED, null);
             mob.setPersistenceRequired();
         }
-        Minecraft.getInstance().setScreen(null);
 
         if (actualEntityToSpawn instanceof SummonedMob summon) {
             duration.ifPresentOrElse(
