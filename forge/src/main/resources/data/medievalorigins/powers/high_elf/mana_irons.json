@@ -1,20 +1,12 @@
 {
-    "forge:conditions": {
-        "type": "forge:and",
-        "values": [
-            {
-                "type": "forge:mod_loaded",
-                "modid": "irons_spellbooks"
-            },
-            {
-                "type": "forge:not",
-                "value": {
-                    "type": "forge:mod_loaded",
-                    "modid": "ars_nouveau"
-                }
-            }
-        ]
-    },
+    "fabric:load_conditions": [
+        {
+            "condition": "fabric:all_mods_loaded",
+            "values": [
+                "irons_spellbooks"
+            ]
+        }
+    ],
     "type": "origins:multiple",
     "max_mana": {
         "type": "origins:conditioned_attribute",
@@ -32,7 +24,7 @@
             {
                 "attribute": "irons_spellbooks:mana_regen",
                 "operation": "addition",
-                "value": 50
+                "value": 15
             }
         ],
         "condition": {

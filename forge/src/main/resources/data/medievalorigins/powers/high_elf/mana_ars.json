@@ -1,20 +1,12 @@
 {
-    "forge:conditions": {
-        "type": "forge:and",
-        "values": [
-            {
-                "type": "forge:mod_loaded",
-                "modid": "ars_nouveau"
-            },
-            {
-                "type": "forge:not",
-                "value": {
-                    "type": "forge:mod_loaded",
-                    "modid": "irons_spellbooks"
-                }
-            }
-        ]
-    },
+    "fabric:load_conditions": [
+        {
+            "condition": "fabric:all_mods_loaded",
+            "values": [
+                "ars_nouveau"
+            ]
+        }
+    ],
     "type": "origins:multiple",
     "max_mana": {
         "type": "origins:conditioned_attribute",

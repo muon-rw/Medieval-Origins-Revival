@@ -124,7 +124,6 @@ dependencies {
     include(modApi("maven.modrinth:AdditionalEntityAttributes:${project.aea_version}"))
 
     // Misc Required
-    modImplementation include("maven.modrinth:projectile-damage-attribute:${project.projectile_damage}-fabric")
     modApi("com.github.Virtuoel:Pehkui:${pehkui_version}", {exclude group: "net.fabricmc.fabric-api"})
 
     // Icarus + Deps
@@ -172,6 +171,7 @@ publishMods {
         requires "origins"
         requires "icarus"
         requires "pehkui"
+        requires "spell-power"
     }
     modrinth {
         projectId = "3FJ8AhW0"
@@ -180,5 +180,6 @@ publishMods {
         requires "origins"
         requires "icarus"
         requires "pehkui"
+        requires "spell-power"
     }
 }

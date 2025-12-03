@@ -1,3 +1,10 @@
+## 6.7.5
+- Fix Highborne no longer working with Iron's Spellbooks/Ars Nouveau mana
+- Add patch for Origins crashing when PartEntities were present
+- Fix crash when Revenants gave their summons a weapon
+- Fix Ice and Fire compat not working for Sirens/Pixies
+- Nerf the mana regen provided by Highborne
+
 ## 6.7.4
 - Fix MixinSquared not being bundled on Forge
 - Mark Origins 1.10.2+ as required

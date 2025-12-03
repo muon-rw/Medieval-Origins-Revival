@@ -1,5 +1,6 @@
 package dev.muon.medievalorigins;
 
+import com.bawnorton.mixinsquared.adjuster.MixinAnnotationAdjusterRegistrar;
 import com.bawnorton.mixinsquared.canceller.MixinCancellerRegistrar;
 import net.minecraftforge.fml.loading.moddiscovery.ModInfo;
 import net.minecraftforge.fml.loading.LoadingModList;
@@ -20,6 +21,7 @@ public class MedievalOriginsForgeMixinPlugin implements IMixinConfigPlugin {
     public void onLoad(String mixinPackage) {
         LOGGER.info("MedievalOriginsForgeMixinPlugin.onLoad called with package: {}", mixinPackage);
         MixinCancellerRegistrar.register(new MedievalOriginsMixinCanceller());
+        MixinAnnotationAdjusterRegistrar.register(new MedievalOriginsMixinAdjuster());
         LOGGER.info("MedievalOriginsForgeMixinPlugin initialized successfully");
     }
     @Override

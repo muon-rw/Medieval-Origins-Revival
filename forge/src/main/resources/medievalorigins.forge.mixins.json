@@ -13,8 +13,11 @@
     "ProjectileMixin",
     "VillagerMixin",
     "ZombieVillagerInvoker",
+    "compat.apoli.EntityPhasingMixin",
     "compat.icarus.IcarusHelperMixin",
     "compat.iceandfire.EntityGorgonMixin",
+    "compat.iceandfire.PixieAIStealMixin",
+    "compat.iceandfire.SirenDataMixin",
     "compat.irons_spellbooks.AbstractSpellMixin"
   ],
   "client": [
