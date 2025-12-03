@@ -13,13 +13,14 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(Mob.class)
-public abstract class MobMixin {
+public class MobMixin {
 
     @Unique
     private boolean shouldIgnoreTarget(Player player) {
+        Mob self = (Mob) (Object) this;
         return PowerHolderComponent.getPowers(player, MobsIgnorePower.class).stream()
                 .filter(MobsIgnorePower::isActive)
-                .anyMatch(power -> power.shouldIgnore((Mob) (Object) this, player));
+                .anyMatch(power -> power.shouldIgnore(self, player));
     }
 
     @Inject(method = "setTarget", at = @At("HEAD"), cancellable = true)
