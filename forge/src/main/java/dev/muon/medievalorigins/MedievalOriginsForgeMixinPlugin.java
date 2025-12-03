@@ -32,8 +32,6 @@ public class MedievalOriginsForgeMixinPlugin implements IMixinConfigPlugin {
 
     @Override
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
-        LOGGER.info("shouldApplyMixin called - target: {}, mixin: {}", targetClassName, mixinClassName);
-        
         if (mixinClassName.contains(".compat.")) {
 
             // Each subdirectory within /compat/ is a modid
