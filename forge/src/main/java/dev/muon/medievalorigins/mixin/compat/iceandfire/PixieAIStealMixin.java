@@ -14,7 +14,7 @@ import org.spongepowered.asm.mixin.injection.At;
 public class PixieAIStealMixin {
     @Shadow(remap = false) private Player temptingPlayer;
 
-    @ModifyReturnValue(method = "canUse", at = @At("RETURN"))
+    @ModifyReturnValue(method = "canUse", at = @At("RETURN"), remap = true)
     private boolean preventPixieTheft(boolean original) {
         if (original && temptingPlayer != null) {
             OriginComponent component = ModComponents.ORIGIN.get(temptingPlayer);
