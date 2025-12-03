@@ -26,8 +26,6 @@ public interface ISummon extends OwnableEntity {
     void setWeapon(ItemStack item);
     void setOwner(LivingEntity owner);
     void setOwnerID(UUID uuid);
-    // This needs to be explicitly public due to inheritance shenanigans
-    public void reassessWeaponGoal();
     
     // Command-related methods
     void setOrderedToSit(boolean sit);

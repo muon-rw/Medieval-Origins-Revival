@@ -1,7 +1,6 @@
 package dev.muon.medievalorigins.action.bientity;
 
 import dev.muon.medievalorigins.MedievalOrigins;
-import dev.muon.medievalorigins.entity.ISummon;
 import io.github.apace100.apoli.power.factory.action.ActionFactory;
 import io.github.apace100.calio.data.SerializableData;
 import io.github.apace100.calio.data.SerializableDataTypes;
@@ -10,6 +9,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.monster.AbstractSkeleton;
 import net.minecraft.world.item.*;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
@@ -95,8 +95,8 @@ public class TransferItemAction {
                 livingActor.setItemSlot(sourceSlot, summonItemInClickedSlot);
                 livingTarget.setItemSlot(slotOnSummonToInteract, ItemStack.EMPTY);
 
-                if (livingTarget instanceof ISummon summon && slotOnSummonToInteract == EquipmentSlot.MAINHAND) {
-                    summon.reassessWeaponGoal();
+                if (livingTarget instanceof AbstractSkeleton skeleton && slotOnSummonToInteract == EquipmentSlot.MAINHAND) {
+                    skeleton.reassessWeaponGoal();
                 }
             }
         }
@@ -125,8 +125,8 @@ public class TransferItemAction {
             mob.setDropChance(slotOnSummonToInteract, 1.0f);
             mob.setPersistenceRequired();
 
-            if (mob instanceof ISummon summon && slotOnSummonToInteract == EquipmentSlot.MAINHAND) {
-                summon.reassessWeaponGoal();
+            if (mob instanceof AbstractSkeleton skeleton && slotOnSummonToInteract == EquipmentSlot.MAINHAND) {
+                skeleton.reassessWeaponGoal();
             }
         }
     }

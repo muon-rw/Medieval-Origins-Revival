@@ -120,7 +120,7 @@ public class SummonedZombie extends Zombie implements IFollowingSummon, ISummon 
 
     public void setWeapon(ItemStack item) {
         this.setItemSlot(EquipmentSlot.MAINHAND, item);
-        this.reassessWeaponGoal();
+        // Zombies always use melee, no need to reassess weapon goal
     }
     @Override
     public boolean hurt(DamageSource source, float amount) {
@@ -279,9 +279,5 @@ public class SummonedZombie extends Zombie implements IFollowingSummon, ISummon 
     @Override
     public boolean isOrderedToSit() {
         return this.entityData.get(ORDERED_TO_SIT);
-    }
-
-    @Override
-    public void reassessWeaponGoal() {
     }
 }
