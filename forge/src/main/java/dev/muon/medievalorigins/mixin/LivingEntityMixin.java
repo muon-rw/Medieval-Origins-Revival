@@ -17,6 +17,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.damagesource.DamageType;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ai.targeting.TargetingConditions;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.food.FoodProperties;
@@ -32,12 +33,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(LivingEntity.class)
 public class LivingEntityMixin {
-
-    @Unique
-    private static final TagKey<DamageType> MAGIC_DAMAGE = TagKey.create(
-            Registries.DAMAGE_TYPE,
-            new ResourceLocation("medievalorigins", "is_magic")
-    );
 
     @ModifyVariable(
             method = "hurt",
@@ -59,7 +54,7 @@ public class LivingEntityMixin {
         return damageAmount;
     }
 
-
+    // TODO: Lots of this could be cleaned up in favor of ItemStackMixin and/or the Coremod
     @ModifyExpressionValue(method = "shouldTriggerItemUseEffects", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;getUseDuration()I"))
     private int modifyUseDuration(int original) {
         LivingEntity self = (LivingEntity) (Object) this;
@@ -347,6 +342,15 @@ public class LivingEntityMixin {
             at = @At("HEAD"),
             cancellable = true)
     private void medievalorigins$preventAttackValidation(LivingEntity target, CallbackInfoReturnable<Boolean> cir) {
+        if (target instanceof Player player && medievalorigins$shouldIgnoreTarget(player)) {
+            cir.setReturnValue(false);
+        }
+    }
+
+    @Inject(method = "canAttack(Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/ai/targeting/TargetingConditions;)Z",
+            at = @At("HEAD"),
+            cancellable = true)
+    private void medievalorigins$preventAttackValidationWithConditions(LivingEntity target, TargetingConditions condition, CallbackInfoReturnable<Boolean> cir) {
         if (target instanceof Player player && medievalorigins$shouldIgnoreTarget(player)) {
             cir.setReturnValue(false);
         }

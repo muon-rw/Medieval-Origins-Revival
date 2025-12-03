@@ -15,10 +15,7 @@ public abstract class EntityGorgonMixin {
 
     @ModifyReturnValue(method = "isBlindfolded(Lnet/minecraft/world/entity/LivingEntity;)Z", at = @At("RETURN"))
     private static boolean applyMirroring(boolean original, LivingEntity attackTarget) {
-        if (original) {
-            return true; // Bypass expensive checks, getEnchantmentLevel iterates over the whole stack's NBT
-        }
-        if (attackTarget instanceof Player player) {
+        if (!original && attackTarget instanceof Player player) {
             ItemStack helmet = player.getItemBySlot(EquipmentSlot.HEAD);
             if (!helmet.isEmpty()) {
                 if (helmet.getEnchantmentLevel(ModEnchantments.MIRRORING) > 0) {

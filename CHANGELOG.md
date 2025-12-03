@@ -3,7 +3,9 @@
 - Add patch for Origins crashing when PartEntities were present
 - Fix crash when Revenants gave their summons a weapon
 - Fix Ice and Fire compat not working for Sirens/Pixies
+- Fix Revenants being targeted by pillagers
 - Nerf the mana regen provided by Highborne
+- Fix `mobs_ignore` power type not fully working
 
 ## 6.7.4
 - Fix MixinSquared not being bundled on Forge

@@ -19,6 +19,7 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.damagesource.DamageType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.ai.targeting.TargetingConditions;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.food.FoodProperties;
@@ -35,13 +36,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(LivingEntity.class)
 public abstract class LivingEntityMixin {
-
-    @Unique
-    private static final TagKey<DamageType> MAGIC_DAMAGE = TagKey.create(
-            Registries.DAMAGE_TYPE,
-            new ResourceLocation("medievalorigins", "is_magic")
-    );
-
     @ModifyVariable(
             method = "hurt",
             at = @At("HEAD"),
@@ -69,6 +63,7 @@ public abstract class LivingEntityMixin {
         return original;
     }
 
+    // TODO: Lots of this could be cleaned up in favor of ItemStackMixin
     @Inject(method = "shouldTriggerItemUseEffects", at = @At("HEAD"), cancellable = true)
     private void medievalorigins$shouldTriggerItemUseEffects(CallbackInfoReturnable<Boolean> cir) {
         LivingEntity self = (LivingEntity) (Object) this;
@@ -347,6 +342,15 @@ public abstract class LivingEntityMixin {
             at = @At("HEAD"),
             cancellable = true)
     private void medievalorigins$preventAttackValidation(LivingEntity target, CallbackInfoReturnable<Boolean> cir) {
+        if (target instanceof Player player && medievalorigins$shouldIgnoreTarget(player)) {
+            cir.setReturnValue(false);
+        }
+    }
+
+    @Inject(method = "canAttack(Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/ai/targeting/TargetingConditions;)Z",
+            at = @At("HEAD"),
+            cancellable = true)
+    private void medievalorigins$preventAttackValidationWithConditions(LivingEntity target, TargetingConditions condition, CallbackInfoReturnable<Boolean> cir) {
         if (target instanceof Player player && medievalorigins$shouldIgnoreTarget(player)) {
             cir.setReturnValue(false);
         }
