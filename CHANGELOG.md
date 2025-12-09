@@ -1,3 +1,6 @@
+## 6.7.6
+- Patch for Apoli's ModifyHarvest with Apoth Radial Affix
+
 ## 6.7.5
 - Fix Highborne no longer working with Iron's Spellbooks/Ars Nouveau mana
 - Add patch for Origins crashing when PartEntities were present

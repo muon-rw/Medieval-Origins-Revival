@@ -16,6 +16,7 @@
     "VillagerMixin",
     "ZombieVillagerInvoker",
     "compat.apoli.EntityPhasingMixin",
+    "compat.apoli.ServerPlayerGameModeMixin",
     "compat.icarus.IcarusHelperMixin",
     "compat.iceandfire.EntityGorgonMixin",
     "compat.iceandfire.PixieAIStealMixin",

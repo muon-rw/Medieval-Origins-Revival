@@ -19,6 +19,13 @@ public class MedievalOriginsMixinAdjuster implements MixinAnnotationAdjuster {
             }
         }
 
+        if (mixinClassName.equals("io.github.apace100.apoli.mixin.integration.connector.ServerPlayerInteractionManagerMixin")) {
+            if ((method.name.equals("cacheBlock") || method.name.equals("origins$onBlockBreak")) && annotation.is(Inject.class)) {
+                MedievalOrigins.LOG.info("Disabled Apoli#ServerPlayerInteractionManagerMixin#{}", method.name);
+                return null;
+            }
+        }
+
         return annotation;
     }
 }
