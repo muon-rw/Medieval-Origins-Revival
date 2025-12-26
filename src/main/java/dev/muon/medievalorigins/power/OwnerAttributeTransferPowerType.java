@@ -5,6 +5,7 @@ import dev.muon.medievalorigins.entity.SummonedMob;
 import io.github.apace100.apoli.condition.EntityCondition;
 import io.github.apace100.apoli.data.ApoliDataTypes;
 import io.github.apace100.apoli.power.PowerConfiguration;
+import io.github.apace100.apoli.power.type.AttributeModifying;
 import io.github.apace100.apoli.power.type.PowerType;
 import io.github.apace100.apoli.util.AttributedEntityAttributeModifier;
 import io.github.apace100.calio.data.SerializableData;

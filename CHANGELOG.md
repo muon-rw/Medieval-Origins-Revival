@@ -1,5 +1,9 @@
-## 7.0.4-alpha-2
-- Change Arachnae's many eyes toggle 
+## 7.0.4-pre.1
+- Update to Origins pre.1
+- Remove built-in Attribute/Conditioned Attribute powers (no longer needed)
+- Change Arachnae's many eyes toggle to tertiary active
+- Change Pixie dash modifier key to tertiary active
+- Change Pixie effects toggle key to load toolbar activator (vanilla)
 
 ## 7.0.4-alpha-1
 - More improvements to power caching

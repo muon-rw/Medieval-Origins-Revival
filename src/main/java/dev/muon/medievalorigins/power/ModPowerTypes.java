@@ -14,8 +14,6 @@ public class ModPowerTypes {
     public static final PowerConfiguration<ActionOnTargetDeathPowerType> ACTION_ON_TARGET_DEATH = register(ActionOnTargetDeathPowerType.FACTORY);
     public static final PowerConfiguration<CustomDeathSoundPowerType> CUSTOM_DEATH_SOUND = register(CustomDeathSoundPowerType.FACTORY);
     public static final PowerConfiguration<ActionOnJumpPowerType> ACTION_ON_JUMP = register(ActionOnJumpPowerType.FACTORY);
-    public static final PowerConfiguration<AttributePowerType> ATTRIBUTE = register(AttributePowerType.FACTORY);
-    public static final PowerConfiguration<ConditionedAttributePowerType> CONDITIONED_ATTRIBUTE = register(ConditionedAttributePowerType.FACTORY);
     public static final PowerConfiguration<PreventCropTramplePowerType> PREVENT_CROP_TRAMPLE = register(PreventCropTramplePowerType.FACTORY);
     public static final PowerConfiguration<ModifyProjectileVelocityPowerType> MODIFY_PROJECTILE_VELOCITY = register(ModifyProjectileVelocityPowerType.FACTORY);
     public static final PowerConfiguration<ModifyPierceLevelPowerType> MODIFY_PIERCE_LEVEL = register(ModifyPierceLevelPowerType.FACTORY);

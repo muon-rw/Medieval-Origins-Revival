@@ -1,7 +1,7 @@
 {
 	"type": "origins:multiple",
 	"health_lower": {
-		"type": "medievalorigins:attribute",
+		"type": "origins:attribute",
 		"modifier": {
 			"attribute": "minecraft:generic.max_health",
 			"amount": -10,

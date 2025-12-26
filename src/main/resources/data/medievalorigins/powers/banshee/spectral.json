@@ -146,7 +146,7 @@
 		"alpha": 0.7
 	},
 	"untargeted": {
-		"type": "medievalorigins:conditioned_attribute",
+		"type": "origins:conditioned_attribute",
 		"condition": {
 			"type": "origins:resource",
 			"resource": "medievalorigins:banshee/spectral_duration",

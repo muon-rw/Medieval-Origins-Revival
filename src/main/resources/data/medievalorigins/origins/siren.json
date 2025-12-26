@@ -13,7 +13,7 @@
 		"mermod:fabulous_fins",
 		"origins_env_deh:water_dweller",
 		"origins_env_deh:cold_resistance",
-		"medievalorigins:thermoo/cold_immune",
+		"thermoo-patches:cold_immune",
 		"survive:cold_blooded"
 	],
 	"icon": {

@@ -15,7 +15,7 @@
 		}
 	},
 	"attack_speed": {
-		"type": "medievalorigins:attribute",
+		"type": "origins:attribute",
 		"modifier": {
 			"attribute": "minecraft:generic.attack_speed",
 			"amount": 0.5,

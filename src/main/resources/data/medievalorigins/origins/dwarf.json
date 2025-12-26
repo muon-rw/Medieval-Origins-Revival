@@ -8,7 +8,7 @@
 		"medievalorigins:dwarf/potent_brew",
 		"medievalorigins:dwarf/pickaxeless_stone",
 		"medievalorigins:dwarf/helmet_spawn",
-		"medievalorigins:thermoo/extra_heat_resistance"
+		"thermoo-patches:extra_heat_resistance"
 	],
 	"icon": {
 		"id": "medievalorigins:dwarf"

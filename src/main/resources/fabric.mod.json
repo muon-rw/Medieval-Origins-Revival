@@ -34,7 +34,7 @@
 		"minecraft": "~1.21.1",
 		"java": ">=21",
 		"fabric-api": "*",
-		"origins": "1.13.0-alpha.12",
+		"origins": "1.13.0-pre.1",
 		"spell_engine": "*",
 		"icarus": ">=4.5.0"
 	}

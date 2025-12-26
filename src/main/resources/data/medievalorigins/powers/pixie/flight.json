@@ -41,7 +41,7 @@
 				"translate": "badges.medievalorigins.pixie.dash_forward",
 				"with": [
 					{
-						"keybind": "key.sprint"
+						"keybind": "key.medievalorigins.tertiary_active"
 					}
 				]
 			}
@@ -53,7 +53,7 @@
 				"translate": "badges.medievalorigins.pixie.dash_upward",
 				"with": [
 					{
-						"keybind": "key.sprint"
+						"keybind": "key.medievalorigins.tertiary_active"
 					},
 					{
 						"keybind": "key.jump"
@@ -67,9 +67,9 @@
 			"text": {
 				"translate": "badges.medievalorigins.pixie.disable_effects",
 				"with": [
-					{
-						"keybind": "key.medievalorigins.tertiary_active"
-					}
+                  {
+                    "keybind": "key.loadToolbarActivator"
+                  }
 				]
 			}
 		}
@@ -200,7 +200,7 @@
 		}
 	},
 	"slower_creative": {
-		"type": "medievalorigins:conditioned_attribute",
+		"type": "origins:conditioned_attribute",
 		"tick_rate": 10,
 		"modifier": {
 			"attribute": "minecraft:generic.movement_speed",
@@ -580,7 +580,7 @@
 			}
 		},
 		"key": {
-			"key": "key.sprint"
+			"key": "key.medievalorigins.tertiary_active"
 		}
 	},
 	"dash_upward": {
