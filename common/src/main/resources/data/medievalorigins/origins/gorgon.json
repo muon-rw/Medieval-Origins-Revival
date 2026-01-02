@@ -11,8 +11,7 @@
                 "origins_env_deh:thirst_resistance"
 	],
         "icon": {
-		"item": "minecraft:ink_sac",
-		"tag": "{CustomModelData:352}"
+		"item": "medievalorigins:gorgon"
 	},
 	"impact": 3,
         "order": 1

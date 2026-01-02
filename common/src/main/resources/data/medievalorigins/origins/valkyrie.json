@@ -9,8 +9,7 @@
 		"medievalorigins:valkyrie/spell_power"
 	],
 	"icon": {
-		"item": "minecraft:ink_sac",
-		"tag": "{CustomModelData:369}"
+		"item": "medievalorigins:valkyrie"
 	},
 	"order": 1,
 	"impact": 2

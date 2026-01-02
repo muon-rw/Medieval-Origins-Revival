@@ -12,8 +12,7 @@
 		"medievalorigins:pixie/troublemaker"
 	],
 	"icon": {
-		"item": "minecraft:ink_sac",
-		"tag": "{CustomModelData:357}"
+		"item": "medievalorigins:pixie"
 	},
 	"impact": 2,
 	"order": 1

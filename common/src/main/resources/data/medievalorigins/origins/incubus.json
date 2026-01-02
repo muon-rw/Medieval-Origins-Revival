@@ -21,8 +21,7 @@
                 "origins_toughasnails:thermal_regulator"
 	],
         "icon": {
-		"item": "minecraft:ink_sac",
-		"tag": "{CustomModelData:353}"
+		"item": "medievalorigins:incubus"
 	},
 	"impact": 2,
         "order": 1

@@ -3,6 +3,7 @@ package dev.muon.medievalorigins;
 import dev.muon.medievalorigins.entity.ISummon;
 import dev.muon.medievalorigins.entity.ModEntities;
 import dev.muon.medievalorigins.entity.SummonTracker;
+import dev.muon.medievalorigins.item.ModItems;
 import dev.muon.medievalorigins.sounds.ModSounds;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents;
@@ -16,6 +17,7 @@ public class MedievalOriginsFabric implements ModInitializer {
 
 		MedievalOrigins.init();
 		ModEntities.register();
+		ModItems.register();
 		ModSounds.register();
 		
 		registerSummonTrackerEvents();

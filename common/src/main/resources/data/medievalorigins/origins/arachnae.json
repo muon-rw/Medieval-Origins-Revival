@@ -13,8 +13,7 @@
                 "origins:arthropod"
 	],
         "icon": {
-                "item": "minecraft:ink_sac",
-                "tag": "{CustomModelData:361}"
+                "item": "medievalorigins:arachnae"
         },
 	"impact": 2,
         "order": 1

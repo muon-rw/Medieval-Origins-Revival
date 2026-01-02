@@ -1,6 +1,7 @@
 package dev.muon.medievalorigins;
 
 import dev.muon.medievalorigins.entity.ModEntities;
+import dev.muon.medievalorigins.item.ModItems;
 import dev.muon.medievalorigins.sounds.ModSounds;
 import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraftforge.common.MinecraftForge;
@@ -18,8 +19,9 @@ public class MedievalOriginsForge {
         modEventBus.addListener(this::commonSetup);
         MedievalOrigins.init();
 
-        ModEntities.register(modEventBus);
-        ModSounds.register(modEventBus);
+		ModEntities.register(modEventBus);
+		ModItems.register(modEventBus);
+		ModSounds.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(this);
     }
 

@@ -18,8 +18,7 @@
                 "survive:cold_blooded"
 	],
         "icon": {
-                "item": "minecraft:ink_sac",
-                "tag": "{CustomModelData:366}"
+                "item": "medievalorigins:siren"
         },
 	"impact": 2,
         "order": 1

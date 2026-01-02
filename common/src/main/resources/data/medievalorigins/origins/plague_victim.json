@@ -13,9 +13,8 @@
                 "origins_survive:illness_resistance"
 	],
         "icon": {
-		"item": "minecraft:ink_sac",
-		"tag": "{CustomModelData:368}"
-},
+		"item": "medievalorigins:plague_victim"
+	},
 	"impact": 3,
         "order": 1
 }

@@ -16,8 +16,7 @@
 		"origins_toughasnails:cold_resistance"
 	],
 	"icon": {
-		"item": "minecraft:ink_sac",
-		"tag": "{CustomModelData:365}"
+		"item": "medievalorigins:yeti"
 	},
 	"impact": 2,
 	"order": 1

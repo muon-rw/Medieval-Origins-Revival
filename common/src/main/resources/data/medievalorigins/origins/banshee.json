@@ -12,8 +12,7 @@
                 "origins_survive:sleepless"
 	],
         "icon": {
-                "item": "minecraft:ink_sac",
-                "tag": "{CustomModelData:358}"
+                "item": "medievalorigins:banshee"
         },
 	"impact": 3,
         "order": 1

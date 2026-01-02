@@ -20,8 +20,7 @@
                 "medievalorigins:high_elf/subclass_picker"
 	],
         "icon": {
-                "item": "minecraft:ink_sac",
-                "tag": "{CustomModelData:364}"
+                "item": "medievalorigins:high_elf"
         },
         "impact": 2,
         "order": 1

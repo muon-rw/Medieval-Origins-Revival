@@ -17,8 +17,7 @@
                 "origins_survive:sleepless"
 	],
         "icon": {
-                "item": "minecraft:ink_sac",
-                "tag": "{CustomModelData:360}"
+                "item": "medievalorigins:revenant"
         },
 	"impact": 3,
         "order": 1
