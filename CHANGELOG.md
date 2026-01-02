@@ -1,6 +1,7 @@
 ## 6.8.0
 - Added a new origin, the Keres
 - Fix conflict that sometimes caused ink sacs to appear instead of origin icons
+- Fix goblin's durability modifier affecting repairs/mending 
 
 ## 6.7.6
 - Patch for Apoli's ModifyHarvest with Apoth Radial Affix

@@ -47,6 +47,8 @@
             "type": "origins:predicate",
             "predicate": "medievalorigins:unbreak_chance"
         },
+        "comparison": ">=",
+        "compare_to": 0,
         "modifier": {
             "operation": "set_total",
             "value": 0
