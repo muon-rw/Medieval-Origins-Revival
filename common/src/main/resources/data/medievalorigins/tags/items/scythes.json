@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:netherite_hoe",
+    {"id":"traveloptics:stellothorn","required": false},
+    {"id":"traveloptics:abyssal_tidecaller","required": false},
+    {"id":"traveloptics:voidstrike_reaper","required": false},
+    {"id":"simplyswords:soulrender","required": false},
+    {"id":"soulsweapons:soul_reaper","required": false}
+  ]
+}

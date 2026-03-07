@@ -43,6 +43,12 @@ public class ModItemConditions {
                     && (itemName.contains("dagger") || itemName.contains("knife") || itemName.contains("sai") || itemName.contains("athame"));
         }));
 
+        register(new ConditionFactory<>(MedievalOrigins.loc("is_scythe"), new SerializableData(), (data, stack) -> {
+            String itemName = BuiltInRegistries.ITEM.getKey(stack.getItem()).getPath();
+            return (stack.getItem() instanceof HoeItem || Enchantments.SHARPNESS.canEnchant(stack))
+                    && (itemName.contains("scythe") || itemName.contains("_hoe") || itemName.contains("sickle"));
+        }));
+
         register(IsValkyrieWeaponCondition.getFactory());
         register(IsSummonEquipmentCondition.getFactory());
 

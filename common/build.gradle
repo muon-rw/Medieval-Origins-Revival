@@ -1,6 +1,7 @@
 plugins {
     id 'multiloader-common'
     id 'net.neoforged.moddev.legacyforge'
+    id 'dev.mixinmcp.decompile'
 }
 
 legacyForge {

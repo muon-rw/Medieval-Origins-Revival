@@ -1,4 +1,7 @@
 {
+  "key.medievalorigins.tertiary_active": "Medieval Origins: Tertiary Active",
+  "category.medievalorigins.general": "Medieval Origins",
+
   "origin.origins.human.description": "-§l Overview§r: \n§oNone§r\n\n A human's fate is more open than most - venture forth with no benefits or drawbacks.",
 
   "origin.medievalorigins.alfiq.name": "Alfiq",
@@ -510,6 +513,27 @@
   "power.medievalorigins.valkyrie/heavenly_implements.name": "Heavenly Implements",
   "power.medievalorigins.valkyrie/heavenly_implements.description": "Valkyrie have innately more healing/holy spell power and are more potent with lance or spear-like weapons.",
 
+  "origin.medievalorigins.keres.name": "Keres",
+  "origin.medievalorigins.keres.description": "-§l Overview§r: \n§o§2+ Sustain, Scaling Power§r\n§o§6• Unique Healing (Souls)§r\n§o§c- Extinguished by Sunlight§r\n§o§c- Weak to Holy§r\n§lKeres§r are death spirits, daughters of Nyx. They are drawn to bloody deaths on the battlefield and are said to personify violent ends.",
+
+  "power.medievalorigins.keres/daughter_of_nyx.name": "Daughter of Nyx",
+  "power.medievalorigins.keres/daughter_of_nyx.description": "Keres have black feathered wings, and can fly freely.",
+
+  "power.medievalorigins.keres/devils_arms.name": "Devil's Arms",
+  "power.medievalorigins.keres/devils_arms.description": "Keres are naturally adept with implements of the reaper.",
+
+  "power.medievalorigins.keres/bloodthirst.name": "Bloodthirst",
+  "power.medievalorigins.keres/bloodthirst.description": "Keres can sense nearby wounded organic creatures. Low-health entities are outlined, emit a heartbeat, and leave a faint blood trail.",
+  
+  "power.medievalorigins.keres/vicious_fangs.name": "Vicious Fangs",
+  "power.medievalorigins.keres/vicious_fangs.description": "Every third melee attack against an organic target inflicts §cBleeding§r (strength and duration scale with §bSouls§r) and marks them with §4Bloodthirst§r for the duration. Bleeding refreshes on reapplication.",
+
+  "power.medievalorigins.keres/eternal_craving.name": "Eternal Craving",
+  "power.medievalorigins.keres/eternal_craving.description": "Keres cannot regenerate health naturally, including from food, potions, or effects. Instead, restoration is tied to §bSouls§r. Hover over the badges for details.",
+
+  "power.medievalorigins.keres/unholy.name": "Unholy",
+  "power.medievalorigins.keres/unholy.description": "Smite and holy magic deal extra damage to Keres and dispel 1 §bSoul§r on hit. Direct sunlight slowly drains §bSouls§r unless wearing a Mirroring helmet.",
+
   "enchantment.medievalorigins.featherweight": "Featherweight",
   "enchantment.medievalorigins.featherweight.desc": "This enchantment can be applied to heavy armor to prevent slowing down Arachnae, Elves, Alfiq, or those with wings.",
 
@@ -547,6 +571,14 @@
   "badges.medievalorigins.high_elf.ebonbreath": "§dEbonbreath:§r Press %s while holding bottled dragon's breath in either hand to shoot forth a cone of strong magical flame. Scales with Fire and Arcane/Ender Spell Power.",
 
 
+  "badges.medievalorigins.keres.siphon": "Striking a §cBleeding§r target restores health equal to §b1 + √(Souls)§r, rounded down. \n\n§70 Souls = 1 | 1 = 2 | 4 = 3 | 9 = 4 | 25 = 6§r",
+  "badges.medievalorigins.keres.slaying_bleed": "Slaying a §cBleeding§r target immediately restores §c10%§r of their max health to you.",
+
+  "badges.medievalorigins.keres.souls": "§bSouls§r are a permanent resource gained by slaying organic creatures. Lose half on death. Souls also drain in direct sunlight unless wearing a Mirroring helmet.",
+  "badges.medievalorigins.keres.skulls": "Consuming skulls restores health: \n- §fPlayer Skull§r: 3\n- §5Dragon Head§r: 6\n- §7Other Heads§r: 2",
+  "badges.medievalorigins.keres.transmute": "Press %s to convert §bSouls§r into health (2 per Soul, will not overconsume). \n\nAt full health, instead convert §lall§r Souls into permanent absorption (1 per Soul).",
+  "badges.medievalorigins.keres.spell_power": "§5Blood/Soul Spell Power§r scales with your current Soul count.",
+
   "badges.medievalorigins.revenant.command": "Press %s to cycle between commanding your summons to sit, follow, or teleport to you.",
 
   "badges.medievalorigins.revenant.siphon": "Hit a living creature to drain its life force. Damage scales with accumulated resource and Soul/Blood Spell Power.",
@@ -572,6 +604,7 @@
   "medievalorigins.uncastable": "You can't use this ability right now.",
   "medievalorigins.black_thumb": "The crops wilt at your touch.",
 
+  "tooltip.medievalorigins.devils_arms": "Devil's Arms:",
   "tooltip.medievalorigins.set_bonus": "Set Bonus:",
   "tooltip.medievalorigins.when_consumed": "When Consumed: ",
   "tooltip.medievalorigins.water_protection": "Water Protection",
@@ -611,9 +644,6 @@
   "message.medievalorigins.summon_limit_reached": "Oldest summon dismissed:",
   "message.medievalorigins.summon_location": "(%s: %d, %d, %d)",
 
-  "key.medievalorigins.tertiary_active": "Medieval Origins: Tertiary Active",
-  "category.medievalorigins.general": "Medieval Origins",
-
   "death.attack.blazenbreath": "%1$s was burnt to a crisp",
   "death.attack.blazenbreath.player": "%1$s was burnt to a crisp by %2$s",
   "death.attack.blazenbreath.item": "%1$s was burnt to a crisp by %2$s using %3$s",
@@ -632,5 +662,9 @@
 
   "death.attack.smite": "%1$s faced divine judgment",
   "death.attack.smite.player": "%1$s faced the divine judgment of %2$s",
-  "death.attack.smite.item": "%1$s faced the divine judgment of %2$s's %3$s"
+  "death.attack.smite.item": "%1$s faced the divine judgment of %2$s's %3$s",
+
+  "death.attack.bleeding": "%1$s bled out",
+  "death.attack.bleeding.player": "%1$s was bled dry by %2$s",
+  "death.attack.bleeding.item": "%1$s was bled dry by %2$s using %3$s"
 }
