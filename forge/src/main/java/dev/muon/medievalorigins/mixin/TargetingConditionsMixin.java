@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.At;
 public class TargetingConditionsMixin {
     @ModifyReturnValue(method = "test(Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/LivingEntity;)Z", at = @At("RETURN"))
     private boolean preventTargeting(boolean original, LivingEntity attacker, LivingEntity target) {
-        if (original && target instanceof Player player) {
+        if (original && attacker != null && target instanceof Player player) {
             boolean shouldIgnore = PowerHolderComponent.getPowers(player, MobsIgnorePower.class).stream()
                     .filter(MobsIgnorePower::isActive)
                     .anyMatch(power -> power.shouldIgnore(attacker, player));
