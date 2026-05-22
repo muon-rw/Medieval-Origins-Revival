@@ -1,3 +1,7 @@
+## 7.0.4-pre.2
+- Update to Origins pre.2
+- Require Icarus <=4.6.4 
+
 ## 7.0.4-pre.1
 - Update to Origins pre.1
 - Remove built-in Attribute/Conditioned Attribute powers (no longer needed)

@@ -69,21 +69,6 @@ public abstract class IcarusHelperMixin {
             }
 
             @Override
-            public boolean useStaminaForFlight() {
-                return false;
-            }
-
-            @Override
-            public float staminaAmount() {
-                return 0;
-            }
-
-            @Override
-            public float staminaRegen() {
-                return 0;
-            }
-
-            @Override
             public float requiredFoodAmount() {
                 return 0;
             }

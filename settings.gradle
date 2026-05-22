@@ -4,6 +4,10 @@ pluginManagement {
 			name = 'Fabric'
 			url = 'https://maven.fabricmc.net/'
 		}
+		maven {
+			name = 'MuonR'
+			url = 'https://maven.muon.rip/releases'
+		}
 		mavenCentral()
 		gradlePluginPortal()
 	}
