@@ -1,9 +1,10 @@
 plugins {
-	id 'fabric-loom' version '1.10-SNAPSHOT'
+	id 'fabric-loom' version '1.13-SNAPSHOT'
 	id 'maven-publish'
 	id 'idea'
 	id "net.darkhax.curseforgegradle" version "1.0.7"
 	id "com.modrinth.minotaur" version "2.+"
+	id 'dev.mixinmcp.decompile' version '0.9.0'
 }
 
 version = project.mod_version
