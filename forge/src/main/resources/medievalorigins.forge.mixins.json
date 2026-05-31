@@ -7,6 +7,8 @@
   "mixins": [
     "AbstractArrowMixin",
     "FoodDataMixin",
+    "IgnoreWaterMixin",
+    "IgnoreWaterPushMixin",
     "ItemMixin",
     "ItemStackMixin",
     "LivingEntityMixin",

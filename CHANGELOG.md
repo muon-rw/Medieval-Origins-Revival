@@ -1,3 +1,7 @@
+## 6.7.8
+- Fix goblin gear bonuses not working due to new versions of AEA
+- Fix various water conditions (dwarf sinking, siren mining speed, hydrophobic origins, etc.) not working properly
+
 ## 6.7.7
 - Fix conflict that sometimes caused ink sacs to appear instead of origin icons
 - Fix goblin's durability modifier affecting repairs/mending 
