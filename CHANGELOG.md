@@ -1,3 +1,6 @@
+## 6.7.9
+- Require Icarus 2.13.2 or lower
+
 ## 6.7.8
 - Fix goblin gear bonuses not working due to new versions of AEA
 - Fix various water conditions (dwarf sinking, siren mining speed, hydrophobic origins, etc.) not working properly

@@ -39,5 +39,11 @@ mandatory = false
 versionRange = "*"
 ordering = "NONE"
 side = "BOTH"
+[[dependencies.medievalorigins]]
+modId = "icarus"
+mandatory = false
+versionRange = "(,2.13.2]"
+ordering = "NONE"
+side = "BOTH"
 
 
