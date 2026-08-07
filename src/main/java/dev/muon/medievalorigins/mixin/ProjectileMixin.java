@@ -23,8 +23,7 @@ public abstract class ProjectileMixin {
 
         if (owner != null) {
             if (projectile instanceof AbstractArrow) {
-                PowerHolderComponent.getPowerTypes(owner, ModifyProjectileVelocityPowerType.class).stream()
-                    .filter(ModifyProjectileVelocityPowerType::isActive)
+                PowerHolderComponent.getPowerTypes(owner, ModifyProjectileVelocityPowerType.class)
                     .forEach(powerType -> {
                         Vec3 originalVelocity = args.get(0);
                         double modifiedX = ModifierUtil.applyModifiers(owner, powerType.getModifiers(), originalVelocity.x);
@@ -44,8 +43,7 @@ public abstract class ProjectileMixin {
 
         if (owner != null) {
             if (projectile instanceof AbstractArrow) {
-                PowerHolderComponent.getPowerTypes(owner, ModifyProjectileAccuracyPowerType.class).stream()
-                    .filter(ModifyProjectileAccuracyPowerType::isActive)
+                PowerHolderComponent.getPowerTypes(owner, ModifyProjectileAccuracyPowerType.class)
                     .forEach(powerType -> {
                         float originalInaccuracy = args.get(4);
                         float modifiedInaccuracy = (float) ModifierUtil.applyModifiers(owner, powerType.getModifiers(), originalInaccuracy);

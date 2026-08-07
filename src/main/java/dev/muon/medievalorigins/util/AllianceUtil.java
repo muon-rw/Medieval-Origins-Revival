@@ -2,6 +2,7 @@ package dev.muon.medievalorigins.util;
 
 import dev.ftb.mods.ftbteams.api.FTBTeamsAPI;
 import dev.ftb.mods.ftbteams.api.client.KnownClientPlayer;
+import dev.muon.medievalorigins.compat.TeamsFriendlyFireCompat;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
@@ -15,6 +16,7 @@ import java.util.UUID;
 public class AllianceUtil {
 
     private static final int MAX_OWNERSHIP_DEPTH = 3; // Max depth for recursive owner search
+    private static final boolean TEAMS_FRIENDLY_FIRE_LOADED = FabricLoader.getInstance().isModLoaded("teamsfriendlyfire");
 
     /**
      * Recursively gets the relevant Player UUID for team affiliation checks by traversing ownership.
@@ -47,12 +49,16 @@ public class AllianceUtil {
     }
 
     /**
-     * Checks if two entities are allied through FTB Teams, based on their (potentially recursively resolved) affiliation IDs.
+     * Checks if two entities are allied, based on their (potentially recursively resolved) affiliation IDs.
+     *
+     * <p>Teams Friendly Fire answers this when installed, so team-configured PvP flags and reciprocity
+     * apply. Otherwise this falls back to plain FTB Teams membership, which reports allied while the
+     * team manager has not finished loading.
      *
      * @param affiliationId1 UUID of the first entity/owner.
      * @param affiliationId2 UUID of the second entity/owner.
      * @param world          The level/world the entities are in.
-     * @return True if allied by FTB Teams or if FTB Teams is not available (permissive), false otherwise.
+     * @return True if the two are allied, false otherwise.
      */
     public static boolean areEntitiesAlliedByFTBTeams(UUID affiliationId1, UUID affiliationId2, Level world) {
         if (affiliationId1 == null || affiliationId2 == null) {
@@ -60,6 +66,10 @@ public class AllianceUtil {
         }
         if (affiliationId1.equals(affiliationId2)) {
             return true; 
+        }
+
+        if (TEAMS_FRIENDLY_FIRE_LOADED) {
+            return TeamsFriendlyFireCompat.arePlayersProtectedAllies(affiliationId1, affiliationId2, world);
         }
 
         if (FabricLoader.getInstance().isModLoaded("ftbteams")) {

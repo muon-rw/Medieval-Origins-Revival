@@ -18,10 +18,7 @@ public class VillagerMixin {
     @ModifyReturnValue(method = "getPlayerReputation", at = @At("RETURN"))
     private int modifyReputation(int original, @Local(argsOnly = true) Player player) {
         if (PowerHolderComponent.hasPowerType(player, ModifyReputationPowerType.class)) {
-            List<ModifyReputationPowerType> powers = PowerHolderComponent.getPowerTypes(player, ModifyReputationPowerType.class)
-                    .stream()
-                    .filter(ModifyReputationPowerType::isActive)
-                    .toList();
+            List<ModifyReputationPowerType> powers = PowerHolderComponent.getPowerTypes(player, ModifyReputationPowerType.class);
 
             double modified = original;
             for (ModifyReputationPowerType powerType : powers) {

@@ -2,5 +2,11 @@
 	"type": "medievalorigins:icarus_wings",
 	"wings_type": {
 		"id": "icarus:white_feathered_wings"
-	}
+	},
+	"exhaustion_amount": 0.0075,
+	"drop_out_of_sky_when_tired": false,
+	"use_stamina_for_flight": false,
+	"stamina_amount": 0.0,
+	"stamina_regen": 0.0,
+	"required_food_amount": 0.0
 }

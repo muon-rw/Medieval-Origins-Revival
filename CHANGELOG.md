@@ -1,8 +1,10 @@
 ## 7.0.4-pre.3
 - Update to Origins pre.3
 - Remove power cache (no longer needed)
-- Require Icarus >4.6.4
-- No longer mark Spell Engine required
+- Require Icarus >4.6.4 if present
+- No longer mark Icarus required (Valkyrie will be selectable, with no wings)
+- Update Icarus wings power type, now properly datapackable
+- Support FTB Teams Friendly Fire Addon
 
 ## 7.0.4-pre.2
 - Update to Origins pre.2

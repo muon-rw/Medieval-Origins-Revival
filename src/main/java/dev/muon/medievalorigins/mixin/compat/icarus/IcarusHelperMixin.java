@@ -8,12 +8,12 @@ import dev.cammiescorner.icarus.api.IcarusPlayerValues;
 import dev.cammiescorner.icarus.util.IcarusHelper;
 import dev.muon.medievalorigins.power.IcarusWingsPowerType;
 import io.github.apace100.apoli.component.PowerHolderComponent;
-import io.github.apace100.apoli.power.type.PowerType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
+import java.util.List;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
@@ -23,74 +23,74 @@ public abstract class IcarusHelperMixin {
 
     @ModifyReturnValue(method = "getConfigValues", at = @At("RETURN"))
     private static IcarusPlayerValues modifyConfigValues(IcarusPlayerValues original, LivingEntity entity) {
-        var icarusWings = PowerHolderComponent.getPowerTypes(entity, IcarusWingsPowerType.class).stream().filter(PowerType::isActive).findFirst();
+        List<IcarusWingsPowerType> icarusWings = PowerHolderComponent.getPowerTypes(entity, IcarusWingsPowerType.class);
         if (icarusWings.isEmpty()) return original;
 
-        //TODO: Add as fields to power json
+        IcarusWingsPowerType.Overrides overrides = icarusWings.getFirst().getOverrides();
         return new IcarusPlayerValues() {
             @Override
             public float wingsSpeed() {
-                return original.wingsSpeed();
+                return overrides.wingsSpeed().orElseGet(original::wingsSpeed);
             }
 
             @Override
             public float maxSlowedMultiplier() {
-                return original.maxSlowedMultiplier();
+                return overrides.maxSlowedMultiplier().orElseGet(original::maxSlowedMultiplier);
             }
 
             @Override
             public boolean armorSlows() {
-                return original.armorSlows();
+                return overrides.armorSlows().orElseGet(original::armorSlows);
             }
 
             @Override
             public boolean canLoopDeLoop() {
-                return original.canLoopDeLoop();
+                return overrides.canLoopDeLoop().orElseGet(original::canLoopDeLoop);
             }
 
             @Override
             public boolean canSlowFall() {
-                return original.canSlowFall();
+                return overrides.canSlowFall().orElseGet(original::canSlowFall);
             }
 
             @Override
             public float exhaustionAmount() {
-                return original.exhaustionAmount() / 4;
+                return overrides.exhaustionAmount().orElseGet(original::exhaustionAmount);
             }
 
             @Override
             public int maxHeightAboveWorld() {
-                return original.maxHeightAboveWorld();
+                return overrides.maxHeightAboveWorld().orElseGet(original::maxHeightAboveWorld);
             }
 
             @Override
             public boolean maxHeightEnabled() {
-                return original.maxHeightEnabled();
+                return overrides.maxHeightEnabled().orElseGet(original::maxHeightEnabled);
             }
 
             @Override
             public boolean dropOutOfSkyWhenTired() {
-                return false;
+                return overrides.dropOutOfSkyWhenTired().orElseGet(original::dropOutOfSkyWhenTired);
             }
 
             @Override
             public boolean useStaminaForFlight() {
-                return false;
+                return overrides.useStaminaForFlight().orElseGet(original::useStaminaForFlight);
             }
 
             @Override
             public float staminaAmount() {
-                return 0;
+                return overrides.staminaAmount().orElseGet(original::staminaAmount);
             }
 
             @Override
             public float staminaRegen() {
-                return 0;
+                return overrides.staminaRegen().orElseGet(original::staminaRegen);
             }
 
             @Override
             public float requiredFoodAmount() {
-                return 0;
+                return overrides.requiredFoodAmount().orElseGet(original::requiredFoodAmount);
             }
         };
     }

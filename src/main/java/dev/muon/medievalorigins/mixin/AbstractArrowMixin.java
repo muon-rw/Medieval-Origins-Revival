@@ -25,8 +25,7 @@ public abstract class AbstractArrowMixin {
         Entity owner = arrow.getOwner();
 
         if (owner != null) {
-            PowerHolderComponent.getPowerTypes(owner, ModifyPierceLevelPowerType.class).stream()
-                .filter(ModifyPierceLevelPowerType::isActive)
+            PowerHolderComponent.getPowerTypes(owner, ModifyPierceLevelPowerType.class)
                 .forEach(powerType -> {
                     double modifiedPierce = ModifierUtil.applyModifiers(owner, powerType.getModifiers(), 0.0);
                     this.setPierceLevel((byte) Math.round(modifiedPierce));
