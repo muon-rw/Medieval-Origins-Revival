@@ -1,7 +1,7 @@
 package dev.muon.medievalorigins.mixin;
 
 import dev.muon.medievalorigins.power.MobsIgnorePowerType;
-import dev.muon.medievalorigins.util.PowerCache;
+import io.github.apace100.apoli.component.PowerHolderComponent;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.targeting.TargetingConditions;
 import net.minecraft.world.entity.player.Player;
@@ -17,7 +17,7 @@ public class TargetingConditionsMixin {
             cancellable = true)
     private void preventTargeting(LivingEntity source, LivingEntity target, CallbackInfoReturnable<Boolean> cir) {
         if (target instanceof Player player) {
-            boolean shouldIgnore = PowerCache.hasPowerType(
+            boolean shouldIgnore = PowerHolderComponent.hasPowerType(
                     player,
                     MobsIgnorePowerType.class,
                     powerType -> powerType.shouldIgnore(source, player)

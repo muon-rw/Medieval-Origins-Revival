@@ -4,7 +4,7 @@ import net.minecraft.world.entity.monster.ZombieVillager;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.gen.Invoker;
 
-import javax.annotation.Nullable;
+import org.jetbrains.annotations.Nullable;
 import java.util.UUID;
 
 @Mixin(value = ZombieVillager.class, remap = true)

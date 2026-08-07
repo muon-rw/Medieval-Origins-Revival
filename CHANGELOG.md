@@ -1,3 +1,9 @@
+## 7.0.4-pre.3
+- Update to Origins pre.3
+- Remove power cache (no longer needed)
+- Require Icarus >4.6.4
+- No longer mark Spell Engine required
+
 ## 7.0.4-pre.2
 - Update to Origins pre.2
 - Require Icarus <=4.6.4 

@@ -9,7 +9,7 @@ import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import dev.muon.medievalorigins.entity.SummonedMob;
 import net.minecraft.world.level.pathfinder.PathType;
 
-import javax.annotation.Nullable;
+import org.jetbrains.annotations.Nullable;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;

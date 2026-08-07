@@ -3,7 +3,7 @@ package dev.muon.medievalorigins.mixin;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.llamalad7.mixinextras.sugar.Local;
 import dev.muon.medievalorigins.power.ModifyReputationPowerType;
-import dev.muon.medievalorigins.util.PowerCache;
+import io.github.apace100.apoli.component.PowerHolderComponent;
 import io.github.apace100.apoli.util.modifier.ModifierUtil;
 import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.entity.player.Player;
@@ -17,8 +17,8 @@ public class VillagerMixin {
 
     @ModifyReturnValue(method = "getPlayerReputation", at = @At("RETURN"))
     private int modifyReputation(int original, @Local(argsOnly = true) Player player) {
-        if (PowerCache.hasPowerType(player, ModifyReputationPowerType.class)) {
-            List<ModifyReputationPowerType> powers = PowerCache.getPowerTypes(player, ModifyReputationPowerType.class)
+        if (PowerHolderComponent.hasPowerType(player, ModifyReputationPowerType.class)) {
+            List<ModifyReputationPowerType> powers = PowerHolderComponent.getPowerTypes(player, ModifyReputationPowerType.class)
                     .stream()
                     .filter(ModifyReputationPowerType::isActive)
                     .toList();

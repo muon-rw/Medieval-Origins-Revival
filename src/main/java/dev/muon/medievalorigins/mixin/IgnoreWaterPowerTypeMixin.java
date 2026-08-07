@@ -1,7 +1,7 @@
 package dev.muon.medievalorigins.mixin;
 
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
-import dev.muon.medievalorigins.util.PowerCache;
+import io.github.apace100.apoli.component.PowerHolderComponent;
 import io.github.apace100.apoli.power.type.IgnoreWaterPowerType;
 import io.github.apace100.apoli.power.type.PowerType;
 import net.minecraft.world.entity.Entity;
@@ -18,7 +18,7 @@ public class IgnoreWaterPowerTypeMixin {
     private boolean medievalOrigins$modifyInWater(boolean original) {
         Entity ths = (Entity) (Object) this;
         if (original && ths instanceof Player) {
-            boolean hasActivePower = PowerCache.hasPowerType(ths, IgnoreWaterPowerType.class, PowerType::isActive);
+            boolean hasActivePower = PowerHolderComponent.hasPowerType(ths, IgnoreWaterPowerType.class, PowerType::isActive);
             if (hasActivePower) {
                 return false;
             }
@@ -30,7 +30,7 @@ public class IgnoreWaterPowerTypeMixin {
     private boolean medievalOrigins$modifyUnderWater(boolean original) {
         Entity ths = (Entity) (Object) this;
         if (original && ths instanceof Player) {
-            boolean hasActivePower = PowerCache.hasPowerType(ths, IgnoreWaterPowerType.class, PowerType::isActive);
+            boolean hasActivePower = PowerHolderComponent.hasPowerType(ths, IgnoreWaterPowerType.class, PowerType::isActive);
             if (hasActivePower) {
                 return false;
             }
@@ -42,7 +42,7 @@ public class IgnoreWaterPowerTypeMixin {
     private boolean medievalOrigins$modifySwimming(boolean original) {
         Entity ths = (Entity) (Object) this;
         if (original && ths instanceof Player) {
-            boolean hasActivePower = PowerCache.hasPowerType(ths, IgnoreWaterPowerType.class, PowerType::isActive);
+            boolean hasActivePower = PowerHolderComponent.hasPowerType(ths, IgnoreWaterPowerType.class, PowerType::isActive);
             if (hasActivePower) {
                 return false;
             }

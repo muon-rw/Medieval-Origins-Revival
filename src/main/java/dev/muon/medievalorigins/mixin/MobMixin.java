@@ -1,7 +1,7 @@
 package dev.muon.medievalorigins.mixin;
 
 import dev.muon.medievalorigins.power.MobsIgnorePowerType;
-import dev.muon.medievalorigins.util.PowerCache;
+import io.github.apace100.apoli.component.PowerHolderComponent;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.player.Player;
@@ -17,7 +17,7 @@ public abstract class MobMixin {
 
     @Unique
     private boolean shouldIgnoreTarget(Player player) {
-        return PowerCache.hasPowerType(
+        return PowerHolderComponent.hasPowerType(
                 player,
                 MobsIgnorePowerType.class,
                 powerType -> powerType.shouldIgnore((Mob)(Object)this, player)

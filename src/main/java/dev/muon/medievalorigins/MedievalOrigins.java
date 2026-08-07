@@ -12,11 +12,7 @@ import dev.muon.medievalorigins.entity.SummonTracker;
 import dev.muon.medievalorigins.item.ModItems;
 import dev.muon.medievalorigins.power.ModPowerTypes;
 import dev.muon.medievalorigins.sounds.ModSounds;
-import dev.muon.medievalorigins.util.PowerCache;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents;
-import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
-import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.minecraft.resources.ResourceLocation;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -48,18 +44,5 @@ public class MedievalOrigins implements ModInitializer {
 		ModPowerTypes.register();
 
 		SummonTracker.init();
-		initPowerCache();
 	}
-
-	private static void initPowerCache() {
-		// Periodic cleanup via server tick
-		ServerTickEvents.END_SERVER_TICK.register(server -> PowerCache.tick());
-		
-		// Aggressive cleanup when entities are unloaded
-		ServerEntityEvents.ENTITY_UNLOAD.register((entity, world) -> PowerCache.invalidate(entity));
-		
-		// Clear cache when server stops
-		ServerLifecycleEvents.SERVER_STOPPING.register(server -> PowerCache.clearAll());
-	}
-
 }

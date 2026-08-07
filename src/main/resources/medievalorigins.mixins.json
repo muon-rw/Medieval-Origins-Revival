@@ -2,7 +2,6 @@
   "required": true,
   "package": "dev.muon.medievalorigins.mixin",
   "plugin": "dev.muon.medievalorigins.MedievalOriginsMixinPlugin",
-  "refmap": "medievalorigins.refmap.json",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "AbstractArrowMixin",
@@ -11,7 +10,6 @@
     "LivingEntityMixin",
     "MobMixin",
     "NearestAttackableTargetGoalMixin",
-    "PowerHolderComponentImplMixin",
     "ProjectileMixin",
     "TargetingConditionsMixin",
     "VillagerMixin",
