@@ -1,0 +1,155 @@
+{
+	"type": "origins:active_self",
+	"key": {
+		"key": "key.origins.primary_active"
+	},
+	"entity_action": {
+		"type": "origins:raycast",
+		"distance": 25,
+		"shape_type": "visual",
+		"fluid_handling": "none",
+		"block": true,
+		"entity": true,
+		"pierce_entities": true,
+		"bientity_condition": {
+			"type": "origins:target_condition",
+			"condition": {
+				"type": "origins:in_tag",
+				"tag": "medievalorigins:bosses",
+				"inverted": true
+			}
+		},
+		"before_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "function medievalorigins:mdvlorigins/banshee_shriek"
+				},
+				{
+					"type": "origins:area_of_effect",
+					"radius": 8,
+					"bientity_action": {
+						"type": "origins:add_velocity",
+						"z": 2.5,
+						"y": 0.6
+					},
+					"bientity_condition": {
+						"type": "origins:or",
+						"conditions": [
+							{
+								"type": "origins:and",
+								"conditions": [
+									{
+										"type": "origins:or",
+										"conditions": [
+											{
+												"type": "origins:attacker"
+											},
+											{
+												"type": "origins:invert",
+												"condition": {
+													"type": "origins:attacker"
+												}
+											}
+										]
+									},
+									{
+										"type": "origins:target_condition",
+										"condition": {
+											"type": "origins:entity_type",
+											"entity_type": "player"
+										}
+									}
+								]
+							},
+							{
+								"type": "origins:target_condition",
+								"condition": {
+									"type": "origins:and",
+									"conditions": [
+										{
+											"type": "origins:living"
+										},
+										{
+											"type": "origins:entity_type",
+											"entity_type": "player",
+											"inverted": true
+										},
+										{
+											"type": "origins:in_tag",
+											"tag": "medievalorigins:bosses",
+											"inverted": true
+										}
+									]
+								}
+							}
+						]
+					}
+				}
+			]
+		},
+		"command_along_ray": "function medievalorigins:mdvlorigins/banshee_shriek_ray",
+		"command_along_ray_only_on_hit": false,
+		"command_step": 1,
+		"bientity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:add_velocity",
+					"z": 1.0
+				},
+				{
+					"type": "medievalorigins:spell_damage",
+					"base": 2,
+					"magic_school": "soul",
+					"crit_behavior": "normal",
+					"scaling_factor": 1.0,
+					"damage_type": "medievalorigins:sonic_shriek"
+				},
+				{
+					"type": "origins:target_action",
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:apply_effect",
+								"effects": [
+									{
+										"id": "minecraft:nausea",
+										"duration": 100,
+										"amplifier": 0,
+										"is_ambient": true,
+										"show_particles": true,
+										"show_icon": false
+									},
+									{
+										"id": "minecraft:weakness",
+										"duration": 100,
+										"amplifier": 0,
+										"is_ambient": true,
+										"show_particles": true,
+										"show_icon": false
+									},
+									{
+										"id": "minecraft:slowness",
+										"duration": 100,
+										"amplifier": 0,
+										"is_ambient": true,
+										"show_particles": true,
+										"show_icon": false
+									}
+								]
+							}
+						]
+					}
+				}
+			]
+		}
+	},
+	"cooldown": 800,
+	"hud_render": {
+		"sprite_location": "origins:textures/gui/sprites/hud_render/huang/resource_bar_01.png",
+		"bar_index": 0
+	}
+}

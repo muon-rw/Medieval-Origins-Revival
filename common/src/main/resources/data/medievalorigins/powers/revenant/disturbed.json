@@ -1,0 +1,17 @@
+{
+	"type": "origins:multiple",
+	"no_sleep": {
+		"type": "origins:prevent_sleep",
+		"message": {
+			"translate": "medievalorigins.disturbed_restless"
+		},
+		"set_spawn_point": true
+	},
+	"no_phantoms": {
+		"type": "medievalorigins:modify_insomnia_ticks",
+		"modifier": {
+			"operation": "set_total",
+			"amount": 0
+		}
+	}
+}

@@ -1,0 +1,7 @@
+{
+	"type": "origins:prevent_sleep",
+	"message": {
+		"translate": "medievalorigins.insomniac_welts"
+	},
+	"set_spawn_point": true
+}

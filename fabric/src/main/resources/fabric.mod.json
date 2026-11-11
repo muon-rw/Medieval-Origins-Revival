@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${mod_version}+${minecraft_version}",
+  "name": "${mod_name}",
+  "description": "${mod_description}",
+  "authors": [
+    "${mod_author}"
+  ],
+  "contributors": [
+    "${fabric_mod_contributors}"
+  ],
+  "contact": {
+    "homepage": "${curseforge_page}",
+    "issues": "https://github.com/${sources}/issues",
+    "sources": "https://github.com/${sources}"
+  },
+  "license": "${mod_license}",
+  "icon": "assets/${mod_id}/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.muon.medievalorigins.MedievalOriginsFabric"
+    ],
+    "client": [
+      "dev.muon.medievalorigins.client.MedievalOriginsFabricClient"
+    ]
+  },
+  "mixins": [
+    "${mod_id}.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": "${fabric_loader_range}",
+    "fabric-api": "*",
+    "minecraft": "${fabric_minecraft_version_range}",
+    "java": ">=${java_version}",
+    "apoli": ">=${apoli_version}",
+    "origins": ">=${origins_version}",
+    "spell_engine": "*"
+  },
+  "recommends": {
+    "icarus": ">=4.8.1"
+  }
+}

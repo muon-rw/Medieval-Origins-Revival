@@ -1,3 +1,11 @@
+## 8.0.0
+- Now available on NeoForge as well as Fabric
+- Migrate to Overgrown's Apoli and Origins (replaces apace's Origins 1.13)
+- Update Icarus compat for Icarus 4.8.1 (requires 4.8.1 or newer if installed)
+- Update Spell Engine, Spell Power, Fabric API, FTB and other dependencies
+- The tertiary active key is now a datapack keybind (same name and default key)
+- Fix custom death sounds never playing for other players
+
 ## 7.0.4-pre.3-HF
 - Fix mod always thinking spell engine was missing
 

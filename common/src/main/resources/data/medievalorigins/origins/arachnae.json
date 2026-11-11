@@ -1,0 +1,18 @@
+{
+	"powers": [
+		"medievalorigins:arachnae/climber",
+		"medievalorigins:arachnae/many_eyes",
+		"medievalorigins:arachnae/venomous_bite",
+		"medievalorigins:arachnae/bottomless_stomach",
+		"medievalorigins:arachnae/brittle",
+		"medievalorigins:arachnae/fragile_exoskeleton",
+		"origins:arachnid/carnivore",
+		"origins:arachnid/master_of_webs",
+		"origins:arachnid/arthropod"
+	],
+	"icon": {
+		"id": "medievalorigins:arachnae"
+	},
+	"impact": 2,
+	"order": 1
+}

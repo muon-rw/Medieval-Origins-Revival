@@ -1,0 +1,24 @@
+{
+	"hidden": true,
+	"type": "origins:action_on_callback",
+	"entity_action_chosen": {
+		"type": "origins:delay",
+		"ticks": 20,
+		"action": {
+			"type": "origins:replace_inventory",
+			"inventory_type": "inventory",
+			"slot": "armor.head",
+			"stack": {
+				"id": "minecraft:golden_helmet",
+				"components": {
+					"minecraft:enchantments": {
+						"levels": {
+							"minecraft:unbreaking": 2
+						}
+					}
+				}
+			}
+		}
+	},
+	"execute_chosen_when_orb": false
+}
